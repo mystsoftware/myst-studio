@@ -1,26 +1,21 @@
-# Summary
+Introduction
 
-* [Introduction](README.md)
-* [Preparing MyST](PreparingMyST/PreparingMyST.md)
-  * Environments
-  * [Compute Definitions](Infrastructure/compute_definitions.md)
-  * 
-  
-#Infrastructure
-* [Infrastructure](Infrastructure/readme.md)
-* [Working with Pre-Existing Infrastructure](pre-existing_infrastructure/preparing_pre-existing_infrastructure.md)
-    * [Target Host Configuration](pre-existing_infrastructure/target_hosts.md)
-    * Database Configuration
-    * [Define Pre-Existing Infrastructure in MyST](pre-existing_infrastructure/define_pre-existing_infrastructure_in_myst.md)
-  * Amazon Webn Services - On Demand
-    * Preparing AWS
-    * Configuring AWS in MyST
+* [Infrastructure](infra/infra.md)
+    * [Environment Types](infra/environmentTypes.md)
+    * [Compute Definitions](infra/computeDefinitions.md)
+    * [Pre-Existing](infra/preExisting/preExisting.md)
+        * [Target Host Configuration](infra/preExisting/targetHostConfig.md)
+        * [Database Configuration](infra/preExisting/databaseConfig.md)
+        * [Configure Pre-Existing Infrastructure in MyST](infra/preExisting/PreExistingInfrastrcutureProvider.md)
+    * [Amazon Web Services on Demand](infra/AwsOnDemand/AwsOnDemand.md)
+        * [Preparing AWS On Demand Infrastructure](infra/AwsOnDemand/PrepareAwsOnDemand.md)
+        * [Configure AWS Infrastructure Provider in MyST](infra/AwsOnDemand/AwsOnDemandInfrastrcutureProvider.md)
 
-   * [Pre-Existing Infrastructure](Infrastructure/pre-existing_infrastructure.md)
+* [Platform Blueprints](platformBlueprints/platformBlueprints.md)
+    * [Creating Platform Blueprints](platformBlueprints/wizard.md)
+    * [Version](platformBlueprints/version.md)
 
-#Platform Blueprinnts
-#User Management
-* [User Management](UserManagment/usermanagementmd.md)
-   * [User](UserManagment/user.md)
-   * [Role Management](UserManagment/roleManagement.md)
-   * [Workspace Management](UserManagment/workspacemanagement.md)
+* [Role Based Access Control](rbac/rbac.md)
+    * [User Management](rbac/user.md)
+    * [Role Management](rbac/role.md)
+    * [Workspace Management](rbac/workspace.md)
