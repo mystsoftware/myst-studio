@@ -16,12 +16,12 @@ For each environment, we need to be able to control who has access to it, and wh
 * Who is able to stop/start a platform instance?
 * Who is able to deploy / promote code into an environment?
 
-Within MYST we can define Environment Types. 
-* Any MyST resource that is environment specific, such as a Platform Model, Platform Instance or Application Model is tagged to an Environment Type, this in conjunction with Role Based Access Control (RBAC) allows us to control who can perform which actions in which environment.
+Within MYST any resource that is environment specific, such as a Platform Model, Platform Instance or Application Model is tagged to an Environment Type, this in conjunction with Role Based Access Control (RBAC) allows us to control who can perform which actions in which environment.
 
-* Environment Types are also used to specify which environments and in which order applications should be promoted through on its journey to production.
+In addition target hosts (see Pre-Existing Infrastructure Providers) can be tagged to one or more Environment Types. When we create a platform model, only the hosts tagged to the same  Environment Type as the platform model can be selected within the model.
 
-**Define all the environment types that you want to use in your platform settings. After you define your environment types, you can tag hosts to the environment types. When you build your platform model for an environment, only the hosts tagged to the specific environment show in the list, which you can map to your nodes.**
+Environment Types are also used within Application Blueprints to specify which environments and in which order applications should be promoted through.
+
 
 ## List Environment Types
 To see a list of defined Environment Types, click  `Infrastructure` > `Environment Types`. This will display a list similar to the one below.
