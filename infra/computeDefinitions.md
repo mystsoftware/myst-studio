@@ -11,12 +11,48 @@ You can deactivate a compute definition if you do not want to use it as part of 
 The following steps describe how to create a new compute definition.
 1. Click **Create New**.
 2. Enter the following details:
+
+3. Click **Save**. You can also click **Save + Create New** to immediately create a new compute definition after saving the current one.
+
+## Editing a compute definition
+The Compute Definitions screen lists all the compute definitions that you have defined. Click **Edit** to edit a compute definition. Note that if you edit a compute definition that is already assigned to a compute group or a host, the compute definition is automatically updated for the compute group and host.
+
+## List Compute Definitions
+To see a list of defined Environment Types, click  `Infrastructure` > `Compute Definitions`. This will display a list similar to the one below.
+
+![](img/ComputeDefinitionList.PNG)
+
+
+## Creating a New Compute Definition
+Click `+ Create New`, this will open the **Add Compute Definition** dialogue. Specify the 
+
  * **Name** - Name of your compute definition.
  * **OS Type** - The operating system type that you want as part of your compute definition.
  * **OS Distribution** - Select the operating system of your compute definition.
  * **OS Architecture** - Select the operating system architecture of your compute definition.
  * **OS Version** - Select the version of the operating system for your compute definition.
-3. Click **Save**. You can also click **Save + Create New** to immediately create a new compute definition after saving the current one.
 
-## Editing a compute definition
-The Compute Definitions screen lists all the compute definitions that you have defined. Click **Edit** to edit a compute definition. Note that if you edit a compute definition that is already assigned to a compute group or a host, the compute definition is automatically updated for the compute group and host.
+![](img/ComputeDefinitionAdd.PNG)
+
+
+Click `Save` to create the new Compute Definition.
+
+## Edit Compute Definition
+To edit the Compute Definition; click on the `Edit` button for the corresponding Compute Definition, this will open the **Edit Compute Definition** dialogue.
+
+Here you can modify the Name and Status of the Compute Definition.
+
+## Activate / Deactivate Compute Definition
+By default, when you create a Compute Definition, it is in an active state. Meaning we can create Platform Blueprints and Models that reference that Compute Definition.
+
+To prevent any new Blueprints / Models reference a Compute Definition, we can deactivate the reference that Compute Definition.
+
+**Note**: 
+* Deactivating a Compute Definition does not affect resources that already reference that Compute Definition.
+* A deactivated Compute Definition can be reactivated at any time.
+
+To deactivate a Compute Definition; click on the  **Actions** drop-down menu for the corresponding Compute Definition and select `Deactivate` as illustrated below.
+
+![](img/ComputeDefinitionDeactivate.PNG)
+
+To activate a deactivated Compute Definition; click on the  **Actions** drop-down menu for the corresponding Compute Definition and select `Activate`.
