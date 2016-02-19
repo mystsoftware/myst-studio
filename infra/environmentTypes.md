@@ -16,26 +16,27 @@ For each environment, we need to be able to control who has access to it, and wh
 * Who is able to stop/start a platform instance?
 * Who is able to deploy / promote code into an environment?
 
-In addition when promoting code through to Production, 
+Within MYST we can define Environment Types. 
+* Any MyST resource that is environment specific, such as a Platform Model, Platform Instance or Application Model is tagged to an Environment Type, this in conjunction with Role Based Access Control (RBAC) allows us to control who can perform which actions in which environment.
 
-Different levels of control may need to be applied to each environment, based on who is using the enviroment and the types of tasks that need to be peformed. governing who can perform what types of tasks
-
-with specific sets of users who are responsible for
-
-will have a different set of users who require acess to that enviro
-
-Within MyST Platform Instances are provisioned into an environment as defined by its Platform Model. 
-
-Environments are used to control who has access to which environmenst in MyST and what actions can be performed.
-
-Each environmet has different
+* Environment Types are also used to specify which environments and in which order applications should be promoted through on its journey to production.
 
 
+## List Environment Types
+To see a list of defined Environment Types, click  `Infrastructure` > `Environment Types`. This will display a list similar to the one below.
+
+![](img/EnvironmentTypeList.PNG)
+
+
+## Creating a New environment type
+Click `+ Create New`, this will open the **Add Environment Type** dialogue. Specify the 
+
+* **Name** - A short hand name for the Environment, such as SIT, UAT or PROD
+* **Description** - A longer description of the environment (e.g. System Integration Test)
+* **Order** - Used to specify the order in which code is deployed in the SDLC
 
 
 
-
-Environments are controlled areas where systems developers can build, distribute, install, configure, test, and execute systems that move through the SDLC. Each environment is aligned with different areas of the SDLC and is intended to have specific purposes. Examples of such environments include the:
 
 
 
