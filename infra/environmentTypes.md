@@ -2,13 +2,27 @@
 During the lifetime of a project, code will be built and promoted to various staging environments, such as Development (DEV), System Integration Testing (SIT), User Acceptance Testing (UAT), Pre-Production (PRE), and Production (PROD).
 
 Each of these environments is aligned with different stages of the Software Development Lifecycle (SDLC) and is intended for a specific purpose, for example:
-* ** DEV**; Used by developers to develop and unit test there code prior to checking into source control. 
-* **BLD / CI **; build environment, where committed code is built, as a combined system and unti testing is performed.
-* **SIT**: Used testing of a system's integration points with  other systems
-* **UAT**: business stakeholders can test against their original business requirements,
-* **PRE**: Used to test the deployment process, prior to release into production.
-* **PROD**: Production environment, where systems finally get deployed to, for final use by their intended end users.
+* ** DEV** - Used by developers to develop and unit test there code prior to checking into source control. 
+* **BLD / CI ** - Build environment, where committed code is built and unit testing is performed.
+* **SIT** - Used to test a system's integration points with  other systems.
+* **UAT**-  Business stakeholders test the system against their  business requirements
+* **PRE** - Used to test the deployment process, prior to release into production.
+* **PROD** - Production environment, where systems finally get deployed to.
 
+For each environment, we need to be able to control who has access to it, and what type of actions they can perform against the environment, for example:
+
+* Who can (re-)provision a platform instance?
+* Who is allowed to perform platform configuration changes?
+* Who is able to stop/start a platform instance?
+* Who is able to deploy / promote code into an environment?
+
+In addition when promoting code through to Production, 
+
+Different levels of control may need to be applied to each environment, based on who is using the enviroment and the types of tasks that need to be peformed. governing who can perform what types of tasks
+
+with specific sets of users who are responsible for
+
+will have a different set of users who require acess to that enviro
 
 Within MyST Platform Instances are provisioned into an environment as defined by its Platform Model. 
 
