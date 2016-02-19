@@ -1,4 +1,4 @@
-Introduction
+* Introduction (intro/intro.md)
 
 * [Infrastructure](infra/infra.md)
     * [Environment Types](infra/environmentTypes.md)
