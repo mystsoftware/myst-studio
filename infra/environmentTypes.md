@@ -21,6 +21,7 @@ Within MYST we can define Environment Types.
 
 * Environment Types are also used to specify which environments and in which order applications should be promoted through on its journey to production.
 
+**Define all the environment types that you want to use in your platform settings. After you define your environment types, you can tag hosts to the environment types. When you build your platform model for an environment, only the hosts tagged to the specific environment show in the list, which you can map to your nodes.**
 
 ## List Environment Types
 To see a list of defined Environment Types, click  `Infrastructure` > `Environment Types`. This will display a list similar to the one below.
@@ -38,20 +39,24 @@ Click `+ Create New`, this will open the **Add Environment Type** dialogue. Spec
 
 ![](img/EnvironmentTypeAdd.PNG)
 
+## Edit Environment Type
+To edit the Environment Type; click on the `Edit` button for the corresponding Environment Type, this will open the **Edit Environment Type** dialogue.
+
+Here you can modify the Name, Description, Order and Status of the Environment Type.
 
 ## Activate / Deactivate Environment Type
-By default, when you create an Environment Type, i
+By default, when you create an Environment Type, it is in an active state. Meaning we can create new MyST Resources that are tagged to that Environment.
 
-To deactivate an environment, click 
+To prevent any new resources being tagged to an Environment, we can deactivate the Environment Type.
+
+**Note**: 
+* Deactivating an existing environment type does not affect resources that are currently mapped to the environment type.
+* A deactivated Environment Type can be reactivated at any time.
+
+To deactivate an environment; click on the  **Actions** drop-down menu for the corresponding Environment Type and select `Deactivate` as illustrated below:
 
 ![](img/EnvironmentTypeDeactivate.PNG)
-Deactivating an existing environment type does not affect the models and infrastructure providers that are currently mapped to the environment type.
 
-Define all the environment types that you want to use in your platform settings. After you define your environment types, you can tag hosts to the environment types. When you build your platform model for an environment, only the hosts tagged to the specific environment show in the list, which you can map to your nodes.
-
-The environment types in your list can be activated or deactivated. Only the active environment types are displayed in the Infrastructure Provider and the Platform Model. 
-
-Every new environment type that you add is in the active state by default. To deactivate an active environment type, click **Actions > Deactivate**. To activate a deactivated environment type, click **Actions > Activate**.
 
 ## Creating a new environment type
 The following steps describe how to create a new environment type.
