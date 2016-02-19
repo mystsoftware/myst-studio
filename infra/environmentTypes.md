@@ -31,12 +31,12 @@ To see a list of defined Environment Types, click  `Infrastructure` > `Environme
 ## Creating a New environment type
 Click `+ Create New`, this will open the **Add Environment Type** dialogue. Specify the 
 
-* **Name** - A short hand name for the Environment, such as SIT, UAT or PROD
+* **Name** - Short hand name for the Environment, such as SIT, UAT or PROD
 * **Description** - A longer description of the environment (e.g. System Integration Test)
 * **Order** - Used to specify the order in which code is deployed in the SDLC
 
 
-
+![](img/EnvironmentTypeAdd.PNG)
 
 
 
