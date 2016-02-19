@@ -55,7 +55,8 @@ To prevent any new resources being tagged to an Environment, we can deactivate t
 * Deactivating an existing environment type does not affect resources that are currently mapped to the environment type.
 * A deactivated Environment Type can be reactivated at any time.
 
-To deactivate an environment; click on the  **Actions** drop-down menu for the corresponding Environment Type and select `Deactivate` as illustrated below:
+To deactivate an environment; click on the  **Actions** drop-down menu for the corresponding Environment Type and select `Deactivate` as illustrated below.
 
 ![](img/EnvironmentTypeDeactivate.PNG)
 
+To activate a deactivated environment; click on the  **Actions** drop-down menu for the corresponding Environment Type and select `Activate`.
