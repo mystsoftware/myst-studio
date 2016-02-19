@@ -42,7 +42,7 @@ Click `+ Create New`, this will open the **Add Environment Type** dialogue. Spec
 ## Activate / Deactivate Environment Type
 By default, when you create an Environment Type, i
 
-To deactivate an environment, click
+To deactivate an environment, click 
 
 ![](img/EnvironmentTypeDeactivate.PNG)
 Deactivating an existing environment type does not affect the models and infrastructure providers that are currently mapped to the environment type.
