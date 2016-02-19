@@ -1,4 +1,3 @@
-* Introduction (README.md)
 
 * [Infrastructure](infra/infra.md)
     * [Environment Types](infra/environmentTypes.md)
