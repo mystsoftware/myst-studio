@@ -1,22 +1,14 @@
 # Environment Types
 
-### Environment Types
+Define all the environment types that you want to use in your platform settings. After you define your environment types, you can tag hosts to the environment types. When you build your platform model for an environment, only the hosts tagged to the specific environment show in the list, which you can map to your nodes.
 
-Environment Types specify the different environments that are available to MyST Studio.
+The environment types in your list can be activated or deactivated. Only the active environment types are displayed in the Infrastructure Provider and the Platform Model. Deactivating an existing environment type does not affect the models and infrastructure providers that are currently mapped to the environment type.
 
-In this example, we are going to create 3 different environments - CI, TEST and PROD.
+Every new environment type that you add is in the active state by default. To deactivate an active environment type, click **Actions > Deactivate**. To activate a deactivated environment type, click **Actions > Activate**.
 
-Navigate to **Infrastructure** -> **Environment Types**
+## Creating a new environment type
+The following steps describe how to create a new environment type.
 
-Click on **Create New**, and fill in the fields as follows:
-
-![](img/infra_envir_create_ci.png)
-
-
-Click on **Create**
-
-Repeat with the **TEST** and **PROD** environment names and increment the order accordingly.
-
-Once complete, the screen should be similar to the following:
-
-![](img/infra_envir_create_review.png)
+1. To create a new environment type, click **Create New** on the environment types screen.
+2. Add a name and description for your environment type.
+3. Click **Add** to add the environment type.
