@@ -36,8 +36,10 @@ Click `+ Create New`, this will open the **Add Environment Type** dialogue. Spec
 * **Description** - A longer description of the environment (e.g. System Integration Test)
 * **Order** - Used to specify the order in which code is deployed in the SDLC
 
-
 ![](img/EnvironmentTypeAdd.PNG)
+
+
+Click `Create` to Save the new Environment Type.
 
 ## Edit Environment Type
 To edit the Environment Type; click on the `Edit` button for the corresponding Environment Type, this will open the **Edit Environment Type** dialogue.
@@ -57,10 +59,3 @@ To deactivate an environment; click on the  **Actions** drop-down menu for the c
 
 ![](img/EnvironmentTypeDeactivate.PNG)
 
-
-## Creating a new environment type
-The following steps describe how to create a new environment type.
-
-1. To create a new environment type, click **Create New** on the environment types screen.
-2. Add a name and description for your environment type.
-3. Click **Add** to add the environment type.
