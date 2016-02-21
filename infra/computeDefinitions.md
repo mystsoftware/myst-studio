@@ -25,7 +25,7 @@ To see a list of defined Compute Definitions, click  `Infrastructure` > `Compute
 
 
 ## Creating a New Compute Definition
-Click `+ Add New`, this will open the **Add Compute Definition** dialogue. Specify the 
+Click `+ Create New`, this will open the **Add Compute Definition** dialogue. Specify the 
 
  * **Name** - Name of your compute definition.
  * **OS Type** - The operating system type that you want as part of your compute definition.
@@ -36,19 +36,19 @@ Click `+ Add New`, this will open the **Add Compute Definition** dialogue. Speci
 ![](img/ComputeDefinitionAdd.PNG)
 
 
-Click `Save` to create the new Compute Definition. You can also click `Save + Add New` to immediately create a new compute definition after saving the current one.
+Click `Save` to create the new Compute Definition. You can also click `Save + Create New` to immediately create a new compute definition after saving the current one.
 
 ## Edit Compute Definition
 To edit the Compute Definition; click on the `Edit` button for the corresponding Compute Definition, this will open the **Edit Compute Definition** dialogue.
 
-Here you can modify the Name and Status of the Compute Definition.
+Here you can modify the Name of the Compute Definition.
 
 ## Activate / Deactivate Compute Definition
-By default, when you create a Compute Definition, it is in an active state. Meaning we can create Platform Blueprints and Models that reference that Compute Definition.
+By default, when you create a Compute Definition, it is in an active state. Meaning we can create Platform Blueprints, Models and Target Hosts that reference that Compute Definition.
 
 To prevent any new Blueprints / Models reference a Compute Definition, we can deactivate the reference that Compute Definition.
 
-You can deactivate a compute definition if you do not want to use it as part of your infrastructure definitions. Deactivating a compute definition does not affect the compute groups or hosts that are mapped to the definition. However, you can not assign the compute definition to any compute group or host after it is deactivated. Only active compute definitions are shown in the list when you want to assign it to a host or compute groups.
+You can deactivate a compute definition if you no longer want to use it as part of your infrastructure definitions, which will prevent it from being used in any new Platform Blueprints / Models and Target Hosts.
 
 **Note**: 
 * Deactivating a Compute Definition does not affect resources that already reference that Compute Definition.
