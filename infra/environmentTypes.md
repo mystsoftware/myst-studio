@@ -44,7 +44,7 @@ Click `Create` to Save the new Environment Type.
 ## Edit Environment Type
 To edit the Environment Type; click on the `Edit` button for the corresponding Environment Type, this will open the **Edit Environment Type** dialogue.
 
-Here you can modify the Name, Description, Order and Status of the Environment Type.
+Here you can modify the Name, Description, Order and Status of the Environment Type. Once done, click `Save` to confirm your changes.
 
 ## Activate / Deactivate Environment Type
 By default, when you create an Environment Type, it is in an active state. Meaning we can create new MyST Resources that are tagged to that Environment.
