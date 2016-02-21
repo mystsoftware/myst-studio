@@ -1,17 +1,25 @@
 # Compute Definitions
+Central to MyST is the Platform Blueprint which defines an environment agnostic topology/configuration and provides an abstraction layer over the underlying infrastructure.
+This allows us to define a standardized topology, which we can use to provision equivalent middleware platforms across bare metal, virtual machines and public cloud.
 
+When, we create a Platform Blueprint, we need to specify its Compute Definition. This is used to define the operating system requirements for target servers (i.e Virtual or Bare Metal) that will be used by any Platform Model based on the Platform Blueprint.
 
-When Creating a Platform Blueprint
+The Compute Definition specifies the following details about the host operating system:
+ * **Type** - The operating system type, for example Linux, Solaris.
+ * **Distribution** - The operating system distribution, for example Oracle Linux, RedHat Linux.
+ * **Architecture** - The chip architecture for the operating system, for example  x86-64.
+ * **Version** - The version of the operating system, for example Oracle Linux 6.
 
-Compute Definitions define what the target OS environment details are within our environment.
+### Use of Compute Definitions for Pre-Existing Infrastructure
+When adding a target host to a Pre-Existing Infrastructure Provider, we need to specify its compute definition.
 
-Compute definitions contain the operating system requirements for the infrastructure that you define in your blueprint. A compute definition is assigned to compute groups and hosts. Only the hosts that match the compute group operating system requirements can be assigned to the compute group in a blueprint.
+When we create a Platform Model to provision a middleware platform to Pre-Existing Infrastructure, one of the steps is to map the target hosts to the model. Only those target hosts which have the same Compute Definition as the Platform Blueprint are available to be assigned to the Platform Model.
 
-You can deactivate a compute definition if you do not want to use it as part of your infrastructure definitions. Deactivating a compute definition does not affect the compute groups or hosts that are mapped to the definition. However, you can not assign the compute definition to any compute group or host after it is deactivated. Only active compute definitions are shown in the list when you want to assign it to a host or compute groups.
-
+### Use of Compute Definitions for AWS On-Demand Infrastructure
+When creating a Platform Model for AWS On-Demand, then the Compute Definition is used to map to the Amazon Machine Image (AMI) to be used when creating the Amazon EC2 instances on demand. 
 
 ## List Compute Definitions
-To see a list of defined Environment Types, click  `Infrastructure` > `Compute Definitions`. This will display a list similar to the one below.
+To see a list of defined Compute Definitions, click  `Infrastructure` > `Compute Definitions`. This will display a list similar to the one below.
 
 ![](img/ComputeDefinitionList.PNG)
 
@@ -39,6 +47,8 @@ Here you can modify the Name and Status of the Compute Definition.
 By default, when you create a Compute Definition, it is in an active state. Meaning we can create Platform Blueprints and Models that reference that Compute Definition.
 
 To prevent any new Blueprints / Models reference a Compute Definition, we can deactivate the reference that Compute Definition.
+
+You can deactivate a compute definition if you do not want to use it as part of your infrastructure definitions. Deactivating a compute definition does not affect the compute groups or hosts that are mapped to the definition. However, you can not assign the compute definition to any compute group or host after it is deactivated. Only active compute definitions are shown in the list when you want to assign it to a host or compute groups.
 
 **Note**: 
 * Deactivating a Compute Definition does not affect resources that already reference that Compute Definition.
