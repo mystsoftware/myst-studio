@@ -1,5 +1,8 @@
 # Compute Definitions
 
+
+When Creating a Platform Blueprint
+
 Compute Definitions define what the target OS environment details are within our environment.
 
 Compute definitions contain the operating system requirements for the infrastructure that you define in your blueprint. A compute definition is assigned to compute groups and hosts. Only the hosts that match the compute group operating system requirements can be assigned to the compute group in a blueprint.
