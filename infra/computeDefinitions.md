@@ -41,7 +41,7 @@ Click `Save` to create the new Compute Definition. You can also click `Save + Cr
 ## Edit Compute Definition
 To edit the Compute Definition; click on the `Edit` button for the corresponding Compute Definition, this will open the **Edit Compute Definition** dialogue.
 
-Here you can modify the Name of the Compute Definition.
+Here you can modify the Name of the Compute Definition. Once done, click `Save` to confirm your changes.
 
 ## Activate / Deactivate Compute Definition
 By default, when you create a Compute Definition, it is in an active state. Meaning we can create Platform Blueprints, Models and Target Hosts that reference that Compute Definition.
