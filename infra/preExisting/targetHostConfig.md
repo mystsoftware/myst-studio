@@ -8,25 +8,21 @@ It is preferential to prepare the target hosts before you begin installation of 
 * Verify that you can create the necessary directories for installation and configuration, according to the recommended directory structure.
 * Install a certified JDK
 
-
-### Verify the required packages on the target hosts
-Reference Oracle Guides
-
-
-###Install Java
-What needs to be installed for MyST Agent ?
-What needs to be installed for Oracle Middleware ?
-Does MyST install Java as part of Platform Provisioning ?
-If yes, how do I specify the version ?
-
-
-
-
-
-* Verify the required packages on the target hosts
-* Install Java
 * Setup the oracle operating system user and group
 * Make the Oracle installation binaries available
+
+## Operating System Requirements
+The following section provides a high-level overview of the minimum system requirements that need to be put in place prior to installing Oracle Fusion Middleware. You should consult the corresponding Oracle Fusion Middleware system requirements documentation to ensure that your environment meets. 
+
+* [Oracle Fusion Middleware 12.2.1](http://docs.oracle.com/cd/E23104_01/sysreqs1221/sysrs.htm)
+* [Oracle Fusion Middleware 12.1.3](http://docs.oracle.com/cd/E23104_01/sysreqs1213/sysrs.htm)
+* [Oracle Fusion Middleware 11.1.1.x](http://docs.oracle.com/html/E18558_01/fusion_requirements.htm)
+
+These documents cover the minimum requirements for the products you are installing and details hardware and software requirements, database schema requirements, minimum disk space and memory requirements, and required system libraries, packages, or patches.
+
+* Enabling Unicode Support
+* Setting Open File and Processes Limit
+* Verify the required packages on the target hosts
 
 ### Enabling Unicode Support
 Oracle recommends that you enable Unicode support by setting the LANG and LC_ALL environment variables to a locale with the UTF-8 character set. This enables the operating system to process any character in Unicode.
@@ -36,11 +32,8 @@ Oracle recommends that you enable Unicode support by setting the LANG and LC_ALL
 | LANG | This environment variable sets the installation default locale. For example: `setenv LANG en_US.UTF-8` |
 | LC_ALL | This environment variable overrides the value of the LANG environment variable and the values of any other LC_* environment variables. For example: `setenv LC_ALL en_US.UTF-8` |
 
-Use the `locale` command on your system, to check your current locale settings. Below is an example:
 
-** ---TO DO--- **
-
-### Set Open File and Processes Limit
+### Setting Open File and Processes Limit
 Add the following lines to the file `/etc/security/limits.conf`
 
 ```
@@ -54,6 +47,12 @@ The nofiles values represent the open file limit; the nproc values represent the
 If you are running **Oracle Linux 6** or **Red Hat Linux 6**. Make sure the same values are defined in the file `/etc/security/limits.d/90-nproc.conf` as these can override the values in the `limits.conf` file.
 
 ### Verify the required packages on the target hosts
+
+Reference Oracle Guides
+
+
+
+
 
 The following table lists the packages that must be available on the target hosts where you want to install MyST Studio. These are dependencies for Oracle Fusion Middleware and not MyST.
 
@@ -88,7 +87,8 @@ sudo yum install oracle-rdbms-server-12cR1-preinstall
 sudo yum install libstdc++-devel.i686
 sudo yum install compat-libstdc++-33 compat-libstdc++-33.i686
 ```
-###Install Java
+
+##Install Java
 
 You must have a version of Java Hotspot installed on each target host.
 This is required by the MyST agent runtime.  (This dependency will be removed when full puppet support is included in a future version)
@@ -103,8 +103,9 @@ or your installation method of choice.
 More information can be found on installing Java on Linux at the [here](https://java.com/en/download/help/linux_install.xml).
 
 **Note 1**:  
-Oracle Fusion Middleware 12.2.1 requires Java 8  
-Oracle Fusion Middleware 12.1.3 and prior requires Java 7  
+* Oracle Fusion Middleware 12.2.1 requires Java 8  
+* Oracle Fusion Middleware 12.1.3 and prior requires Java 7  
+
 If you are planning on provisioning both Middleware versions, ensure that both Java versions are installed and that you are referencing the correct Java home in your platform blueprint. This is covered in more detail in the Provisioning Section  
 
 **Note 2**:  
@@ -126,12 +127,10 @@ Comment out
 
 Add the following line
 securerandom.source=file:/dev/./urandom 
-
 ```
-If creating more than 1 target virtual machine than mysttarget1.rubiconred.com, the above settings should be created from a machine image that has the above setup to ensure consistency.
 
 
-### Setup operating system user and group
+## Setup operating system user and group
 
 Set up an operating system user and group setup on each target host for the Oracle Fusion Middleware ownership. This operating system user requires SSH access with key or password and will be used by the MyST agent. The credentials are encrypted in MyST Studio and should not be shared.
 
