@@ -47,20 +47,13 @@ The nofiles values represent the open file limit; the nproc values represent the
 If you are running **Oracle Linux 6** or **Red Hat Linux 6**. Make sure the same values are defined in the file `/etc/security/limits.d/90-nproc.conf` as these can override the values in the `limits.conf` file.
 
 ### Verify the required packages on the target hosts
-
-Reference Oracle Guides
-
-
-
-
-
 The following table lists the packages that must be available on the target hosts where you want to install MyST Studio. These are dependencies for Oracle Fusion Middleware and not MyST.
 
-Consult he 
+It is recommended to consult the Oracle Fusion Middleware system requirements documentation to confirm the exact version of these packages required based on the version of the Oracle Middleware being installed.
 
 Table 1. Packages required on the target hosts
 
-| Package Name |
+| **Package Name** |
 | -- |
 | binutils |
 | compat-libcap1 |
@@ -88,10 +81,15 @@ sudo yum install libstdc++-devel.i686
 sudo yum install compat-libstdc++-33 compat-libstdc++-33.i686
 ```
 
+### Clock Synchronization
+The clocks of all servers participating in the cluster must be synchronized to within one second difference to enable proper functioning of jobs, adapters, and Oracle B2B. 
+
+To accomplish this, use a single network time server and then point each server to that network time server.
+
+
 ##Install Java
 
-You must have a version of Java Hotspot installed on each target host.
-This is required by the MyST agent runtime.  (This dependency will be removed when full puppet support is included in a future version)
+We must have a version of Java Hotspot installed on each target host. This is required by the MyST agent runtime (this dependency will be removed in a future version).
 
 To install Java you can either run the following command
 
@@ -116,30 +114,35 @@ ln -s /usr/java/latest/bin/java /usr/bin/java
 ```
 
 **Note 3**:  
-There is a known bug in java that can impact the performance of the Weblogic Scripting Tool (WLST).  To workaround this issue, please do the following:
+There is a known bug in java that can impact the performance of the Weblogic Scripting Tool (WLST).  To workaround this issue, we need to edit the file `<java_home>/jre/lib/security`
 
-```sh
-cd <java_home>/jre/lib/security
-vi  java.security
+1. Comment out the line:  
+  `#securerandom.source=file:/dev/urandom`
 
-Comment out
-#securerandom.source=file:/dev/urandom
-
-Add the following line
-securerandom.source=file:/dev/./urandom 
-```
+2. Add the following line:  
+  `securerandom.source=file:/dev/./urandom`
 
 
-## Setup operating system user and group
+## Configuring operating system users and groups
+We need to create the operating system user that owns the Oracle software on each target host. 
 
-Set up an operating system user and group setup on each target host for the Oracle Fusion Middleware ownership. This operating system user requires SSH access with key or password and will be used by the MyST agent. The credentials are encrypted in MyST Studio and should not be shared.
+When MyST install the Oracle Middleware it will require Secure Shell (SSH) access to the target host. MyST supports user credentials provided either as password or public key (see xxxx for deatils).
 
-The recommended operating system user and groups to be created are listed in the table below. You can name the users differently, but they must be specified correctly in MyST Studio.  
+### Groups
+We need to create the following groups on each target host:
+* `oinstall`
+* `dba`
 
-| Component | Recommended Name |
-| -- | -- |
-| Operating System User | oracle |
-| Operating System Group | oinstall |
+### Users
+You must create the following users on each target host.
+
+* `oracle` – The user that owns the Oracle software. You may use a different name[^1]. The primary group for this account must be oinstall. The account must also be in the dba group.
+
+* `nobody` – An unprivileged user.
+
+**Note**:
+* Each group must have the same Group ID on every node.
+* Each user must have the same User ID on every node.
 
 To create oracle user and group, do the following:
 
@@ -150,23 +153,20 @@ sudo /usr/sbin/useradd -m -g oinstall -G dba oracle
 passwd oracle
 ```
 
-For ease of use, add sudo permissions to the **oracle** user.
-
-**The operating system user and group must have read and write access to the following directories:**  
-* /u01/app/oracle
-* /opt/myst
-* /tmp/mystWorkspace
+The operating system user and group must have read and write access to the following directories: 
+* `/u01/app/oracle`[^2]
+* `/opt/myst`
+* `/tmp/mystWorkspace`
  
 **Important** - If any of the these directories do not exist, please create them and make sure that the operating system user can read and write to them.
 
-### Oracle Installation Binaries
+[^1] If you use a different name for the Oracle user or group, you must update the MyST global variable `oui.install.user` and `oui.install.group` in the Platform Blueprint.
 
+[^2] `/u01/app/oracle` is the default base directory for under which Oracle products are installed, if a different location is used, you must update the MyST global variable `oracle.base` in the Platform Blueprint.
 
+## Oracle Installation Binaries
+The Oracle Fusion Middleware installation files should be made available on each target host as a network share.  The default location for this is `/u01/app/software`
 
-The Oracle Fusion Middleware installation files should be made available on each target host as a network share.  
-
-The recommended location for this is **/u01/app/software.**  
+If a different location is used,you must update the MyST global variable `install.dir`  in the Platform Blueprint.
 
 The operating system user and group for Oracle Fusion Middleware should have read and write access to this share.  
-
-If a different location is used, other than /u01/app/software, you must update the install.dir global variable in the platform blueprint that you create in MyST Studio.
