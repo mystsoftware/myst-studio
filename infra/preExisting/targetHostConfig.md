@@ -4,11 +4,9 @@ It is preferential to prepare the target hosts before you begin installation of 
 ### The steps are as follows:
 
 * Verify that your operating system is certified and properly configured for installation and configuration.
+* Install a certified Java JDK
 * Verify that the installation user has the proper permissions to install and configure the software.
 * Verify that you can create the necessary directories for installation and configuration, according to the recommended directory structure.
-* Install a certified JDK
-
-* Setup the oracle operating system user and group
 * Make the Oracle installation binaries available
 
 ## Operating System Requirements
@@ -18,11 +16,7 @@ The following section provides a high-level overview of the minimum system requi
 * [Oracle Fusion Middleware 12.1.3](http://docs.oracle.com/cd/E23104_01/sysreqs1213/sysrs.htm)
 * [Oracle Fusion Middleware 11.1.1.x](http://docs.oracle.com/html/E18558_01/fusion_requirements.htm)
 
-These documents cover the minimum requirements for the products you are installing and details hardware and software requirements, database schema requirements, minimum disk space and memory requirements, and required system libraries, packages, or patches.
-
-* Enabling Unicode Support
-* Setting Open File and Processes Limit
-* Verify the required packages on the target hosts
+**Note**: These documents cover the minimum requirements for the Oracle products you are installing and details hardware and software requirements, database schema requirements, minimum disk space and memory requirements, and required system libraries, packages, or patches.
 
 ### Enabling Unicode Support
 Oracle recommends that you enable Unicode support by setting the LANG and LC_ALL environment variables to a locale with the UTF-8 character set. This enables the operating system to process any character in Unicode.
@@ -47,11 +41,7 @@ The nofiles values represent the open file limit; the nproc values represent the
 If you are running **Oracle Linux 6** or **Red Hat Linux 6**. Make sure the same values are defined in the file `/etc/security/limits.d/90-nproc.conf` as these can override the values in the `limits.conf` file.
 
 ### Verify the required packages on the target hosts
-The following table lists the packages that must be available on the target hosts where you want to install MyST Studio. These are dependencies for Oracle Fusion Middleware and not MyST.
-
-It is recommended to consult the Oracle Fusion Middleware system requirements documentation to confirm the exact version of these packages required based on the version of the Oracle Middleware being installed.
-
-Table 1. Packages required on the target hosts
+The following table lists the packages that must be available on the target hosts where you want to install MyST Studio. It is recommended to consult the Oracle Fusion Middleware system requirements documentation to confirm the exact version of these packages required based on the version of the Oracle Middleware being installed.
 
 | **Package Name** |
 | -- |
@@ -73,6 +63,8 @@ Table 1. Packages required on the target hosts
 | sysstat |
 | unzip |
 
+Table 1. Packages required on the target hosts
+
 The simplest way to ensure that all of the necessary packages are installed is to use the following commands:
 
 ```sh
@@ -87,27 +79,25 @@ The clocks of all servers participating in the cluster must be synchronized to w
 To accomplish this, use a single network time server and then point each server to that network time server.
 
 
-##Install Java
+##Install Java JDK
 
 We must have a version of Java Hotspot installed on each target host. This is required by the MyST agent runtime (this dependency will be removed in a future version).
 
-To install Java you can either run the following command
+To install Java you can run the following command:
 
 ```sh
 sudo yum install java
 ```
-or your installation method of choice.
-
-More information can be found on installing Java on Linux at the [here](https://java.com/en/download/help/linux_install.xml).
+Or use your installation method of choice. For more information see [Installing Java on Linux](https://java.com/en/download/help/linux_install.xml).
 
 **Note 1**:  
 * Oracle Fusion Middleware 12.2.1 requires Java 8  
 * Oracle Fusion Middleware 12.1.3 and prior requires Java 7  
 
-If you are planning on provisioning both Middleware versions, ensure that both Java versions are installed and that you are referencing the correct Java home in your platform blueprint. This is covered in more detail in the Provisioning Section  
+If you are planning on provisioning both Middleware versions on the same target hosts, ensure that both Java versions are installed and that you are referencing the correct Java home in your Platform Blueprint. This is covered in more detail in the Provisioning Section . 
 
 **Note 2**:  
-Due to a known issue with the MyST Studio SSH client, you need to create a symbolic link from /usr/bin/java to your actual java binary. For example, if your Java Home is at /usr/java/latest, run the following command on each host:
+Due to a known issue with the MyST Studio SSH client, you need to create a symbolic link from `/usr/bin/java` to your actual java binary. For example, if your Java Home is at `/usr/java/latest`, run the following command on each host:
 
 ```sh
 ln -s /usr/java/latest/bin/java /usr/bin/java
