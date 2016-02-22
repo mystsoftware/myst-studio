@@ -1,5 +1,9 @@
 # Configure Pre-Existing Infrastructure in MyST
-Once we habe 
+Once our target hosts are ready, the next step is to define them in MyST and 
+
+We 
+
+need to be put in place prior to installing Oracle Fusion Middleware. You should consult the corresponding Oracle Fusion Middleware system requirements documentation to ensure that your environment meets. 
 
 
 A pre-existing infrastructure provider is one where the target hosts onto which the Oracle Middleware will be provisioned has been set-up and configured externally to MyST.
