@@ -29,7 +29,7 @@ If yes, how do I specify the version ?
 * Make the Oracle installation binaries available
 
 ### Enabling Unicode Support
-Oracle highly recommends that you enable Unicode support by setting the LANG and LC_ALL environment variables to a locale with the UTF-8 character set. This enables the operating system to process any character in Unicode.
+Oracle recommends that you enable Unicode support by setting the LANG and LC_ALL environment variables to a locale with the UTF-8 character set. This enables the operating system to process any character in Unicode.
 
 | **Variable** | **Description** |
 | -------- | ----------- |
@@ -49,21 +49,15 @@ Add the following lines to the file `/etc/security/limits.conf`
 * soft  nproc   2047
 * hard  nproc   16384
 ```
-
 The nofiles values represent the open file limit; the nproc values represent the number of processes limit.
 
-Save the changes, close the limits.conf file.
-
-If you are running Oracle Enterprise Linux 6 or Red Hat Linux 6, locate the  file `/etc/security/limits.d/90-nproc.conf`
-
-Make sure the same values are added to the `90-nproc.conf` file; otherwise, the values in the `90-nproc.conf` file can override the values in the `limits.conf` file.
-
-Reboot the host computer.
-
+If you are running **Oracle Linux 6** or **Red Hat Linux 6**. Make sure the same values are defined in the file `/etc/security/limits.d/90-nproc.conf` as these can override the values in the `limits.conf` file.
 
 ### Verify the required packages on the target hosts
 
 The following table lists the packages that must be available on the target hosts where you want to install MyST Studio. These are dependencies for Oracle Fusion Middleware and not MyST.
+
+Consult he 
 
 Table 1. Packages required on the target hosts
 
