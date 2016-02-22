@@ -3,11 +3,63 @@
 It is preferential to prepare the target hosts before you begin installation of MyST Studio.
 ### The steps are as follows:
 
+* Verify that your operating system is certified and properly configured for installation and configuration.
+* Verify that the installation user has the proper permissions to install and configure the software.
+* Verify that you can create the necessary directories for installation and configuration, according to the recommended directory structure.
+* Install a certified JDK
+
+
+### Verify the required packages on the target hosts
+Reference Oracle Guides
+
+
+###Install Java
+What needs to be installed for MyST Agent ?
+What needs to be installed for Oracle Middleware ?
+Does MyST install Java as part of Platform Provisioning ?
+If yes, how do I specify the version ?
+
+
+
+
 
 * Verify the required packages on the target hosts
 * Install Java
 * Setup the oracle operating system user and group
 * Make the Oracle installation binaries available
+
+### Enabling Unicode Support
+Oracle highly recommends that you enable Unicode support by setting the LANG and LC_ALL environment variables to a locale with the UTF-8 character set. This enables the operating system to process any character in Unicode.
+
+| **Variable** | **Description** |
+| -------- | ----------- |
+| LANG | This environment variable sets the installation default locale. For example: `setenv LANG en_US.UTF-8` |
+| LC_ALL | This environment variable overrides the value of the LANG environment variable and the values of any other LC_* environment variables. For example: `setenv LC_ALL en_US.UTF-8` |
+
+Use the `locale` command on your system, to check your current locale settings. Below is an example:
+
+** ---TO DO--- **
+
+### Set Open File and Processes Limit
+Add the following lines to the file `/etc/security/limits.conf`
+
+```
+* soft  nofile  4096
+* hard  nofile  65536
+* soft  nproc   2047
+* hard  nproc   16384
+```
+
+The nofiles values represent the open file limit; the nproc values represent the number of processes limit.
+
+Save the changes, close the limits.conf file.
+
+If you are running Oracle Enterprise Linux 6 or Red Hat Linux 6, locate the  file `/etc/security/limits.d/90-nproc.conf`
+
+Make sure the same values are added to the `90-nproc.conf` file; otherwise, the values in the `90-nproc.conf` file can override the values in the `limits.conf` file.
+
+Reboot the host computer.
+
 
 ### Verify the required packages on the target hosts
 
