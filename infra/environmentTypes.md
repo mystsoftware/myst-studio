@@ -30,7 +30,7 @@ To see a list of defined Environment Types, click  `Infrastructure` > `Environme
 
 
 ## Creating a New environment type
-Click `+ Create New`, this will open the **Add Environment Type** dialogue. Specify the 
+Click `+ Create New`, this will open the **Add Environment Type** dialogue. Specify the following values:
 
 * **Name** - Short hand name for the Environment, such as SIT, UAT or PROD
 * **Description** - A longer description of the environment (e.g. System Integration Test)
