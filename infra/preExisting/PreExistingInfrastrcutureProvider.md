@@ -25,34 +25,46 @@ Click `+ Create New` and select `Pre Existing` from the options provided. This w
 * **Name** - Short hand name for the Pre-Existing Infrastructure Provider
 * **Description** - A longer description of the Pre-Existing Infrastructure Provider
 
+![](img/PreExistingInfraAdd.PNG)
 
-
-For each infrastrcuture provider, we can add one or more:
+For each infrastructure provider, we can add one or more:
 
 * **Key Pairs**  
-    This is used to hold all required key pairs
+  Used to define all the required key pairs used to connect to the hosts within the Infrastructure Providers. Each MyST Key Pair contains the private key for key pairs that we can use in credentials for the hosts that are part of our Infrastructure Provider.  
 
-contain the private key for key pairs that you can use in the OS agent credentials for the hosts that are part of your Infrastructure Provider.  
+  Once we have defined a key pair, we can use it in one or more OS Agent Credentials and OS Admin Credentials.
 
-    Once we have defined a key pair, we can use it in one or more infrastructure providers
+* **OS Agent credentials**  
+  The OS agent credentials is the set of credentials that MyST uses to connect to and execute jobs on the target hosts. Each Credential consists of a username and credential, which can be either a Key Pair or Password.
 
-* **OS agent credentials**  
-    The OS agent credentials is the set of credentials that MyST uses to connect to and execute jobs on the target hosts. 
+    Once we have defined an OS Agent Credential, we can use it in one or more Hosts.
 
-Once we have defined an OS Agent Credential, we can use it in one or more Hosts.
+* **OS admin credentials**  
+  Reserved for future functionality.
 
-  * **OS admin credentials**  
-    This is reserved for future functionality.
-
-  * **Hosts**  
+* **Hosts**  
     List of physical hosts that are available as part of the infrastructure provider. 
 
-![](img/PreExistingInfraAdd.PNG)
+
 
 4. Click **Save** to save your infrastructure provider.
 
+## Key Pairs
+
 ### Add Key Pair
-    To add a key pair, click **Add Key Pair**, enter a name, add the private key content, and click **Save**. Ensure that the key value format must be PEM and the key must not have a pass phrase.
+To add a key pair, click `Add Key Pair`, enter a name, add the private key content, and click **Save**. Ensure that the key value format must be PEM and the key must not have a pass phrase.
+
+### Edit Key Pair
+To edit  a key pair; click on the name of the key pair within the Infrastructure Provider, this will open the **Edit Key Pair** dialogue.
+
+Here you can modify the content of the Private Key; to do this click `Change Content` and you will be prompted to enter the Private Key content. Once done, click `Save` to confirm your changes.
+
+![](img/KeyPairEdit.PNG)
+
+### Delete Key Pair
+
+Note: You can only delete Key Pairs that are not assigned to any Credentials.
+
 
 ### Add OS Agent Credntial
 
