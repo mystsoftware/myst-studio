@@ -1,4 +1,46 @@
-# Configure Pre-Existing Infrastructure in MyST
+# Configure Pre-Existing Infrastructure Provider in MyST
+Before MyST can provision an Oracle Middleware environment to our target hosts, we need to provide details of the target hosts to MyST. We do this by creating a **Pre-Existing Infrastructure Provider**.
+
+Within MyST, a Pre-Existing Infrastructure Provider is used to capture the list of virtual or physical hosts that are available to provision our Oracle Middleware environment to. 
+
+During the Provisioning process, MyST connects to each of the target hosts via SSH to perform some of the initial install and configuration tasks.
+
+
+ The OS agent credentials is the set of credentials that you can use to run MyST agent on the host. These user credentials are mandatory. If your MyST Studio host definition does not already have OS agent credentials configured, provide a user name and password or key pair in this section, and then add details of the OS admin credentials. MyST Studio connects to the host using the OS admin credentials, and creates the OS agent credentials with the user name and password you provide here. Only the OS agent credentials will be used to run any actions from MyST Studio.
+
+
+
+
+For each host we need to capture basic details:
+* **Name**:
+* **Host Name**: x
+* **Compute Definition**: xx
+* **SSH Port**: xx
+* **Environment(s)**: xx
+* **OS Agent Credential**: xx
+
+
+
+such as the hostname and connection details.
+
+, in which we define the list of hosts available.
+
+
+List of physical hosts that are available as part of the infrastructure provider. Each host you select must be associated with a compute logical definition. This ensures that when you select the infrastructure provider in your platform model, only the hosts that map to the compute logical definition associated with the compute groups in the model can be selected.
+
+
+For each host we need to specify:
+
+* Hostname
+* SSH 
+* Compute Definition
+
+
+Within MYST any resource that is environment specific, such as a Platform Model, Platform Instance or Application Model is tagged to an Environment Type, this in conjunction with Role Based Access Control (RBAC) allows us to control who can perform which actions in which environment.
+
+In addition target hosts (see Pre-Existing Infrastructure Providers) can be tagged to one or more Environment Types. When we create a platform model, only the hosts tagged to the same  Environment Type as the platform model can be selected within the model.
+
+
 Once our target hosts are ready, the next step is to define them in MyST and 
 
 We 
