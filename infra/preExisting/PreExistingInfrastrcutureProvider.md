@@ -1,24 +1,78 @@
 # Configure Pre-Existing Infrastructure Provider in MyST
-Before MyST can provision an Oracle Middleware environment to our target hosts, we need to provide details of the target hosts to MyST. We do this by creating a **Pre-Existing Infrastructure Provider**.
-
 Within MyST, a Pre-Existing Infrastructure Provider is used to capture the list of virtual or physical hosts that are available to provision our Oracle Middleware environment to. 
 
-During the Provisioning process, MyST connects to each of the target hosts via SSH to perform some of the initial install and configuration tasks.
+During the Provisioning process, MyST connects to each of the target hosts via SSH to perform some of the initial install and configuration tasks. 
+1. MyST connects to host where the WebLogic Admin Server will be installed and downloads the MyST Agent.
+2. The MyST agent will perform the initial install and configuration tasks. These tasks are performed locally by the MyST agent on the Admin Host.
+3. The MyST Agent on the Admin Server will connect remotely via SSH to the other target host in the WebLogic Domain and perform install and configuration tasks  remotely.
+
+The credentials that MyST uses to connect to and execute jobs on each of the hosts via SSH are known in MyST as the **OS Agent Credentials**. These credentials consist of a user name and password or key pair. When creating these credentials in MyST, the user name should be the `oracle` user we configured in Target Host Configuration.
+
+In order to enable this, the OS agent credentials is the set of credentials that you can use to run MyST agent on the host. These user credentials are mandatory.
+
+If your MyST Studio host definition does not already have OS agent credentials configured, provide a user name and password or key pair in this section, and then add details of the OS admin credentials. 
+
+MyST Studio connects to the host using the OS admin credentials, and creates the OS agent credentials with the user name and password you provide here. Only the OS agent credentials will be used to run any actions from MyST Studio.
+
+## List Infrastructure Providers
+To see details of the defined Infrastructure Providers, click  `Infrastructure` > `Infrastructure Providers`. By default, this will display details of **All** Infrastructure Providers. We can filter this by selecting `Pre-Existing` in the `Filter by` drop down as shown below.
+
+![](img/PreExistingInfraList.PNG)
+
+## Create Pre-Existing Infrastructure
+Click `+ Create New` and select `Pre Existing` from the options provided. This will open the **Create New Pre Existing** dialogue. Specify the following values:
+
+* **Name** - Short hand name for the Pre-Existing Infrastructure Provider
+* **Description** - A longer description of the Pre-Existing Infrastructure Provider
 
 
- The OS agent credentials is the set of credentials that you can use to run MyST agent on the host. These user credentials are mandatory. If your MyST Studio host definition does not already have OS agent credentials configured, provide a user name and password or key pair in this section, and then add details of the OS admin credentials. MyST Studio connects to the host using the OS admin credentials, and creates the OS agent credentials with the user name and password you provide here. Only the OS agent credentials will be used to run any actions from MyST Studio.
 
+For each infrastrcuture provider, we can add one or more:
 
+* **Key Pairs**  
+    This is used to hold all required key pairs
 
+contain the private key for key pairs that you can use in the OS agent credentials for the hosts that are part of your Infrastructure Provider.  
+
+    Once we have defined a key pair, we can use it in one or more infrastructure providers
+
+* **OS agent credentials**  
+    The OS agent credentials is the set of credentials that MyST uses to connect to and execute jobs on the target hosts. 
+
+Once we have defined an OS Agent Credential, we can use it in one or more Hosts.
+
+  * **OS admin credentials**  
+    This is reserved for future functionality.
+
+  * **Hosts**  
+    List of physical hosts that are available as part of the infrastructure provider. 
+
+![](img/PreExistingInfraAdd.PNG)
+
+4. Click **Save** to save your infrastructure provider.
+
+### Add Key Pair
+    To add a key pair, click **Add Key Pair**, enter a name, add the private key content, and click **Save**. Ensure that the key value format must be PEM and the key must not have a pass phrase.
+
+### Add OS Agent Credntial
+
+    To add an OS agent credentials, click **Add OS agent credentials**, enter a name, the SSH user name for the OS agent credentials, and either enter a password or select a key pair from the available key pairs in the infrastructure provider definition.
+
+### Add OS Admin Credential
+
+### Add Hosts
+To add a host, click **Add Host**. Enter a name for the host entry, the Host name or IP address for the host, and the SSH Port. Select a compute logical definition for the host, and select which environments the host can be assigned to. Select the OS agent credentials to connect to the host. If the OS agent credentials you have select is not yet created, and you need MyST Studio to create the OS agent credentials, select **Yes** under **Configure OS agent credentials** and select the OS admin credentials. Click **Add** to add the host.
 
 For each host we need to capture basic details:
-* **Name**:
-* **Host Name**: x
-* **Compute Definition**: xx
-* **SSH Port**: xx
-* **Environment(s)**: xx
-* **OS Agent Credential**: xx
+* **Name**: Name with MyST used to refer to the host
+* **Host Name**: Network address of the host, can also be the IP Address
+* **Compute Definition**: Used to specify the Operating System of the target host.
+* **SSH Port**: The SSH Port of the target host, defaults to 22.
+* **Environment(s)**: Hosts must be tagged to one or more Environments. When we create a platform model, only the hosts tagged to the same  Environment Type as the platform model can be selected within the model.
+* **OS agent credentials**  
+    The OS agent credentials is the set of credentials that you can use to run MyST agent on the host. These user credentials are mandatory. If your MyST Studio host definition does not already have OS agent credentials configured, provide a user name and password or key pair in this section, and then add details of the OS admin credentials. MyST Studio connects to the host using the OS admin credentials, and creates the OS agent credentials with the user name and password you provide here. Only the OS agent credentials will be used to run any actions from MyST Studio.
 
+    To add an OS agent credentials, click **Add OS agent credentials**, enter a name, the SSH user name for the OS agent credentials, and either enter a password or select a key pair from the available key pairs in the infrastructure provider definition.
 
 
 such as the hostname and connection details.
@@ -55,24 +109,7 @@ A pre-existing infrastructure provider is one where the target hosts onto which 
 2. Enter a name and description for the provider.
 3. Add the following details to your Infrastructure Provider. These details are referenced in your platform model when you select this infrastructure provider, and applied at the time of provisioning.
 
-    * **Key Pairs**  
-      Key pairs contains all the key pairs that you can use in the OS agent credentials for the hosts that are part of your Infrastructure Provider.  
 
-      To add a key pair, click **Add Key Pair**, enter a name, add the private key content, and click **Save**. Ensure that the key value format must be PEM and the key must not have a pass phrase.
 
-  * **OS agent credentials**  
-    The OS agent credentials is the set of credentials that you can use to run MyST agent on the host. These user credentials are mandatory. If your MyST Studio host definition does not already have OS agent credentials configured, provide a user name and password or key pair in this section, and then add details of the OS admin credentials. MyST Studio connects to the host using the OS admin credentials, and creates the OS agent credentials with the user name and password you provide here. Only the OS agent credentials will be used to run any actions from MyST Studio.
 
-    To add an OS agent credentials, click **Add OS agent credentials**, enter a name, the SSH user name for the OS agent credentials, and either enter a password or select a key pair from the available key pairs in the infrastructure provider definition.
-
-  * **OS admin credentials**  
-    An OS admin credentials is a set of credentials which have the ability to create OS agent credentials to run MyST Studio on the target host. When you are defining a host, if you do not already have an OS agent credentials set, select the OS agent credentials that you want to create, and the OS admin credentials that can create it on the host. MyST Studio connects to the host using the OS admin credentials and creates an OS agent credentials based on the details you have selected on the host.
-
-    To create an OS admin credentials, click **Add OS admin credentials**, enter a name, the SSH user name for the OS admin credentials, and either enter a password or select a key pair for the user name. If you want the OS admin credentials to run as a different user on the host, select **Yes** under **Run as different user** and enter the user name. You can add the password for the different user if it is required.
-
-  * **Hosts**  
-    List of physical hosts that are available as part of the infrastructure provider. Each host you select must be associated with a compute logical definition. This ensures that when you select the infrastructure provider in your platform model, only the hosts that map to the compute logical definition associated with the compute groups in the model can be selected.
-
-    To add a host, click **Add Host**. Enter a name for the host entry, the Host name or IP address for the host, and the SSH Port. Select a compute logical definition for the host, and select which environments the host can be assigned to. Select the OS agent credentials to connect to the host. If the OS agent credentials you have select is not yet created, and you need MyST Studio to create the OS agent credentials, select **Yes** under **Configure OS agent credentials** and select the OS admin credentials. Click **Add** to add the host.
-
-4. Click **Save** to save your infrastructure provider.
+[^1]This is 
