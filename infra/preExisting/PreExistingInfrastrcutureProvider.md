@@ -62,11 +62,25 @@ Here you can modify the content of the Private Key; to do this click `Change Con
 ![](img/KeyPairEdit.PNG)
 
 ### Delete Key Pair
+To delete a key pair, open the Edit Key Pair dialogue and click `Delete`.
 
-Note: You can only delete Key Pairs that are not assigned to any Credentials.
+**Note:** You can only delete Key Pairs that are not assigned to any Credentials.
+
+##OS Agent Credentials
+
+### Add OS Agent Credential
+To add a OS Agent Credential, click `Add Agent Credential`, Specify the following values:
+
+* **Name** - Short hand name for the OS Agent Credential
+* **SSH User Name** - The SSH User Name that will be used to connect to the host
+* **Connect Using** - Specifies the type of credentials used to authenticate the SSH user, can be  either `Key Pair` or `Password`
+* **Key Pair** - If `Key Pair` is specified, then select the Key Pair to use from the Drop Down.
+* **Password** - If `Password` is specified, then enter the password to be used to authenticate the user.
+
+Click `Save` to save the new OS Agent Credential.
 
 
-### Add OS Agent Credntial
+enter a name, add the private key content, and click **Save**. 
 
     To add an OS agent credentials, click **Add OS agent credentials**, enter a name, the SSH user name for the OS agent credentials, and either enter a password or select a key pair from the available key pairs in the infrastructure provider definition.
 
