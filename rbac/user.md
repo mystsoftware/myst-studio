@@ -42,14 +42,14 @@ To change the username, from within the Edit User dialogue, click `Change Userna
 ## Activate / Deactivate User
 By default, when you create a User, it is in an active state. Meaning that the user is able to log into MyST and perform any actions for which they have been granted privileges.
 
-To prevent any new resources being tagged to an Environment, we can deactivate the Environment Type.
+To disable access to MyST, we can deactivate the User Account.
 
 **Note**: 
-* Deactivating an existing environment type does not affect resources that are currently mapped to the environment type.
-* A deactivated Environment Type can be reactivated at any time.
+* Deactivating a User account does not remove any workspaces roles they have been granted, but prevents them from logging in and performing any of those roles.
+* A deactivated User account can be reactivated at any time.
 
-To deactivate an environment; click on the  **Actions** drop-down menu for the corresponding Environment Type and select `Deactivate` as illustrated below.
+To deactivate a User account; click on the  **Actions** drop-down menu for the corresponding User and select `Deactivate` as illustrated below.
 
-![](img/EnvironmentTypeDeactivate.PNG)
+![](img/UserDeactivate.PNG)
 
-To activate a deactivated environment; click on the  **Actions** drop-down menu for the corresponding Environment Type and select `Activate`.
+To activate a deactivated environment; click on the  **Actions** drop-down menu for the corresponding User account and select `Activate`.
