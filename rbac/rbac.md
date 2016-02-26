@@ -11,10 +11,45 @@ Within MyST, Role Based Access Control (RBAC) enables us to control what actions
 * Certain "workspaces" that a user is allowed to work on (e.g. SOA Project A, ADF Project B).
 Administration type duties, e.g. define Environments, Infrastructure, etc
 
+Within MyST, **users** are not assigned permissions directly, but only acquire them through the **role(s)** assigned to them within one or more **workspaces**.
 
-Within MyST, users are not assigned permissions directly, but only acquire them through the role(s) assigned to them within a workspace.
+### Users  
+Each user has an individual account that at a minimum includes a unique login id, username and password. Users can then be assigned to zero, one or more roles; from which they inherit the the corresponding application privileges.
 
-A role is a collection of application-related privileges. Users may have different roles in different workspaces, and a user can be assigned to multiple roles.
+With MyST there are a number of **System Specific Roles**, these are:
+
+####System Administrator
+The *System Administrator* role enables a user to perform the following activities:
+* User Management
+* Role Management
+* Workspace Management
+* Environments
+* Compute Definitions
+
+####Workspace Administrator
+A Workspace administrator is someone who has been granted the 'Workspace Administrator' role, for a particular workspace, but not necessarily the global 'System Administrator' permission.
+
+This allows a 'System Administrator' to delegate administration of the workspace to one or more users;
+* Configure which Users have access to the workspace
+* Configure which roles each of those users have within the workspace
+* Configure which resources can be shared with other workspaces.
+
+
+Workspaces also allow for delegated administration:
+    * MyST administrators define roles in MYST — that is, all workspaces have the same roles available to them.
+    * Workspace administrators assign members to roles specifically for their workspace(s).
+    * 
+
+
+
+
+
+####API User
+
+###Role
+A role is a collection of application-related privileges. MyST administrators define roles in MYST. That is, all workspaces have the same roles available to them.
+
+Users may have different roles in different workspaces, and a user can be assigned to multiple roles.
  
 A role is also environment specific, in that it only grants application-related privileges in specific environment, for example we may allow a SOA Developer to deploy code into the DEV and TEST environments only.
 
@@ -34,26 +69,17 @@ and through those role assignments acquire the computer permissions to perform p
 
 There are three key elements for managing users, these are:
 
-### Users  
-Each user has an individual account that at a minimum includes a unique login id, username and password.
-Users can then be assigned to zero, one or more roles; from which they inherit the the corresponding application privileges.
 
-* **System Administrator** - MyST administrators define roles in MYST — that is, all workspaces have the same roles available to them.
-* **Workspace Administrator**
-* **API User**
 
  
-###Role  
+  
 
 ###Workspace
 MyST Workspaces are a flexible way to associate users with particular workstreams within an organisation. These could be project based (e.g a SOA Development Project) or activity based (e.g. Middleware Operations). 
 
 A MyST Workspaces is a collection of related resources, such as Platform Blueprints, Platform Instances, etc. Users will be assigned a assigned one or more roles in a workspace, which will define what actions they can perform against resources within that workspace.
     
-Workspaces also allow for delegated administration:
-    * MyST administrators define roles in MYST — that is, all workspaces have the same roles available to them.
-    * Workspace administrators assign members to roles specifically for their workspace(s).
-    * A Workspace administrator is someone who has the project-specific 'Administer Workspace' permission, but not necessarily the global 'MyST Administrator' permission.
+
     
     
     
