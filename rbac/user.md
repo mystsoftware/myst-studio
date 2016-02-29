@@ -1,8 +1,9 @@
 # User Management
+Each user has an individual account that at a minimum includes a unique login id, username and password. 
 
-Each user has an individual account that at a minimum includes a unique login id, username and password. Users can then be assigned to zero, one or more groups; from which they inherit the the corresponding application privileges.
+Within MyST, **users** are not assigned permissions directly, but only acquire them through the **role(s)** assigned to them within one or more **workspaces**. 
 
-
+Users can also be assigned System Roles, which will enable them to manage system specific configurations.
 
 ## List Users
 To see a list of MyST Users, click  `Administration` > `Users`. This will display a list of Users similar to the one below.
