@@ -54,3 +54,8 @@ To deactivate a User account; click on the  **Actions** drop-down menu for the c
 ![](img/UserDeactivate.PNG)
 
 To activate a deactivated environment; click on the  **Actions** drop-down menu for the corresponding User account and select `Activate`.
+
+## Delete User
+To delete a User account; click on the  **Actions** drop-down menu for the corresponding User and select `Delete`. We will be prompted to confirm out action, click `Yes` to proceed.
+
+When deleted the user will be removed from any workspaces to which they belong.
