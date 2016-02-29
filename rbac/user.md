@@ -15,12 +15,13 @@ The list can be filtered / sorted by User Name or Status, by entering the filter
 ## Creating a New User
 Click `+ Create User`, this will open the **Add User** dialogue. Specify the following values:
 
-* **First Name** - First name of the user
-* **Last Name** - Last name of the user
-* **EMail Address** - Users email address
-* **Username** - Username for the account, can only consist of alphanumeric, period and underscore characters. Must be unique within MyST.
-* **Password** - User Password
-* **System Specific Roles** - To assign the user System Admin status, enable the `System Administrator` check-box.
+* **First Name:** First name of the user
+* **Last Name:** Last name of the user
+* **EMail Address:** Users email address
+* **Username:** Username for the account, can only consist of alphanumeric, period and underscore characters. Must be unique within MyST.
+* **Password:** User Password
+* **System Administrator:** Select the check box to assign the `System Administration` role to the user.
+* **API User:** - Select the check box to indicate that the user is an API User (see tbd).
 
 ![](img/UserAdd.PNG)
 
