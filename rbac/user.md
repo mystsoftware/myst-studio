@@ -26,7 +26,7 @@ Click `+ Create User`, this will open the **Add User** dialogue. Specify the fol
 ![](img/UserAdd.PNG)
 
 
-Click `Create` to Save the create the User Account. Once saved the user will be able to login into MyST with the provided username and password. 
+Click `Save` to create the User Account. Once saved the user will be able to login into MyST with the provided username and password. 
 
 **Note**: At this point the user will not have any privileges to perform any actions within MyST.
 
