@@ -10,7 +10,7 @@ Within MyST, a Role is used to define the type of MyST resources that a user in 
 ## List Roles
 To see a list of MyST Roles, click  `Administration` > `Roles`. This will display a list of Roles similar to the one below.
 
-![](img/UserList.PNG)
+![](img/RoleList.PNG)
 
 The list can be filtered / sorted by User Name or Status, by entering the filter criteria in the filter fields (outlined in red in the above screen-shot)/
 
@@ -24,7 +24,7 @@ Click `+ Create Role`, this will open the **Add Role** dialogue. Specify the fol
 * **Password** - User Password
 * **System Specific Roles** - To assign the user System Admin status, enable the `System Administrator` check-box.
 
-![](img/UserAdd.PNG)
+![](img/RoleAdd.PNG)
 
 
 Click `Create` to Save the create the User Account. Once saved the user will be able to login into MyST with the provided username and password. 
