@@ -14,17 +14,36 @@ To see a list of MyST Roles, click  `Administration` > `Roles`. This will displa
 
 The list can be filtered / sorted by Role Name, Description, Environments or Status, by entering the filter criteria in the filter fields (outlined in red in the above screen-shot).
 
-## Creating a New User
+## Creating a New Role
 Click `+ Create Role`, this will open the **Add Role** dialogue. Specify the following values:
 
-* **First Name** - First name of the user
-* **Last Name** - Last name of the user
-* **EMail Address** - Users email address
+* **Name** - First name of the user
+* **Description** - Last name of the user
+
+![](img/RoleAdd.PNG)
+
+###Specify Environment Types**
+During the lifetime of a project, code will be built and promoted to various staging environments, such as Development (DEV), System Integration Testing (SIT), User Acceptance Testing (UAT), Pre-Production (PRE), and Production (PROD).
+
+Within MYST any resource that is environment specific, such as a Platform Model or Platform Instance is tagged to an Environment Type.
+
+For each role, we must specify to which Environments it has access, and what type of actions they can perform against each resource type in that environment. To do this select 
+
+**Note:** The same access permissions are assigned to all Environment Types. If we want to define different access permissions per environment type, then we will need to create multiple Roles
+
+
+
+Within MYST any resource that is environment specific, such as a Platform Model or Platform Instance is tagged to an Environment Type, this in conjunction with Role Based Access Control (RBAC) allows us to control who can perform which actions in which environment.
+
+
+
+
+- Select the list of Ev
 * **Username** - Username for the account, can only consist of alphanumeric, period and underscore characters. Must be unique within MyST.
 * **Password** - User Password
 * **System Specific Roles** - To assign the user System Admin status, enable the `System Administrator` check-box.
 
-![](img/RoleAdd.PNG)
+
 
 
 Click `Create` to Save the create the User Account. Once saved the user will be able to login into MyST with the provided username and password. 
