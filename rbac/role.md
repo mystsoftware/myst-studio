@@ -12,7 +12,7 @@ To see a list of MyST Roles, click  `Administration` > `Roles`. This will displa
 
 ![](img/RoleList.PNG)
 
-The list can be filtered / sorted by User Name or Status, by entering the filter criteria in the filter fields (outlined in red in the above screen-shot)/
+The list can be filtered / sorted by Role Name, Description, Environments or Status, by entering the filter criteria in the filter fields (outlined in red in the above screen-shot).
 
 ## Creating a New User
 Click `+ Create Role`, this will open the **Add Role** dialogue. Specify the following values:
