@@ -17,8 +17,8 @@ The list can be filtered / sorted by Role Name, Description, Environments or Sta
 ## Creating a New Role
 Click `+ Create Role`, this will open the **Add Role** dialogue. Specify the following values:
 
-* **Name** - First name of the user
-* **Description** - Last name of the user
+* **Name** - Role Name
+* **Description** - Description of the role
 
 ![](img/RoleAdd.PNG)
 
