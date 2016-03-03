@@ -62,9 +62,19 @@ Click `Save` to create the Workspace. Once saved the user will be able to login 
 ## Configure Users
 To configure workspace users; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Configure Users`, this will open the **Configure Users** dialogue.
 
-###Add User
-To add a new user to the Workspace, 
+This will display summary information about the workspace.
 
+![](img/WorkspaceList.PNG)
+
+###Add User
+To add a new user to the Workspace, click `+ Add Users`, this will open the **Add Users** dialogue. From here we need to select the user(s) we wish to add to the workspace and the role(s) that we want to assign them.
+
+To select the users
+
+To assign roles, simply select the corresponding checkbox for each role required.
+
+
+![](img/WorkspaceAddUsers.PNG)
 ### Associate Resources
 To change the username, from within the Edit User dialogue, click `Change Username`,  this will open the **Change Username** dialogue. Enter the new username and click `Change username` to confirm.
 
