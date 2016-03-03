@@ -1,7 +1,17 @@
 # Workspace Management
+
 MyST Workspaces are a flexible way to associate users with particular work streams within an organization. These could be project based, for example a SOA development project or team based, for example the Middleware Operations team. 
 
 A MyST Workspace is a collection of related resources, such as Platform Blueprints, Platform Instances, etc. Users can be assigned one or more roles in a workspace, which will define what actions they can perform against resources within that workspace.
+
+
+Within MyST, a Role is used to define the type of MyST resources that a user in that role has access to, and the actions that can be performed against the resources, specifically it  will define:
+* What actions a user can perform against each resource type, 
+* Where a resource is Environment specific (e.g. DEV, TEST, QA, etc), for example Platform Model / Instance, Application Models;  then the role will define which actions can be performed against each the resource in each environment.
+* A separate reserved MyST Administrator Role will be used to manage system specific configurations, for example user and role management, tag management
+* A separate reserved MyST Workspace Administrator Role will be used to manage workspace specific configurations, for example defining which users have which roles within a workspace.
+
+
     
 MyST administrators define roles in MYST. That is, all workspaces have the same roles available to them. Users may have different roles in different workspaces, and a user can be assigned to multiple roles within a workspace.
 
@@ -19,26 +29,3 @@ When creating a resource with a Parent resource (e.g. Platform Model has a Platf
 It is envisaged that organizations will use Workspaces in multiple ways, based on how they structure the delivery of work, for example:
 
 It is envisaged that organizations will use Workspaces in multiple ways, based on how they structure the delivery of work, for example:
- 
-Line of Business
-Some organizations (e.g. Eaton) have separate installations of the Oracle Middleware platform for each line of business (LOB), with each LOB having a separate team responsible for designing, provisioning and maintaining its Oracle Middleware platform, for example it may have the following workspaces:
-Industrial Platform
-Electrical Platform
-Corporate Platform
- 
-Oracle Middleware Technology Type
-Some organizations (e.g. Rabobank) have separate teams responsible for designing, provisioning and maintaining its Oracle Middleware platform based on the technology type, for example it may have the following workspaces:
-Oracle SOA Platform
-Oracle BPM Platform
-Oracle WebCenter Platform
-Oracle Identity and Access Management Platform
- 
-Oracle Middleware Projects
-Where an organization has multiple Oracle Middleware project, they will create a separate workspace for each project
-Cloud Integration Project (CIP)
-Supply Chain Project
-Mobile Project
- 
-Note: A resource could belong to multiple Workspaces. For example a DEV Platform Instance may be manged by the Platform Workspace, but still need to belong to the Integration Project workspace - so that developers within that Workspace are still able to perform actions against it.
- 
-We still need to design the appropriate way of handling this.
