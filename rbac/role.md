@@ -22,7 +22,7 @@ Click `+ Create Role`, this will open the **Add Role** dialogue. Specify the fol
 
 ![](img/RoleAdd.PNG)
 
-###Specify Environment Types**
+###Specify Environment Types
 During the lifetime of a project, code will be built and promoted to various staging environments, such as Development (DEV), System Integration Testing (SIT), User Acceptance Testing (UAT), Pre-Production (PRE), and Production (PROD).
 
 Within MYST any resource that is environment specific, such as a Platform Model or Platform Instance is tagged to an Environment Type.
@@ -35,20 +35,12 @@ For each role, we must specify to which Environments it has access, and what typ
 
 Within MYST any resource that is environment specific, such as a Platform Model or Platform Instance is tagged to an Environment Type, this in conjunction with Role Based Access Control (RBAC) allows us to control who can perform which actions in which environment.
 
+###Specify Access Permissions
+Once we have specified which environments the roles has access to, the next stage is to specify the access permissions the roles has to each resource type in those environments.
 
-
-
-- Select the list of Ev
-* **Username** - Username for the account, can only consist of alphanumeric, period and underscore characters. Must be unique within MyST.
-* **Password** - User Password
-* **System Specific Roles** - To assign the user System Admin status, enable the `System Administrator` check-box.
-
-
-
-
-Click `Create` to Save the create the User Account. Once saved the user will be able to login into MyST with the provided username and password. 
-
-**Note**: At this point the user will not have any privileges to perform any actions within MyST.
+####Platform
+####Release Management
+####Other
 
 ## Edit User Account
 To edit the user account; click on the `Edit` button for the corresponding User, this will open the **Edit User** dialogue.
