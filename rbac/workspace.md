@@ -64,7 +64,7 @@ To configure workspace users; click on the click on the  **Actions** drop-down m
 
 This will display summary information about the workspace.
 
-![](img/WorkspaceList.PNG)
+![](img/WorkspaceConfigureUsers.PNG)
 
 ###Add User
 To add a new user to the Workspace, click `+ Add Users`, this will open the **Add Users** dialogue. From here we need to select the user(s) we wish to add to the workspace and the role(s) that we want to assign them.
