@@ -39,9 +39,16 @@ Users can also be assigned System Roles, which will enable them to manage system
 ## List Workspaces
 To see a list of MyST Workspaces, click  `Administration` > `Workspaces`. This will display a tiled view of Workspaces similar to the one below.
 
-![](img/UserList.PNG)
+![](img/WorkspaceList.PNG)
 
-The list can be filtered / sorted by User Name or Status, by entering the filter criteria in the filter fields (outlined in red in the above screen-shot)/
+For each workspace, MyST provides summary information o
+* Users
+* Platform Templates
+* Platform Blueprints
+* Platform Models
+* Platform Instance
+* Infrastructure Providers
+
 
 ## Creating a New User
 Click `+ Create User`, this will open the **Add User** dialogue. Specify the following values:
