@@ -40,8 +40,7 @@ Users can also be assigned System Roles, which will enable them to manage system
 To see a list of MyST Workspaces, click  `Administration` > `Workspaces`. This will display a tiled view of Workspaces similar to the one below.
 
 ![](img/WorkspaceList.PNG)
-
-For each workspace, MyST provides summary information o
+For each workspace, MyST provides summary of the number of resources contained in the workspace, including:
 * Users
 * Platform Templates
 * Platform Blueprints
@@ -50,33 +49,29 @@ For each workspace, MyST provides summary information o
 * Infrastructure Providers
 
 
-## Creating a New User
-Click `+ Create User`, this will open the **Add User** dialogue. Specify the following values:
+## Creating a New Workspace
+Click `+ Create Workspace`, this will open the **Add Workspace** dialogue. Specify the following values:
 
-* **First Name:** First name of the user
-* **Last Name:** Last name of the user
-* **EMail Address:** Users email address
-* **Username:** Username for the account, can only consist of alphanumeric, period and underscore characters. Must be unique within MyST.
-* **Password:** User Password
-* **System Administrator:** Select the check box to assign the `System Administration` role to the user.
-* **API User:** - Select the check box to indicate that the user is an API User (see tbd).
+* **Name:** Name of the Workspace
+* **Description:** Description of the Workspace
 
-![](img/UserAdd.PNG)
-
-Click `Save` to create the User Account. Once saved the user will be able to login into MyST with the provided username and password. 
+Click `Save` to create the Workspace. Once saved the user will be able to login into MyST with the provided username and password. 
 
 **Note**: At this point the user will not have any privileges to perform any actions within MyST.
 
-## Edit User Account
-To edit the user account; click on the `Edit` button for the corresponding User, this will open the **Edit User** dialogue.
+## Configure Users
+To configure workspace users; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Configure Users`, this will open the **Configure Users** dialogue.
 
-Here you can modify the First Name, Last Name, Email Address and System Specific Roles of the User. Once done, click `Save` to confirm your changes.
+###Add User
+To add a new user to the Workspace, 
 
-### Change User Password
-To reset the user password, from within the Edit User dialogue, click `Change Password`,  this will open the **Change Password** dialogue. Enter the new password and click `Change Password` to confirm.
-
-### Change Username
+### Associate Resources
 To change the username, from within the Edit User dialogue, click `Change Username`,  this will open the **Change Username** dialogue. Enter the new username and click `Change username` to confirm.
+
+## Edit Workspace
+To edit a workspace; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Open`, this will open the **Edit Workspace** dialogue.
+
+Here you can modify the Name and Description of the Workspace. Once done, click `Save` to confirm your changes.
 
 ## Activate / Deactivate User
 By default, when you create a User, it is in an active state. Meaning that the user is able to log into MyST and perform any actions for which they have been granted privileges.
