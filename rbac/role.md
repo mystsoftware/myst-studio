@@ -86,37 +86,28 @@ The following table details the access permissions for other resources in MyST.
 | Resource Type | Env. Specific | Permission | Description |
 | ------------- | ------------- | ---------- | ----------- |
 | Infrastructure Provider | No | View | Allows a user to view details of an Infrastructure Provider. |
-|  | No | Create | Allows a user to create Infrastructure Provider |
-|  | No | View | Allows a user to edit an existing Infrastructure Provider |
-|  | No | View | Allows a user to delete an Infrastructure Provider |
-| Continuous Delivery Profile  | No | View | Allows a user to view details of a Continuous Delivery Profile. |
-|  | No | Create | Allows a user to create a Continuous Delivery Profile |
-|  | No | View | Allows a user to edit an existing Continuous Delivery Profile |
-|  | No | View | Allows a user to delete a Continuous Delivery Profile |
-| | 
+|  | No | Create | Allows a role to create Infrastructure Provider |
+|  | No | View | Allows a role to edit an existing Infrastructure Provider |
+|  | No | View | Allows a role to delete an Infrastructure Provider |
+| Continuous Delivery Profile  | No | View | Allows a role to view details of a Continuous Delivery Profile. |
+|  | No | Create | Allows a role to create a Continuous Delivery Profile |
+|  | No | Edit | Allows a role to edit an existing Continuous Delivery Profile |
+|  | No | Delete | Allows a role to delete a Continuous Delivery Profile |
 
 ## Edit Role
 To edit the user account; click on the `Edit` button for the corresponding role, this will open the **Edit Role** dialogue.
 
-Here you can modify the First Name, Last Name, Email Address and System Specific Roles of the User. Once done, click `Save` to confirm your changes.
-
-### Change User Password
-To reset the user password, from within the Edit User dialogue, click `Change Password`,  this will open the **Change Password** dialogue. Enter the new password and click `Change Password` to confirm.
-
-### Change Username
-To change the username, from within the Edit User dialogue, click `Change Username`,  this will open the **Change Username** dialogue. Enter the new username and click `Change username` to confirm.
+Here you can modify the Description, Environments and Access Permissions of the Role. Once done, click `Save` to confirm your changes.
 
 ## Activate / Deactivate User
-By default, when you create a User, it is in an active state. Meaning that the user is able to log into MyST and perform any actions for which they have been granted privileges.
+By default, when you create a Role, it is in an active state. Meaning that the Role can be assigned to a user within a workspace to provide the corresponding access permissions to resources within that workspace.
 
-To disable access to MyST, we can deactivate the User Account.
+We can deactivate a role at any time. Deactivating a Role account does not remove any workspaces roles a user has been granted, but deactivates the permissions they have been granted through that role.
 
-**Note**: 
-* Deactivating a User account does not remove any workspaces roles they have been granted, but prevents them from logging in and performing any of those roles.
-* A deactivated User account can be reactivated at any time.
+A deactivated role can be reactivated at any time, at which point any user assigned that role, will receive back the corresponding access permissions.
 
-To deactivate a User account; click on the  **Actions** drop-down menu for the corresponding User and select `Deactivate` as illustrated below.
+To deactivate a User account; click on the  **Actions** drop-down menu for the corresponding Role and select `Deactivate` as illustrated below.
 
-![](img/UserDeactivate.PNG)
+![](img/RoleDeactivate.PNG)
 
-To activate a deactivated environment; click on the  **Actions** drop-down menu for the corresponding User account and select `Activate`.
+To activate a deactivated environment; click on the  **Actions** drop-down menu for the corresponding Role and select `Activate`.
