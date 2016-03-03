@@ -31,15 +31,15 @@ Once we have entered the Role details, click `Save` to create the Role.
 ###Specify Environment Types
 During the lifetime of a project, code will be built and promoted to various staging environments, such as Development (DEV), System Integration Testing (SIT), User Acceptance Testing (UAT), Pre-Production (PRE), and Production (PROD).
 
+Typically we will want to provide 
+
 Within MYST any resource that is environment specific, such as a Platform Model or Platform Instance is tagged to an Environment Type.
 
-For each role, we must specify to which Environments it has access, and what type of actions they can perform against each resource type in that environment. To do this select 
-
-**Note:** The same access permissions are assigned to all Environment Types. If we want to define different access permissions per environment type, then we will need to create multiple Roles
-
-
+For each role, we must specify to which Environments it has access, and what type of actions they can perform against each resource type in that environment. 
 
 Within MYST any resource that is environment specific, such as a Platform Model or Platform Instance is tagged to an Environment Type, this in conjunction with Role Based Access Control (RBAC) allows us to control who can perform which actions in which environment.
+
+**Note:** The same access permissions are assigned to all Environment Types. If we want to define different access permissions per environment type, then we will need to create multiple Roles
 
 ###Specify Access Permissions
 Once we have specified which environments the roles has access to, the next stage is to specify the access permissions the roles has to each resource type in those environments.
