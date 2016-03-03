@@ -39,11 +39,58 @@ Within MYST any resource that is environment specific, such as a Platform Model 
 Once we have specified which environments the roles has access to, the next stage is to specify the access permissions the roles has to each resource type in those environments.
 
 ####Platform
-####Release Management
-####Other
+The following table details the access permissions for Platform resources.
 
-## Edit User Account
-To edit the user account; click on the `Edit` button for the corresponding User, this will open the **Edit User** dialogue.
+| Resource Type | Env. Specific | Permission | Description |
+| ------------- | ------------- | ---------- | ----------- |
+| Platform Template | No | View | Allows a role to view a Platform Template |
+| | No | Create | Allows a role to create a Platform Templates |
+| | No | Edit | Allows a role to edit an existing Platform Templates |
+| | No | Delete | Allows a role to delete an existing Platform Templates |
+| Platform Blueprint | No | View | Allows a role to view a Platform Blueprint |
+| | No | Create | Allows a role to create a Platform Blueprint. When creating a Blueprint based on a template the user must have view access to the Platform Template |
+| | No | Edit | Allows a role to edit an existing Platform Blueprint |
+| | No | Delete | Allows a role to delete an existing Platform Blueprint |
+| Platform Model | No | View | Allows a role to view a Platform Model |
+| | No | Create | Allows a role to create a Platform Model. Note a role can only create Platform Models for which they have at least View Access of the corresponding Platform Blueprint |
+| | No | Edit | Allows a role to edit an existing Platform Model |
+| | No | Delete | Allows a role to delete an existing Platform Model |
+| Platform Instance | Yes | Create | Allows a user to provisiom a new environment as defined by its corresponding Platform Model |
+| | Yes | Delete | Allows a user to terminate a platform instance. Note a user needs both create and delete access to re-provision a platform instance |
+| | Yes | Execute | Allows a user to execute actions against the Platform Instance, including updating a platform instance (as defined by its Platform Model), starting and stopping the Platform Instance. |
+
+####Release Management
+The following table details the access permissions for Release Management resources.
+
+| Resource Type | Env. Specific | Permission | Description |
+| ------------- | ------------- | ---------- | ----------- |
+| Artifact  | No | View | Allows a role to view an Artifact. Note View access is required to be able to add an Artifact to an Application Blueprint |
+|   | No | Create | Allows a role to view an Artifact |
+|   | No | Edit | Allows a role to edit an existing Artifact |
+|   | No | Delete | Allows a role to delete an existing Artifact |
+| Application Blueprint  | No | View | Allows a role to view an Application Blueprint |
+|   | No | Create | Allows a role to view an Application Blueprint |
+|   | No | Edit | Allows a role to edit an existing Application Blueprint |
+|   | No | Delete | Allows a role to delete an existing Application Blueprint |
+|   | Yes | Deploy | Allows a role to deploy an Application Blueprint into an Environment |
+
+####Other
+The following table details the access permissions for other resources in MyST.
+
+| Resource Type | Env. Specific | Permission | Description |
+| ------------- | ------------- | ---------- | ----------- |
+| Infrastructure Provider | No | View | Allows a user to view details of an Infrastructure Provider. |
+|  | No | Create | Allows a user to create Infrastructure Provider |
+|  | No | View | Allows a user to edit an existing Infrastructure Provider |
+|  | No | View | Allows a user to delete an Infrastructure Provider |
+| Continuous Delivery Profile  | No | View | Allows a user to view details of a Continuous Delivery Profile. |
+|  | No | Create | Allows a user to create a Continuous Delivery Profile |
+|  | No | View | Allows a user to edit an existing Continuous Delivery Profile |
+|  | No | View | Allows a user to delete a Continuous Delivery Profile |
+| | 
+
+## Edit Role
+To edit the user account; click on the `Edit` button for the corresponding role, this will open the **Edit Role** dialogue.
 
 Here you can modify the First Name, Last Name, Email Address and System Specific Roles of the User. Once done, click `Save` to confirm your changes.
 
