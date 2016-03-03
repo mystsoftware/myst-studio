@@ -17,10 +17,16 @@ The list can be filtered / sorted by Role Name, Description, Environments or Sta
 ## Creating a New Role
 Click `+ Create Role`, this will open the **Add Role** dialogue. Specify the following values:
 
-* **Name** - Role Name
-* **Description** - Description of the role
+* **Name:** Role Name
+* **Description:** Description of the role
+* **Environments:** These are the environment types that the role has access to (see Specify Environment Types for details).
+* **Access Permissions:** These are the access permissions that the role has to the different resource types in MyST (see Specify Access Permissions for details).
 
 ![](img/RoleAdd.PNG)
+
+Once we have entered the Role details, click `Save` to create the Role.
+
+**Note:** Once we have created a role we can assign it to one or more users, this is done within a Workspace.
 
 ###Specify Environment Types
 During the lifetime of a project, code will be built and promoted to various staging environments, such as Development (DEV), System Integration Testing (SIT), User Acceptance Testing (UAT), Pre-Production (PRE), and Production (PROD).
