@@ -100,9 +100,9 @@ To edit the user account; click on the `Edit` button for the corresponding role,
 Here you can modify the Description, Environments and Access Permissions of the Role. Once done, click `Save` to confirm your changes.
 
 ## Activate / Deactivate User
-By default, when you create a Role, it is in an active state. Meaning that the Role can be assigned to a user within a workspace to provide the corresponding access permissions to resources within that workspace.
+By default, when you create a Role, it is in an active state. Meaning that the Role can be assigned to a **User** within a **Workspace** to provide the corresponding access permissions to resources within that workspace.
 
-We can deactivate a role at any time. Deactivating a Role account does not remove any workspaces roles a user has been granted, but deactivates the permissions they have been granted through that role.
+We can deactivate a role at any time. Deactivating a Role does not remove any workspaces roles a user has been granted, but deactivates the permissions they have been granted through that role.
 
 A deactivated role can be reactivated at any time, at which point any user assigned that role, will receive back the corresponding access permissions.
 
