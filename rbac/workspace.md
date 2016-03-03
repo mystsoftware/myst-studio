@@ -67,14 +67,34 @@ This will display summary information about the workspace.
 ![](img/WorkspaceConfigureUsers.PNG)
 
 ###Add User
-To add a new user to the Workspace, click `+ Add Users`, this will open the **Add Users** dialogue. From here we need to select the user(s) we wish to add to the workspace and the role(s) that we want to assign them.
+To add new users to the Workspace, click `+ Add Users`, this will open the **Add Users** dialogue. This will display the list of users and roles defined to MyST.
+
+![](img/WorkspaceAddUsers.PNG)
+
+The list can be filtered / sorted by User Name, First Name, Last Name or Email Address, by entering the filter criteria in the filter fields (outlined in red in the above screen-shot)/
+
+First we need to select the user(s) we wish to add to the workspace. To assign roles, simply select the corresponding checkbox for each role required.
+
+Once selected the next step is to select the roles we wish to assign to the selected users. 
+
+The role list can be filtered / sorted by Name, Description and Environment Type by entering the filter criteria in the filter fields.
+
+Once we have selected the required roles, click `Add Users` to confirm our selection and return to the Configure Users dialogue. From here we **must** click Save to save our changes to the Workspace.
+
+Note: we can select a user already assigned to the workspace, for example if we want to assign another role.
+
+
+
+
+
+ and the role(s) that we want to assign them.
 
 To select the users
 
-To assign roles, simply select the corresponding checkbox for each role required.
 
 
-![](img/WorkspaceAddUsers.PNG)
+
+
 ### Associate Resources
 To change the username, from within the Edit User dialogue, click `Change Username`,  this will open the **Change Username** dialogue. Enter the new username and click `Change username` to confirm.
 
