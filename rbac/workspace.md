@@ -103,22 +103,26 @@ For each *Resource Type*, MyST will provide a summary of the number of resources
 Click on the corresponding `>`expand icon (outlined in red in the above screen-shot) to expand the resource type you are interested in.
 
 ###Add Resource Association
-To add a Resource Association expand the corresponding resource type and click on `Associate <Resource Type>` (for example `Associate Platform Template`). This will open the 
+To add a Resource Association expand the corresponding resource type and click on `Associate <Resource Type>` (for example `Associate Platform Template`). This will open the corresponding `Associate <Resource Type>` dialogue.
 
 ![](img/WorkspaceAssociateResourceType.PNG)
 
-###Delete Resource
+The list can be filtered / sorted by Name and Description, by entering the filter criteria in the filter fields (outlined in red in the above screen-shot).
 
+To choose the resource(s) we wish to associate with the workspace, simply select the corresponding checkbox for each user resource.
 
-To change the username, from within the Edit User dialogue, click `Change Username`,  this will open the **Change Username** dialogue. Enter the new username and click `Change username` to confirm.
+Once we have specified the resources, click `Associate <Resource Type>` to confirm our selection and return to the main `Associate Resource` dialogue. From here we **must** click Save to save our changes to the Workspace.
+
+###Delete Resource Association
+To delete a Resource Association expand the corresponding resource type and click on the delete icon in the *Actions* column. This will remove the corresponding resource association from the Workspace. Finally click `Save` to save our changes to the Workspace.
 
 ## Edit Workspace
 To edit a workspace; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Associate Resources`, this will open the **Associate Resources** dialogue.
 
 Here you can modify the Name and Description of the Workspace. Once done, click `Save` to confirm your changes.
 
-## Activate / Deactivate User
-By default, when you create a User, it is in an active state. Meaning that the user is able to log into MyST and perform any actions for which they have been granted privileges.
+## Activate / Deactivate Workspace
+By default, when you create a Workspace, it is in an active state. Meaning that the user is able to log into MyST and perform any actions for which they have been granted privileges.
 
 To disable access to MyST, we can deactivate the User Account.
 
@@ -132,7 +136,7 @@ To deactivate a User account; click on the  **Actions** drop-down menu for the c
 
 To activate a deactivated environment; click on the  **Actions** drop-down menu for the corresponding User account and select `Activate`.
 
-## Delete User
-To delete a User account; click on the  **Actions** drop-down menu for the corresponding User and select `Delete`. We will be prompted to confirm out action, click `Yes` to proceed.
+## Delete Workspace
+To delete a Workspace; click on the  **Actions** drop-down menu for the corresponding Workspace and select `Delete`. We will be prompted to confirm out action, click `Yes` to proceed.
 
-When deleted the user will be removed from any workspaces to which they belong.
+**Note:** You will need to delete all Resource Associations from a Workspace prior to deleting it.
