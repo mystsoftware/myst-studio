@@ -60,9 +60,10 @@ Click `Save` to create the Workspace. Once saved the user will be able to login 
 **Note**: At this point the user will not have any privileges to perform any actions within MyST.
 
 ## Configure Users
-To configure workspace users; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Configure Users`, this will open the **Configure Users** dialogue.
+To configure workspace users; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Configure Users`, as illustrated below. 
 
-This will display summary information about the workspace.
+
+This will open the **Configure Users** dialogue.
 
 ![](img/WorkspaceConfigureUsers.PNG)
 
@@ -122,19 +123,17 @@ To edit a workspace; click on the click on the  **Actions** drop-down menu for t
 Here you can modify the Name and Description of the Workspace. Once done, click `Save` to confirm your changes.
 
 ## Activate / Deactivate Workspace
-By default, when you create a Workspace, it is in an active state. Meaning that the user is able to log into MyST and perform any actions for which they have been granted privileges.
+By default, when you create a Workspace, it is in an active state. Meaning that **Users** and **Resources** can be assigned to a **Workspace** to provide the corresponding access permissions to resources within that workspace.
 
-To disable access to MyST, we can deactivate the User Account.
+We can deactivate a Workspace at any time. Deactivating a Workspace does not remove any workspaces roles a user has been granted, but deactivates the permissions they have been granted through that role.
 
-**Note**: 
-* Deactivating a User account does not remove any workspaces roles they have been granted, but prevents them from logging in and performing any of those roles.
-* A deactivated User account can be reactivated at any time.
+A deactivated workspace can be reactivated at any time, at which point any user assigned a role within that workspace, will receive back the corresponding access permissions.
 
-To deactivate a User account; click on the  **Actions** drop-down menu for the corresponding User and select `Deactivate` as illustrated below.
+To deactivate a Workspace; click on the  **Actions** drop-down menu for the corresponding Workspace and select `Deactivate` as illustrated below.
 
-![](img/UserDeactivate.PNG)
+![](img/WorkspaceDeactivate.PNG)
 
-To activate a deactivated environment; click on the  **Actions** drop-down menu for the corresponding User account and select `Activate`.
+To activate a deactivated environment; click on the  **Actions** drop-down menu for the corresponding Workspace and select `Activate`.
 
 ## Delete Workspace
 To delete a Workspace; click on the  **Actions** drop-down menu for the corresponding Workspace and select `Delete`. We will be prompted to confirm out action, click `Yes` to proceed.
