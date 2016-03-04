@@ -62,6 +62,7 @@ Click `Save` to create the Workspace. Once saved the user will be able to login 
 ## Configure Users
 To configure workspace users; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Configure Users`, as illustrated below. 
 
+![](img/WorkspaceAction.PNG)
 
 This will open the **Configure Users** dialogue.
 
