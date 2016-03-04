@@ -71,35 +71,39 @@ To add new users to the Workspace, click `+ Add Users`, this will open the **Add
 
 ![](img/WorkspaceAddUsers.PNG)
 
-The list can be filtered / sorted by User Name, First Name, Last Name or Email Address, by entering the filter criteria in the filter fields (outlined in red in the above screen-shot)/
+The list can be filtered / sorted by User Name, First Name, Last Name or Email Address, by entering the filter criteria in the filter fields (outlined in red in the above screen-shot).
 
-First we need to select the user(s) we wish to add to the workspace. To assign roles, simply select the corresponding checkbox for each role required.
+To choose the user(s) we wish to add to the workspace, simply select the corresponding checkbox for each user required.
 
-Once selected the next step is to select the roles we wish to assign to the selected users. 
+Once selected the next step is to choose the roles we wish to assign to the selected users. The role list can be filtered / sorted by role Name by entering the filter criteria in the filter fields.
 
-The role list can be filtered / sorted by Name, Description and Environment Type by entering the filter criteria in the filter fields.
+To specify the roles(s) we want to provide to the selected users in the workspace, simply check the corresponding checkbox for each role required.
 
-Once we have selected the required roles, click `Add Users` to confirm our selection and return to the Configure Users dialogue. From here we **must** click Save to save our changes to the Workspace.
+Once we have specified the users and there corresponding roles, click `Add Users` to confirm our selection and return to the `Configure Users` dialogue. From here we **must** click Save to save our changes to the Workspace.
 
-Note: we can select a user already assigned to the workspace, for example if we want to assign another role.
+**Note:** we can select a user already assigned to the workspace, for example if we want to assign them another role.
+
+###Edit User
+
+###Delete User
+
+## Associate Resources
+Users within a Workspace are only granted access privileges against resources that are associated to the workspace. 
+
+**Note:** Resources can be associated with multiple workspaces.
+
+When we first create a resource, we need to specify the workspace(s) to which we want to associate the resource. Once created, then if we want to associate the resource with additional workspaces or remove its association with a workspace, we perform this activity as party of Workspace Administration.
+
+Within Workspace Administration; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Associate Resources`, this will open the **Associate Resources** dialogue.
 
 
+A resource can be associated with a workspace in multiple ways:
 
 
-
- and the role(s) that we want to assign them.
-
-To select the users
-
-
-
-
-
-### Associate Resources
 To change the username, from within the Edit User dialogue, click `Change Username`,  this will open the **Change Username** dialogue. Enter the new username and click `Change username` to confirm.
 
 ## Edit Workspace
-To edit a workspace; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Open`, this will open the **Edit Workspace** dialogue.
+To edit a workspace; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Associate Resources`, this will open the **Associate Resources** dialogue.
 
 Here you can modify the Name and Description of the Workspace. Once done, click `Save` to confirm your changes.
 
