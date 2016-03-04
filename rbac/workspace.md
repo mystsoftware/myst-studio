@@ -96,8 +96,18 @@ When we first create a resource, we need to specify the workspace(s) to which we
 
 Within Workspace Administration; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Associate Resources`, this will open the **Associate Resources** dialogue.
 
+![](img/WorkspaceAssociateResource.PNG)
 
-A resource can be associated with a workspace in multiple ways:
+For each *Resource Type*, MyST will provide a summary of the number of resources associated with this workspace and by default expand the Platform Templates section to list the Platform Templates associated with the Workspace.
+
+Click on the corresponding `>`expand icon (outlined in red in the above screen-shot) to expand the resource type you are interested in.
+
+###Add Resource Association
+To add a Resource Association expand the corresponding resource type and click on `Associate <Resource Type>` (for example `Associate Platform Template`). This will open the 
+
+![](img/WorkspaceAssociateResourceType.PNG)
+
+###Delete Resource
 
 
 To change the username, from within the Edit User dialogue, click `Change Username`,  this will open the **Change Username** dialogue. Enter the new username and click `Change username` to confirm.
