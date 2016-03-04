@@ -68,7 +68,7 @@ This will open the **Configure Users** dialogue.
 
 ![](img/WorkspaceConfigureUsers.PNG)
 
-###Add User
+###Add Users
 To add new users to the Workspace, click `+ Add Users`, this will open the **Add Users** dialogue. This will display the list of users and roles defined to MyST.
 
 ![](img/WorkspaceAddUsers.PNG)
@@ -85,9 +85,13 @@ Once we have specified the users and there corresponding roles, click `Add Users
 
 **Note:** we can select a user already assigned to the workspace, for example if we want to assign them another role.
 
-###Edit User
+###Edit User Roles
+To edit roles assigned to a user account; click on the `Edit` button for the corresponding user, this will open the **Edit User Roles** dialogue. This will display the list of roles defined to MyST and indicate which of these roles are currently assigned to the user.
+
+To add or remove roles from the users, simply click the corresponding simply set the corresponding checkbox for each role as required. Once done, click `Edit User Configuration` to confirm our selection and return to the main `Configure Users` dialogue. From here we **must** click Save to save our changes to the Workspace.
 
 ###Delete User
+To delete a User from the Workspace; click on the  **Actions** drop-down menu for the corresponding User and select `Delete`. We will be prompted to confirm out action, click `Yes` to proceed. From here we **must** click Save to save our changes to the Workspace.
 
 ## Associate Resources
 Users within a Workspace are only granted access privileges against resources that are associated to the workspace. 
@@ -119,7 +123,7 @@ Once we have specified the resources, click `Associate <Resource Type>` to confi
 To delete a Resource Association expand the corresponding resource type and click on the delete icon in the *Actions* column. This will remove the corresponding resource association from the Workspace. Finally click `Save` to save our changes to the Workspace.
 
 ## Edit Workspace
-To edit a workspace; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Associate Resources`, this will open the **Associate Resources** dialogue.
+To edit a workspace; click on the click on the  **Actions** drop-down menu for the corresponding Workspace and select `Open`, this will open the **Edit Workspace** dialogue.
 
 Here you can modify the Name and Description of the Workspace. Once done, click `Save` to confirm your changes.
 
@@ -130,13 +134,11 @@ We can deactivate a Workspace at any time. Deactivating a Workspace does not rem
 
 A deactivated workspace can be reactivated at any time, at which point any user assigned a role within that workspace, will receive back the corresponding access permissions.
 
-To deactivate a Workspace; click on the  **Actions** drop-down menu for the corresponding Workspace and select `Deactivate` as illustrated below.
-
-![](img/WorkspaceDeactivate.PNG)
+To deactivate a Workspace; click on the  **Actions** drop-down menu for the corresponding Workspace and select `Deactivate`.
 
 To activate a deactivated environment; click on the  **Actions** drop-down menu for the corresponding Workspace and select `Activate`.
 
 ## Delete Workspace
-To delete a Workspace; click on the  **Actions** drop-down menu for the corresponding Workspace and select `Delete`. We will be prompted to confirm out action, click `Yes` to proceed.
+To delete a Workspace; click on the  **Actions** drop-down menu for the corresponding Workspace and select `Delete`. MyST will prompt us to confirm out action, click `Yes` to proceed.
 
 **Note:** You will need to delete all Resource Associations from a Workspace prior to deleting it.
