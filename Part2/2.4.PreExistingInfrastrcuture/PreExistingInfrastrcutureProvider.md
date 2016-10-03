@@ -2,17 +2,20 @@
 Within MyST, a Pre-Existing Infrastructure Provider is used to capture the list of virtual or physical hosts that are available to provision our Oracle Middleware environment to. 
 
 During the Provisioning process, MyST connects to each of the target hosts via SSH to perform some of the initial install and configuration tasks. 
+
 1. MyST connects to host where the WebLogic Admin Server will be installed and downloads the MyST Agent.
 2. The MyST agent will perform the initial install and configuration tasks. These tasks are performed locally by the MyST agent on the Admin Host.
 3. The MyST Agent on the Admin Server will connect remotely via SSH to the other target host in the WebLogic Domain and perform install and configuration tasks  remotely.
 
-The credentials that MyST uses to connect to and execute jobs on each of the hosts via SSH are known in MyST as the **OS Agent Credentials**. These credentials consist of a user name and password or key pair. When creating these credentials in MyST, the user name should be the `oracle` user we configured in Target Host Configuration.
+The credentials that MyST uses to connect to and execute jobs on each of the hosts via SSH are known in MyST as the **OS Agent Credentials**. These credentials consist of a username and password or username and key pair. 
 
-In order to enable this, the OS agent credentials is the set of credentials that you can use to run MyST agent on the host. These user credentials are mandatory.
+>> Tip: When creating these credentials in MyST, the username should be the `oracle` user we configured in Target Host Configuration.
+
+MyST Studio has support for creating the **OS Agent Credential** if it does not exist on the target hosts. In order to do this, you need to provide a privileged user account known as an **OS Admin Credential**. 
 
 If your MyST Studio host definition does not already have OS agent credentials configured, provide a user name and password or key pair in this section, and then add details of the OS admin credentials. 
 
-MyST Studio connects to the host using the OS admin credentials, and creates the OS agent credentials with the user name and password you provide here. Only the OS agent credentials will be used to run any actions from MyST Studio.
+MyST Studio connects to the host using the **OS Admin Credentials**, and creates the **OS Agent Credentials** with the user name and password you provide here. Only the OS Agent Credentials will be used to run any actions from MyST Studio.
 
 ## List Infrastructure Providers
 To see details of the defined Infrastructure Providers, click  `Infrastructure` > `Infrastructure Providers`. By default, this will display details of **All** Infrastructure Providers. We can filter this by selecting `Pre-Existing` in the `Filter by` drop down as shown below.
@@ -29,25 +32,20 @@ Click `+ Create New` and select `Pre Existing` from the options provided. This w
 
 For each infrastructure provider, we can add one or more:
 
-* **Key Pairs**  
-  Used to define all the required key pairs used to connect to the hosts within the Infrastructure Providers. Each MyST Key Pair contains the private key for key pairs that we can use in credentials for the hosts that are part of our Infrastructure Provider.  
+* **Key Pairs:** Used to define all the required key pairs used to connect to the hosts within the Infrastructure Providers. Each MyST Key Pair contains the private key for key pairs that we can use in credentials for the hosts that are part of our Infrastructure Provider.  
 
   Once we have defined a key pair, we can use it in one or more OS Agent Credentials and OS Admin Credentials.
 
-* **OS Agent credentials**  
-  The OS agent credentials is the set of credentials that MyST uses to connect to and execute jobs on the target hosts. Each Credential consists of a username and credential, which can be either a Key Pair or Password.
+* **OS Agent credentials:**  The OS agent credentials is the set of credentials that MyST uses to connect to and execute jobs on the target hosts. Each Credential consists of a username and credential, which can be either a Key Pair or Password.
 
     Once we have defined an OS Agent Credential, we can use it in one or more Hosts.
 
-* **OS admin credentials**  
-  Reserved for future functionality.
+* **OS Admin Credentials:** Reserved for future functionality.
 
-* **Hosts**  
-    List of physical hosts that are available as part of the infrastructure provider. 
+* **Hosts:** List of physical hosts that are available as part of the infrastructure provider. 
 
 
-
-4. Click **Save** to save your infrastructure provider.
+Click **Save** to save your infrastructure provider.
 
 ## Key Pairs
 
