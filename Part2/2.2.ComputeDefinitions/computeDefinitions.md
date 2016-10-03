@@ -1,14 +1,13 @@
-# Compute Definitions
-Central to MyST is the Platform Blueprint which defines an environment agnostic topology/configuration and provides an abstraction layer over the underlying infrastructure.
-This allows us to define a standardized topology, which we can use to provision equivalent middleware platforms across bare metal, virtual machines and public cloud.
+# 2.2 - Compute Definitions
+Compute Definitions are used to indicate operating system requirements for target hosts in MyST Studio. When, we create a Platform Blueprint, we need to specify its Compute Definition. This is used to define the operating system requirements for target servers (i.e Virtual or Bare Metal) that will be used by any Platform Model based on the Platform Blueprint.
 
-When, we create a Platform Blueprint, we need to specify its Compute Definition. This is used to define the operating system requirements for target servers (i.e Virtual or Bare Metal) that will be used by any Platform Model based on the Platform Blueprint.
+When provisioning Platform Instances from a Blueprint on pre-existing target hosts, the Compute Definition tells MyST how it should interact with target hosts. For example, if the Compute Definition is for Solaris then MyST will know to treat the platform as if it is Solaris instead of say Oracle Linux.
 
 The Compute Definition specifies the following details about the host operating system:
  * **Type** - The operating system type, for example Linux, Solaris.
  * **Distribution** - The operating system distribution, for example Oracle Linux, RedHat Linux.
- * **Architecture** - The chip architecture for the operating system, for example  x86-64.
- * **Version** - The version of the operating system, for example Oracle Linux 6.
+ * **OS Architecture** - The chip architecture for the operating system, for example  x86-64.
+ * **OS Version** - The version of the operating system, for example Oracle Linux 6.
 
 ### Use of Compute Definitions for Pre-Existing Infrastructure
 When adding a target host to a Pre-Existing Infrastructure Provider, we need to specify its compute definition.
