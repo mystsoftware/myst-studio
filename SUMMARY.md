@@ -1,4 +1,6 @@
+* [Part 1 - Getting Started with Rubicon Red MyST](part1/part1.md)
 * [Overview](overview/overview.md)
+* [Part 2 - Infrastructure Management](part2/part2.md)
 * [Infrastructure](infra/infra.md)
     * [Environment Types](infra/environmentTypes.md)
     * [Compute Definitions](infra/computeDefinitions.md)
