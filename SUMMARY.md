@@ -3,6 +3,7 @@
 * [Part 2 - Infrastructure Management](part2/part2.md)
 * [Infrastructure](infra/infra.md)
     * [Environment Types](Part2/2.1.EnvironmentTypes/environmentTypes.md)
+    * [Middleware Hosts](Part2/2.2.MiddlewareHosst/middlewareHosts.md)
     * [Compute Definitions](Part2/2.3.ComputeDefinitions/computeDefinitions.md)
     * [Pre-Existing](infra/preExisting/preExisting.md)
         * [Target Host Configuration](infra/preExisting/targetHostConfig.md)
