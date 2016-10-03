@@ -1,4 +1,6 @@
-#Platform Blueprint
+# Overview
+
+## Platform Blueprint
 Rubicon Red MyST delivers automated platform provisioning and configuration management for Oracle Middleware, on premise and on cloud. Enabling users to deliver a consistent and reliable platform in minutes, NOT weeks or months.
 
 Rubicon Red MyST uses a declarative approach to automation, meaning users simply define the **target state** of the Oracle Middleware infrastructure to be deployed; which, at the push of a button, is automatically provisioned by MyST.
@@ -25,19 +27,19 @@ This means incremental configuration changes are simple to make and propagate ac
 This capability, combined with MyST’s comprehensive governance and role based access control enforces consistent configuration of your Oracle middleware platforms across all environments, on premise and cloud. As a result, configuration drift, a major cause of unplanned outages, becomes a thing of the past, insuring that code gets developed and tested in environments closely aligned to production, for more successful deployments.
 
 
-## Discover and Manage Existing Environments
+### Discover and Manage Existing Environments
 MyST allows you to discover and manage existing environments. Simply point MyST at the existing middleware platform; MyST will introspect the platform instance and create a corresponding Platform Blueprint and Model.
 
 
 You then use MyST to manage on-going configuration changes for the introspected platform as well as provision new environments with the same configuration. For example, you may want to re-provision your Dev and Test environment, to ensure that their configuration is consistent with Production.
 
-Enables Hybrid Cloud
+### Enables Hybrid Cloud  
 With built in support for Oracle Cloud and Amazon Web Services, MyST enables you to define a standard process for delivering Oracle Middleware on premise and on cloud.
 
 
 MyST provides cloud independence, allowing you to move your middleware infrastructure across different cloud providers as well as provide a path for migrating on-premise platforms to the cloud.
-### 
-Integrated Process for Managing Configuration Change
+
+### Integrated Process for Managing Configuration Change
 
 MyST Release Pipelines allows you to establish a single integrated process for automating the promotion of Oracle Middleware platform configurations through each stage of the software delivery lifecycle.  
 
