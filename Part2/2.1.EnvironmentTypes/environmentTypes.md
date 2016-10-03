@@ -22,6 +22,14 @@ In addition target hosts (see Pre-Existing Infrastructure Providers) can be tagg
 
 Environment Types are also used within Application Blueprints to specify which environments and in which order applications should be promoted through.
 
+**Environment Types** are designed to help categorise Oracle Middleware instances for governance purposes. This categorisation can help to manage who has access to instances, and what type of actions they can perform against the instance, for example:
+
+* Who can provision and re-provision a platform instance?
+* Who is allowed to perform platform configuration changes?
+* Who is able to stop/start a platform instance?
+* Who is able to deploy / promote code into an environment?
+
+
 
 ## List Environment Types
 To see a list of defined Environment Types, click  `Infrastructure` > `Environment Types`. This will display a list similar to the one below.
