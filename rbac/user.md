@@ -1,6 +1,6 @@
 # User Management
 
-Each user has an individual account that at a minimum includes a unique login id, username and password.xx
+Each user has an individual account that at a minimum includes a unique login id, username and password.
 
 Within MyST, **users** are not assigned permissions directly, but only acquire them through the **role\(s\)** assigned to them within one or more **workspaces**.
 
