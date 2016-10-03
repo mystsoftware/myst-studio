@@ -1,17 +1,8 @@
 # 2.1 Environment Types
 During the lifetime of a project, code will be built and promoted to various staging environments, such as Development (DEV), System Integration Testing (SIT), User Acceptance Testing (UAT), Pre-Production (PRE), and Production (PROD).
 
-Each of these environments is aligned with different stages of the Software Development Lifecycle (SDLC) and is intended for a specific purpose, for example:
-* ** DEV** - Used by developers to develop and unit test there code prior to checking into source control. 
-* **BLD / CI ** - Build environment, where committed code is built and unit testing is performed.
-* **SIT** - Used to test a system's integration points with  other systems.
-* **UAT**-  Business stakeholders test the system against their  business requirements
-* **PRE** - Used to test the deployment process, prior to release into production.
-* **PROD** - Production environment, where systems finally get deployed to.
-
-For each environment, we need to be able to control who has access to it, and what type of actions they can perform against the environment, for example:
-
-* Who can (re-)provision a platform instance?
+**Environment Types** are designed to help categorise Oracle Middleware Platform Instances for governance purposes. This categorisation can help to manage who has access to instances, and what type of actions they can perform against the instance, for example:
+* Who can provision and re-provision a platform instance?
 * Who is allowed to perform platform configuration changes?
 * Who is able to stop/start a platform instance?
 * Who is able to deploy / promote code into an environment?
@@ -19,17 +10,6 @@ For each environment, we need to be able to control who has access to it, and wh
 Within MYST any resource that is environment specific, such as a Platform Model, Platform Instance or Application Model is tagged to an Environment Type, this in conjunction with Role Based Access Control (RBAC) allows us to control who can perform which actions in which environment.
 
 In addition target hosts (see Pre-Existing Infrastructure Providers) can be tagged to one or more Environment Types. When we create a platform model, only the hosts tagged to the same  Environment Type as the platform model can be selected within the model.
-
-Environment Types are also used within Application Blueprints to specify which environments and in which order applications should be promoted through.
-
-**Environment Types** are designed to help categorise Oracle Middleware instances for governance purposes. This categorisation can help to manage who has access to instances, and what type of actions they can perform against the instance, for example:
-
-* Who can provision and re-provision a platform instance?
-* Who is allowed to perform platform configuration changes?
-* Who is able to stop/start a platform instance?
-* Who is able to deploy / promote code into an environment?
-
-
 
 ## List Environment Types
 To see a list of defined Environment Types, click  `Infrastructure` > `Environment Types`. This will display a list similar to the one below.
@@ -42,7 +22,7 @@ Click `+ Create New`, this will open the **Add Environment Type** dialogue. Spec
 
 * **Name** - Short hand name for the Environment, such as SIT, UAT or PROD
 * **Description** - A longer description of the environment (e.g. System Integration Test)
-* **Order** - Used to specify the order in which code is deployed in the SDLC
+* **Order** - Used to indicate the promotion flow for a piece of code to be deployed as it progresses through the Sofware Delelopment Lifecycle. Though this can be overridden for each Release Pipeline.
 
 ![](img/EnvironmentTypeAdd.PNG)
 
