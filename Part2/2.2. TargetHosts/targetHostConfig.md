@@ -1,4 +1,10 @@
-# Target Host Configuration
+# 2.2 Middleware Hosts 
+	
+Within MyST, **Hosts** are the logical representation of the Virtual, Physical or Container-based instances that host one or more WebLogic Server instances. MyST allows the use of pre-existing hosts or for new hosts to be delivered on-demand. 
+* **Pre-existing Hosts:** MyST can use pre-existing Virtual, Physical or Container-based hosts as the target for hosting Oracle Middleware platforms. With this approach MyST is dependent on a system administrator or a Configuration Management solution like Puppet or Chef to pre-configure the host before it is used as a target by MyST 
+* **On-demand Cloud Providers:** MyST can spin up its own infrastructure using a Cloud provider. This approach relies upon a machine image which is used as a template for the Virtual Machines that are created to underpin the Oracle Middleware platforms
+
+
 
 It is preferential to prepare the target hosts before you begin installation of MyST Studio.
 ### The steps are as follows:
