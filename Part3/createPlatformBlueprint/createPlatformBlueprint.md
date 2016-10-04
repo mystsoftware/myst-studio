@@ -137,6 +137,21 @@ Once done, click `Finish`. MyST will create the corresponding Platform Blueprint
 
 ## Creating a Platform Blueprint from a Pre-Defined Template
 
+* **Template:** Choose from a set of pre-defined Rubicon Red certified templates to build your blueprint or use a template that you have previously created.
 
-## Creating a Platform Blueprint from an existing WebLogic Domain
+MyST Studio provides a wizard which guides the user through the end-to-end proces of designing your Platform Blueprint. 
+
+### Launching the Platform Blueprint Wizard
+From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Blueprint` wizard.![](img/SmartWizardBasic.PNG)
+
+In the initial dialogue we need to specify the following details about our Platform Blueprint:
+
+* **Name** - Short hand name for the Platform Blueprint
+* **Description** - A longer description of the Platform Blueprint
+* **Workspaces** - This defines the Workspaces to which the Platfrom Blueprint belongs. See Role Based Access Control for further details.
+* **Initial Version** - The speficies the initial version of the Platform Blueprint. See Platform Blueprint and Model Versioning for further details.
+
+Finally, we need to specify we want to use a **template **to create the Platform Blueprint. Select `Template`and click `Next`.
+
+<!-- ## Creating a Platform Blueprint from an existing WebLogic Domain -->
 
