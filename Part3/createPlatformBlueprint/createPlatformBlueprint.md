@@ -1,5 +1,3 @@
-# Creating a Platform Blueprint
-
 ## Overview
 Rubicon Red MyST uses a declarative approach to automation, meaning users simply define the **target state** of the Oracle Middleware infrastructure to be deployed; which, at the push of a button, is automatically provisioned by MyST.
 
@@ -40,6 +38,7 @@ From the side menu navigate to`Modeling` > `Platform Blueprint`, this will displ
 ### Enter Basic Information
 
 ![](img/SmartWizardBasic.PNG)
+![](/assets/SmartWizardBasic.PNG)# Creating a Platform Blueprint
 
 Specify the following values:
 
