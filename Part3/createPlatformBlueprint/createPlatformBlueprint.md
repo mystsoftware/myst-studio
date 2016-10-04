@@ -122,7 +122,7 @@ Once done, click `Next`.
 ### Review the Summary
 MyST will display a Summary screen showing all the keys inputs specified in the Platform Blueprint Wizard. 
 
-SCREEN SHOT
+![](/Part3/createPlatformBlueprint/img/SmartWizardSummary.PNG)
 
 Click `Finish`. MyST will create the corresponding Blueprint and take you to the Platform Blueprint Editor where you can make additional changes if required. See Editing Platform Blueprints for further details.
 
