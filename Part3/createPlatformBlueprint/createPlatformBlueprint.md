@@ -38,6 +38,9 @@ MyST Studio provides a wizard which guides the user as they create a Platform Bl
 From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Blueprint` wizard.
 
 ### Enter Basic Information
+
+![](img/SmartWizardBasic.PNG)
+
 Specify the following values:
 
 * **Name** - Short hand name for the Platform Blueprint
