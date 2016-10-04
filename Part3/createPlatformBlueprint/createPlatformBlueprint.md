@@ -34,7 +34,7 @@ Specify the following values:
 
 Finally, we need to specify how we want to create the Platform Blueprint. Keep the default selection of `Wizard`. Then click `Next'.
 
-### Select Oracle Middleware Components
+### Specify Oracle Middleware Components
 The next step is to select which Oracle Middleware components are to be included within our Platform Blueprint. First step is select the Oracle Middleware Product Catalog in which we are interested, this could be one of:
 * Integration and Process Management
 * Social Business & Collaboration
@@ -49,9 +49,52 @@ Finally select the required Oracle Middleware components that you wish to includ
 
 > Note, each Platform Blueprint can only include components from a single product catalog. Components that are available in multiple Product Catalogs (e.g. Web Services Manager) appear in all the applicable Product Catalogues.
 
-### Select Compute Groups
-Within MyST Compute Groups are used to specify the logical topology of your WebLogic Domain
+### Specify Compute Groups
 
+#### Introduction to Compute Groups
+Within MyST Compute Groups are used to specify the logical topology of our WebLogic Domain.
+
+When we layout out our WebLogic Domain, its common to target different component types, such as the Web Tier, Oracle Service Bus and Oracle SOA to different  groups of virtual or physical servers.  
+
+For example in Production, we could have a WebLogic Domain consisting of four Oracle Service Bus managed servers, two SOA managed servers and a web-tier consisting of two Oracle HTTP servers.  
+
+It is also common for Non Production environments, such as Continuous Integration (CI), System Integration Testing (SIT) and Pre-Production (PRE) to vary in size. For example we may have a 4 node OSB cluster in Prod and Pre-Prod, with a two node OSB cluster in UAT and SIT and just a single node OSB and SOA (cluster) for CI.  
+
+As we have already mentioned, a core objective of MyST is to enable you to use a single Platform Blueprint for all these environments, so we can ensure that each of these environments has an identical configuration and prevent issues caused by configuration drift.  
+
+Compute groups in MyST allow us to specify the rules to target component types to specific groups of servers, as well as specify the default, minimum and maximum number of nodes in the compute group.  With the actual number of nodes in the compute group being specified as part of the Platform Model, buit within the constraints specified by the Platform Blueprint. This provides the flexibility required to use a single Platform Blueprint across all environments.  
+
+The other consideration when specifying our domain topology, is whether to have a standalone admin node, in other words deploy it to its own compute group, or include it within an existing compute group.  
+
+As the admin server cannot be clustered, when selecting a standalone admin node, MyST will set the maximum number of nodes to one. When including it within an existing compute group, MyST will only provision the admin server to the first node in the compute group.
+
+> Note: If you select a standalone admin server in the Platform Blueprint, you still have the option of overriding this in the Platform Model.
+
+#### Define Compute Group
+To define the compute groups that we want in our blueprint, we first need to specify the following values:
+
+* **Standalone Admin Node** - From the drop down, select whether you want to have a standalone admin server (**Yes**) or include it within an existing compute group (**No**)
+* **Number of Compute Groups** - From the drop down, select the required number of compute groups.
+
+For each Compute Group, we need to specify the following values:
+* **Name** - Provide a short name (such as web, soa, osb) for the Compute Group.
+* **Components** - Click on the appropriate check boxes to add the required components to a compute group. Note: A component can only belong to a single Compute Group, so by selecting it for one Compute Group, will automatically deselect it from it's previous Compute Group.
+* **Node Constraints** - Specify the default, minimum and maximum number of nodes in the compute group. When creating a Platform Model, it will use the default value for the number of nodes, this can then be modified with the minimum and maximum constraints.
+
+Finally, we need to select from the drop down the target compute definition for all target hosts that will be used within each compute group.
+
+Once done, click `Next`.
+
+Specify Other Key Configurations
+* **WebLogic Domain Name** - 
+* **Enable Standard Listen Ports** - 
+* **Enable SSL Listen Ports** - 
+* **Enable Administration Port** - 
+* **Administration Port** - 
+* **JDBC Data Source Type** - 
+* **Persistence Strategy** - 
+
+Once done, click `Next`.
 
 ## Creating a Platform Blueprint from a Pre-Defined Template
 
