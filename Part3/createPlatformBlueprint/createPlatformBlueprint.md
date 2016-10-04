@@ -28,9 +28,12 @@ There are three ways in which you can create a Platform Blueprint:
 MyST Studio provides a wizard which guides the user as they create a Platform Blueprint. The wizard helps the user answer simple questions like
 
  * Which Oracle Middleware product and components do want in your platform? 
- * What topology do you want? For example, do you want a separate webtier layer, separate layers per product component, isolated admin server?
- * What constraints do you want to add to your platform? Such as minimum and maximum cluster size and target operating system
- * What additional platform capabilities do you want to add? Such as encrypted listen addresses, database persistence (instead of file), GridLink data sources.
+ * What topology do you want? 
+For example, do you want a separate webtier layer, separate layers per product component, isolated admin server?
+ * What constraints do you want to add to your platform?
+ Such as minimum and maximum cluster size and target operating system
+ * What additional platform capabilities do you want to add?
+ Such as encrypted listen addresses, database persistence (instead of file), GridLink data sources.
 
 
 From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Blueprint` wizard.
@@ -38,7 +41,7 @@ From the side menu navigate to`Modeling` > `Platform Blueprint`, this will displ
 ### Enter Basic Information
 
 ![](img/SmartWizardBasic.PNG)
-![](/assets/SmartWizardBasic.PNG)# Creating a Platform Blueprint
+# Creating a Platform Blueprint
 
 Specify the following values:
 
