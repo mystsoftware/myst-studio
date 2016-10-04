@@ -9,17 +9,32 @@ Within MyST, the target state is captured in the _“platform definition”_, wh
 
 * Second, the **Platform Model**, which maps the Platform Blueprint to the target infrastructure and overlays the environment specific configurations.
 
-For each platform instance, we create a separate platform model to define all the environment specific configuration information. Splitting the _“platform definition”_ into two layers, provides infrastructure independence; enabling you to provision consistent middleware platforms across all environments regardless of infrastructure type, on premise and on cloud.
+For each platform instance, we create a separate platform model to define all the environment specific configuration information. This approach provides a number of benefits, including:
+
+* **Consistency** and **Repeatability** - Configuration change is promoted to individual environments through a centralised *Platform Blueprint*
+* **Infrastructure Independence** - Enabling you to provision consistent middleware platforms across all environments regardless of infrastructure type, on premise and on cloud
+* **Reliability** - Through *automation* MyST will reduce risk by bringing platforms to a desired state no matter what the initial state is of the target platform. This is known as *idempotency* 
+* **Flexibility** - Environment-specific overrides can be applied through *Platform Models*, allowing for configuration differences to be safely managed. This is discussed in detail in [a later topic](/intro/lab3/establish-a-demo-environment-model.html) 
+* **Agility** - Platform Blueprint and Platform Modles are *version controlled*, providing complete control in promoting configuration changes across environments. 
+* **Simplicity**: It's a *graphical modeller* so there is no need to write scripts or have specialist skills in a programming language
 
 >> **Note:**
 Most Oracle Middleware products run on Oracle WebLogic Application Server. WebLogic supports the concept of a Domain to group related clusters and servers. Some organisations use separate domains for each business unit or capability, others use it to group computational workload. How it is used is up to the organisation. For Oracle products that run on WebLogic, a ***Platform Blueprint represents a logical definition of a WebLogic domain***. For this reason it is typical for a separate blueprint to be created in MyST Studio for each unique WebLogic domain type in an enterprise.
 
 There are three ways in which you can create a Platform Blueprint:
 * **Wizard:** This guides the user through a simple process to capture the key design decisions for the Oracle Middleware topology and configuration and creates a corresponding Platform Blueprint.
-* **Template:** Choose from a set of pre-defined Rubicon Red certified templates to build your blueprints on or use a template that you have created.
+* **Template:** Choose from a set of pre-defined Rubicon Red certified templates to build your blueprint or use a template that you have created.
 * **Introspection:** Use MyST to discover and introspect an existing WebLogic Domain and create a corresponding Platform Blueprint.
 
 ## Creating a Platform Blueprint using the Wizard
+MyST Studio provides a wizard which guides the user as they create a Platform Blueprint. The wizard helps the user answer simple questions like
+
+ * Which Oracle Middleware product and components do want in your platform? 
+ * What topology do you want? For example, do you want a separate webtier layer, separate layers per product component, isolated admin server?
+ * What constraints do you want to add to your platform? Such as minimum and maximum cluster size and target operating system
+ * What additional platform capabilities do you want to add? Such as encrypted listen addresses, database persistence (instead of file), GridLink data sources.
+
+
 From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Blueprint` wizard.
 
 ### Enter Basic Information
@@ -85,16 +100,24 @@ Finally, we need to select from the drop down the target compute definition for 
 
 Once done, click `Next`.
 
-Specify Other Key Configurations
-* **WebLogic Domain Name** - 
-* **Enable Standard Listen Ports** - 
-* **Enable SSL Listen Ports** - 
-* **Enable Administration Port** - 
-* **Administration Port** - 
-* **JDBC Data Source Type** - 
-* **Persistence Strategy** - 
+### Specify Other Key Configurations
+Use
+* **WebLogic Domain Name** - Specify an appropriate WebLogic Domain Name.
+* **Enable Standard Listen Ports** - This option is selected by default and can only be disable if you enable SSL Listen Ports.
+* **Enable SSL Listen Ports** - Select this option to enable SSL listen ports for the WebLogic Servers in the domain.
+* **Enable Administration Port** - Select this option to enable the SSL administration port for  all WebLogic Servers in the domain.
+* **Administration Port** - Specify the port no for the SSL administration port (can only be set if the Administration Port is enabled).
+* **JDBC Data Source Type** - This option is used to specify the Data Source Type for Oracle Middleware specific schemas which are created by the Oracle Middleware Repository Creation Utility (RCU). If using Oracle RAC, then select a GridLink Data Source otherwise use a Generic Data Source.
+* **Persistence Strategy** - Use this to specify whether TLOG's and JMS Stores are held on the File System or in the Database.
 
 Once done, click `Next`.
+
+### Review the Summary
+MyST will display a Summary screen showing all the keys inputs specified in the Platform Blueprint Wizard. 
+
+SCREEN SHOT
+
+Click `Finish`. MyST will create the corresponding Blueprint and take you to the Platform Blueprint Editor where you can make additional changes if required. See Editing Platform Blueprints for further details.
 
 ## Creating a Platform Blueprint from a Pre-Defined Template
 
