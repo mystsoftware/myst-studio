@@ -63,7 +63,7 @@ The next step is to select which Oracle Middleware components are to be included
 
 Next we need to specify the Oracle Middleware version (for example 11.1.1.7, 12.1.3, 12.2.1.0, 12.2.1.1). For the specified Oracle Middleware Product Catalog and Version, MyST will list the components that are available to be included within the Platform Blueprint.
 
-DIAGRAM
+![](/Part3/createPlatformBlueprint/img/SmartWizardComponents.PNG)
 
 Finally select the required Oracle Middleware components that you wish to included within your Platform Blueprint. You will notice that MyST will automatically select any mandatory components, for example if you select Oracle B2B, then Oracle SOA Suite will automatically be selected. Then click `Next'.
 
@@ -100,6 +100,8 @@ For each Compute Group, we need to specify the following values:
 * **Name** - Provide a short name (such as web, soa, osb) for the Compute Group.
 * **Components** - Click on the appropriate check boxes to add the required components to a compute group. Note: A component can only belong to a single Compute Group, so by selecting it for one Compute Group, will automatically deselect it from it's previous Compute Group.
 * **Node Constraints** - Specify the default, minimum and maximum number of nodes in the compute group. When creating a Platform Model, it will use the default value for the number of nodes, this can then be modified with the minimum and maximum constraints.
+
+![](/Part3/createPlatformBlueprint/img/SmartWizardComputeGroups.PNG)
 
 Finally, we need to select from the drop down the target compute definition for all target hosts that will be used within each compute group.
 
