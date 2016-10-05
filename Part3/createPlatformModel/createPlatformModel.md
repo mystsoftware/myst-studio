@@ -7,10 +7,10 @@ When we create the Platform Model, we also have the ability to override many of 
 
 For each Platform Instance that we want to create, we need to create a corresponding Platform Model in MyST.
 
-## Creating a Platform Model
+## Create Platform Model for Pre-Existing Infrastructure
 From the side menu navigate to`Modeling` > `Platform Model`, this will display a list of existing Platform Models. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Model` wizard.
 
-![](img/SmartWizardBasic.PNG)
+![](img/ModelBasic.PNG)
 
 In the initial dialogue we need to specify the following details about our Platform Model:
 
@@ -27,6 +27,33 @@ In the initial dialogue we need to specify the following details about our Platf
 
 Once we have entered the basic details about our Platform Model click `Next`.
 
-### Select Infrastructure Provider
+## Select Infrastructure Provider
+![](/Part3/createPlatformModel/img/ModelInfrastructure.PNG)
 
-### Map
+### Specify Compute Node Count
+![](/Part3/createPlatformModel/img/ModelComputeGroup.PNG)
+
+### Map to Pre-Existing Servers
+![](/Part3/createPlatformModel/img/ModelInfrastructureMap.PNG)
+
+### Specify Platform Model Configurations
+The final stage is to specify configuration properties that are specifc to the Platform Model.
+![](/Part3/createPlatformModel/img/ModelConfigureGeneral.PNG)
+
+For the Platform Model we need to specify the following details :
+* **Domain Name** - This is the WebLogic Domain name, it will default to the value specified in the Platform Blueprint, but can be overridden in the Platform Model.
+* **WebLogic Admin User* - Enter the WebLogic Admin user, it defauts to Weblogic.
+* **Weblogic Admin Password** - Enter the password to be used for the WebLogic Admin User.
+* **JDBC Data Source type** - This option is used to specify the Data Source Type for Oracle Middleware specific schemas which are created by the Oracle Middleware Repository Creation Utility (RCU). This will default to the value specified in the Platform Blueprint, but can be overridden in the Platform Model.
+* **RCU Components** - This details the RCU specific schemas that will be created. This is pre-populated based on the Oracle Middlware Components specified in the Platform Blueprint, this is for information purposes only and can't be modified.
+* **RCU Database URL** - Enter the database URL for the database that will host the 
+* **RCU Prefix** - Specify the RCU Prefix to be used. The prefix is prepended to and separated from the schema name with an underscore (_) character.
+* **RCU Database Password** Enter the password to be used for each of the schema owners created by RCU.
+* **RCU SYS User** - Enter the user name for the RCU database. This should be a username with DBA or SYSDBA priviliges, for example SYS.
+* **RCU SYS Password** - Enter the password for the RCU Sys User.
+
+>> Note: All passwords stored by MyST are encrypted. 
+
+
+#### Configure Advance 
+![](/Part3/createPlatformModel/img/ModelConfigureAdvanced.PNG)
