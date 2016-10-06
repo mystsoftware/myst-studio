@@ -17,9 +17,8 @@ In the initial dialogue we need to specify the following details about our Platf
 * **Platform Blueprint** - The Platform Blueprint that we will use for our Platform Model.
 * **Platform Blueprint Version** - The version of the Platform Blueprint that we will use for our Platform Model.
 * **Environment Type** - The Environment Type for the Platform Model.
-* **Name** - Short hand name for the Platform Blueprint.
+* **Name** - Short hand name for the Platform Model.
 * **Description** - A longer description of the Platform Model.
-
 * **Workspaces** - This defines the Workspaces to which the Platform Model belongs. See Role Based Access Control for further details.
 
 >> Note: MyST will set the initial version of the Platform Model to 
@@ -27,14 +26,33 @@ In the initial dialogue we need to specify the following details about our Platf
 
 Once we have entered the basic details about our Platform Model click `Next`.
 
-## Select Infrastructure Provider
+### Select Infrastructure Provider
+Next, we need to specify the Infrastructure Provider for our Platform Model. From the corresponding drop-down, select a Pre-Existing Infrastructure Provider. MyST will list all the target hosts within the in the Pre-Existing Infrastructure provider for the Platform Model Environment Type.
+
 ![](/Part3/createPlatformModel/img/ModelInfrastructure.PNG)
 
-### Specify Compute Node Count
+Once done, click `Next`.
+
+### Specify Compute Group Size
+For each Compute Group defined within the Platform Blueprint we need to specify the number of nodes to use.
 ![](/Part3/createPlatformModel/img/ModelComputeGroup.PNG)
 
+In addition, we can also specify whether we want to have a stand alone admin server, in which case it will be created within its own compute group. MyST will default to what is specified in the Platform Blueprint.
+
+If in the Platform Blueprint, we specified a stand alone Admin Server, and then choose to override that, then we will also need to specify to which compute group we want to target the Admin Server.
+
+Once done, click `Next`.
+
 ### Map to Pre-Existing Servers
+Once we have specified the number of nodes for each compute group, the next step is to map each Node to a corresponding Pre-Existing Host in the specified infrastrcuture provider.
+
+MyST will list out each node required by the Platform Model. Againts each node there will be a drop down box, which will list the target hosts available to map the node. For each node, select the target host. Only hosts available from the specified environment will be available for selection.
+
 ![](/Part3/createPlatformModel/img/ModelInfrastructureMap.PNG)
+
+>>Note: Care should be taken not to assign multiple nodes within the same Platform Model to the same host.
+
+Once done, click `Next`.
 
 ### Specify Platform Model Configurations
 The final stage is to specify configuration properties that are specifc to the Platform Model.
@@ -55,5 +73,26 @@ For the Platform Model we need to specify the following details :
 >> Note: All passwords stored by MyST are encrypted. 
 
 
-#### Configure Advance 
+#### Override Default Memory and Logging Settings
+It is common to have different JVM Memory Arguments and Logging configurations in upstream dev and test environments. The `Advanced` tab allows you override the settings in the Plaform Blueprint. 
+
 ![](/Part3/createPlatformModel/img/ModelConfigureAdvanced.PNG)
+
+For the Platform Model we need to specify the following details :
+* **WebLogic Admin Server Memory Arguments** - Allows you to specify the JVM Memory arguments for the WebLogic Admin Server.
+* **WebLogic Managed Server Memory Arguments** - For each Oracle Middleware Component (for example SOA, OSB and OWSM), allows you to specify the JVM Memory arguments for the WebLogic Managed Server running that component.
+* **Logging / Audit Levels for Oracle Middlware Components** - Allows you to specify the Logging / Audti Level for certain Oracle Middleware Components. 
+
+>> Note: The options available will be dependent on which Oracle Middleware components are included within the Platform Blueprint.
+
+Once we have specified the `Genral` and `Advanced` Platform Model configurations, click `Next`.
+
+### Review the Summary
+
+MyST will display a Summary screen showing all the keys inputs specified in the Platform Model Wizard.
+
+![](/Part3/createPlatformModel/img/ModelSummary.PNG)
+
+Once done, click `Finish`. MyST will create the corresponding Platform Model and take you to the Platform Model Editor where you can make additional changes if required. See Editing Platform Models for further details.
+
+## Create Platform Model for AWS On-Demand Infrastructure
