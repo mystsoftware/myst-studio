@@ -52,5 +52,43 @@ On the Blueprints details screen, you will see all the properties and values for
 Auto computed values are shown in green
 If the user changes it and applies that too will be shown in white
 
-## Properties
-<!-- Document for Sushil -->
+## Understanding MyST Properties
+Explain the need for properties
+
+For example, the property `oracle.base` defines the base directory for installing the Oracle Middleware Platform. We also want to define the Oracle Universal Installer Inventory Directory, which is held in the property `oui.inventory.directory`. The default for this is to place this in the sub-directory `inventory' under the Oracle Home.
+
+
+
+<!-- Document for Sushil https://rubiconred.jiveon.com/docs/DOC-2384-->
+The MyST expression language allows you to refer to any property within the Platform Blueprint and use that property value in defining the value for other properties. 
+
+
+
+SO essentially when setting the value of the Global Variable oui.inventory.directory, we want to reference the value of the Global Variable oracle.base
+`oui.inventory.directory = ${var.oracle.base}/oraInventory`
+
+To reference a value of a property we need to specify 
+${property path}
+
+var.
+rxr.infra Compute Group, WebTier and LoadBalancer
+rxr.wls.Fmw-1 - Middleware Settings
+rxr.wls. WebLogic Domain
+rxr.def  Products, Keystore
+
+### Locating a property within another property of type 'object'
+<object-property-key>.<property-key>
+
+Locating a property within another property of type 'map'
+<map-property-key>[<mystId>]
+Example - param[sys-password]
+
+See Name Value Parameters with RCU
+
+Locating a property within another property of type 'list'
+<list-property-key>[<mystId>].<property-key>
+
+### Global Variables
+MyST supports the notion of global variables, these are referenced in a similiar way to properties. But need to be preceded with the prefix `var`. 
+
+For example, to reference the value of `install.directory` we would specify `${var.install.directory}`
