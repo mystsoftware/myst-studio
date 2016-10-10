@@ -88,40 +88,34 @@ The following table lists the object property keys for the top level objects in 
 | WebLogic Domain | rxr.wls |
 | Keystores | rxr.def |
 
-
 #### Locating a property within a property of type `object`
 `<object-property-path>.<property-key>`
 
 #### Locating a property within a property of type `list`
 A list is a complex property consisting of an array of zero, one or more objects of the same type. For example, within a WebLogic Domain we will have a list of JDBC Data Sources. To locate an `object` within a list we used the following syntax:
 
-`[<list-property-path>.<listObjectType>-<mystId>]`
+`[<listPropertyPath>.<listObjectType>-<objectKey>]`
 
 Where
-* `list-property-path` - Is the path to the object containing the list
-* `listObjectType` - Is the object type stored in the list
-* `object-key` - Is the key for the object stored in the list.
+* `listPropertyPath` - Is the path to the object containing the list
+* `listObjectType` - Is the property object type stored in the list
+* `objectKey` - Is the key for the object stored in the list.
 
-For example, a Platform Blueprint contains a list of Products (for example Java, SOA, Service Bus, RCU) that will be installed. In this example, if we want to reference the RCU object in this list:
+For example, a Platform Blueprint contains a list of Products (for example Java, SOA, Service Bus, RCU) that will be installed. In this example, if we want to reference the property object for RCU:
 
-* The WebLogic Domain is the object containing the list. So `list-property-path` is `rxr.def`
+* The Platform Blueprint is the object containing the list. Thus the value of `list-property-path` is `rxr.def`.
 * `Product` is the object type stored in the list.
 * `rcu` is the object-key for the RCU product object in the list 
 
-The ful
-
-would be expressed as `[rxr.def.Product-rcu]`. 
-
-To reference the RCU product version we would use the expression:   
+Thus the object property path would be expressed as `[rxr.def.Product-rcu]`. To reference the RCU product version we would use the expression:   
     `${[rxr.wls.Product-rcu].version}`
 
-
-For example, a WebLogic Domain contains a list of WebLogic Clusters. In this example: 
+For many lists, the `objectKey` defaults to the index no of the object stored in the list. For example, a WebLogic Domain contains a list of WebLogic Clusters. In this example: 
 * The WebLogic Domain is the object containing the list. So `list-property-path` is `rxr.wls`
-* Cluster is the objectType stored in the list. So `listObjectType` is `Cluster`
+* `Cluster` is the object type stored in the list.
+* `1` is the object-key for the first cluster, `2` the object key for the second cluster, and so on.
 
-So the property path to the second cluster in the list would be expressed as `[rxr.wls.Cluster-2]`. So to reference the cluster name we would use the expression:
-
+Thus the object property path to the second cluster in the list would be expressed as `[rxr.wls.Cluster-2]`. To reference the cluster name we would use the expression:  
 `${[rxr.wls.Cluster-2].name}`
 
 
