@@ -48,33 +48,20 @@ Clicking on the plus sign (![](/Part3/editPlatformBlueprint/img/PlatformBlueprin
 At the top level, a Platform Blueprint or Model will consist of some or all of the following components:
 
 * **Global Variables** - Propeties that
-* **Middleware Settings** - 
-* **Products** - This contains an element for each 
-* **Compute Groups**
-* **Load Balancers**
-* **WebTier Configuration**
-* **WebLogic Domain**- Defines the configuration of the WebLogic domain
-* **Keystores**
-
-#### WebLogic Domain Element
-* **Admin Server** - 
-* **WebLogic Clusters** - 
-* **JDBC Data Sources** - 
-* **JMS Servers** - 
-* **JMS Modules** -
-* **JCA Adapters** - 
-* **Persistence Stores** - 
-* **Security Configuration**
-* **Startup & Shutdown Classes**
-* **Mail Sessions**
-* **WebLogic Deployment Targeting**
+* **Middleware Settings** - Defines core properties such as the Oracle Base and Oracle Middleware home directory.
+* **Products** - Defines the core products that make up the Platform, such as Java, WebLogic, Oracle SOA, etc.
+* **Compute Groups** - Defines the Compute Groups for the Platform.
+* **Load Balancers** - Configuration details for Load Balancers
+* **WebTier Configuration** - Configuration details for Oracle Http Server
+* **WebLogic Domain** - Configuration details of the WebLogic domain
+* **Keystores** - Holds details of any Keystores used by the Platform
 
 ### Topology View
-The toplogy view provides a summary visualization of your Platform Blueprint and provides a quick short cut for referencing key property values. Specifically, it displays:
-* **Load Balancer** - Clicking on this will select the LoadBalancer element in the Platform Blueprint; located at `Blueprint > Load Balancers > LoadBalancer` and display it corresponding properties in the Property View.
-* **Compute Groups** - The toplogy view shows each Compute Group and the components it contains. Clicking on a Compute Group will select the corresponding Compute Group element in the Platform Blueprint; located at `Blueprint > Compute Groups > [Compute Group Name]` and display it corresponding properties in the Property View.
-* **Component Clusters** - The toplogy view shows each WebLogic Cluster and the corresponding Product Component. Clicking on a WebLogic Cluster will select the corresponding element in the Platform Blueprint; located at `Blueprint > WebLogic Domains > [domain_name] > WebLogic Clusters > [Cluster Name] ` and display it corresponding properties in the Property View.
-* **Product Component** - Clicking on a Product Component will select the corresponding element in the Platform Blueprint; located at `Blueprint > Products > [component_name]` and display it corresponding properties in the Property View.
+The toplogy view provides a summary visualization of your Platform Blueprint or Model and provides a quick short cut for referencing key components. Specifically, it displays:
+* **Load Balancer** - Clicking on this will select the LoadBalancer component; located at `[Blueprint|Model] > Load Balancers > LoadBalancer` and display it corresponding properties in the Property View.
+* **Compute Groups** - The toplogy view shows each Compute Group and the components it contains. Clicking on a Compute Group will select the corresponding Compute Group element in the Platform Blueprint or Model; located at `[Blueprint|Model] > Compute Groups > [Compute Group Name]` and display it corresponding properties in the Property View.
+* **Clusters** - The toplogy view shows each WebLogic Cluster and the corresponding Product Components. Clicking on a WebLogic Cluster will select the corresponding component in the Platform; located at `[Blueprint|Model] > WebLogic Domains > [domain_name] > WebLogic Clusters > [Cluster Name] ` and display it corresponding properties in the Property View.
+* **Product** - Clicking on a Product will select the corresponding component in the Platform; located at `[Blueprint|Model] > Products > [component_name]` and display it corresponding properties in the Property View.
 
 ### Property View
 The `Property View` displays the properties and values for the selected component. By default, MyST only shows the core properties for a component. To see all properties, select Show `advance properties`.
