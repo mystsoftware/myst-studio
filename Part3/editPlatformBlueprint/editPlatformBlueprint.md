@@ -121,22 +121,17 @@ Thus the object property path to the second cluster in the list would be express
 
 #### Locating a property within a property of type `paramList`
 A `paramList` is a list of zero, one or more `string` property types. The list of properties is not fixed.
-<paramList-property-path>[<mystId>]
 
-Example - param[sys-password]
-
-To locate an `string` property within a list we used the following syntax:
-`<object-property-path>.param[<string-name>]`
+To locate an `string` property within a `paramList` we used the following syntax:  
+`<paramList-property-path>.param[<string-key>]`
 
 Where
 * `paramList-property-path` - Is the path to the object containing the `paramList`
-* `string-key` - Is the key for the string stored in the paramList
+* `string-key` - Is the key for the string property stored in the paramList
 
-<!-- Document for Sushil https://rubiconred.jiveon.com/docs/DOC-2384-->
+For example, the Oracle SOA Suite Product object contains a Name-Value Parameter list, that contains a numnber of `string` properties, such as audit-level and base-port. To reference the base-port value we would use the expression:  
 
-
-
-See Name Value Parameters with RCU
+`${[rxr.def.Product-soa].param[base-port]}`
 
 
 ### Global Variables
