@@ -47,10 +47,19 @@ The toplogy view provides a summary visualization of your Platform Blueprint and
 * **Product Component** - Clicking on a Product Component will select the corresponding element in the Platform Blueprint; located at `Blueprint > Products > [component_name]` and display it corresponding properties in the Property View.
 
 ### Property View
-On the Blueprints details screen, you will see all the properties and values for the components you select. Some of the properties are auto-computed by MyST Studio, and are highlighted in green. To edit the blueprint configuration, click Edit Configuration. Select the components where you want to make changes, click Edit, make the required updates and click Save. Saving changes at the component level only saves the changes locally. You can make all the changes you need to the blueprint, and apply them at once by clicking Apply Changes to apply all the saved changes, or Discard to discard all the saved changes. Every time you apply changes to a blueprint version, a new revision is created of the blueprint. You can only view the latest revision of the blueprint. However, if the latest revision of the blueprint is not the same as the revision used to provision an instance, you will need to update the instance from the Platform Model or Platform Instances page.
+The `Property View` displays the properties and values for the selected component. By default, MyST only shows the core properties for a component. To see all properties, select Show `advance properties`.
 
-Auto computed values are shown in green
-If the user changes it and applies that too will be shown in white
+To s
+Many of the properties are auto-computed by MyST Studio, these are highlighted in green. If we make any changes to the value of a property MyST will show that in white.
+
+![](img/PropertyValues.PNG)
+
+To edit either a Platform Blueprint or Platform Model, click `Edit Configuration`. This will put the Platform Blueprint / Model viewer in **Edit** mode. 
+
+Within the TreeView browse to the component where you want to make changes and click `Edit`.
+![](../createPlatformBlueprint/img/PropertyReference.PNG)
+
+, make the required updates and click Save. Saving changes at the component level only saves the changes locally. You can make all the changes you need to the blueprint, and apply them at once by clicking Apply Changes to apply all the saved changes, or Discard to discard all the saved changes. Every time you apply changes to a blueprint version, a new revision is created of the blueprint. You can only view the latest revision of the blueprint. However, if the latest revision of the blueprint is not the same as the revision used to provision an instance, you will need to update the instance from the Platform Model or Platform Instances page.
 
 ## MyST Properties - Oveview
 MyST stores the content of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure, consisting of the following property types:
@@ -71,7 +80,7 @@ Where the syntax `${<property-path>}` is used to reference the value for propert
 
 
 
-![](../createPlatformBlueprint/img/PropertyReference.PNG)
+
 
 ## Accessing MyST Properties
 The following table lists the object property keys for the top level objects in the Platform Blueprint and the Platform Model.
