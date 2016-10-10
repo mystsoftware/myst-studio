@@ -47,35 +47,43 @@ The toplogy view provides a summary visualization of your Platform Blueprint and
 * **Product Component** - Clicking on a Product Component will select the corresponding element in the Platform Blueprint; located at `Blueprint > Products > [component_name]` and display it corresponding properties in the Property View.
 
 ### Property View
-On the Blueprints details screen, you will see all the properties and values for the components you select. Some of the properties are auto-computed by MyST Studio, and are highlighted in green. To edit the blueprint configuration, click Edit Configuration. Select the components where you want to make changes, click Edit, make the required updates and click Save. Saving changes at the component level only saves the changes locally. You can make all the changes you need to the blueprint, and apply them at once by clicking Apply Changes to apply all the saved changes, or Discard to discard all the saved changes. Every time you apply changes to a blueprint version, a new revision is created of the blueprint. You can only view the latest revision of the blueprint. However, if the latest revision of the blueprint is not the same as the revision used to provision an instance, you will need to update the instance from the Platform Model or Platform Instances page.
+The `Property View` displays the properties and values for the selected component. By default, MyST only shows the core properties for a component. To see all properties, select Show `advance properties`.
 
-Auto computed values are shown in green
-If the user changes it and applies that too will be shown in white
+To s
+Many of the properties are auto-computed by MyST Studio, these are highlighted in green. If we make any changes to the value of a property MyST will show that in white.
 
-# MyST Properties
-Within MyST, a Platform Blueprint is an environment agnostic specification used to define the platform toplogy and configuration. The content of a Platform Blueprint is held in a hierarchical or tree-like structure, consisting of the following property types:
+![](img/PropertyValues.PNG)
+
+To edit either a Platform Blueprint or Platform Model, click `Edit Configuration`. This will put the Platform Blueprint / Model viewer in **Edit** mode. 
+
+Within the TreeView browse to the component where you want to make changes and click `Edit`.
+![](../createPlatformBlueprint/img/PropertyReference.PNG)
+
+, make the required updates and click Save. Saving changes at the component level only saves the changes locally. You can make all the changes you need to the blueprint, and apply them at once by clicking Apply Changes to apply all the saved changes, or Discard to discard all the saved changes. Every time you apply changes to a blueprint version, a new revision is created of the blueprint. You can only view the latest revision of the blueprint. However, if the latest revision of the blueprint is not the same as the revision used to provision an instance, you will need to update the instance from the Platform Model or Platform Instances page.
+
+## MyST Properties - Oveview
+MyST stores the content of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure, consisting of the following property types:
 * `string` - Primitive type consisting of a key value pair used to hold the value of a property.
 * `object` - Complex type consisting of a pre-defined collection of property types, which can be a mixture of string, object, list or paramList types.
 * `list` - Complex type consisting of a list of zero, one or more objects of the same type.
-* `paramList` - List of zero, one or more `string` property types. The list of properties is not fixed.
+* `paramList` - List of zero, one or more `string` property types.
 
-MyST Property Reference
+### Referencing MyST Property Values
 When defining the value of a primitive property, we can reference the value of one or more other primiative types. For example, if we examine the following properties:
 * `oracle.base` - Defines the Oracle Home directory for installing the Oracle Middleware Platform. 
 * `oui.inventory.directory` - Defines the Oracle Universal Installer (OUI) Inventory Directory
 
-The default location for (OUI) Inventory Directory is to place this in the sub-directory `inventory' under the Oracle Home. So we can write an expression similiar to this.
-
+The default location for (OUI) Inventory Directory is to place this in the sub-directory `inventory` under the Oracle Home. MyST enables us to write an expression similar to:   
 `oui.inventory.directory = ${oracle.base}\inventory`
 
-Where the syntax `${<property-path>}` is used to reference the value for property uniquely identifed by its `<property-path>`
+Where the syntax `${<property-path>}` is used to reference the value for property uniquely identified by its `<property-path>`.
 
-### Accessing MyST Properties
-In general, a dot notation is used to traverse the property hierarchy. For example, `a.b.c` would mean locate `c` within `b` within `a`.
 
-To 
 
-The following table lists the object property keys for the top level objects in the Platform Blueprint.
+
+
+## Accessing MyST Properties
+The following table lists the object property keys for the top level objects in the Platform Blueprint and the Platform Model.
 
 | Object | Object Property Key |
 | -- | --------- |
@@ -88,64 +96,59 @@ The following table lists the object property keys for the top level objects in 
 | WebLogic Domain | rxr.wls |
 | Keystores | rxr.def |
 
+In general, a dot notation is used to traverse the property hierarchy. For example, `a.b.c` would mean locate `c` within `b` within `a`.
 
-#### Locating a property within a property of type `object`
+
+
+
+
+### Locating a property within a property of type `object`
 `<object-property-path>.<property-key>`
 
-#### Locating a property within a property of type `list`
+### Locating a property within a property of type `list`
 A list is a complex property consisting of an array of zero, one or more objects of the same type. For example, within a WebLogic Domain we will have a list of JDBC Data Sources. To locate an `object` within a list we used the following syntax:
 
-`[<list-property-path>.<listObjectType>-<mystId>]`
+`[<listPropertyPath>.<listObjectType>-<objectKey>]`
 
 Where
-* `list-property-path` - Is the path to the object containing the list
-* `listObjectType` - Is the object type stored in the list
-* `object-key` - Is the key for the object stored in the list.
+* `listPropertyPath` - Is the path to the object containing the list
+* `listObjectType` - Is the property object type stored in the list
+* `objectKey` - Is the key for the object stored in the list.
 
-For example, a Platform Blueprint contains a list of Products (for example Java, SOA, Service Bus, RCU) that will be installed. In this example, if we want to reference the RCU object in this list:
+For example, a Platform Blueprint contains a list of Products (for example Java, SOA, Service Bus, RCU) that will be installed. In this example, if we want to reference the property object for RCU:
 
-* The WebLogic Domain is the object containing the list. So `list-property-path` is `rxr.def`
+* The Platform Blueprint is the object containing the list. Thus the value of `list-property-path` is `rxr.def`.
 * `Product` is the object type stored in the list.
 * `rcu` is the object-key for the RCU product object in the list 
 
-The ful
-
-would be expressed as `[rxr.def.Product-rcu]`. 
-
-To reference the RCU product version we would use the expression:   
+Thus the object property path would be expressed as `[rxr.def.Product-rcu]`. To reference the RCU product version we would use the expression:   
     `${[rxr.wls.Product-rcu].version}`
 
-
-For example, a WebLogic Domain contains a list of WebLogic Clusters. In this example: 
+For many lists, the `objectKey` defaults to the index no of the object stored in the list. For example, a WebLogic Domain contains a list of WebLogic Clusters. In this example: 
 * The WebLogic Domain is the object containing the list. So `list-property-path` is `rxr.wls`
-* Cluster is the objectType stored in the list. So `listObjectType` is `Cluster`
+* `Cluster` is the object type stored in the list.
+* `1` is the object-key for the first cluster, `2` the object key for the second cluster, and so on.
 
-So the property path to the second cluster in the list would be expressed as `[rxr.wls.Cluster-2]`. So to reference the cluster name we would use the expression:
-
+Thus the object property path to the second cluster in the list would be expressed as `[rxr.wls.Cluster-2]`. To reference the cluster name we would use the expression:  
 `${[rxr.wls.Cluster-2].name}`
 
 
-#### Locating a property within a property of type `paramList`
+### Locating a property within a property of type `paramList`
 A `paramList` is a list of zero, one or more `string` property types. The list of properties is not fixed.
-<paramList-property-path>[<mystId>]
 
-Example - param[sys-password]
-
-To locate an `string` property within a list we used the following syntax:
-`<object-property-path>.param[<string-name>]`
+To locate an `string` property within a `paramList` we used the following syntax:  
+`<paramList-property-path>.param[<string-key>]`
 
 Where
 * `paramList-property-path` - Is the path to the object containing the `paramList`
-* `string-key` - Is the key for the string stored in the paramList
+* `string-key` - Is the key for the string property stored in the paramList
 
-<!-- Document for Sushil https://rubiconred.jiveon.com/docs/DOC-2384-->
+For example, the Oracle SOA Suite Product object contains a Name-Value Parameter list, that contains a numnber of `string` properties, such as audit-level and base-port. To reference the base-port value we would use the expression:  
 
-
-
-See Name Value Parameters with RCU
+`${[rxr.def.Product-soa].param[base-port]}`
 
 
-### Global Variables
+### Locating a Global Variables
 MyST supports the notion of global variables, these are referenced in a similiar way to properties. But need to be preceded with the prefix `var`. 
 
 For example, to reference the value of `install.directory` we would specify `${var.install.directory}`
