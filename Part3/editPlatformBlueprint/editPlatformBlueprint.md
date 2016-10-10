@@ -52,24 +52,28 @@ On the Blueprints details screen, you will see all the properties and values for
 Auto computed values are shown in green
 If the user changes it and applies that too will be shown in white
 
-# MyST Properties
+## MyST Properties - Oveview
 MyST stores the content of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure, consisting of the following property types:
 * `string` - Primitive type consisting of a key value pair used to hold the value of a property.
 * `object` - Complex type consisting of a pre-defined collection of property types, which can be a mixture of string, object, list or paramList types.
 * `list` - Complex type consisting of a list of zero, one or more objects of the same type.
 * `paramList` - List of zero, one or more `string` property types.
 
-## Referencing MyST Property Values
+### Referencing MyST Property Values
 When defining the value of a primitive property, we can reference the value of one or more other primiative types. For example, if we examine the following properties:
 * `oracle.base` - Defines the Oracle Home directory for installing the Oracle Middleware Platform. 
 * `oui.inventory.directory` - Defines the Oracle Universal Installer (OUI) Inventory Directory
 
-The default location for (OUI) Inventory Directory is to place this in the sub-directory `inventory` under the Oracle Home. MyST enables us to write an expression similiar to:   
+The default location for (OUI) Inventory Directory is to place this in the sub-directory `inventory` under the Oracle Home. MyST enables us to write an expression similar to:   
 `oui.inventory.directory = ${oracle.base}\inventory`
 
 Where the syntax `${<property-path>}` is used to reference the value for property uniquely identified by its `<property-path>`.
 
-### Accessing MyST Properties
+
+
+![](../createPlatformBlueprint/img/PropertyReference.PNG)
+
+## Accessing MyST Properties
 The following table lists the object property keys for the top level objects in the Platform Blueprint and the Platform Model.
 
 | Object | Object Property Key |
@@ -83,10 +87,11 @@ The following table lists the object property keys for the top level objects in 
 | WebLogic Domain | rxr.wls |
 | Keystores | rxr.def |
 
-
-
-## Understanding the Object Property Path
 In general, a dot notation is used to traverse the property hierarchy. For example, `a.b.c` would mean locate `c` within `b` within `a`.
+
+
+
+
 
 ### Locating a property within a property of type `object`
 `<object-property-path>.<property-key>`
@@ -134,7 +139,7 @@ For example, the Oracle SOA Suite Product object contains a Name-Value Parameter
 `${[rxr.def.Product-soa].param[base-port]}`
 
 
-### Global Variables
+### Locating a Global Variables
 MyST supports the notion of global variables, these are referenced in a similiar way to properties. But need to be preceded with the prefix `var`. 
 
 For example, to reference the value of `install.directory` we would specify `${var.install.directory}`
