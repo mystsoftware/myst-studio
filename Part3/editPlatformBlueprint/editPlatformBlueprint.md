@@ -1,9 +1,20 @@
-## Launching the Platform Blueprint Editor
+## Platform Editor
+MyST stores the content of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure. The Platform Editor is used to view and edit Platform Blueprints and Platform Models.
 
-From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Actions` drop-down in the top right-hand corner of the Platform Blueprint we want to view or edit and select `Open`. This will launch the `Platform Blueprint Editor` in view only mode.
+### Opening a Platform Blueprint in the Platform Editor
+From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Actions` drop-down in the top right-hand corner of the Platform Blueprint we want to view or edit and select `Open`. This will launch the `Platform Blueprint Editor` in view mode.
 
 ![](/Part3/editPlatformBlueprint/img/PlatformBlueprintEditor.PNG)
 
+### Opening a Platform Model in the Platform Editor
+
+From the side menu navigate to`Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model you are interested in and MyST will display summary details about the Platform Model and its coresponding instance.
+
+![](Part3/editPlatformBlueprint/img/PlatformModelSummary.PNG)
+
+Click on `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open Platform Model in the `Platform Editor` in view mode.
+
+## Platform Editor Tour
 The Platform Editor is split into four core sections:
 
 1. **Control Bar** - Displays the version, revison and state of the Platform Blueprint you are viewing, plus allows you to perform actions such as editing against the Platform Blueprint.
