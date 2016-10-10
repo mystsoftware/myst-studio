@@ -53,29 +53,24 @@ Auto computed values are shown in green
 If the user changes it and applies that too will be shown in white
 
 # MyST Properties
-Within MyST, a Platform Blueprint is an environment agnostic specification used to define the platform toplogy and configuration. The content of a Platform Blueprint is held in a hierarchical or tree-like structure, consisting of the following property types:
+MyST stores the content of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure, consisting of the following property types:
 * `string` - Primitive type consisting of a key value pair used to hold the value of a property.
 * `object` - Complex type consisting of a pre-defined collection of property types, which can be a mixture of string, object, list or paramList types.
 * `list` - Complex type consisting of a list of zero, one or more objects of the same type.
-* `paramList` - List of zero, one or more `string` property types. The list of properties is not fixed.
+* `paramList` - List of zero, one or more `string` property types.
 
-MyST Property Reference
+## Referencing MyST Property Values
 When defining the value of a primitive property, we can reference the value of one or more other primiative types. For example, if we examine the following properties:
 * `oracle.base` - Defines the Oracle Home directory for installing the Oracle Middleware Platform. 
 * `oui.inventory.directory` - Defines the Oracle Universal Installer (OUI) Inventory Directory
 
-The default location for (OUI) Inventory Directory is to place this in the sub-directory `inventory' under the Oracle Home. So we can write an expression similiar to this.
-
+The default location for (OUI) Inventory Directory is to place this in the sub-directory `inventory` under the Oracle Home. MyST enables us to write an expression similiar to:   
 `oui.inventory.directory = ${oracle.base}\inventory`
 
-Where the syntax `${<property-path>}` is used to reference the value for property uniquely identifed by its `<property-path>`
+Where the syntax `${<property-path>}` is used to reference the value for property uniquely identified by its `<property-path>`.
 
 ### Accessing MyST Properties
-In general, a dot notation is used to traverse the property hierarchy. For example, `a.b.c` would mean locate `c` within `b` within `a`.
-
-To 
-
-The following table lists the object property keys for the top level objects in the Platform Blueprint.
+The following table lists the object property keys for the top level objects in the Platform Blueprint and the Platform Model.
 
 | Object | Object Property Key |
 | -- | --------- |
@@ -88,10 +83,15 @@ The following table lists the object property keys for the top level objects in 
 | WebLogic Domain | rxr.wls |
 | Keystores | rxr.def |
 
-#### Locating a property within a property of type `object`
+
+
+## Understanding the Object Property Path
+In general, a dot notation is used to traverse the property hierarchy. For example, `a.b.c` would mean locate `c` within `b` within `a`.
+
+### Locating a property within a property of type `object`
 `<object-property-path>.<property-key>`
 
-#### Locating a property within a property of type `list`
+### Locating a property within a property of type `list`
 A list is a complex property consisting of an array of zero, one or more objects of the same type. For example, within a WebLogic Domain we will have a list of JDBC Data Sources. To locate an `object` within a list we used the following syntax:
 
 `[<listPropertyPath>.<listObjectType>-<objectKey>]`
@@ -119,7 +119,7 @@ Thus the object property path to the second cluster in the list would be express
 `${[rxr.wls.Cluster-2].name}`
 
 
-#### Locating a property within a property of type `paramList`
+### Locating a property within a property of type `paramList`
 A `paramList` is a list of zero, one or more `string` property types. The list of properties is not fixed.
 
 To locate an `string` property within a `paramList` we used the following syntax:  
