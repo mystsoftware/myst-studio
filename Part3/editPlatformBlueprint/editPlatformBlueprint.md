@@ -1,5 +1,5 @@
 ## Platform Editor
-MyST stores the content of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure. The Platform Editor is used to view and edit Platform Blueprints and Platform Models.
+MyST holds the configuration details of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure. The Platform Editor is used to view and edit Platform Blueprints and Platform Models.
 
 ### Opening a Platform Blueprint in the Platform Editor
 From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Actions` drop-down in the top right-hand corner of the Platform Blueprint we want to view or edit and select `Open`. This will launch the `Platform Blueprint Editor` in view mode.
@@ -18,27 +18,34 @@ Click on `Actions` drop-down in the top right-hand corner and select `Configurat
 The Platform Editor is split into four core sections:
 
 1. **Control Bar** - Displays the version, revison and state of the Platform Blueprint or Model you are viewing, plus allows you to perform actions such as editing.
-2. **Tree View** - Displays a hierarchical view of the Platform Blueprint. Each element (or branch) can have a number sub-elements, clicking on the plus sign (![](/Part3/editPlatformBlueprint/img/PlatformBlueprintExpand.png)) of an element will expand it to show its sub-components. Clicking on a child element will display the list of properties and values defined for that element in the properties view. 
-3. **Topology View** - Helps to visualize the configuration that is defined in the blueprint. We can click on any element in the topology diagram, and view the list of properties defined for that element in the properties view.
-4. **Property View** - Displays the list of properties and corresponding values defined for the selected element in your Platform Blueprint. 
+2. **Tree View** - Displays a hierarchical view of the Platform Blueprint. That can be used to navigate the Platform Blueprint or Model configuration. Selecting a component in the tree view will display a list of properties defined for that component in the properties view.
+3. **Topology View** - Helps to visualize the configuration that is defined in the blueprint. Selecting a component in the topology diagram will display a list of properties defined for that component in the properties view.
+4. **Property View** - Displays the list of properties and corresponding values defined for the selected component in your Platform Blueprint. 
 
 You can re-size each view by dragging the grey bars which seperate each section. By clicking on appropriate arrow you can close / open the corresponding view.
 
 ### Control Bar
-The Control Bar Displays the version, revison and state of the Platform Blueprint or Model for further details see Platform Blueprint and Model Versioning.
+The Control Bar Displays the version, revison and state of the Platform Blueprint or Model for further details on versioning see [Platform Blueprint and Model Versioning]().
 
-By default the Platform Editor is opened in read only mode, selecting `Edit Configuration` will put the Platform Editor in edit mode, allowing you to make and save changes. See ...
+By default the Platform Editor is opened in read only mode, selecting `Edit Configuration` will put the Platform Editor into edit mode, allowing us to make and save changes. See ...
 
 In addition, the `Actions` drop down allows you to perform a number of additional actions, these are:
-From here you can also perform a number of actions, these are:
 * `Save as new version` - Allows you to create a new version of the Platform Blueprint
 * `Delete` - Allows you to delete the current version of the Platform Blueprint or Model. Note we can only delete a Platform Model that does not have an active Platform Instance and we can only delete a Platform Blueprint that does not have any dependent Platform Models.
 * `Publish` - Sets the status of the Platform Blueprint or Model to `FINAL` meaning no further changes can be made against that version.
 
-### Tree View - 
-The Tree View provides a hierarchical view of the Platform Blueprint.
-Each element (or branch) can have a number sub-elements, clicking on the plus sign (![](/Part3/editPlatformBlueprint/img/PlatformBlueprintExpand.png)) of an element will expand it to show its sub-components. Clicking on a child element will display the list of properties and values defined for that element in the properties view. 
+### Tree View
+MyST holds the configuration details of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure, consisting of the following object types:
+* `string` - Primitive type consisting of a key value pair used to hold the value of a property.
+* `component` - Complex type consisting of a pre-defined collection of object types.
+* `list` - Complex type consisting of a list of zero, one or more components of the same type.
+* `paramList` - List of zero, one or more `string` property types.
 
+The Tree View provides a hierarchical view of the Platform Blueprint and Platform Model, providing a simple way to navigate the configuration details of a Platform Blueprint or Model.
+
+Clicking on the plus sign (![](/Part3/editPlatformBlueprint/img/PlatformBlueprintExpand.png)) of a component will expand it to show any child components. Selecting an child element will display the list of properties and values defined for that component in the properties view. 
+
+At the top level, a Platform Blueprint or Model will consist of some or all of the following components:
 
 * **Global Variables** - Propeties that
 * **Middleware Settings** - 
@@ -46,7 +53,7 @@ Each element (or branch) can have a number sub-elements, clicking on the plus si
 * **Compute Groups**
 * **Load Balancers**
 * **WebTier Configuration**
-* **WebLogic Domain**- Used to define the properties for the WebLogic domain (See
+* **WebLogic Domain**- Defines the configuration of the WebLogic domain
 * **Keystores**
 
 #### WebLogic Domain Element
