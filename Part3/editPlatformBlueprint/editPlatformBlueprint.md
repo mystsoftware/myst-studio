@@ -95,12 +95,26 @@ The following table lists the object property keys for the top level objects in 
 #### Locating a property within a property of type `list`
 A list is a complex property consisting of an array of zero, one or more objects of the same type. For example, within a WebLogic Domain we will have a list of JDBC Data Sources. To locate an `object` within a list we used the following syntax:
 
-`[<list-property-path>.<listObjectType>-<indexNo>]`
+`[<list-property-path>.<listObjectType>-<mystId>]`
 
 Where
 * `list-property-path` - Is the path to the object containing the list
-* `listObjectType` - Is the objectType stored in the list
-* `indexNo` - Is the position of the object in the list, with the first object being at position 1.
+* `listObjectType` - Is the object type stored in the list
+* `object-key` - Is the key for the object stored in the list.
+
+For example, a Platform Blueprint contains a list of Products (for example Java, SOA, Service Bus, RCU) that will be installed. In this example, if we want to reference the RCU object in this list:
+
+* The WebLogic Domain is the object containing the list. So `list-property-path` is `rxr.def`
+* `Product` is the object type stored in the list.
+* `rcu` is the object-key for the RCU product object in the list 
+
+The ful
+
+would be expressed as `[rxr.def.Product-rcu]`. 
+
+To reference the RCU product version we would use the expression:   
+    `${[rxr.wls.Product-rcu].version}`
+
 
 For example, a WebLogic Domain contains a list of WebLogic Clusters. In this example: 
 * The WebLogic Domain is the object containing the list. So `list-property-path` is `rxr.wls`
