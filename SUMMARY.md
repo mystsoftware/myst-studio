@@ -11,9 +11,9 @@
     * [6. Amazon Web Services on Demand](Part2/AwsOnDemand/AwsOnDemand.md)
         * [Preparing AWS On Demand Infrastructure](infra/AwsOnDemand/PrepareAwsOnDemand.md)
         * [Configure AWS Infrastructure Provider in MyST](infra/AwsOnDemand/AwsOnDemandInfrastrcutureProvider.md)
-* [Part 3 - Platform Provisioning](part2/part2.md)
-    * [Platform Management](platformManagement/platformManagement.md)
-    * [Platform Blueprints](platformBlueprints/platformBlueprints.md)
+* [Part 3 - Platform Provisioning](part3/part3.md)
+    * [Platform Management](part3/createPlatformBlueprint.md)
+    * [Platform Blueprints](part3/createPlatformModel/platformBlueprints.md)
         * [Creating Platform Blueprints](platformBlueprints/wizard.md)
         * [Version](platformBlueprints/version.md)
 
