@@ -64,13 +64,18 @@ The toplogy view provides a summary visualization of your Platform Blueprint or 
 * **Product** - Clicking on a Product will select the corresponding component in the Platform; located at `[Blueprint|Model] > Products > [component_name]` and display it corresponding properties in the Property View.
 
 ### Property View
-The `Property View` displays the properties and values for the selected component. By default, MyST only shows the core properties for a component. To see all properties, select Show `advance properties`.
+The `Property View` displays the properties and values for the selected component. A component may also contain other components, for example the screenshot below is showing the properties for the soa_domain component. This contains the component `Credentials` which has the properties `Username` and `Password`.
 
-To s
-Many of the properties are auto-computed by MyST Studio, these are highlighted in green. If we make any changes to the value of a property MyST will show that in white.
+To expand a component within the property view click on the `+` symbol, and to collapse a component click on the `-` symbol. Alternatively to expand or collapse all components within the property view click on the corresponding `Exapnd All` or `Collapse All` button.
 
 ![](img/PropertyValues.PNG)
 
+By default, MyST only shows the core properties for a component. To see all properties, select `Show advanced properties` (highlighted in red above).
+
+MyST auto-computes many of the property values in accordance with Oracle Enterprise Deployment Guide.  the
+The auto-computed values are highlighted in green, if we choose to change any of these, then MyST will display the user entered property in white.
+
+## Editing Properties
 To edit either a Platform Blueprint or Platform Model, click `Edit Configuration`. This will put the Platform Blueprint / Model viewer in **Edit** mode. 
 
 Within the TreeView browse to the component where you want to make changes and click `Edit`.
