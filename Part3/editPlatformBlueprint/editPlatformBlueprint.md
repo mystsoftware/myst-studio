@@ -208,6 +208,8 @@ For example, the Oracle SOA Suite Product object contains a Name-Value Parameter
 `${[rxr.def.Product-soa].param[base-port]}`
 
 ### Referencing a global variable value
-MyST supports the notion of global variables, these are referenced in a similiar way to properties. But need to be preceded with the prefix `var`. 
+MyST supports the notion of global variables, these are held in 
+
+these are referenced in a similiar way to properties. But need to be preceded with the prefix `var`. 
 
 For example, to reference the value of `install.directory` we would specify `${var.install.directory}`
