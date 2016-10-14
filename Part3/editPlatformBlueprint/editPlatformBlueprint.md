@@ -93,23 +93,28 @@ Note: Any edits made to a Property Definition which have not yet been saved to t
 
 **Every time you apply changes to a blueprint version, a new revision is created of the blueprint. You can only view the latest revision of the blueprint. However, if the latest revision of the blueprint is not the same as the revision used to provision an instance, you will need to update the instance from the Platform Model or Platform Instances page.** Update for commit.
 
-## Referencing MyST Property Values
-When defining the value of a property, we can reference the value of one or more other properties. For example, if we examine the following properties:
+## Property Expansion in MyST
+To make editing and maintenance of Platform Blueprints easier, MyST supports property expansion when defining the value of a property. 
+
+When a string of the following format 
+
+`${some.property}`
+
+appears in a property value it will be expanded to the value of the specified property.
+
+For example, if we examine the following properties:
 * `oracle.base` - Defines the Oracle Home directory for installing the Oracle Middleware Platform. 
 * `oui.inventory.directory` - Defines the Oracle Universal Installer (OUI) Inventory Directory
 
-The default location for (OUI) Inventory Directory is to place this in the sub-directory `inventory` under the Oracle Home. MyST enables us to write an expression similar to:    
+The default location for (OUI) Inventory Directory is to place this in the sub-directory `oraInventory` under the Oracle Home. MyST enables us to set the value of the property `oui.inventory.directory` to  `${var.oracle.base}/oraInventory`.
 
-`oui.inventory.directory = ${oracle.base}\inventory`
+### Referencing MyST Properties
+When referencing a MyST property, we need to specify the full path of the property within the Platform Blueprint or Model.
 
-Where the syntax `${<property-path>}` is used to reference the value for property uniquely identified by its `<property-path>`.
 
-## Referencing MyST Properties
-...
+The simplest way to derive the expression to reference a property value is to locate the property we wish to reference within the Propery Viewer and click on the Property Name. Myst will open a speech bubble containing the expression to reference the property value as show below.
 
-The simplest way to derive the expression to reference a property value is to locate the property within the Propery Viewer and click on the Property Name. Myst will open a speech bubble containing the expression to reference the property value as show below.
-
-![](img/PropertyExpression.PNG)
+![](./img/PropertyExpression.PNG)
 
 **Note:** The Platform Editor needs to be in Edit mode.
 
@@ -207,9 +212,15 @@ For example, the Oracle SOA Suite Product object contains a Name-Value Parameter
 
 `${[rxr.def.Product-soa].param[base-port]}`
 
-### Referencing a global variable value
-MyST supports the notion of global variables, these are held in 
+### Referencing a `global variable` value
+MyST supports the notion of global variables, these are essentially held as a paramList . To reference a gloabl `property` value within a component we used the following syntax:  
 
-these are referenced in a similiar way to properties. But need to be preceded with the prefix `var`. 
+`${<var>.<property-key>}`
 
-For example, to reference the value of `install.directory` we would specify `${var.install.directory}`
+Where
+* `<var>` - Is the path to the component containing the property.  
+* `<property-key>` - Is the key for the property whose value we are referencing within the component.
+
+For example, to reference the value of global variable `install.directory`, we would use the expression:
+  
+`${var.install.directory}`
