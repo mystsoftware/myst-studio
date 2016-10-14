@@ -132,21 +132,21 @@ In general, a dot notation is used to traverse the property hierarchy. For examp
 
 
 
-### Locating an object within a `component`
-A component is a complex type consisting of a pre-defined collection of object types. To locate an `object` within a component we used the following syntax:
+### Referencing a `property` value within a `component`
+A component is a complex type consisting of a pre-defined collection of object types. To reference a `property` value within a component we used the following syntax:
 
-`<component-property-path>.<object-key>`
+`<component-property-path>.<propery-key>`
 
 Where
-* `component-property-path` - Is the path to the component containing the object  
-* `object-key` - Is the key for the object we are referencing within the component.
+* `component-property-path` - Is the path to the component containing the property.
+* `property-key` - Is the key for the property whose value we are referencing within the component.
 
-For example, with a Platform Blueprint or Model we have the `Middleware Settings` component, to reference the `Version` property 
+For example, within a Platform Blueprint or Model we have the `Middleware Settings` component, to reference the `Version` property value, we would use the expression: 
 
 * The Middleware Setting is the component the version property. Thus the value of `component-property-path` is `rxr.wls.Fmw-1` (as per table above).
 * `version` is the object key for the property we are referencing.
 
-To reference the Middleware version we would use the expression:   
+To reference the Middleware version   
 
 `${[rxr.wls.Fmw-1].version}`
 
