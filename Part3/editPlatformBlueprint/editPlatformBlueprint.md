@@ -2,24 +2,24 @@
 MyST holds the configuration details of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure. The Platform Editor is used to view and edit Platform Blueprints and Platform Models.
 
 ### Opening a Platform Blueprint in the Platform Editor
-From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Actions` drop-down in the top right-hand corner of the Platform Blueprint we want to view or edit and select `Open`. This will launch the `Platform Blueprint Editor` in view mode.
+From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on the `Actions` drop-down in the top right-hand corner of the Platform Blueprint we want to view / edit and select `Open`. This will open the Platform Blueprint in the `Platform Editor` in view mode.
 
 ![](/Part3/editPlatformBlueprint/img/PlatformBlueprintEditor.PNG)
 
 ### Opening a Platform Model in the Platform Editor
 
-From the side menu navigate to`Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model you are interested in and MyST will display summary details about the Platform Model and its coresponding instance.
+From the side menu navigate to`Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model you are interested in and MyST will display summary details about the Platform Model and its coresponding instance as shown below.
 
 ![](/Part3/editPlatformBlueprint/img/PlatformModelSummary.PNG)
 
-Click on `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open Platform Model in the `Platform Editor` in view mode.
+Click on the `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open the Platform Model in the `Platform Editor` in view mode.
 
 ## Platform Editor Layout
 The Platform Editor is split into four core sections:
 
 1. **Control Bar** - Displays the version, revison and state of the Platform Blueprint or Model you are viewing, plus allows you to perform actions such as editing.
 2. **Tree View** - Displays a hierarchical view of the Platform Blueprint. That can be used to navigate the Platform Blueprint or Model configuration. Selecting a component in the tree view will display a list of properties defined for that component in the properties view.
-3. **Topology View** - Helps to visualize the configuration that is defined in the blueprint. Selecting a component in the topology diagram will display a list of properties defined for that component in the properties view.
+3. **Topology View** - Helps to visualize the configuration that is defined in the Platform Blueprint or Model. Selecting a component in the topology diagram will display a list of properties defined for that component in the properties view.
 4. **Property View** - Displays the list of properties and corresponding values defined for the selected component in your Platform Blueprint. 
 
 You can re-size each view by dragging the grey bars which seperate each section. By clicking on appropriate arrow you can close / open the corresponding view.
@@ -27,7 +27,7 @@ You can re-size each view by dragging the grey bars which seperate each section.
 ### Control Bar
 The Control Bar Displays the version, revison and state of the Platform Blueprint or Model for further details on versioning see [Platform Blueprint and Model Versioning]().
 
-By default the Platform Editor is opened in read only mode, selecting `Edit Configuration` will put the Platform Editor into edit mode, allowing us to make and save changes. See ...
+By default the Platform Editor is opened in read only mode, selecting `Edit Configuration` will put the Platform Editor into edit mode, allowing us to make and save changes. [See ...]()
 
 In addition, the `Actions` drop down allows you to perform a number of additional actions, these are:
 * `Save as new version` - Allows you to create a new version of the Platform Blueprint
@@ -47,7 +47,7 @@ Clicking on the plus sign (![](/Part3/editPlatformBlueprint/img/PlatformBlueprin
 
 At the top level, a Platform Blueprint or Model will consist of some or all of the following components:
 
-* **Global Variables** - Propeties that
+* **Global Variables** - List of zero, one or more `string` property types.
 * **Middleware Settings** - Defines core properties such as the Oracle Base and Oracle Middleware home directory.
 * **Products** - Defines the core products that make up the Platform, such as Java, WebLogic, Oracle SOA, etc.
 * **Compute Groups** - Defines the Compute Groups for the Platform.
@@ -64,48 +64,57 @@ The toplogy view provides a summary visualization of your Platform Blueprint or 
 * **Product** - Clicking on a Product will select the corresponding component in the Platform; located at `[Blueprint|Model] > Products > [component_name]` and display it corresponding properties in the Property View.
 
 ### Property View
-The `Property View` displays the properties and values for the selected component. A component may also contain other components, for example the screenshot below is showing the properties for the soa_domain component. This contains the component `Credentials` which has the properties `Username` and `Password`.
+The `Property View` displays the properties and values for the selected component. A component may also contain other components, for example the screenshot below is showing the properties for the *soa_domain* component. This contains the component `Credentials` which has the properties `Username` and `Password`.
 
 To expand a component within the property view click on the `+` symbol, and to collapse a component click on the `-` symbol. Alternatively to expand or collapse all components within the property view click on the corresponding `Exapnd All` or `Collapse All` button.
 
 ![](img/PropertyValues.PNG)
 
-By default, MyST only shows the core properties for a component. To see all properties, select `Show advanced properties` (highlighted in red above).
+By default, MyST only shows the core properties for a component. To see all properties, select `Show advanced properties` (outlined in red above).
 
 MyST auto-computes many of the property values in accordance with Oracle Enterprise Deployment Guide.  the
 The auto-computed values are highlighted in green, if we choose to change any of these, then MyST will display the user entered property in white.
 
 ## Editing Properties
-To edit either a Platform Blueprint or Platform Model, click `Edit Configuration`. This will put the Platform Blueprint / Model viewer in **Edit** mode. 
+To edit either a Platform Blueprint or Platform Model, click `Edit Configuration`. This will put the Platform Editor in **Edit** mode. 
 
-Within the TreeView browse to the component where you want to make changes and click `Edit`.
+When defining the value of a property, we can reference the value of one or more other properties see [MyST Property Overview](). Once in **Edit** mode, the Property Viewer will display the property definition for calculation the property value, which may include references to other property values. As underneath that the actual resolevd (or calculated) value of the property after property reference have been substituted with actual values, as shown below.
+
 ![](../createPlatformBlueprint/img/PropertyReference.PNG)
 
-, make the required updates and click Save. Saving changes at the component level only saves the changes locally. You can make all the changes you need to the blueprint, and apply them at once by clicking Apply Changes to apply all the saved changes, or Discard to discard all the saved changes. Every time you apply changes to a blueprint version, a new revision is created of the blueprint. You can only view the latest revision of the blueprint. However, if the latest revision of the blueprint is not the same as the revision used to provision an instance, you will need to update the instance from the Platform Model or Platform Instances page.
+To edit a property, within the TreeView browse to the component where you want to make changes and click `Edit`(outlined in red below).
 
-## MyST Properties - Oveview
-MyST stores the content of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure, consisting of the following property types:
-* `string` - Primitive type consisting of a key value pair used to hold the value of a property.
-* `object` - Complex type consisting of a pre-defined collection of property types, which can be a mixture of string, object, list or paramList types.
-* `list` - Complex type consisting of a list of zero, one or more objects of the same type.
-* `paramList` - List of zero, one or more `string` property types.
+![](img/EditComponent.PNG)
+This will allow you to edit the property definitions for each property within the selected component. Once you have finished making your changes, click `Save`.
 
-### Referencing MyST Property Values
-When defining the value of a primitive property, we can reference the value of one or more other primiative types. For example, if we examine the following properties:
+**Important** - Saving changes at the component level only saves the changes with the current editing session. The Platform Editor allows you to make all the changes you need to the Platform Blueprint or Model, and save them to the MyST Repository all at once by clicking `Apply Changes` Alternatively, click `Discard Changes` to discard all the changes made within the current `Edit Session`. 
+
+Note: Any edits made to a Property Definition which have not yet been saved to the MyST Repository are highlighted in yellow to indicate this.
+
+**Every time you apply changes to a blueprint version, a new revision is created of the blueprint. You can only view the latest revision of the blueprint. However, if the latest revision of the blueprint is not the same as the revision used to provision an instance, you will need to update the instance from the Platform Model or Platform Instances page.** Update for commit.
+
+## Referencing MyST Property Values
+When defining the value of a property, we can reference the value of one or more other properties. For example, if we examine the following properties:
 * `oracle.base` - Defines the Oracle Home directory for installing the Oracle Middleware Platform. 
 * `oui.inventory.directory` - Defines the Oracle Universal Installer (OUI) Inventory Directory
 
-The default location for (OUI) Inventory Directory is to place this in the sub-directory `inventory` under the Oracle Home. MyST enables us to write an expression similar to:   
+The default location for (OUI) Inventory Directory is to place this in the sub-directory `inventory` under the Oracle Home. MyST enables us to write an expression similar to:    
+
 `oui.inventory.directory = ${oracle.base}\inventory`
 
 Where the syntax `${<property-path>}` is used to reference the value for property uniquely identified by its `<property-path>`.
 
+## Referencing MyST Properties
+...
 
+The simplest way to derive the expression to reference a property value is to locate the property within the Propery Viewer and click on the Property Name. Myst will open a speech bubble containing the expression to reference the property value as show below.
 
+![](img/PropertyExpression.PNG)
 
+**Note:** The Platform Editor needs to be in Edit mode.
 
-## Accessing MyST Properties
-The following table lists the object property keys for the top level objects in the Platform Blueprint and the Platform Model.
+### Understand the MyST Property Path
+In general, a dot notation is used to traverse the property hierarchy. For example, `a.b.c` would mean locate `c` within `b` within `a`. The following table lists the object property keys for the top level objects in the Platform Blueprint and the Platform Model.
 
 | Object | Object Property Key |
 | -- | --------- |
@@ -118,33 +127,31 @@ The following table lists the object property keys for the top level objects in 
 | WebLogic Domain | rxr.wls |
 | Keystores | rxr.def |
 
-In general, a dot notation is used to traverse the property hierarchy. For example, `a.b.c` would mean locate `c` within `b` within `a`.
+* `string` - Primitive type consisting of a key value pair used to hold the value of a property.* `component` - Complex type consisting of a pre-defined collection of object types.* `list` - Complex type consisting of a list of zero, one or more components of the same type.* `paramList` - List of zero, one or more `string` property types.
 
 
+### Locating an object within an object of type `component`
+`<component-property-path>.<object-key>`
 
+### Locating an object within a `list`
+A list is a complex type consisting of a list of zero, one or more components of the same type. For example, within a WebLogic Domain we will have a list of JDBC Data Sources. To locate an `object` within a list we used the following syntax:
 
-
-### Locating a property within a property of type `object`
-`<object-property-path>.<property-key>`
-
-### Locating a property within a property of type `list`
-A list is a complex property consisting of an array of zero, one or more objects of the same type. For example, within a WebLogic Domain we will have a list of JDBC Data Sources. To locate an `object` within a list we used the following syntax:
-
-`[<listPropertyPath>.<listObjectType>-<objectKey>]`
+`[<componentPropertyPath>.<listObjectType>-<objectKey>]`
 
 Where
-* `listPropertyPath` - Is the path to the object containing the list
-* `listObjectType` - Is the property object type stored in the list
-* `objectKey` - Is the key for the object stored in the list.
+* `parentComponentPropertyPath` - Is the path to the parent component containing the list
+* `listComponentType` - Is the object type stored in the list
+* `key` - Is the key for the component stored in the list.
 
 For example, a Platform Blueprint contains a list of Products (for example Java, SOA, Service Bus, RCU) that will be installed. In this example, if we want to reference the property object for RCU:
 
-* The Platform Blueprint is the object containing the list. Thus the value of `list-property-path` is `rxr.def`.
+* The Platform Blueprint is the component containing the list. Thus the value of `list-property-path` is `rxr.def`.
 * `Product` is the object type stored in the list.
 * `rcu` is the object-key for the RCU product object in the list 
 
 Thus the object property path would be expressed as `[rxr.def.Product-rcu]`. To reference the RCU product version we would use the expression:   
-    `${[rxr.wls.Product-rcu].version}`
+
+`${[rxr.def.Product-rcu].version}`
 
 For many lists, the `objectKey` defaults to the index no of the object stored in the list. For example, a WebLogic Domain contains a list of WebLogic Clusters. In this example: 
 * The WebLogic Domain is the object containing the list. So `list-property-path` is `rxr.wls`
