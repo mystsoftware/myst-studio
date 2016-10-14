@@ -36,10 +36,10 @@ In addition, the `Actions` drop down allows you to perform a number of additiona
 
 ### Tree View
 MyST holds the configuration details of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure, consisting of the following object types:
-* `string` - Primitive type consisting of a key value pair used to hold the value of a property.
+* `property` - Primitive type consisting of a key value pair used to hold the value of a property.
 * `component` - Complex type consisting of a pre-defined collection of object types.
 * `list` - Complex type consisting of a list of zero, one or more components of the same type.
-* `paramList` - List of zero, one or more `string` property types.
+* `paramList` - List of zero, one or more `property` types.
 
 The Tree View provides a hierarchical view of the Platform Blueprint and Platform Model, providing a simple way to navigate the configuration details of a Platform Blueprint or Model.
 
@@ -138,65 +138,76 @@ A component is a complex type consisting of a pre-defined collection of object t
 `<component-property-path>.<propery-key>`
 
 Where
-* `component-property-path` - Is the path to the component containing the property.
-* `property-key` - Is the key for the property whose value we are referencing within the component.
+* `<component-property-path>` - Is the path to the component containing the property.
+* `<property-key>` - Is the key for the property whose value we are referencing within the component.
 
-For example, within a Platform Blueprint or Model we have the `Middleware Settings` component, to reference the `Version` property value, we would use the expression: 
-
-* The Middleware Setting is the component the version property. Thus the value of `component-property-path` is `rxr.wls.Fmw-1` (as per table above).
-* `version` is the object key for the property we are referencing.
-
-To reference the Middleware version   
+For example, within a Platform Blueprint or Model we have the `Middleware Settings` component, to reference the `version` property value, we would use the expression: 
 
 `${[rxr.wls.Fmw-1].version}`
 
+In this example:
+* `rxr.wls.Fmw-1` is the `<component-property-path>` as defined in the xxxx table.
+* `version` is the `<property-key>`.
+ 
+### Referencing a child `component` within a parent `component`
+Reference a child component within a parent component we use the following syntax:
 
+`<parent-component-property-path>.<component-key>`
 
-### Locating an object within a `list`
-A list is a complex type consisting of a list of zero, one or more components of the same type. For example, within a WebLogic Domain we will have a list of JDBC Data Sources. To locate an `object` within a list we used the following syntax:
+Where:  
+* `<parent-component-property-path>` - Is the path to the component containing the child component.
+* `<component-key>` - Is the key for the component that we are referencing within the parent component.
 
-`[<componentPropertyPath>.<listObjectType>-<objectKey>]`
+### Referencing a `component` within a `list`
+A list is a complex type consisting of a list of zero, one or more components of the same type. 
+To reference a component within a list we use the following syntax:
+
+`[<parent-component-property-path>.<list-component-type>-<component-key>]`
 
 Where
-* `parentComponentPropertyPath` - Is the path to the parent component containing the list
-* `listComponentType` - Is the object type stored in the list
-* `key` - Is the key for the component stored in the list.
+* `<parent-component-property-path>` - Is the path to the component containing the list.
+* `<list-component-type>` - Is the component type held in the list
+* `<component-key>` - Is the key for the component that we are referencing within the list. 
 
-For example, a Platform Blueprint contains a list of Products (for example Java, SOA, Service Bus, RCU) that will be installed. In this example, if we want to reference the property object for RCU:
+For example, a Platform Blueprint contains a list of Products (for example Java, SOA, Service Bus, RCU) that will be installed. In this example, if we want to reference the RCU component, we would use the expression:
 
-* The Platform Blueprint is the component containing the list. Thus the value of `list-property-path` is `rxr.def`.
-* `Product` is the object type stored in the list.
-* `rcu` is the object-key for the RCU product object in the list 
+`[rxr.def.Product-rcu]`
 
-Thus the object property path would be expressed as `[rxr.def.Product-rcu]`. To reference the RCU product version we would use the expression:   
+Where
+* `<parent-component-property-path>` is `rxr.def` as defined in the xxxx table.
+* `Product` is the `<list-component-type>`.
+* `rcu` is the `<component-key>` for the RCU product component in the list 
+
+To reference a RCU product version we would use the expression:   
 
 `${[rxr.def.Product-rcu].version}`
 
-For many lists, the `objectKey` defaults to the index no of the object stored in the list. For example, a WebLogic Domain contains a list of WebLogic Clusters. In this example: 
-* The WebLogic Domain is the object containing the list. So `list-property-path` is `rxr.wls`
-* `Cluster` is the object type stored in the list.
-* `1` is the object-key for the first cluster, `2` the object key for the second cluster, and so on.
+For many lists, the component key defaults to the index no of the object stored in the list. For example, a WebLogic Domain contains a list of WebLogic Clusters. In this example: 
+* The WebLogic Domain is the object containing the list. So `<parent-component-property-path>` is `rxr.wls`
+* `Cluster` is the component type stored in the list.
+* `1` is the component key for the first cluster, `2` the component key for the second cluster, and so on.
 
-Thus the object property path to the second cluster in the list would be expressed as `[rxr.wls.Cluster-2]`. To reference the cluster name we would use the expression:  
+Thus the component property path to the second cluster in the list would be expressed as `[rxr.wls.Cluster-2]`. To reference the cluster name we would use the expression:  
 `${[rxr.wls.Cluster-2].name}`
 
+### Referencing a property value within a property of type `paramList`
+As we mentioned earlier a component is a complex type consisting of a **pre-defined** collection of object types. However, we often want to add additional properies to a component, that aren't defined in advance. 
 
-### Locating a property within a property of type `paramList`
-A `paramList` is a list of zero, one or more `string` property types. The list of properties is not fixed.
+We can do this using a paramList. A paramList is a list of zero, one or more `property` types. The list of properties is not fixed and can be added to using the Platform Editor.
 
-To locate an `string` property within a `paramList` we used the following syntax:  
-`<paramList-property-path>.param[<string-key>]`
+To reference a `property` value within a`paramList` we use the following syntax:
+
+`<paramList-property-path>.param[<property-key>]`
 
 Where
-* `paramList-property-path` - Is the path to the object containing the `paramList`
-* `string-key` - Is the key for the string property stored in the paramList
+* `<parent-component-property-path>` - Is the path to the component containing the `paramList`
+* `<property-key>` - Is the key for the property stored in the paramList
 
 For example, the Oracle SOA Suite Product object contains a Name-Value Parameter list, that contains a numnber of `string` properties, such as audit-level and base-port. To reference the base-port value we would use the expression:  
 
 `${[rxr.def.Product-soa].param[base-port]}`
 
-
-### Locating a Global Variables
+### Referencing a global variable value
 MyST supports the notion of global variables, these are referenced in a similiar way to properties. But need to be preceded with the prefix `var`. 
 
 For example, to reference the value of `install.directory` we would specify `${var.install.directory}`
