@@ -94,34 +94,31 @@ Note: Any edits made to a Property Definition which have not yet been saved to t
 **Every time you apply changes to a blueprint version, a new revision is created of the blueprint. You can only view the latest revision of the blueprint. However, if the latest revision of the blueprint is not the same as the revision used to provision an instance, you will need to update the instance from the Platform Model or Platform Instances page.** Update for commit.
 
 ## Property Expansion in MyST
-To make editing and maintenance of Platform Blueprints easier, MyST supports property expansion when defining the value of a property. 
+To make editing and maintenance of Platform Blueprints easier, MyST supports property expansion when defining the value of a property. This allows us to define the value of a property based on the value of one or more other properties.
 
-When a string of the following format 
+When a string of the format `${some.property}` appears in a property value it will be expanded to the value of the specified property.
 
-`${some.property}`
-
-appears in a property value it will be expanded to the value of the specified property.
-
-For example, if we examine the following properties:
+For example, if we have the following properties:
 * `oracle.base` - Defines the Oracle Home directory for installing the Oracle Middleware Platform. 
 * `oui.inventory.directory` - Defines the Oracle Universal Installer (OUI) Inventory Directory
 
 The default location for (OUI) Inventory Directory is to place this in the sub-directory `oraInventory` under the Oracle Home. MyST enables us to set the value of the property `oui.inventory.directory` to  `${var.oracle.base}/oraInventory`.
 
 ### Referencing MyST Properties
-When referencing a MyST property, we need to specify the full path of the property within the Platform Blueprint or Model.
+When referencing a MyST property, in order to uniquely identify it, we need to specify the full path of the property within the Platform Blueprint or Model.
 
-
-The simplest way to derive the expression to reference a property value is to locate the property we wish to reference within the Propery Viewer and click on the Property Name. Myst will open a speech bubble containing the expression to reference the property value as show below.
+The simplest way to derive the expression to reference a property is to locate the property we wish to reference within the Propery Viewer and click on the Property Name. Myst will open a speech bubble containing the expression to reference the property as show below.
 
 ![](./img/PropertyExpression.PNG)
 
 **Note:** The Platform Editor needs to be in Edit mode.
 
 ### Understand the MyST Property Path
-In general, a dot notation is used to traverse the property hierarchy. For example, `a.b.c` would mean locate `c` within `b` within `a`. The following table lists the object property keys for the top level objects in the Platform Blueprint and the Platform Model.
+In general, a dot notation is used to traverse the property hierarchy. For example, `a.b.c` would mean locate `c` within `b` within `a`. 
 
-| Object | Object Property Key |
+The following table lists the property path for the top level components in the Platform Blueprint and the Platform Model.
+
+| Component| Property Path|
 | -- | --------- |
 | Global Variables | var |
 | Middleware Settings | rxr.wls.Fmw-1 |
@@ -132,12 +129,7 @@ In general, a dot notation is used to traverse the property hierarchy. For examp
 | WebLogic Domain | rxr.wls |
 | Keystores | rxr.def |
 
-* `string` - Primitive type consisting of a key value pair used to hold the value of a property.* `component` - Complex type consisting of a pre-defined collection of object types.* `list` - Complex type consisting of a list of zero, one or more components of the same type.* `paramList` - List of zero, one or more `string` property types.
-
-
-
-
-### Referencing a `property` value within a `component`
+#### Referencing a `property` value within a `component`
 A component is a complex type consisting of a pre-defined collection of object types. To reference a `property` value within a component we used the following syntax:
 
 `<component-property-path>.<propery-key>`
@@ -154,7 +146,7 @@ In this example:
 * `rxr.wls.Fmw-1` is the `<component-property-path>` as defined in the xxxx table.
 * `version` is the `<property-key>`.
  
-### Referencing a child `component` within a parent `component`
+#### Referencing a child `component` within a parent `component`
 Reference a child component within a parent component we use the following syntax:
 
 `<parent-component-property-path>.<component-key>`
@@ -163,7 +155,7 @@ Where:
 * `<parent-component-property-path>` - Is the path to the component containing the child component.
 * `<component-key>` - Is the key for the component that we are referencing within the parent component.
 
-### Referencing a `component` within a `list`
+#### Referencing a `component` within a `list`
 A list is a complex type consisting of a list of zero, one or more components of the same type. 
 To reference a component within a list we use the following syntax:
 
@@ -195,7 +187,7 @@ For many lists, the component key defaults to the index no of the object stored 
 Thus the component property path to the second cluster in the list would be expressed as `[rxr.wls.Cluster-2]`. To reference the cluster name we would use the expression:  
 `${[rxr.wls.Cluster-2].name}`
 
-### Referencing a property value within a property of type `paramList`
+#### Referencing a property value within a property of type `paramList`
 As we mentioned earlier a component is a complex type consisting of a **pre-defined** collection of object types. However, we often want to add additional properies to a component, that aren't defined in advance. 
 
 We can do this using a paramList. A paramList is a list of zero, one or more `property` types. The list of properties is not fixed and can be added to using the Platform Editor.
@@ -212,7 +204,7 @@ For example, the Oracle SOA Suite Product object contains a Name-Value Parameter
 
 `${[rxr.def.Product-soa].param[base-port]}`
 
-### Referencing a `global variable` value
+#### Referencing a `global variable` value
 MyST supports the notion of global variables, these are essentially held as a paramList . To reference a gloabl `property` value within a component we used the following syntax:  
 
 `${<var>.<property-key>}`
