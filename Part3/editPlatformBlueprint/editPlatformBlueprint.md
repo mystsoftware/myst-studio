@@ -130,8 +130,27 @@ In general, a dot notation is used to traverse the property hierarchy. For examp
 * `string` - Primitive type consisting of a key value pair used to hold the value of a property.* `component` - Complex type consisting of a pre-defined collection of object types.* `list` - Complex type consisting of a list of zero, one or more components of the same type.* `paramList` - List of zero, one or more `string` property types.
 
 
-### Locating an object within an object of type `component`
+
+
+### Locating an object within a `component`
+A component is a complex type consisting of a pre-defined collection of object types. To locate an `object` within a component we used the following syntax:
+
 `<component-property-path>.<object-key>`
+
+Where
+* `component-property-path` - Is the path to the component containing the object  
+* `object-key` - Is the key for the object we are referencing within the component.
+
+For example, with a Platform Blueprint or Model we have the `Middleware Settings` component, to reference the `Version` property 
+
+* The Middleware Setting is the component the version property. Thus the value of `component-property-path` is `rxr.wls.Fmw-1` (as per table above).
+* `version` is the object key for the property we are referencing.
+
+To reference the Middleware version we would use the expression:   
+
+`${[rxr.wls.Fmw-1].version}`
+
+
 
 ### Locating an object within a `list`
 A list is a complex type consisting of a list of zero, one or more components of the same type. For example, within a WebLogic Domain we will have a list of JDBC Data Sources. To locate an `object` within a list we used the following syntax:
