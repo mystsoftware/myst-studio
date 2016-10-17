@@ -1,6 +1,3 @@
-# Overview
-
-
 ## Platform Provisioning
 Rubicon Red MyST delivers automated platform provisioning and configuration management for Oracle Middleware, on premise and on cloud. Enabling users to deliver a consistent and reliable platform in minutes, NOT weeks or months.
 
@@ -18,21 +15,15 @@ Splitting the _“platform definition”_ into two layers, provides infrastructu
 
 Creating a platform blueprint, platform model and provisioning a new fully operational FMW environment, is a simple three step process, which can be performed in minutes.
 
-
-
 **Note:**
 
 Most Oracle Middleware products run on Oracle WebLogic Application Server. WebLogic supports the concept of a Domain to group related clusters and servers. Some organisations use separate domains for each business unit or capability, others use it to group computational workload. How it is used is up to the organisation. For Oracle products that run on WebLogic, a *Platform Blueprint represents a logical definition of a WebLogic domain*. For this reason it is typical for a separate blueprint to be created in MyST Studio for each unique WebLogic domain type in an enterprise (e.g. SOA, ADF)
-
-
 
 ## Middleware Infrastructure as Code
 
 This declarative approach to defining target state enables MyST to treat Oracle Middleware infrastructure as code. Platform Blueprints and Platform Models are put under version control, allowing you to easily propose, review, test, promote and deploy configuration changes across all your environments.
 
 This means incremental configuration changes are simple to make and propagate across all environments. Users just update the required target state; MyST will determine and perform the required steps to apply the necessary changes. With MyST there is no need to maintain complicated scripts or workflows for each configuration change, thereby eliminating human errors and simplifying on-going maintenance.
-
-
 
 This capability, combined with MyST’s comprehensive governance and role based access control enforces consistent configuration of your Oracle middleware platforms across all environments, on premise and cloud. As a result, configuration drift, a major cause of unplanned outages, becomes a thing of the past, insuring that code gets developed and tested in environments closely aligned to production, for more successful deployments.
 
@@ -56,43 +47,7 @@ The powerful configuration management features in Release Pipelines provides the
 
 The Release Pipeline Dashboard provides a ‘single pane of glass’ to monitor and manage the promotion of platform configuration changes through staging environments into Production.
 
-
-
-
-
-![](img/PlatformProvisioning.png)
-
-
-
-
-
-The Platform Blueprint and Model are placed under version control; allowing us to treat configuration as code. This gives us the flexibility to provision a consistent middleware platform across all environments, as well have the ability to roll forward / backwards to a different version of the platform and hence eliminate the possibility of configuration drift.
-
-
-
-
-
-## Platform Blueprint Wizard
-In addition to the graphical Blueprint editor, MyST Studio provides a wizard which guides the user as they create a Platform Blueprint. The wizard helps the user answer simple questions like
-
-
-
- * Which Oracle product do want in your platform?
-
- * Supported products from product families such as Integration, Process Management, Identity Management and Collaboration
-
- * What topology do you want?
-
- * Examples include separate webtier layer, separate layers per product, isolated administration server and so on
-
- * What constraints do you want to add to your platform?
-
- * Examples include minimum and maximum cluster size and target operating system
-
- * What additional platform capabilities do you want to add?
-
- * Examples include encrypted listen addresses, database persistence (instead of file), GridLink data sources and so on
-
-
-
+### Operational Agility
+Designed specifically for Oracle Middleware, Rubicon Red MyST enables you to quickly establish a standardized, repeatable and automated process across your organization for provisioning Oracle Middleware infrastructure and managing on-going configuration change. 
+MyST provides organizations with the visibility, control and operational agility to consistently and repeatedly deliver Oracle Middleware solutions faster and with less risk
 
