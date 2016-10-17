@@ -7,6 +7,6 @@ This allows you to transform what is typically a resource intensive and highly e
 
 This part contains the following chapters:
 
-* [Chapter 1.1 - Overview of Platform Provisioning]()
-* [Chapter 1.2 - Overview of Application Release Automation]()
+* [Chapter 1.1 - Overview of Platform Provisioning](part1/overviewApplicationReleaseAutomation/overviewApplicationReleaseAutomation.md)
+* [Chapter 1.2 - Overview of Application Release Automation](part1/overviewPlatformProvisioning/overviewPlatformProvisioning.md)
 * [Chapter 1.3 - Introduction to Learning Labs]()
