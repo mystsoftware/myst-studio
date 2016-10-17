@@ -15,15 +15,14 @@ An Infrastructure Provider typically maps to a data center or a cloud provider r
 Environment Types, are typically aligned to software delivery lifecycle (for example DEV, SIT, UAT and PROD) and are designed to help categorise Oracle Middleware Platform Instances for governance purposes. This categorisation can help to manage who has access to instances, and what type of actions they can perform against the instance. It also prevents
 
 #### Compute Definitions
-Compute Definitions are used to indicate operating system requirements for target hosts in MyST Studio. When, we create a Platform Blueprint, we need to specify its Compute Definition. This is used to define the operating system requirements for target servers (i.e Virtual or Bare Metal) that will be used by any Platform Model based on the Platform Blueprint.
-
-When provisioning Platform Instances from a Blueprint on pre-existing target hosts, the Compute Definition tells MyST how it should interact with target hosts. For example, if the Compute Definition is for Solaris then MyST will know to treat the platform as if it is Solaris instead of say Oracle Linux.
+Compute Definitions are used to indicate operating system requirements for hosts. When, we create a Platform Blueprint, we need to specify its Compute Definition. This is used to define the operating system requirements for target host as well as how MyST should interact with the host. For example, if the Compute Definition is for Solaris then MyST will know to treat the platform as if it is Solaris instead of say Oracle Linux.
 
 This part contains the following chapters:
 
 * [Chapter 2.1 - Environment Types](Part2/environmentTypes/environmentTypes.md)
-* [Chapter 2.2 - Middleware Hosts](Part2/middlewareHosts/middlewareHosts.md)
-* [Chapter 2.3 - Compute Definitions](Part2/computeDefinitions/computeDefinitions.md)
-* [Chapter 2.4 - Configuring Pre-Existing Infrastructure](Part2/preExistingInfrastructure/PreExistingInfrastrcutureProvider.md)
-* [Chapter 2.5 - Configuring AWS On-Demand Infrastructure](Part2/awsOnDemand/AwsOnDemand.md)
+* [Chapter 2.2 - Compute Definitions](Part2/computeDefinitions/computeDefinitions.md)
+* [Chapter 2.3 - Configuring Pre-Existing Infrastructure](Part2/preExistingInfrastructure/PreExistingInfrastrcutureProvider.md)
+* [Chapter 2.4 - Configuring AWS On-Demand Infrastructure](Part2/awsOnDemand/AwsOnDemand.md)
+* [Chapter 2.5 - Middleware Host Prerequisites](Part2/middlewareHosts/middlewareHosts.md)
+
 
