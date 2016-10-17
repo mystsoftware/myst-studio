@@ -1,20 +1,23 @@
 # Part 2 - Infrastructure Management
-Before we can provision our Oracle Middleware platform, we need to ensure that the pre-requisite  infrastructure that will host our middleware platform, including load balancers, the compute nodes that will host our Oracle Middleware servers and the database that will hold the Oracle Middleware Schemas.
+Within MyST, **Hosts** are the logical representation of the Virtual, Physical, Container or Cloud based servers that host the Oracle Middleware Server instances that make up our Oracle Middleware Platform.
 
-As part of the configuration of MyST we need to define the **Infrastructure Provider(s)** and their corresponding compute nodes and in which environments (for example DEV, SIT, UAT and PROD). 
+MyST allows the use of pre-existing hosts on-premise and in the cloud (for example Oracle Cloud, Amazon Web Services and Azure). In addition for some cloud environments, MyST suppports the creation of cloud based hosts on-demand.
 
+Each host in MyST has a corresponding **Compute Definition**, is associated with an **Infrastructure Providers**, and is tagged to one or more **Environment Types**.
 
-During the lifetime of a project, code will be built and promoted to various staging environments, such as Development (DEV), System Integration Testing (SIT), User Acceptance Testing (UAT), Pre-Production (PRE), and Production (PROD).
+#### Infrastructure Provider
+An Infrastructure Provider typically maps to a data center or a cloud provider region. MyST supports two types of infrastructure providers:
 
-**Environment Types** are designed to help categorise Oracle Middleware Platform Instances for governance purposes. This categorisation can help to manage who has access to instances, and what type of actions they can perform against the instance
+* **Pre-Existing**: A Pre-Existing infrastructure provider is one where the hosts onto which the Oracle Middleware will be provisioned has been set-up and configured externally to MyST. Can be used with any existing bare-metal, virtual machines (such as VMWare, Oracle VM), or cloud providers (such as Oracle Cloud, AWS or Azure) that we want to use as the target for hosting our Oracle Middleware platforms. 
+* **On Demand (AWS)**: An On-Demand (AWS) infrastructure provider is one where hosts onto which the Oracle Middleware will be created on-demand as part of the process of provisioning the Oracle Middleware platform. This approach relies upon an Amazon Machine Image which is used as a template for the Virtual Machines that are created to underpin the Oracle Middleware platforms.
 
+#### Environment Types
+Environment Types, are typically aligned to software delivery lifecycle (for example DEV, SIT, UAT and PROD) and are designed to help categorise Oracle Middleware Platform Instances for governance purposes. This categorisation can help to manage who has access to instances, and what type of actions they can perform against the instance. It also prevents
+
+#### Compute Definitions
 Compute Definitions are used to indicate operating system requirements for target hosts in MyST Studio. When, we create a Platform Blueprint, we need to specify its Compute Definition. This is used to define the operating system requirements for target servers (i.e Virtual or Bare Metal) that will be used by any Platform Model based on the Platform Blueprint.
 
 When provisioning Platform Instances from a Blueprint on pre-existing target hosts, the Compute Definition tells MyST how it should interact with target hosts. For example, if the Compute Definition is for Solaris then MyST will know to treat the platform as if it is Solaris instead of say Oracle Linux.
-
-MyST supports two types of infrastructure providers:
-* **Pre-existing**: Any existing bare-metal, virtualization (such as VMWare, OVM), or cloud providers (such as Oracle, AWS or Azure), that you want to add and use with MyST Studio.
-* **On Demand (AWS)**: Any new AWS infrastructure, that you want to use with MyST Studio. MyST Studio creates compute instances using your AWS account and provisions the Oracle Fusion Middleware to these instances.
 
 This part contains the following chapters:
 
