@@ -5,9 +5,7 @@ MyST shifts the experience from a slow, resource intensive and highly error pron
 ### Declarative Application Deployment
 MyST uses a declarative approach to automation, meaning users simply define the target state of the application to be deployed; which, at the push of a button, is automatically deployed by MyST.
 
-
 Within MyST, Application Blueprints are used to (1) define the artifacts to be deployed, (2) the configuration requirements for each artifact and (3) the configuration changes to be applied to the Oracle Middleware platform. 
-
 
 Application Models allow you to specify properties that are environment dependent, which enables seamless automated deployments across test and production environments. Application Blueprints and Models are version controlled, providing complete control over all configuration changes.
 
