@@ -19,6 +19,18 @@
     * [Chapter 3.5 - Introspecting an existing WebLogic Domain](part3/introspectPlatformBlueprint/introspectPlatformBlueprint.md)
     * [Chapter 3.6 - Side by Side Upgrade](part3/sideBySideUpgrade/sideBySideUpgrade.md)  
 
+* [Part 4 - Platform Configuration]()
+
+* Part 5 - Artifact Build
+    * [Chapter 6.x - Continuous Delivery Profile](part6/continuousDeliverProfile/continuousDeliverProfile.md) 
+    * Configuring Jenkins
+    * 
+
+* Part 6 - Application Deployment
+
+
+* Part 7 - Release Pipelines
+* 
 
 * [Part 8 - Role Based Access Control](rbac/rbac.md)
     * [Chapter 8.1 - User Management](part8/userManagement/userManagement.md)
