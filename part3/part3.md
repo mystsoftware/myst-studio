@@ -48,13 +48,13 @@ Creating a platform blueprint, platform model and provisioning a new fully opera
 
 This part contains the following chapters:
 
-* [Chapter 4.1 - Creating a Platform Blueprint](part3/createPlatformBlueprint/createPlatformBlueprint.md)   
+* [Chapter 3.1 - Creating a Platform Blueprint](part3/createPlatformBlueprint/createPlatformBlueprint.md)   
 
-* [Chapter 4.2 - Creating a Platform Model](part3/createPlatformBlueprint/createPlatformBlueprint.md)
+* [Chapter 3.2 - Creating a Platform Model](part3/createPlatformBlueprint/createPlatformBlueprint.md)
 
-* [Chapter 4.3 - Provision and Manage Platform Instance](part3/provisionPlatformInstance/provisionPlatformInstance.md)
+* [Chapter 3.3 - Provision and Manage Platform Instance](part3/provisionPlatformInstance/provisionPlatformInstance.md)
 
-* [Chapter 4.4 - Editing a Platform Blueprint / Model](part3/editPlatformBlueprint/editPlatformBlueprint.md)
+* [Chapter 3.4 - Editing a Platform Blueprint / Model](part3/editPlatformBlueprint/editPlatformBlueprint.md)
 
 * [Chapter 4.5 - Introspecting an existing WebLogic Domain](part3/introspectPlatformBlueprint/introspectPlatformBlueprint.md)
 
