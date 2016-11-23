@@ -22,5 +22,5 @@
 
 * [Part 8 - Role Based Access Control](rbac/rbac.md)
     * [Chapter 8.1 - User Management](part8/userManagement/userManagement.md)
-    * [Chapter 8.2 - Role Management](rbac/role.md)
+    * [Chapter 8.2 - Role Management](part8/roleManagement/roleManagement.md)
     * [Chapter 8.3 - Workspace Management](part8/workspaceManagement/workspaceManagement.md)
