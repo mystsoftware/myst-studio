@@ -1,18 +1,24 @@
 * [Part 1 - Introduction to Rubicon Red MyST](part1/part1.md)
     * [Chapter 1.1 - Overview of Platform Provisioning](part1/overviewPlatformProvisioning/overviewPlatformProvisioning.md)
     * [Chapter 1.2 - Overview of Application Release Automation](part1/overviewApplicationReleaseAutomation/overviewApplicationReleaseAutomation.md)
+
+
 * [Part 2 - Infrastructure Management](part2/part2.md)
     * [Chapter 2.1 - Environment Types](Part2/environmentTypes/environmentTypes.md)
     * [Chapter 2.2 - Compute Definitions](Part2/computeDefinitions/computeDefinitions.md)
     * [Chapter 2.3 - Configuring Pre-Existing Infrastructure](Part2/preExistingInfrastructure/PreExistingInfrastrcutureProvider.md)
     * [Chapter 2.4 - Configuring AWS On-Demand Infrastructure](Part2/awsOnDemand/AwsOnDemand.md)
     * [Chapter 2.5 - Middleware Host Prerequisites](Part2/middlewareHosts/middlewareHosts.md)
+ 
+
 * [Part 3 - Platform Provisioning](part3/part3.md)
-    * [7. Creating Platform Blueprints](part3/createPlatformBlueprint/createPlatformBlueprint.md)
-    * [8. Creating Platform Models](part3/createPlatformModel/createPlatformModel.md)
-    * [9. Editing Platform Blueprints and Models](part3/editPlatformBlueprint/editPlatformBlueprint.md)
-        * [Creating Platform Blueprints](platformBlueprints/wizard.md)
-        * [Version](platformBlueprints/version.md)
+    * [Chapter 3.1 - Creating a Platform Blueprint](part3/createPlatformBlueprint/createPlatformBlueprint.md)   
+    * [Chapter 3.2 - Creating a Platform Model](part3/createPlatformBlueprint/createPlatformBlueprint.md)
+    * [Chapter 3.3 - Provision and Manage Platform Instance](part3/provisionPlatformInstance/provisionPlatformInstance.md)
+    * [Chapter 3.4 - Editing a Platform Blueprint / Model](part3/editPlatformBlueprint/editPlatformBlueprint.md)
+    * [Chapter 3.5 - Introspecting an existing WebLogic Domain](part3/introspectPlatformBlueprint/introspectPlatformBlueprint.md)
+    * [Chapter 3.6 - Side by Side Upgrade](part3/sideBySideUpgrade/sideBySideUpgrade.md)  
+
 
 * [Part x - Role Based Access Control](rbac/rbac.md)
     * [x. User Management](rbac/user.md)
