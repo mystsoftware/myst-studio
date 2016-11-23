@@ -20,7 +20,7 @@
     * [Chapter 3.6 - Side by Side Upgrade](part3/sideBySideUpgrade/sideBySideUpgrade.md)  
 
 
-* [Part x - Role Based Access Control](rbac/rbac.md)
-    * [x. User Management](rbac/user.md)
-    * [x. Role Management](rbac/role.md)
-    * [x. Workspace Management](rbac/workspace.md)
+* [Part 8 - Role Based Access Control](rbac/rbac.md)
+    * [Chapter 8.1 - User Management](rbac/user.md)
+    * [Chapter 8.2 - Role Management](rbac/role.md)
+    * [Chapter 8.3 - Workspace Management](rbac/workspace.md)
