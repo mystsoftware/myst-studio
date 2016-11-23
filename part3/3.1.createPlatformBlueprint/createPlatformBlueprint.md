@@ -65,7 +65,7 @@ The next stage is to select which Oracle Middleware components are to be include
 
 Next specify the Oracle Middleware version (for example 11.1.1.7, 12.1.3, 12.2.1.0, 12.2.1.1). For the specified Oracle Middleware Product Catalog and Version, MyST will list the components that are available to be included within the Platform Blueprint.
 
-![](/Part3/createPlatformBlueprint/img/SmartWizardComponents.PNG)
+![](img/SmartWizardComponents.PNG)
 
 Finally select the required Oracle Middleware components to be included within your Platform Blueprint. You will notice, MyST automatically selects any mandatory components, for example if you select Oracle B2B, then Oracle SOA Suite will automatically be selected. 
 
@@ -100,7 +100,7 @@ To define the compute groups that we want in our Platfrom Blueprint, we first ne
 * **Standalone Admin Node** - From the drop down, select whether you want to have a standalone admin server (`Yes`) or include it within an existing compute group (`No`)
 * **Number of Compute Groups** - From the drop down, select the required number of compute groups.
 
-![](/Part3/createPlatformBlueprint/img/SmartWizardComputeGroups.PNG)
+![](img/SmartWizardComputeGroups.PNG)
 
 For each Compute Group, we need to specify the following values:
 * **Name** - Provide a short name (such as web, soa, osb) for the Compute Group.
@@ -114,7 +114,7 @@ Once done, click `Next`.
 ### Specify Other Key Configurations
 The final stage is to specify a number of other key configuration decisions for the Platform Blueprint. 
 
-![](/Part3/createPlatformBlueprint/img/SmartWizardOther.PNG)
+![](img/SmartWizardOther.PNG)
 
 MyST will default these options based on the most common configurations, we should update these details as required for our Platform Blueprint. These are:
 
@@ -131,19 +131,19 @@ Once done, click `Next`.
 ### Review the Summary
 MyST will display a Summary screen showing all the keys inputs specified in the Platform Blueprint Wizard. 
 
-![](/Part3/createPlatformBlueprint/img/SmartWizardSummary.PNG)
+![](img/SmartWizardSummary.PNG)
 
 Once done, click `Finish`. MyST will create the corresponding Platform Blueprint and take you to the Platform Blueprint Editor where you can make additional changes if required. See Editing Platform Blueprints for further details.
 
 ## Creating a Platform Blueprint from a Pre-Defined Template
 MyST comes with a catalogue of certified Platform Templates, with _"built-in"_ best practice for enterprise deployment of Oracle Middleware. We can use these to create our initial Platform Blueprint.
 
-MyST also allows us to ![create our own Platform Templates](tbd), which can be used to create our initial Platform Blueprint. This can be useful if we have multiple domains in Production for the same Product Components. For example, we may have multiple SOA domains each designated to a particular line of business. Platform Templates allows us to capture a base "Platform Blueprint" that can be re-used to create the Platform Blueprint for each domains.
+MyST also allows us to [create our own Platform Templates](tbd), which can be used to create our initial Platform Blueprint. This can be useful if we have multiple domains in Production for the same Product Components. For example, we may have multiple SOA domains each designated to a particular line of business. Platform Templates allows us to capture a base "Platform Blueprint" that can be re-used to create the Platform Blueprint for each domains.
 
 ### Launching the Platform Blueprint Wizard
 From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Blueprint` wizard.
 
-![](/Part3/createPlatformBlueprint/img/TemplateBasic.PNG)
+![](img/TemplateBasic.PNG)
 
 In the initial screen we need to specify the following details about our Platform Blueprint:
 
@@ -157,7 +157,7 @@ Finally, we need to specify we want to use a **template **to create the Platform
 ### Select Template
 The next stage is to select which template to use for our Platform Blueprint. 
 
-![](/Part3/createPlatformBlueprint/img/TemplateSelect.PNG)
+![](img/TemplateSelect.PNG)
 
 From the drop-down, select the required Platform Template. MyST will display the Platform Template decription, allowing you to verify that the correct template has been selected. Once selected, click `Next`.
 
@@ -165,7 +165,7 @@ From the drop-down, select the required Platform Template. MyST will display the
 
 MyST will display a Summary screen showing all the keys inputs specified in the Platform Blueprint Wizard.
 
-![](/Part3/createPlatformBlueprint/img/TemplateSummary.PNG)
+![](img/TemplateSummary.PNG)
 
 Once done, click `Finish`. MyST will create the corresponding Platform Blueprint and take you to the Platform Blueprint Editor where you can make additional changes if required. See Editing Platform Blueprints for further details.
 
