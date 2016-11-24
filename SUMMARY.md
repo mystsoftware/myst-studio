@@ -20,7 +20,9 @@
 
 * [Part 3 - Platform Provisioning](part3/part3.md)
   * [Chapter 3.1 - Creating a Platform Blueprint](part3/3.1.createPlatformBlueprint/createPlatformBlueprint.md)
-  * [Chapter 3.2 - Creating a Platform Model](part3/3.2.createPlatformModel/createPlatformModel.md)
+  * [Chapter 3.2 - Creating a Platform Model](part3/3.2.createPlatformModel/3.2.0.createPlatformModel.md)
+    * [3.2.1 - Creating a Platform Model for Pre-Existing Infrastructure](part3/3.2.createPlatformModel/3.2.1.createPlatformModelPreExisting.md)
+    * [3.2.2 - Creating a Platform Model for AWS On Demand](part3/3.2.createPlatformModel/3.2.2.createPlatformModelAwsOnDemand.md)
   * [Chapter 3.3 - Provision and Manage Platform Instance](part3/3.3.provisionPlatformInstance/provisionPlatformInstance.md)
   * [Chapter 3.4 - Editing a Platform Blueprint \/ Model](part3/3.4.editPlatformBlueprint/editPlatformBlueprint.md)
   * [Chapter 3.5 - Introspecting an existing WebLogic Domain](part3/3.5.introspectPlatformBlueprint/introspectPlatformBlueprint.md)
