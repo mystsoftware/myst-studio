@@ -24,6 +24,8 @@ MyST will start the process of provisioning the Oracle Middleware, this will tak
 
 ![](img/provisionInProgress.PNG)
 
+### Viewing Logs
+
 ![](img/executionLog.PNG)
 
 
@@ -31,15 +33,16 @@ MyST will start the process of provisioning the Oracle Middleware, this will tak
 ### Verify Platform Instance
 Once our Platform Instance has been successfully provisioned, click on the `Actions` menu and select `View`.
 
-![](tbc.png)
+![](img/provisionComplete.PNG)
+
 
 This will open the Platform Viewer, where we can view all details about the configuration of the Platform Instance. In addition, MyST provides the URL's for the relevant administration consoles (outlined in red).
 
-![](tbc.png)
+![](img/platformInstance.PNG)
 
 If we click on the link for the `Admin Console`, this will take us to the login page for the WebLogic Admin Console. Login and got the `Servers` summary page. Here we can see the list of our newly provisioned WebLogic servers.
 
-### Viewing Logs
+
 
 
 ### Start, Stop and Restarting Platform Instance
