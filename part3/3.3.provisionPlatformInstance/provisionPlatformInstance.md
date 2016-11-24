@@ -7,19 +7,26 @@ Once we have created our Platform Model, we are now ready to provision it.
 
 From the side menu navigate to`Provisioning` > `Platform Instances`, this will display a list of existing Platform Models. 
 
-For each Platform Model, MyST will indicate if there is currently a provisioned platform instance for that model, and if there is, will indicate the current version and revision of the Platform Blueprint and Platform Model (outlinned in red below).
+For each Platform Model, MyST will indicate if there is currently a provisioned platform instance for that model, and if there is, will indicate the current version and revision of the Platform Blueprint and Platform Model.
 
-![](tbc.png)
+![](img/platformInstanceList.PNG)
 
-To provision a Platform Instance, select the corresponding Platform Model, MyST will display summary information about the state of the Platform Model and Instance as shown below.
+To provision a Platform Instance, select the corresponding Platform Model (outlinned in red above), MyST will display summary information about the state of the Platform Model and Instance as shown below.
 
-![](tbc.png)
+![](img/provisionPlatformInstance.PNG)
 
 Click on the `Actions` menu and select `Provision`, MyST will open a dialogue allowing you to enter any notes and requesting confirmation of the action, Click `Finish`.
 
-![](tbc.png)
+![](img/newPlatformInstance.PNG)
 
 MyST will start the process of provisioning the Oracle Middleware, this will take approx 40 minutes to complete.
+
+
+![](img/provisionInProgress.PNG)
+
+![](img/executionLog.PNG)
+
+
 
 ### Verify Platform Instance
 Once our Platform Instance has been successfully provisioned, click on the `Actions` menu and select `View`.
