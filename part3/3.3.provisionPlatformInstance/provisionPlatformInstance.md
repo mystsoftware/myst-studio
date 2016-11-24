@@ -9,27 +9,31 @@ From the side menu navigate to`Provisioning` > `Platform Instances`, this will d
 
 For each Platform Model, MyST will indicate if there is currently a provisioned platform instance for that model, and if there is, will indicate the current version and revision of the Platform Blueprint and Platform Model (outlinned in red below).
 
-![]()
+![](tbc.png)
 
 To provision a Platform Instance, select the corresponding Platform Model, MyST will display summary information about the state of the Platform Model and Instance as shown below.
 
-![]()
+![](tbc.png)
 
-Click on the `Actions` menu and select `Provision`, MyST will open a dialogue allowing you to enter any notes and requesting confirmation of the action, Click `Finish`.MyST will start the process of provisioning the Oracle Middleware, this will take approx 40 minutes to complete.
+Click on the `Actions` menu and select `Provision`, MyST will open a dialogue allowing you to enter any notes and requesting confirmation of the action, Click `Finish`.
 
-![]()
+![](tbc.png)
 
+MyST will start the process of provisioning the Oracle Middleware, this will take approx 40 minutes to complete.
 
 ### Verify Platform Instance
 Once our Platform Instance has been successfully provisioned, click on the `Actions` menu and select `View`.
 
-![]()
+![](tbc.png)
 
 This will open the Platform Viewer, where we can view all details about the configuration of the Platform Instance. In addition, MyST provides the URL's for the relevant administration consoles (outlined in red).
 
-![]()
+![](tbc.png)
 
-If we click on the link for the `Admin Console`, this will take us to the login page for the WebLogic Admin Console. Login and got the `Servers` summary page. Here we can see the list of our newly migrated 12c SOA and OSB Servers.
+If we click on the link for the `Admin Console`, this will take us to the login page for the WebLogic Admin Console. Login and got the `Servers` summary page. Here we can see the list of our newly provisioned WebLogic servers.
+
+### Viewing Logs
+
 
 ### Start, Stop and Restarting Platform Instance
 From the MyST Studio console, go to Modeling > Platform Models.
