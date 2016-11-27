@@ -19,24 +19,28 @@ Click on the `Actions` menu and select `Provision`, MyST will open a dialogue al
 
 ![](img/newPlatformInstance.PNG)
 
-MyST will start the process of provisioning the Oracle Middleware, this will take approx 40 minutes to complete.
-
+MyST will add the provision action to the platform instance queue. The action will initially be in a `PENDING` state, but you should shortly see this change to `IN PROGRESS` as shown below.
 
 ![](img/provisionInProgress.PNG)
 
+MyST will start the process of provisioning the Oracle Middleware, this includes installing the Oracle Middleware binaries, running RCU to create the database schemas, creating the Oracl Middleware domain and then starting it up.
+
+The end to end process will typically take 20-60 minutes to complete, depending on the Oracle Middleware components being provisioned and the perforance of the underlying infrastructure.
+
+
 ### Viewing Logs
+Whilst MyST is provisioning the Platform Instance you can view the action execution log by clicking on `View` (outlinned in red above). This will open the Execution Log window as illustrated below.
 
 ![](img/executionLog.PNG)
 
-
+If you leave this window open, MyST will continue to update this with the log output.
 
 ### Verify Platform Instance
-Once our Platform Instance has been successfully provisioned, click on the `Actions` menu and select `View`.
+Once our Platform Instance has been successfully provisioned, the status of the action will change to `SUCCESS` and the status of the Platform instance will change to `ACTIVE`.
 
 ![](img/provisionComplete.PNG)
 
-
-This will open the Platform Viewer, where we can view all details about the configuration of the Platform Instance. In addition, MyST provides the URL's for the relevant administration consoles (outlined in red).
+Click on the `Actions` menu and select `View`. This will open the Platform Viewer, where we can view all details about the configuration of the Platform Instance. In addition, MyST provides the URL's for the relevant administration consoles (outlined in red).
 
 ![](img/platformInstance.PNG)
 
