@@ -46,8 +46,7 @@ Click on the `Actions` menu and select `View`. This will open the Platform Viewe
 
 If we click on the link for the `Admin Console`, this will take us to the login page for the WebLogic Admin Console. Login and got the `Servers` summary page. Here we can see the list of our newly provisioned WebLogic servers.
 
-
-
+![](img/WebLogicAdminConsole.PNG)
 
 ### Start, Stop and Restarting Platform Instance
 From the MyST Studio console, go to Modeling > Platform Models.

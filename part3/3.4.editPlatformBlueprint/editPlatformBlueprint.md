@@ -4,13 +4,13 @@ MyST holds the configuration details of a Platform Blueprint and Platform Model 
 ### Opening a Platform Blueprint in the Platform Editor
 From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on the `Actions` drop-down in the top right-hand corner of the Platform Blueprint we want to view / edit and select `Open`. This will open the Platform Blueprint in the `Platform Editor` in view mode.
 
-![](/Part3/editPlatformBlueprint/img/PlatformBlueprintEditor.PNG)
+![](img/PlatformBlueprintEditor.PNG)
 
 ### Opening a Platform Model in the Platform Editor
 
 From the side menu navigate to`Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model you are interested in and MyST will display summary details about the Platform Model and its coresponding instance as shown below.
 
-![](/Part3/editPlatformBlueprint/img/PlatformModelSummary.PNG)
+![](img/PlatformModelSummary.PNG)
 
 Click on the `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open the Platform Model in the `Platform Editor` in view mode.
 
@@ -43,7 +43,7 @@ MyST holds the configuration details of a Platform Blueprint and Platform Model 
 
 The Tree View provides a hierarchical view of the Platform Blueprint and Platform Model, providing a simple way to navigate the configuration details of a Platform Blueprint or Model.
 
-Clicking on the plus sign (![](/Part3/editPlatformBlueprint/img/PlatformBlueprintExpand.png)) of a component will expand it to show any child components. Selecting an child element will display the list of properties and values defined for that component in the properties view. 
+Clicking on the plus sign (![](img/PlatformBlueprintExpand.png)) of a component will expand it to show any child components. Selecting an child element will display the list of properties and values defined for that component in the properties view. 
 
 At the top level, a Platform Blueprint or Model will consist of some or all of the following components:
 
@@ -80,7 +80,7 @@ To edit either a Platform Blueprint or Platform Model, click `Edit Configuration
 
 When defining the value of a property, we can reference the value of one or more other properties see [MyST Property Overview](). Once in **Edit** mode, the Property Viewer will display the property definition for calculation the property value, which may include references to other property values. As underneath that the actual resolevd (or calculated) value of the property after property reference have been substituted with actual values, as shown below.
 
-![](../createPlatformBlueprint/img/PropertyReference.PNG)
+![](img/PropertyReference.PNG)
 
 To edit a property, within the TreeView browse to the component where you want to make changes and click `Edit`(outlined in red below).
 
@@ -109,7 +109,7 @@ When referencing a MyST property, in order to uniquely identify it, we need to s
 
 The simplest way to derive the expression to reference a property is to locate the property we wish to reference within the Propery Viewer and click on the Property Name. Myst will open a speech bubble containing the expression to reference the property as show below.
 
-![](./img/PropertyExpression.PNG)
+![](img/PropertyExpression.PNG)
 
 **Note:** The Platform Editor needs to be in Edit mode.
 
