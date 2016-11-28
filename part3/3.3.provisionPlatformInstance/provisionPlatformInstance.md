@@ -47,13 +47,3 @@ Click on the `Actions` menu and select `View`. This will open the Platform Viewe
 If we click on the link for the `Admin Console`, this will take us to the login page for the WebLogic Admin Console. Login and got the `Servers` summary page. Here we can see the list of our newly provisioned WebLogic servers.
 
 ![](img/WebLogicAdminConsole.PNG)
-
-### Start, Stop and Restarting Platform Instance
-From the MyST Studio console, go to Modeling > Platform Models.
-
-
-Click on the row for the CI environment, this will bring up more information on the right side of the screen. 
-
-Click on Actions in the top right hand corner and select Control.
-
-Select Restart as the action you want to perform. In a clustered environment, you can choose to restart only specific nodes. As we have only one node we can leave all other defaults.
