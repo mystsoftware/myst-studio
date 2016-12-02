@@ -31,6 +31,7 @@
     * [Chapter 3.7 - Introspecting an existing WebLogic Domain](/part3/3.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)
     * [Chapter 3.8 - Side by Side Upgrade](/part3/3.8.sideBySideUpgrade/3.8.0.sideBySideUpgrade.md)
 
+
 * [Part 4 - Platform Configuration](part4/part4.md)
 
 ---
