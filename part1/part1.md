@@ -8,7 +8,7 @@ This part contains the following chapters:
 
 * [Chapter 1.1 - Overview of Platform Provisioning](/part1/1.1.overviewApplicationReleaseAutomation/1.1.0.overviewApplicationReleaseAutomation.md)
 
-* [Chapter 1.2 - Overview of Application Release Automation](part1/1.2.overviewPlatformProvisioning/1.2.0.overviewPlatformProvisioning.md)
+* [Chapter 1.2 - Overview of Application Release Automation](/part1/1.2.overviewPlatformProvisioning/1.2.0.overviewPlatformProvisioning.md)
 
 
 
