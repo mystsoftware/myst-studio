@@ -1,3 +1,7 @@
 {
-    "plugins": ["-lunr"]
+    "pluginsConfig": {
+        "lunr": {
+            "maxIndexSize": 500000
+        }
+    }
 }
