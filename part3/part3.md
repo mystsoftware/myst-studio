@@ -48,19 +48,19 @@ Creating a platform blueprint, platform model and provisioning a new fully opera
 
 This part contains the following chapters:
 
-* [Chapter 3.1 - Creating a Platform Blueprint](3.1.createPlatformBlueprint/3.1.0.createPlatformBlueprint.md)   
+* [Chapter 3.1 - Creating a Platform Blueprint](/part3/3.1.createPlatformBlueprint/3.1.0.createPlatformBlueprint.md)   
 
-* [Chapter 3.2 - Creating a Platform Model](3.2.createPlatformBlueprint/3.2.0.createPlatformBlueprint.md)
+* [Chapter 3.2 - Creating a Platform Model](/part3/3.2.createPlatformBlueprint/3.2.0.createPlatformBlueprint.md)
 
-* [Chapter 3.3 - Provision and Manage Platform Instance](3.3.provisionPlatformInstance/3.3.0.provisionPlatformInstance.md)
+* [Chapter 3.3 - Provision and Manage Platform Instance](/part3/3.3.provisionPlatformInstance/3.3.0.provisionPlatformInstance.md)
 
-* [Chapter 3.4 - Editing a Platform Blueprint / Model](3.4.editPlatformBlueprint/3.4.0.editPlatformBlueprint.md)
+* [Chapter 3.4 - Editing a Platform Blueprint / Model](/part3/3.4.editPlatformBlueprint/3.4.0.editPlatformBlueprint.md)
 
-* [Chapter 3.5 - Updating Platform Configuration](3.5.updatingPlatformConfiguration/3.5.0.updatingPlatformConfiguration.md)
+* [Chapter 3.5 - Updating Platform Configuration](/part3/3.5.updatingPlatformConfiguration/3.5.0.updatingPlatformConfiguration.md)
 
-* [Chapter 3.6 - Managing a Platform Instance](3.6.managingPlatformInstances/3.6.0.managingPlatformInstances.md)
+* [Chapter 3.6 - Managing a Platform Instance](/part3/3.6.managingPlatformInstances/3.6.0.managingPlatformInstances.md)
 
-* [Chapter 3.7 - Introspecting an existing WebLogic Domain](3.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)
+* [Chapter 3.7 - Introspecting an existing WebLogic Domain](/part3/3.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)
 
-* [Chapter 3.8 - Side by Side Upgrade](3.8.sideBySideUpgrade/3.8.0.sideBySideUpgrade.md)
+* [Chapter 3.8 - Side by Side Upgrade](/part3/3.8.sideBySideUpgrade/3.8.0.sideBySideUpgrade.md)
 
