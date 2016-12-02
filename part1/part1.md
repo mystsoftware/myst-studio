@@ -10,4 +10,5 @@ This part contains the following chapters:
 
 * [Chapter 1.2 - Overview of Application Release Automation](part1/overviewPlatformProvisioning/overviewPlatformProvisioning.md)
 
-* [Chapter 1.3 - Introduction to Learning Labs]()
+
+
