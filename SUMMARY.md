@@ -2,13 +2,13 @@
 
 ## [Introduction](README.md)
 
-[Part 1 - Introduction to Rubicon Red MyST](part1/part1.md)
+## [Part 1 - Introduction to Rubicon Red MyST](/part1/part1.md)
 * [Chapter 1.1 - Overview of Platform Provisioning](/part1/1.1.overviewPlatformProvisioning/1.1.0.overviewPlatformProvisioning.md)
 * [Chapter 1.2 - Overview of Application Release Automation](/part1/1.2.overviewApplicationReleaseAutomation/1.2.0.overviewApplicationReleaseAutomation.md)
 
 ---
 
-[Part 2 - Infrastructure Management](part2/part2.md)
+## [Part 2 - Infrastructure Management](/part2/part2.md)
 * [Chapter 2.1 - Environment Types](/part2/2.1.environmentTypes/2.1.0.environmentTypes.md)
 * [Chapter 2.2 - Compute Definitions](/part2/2.2.computeDefinitions/2.2.0.computeDefinitions.md)
 * [Chapter 2.3 - Configuring Pre-Existing Infrastructure](/part2/2.3.preExistingInfrastructure/2.3.0.preExistingInfrastructure.md)
@@ -17,7 +17,7 @@
 
 ---
 
-[Part 3 - Platform Fundamentals](part3/part3.md)
+## [Part 3 - Platform Fundamentals](/part3/part3.md)
 * [Chapter 3.1 - Creating a Platform Blueprint](/part3/3.1.createPlatformBlueprint/3.1.0.createPlatformBlueprint.md)   
 * [Chapter 3.2 - Creating a Platform Model](/part3/3.2.createPlatformModel/3.2.0.createPlatformModel.md)
     * [3.2.1 - Creating a Platform Model for Pre-Existing Infrastructure](/part3/3.2.createPlatformModel/3.2.1.createPlatformModelPreExisting.md)
