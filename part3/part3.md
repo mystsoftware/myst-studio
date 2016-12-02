@@ -1,4 +1,4 @@
-#Part 3: Platform Provisioning
+#Part 3: Platform Lifecycle Fundementals
 
 Rubicon Red MyST uses a declarative approach to platform provisioning, meaning users simply define the **target state** of the Oracle Middleware infrastructure to be deployed; which, at the push of a button, is automatically provisioned by MyST.
 
@@ -56,7 +56,7 @@ This part contains the following chapters:
 
 * [Chapter 3.4 - Editing a Platform Blueprint / Model](part3/editPlatformBlueprint/editPlatformBlueprint.md)
 
-* [Chapter 4.5 - Introspecting an existing WebLogic Domain](part3/introspectPlatformBlueprint/introspectPlatformBlueprint.md)
+* [Chapter 3.7 - Introspecting an existing WebLogic Domain](part3/introspectPlatformBlueprint/introspectPlatformBlueprint.md)
 
-* [Chapter 4.6 - Side by Side Upgrade](part3/sideBySideUpgrade/sideBySideUpgrade.md)
+* [Chapter 3.8 - Side by Side Upgrade](part3/sideBySideUpgrade/sideBySideUpgrade.md)
 
