@@ -50,7 +50,7 @@ This part contains the following chapters:
 
 * [Chapter 3.1 - Creating a Platform Blueprint](/part3/3.1.createPlatformBlueprint/3.1.0.createPlatformBlueprint.md)   
 
-* [Chapter 3.2 - Creating a Platform Model](/part3/3.2.createPlatformBlueprint/3.2.0.createPlatformBlueprint.md)
+* [Chapter 3.2 - Creating a Platform Model](/part3/3.2.createPlatformModel/3.2.0.createPlatformModel.md)
 
 * [Chapter 3.3 - Provision and Manage Platform Instance](/part3/3.3.provisionPlatformInstance/3.3.0.provisionPlatformInstance.md)
 
