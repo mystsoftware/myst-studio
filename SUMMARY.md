@@ -3,8 +3,8 @@
 ## [Introduction](README.md)
 
 ## [Part 1 - Introduction to Rubicon Red MyST](part1/part1.md)
-* [Chapter 1.1 - Overview of Platform Provisioning](part1/overviewPlatformProvisioning/overviewPlatformProvisioning.md)
-* [Chapter 1.2 - Overview of Application Release Automation](part1/overviewApplicationReleaseAutomation/overviewApplicationReleaseAutomation.md)
+* [Chapter 1.1 - Overview of Platform Provisioning](/part1/1.1.overviewPlatformProvisioning/1.1.0.overviewPlatformProvisioning.md)
+* [Chapter 1.2 - Overview of Application Release Automation](/part1/1.2.overviewApplicationReleaseAutomation/1.2.0.overviewApplicationReleaseAutomation.md)
 
 ---
 
@@ -17,7 +17,7 @@
 
 ---
 
-## [Part 3 - Platform Fundementals](part3/part3.md)
+## [Part 3 - Platform Fundamentals](part3/part3.md)
 * [Chapter 3.1 - Creating a Platform Blueprint](/part3/3.1.createPlatformBlueprint/3.1.0.createPlatformBlueprint.md)   
 * [Chapter 3.2 - Creating a Platform Model](/part3/3.2.createPlatformModel/3.2.0.createPlatformModel.md)
     * [3.2.1 - Creating a Platform Model for Pre-Existing Infrastructure](/part3/3.2.createPlatformModel/3.2.1.createPlatformModelPreExisting.md)

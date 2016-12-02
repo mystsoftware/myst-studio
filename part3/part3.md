@@ -1,4 +1,4 @@
-#Part 3: Platform Lifecycle Fundementals
+#Part 3: Platform Lifecycle Fundamentals
 
 Rubicon Red MyST uses a declarative approach to platform provisioning, meaning users simply define the **target state** of the Oracle Middleware infrastructure to be deployed; which, at the push of a button, is automatically provisioned by MyST.
 
