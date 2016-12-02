@@ -9,11 +9,11 @@
 ---
 
 ## [Part 2 - Infrastructure Management](part2/part2.md)
-* [Chapter 2.1 - Environment Types](Part2/environmentTypes/environmentTypes.md)
-* [Chapter 2.2 - Compute Definitions](Part2/computeDefinitions/computeDefinitions.md)
-* [Chapter 2.3 - Configuring Pre-Existing Infrastructure](Part2/preExistingInfrastructure/PreExistingInfrastrcutureProvider.md)
-* [Chapter 2.4 - Configuring AWS On-Demand Infrastructure](Part2/awsOnDemand/AwsOnDemand.md)
-* [Chapter 2.5 - Middleware Host Prerequisites](Part2/middlewareHosts/middlewareHosts.md)
+* [Chapter 2.1 - Environment Types](/part2/2.1.environmentTypes/2.1.0.environmentTypes.md)
+* [Chapter 2.2 - Compute Definitions](/part2/2.2.computeDefinitions/2.2.0.computeDefinitions.md)
+* [Chapter 2.3 - Configuring Pre-Existing Infrastructure](/part2/2.3.preExistingInfrastructure/2.3.0.preExistingInfrastructure.md)
+* [Chapter 2.4 - Configuring AWS On-Demand Infrastructure](/part2/2.4.awsOnDemand/2.4.0.awsOnDemand.md)
+* [Chapter 2.5 - Middleware Host Prerequisites](/part2/2.5.middlewareHosts/2.5.0.middlewareHosts.md)
 
 ---
 
