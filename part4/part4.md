@@ -37,19 +37,19 @@ This part contains the following chapters:
 
 * [Chapter 4.1 - Server Configuration](/part4/4.1.weblogicServerConfiguration/4.1.0.weblogicServerConfiguration.md)   
 
-* [Chapter 4.2 - Patching WebLoigc](/part3/3.2.createPlatformModel/3.2.0.createPlatformModel.md)
+* [Chapter 4.2 - Patching WebLoigc](/part4/4.2.createPlatformModel/3.2.0.createPlatformModel.md)
 
-* [Chapter 4.3 - Configuring JDBC Data Sources](/part3/3.3.provisionPlatformInstance/3.3.0.provisionPlatformInstance.md)
+* [Chapter 4.3 - Configuring JDBC Data Sources](/part4/4.3.provisionPlatformInstance/3.3.0.provisionPlatformInstance.md)
 
-* [Chapter 4.4 - JMS and SAF Configuration](/part3/3.4.editPlatformBlueprint/3.4.0.editPlatformBlueprint.md)
+* [Chapter 4.4 - JMS and SAF Configuration](/part4/4.4.editPlatformBlueprint/3.4.0.editPlatformBlueprint.md)
 
-* [Chapter 4.5 - JCA Adapter Configuration](/part3/3.5.updatingPlatformConfiguration/3.5.0.updatingPlatformConfiguration.md)
+* [Chapter 4.5 - JCA Adapter Configuration](/part4/4.5.updatingPlatformConfiguration/3.5.0.updatingPlatformConfiguration.md)
 
-* [Chapter 4.6 - Work Manager Configuration](/part3/3.6.managingPlatformInstances/3.6.0.managingPlatformInstances.md)
+* [Chapter 4.6 - Work Manager Configuration](/part4/4.6.managingPlatformInstances/3.6.0.managingPlatformInstances.md)
 
-* [Chapter 4.7 - Configuring Authentication Providers](/part3/3.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)
+* [Chapter 4.7 - Configuring Authentication Providers](/part4/4.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)
 
-* [Chapter 4.8 - Configuring Mail Sessions](/part3/3.8.sideBySideUpgrade/3.8.0.sideBySideUpgrade.md)
+* [Chapter 4.8 - Configuring Mail Sessions](/part4/4.8.sideBySideUpgrade/4.8.0.sideBySideUpgrade.md)
 
 
 

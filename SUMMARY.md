@@ -33,6 +33,8 @@
 
 
 * [Part 4 - Platform Configuration](part4/part4.md)
+    * [Chapter 4.1 - Server Configuration](/part4/4.1.weblogicServerConfiguration/4.1.0.weblogicServerConfiguration.md)   
+   * [Chapter 4.2 - Patching WebLoigc](/part4/4.2.createPlatformModel/3.2.0.createPlatformModel.md)
 
 ---
 
