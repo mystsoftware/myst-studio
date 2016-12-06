@@ -1,7 +1,56 @@
 #Part 4: Platform Configuration
 
-* Pacthing
-* Adjust Server Startup Arguments
+
+1. Server Configuration
+   * JTA Timeout
+   * Server Start Up Arguments
+   * Server Start up Classes
+
+1. Oracle Patches
+
+1. JDBC Data Sources
+   * Oracle Data Source
+   * DB2 Data Source
+
+1. JMS & SAF Configuration
+   * Java Messaging Server
+   * SAF
+
+1. JCA Adapters
+   * Database Adapter
+     * Oracle DB Adapter Instance
+     * DB2 Adapter Instance
+
+1. WorkManager
+
+1. Configuring Authentication Providers
+   * LDAP setup for WebLogic
+
+1. Mail Sessions
+
+
+
+Enabling SSL Listen Port Globally
+Custom Identity and Trust Store
+
+This part contains the following chapters:
+
+* [Chapter 4.1 - Server Configuration](/part4/4.1.weblogicServerConfiguration/4.1.0.weblogicServerConfiguration.md)   
+
+* [Chapter 4.2 - Patching WebLoigc](/part3/3.2.createPlatformModel/3.2.0.createPlatformModel.md)
+
+* [Chapter 4.3 - Configuring JDBC Data Sources](/part3/3.3.provisionPlatformInstance/3.3.0.provisionPlatformInstance.md)
+
+* [Chapter 4.4 - JMS and SAF Configuration](/part3/3.4.editPlatformBlueprint/3.4.0.editPlatformBlueprint.md)
+
+* [Chapter 4.5 - JCA Adapter Configuration](/part3/3.5.updatingPlatformConfiguration/3.5.0.updatingPlatformConfiguration.md)
+
+* [Chapter 4.6 - Work Manager Configuration](/part3/3.6.managingPlatformInstances/3.6.0.managingPlatformInstances.md)
+
+* [Chapter 4.7 - Configuring Authentication Providers](/part3/3.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)
+
+* [Chapter 4.8 - Configuring Mail Sessions](/part3/3.8.sideBySideUpgrade/3.8.0.sideBySideUpgrade.md)
+
 
 
 ## Patching
@@ -18,48 +67,13 @@ Before MyST Studio can apply patches, they need to be first downloaded from My O
 
 ### Add the Oracle Patch in MyST Studio
 
-### Configure Server Startup Arguments
-Server Startup Arguments are used for providing arguments to the Java Virtual Machine for specific WebLogic Server instances. Server Startup Arguments are commonly used for defining memory settings. In MyST Studio, Server Startup Arguments can be tuned on a per-product basis under the Global Variables
-
-> Note: In 11g, Coherence cluster arguments were required to be defined under the server start arguments. As this is a complex and error-prone process, MyST Studio will automatically generate this for you when you have products in your Blueprint that use Coherence out of the box, such as SOA Suite. You don't have to worry about missing this step or making a mistake.
-
-Global Variables are used in MyST for defining common properties that are referenced by other configuration items in a Platform Blueprint or Model. For Server Startup Arguments, there is a property under Global Variables for each product in the convention <product-id>.args. When the WebLogic server instances are computed, this property is automatically referenced. This makes is easy to define a common property once to be used across a number of WebLogic Server instances in a cluster rather than managing each Server's properties separately like you would have to do when using the WebLogic Administration Console to do manual configuration.
-
-> Note: Server Startup Arguments defined with the convention <product-id>.args are applied during start up by the WebLogic Node Manager. This is different to those defined with the convention <server-id>.userMemArgs which are instead applied by manipulating the start up scripts directly. Because the Admin Server arguments are unable to be managed by the Node Manager due to an Oracle product constraint, Admin Server start up arguments should be defined using the property admin.server.userMemArgs. MyST automatically does this for you by default.
 
 
-### Startup and Shutdown Classes
-WebLogic allows us to configure startup and shutdown classes in order to perform tasks when we start up or gracefully shut down the server. 
+
 
 Start
 
-A startup class is a Java program that is automatically loaded and executed when a WebLogic Server is started or restarted. For information about when WebLogic Server loads and executes startup classes, see "Ordering Startup Class Execution and Deployment."
 
-A shutdown class is a Java program that is automatically loaded and executed when the WebLogic Server is shut down either from the Administration Console or the weblogic.admin shutdown command. For more information about when a server invokes startup and shutdown classes, refer to "Server Lifecycle."
-To use startup or shutdown classes, you must configure and assign them to servers or clusters. 
-
-| Property | Description |
-| -------- | ----------- |
-| Name | x |
-| Target | The cluster to which the class is to be deployed |
-| Class Name | Fully qualified name of the Java class |
-| Deployment Order | Determines order in which classes are loaded and executed. Items with the lowest Deployment Order value are loaded first. priority is relative to other deployable items of the same type. |
-| Arguments | Arguments that the WebLogic server uses to initialize a class. Multiple arguments must be separated with a comma. For example: 
-attribute1=value1,attribute2=value2 |
-| Load Before App Deplyments | x |
-| Load Before App Activation | x |
-
-
-#### Ordering Startup Class Execution and Deployment
-By default WebLogic Server startup classes are run after the server initializes JMS and JDBC services, and after applications and standalone modules have been deployed.
-
-If you want to perform startup tasks after JMS and JDBC services are available, but before applications and modules have been activated, you can select the Run Before Application Deployments option
-
-LoadBeforeAppDeployments attribute to "true
-
-LoadBeforeAppActivation attribute to "true"
-
-> Note: The startup or shutdown class must be on the classpath of each server to which it is assigned. See [Configure Server Startup Arguments](tbc) for further details.
 
 ## Resources
 
