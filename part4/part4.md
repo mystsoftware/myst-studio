@@ -39,7 +39,7 @@ This part contains the following chapters:
 
 * [Chapter 4.2 - Patching WebLoigc](/part4/4.2.createPlatformModel/3.2.0.createPlatformModel.md)
 
-* [Chapter 4.3 - Configuring JDBC Data Sources](/part4/4.3.provisionPlatformInstance/3.3.0.provisionPlatformInstance.md)
+* [Chapter 4.3 - Configuring JDBC Data Sources](/part4/4.3.configureDataSource/4.3.0.configureDataSource.md)
 
 * [Chapter 4.4 - JMS and SAF Configuration](/part4/4.4.editPlatformBlueprint/3.4.0.editPlatformBlueprint.md)
 
