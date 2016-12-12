@@ -1,10 +1,4 @@
-### Configure MyST Studio integration in Jenkins
 
-#### Install MyST Plugin
-
-#### Retrieve the API key from MyST Studio
-
-#### Configure MyST Plugin
 
 
 
