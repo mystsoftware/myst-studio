@@ -6,9 +6,9 @@ Builds are initiated when the developer commits code into a source code reposito
 
 This part contains the following chapters:
 
-* [Chapter 5.1 - Server Configuration](/part5/5.1.serverConfiguration/5.1.0.buildServerConfiguration.md)
-    * [5.1.1 - Configure MyST Continuous Delivery Profile](/part5/5.1.serverConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
-    * [5.1.2 - Configure the MyST Studio plugin for Jenkins](/part5/5.1.serverConfiguration/5.1.2.configureJenkinsPlugin.md)
+* [Chapter 5.1 - Server Configuration](/part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
+    * [5.1.1 - Configure MyST Continuous Delivery Profile](/part5/5.1.buildServerConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
+    * [5.1.2 - Configure the MyST Studio plugin for Jenkins](/part5/5.1.buildServerConfiguration/5.1.2.configureJenkinsPlugin.md)
 
 
 * [Chapter 5.2 - Configure Maven Build](/part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)  
