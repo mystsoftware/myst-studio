@@ -39,7 +39,7 @@
     * [Chapter 4.4 - JMS & SAF Configuration](/part4/4.4.configureJmsSaf/4.4.0.configureJmsSaf.md) 
         * [4.4.1 - Persistent Store Configuration](/part4/4.4.configureJmsSaf/4.4.1.configurePersistentStores.md)
         * [4.4.2 - JMS Configuration](/part4/4.4.configureJmsSaf/4.4.2.configureJms.md)
-
+        * [4.4.3 - SAF Configuration](/part4/4.4.configureJmsSaf/4.4.3.configureSaf.md)
 
 ---
 
