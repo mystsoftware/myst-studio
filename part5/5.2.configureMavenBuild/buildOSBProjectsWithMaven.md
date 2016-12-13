@@ -29,6 +29,8 @@ JDeveloper will then prompt us to
 * **Parent > Artifact Id** - This must be set to `sbar-project-common`
 * **Parent > Version** - This must be set to the version of the Oracle Service Bus, for example, 12.1.3-0-0 or 12.2.1-0-0.
 
+![](img/createPom.png)
+
 Click on the Source tab. The source should appear as the following:
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -53,6 +55,10 @@ Prior to configuring our CI Server to run an automated build.
 
 Right-click on the project and click `Run Maven` then `package`.
 
+![](img/mvnPackage.png)
+
 You will see the Maven build running in the `Apache Maven - package` tab. Omce the build has completed successfully, the output should look similar to the following.
+
+![](img/mvnPackageOutput.png)
 
 Navigate to the folder .data/maven on the file system under the project home. You should see a file created called `sbconfig.sbar`.
