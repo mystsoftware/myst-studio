@@ -62,3 +62,5 @@ You will see the Maven build running in the `Apache Maven - package` tab. Omce 
 ![](img/mvnPackageOutput.png)
 
 Navigate to the folder .data/maven on the file system under the project home. You should see a file created called `sbconfig.sbar`.
+
+> Once we have created our Project Object Model (pom.xml). We **must** commit it to our Version Control System so that we can perform automated builds from our CI Server.
