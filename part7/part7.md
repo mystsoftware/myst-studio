@@ -56,5 +56,7 @@ Within MyST, an Application Blueprint is a collection of artifacts, which have b
 
 This part contains the following chapters:
 
-* [Chapter 3.1 - Creating a Platform Blueprint](/part3/3.1.createPlatformBlueprint/3.1.0.createPlatformBlueprint.md)   
-
+* [Chapter 7.1 - Pipeline Groups](/part7/7.1.pipelineGroups/7.1.0.pipelineGroups.md)   
+* [Chapter 7.2 - Stream Types](/part7/7.2.streamTypes/7.2.0.streamTypes.md) 
+* [Chapter 7.3 - Pipeline Templates](/part7/7.3.pipelineTemplates/7.3.0.pipelineTemplates.md)
+* [Chapter 7.4 - Pipelines](/part7/7.4.pipelines/7.4.0.pipelines.md)
