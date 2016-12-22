@@ -41,8 +41,12 @@
 
 -----
 * Part 5 - Artifact Build
-    * [Chapter 6.x - Continuous Delivery Profile](part6/continuousDeliverProfile/continuousDeliverProfile.md)
-    * [Configuring Jenkins](configuring-jenkins.md)
+    * [Chapter 5.1.1 - Build Server Configuration](part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
+        * [Chapter 5.1.1 - Build Server Configuration](part5/5.1.buildServerConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
+        * [Chapter 5.1.2 - Build Server Configuration](part5/5.1.buildServerConfiguration/5.1.2.configureJenkinsPlugin.md)
+    * [Chapter 5.2 - Configure Maven Build](part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)
+
+-----
 * Part 6 - Application Deployment
 
 -----
