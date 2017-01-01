@@ -11,8 +11,10 @@ This part contains the following chapters:
     * [5.1.2 - Configure the MyST Studio plugin for Jenkins](/part5/5.1.buildServerConfiguration/5.1.2.configureJenkinsPlugin.md)
 
 
-* [Chapter 5.2 - Configure Maven Build](/part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)  
+* [Chapter 5.2 - Configure Maven Builds](/part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)  
 
-* [Chapter 5.3 - Configue Automated Build ](/part/5.3.configureJenkinsBuild/5.3.0.configureJenkinsBuild.md)
+* [Chapter 5.3 - Configue Automated Builds ](/part5/5.3.configureAutomatedBuild/5.3.0.configureAutomatedBuild.md)
+    * [Chapter 5.3.1 - Configure Jenkins Build Jobs](/part5/5.3.configureJenkinsBuild/5.3.1.configureJenkinsBuild.md)
 
-* [Chapter 5.4 - Manage 3rd Party Artifacts](/part4/4.3.configureDataSource/4.3.0.configureDataSource.md)
+
+* [Chapter 5.4 - Artifact Management](/part5/5.4.artifactManagement/5.4.0.artifactManagement.md)
