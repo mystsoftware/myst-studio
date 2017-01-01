@@ -51,10 +51,16 @@ This part contains the following chapters:
 * [Chapter 3.1 - Creating a Platform Blueprint](/part3/3.1.createPlatformBlueprint/3.1.0.createPlatformBlueprint.md)   
 
 * [Chapter 3.2 - Creating a Platform Model](/part3/3.2.createPlatformModel/3.2.0.createPlatformModel.md)
+    * [3.2.1 - Creating a Platform Model for Pre-Existing Infrastructure](/part3/3.2.createPlatformModel/3.2.1.createPlatformModelPreExisting.md)
+    * [3.2.2 - Creating a Platform Model for AWS On Demand](/part3/3.2.createPlatformModel/3.2.2.createPlatformModelAwsOnDemand.md)
+
 
 * [Chapter 3.3 - Provision and Manage Platform Instance](/part3/3.3.provisionPlatformInstance/3.3.0.provisionPlatformInstance.md)
 
 * [Chapter 3.4 - Editing a Platform Blueprint / Model](/part3/3.4.editPlatformBlueprint/3.4.0.editPlatformBlueprint.md)
+    * [3.4.1 - Platform Blueprint and Model Version Control](/part3/3.4.editPlatformBlueprint/3.4.1.platformVersionControl.md)
+    * [3.4.2 - Editing Platform Blueprints and Models](/part3/3.4.editPlatformBlueprint/3.4.2.platformBlueprintEditor.md)
+
 
 * [Chapter 3.5 - Updating Platform Configuration](/part3/3.5.updatingPlatformConfiguration/3.5.0.updatingPlatformConfiguration.md)
 
