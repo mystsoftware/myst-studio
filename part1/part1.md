@@ -6,7 +6,7 @@ This allows them to transform what is typically a resource intensive and highly 
 
 This part contains the following chapters:
 
-* [Chapter 1.1 - Overview of Platform Provisioning](/part1/1.1.overviewPlatformProvisioning/1.1.0.overviewPlatformProvisioning.md)
+* [Chapter 1.1 - Overview of Platform Provisioning and Configuration](/part1/1.1.overviewPlatformProvisioning/1.1.0.overviewPlatformProvisioning.md)
 
 * [Chapter 1.2 - Overview of Application Release Automation](/part1/1.2.overviewApplicationReleaseAutomation/1.2.0.overviewApplicationReleaseAutomation.md)
 

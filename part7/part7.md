@@ -7,7 +7,6 @@ Release Pipelines enable us to combine multiple applications into a single pipel
 
 The Release Pipeline Dashboard provides a ‘single pane of glass’ to monitor and manage the promotion of application changes and platform configuration changes through staging environments and into Production.
 
-
 ### Anatomy of a Release Pipeline
 A Release Pipeline is used to promote both Platform Blueprints and / or Application Blueprints through multiple staging environments to a particular environment, typically production.
 
@@ -25,7 +24,7 @@ A Release Pipeline can consist of one or more Release Streams. A Release Stream 
 
 A common use case for multiple Release Streams would be if you wanted to perform a release across multiple WebLogic domains such as a release to an ADF and SOA WebLogic Domain.
 
-For each stream we would specify, zero or more Application Blueprints that we want to deploy.
+For each stream we would specify, zero, one, or more Application Blueprints that we want to deploy.
 
 #### Deployment Platforms
 For each Stage / Release Stream combination we need to specify the Platform Instances that we want to target the deployment of the corresponding Platform Blueprint and Application Blueprints 
@@ -47,12 +46,7 @@ Most organizations will have a *"standard"* software delivery lifecycle (SDLC) t
 
 Pipeline Templates allow us to pre-define a set of ordered stages with promotion schemes defined for each stage. The value of Pipeline Templates, is they allow us to define a standard approach for each type of release.
 
-So in the above example, we could define two templates, one for project releases and a second for patch releases.
-
-
-
-### Defining a Simple Application Blueprint 
-Within MyST, an Application Blueprint is a collection of artifacts, which have been designed and implemented as part of the same logical solution. The Application Blueprint is version controlled; allowing full control of the configuration of an Application release over time, and provides the ability to roll forward / backwards to a different version of the release at any point in time.
+For example, in the above scenario, we could define two templates, one for project releases and a second for patch releases.
 
 This part contains the following chapters:
 
