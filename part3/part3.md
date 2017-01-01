@@ -12,7 +12,7 @@ For each platform instance, we create a separate platform model to define all th
 
 Splitting the *“platform definition”* into two layers, provides infrastructure independence; enabling you to provision consistent middleware platforms across all environments regardless of infrastructure type, on premise and on cloud.
 
-#####Note:
+##### Note:
 
 Most Oracle Middleware products run on Oracle WebLogic Application Server. WebLogic supports the concept of a Domain to group related clusters and servers. Some organisations use separate domains for each business unit or capability, others use it to group computational workload. How it is used is up to the organisation. 
 
