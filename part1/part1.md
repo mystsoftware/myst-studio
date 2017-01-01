@@ -1,4 +1,4 @@
-#Part 1: Introduction to Rubicon Red MyST  
+# Part 1: Introduction to Rubicon Red MyST  
 
 Rubicon Red MyST is the most advanced and intuitive DevOps solution for Oracle Middleware. It enables users to quickly establish a standardized, repeatable and automated process across their organization for provisioning and managing their Oracle Middleware platform as well automating the build and deployment of Oracle Middleware applications. All with Zero Scripting.
 
