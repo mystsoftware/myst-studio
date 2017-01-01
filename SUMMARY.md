@@ -50,7 +50,13 @@
 * Part 6 - Application Deployment
 
 -----
-* Part 7 - Release Pipelines
+* [Part 7 - Release Pipelines](part7/part7.md)
+    * [Chapter 7.1 - Pipeline Organization](/part7/7.1.pipelineOrganization/7.1.0.pipelineOrganization.md)   
+        * [Chapter 7.1.1 - Pipeline Groups](/part7/7.1.pipelineOrganization/7.1.1.pipelineGroups.md)   
+        * [Chapter 7.1.2 - Stream Types](/part7/7.1.pipelineOrganization/7.1.2.streamTypes.md) 
+    * [Chapter 7.2 - Pipeline Templates](/part7/7.2.pipelineTemplates/7.2.0.pipelineTemplates.md)
+    * [Chapter 7.3 - Configuring Release Pipelines](/part7/7.3.pipelines/7.3.0.pipelines.md)
+    * [Chapter 7.4 - Release Pipeline Dashboards](/part7/7.4.pipelineDashboard/7.4.0.pipelineDashboard.md)
 
 -----
 * [Part 8 - Role Based Access Control](rbac/rbac.md)
