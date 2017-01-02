@@ -1,15 +1,11 @@
 {
     "plugins": [
-        "-lunr", "page-footer"
+        "-lunr", "layout"
     ],
     "pluginsConfig": {
-        "page-footer": {
-            "format": "yyyy-MM-dd hh:mm:ss",
-            "copyright": "Copyright &#169; 2011-2017 Rubicon Red Software Pty Ltd. All rights reserved.",
-            "isShowQRCode": false,
-            "isShowIssues": false,
-            "token": "",
-            "style": "normal"
+        "layout": {
+            "headerPath" : "layouts/header.md",
+            "footerPath" : "layouts/footer.html"
         }
     }    
 }
