@@ -32,7 +32,7 @@
 -----
 * [Part 4 - Platform Configuration](part4/part4.md)
     * [Chapter 4.1 - Server Configuration](part4/4.1.weblogicServerConfiguration/4.1.0.weblogicServerConfiguration.md)
-    * [Chapter 4.2 - Patching WebLoigc](part4/4.2.createPlatformModel/3.2.0.createPlatformModel.md)
+    * [Chapter 4.2 - Patching](part4/4.2.patching/4.2.0.patching.md)
     * [Chapter 4.3 - Data Source Configuration](part4/4.3.configureDataSource/4.3.0.configureDataSource.md)
     * [Chapter 4.4 - JMS & SAF Configuration](part4/4.4.configureJmsSaf/4.4.0.configureJmsSaf.md)
         * [4.4.1 - Persistent Store Configuration](part4/4.4.configureJmsSaf/4.4.1.configurePersistentStores.md)
