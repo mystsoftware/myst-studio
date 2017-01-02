@@ -40,14 +40,18 @@
         * [4.4.3 - SAF Configuration](part4/4.4.configureJmsSaf/4.4.3.configureSaf.md)
 
 -----
-* Part 5 - Artifact Build
-    * [Chapter 5.1.1 - Build Server Configuration](part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
-        * [Chapter 5.1.1 - Build Server Configuration](part5/5.1.buildServerConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
-        * [Chapter 5.1.2 - Build Server Configuration](part5/5.1.buildServerConfiguration/5.1.2.configureJenkinsPlugin.md)
-    * [Chapter 5.2 - Configure Maven Build](part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)
+* [Part 5 - Build Automation](part5/part5.md)
+    * [Chapter 5.1 - Server Configuration](/part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
+        * [5.1.1 - Configure MyST Continuous Delivery Profile](/part5/5.1.buildServerConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
+        * [5.1.2 - Configure the MyST Studio plugin for Jenkins](/part5/5.1.buildServerConfiguration/5.1.2.configureJenkinsPlugin.md)
+    * [Chapter 5.2 - Configure Maven Builds](/part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)  
+    * [Chapter 5.3 - Configue Automated Builds ](/part5/5.3.configureAutomatedBuild/5.3.0.configureAutomatedBuild.md)
+        * [Chapter 5.3.1 - Configure Jenkins Build Jobs](/part5/5.3.configureJenkinsBuild/5.3.1.configureJenkinsBuild.md)
+    * [Chapter 5.4 - Artifact Management](/part5/5.4.artifactManagement/5.4.0.artifactManagement.md)
 
 -----
-* [Part 6 - Application Deployment](part-6---application-deployment.md)
+* [Part 6 - Application Deployment](part6/part6.md)
+    * [Chapter 6.1 - Configuring Application Blueprints](/part6/6.1.configureApplicationBlueprint/6.1.0.configureApplicationBlueprint.md)  
 
 -----
 * [Part 7 - Release Pipelines](part7/part7.md)
