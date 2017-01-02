@@ -1,1 +1,1 @@
-FOOTER
+Copyright © 2011 - 2017, Rubicon Red and/or its affiliates. All rights reserved.
