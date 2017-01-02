@@ -1,10 +1,15 @@
+# Build Automation
+Application Release Automation starts with building the artifacts that will be deployed into each of our staging environments and eventually production.
 
-Automated builds check out the required code from your source code repository, build and package the code. The packaged code is then place in a Software Repository ready for deployment into the specified environment(s).
+The build process is orchestrated by a CI Server, such as Jenkins, TeamCity or Bamboo. During this process, the CI Server will periodically poll the source code repository, such as Subversion or Git for any code changes (or commits) since the previous build. 
 
-Builds are initiated when the developer commits code into a source code repository, such as Subversion or GIT. MyST pulls the code from the source code repository, builds and packages the code ready for release. The build output is placed into a Software Repository, such as Artifactory, Nexus or Archiva. Enabling each release to be deployed to any environment as required.
+On discovering a new version of the source code, the CI Sever will check out the latest committed version of the code into a temporary directory and invoke the necessary steps to build the code.  The build itself is typically performed using [Maven](https://en.wikipedia.org/wiki/Maven), which has become the default build tool for Oracle Middleware.
 
+The output of the build is then packaged up and the artifact published to a software repository, such as Artifactory, Archiva, or Nexus. Ready to be deployed into a staging or production environment as required.
 
-This part contains the following chapters:
+In addition, details of the artifact are registered with MyST, allowing MyST to manage the process of promoting each artifact, as part of an application Blueprint through each staging environment and into production.
+
+This part covers how to automate the build and contains the following chapters:
 
 * [Chapter 5.1 - Server Configuration](/part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
     * [5.1.1 - Configure MyST Continuous Delivery Profile](/part5/5.1.buildServerConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
