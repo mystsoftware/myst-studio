@@ -48,9 +48,9 @@ Creating a platform blueprint, platform model and provisioning a new fully opera
 
 This part contains the following chapters:
 
-* [Chapter 3.1 - Creating a Platform Blueprint](/part3/3.1.createPlatformBlueprint/3.1.0.createPlatformBlueprint.md)   
+* [Chapter 3.1 - Creating a Platform Blueprint](3.1.createPlatformBlueprint/3.1.0.createPlatformBlueprint.md)   
 
-* [Chapter 3.2 - Creating a Platform Model](/part3/3.2.createPlatformModel/3.2.0.createPlatformModel.md)
+* [Chapter 3.2 - Creating a Platform Model](/3.2.createPlatformModel/3.2.0.createPlatformModel.md)
     * [3.2.1 - Creating a Platform Model for Pre-Existing Infrastructure](/part3/3.2.createPlatformModel/3.2.1.createPlatformModelPreExisting.md)
     * [3.2.2 - Creating a Platform Model for AWS On Demand](/part3/3.2.createPlatformModel/3.2.2.createPlatformModelAwsOnDemand.md)
 
