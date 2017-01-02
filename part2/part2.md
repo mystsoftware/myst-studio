@@ -1,4 +1,4 @@
-# Part 2 - Infrastructure Management
+# {{ page.title }}
 Within MyST, **Hosts** are the logical representation of the Virtual, Physical, Container or Cloud based servers that host the Oracle Middleware Server instances that make up our Oracle Middleware Platform.
 
 MyST allows the use of pre-existing hosts on-premise and in the cloud (for example Oracle Cloud, Amazon Web Services and Azure). In addition for some cloud environments, MyST suppports the creation of cloud based hosts on-demand.
