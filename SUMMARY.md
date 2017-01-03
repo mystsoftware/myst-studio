@@ -36,8 +36,37 @@
     * [Chapter 4.3 - Data Source Configuration](part4/4.3.configureDataSource/4.3.0.configureDataSource.md)
     * [Chapter 4.4 - JMS & SAF Configuration](part4/4.4.configureJmsSaf/4.4.0.configureJmsSaf.md)
         * [4.4.1 - Persistent Store Configuration](part4/4.4.configureJmsSaf/4.4.1.configurePersistentStores.md)
-        * [4.4.2 - JMS Configuration](part4/4.4.configureJmsSaf/4.4.2.configureJms.md)
-        * [4.4.3 - SAF Configuration](part4/4.4.configureJmsSaf/4.4.3.configureSaf.md)
+        * [4.4.2 - Java Message Service (JMS) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureJms.md)
+        * [4.4.3 - Store and Forward (SAF) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureSaf.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -----
 * [Part 5 - Build Automation](part5/part5.md)
