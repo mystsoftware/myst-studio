@@ -1,22 +1,26 @@
-#Rubicon Red MyST
+# Rubicon Red MyST
+**Implementing DevOps for Oracle Middleware**
 
-The manual process of provisioning Oracle Middleware environments, and the build, deployment and configuration of code into these environments is one of the most painful, resource intensive and stressful parts of any Oracle Middleware implementation.  
+January 2017
 
-An incorrect installation is one of the most common causes of issues when developing, deploying and operating Oracle Middleware solutions.  Small errors, such as misconfiguration of a middleware component, can cause issues which are difficult to diagnose and rectify; often requiring many weeks / months of man effort to resolve; resulting in project delays, cost blow out and missed milestones.
+Documentation for Oracle Middleware Administrators and Developers on how to implement DevOps solutions to automate the provisioning and on-going configuration management of Oracle Middleware Platforms, and implement astandardized, repeatable and automated process for the build and deployment of Oracle Middleware applications, at each stage in the Software Delivery Pipeline. Providing organizations with visibility, automation and control to consistently deliver Oracle Middleware solutions faster and with less risk.
 
-Rubicon Red MyST provides an automated process for the installation, configuration, build and deployment of Oracle Middleware, which transforms this resource intensive and highly error prone process into an automated, predictable and low risk process. All with Zero Scripting!
+-----
 
-MyST is unique, in that it combines concepts from “computer aided design” and “Programmable Infrastructure” to fully automate the end-to-end process of designing and provisioning Oracle Middleware.
+## Rubicon Red MyST Studio User Guide
 
-MyST leads users through a simple process to create a “model” of the required environment. Then at the push of a button, MyST interprets the “model” to programmatically provision the Oracle Middleware. This can be performed in 30 minutes; compared to weeks/months with OEM.
+Copyright © 2011 - 2017, Rubicon Red and/or its affiliates. All rights reserved.
 
-Another innovation, is dividing the “model” into two layers. First, the Platform Blueprint, which defines an environment agnostic topology/configuration and provides an abstraction layer over the underlying infrastructure. The second is the Platform Model which defines the environment specific configurations.
+Primary Author:  Rubicon Red
 
-The use of Platform Blueprints is unique and provides two key benefits. Firstly, organizations can define a standardized topology, which can be leveraged by all Platform Models to provision a consistent middleware platform across all environments and prevent configuration drift.
+Contributors:    Rubicon Red MyST development, product management, quality assurance, and support teams.
 
-Secondly, it delivers infrastructure independence, allowing customers to deploy equivalent middleware platforms across bare metal, virtual machines and public cloud.
-This provides flexibility to provision Development environments on-cloud, provides a migration path for moving on-premise platforms to the cloud, as well as avoids cloud lock-in by being able to move across different cloud providers. 
+This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.
 
-Another innovation is that Platform Models are self-documenting, meaning customers always have up-to date documentation of the middleware platform design and configuration details.
+The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us at [support.rubiconred.com](http://support.rubiconred.com).
 
-To make configuration changes, users just update the model; MyST will perform the required steps to upgrade an environment.  Blueprints and Models are version controlled, providing complete control in promoting configuration changes across environments.
+Rubicon Red and MyST are trademarks of Rubicon Red and/or its affiliates. Other names may be trademarks of their respective owners.
+
+Oracle and Java are registered trademarks of Oracle Corporation and/or its affiliates.
+
+This software or hardware and documentation may provide access to or information on content, products, and services from third parties. Rubicon Red and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services. Rubicon Red and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services.
