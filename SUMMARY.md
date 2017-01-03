@@ -39,35 +39,6 @@
         * [4.4.2 - Java Message Service (JMS) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureJms.md)
         * [4.4.3 - Store and Forward (SAF) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureSaf.md)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 -----
 * [Part 5 - Build Automation](part5/part5.md)
     * [Chapter 5.1 - Server Configuration](/part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
