@@ -9,7 +9,7 @@ The output of the build is then packaged up and the artifact published to a soft
 
 In addition, details of the artifact are registered with MyST, allowing MyST to manage the process of promoting each artifact, as part of an application Blueprint through each staging environment and into production.
 
-This part covers how to automate the build and contains the following chapters:
+This part covers build automation and contains the following chapters:
 
 * [Chapter 5.1 - Server Configuration](5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
     * [5.1.1 - Configure MyST Continuous Delivery Profile](5.1.buildServerConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
