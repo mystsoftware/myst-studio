@@ -7,11 +7,11 @@ This section details how to define some of the more common Oracle Middleware con
 * **WebLogic Server Configurations** - For example, JTA Timeout, Server Startup Arguments and Classes.
 * **Patches**
 * **JDBC Data Sources** - With examples for Oracle RAC, Microsoft SQL Server, and IBM DB2
-* **JMS & SAF Configuration** - 
+* **JMS & SAF Configuration** - Configuration of Persistent Stores, JMS Modules, Java Messaging Service (JMS) and Store and Forward (SAF) services
+* **JCA Adapters** - Configuration of JCA Adapters and JCA Adapter instances.
+* **Work Managers** -  Configuration of work managers, including constraints and request classes.
 
 <!-- TO DO
-* **JCA Adapters**
-* **Work Managers**
 * **Authentication Providers** - Such as configuring LDAP setup for WebLogic
 * **Mail Sessions**
 * **Enabling SSL Listen Port Globally**
@@ -33,12 +33,13 @@ This part contains the following chapters:
     * [4.4.1 - Persistent Store Configuration](4.4.configureJmsSaf/4.4.1.configurePersistentStores.md)
     * [4.4.2 - Java Message Service (JMS) Configuration](4.1.configureJmsSaf/4.1.1.configureJms.md)
     * [4.4.3 - Store and Forward (SAF) Configuration](4.1.configureJmsSaf/4.1.1.configureSaf.md)
+    
+
+* [Chapter 4.5 - JCA Adapter Configuration](4.5.configureJcaAdapter/4.5.0.configureJcaAdapter.md)
+
+* [Chapter 4.6 - Work Manager Configuration](4.6.workManagers/4.6.0.workManagers.md)
 
 <!-- TO DO
-* [Chapter 4.5 - JCA Adapter Configuration](/part4/4.5.updatingPlatformConfiguration/3.5.0.updatingPlatformConfiguration.md)
-
-* [Chapter 4.6 - Work Manager Configuration](/part4/4.6.managingPlatformInstances/3.6.0.managingPlatformInstances.md)
-
 * [Chapter 4.7 - Configuring Authentication Providers](/part4/4.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)
 
 * [Chapter 4.8 - Configuring Mail Sessions](/part4/4.8.sideBySideUpgrade/4.8.0.sideBySideUpgrade.md)
