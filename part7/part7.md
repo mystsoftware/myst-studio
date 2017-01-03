@@ -1,4 +1,5 @@
-# Release Pipelines
+# {{ page.title }}
+
 During the lifetime of a project, code will be built and promoted to various staging environments such as Development, System Integration and Test (SIT), User Acceptance and Test (UAT), Pre-Prod, and Production.
 
 MyST **Release Pipelines** allows you to quickly establish a standardized and repeatable process for managing the deployment and promotion of Oracle Middleware applications and platform configurations through each stage of the Software Delivery Pipeline.

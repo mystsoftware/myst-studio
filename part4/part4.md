@@ -1,4 +1,5 @@
 # {{ page.title }}
+
 MyST's approach of using Platform Blueprints / Models to define the target state of our Oracle Middleware infrastructure allows us to automate not just the initial provisioning of the Oracle Middleware platform instance, but also its configuration.
 
 This configuration can be applied, either as part of the initial provisioning of the platform instance, or later by modifying Platform Blueprints / Model and performing an update action against the Platform Instances.

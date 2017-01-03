@@ -1,4 +1,5 @@
-# Build Automation
+# {{ page.title }}
+
 Application Release Automation starts with building the artifacts that will be deployed into each of our staging environments and eventually production.
 
 The build process is orchestrated by a CI Server, such as Jenkins, TeamCity or Bamboo. During this process, the CI Server will periodically poll the source code repository, such as Subversion or Git for any code changes (or commits) since the previous build. 
