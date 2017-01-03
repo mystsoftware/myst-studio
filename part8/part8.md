@@ -57,3 +57,9 @@ This allows a `System Administrator` to delegate administration of the workspace
 The MyST REST API (Application Programming Interface) allows third-party applications, for example CI Servers such as Jenkins, a way to connect to and interact with MyST. 
 
 To connect via the REST API, a user account needs to be assigned the system role of `API User`. This will allow you to create an API Key which is used for authentication when connecting via the REST API.
+
+This part contains the following chapters:
+
+* [Chapter 8.1 - User Management](userManagement/userManagement.md)
+* [Chapter 8.2 - Role Management](roleManagement/roleManagement.md)
+* [Chapter 8.3 - Workspace Management](workspaceManagement/workspaceManagement.md)

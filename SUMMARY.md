@@ -38,6 +38,9 @@
         * [4.4.1 - Persistent Store Configuration](part4/4.4.configureJmsSaf/4.4.1.configurePersistentStores.md)
         * [4.4.2 - Java Message Service (JMS) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureJms.md)
         * [4.4.3 - Store and Forward (SAF) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureSaf.md)
+    * [Chapter 4.5 - JCA Adapter Configuration](part4/4.5.configureJcaAdapter/4.5.0.configureJcaAdapter.md)
+    * [Chapter 4.6 - Work Manager Configuration](part4/4.6.workManagers/4.6.0.workManagers.md)
+
 
 -----
 * [Part 5 - Build Automation](part5/part5.md)
