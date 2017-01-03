@@ -1,4 +1,5 @@
 # {{ page.title }}
+
 Rubicon Red MyST uses a declarative approach to platform provisioning, meaning users simply define the **target state** of the Oracle Middleware infrastructure to be deployed; which, at the push of a button, is automatically provisioned by MyST.
 
 Within MyST, the target state is captured in the *“platform definition”*, which is divided into two layers:
