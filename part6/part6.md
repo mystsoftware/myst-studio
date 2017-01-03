@@ -9,8 +9,9 @@ This part contains the following chapters:
 
 * [Chapter 6.1 - Configuring Application Blueprints](/part6/6.1.configureApplicationBlueprint/6.1.0.configureApplicationBlueprint.md)   
 
+<!-- TO DO
 * [Chapter 6.2 - Configuring Application Models](/part6/6.2.configureApplicationModels/6.2.0.configureApplicationModels.md)   
-
+-->
 
 
 
