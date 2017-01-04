@@ -30,10 +30,11 @@ This part contains the following chapters:
 
 * [Chapter 4.3 - Configuring JDBC Data Sources](4.3.configureDataSource/4.3.0.configureDataSource.md)
 
-* [Chapter 4.4 - JMS and SAF Configuration](4.4.editPlatformBlueprint/3.4.0.editPlatformBlueprint.md)
+
+* [Chapter 4.4 - JMS and SAF Configuration](4.4.configureJmsSaf/4.4.0.configureJmsSaf.md)
     * [4.4.1 - Persistent Store Configuration](4.4.configureJmsSaf/4.4.1.configurePersistentStores.md)
-    * [4.4.2 - Java Message Service (JMS) Configuration](4.1.configureJmsSaf/4.1.1.configureJms.md)
-    * [4.4.3 - Store and Forward (SAF) Configuration](4.1.configureJmsSaf/4.1.1.configureSaf.md)
+    * [4.4.2 - Java Message Service (JMS) Configuration](4.1.configureJmsSaf/4.4.2.configureJms.md)
+    * [4.4.3 - Store and Forward (SAF) Configuration](4.1.configureJmsSaf/4.4.3.configureSaf.md)
     
 
 * [Chapter 4.5 - JCA Adapter Configuration](4.5.configureJcaAdapter/4.5.0.configureJcaAdapter.md)
