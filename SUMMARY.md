@@ -1,7 +1,8 @@
-# Summary
+# Contents
 
-## Introduction
-* [Introduction](README.md)
+* [Title and Copyright Information](README.md)
+
+-----
 * [Part 1 - Introduction to Rubicon Red MyST](part1/part1.md)
     * [Chapter 1.1 - Overview of Platform Provisioning](part1/1.1.overviewPlatformProvisioning/1.1.0.overviewPlatformProvisioning.md)
     * [Chapter 1.2 - Overview of Application Release Automation](part1/1.2.overviewApplicationReleaseAutomation/1.2.0.overviewApplicationReleaseAutomation.md)
@@ -66,7 +67,7 @@
     * [Chapter 7.4 - Release Pipeline Dashboards](part7/7.4.pipelineDashboard/7.4.0.pipelineDashboard.md)
 
 -----
-* [Part 8 - Role Based Access Control](rbac/rbac.md)
+* [Part 8 - Role-Based Access Control](rbac/rbac.md)
     * [Chapter 8.1 - User Management](part8/8.1.userManagement/8.1.0.userManagement.md)
     * [Chapter 8.2 - Role Management](part8/8.2.roleManagement/8.2.0.roleManagement.md)
     * [Chapter 8.3 - Workspace Management](part8/8.3.workspaceManagement/8.3.0.workspaceManagement.md)
