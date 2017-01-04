@@ -2,10 +2,10 @@
 
 MyST's approach of using Platform Blueprints / Models to define the target state of our Oracle Middleware infrastructure allows us to automate not just the initial provisioning of the Oracle Middleware platform instance, but also its configuration.
 
-This configuration can be applied, either as part of the initial provisioning of the platform instance, or later by modifying Platform Blueprints / Model and performing an update action against the Platform Instances.
+This configuration can be applied, either as part of the initial provisioning of the platform instance or later by modifying Platform Blueprints / Model and performing an update action against the Platform Instances.
 
 This section details how to define some of the more common Oracle Middleware configurations, such as:
-* **WebLogic Server Configurations** - For example, JTA Timeout, Server Startup Arguments and Classes.
+* **WebLogic Server Configurations** - For example, JTA Timeout, Server Startup Arguments, and Classes.
 * **Patches**
 * **JDBC Data Sources** - With examples for Oracle RAC, Microsoft SQL Server, and IBM DB2
 * **JMS & SAF Configuration** - Configuration of Persistent Stores, JMS Modules, Java Messaging Service (JMS) and Store and Forward (SAF) services
