@@ -44,7 +44,7 @@
 
 -----
 * [Part 5 - Build Automation](part5/part5.md)
-    * [Chapter 5.1 - Server Configuration](/part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
+    * [Chapter 5.1 - Build Server Configuration](/part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
         * [5.1.1 - Configure MyST Continuous Delivery Profile](/part5/5.1.buildServerConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
         * [5.1.2 - Configure the MyST Studio plugin for Jenkins](/part5/5.1.buildServerConfiguration/5.1.2.configureJenkinsPlugin.md)
     * [Chapter 5.2 - Configure Maven Builds](/part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)  
