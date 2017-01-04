@@ -45,17 +45,17 @@
 
 -----
 * [Part 5 - Build Automation](part5/part5.md)
-    * [Chapter 5.1 - Build Server Configuration](/part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
-        * [5.1.1 - Configure MyST Continuous Delivery Profile](/part5/5.1.buildServerConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
-        * [5.1.2 - Configure the MyST Studio plugin for Jenkins](/part5/5.1.buildServerConfiguration/5.1.2.configureJenkinsPlugin.md)
-    * [Chapter 5.2 - Configure Maven Builds](/part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)  
-    * [Chapter 5.3 - Configue Automated Builds ](/part5/5.3.configureAutomatedBuild/5.3.0.configureAutomatedBuild.md)
-        * [Chapter 5.3.1 - Configure Jenkins Build Jobs](/part5/5.3.configureJenkinsBuild/5.3.1.configureJenkinsBuild.md)
-    * [Chapter 5.4 - Artifact Management](/part5/5.4.artifactManagement/5.4.0.artifactManagement.md)
+    * [Chapter 5.1 - Build Server Configuration](part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
+        * [5.1.1 - Configure MyST Continuous Delivery Profile](part5/5.1.buildServerConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
+        * [5.1.2 - Configure the MyST Studio plugin for Jenkins](part5/5.1.buildServerConfiguration/5.1.2.configureJenkinsPlugin.md)
+    * [Chapter 5.2 - Configure Maven Builds](part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)  
+    * [Chapter 5.3 - Configue Automated Builds ](part5/5.3.configureAutomatedBuild/5.3.0.configureAutomatedBuild.md)
+        * [Chapter 5.3.1 - Configure Jenkins Build Jobs](part5/5.3.configureJenkinsBuild/5.3.1.configureJenkinsBuild.md)
+    * [Chapter 5.4 - Artifact Management](part5/5.4.artifactManagement/5.4.0.artifactManagement.md)
 
 -----
 * [Part 6 - Application Deployment](part6/part6.md)
-    * [Chapter 6.1 - Configuring Application Blueprints](/part6/6.1.configureApplicationBlueprint/6.1.0.configureApplicationBlueprint.md)  
+    * [Chapter 6.1 - Configuring Application Blueprints](part6/6.1.configureApplicationBlueprint/6.1.0.configureApplicationBlueprint.md)  
 
 -----
 * [Part 7 - Release Pipelines](part7/part7.md)
@@ -67,7 +67,7 @@
     * [Chapter 7.4 - Release Pipeline Dashboards](part7/7.4.pipelineDashboard/7.4.0.pipelineDashboard.md)
 
 -----
-* [Part 8 - Role-Based Access Control](rbac/rbac.md)
+* [Part 8 - Role-Based Access Control](part8/part8.md)
     * [Chapter 8.1 - User Management](part8/8.1.userManagement/8.1.0.userManagement.md)
     * [Chapter 8.2 - Role Management](part8/8.2.roleManagement/8.2.0.roleManagement.md)
     * [Chapter 8.3 - Workspace Management](part8/8.3.workspaceManagement/8.3.0.workspaceManagement.md)
