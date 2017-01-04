@@ -42,9 +42,9 @@ This part contains the following chapters:
 * [Chapter 4.6 - Work Manager Configuration](4.6.workManagers/4.6.0.workManagers.md)
 
 <!-- TO DO
-* [Chapter 4.7 - Configuring Authentication Providers](/part4/4.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)
+* [Chapter 4.7 - Configuring Authentication Providers](4.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)
 
-* [Chapter 4.8 - Configuring Mail Sessions](/part4/4.8.sideBySideUpgrade/4.8.0.sideBySideUpgrade.md)
+* [Chapter 4.8 - Configuring Mail Sessions](4.8.sideBySideUpgrade/4.8.0.sideBySideUpgrade.md)
 -->
 
 

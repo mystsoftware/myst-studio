@@ -51,9 +51,9 @@ For example, in the above scenario, we could define two templates, one for proje
 
 This part contains the following chapters:
 
-* [Chapter 7.1 - Pipeline Organization](/part7/7.1.pipelineOrganization/7.1.0.pipelineOrganization.md)   
-    * [Chapter 7.1.1 - Pipeline Groups](/part7/7.1.pipelineOrganization/7.1.1.pipelineGroups.md)   
-    * [Chapter 7.1.2 - Stream Types](/part7/7.1.pipelineOrganization/7.1.2.streamTypes.md) 
-* [Chapter 7.2 - Pipeline Templates](/part7/7.2.pipelineTemplates/7.2.0.pipelineTemplates.md)
-* [Chapter 7.3 - Configuring Release Pipelines](/part7/7.3.pipelines/7.3.0.pipelines.md)
-* [Chapter 7.4 - Release Pipeline Dashboards](/part7/7.4.pipelineDashboard/7.4.0.pipelineDashboard.md)
+* [Chapter 7.1 - Pipeline Organization](7.1.pipelineOrganization/7.1.0.pipelineOrganization.md)   
+    * [Chapter 7.1.1 - Pipeline Groups](7.1.pipelineOrganization/7.1.1.pipelineGroups.md)   
+    * [Chapter 7.1.2 - Stream Types](7.1.pipelineOrganization/7.1.2.streamTypes.md) 
+* [Chapter 7.2 - Pipeline Templates](7.2.pipelineTemplates/7.2.0.pipelineTemplates.md)
+* [Chapter 7.3 - Configuring Release Pipelines](7.3.pipelines/7.3.0.pipelines.md)
+* [Chapter 7.4 - Release Pipeline Dashboards](7.4.pipelineDashboard/7.4.0.pipelineDashboard.md)
