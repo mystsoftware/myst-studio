@@ -1,16 +1,16 @@
 # {{ page.title }}
 
-Rubicon Red MyST uses a declarative approach to platform provisioning, meaning users simply define the **target state** of the Oracle Middleware infrastructure to be deployed; which, at the push of a button, is automatically provisioned by MyST.
+Rubicon Red MyST uses a declarative approach to platform provisioning, meaning users simply define the **target state** of the Oracle Middleware infrastructure to be deployed which, at the push of a button, is automatically provisioned by MyST.
 
 Within MyST, the target state is captured in the *“platform definition”*, which is divided into two layers:
 
-* First, the **Platform Blueprint** an environment agnostic specification used to define the platform topology and configuration of your Oracle Middleware. This, provides an abstraction layer over the underlying infrastructure; allowing you to define a single Blueprint for all environments.
+* First, the **Platform Blueprint**: this is an environment agnostic specification used to define the platform topology and configuration of your Oracle Middleware. This provides an abstraction layer over the underlying infrastructure allowing you to define a single Blueprint for all environments.
 
-* Second, the **Platform Model**, overlays the environment specific configurations.
+* Second, the **Platform Model**: this overlays the environment specific configurations.
 
 For each platform instance, we create a separate platform model to define all the environment specific configuration information.
 
-Splitting the *“platform definition”* into two layers, provides infrastructure independence; enabling you to provision consistent middleware platforms across all environments regardless of infrastructure type, on premise and on cloud.
+Splitting the *“platform definition”* into two layers, provides infrastructure independence, enabling you to provision consistent middleware platforms across all environments regardless of infrastructure type, on premise and on cloud.
 
 ##### Note:
 
@@ -22,7 +22,7 @@ For Oracle products that run on WebLogic, a *Platform Blueprint represents a log
 
 MyST also allows us to introspect an existing WebLogic Domain and use that to generate an equivalent Platform Blueprint and/or Model. 
 
-We can then use MyST to manage on-going configuration changes for the introspected platform as well as provision new environments with the same configuration. For example, you may want to re-provision your Dev and Test environments, to ensure that the configuration of these environments is consistent with Production.
+We can then use MyST to manage on-going configuration changes for the introspected platform as well as provision new environments with the same configuration. For example, you may want to re-provision your Dev and Test environments to ensure that the configuration of these environments is consistent with Production.
 
 ### Side-by-Side Upgrade
 
@@ -44,7 +44,7 @@ With built-in support for Oracle Cloud and Amazon Web Services, MyST enables you
 
 MyST provides cloud independence, allowing you to move your middleware infrastructure across different cloud providers as well as provide a path for migrating on-premise platforms to the cloud.
 
-Creating a platform blueprint, platform model and provisioning a new fully operational FMW environment, is a simple three step process, which can be performed in minutes.
+Creating a platform blueprint, platform model, and provisioning a new fully operational FMW environment is a simple three step process which can be performed in minutes.
 
 This part contains the following chapters:
 
