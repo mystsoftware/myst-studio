@@ -22,7 +22,7 @@ For Oracle products that run on WebLogic, a *Platform Blueprint represents a log
 
 MyST also allows us to introspect an existing WebLogic Domain and use that to generate an equivalent Platform Blueprint and/or Model. 
 
-We can then use MyST to manage on-going configuration changes for the introspected platform as well as provision new environments with the same configuration. For example, you may want to re-provision your Dev and Test environment, to ensure that their configuration is consistent with Production.
+We can then use MyST to manage on-going configuration changes for the introspected platform as well as provision new environments with the same configuration. For example, you may want to re-provision your Dev and Test environments, to ensure that the configuration of these environments is consistent with Production.
 
 ### Side-by-Side Upgrade
 
