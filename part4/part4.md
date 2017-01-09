@@ -5,12 +5,12 @@ MyST's approach of using Platform Blueprints / Models to define the target state
 This configuration can be applied, either as part of the initial provisioning of the platform instance or later by modifying Platform Blueprints / Model and performing an update action against the Platform Instances.
 
 This section details how to define some of the more common Oracle Middleware configurations, such as:
-* **WebLogic Server Configurations** - For example, JTA Timeout, Server Startup Arguments, and Classes.
+* **WebLogic Server Configurations** - For example, JTA Timeout, Server Startup Arguments and Classes.
 * **Patches**
-* **JDBC Data Sources** - With examples for Oracle RAC, Microsoft SQL Server, and IBM DB2
+* **JDBC Data Sources** - With examples for Oracle RAC, Microsoft SQL Server and IBM DB2
 * **JMS & SAF Configuration** - Configuration of Persistent Stores, JMS Modules, Java Messaging Service (JMS) and Store and Forward (SAF) services
-* **JCA Adapters** - Configuration of JCA Adapters and JCA Adapter instances.
-* **Work Managers** -  Configuration of work managers, including constraints and request classes.
+* **JCA Adapters** - Configuration of JCA Adapters and JCA Adapter instances
+* **Work Managers** -  Configuration of work managers, including constraints and request classes
 
 <!-- TO DO
 * **Authentication Providers** - Such as configuring LDAP setup for WebLogic
