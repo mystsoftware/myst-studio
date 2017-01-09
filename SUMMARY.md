@@ -1,4 +1,4 @@
-# Contents
+# Summary
 
 * [Title and Copyright Information](README.md)
 
@@ -37,25 +37,24 @@
     * [Chapter 4.3 - Data Source Configuration](part4/4.3.configureDataSource/4.3.0.configureDataSource.md)
     * [Chapter 4.4 - JMS & SAF Configuration](part4/4.4.configureJmsSaf/4.4.0.configureJmsSaf.md)
         * [4.4.1 - Persistent Store Configuration](part4/4.4.configureJmsSaf/4.4.1.configurePersistentStores.md)
-        * [4.4.2 - Java Message Service (JMS) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureJms.md)
-        * [4.4.3 - Store and Forward (SAF) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureSaf.md)
+        * [4.4.2 - Java Message Service \(JMS\) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureJms.md)
+        * [4.4.3 - Store and Forward \(SAF\) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureSaf.md)
     * [Chapter 4.5 - JCA Adapter Configuration](part4/4.5.configureJcaAdapter/4.5.0.configureJcaAdapter.md)
     * [Chapter 4.6 - Work Manager Configuration](part4/4.6.workManagers/4.6.0.workManagers.md)
-
 
 -----
 * [Part 5 - Build Automation](part5/part5.md)
     * [Chapter 5.1 - Build Server Configuration](part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
         * [5.1.1 - Configure MyST Continuous Delivery Profile](part5/5.1.buildServerConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
         * [5.1.2 - Configure the MyST Studio plugin for Jenkins](part5/5.1.buildServerConfiguration/5.1.2.configureJenkinsPlugin.md)
-    * [Chapter 5.2 - Configure Maven Builds](part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)  
-    * [Chapter 5.3 - Configue Automated Builds ](part5/5.3.configureAutomatedBuild/5.3.0.configureAutomatedBuild.md)
+    * [Chapter 5.2 - Configure Maven Builds](part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)
+    * [Chapter 5.3 - Configure Automated Builds ](part5/5.3.configureAutomatedBuild/5.3.0.configureAutomatedBuild.md)
         * [Chapter 5.3.1 - Configure Jenkins Build Jobs](part5/5.3.configureJenkinsBuild/5.3.1.configureJenkinsBuild.md)
     * [Chapter 5.4 - Artifact Management](part5/5.4.artifactManagement/5.4.0.artifactManagement.md)
 
 -----
 * [Part 6 - Application Deployment](part6/part6.md)
-    * [Chapter 6.1 - Configuring Application Blueprints](part6/6.1.configureApplicationBlueprint/6.1.0.configureApplicationBlueprint.md)  
+    * [Chapter 6.1 - Configuring Application Blueprints](part6/6.1.configureApplicationBlueprint/6.1.0.configureApplicationBlueprint.md)
 
 -----
 * [Part 7 - Release Pipelines](part7/part7.md)
@@ -71,5 +70,4 @@
     * [Chapter 8.1 - User Management](part8/8.1.userManagement/8.1.0.userManagement.md)
     * [Chapter 8.2 - Role Management](part8/8.2.roleManagement/8.2.0.roleManagement.md)
     * [Chapter 8.3 - Workspace Management](part8/8.3.workspaceManagement/8.3.0.workspaceManagement.md)
-
 
