@@ -19,10 +19,10 @@ Compute Definitions are used to indicate operating system requirements for hosts
 
 This part contains the following chapters:
 
-* [Chapter 2.1 - Environment Types](2.1.environmentTypes/2.1.0.environmentTypes.md)
-* [Chapter 2.2 - Compute Definitions](2.2.computeDefinitions/2.2.0.computeDefinitions.md)
-* [Chapter 2.3 - Configuring Pre-Existing Infrastructure](2.3.preExistingInfrastructure/2.3.0.preExistingInfrastructure.md)
-* [Chapter 2.4 - Configuring AWS On-Demand Infrastructure](2.4.awsOnDemand/2.4.0.awsOnDemand.md)
-* [Chapter 2.5 - Middleware Host Prerequisites](2.5.middlewareHosts/2.5.0.middlewareHosts.md)
+* [Chapter 2.1 - Environment Types](infrastructure/environment-types/README.md)
+* [Chapter 2.2 - Compute Definitions](infrastructure/compute-definitions/README.md)
+* [Chapter 2.3 - Configuring Pre-Existing Infrastructure](infrastructure/providers/pre-existing/README.md)
+* [Chapter 2.4 - Configuring AWS On-Demand Infrastructure](infrastructure/providers/on-demand-aws/README.md)
+* [Chapter 2.5 - Middleware Host Prerequisites](infrastructure/providers/hosts/README.md)
 
 
