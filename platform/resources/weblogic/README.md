@@ -24,22 +24,21 @@ This section only covers a subset of the configurations that can be performed by
 
 This part contains the following chapters:
 
-* [Chapter 4.1 - WebLogic Server Configuration](4.1.weblogicServerConfiguration/4.1.0.weblogicServerConfiguration.md)
+* [Chapter 4.1 - WebLogic Server Configuration](/platform/resources/weblogic/servers/README.md)
 
-* [Chapter 4.2 - Patching](4.2.patching/4.2.0.patching.md)
+* [Chapter 4.2 - Patching](/platform/resources/weblogic/patches/README.md)
 
-* [Chapter 4.3 - Configuring JDBC Data Sources](4.3.configureDataSource/4.3.0.configureDataSource.md)
+* [Chapter 4.3 - Configuring JDBC Data Sources](/platform/resources/weblogic/jdbc/README.md)
 
+* [Chapter 4.4 - JMS and SAF Configuration](/platform/resources/weblogic/jms/README.md)
 
-* [Chapter 4.4 - JMS and SAF Configuration](4.4.configureJmsSaf/4.4.0.configureJmsSaf.md)
-    * [4.4.1 - Persistent Store Configuration](4.4.configureJmsSaf/4.4.1.configurePersistentStores.md)
-    * [4.4.2 - Java Message Service (JMS) Configuration](4.1.configureJmsSaf/4.4.2.configureJms.md)
-    * [4.4.3 - Store and Forward (SAF) Configuration](4.1.configureJmsSaf/4.4.3.configureSaf.md)
-    
+    * [4.4.1 - Persistent Store Configuration](/platform/resources/weblogic/jms/persistent-stores/README.md)
+    * [4.4.2 - Java Message Service (JMS) Configuration](/platform/resources/weblogic/jms/modules/README.md)
+    * [4.4.3 - Store and Forward (SAF) Configuration](/platform/resources/weblogic/jms/store-and-forward/README.md)
 
-* [Chapter 4.5 - JCA Adapter Configuration](4.5.configureJcaAdapter/4.5.0.configureJcaAdapter.md)
+* [Chapter 4.5 - JCA Adapter Configuration](/platform/resources/weblogic/jca-adapters/README.md)
 
-* [Chapter 4.6 - Work Manager Configuration](4.6.workManagers/4.6.0.workManagers.md)
+* [Chapter 4.6 - Work Manager Configuration](/platform/resources/weblogic/jms/work-managers/README.md)
 
 <!-- TO DO
 * [Chapter 4.7 - Configuring Authentication Providers](4.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)

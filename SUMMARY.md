@@ -31,16 +31,16 @@
     * [Chapter 3.8 - Side by Side Upgrade](platform/upgrade/README.md)
 
 -----
-* [Part 4 - Platform Configuration](part4/part4.md)
-    * [Chapter 4.1 - Server Configuration](part4/4.1.weblogicServerConfiguration/4.1.0.weblogicServerConfiguration.md)
-    * [Chapter 4.2 - Patching](part4/4.2.patching/4.2.0.patching.md)
-    * [Chapter 4.3 - Data Source Configuration](part4/4.3.configureDataSource/4.3.0.configureDataSource.md)
-    * [Chapter 4.4 - JMS & SAF Configuration](part4/4.4.configureJmsSaf/4.4.0.configureJmsSaf.md)
-        * [4.4.1 - Persistent Store Configuration](part4/4.4.configureJmsSaf/4.4.1.configurePersistentStores.md)
-        * [4.4.2 - Java Message Service \(JMS\) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureJms.md)
-        * [4.4.3 - Store and Forward \(SAF\) Configuration](part4/4.1.configureJmsSaf/4.1.1.configureSaf.md)
-    * [Chapter 4.5 - JCA Adapter Configuration](part4/4.5.configureJcaAdapter/4.5.0.configureJcaAdapter.md)
-    * [Chapter 4.6 - Work Manager Configuration](part4/4.6.workManagers/4.6.0.workManagers.md)
+* [Part 4 - Platform Configuration](platform/resources/weblogic/README.md)
+    * [Chapter 4.1 - Server Configuration](platform/resources/weblogic/servers/README.md)
+    * [Chapter 4.2 - Patching](platform/resources/weblogic/patches/README.md)
+    * [Chapter 4.3 - Data Source Configuration](platform/resources/weblogic/jdbc/README.md)
+    * [Chapter 4.4 - JMS & SAF Configuration](platform/resources/weblogic/jms/README.md)
+        * [4.4.1 - Persistent Store Configuration](platform/resources/weblogic/jms/persistent-stores/README.md)
+        * [4.4.2 - Java Message Service \(JMS\) Configuration](platform/resources/weblogic/jms/modules/README.md)
+        * [4.4.3 - Store and Forward \(SAF\) Configuration](platform/resources/weblogic/jms/store-and-forward/README.md)
+    * [Chapter 4.5 - JCA Adapter Configuration](platform/resources/weblogic/jca-adapters/README.md)
+    * [Chapter 4.6 - Work Manager Configuration](platform/resources/weblogic/java-messaging-service/README.md)
 
 -----
 * [Part 5 - Build Automation](build/README.md)
