@@ -66,8 +66,8 @@
     * [Chapter 7.4 - Release Pipeline Dashboards](part7/7.4.pipelineDashboard/7.4.0.pipelineDashboard.md)
 
 -----
-* [Part 8 - Role-Based Access Control](part8/part8.md)
-    * [Chapter 8.1 - User Management](part8/8.1.userManagement/8.1.0.userManagement.md)
-    * [Chapter 8.2 - Role Management](part8/8.2.roleManagement/8.2.0.roleManagement.md)
-    * [Chapter 8.3 - Workspace Management](part8/8.3.workspaceManagement/8.3.0.workspaceManagement.md)
+* [Part 8 - Role-Based Access Control](administration/README.md)
+    * [Chapter 8.1 - User Management](administration/users/README.md)
+    * [Chapter 8.2 - Role Management](administration/roles/README.md)
+    * [Chapter 8.3 - Workspace Management](administration/workspaces/README.md)
 
