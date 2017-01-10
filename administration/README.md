@@ -61,6 +61,6 @@ To connect via the REST API, a user account needs to be assigned the system role
 
 This part contains the following chapters:
 
-* [Chapter 8.1 - User Management](8.1.userManagement/8.1.0.userManagement.md)
-* [Chapter 8.2 - Role Management](8.2.roleManagement/8.2.0.roleManagement.md)
-* [Chapter 8.3 - Workspace Management](8.3.workspaceManagement/8.3.0.workspaceManagement.md)
+* [Chapter 8.1 - User Management](/administration/users/README.md)
+* [Chapter 8.2 - Role Management](/administration/roles/README.md)
+* [Chapter 8.3 - Workspace Management](/administration/workspaces/README.md)
