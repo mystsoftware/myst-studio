@@ -1,5 +1,5 @@
 {
     "gitbook": "3.2.2",
-    "plugins": ["plugin-hints"],
+    "plugins": ["hints"],
     "pluginsConfig": {}
 }
