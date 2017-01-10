@@ -52,7 +52,7 @@ If at any stage, the Platform Blueprint fails validation, we would update the Pl
 
 MyST supports two methods for promoting Platform Blueprints through each environment:
 * **Manual** - Users manually trigger MyST to upgrade a Platform Instance to a new version/revision of a Platform Blueprint / Model (see xxx for details). With this approach, the user is responsible for managing the promotion process.
-* **Release Pipeline** - A [Release Pipeline](tbc) can be used for managing the process of promoting a new version/revision of a Platform Blueprint through each staging environment and into production.
+* **Release Pipeline** - A [Release Pipeline](/release/pipeline/README.md) can be used for managing the process of promoting a new version/revision of a Platform Blueprint through each staging environment and into production.
 
 #### Implementing Continuous Integration / Delivery for Platform Configuration
 Release Pipelines allow us to implement a continuous integration/delivery process for promoting platform configuration changes.
