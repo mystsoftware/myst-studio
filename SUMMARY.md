@@ -40,7 +40,7 @@
         * [4.4.2 - Java Message Service \(JMS\) Configuration](platform/resources/weblogic/jms/modules/README.md)
         * [4.4.3 - Store and Forward \(SAF\) Configuration](platform/resources/weblogic/jms/store-and-forward/README.md)
     * [Chapter 4.5 - JCA Adapter Configuration](platform/resources/weblogic/jca-adapters/README.md)
-    * [Chapter 4.6 - Work Manager Configuration](platform/resources/weblogic/java-messaging-service/README.md)
+    * [Chapter 4.6 - Work Manager Configuration](platform/resources/weblogic/work-managers/README.md)
 
 -----
 * [Part 5 - Build Automation](build/README.md)
