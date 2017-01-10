@@ -35,7 +35,7 @@ Once done click `Save`.
 If the patch is added to the Platform Blueprint prior to provisioning the Platform Instance then the patch will be automatically applied as part of the provisioning process. 
 
 If the Platform Instance has already been provisioned then we will need to apply the patch, for details on how to do this, see the section on [Patching a Platform Instance
- in Chapter 3.6 - Managing Platform Instances](../../part3/3.6.managingPlatformInstances/3.6.0.managingPlatformInstances.md) for further details.
+ in Chapter 3.6 - Managing Platform Instances](/platform/management/README.md) for further details.
 
 
 
