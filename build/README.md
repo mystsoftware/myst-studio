@@ -19,7 +19,7 @@ This part covers build automation and contains the following chapters:
 
 * [Chapter 5.2 - Configure Maven Builds](/build/maven/README.md)  
 
-* [Chapter 5.3 - Configue Automated Builds ](/build/ci/README.md)
+* [Chapter 5.3 - Configure Automated Builds ](/build/ci/README.md)
     * [Chapter 5.3.1 - Configure Jenkins Build Jobs](/build/ci/jenkins/README.md)
 
 

@@ -3,9 +3,9 @@
 * [Title and Copyright Information](README.md)
 
 -----
-* [Part 1 - Introduction to Rubicon Red MyST](part1/part1.md)
-    * [Chapter 1.1 - Overview of Platform Provisioning](part1/1.1.overviewPlatformProvisioning/1.1.0.overviewPlatformProvisioning.md)
-    * [Chapter 1.2 - Overview of Application Release Automation](part1/1.2.overviewApplicationReleaseAutomation/1.2.0.overviewApplicationReleaseAutomation.md)
+* [Part 1 - Introduction to Rubicon Red MyST](introduction/README.md)
+    * [Chapter 1.1 - Overview of Platform Provisioning](introduction/platform-provisioning/README.md)
+    * [Chapter 1.2 - Overview of Application Release Automation](introduction/application-release-automation/README.md)
 
 -----
 * [Part 2 - Infrastructure Management](infrastructure/README.md)
