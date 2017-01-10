@@ -49,12 +49,12 @@
         * [5.1.2 - Configure the MyST Studio plugin for Jenkins](part5/5.1.buildServerConfiguration/5.1.2.configureJenkinsPlugin.md)
     * [Chapter 5.2 - Configure Maven Builds](part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)
     * [Chapter 5.3 - Configure Automated Builds ](part5/5.3.configureAutomatedBuild/5.3.0.configureAutomatedBuild.md)
-        * [Chapter 5.3.1 - Configure Jenkins Build Jobs](part5/5.3.configureJenkinsBuild/5.3.1.configureJenkinsBuild.md)
+        * [Chapter 5.3.1 - Configure Jenkins Build Jobs](part5/5.3.configureAutomatedBuild/5.3.1.configureJenkinsBuildJob.md)
     * [Chapter 5.4 - Artifact Management](part5/5.4.artifactManagement/5.4.0.artifactManagement.md)
 
 -----
-* [Part 6 - Application Deployment](application/README.md)
-    * [Chapter 6.1 - Configuring Application Blueprints](application/blueprints/README.md)
+* [Part 6 - Application Deployment](deploy/application/README.md)
+    * [Chapter 6.1 - Configuring Application Blueprints](deploy/application/blueprints/README.md)
 
 -----
 * [Part 7 - Release Pipelines](release/README.md)
