@@ -51,8 +51,8 @@ This part contains the following chapters:
 * [Chapter 3.1 - Creating a Platform Blueprint](/platform/blueprints/README.md)   
 
 * [Chapter 3.2 - Creating a Platform Model](/platform/models/README.md)
-    * [3.2.1 - Creating a Platform Model for Pre-Existing Infrastructure](/platform/blueprints/pre-existing/README.md)
-    * [3.2.2 - Creating a Platform Model for AWS On Demand](/platform/blueprints/on-demand-aws/README.md)
+    * [3.2.1 - Creating a Platform Model for Pre-Existing Infrastructure](/platform/models/pre-existing/README.md)
+    * [3.2.2 - Creating a Platform Model for AWS On Demand](/platform/models/on-demand-aws/README.md)
 
 
 * [Chapter 3.3 - Provision and Manage Platform Instance](/platform/provisioning/README.md)
