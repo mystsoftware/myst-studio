@@ -59,8 +59,8 @@
 -----
 * [Part 7 - Release Pipelines](release/README.md)
     * [Chapter 7.1 - Pipeline Organization](release/pipeline/organization/README.md)
-        * [Chapter 7.1.1 - Pipeline Groups](release/pipeline/organization/groups.md)
-        * [Chapter 7.1.2 - Stream Types](release/pipeline/organization/stream-types.md)
+        * [Chapter 7.1.1 - Pipeline Groups](release/pipeline/organization/groups/README.md)
+        * [Chapter 7.1.2 - Stream Types](release/pipeline/organization/stream-types/README.md)
     * [Chapter 7.2 - Pipeline Templates](release/pipeline/templates/README.md)
     * [Chapter 7.3 - Configuring Release Pipelines](release/pipeline/README.md)
     * [Chapter 7.4 - Release Pipeline Dashboards](release/pipeline/dashboard.md)
