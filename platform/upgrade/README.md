@@ -27,6 +27,10 @@ For the purpose of this guide, we are going to introspect an existing Oracle SOA
 
 The steps for introspecting an existing Oracle SOA or BPM environment are documented in the chapter - [Creating a Platform Blueprint from an Existing WebLogic Domain](/platform/introspection/README.md).
 
+{% hint style='info' %}
+Important info: this note needs to be highlighted
+{% endhint %}
+
 ### Step 2 - Upgrade 11g Platform Blueprint to 12c
 The next step is to upgrade our 11g SOA Platform Blueprint to create a new SOA 12c Platform Blueprint. From the side menu navigate to `Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Blueprint` wizard.
 
