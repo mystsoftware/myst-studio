@@ -8,7 +8,7 @@
     * [Chapter 1.2 - Overview of Application Release Automation](part1/1.2.overviewApplicationReleaseAutomation/1.2.0.overviewApplicationReleaseAutomation.md)
 
 -----
-* [Part 2 - Infrastructure Management](part2/part2.md)
+* [Part 2 - Infrastructure Management](infrastructure/README.md)
     * [Chapter 2.1 - Environment Types](infrastructure/environment-types/README.md)
     * [Chapter 2.2 - Compute Definitions](infrastructure/compute-definitions/README.md)
     * [Chapter 2.3 - Configuring Pre-Existing Infrastructure](infrastructure/providers/pre-existing/README.md)
