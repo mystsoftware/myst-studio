@@ -126,7 +126,7 @@ There is a known bug in java that can impact the performance of the Weblogic Scr
 #### Configuring operating system users and groups
 We need to create the operating system user that owns the Oracle software on each target host. 
 
-When MyST installs the Oracle Middleware it will require Secure Shell (SSH) access to the target host. MyST supports user credentials provided either as password or as public key (see [Configuring Infrastucture Providers](/part2/2.3.preExistingInfrastructure/2.3.0.preExistingInfrastructure.md) for details).
+When MyST installs the Oracle Middleware it will require Secure Shell (SSH) access to the target host. MyST supports user credentials provided either as password or as public key (see [Configuring Infrastucture Providers](/infrastructure/providers/pre-existing/README.md) for details).
 
 ##### Groups
 We need to create the following groups on each target host:
