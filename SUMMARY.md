@@ -43,14 +43,14 @@
     * [Chapter 4.6 - Work Manager Configuration](part4/4.6.workManagers/4.6.0.workManagers.md)
 
 -----
-* [Part 5 - Build Automation](part5/part5.md)
-    * [Chapter 5.1 - Build Server Configuration](part5/5.1.buildServerConfiguration/5.1.0.buildServerConfiguration.md)
-        * [5.1.1 - Configure MyST Continuous Delivery Profile](part5/5.1.buildServerConfiguration/5.1.1.configureContinuousDeliveryProfile.md)
-        * [5.1.2 - Configure the MyST Studio plugin for Jenkins](part5/5.1.buildServerConfiguration/5.1.2.configureJenkinsPlugin.md)
+* [Part 5 - Build Automation](build/README.md)
+    * [Chapter 5.1 - Build Server Configuration](build/server/configuration/README.md)
+        * [5.1.1 - Configure MyST Continuous Delivery Profile](infrastructure/continuous-delivery-profile/README.md)
+        * [5.1.2 - Configure the MyST Studio plugin for Jenkins](build/maven/README.md)
     * [Chapter 5.2 - Configure Maven Builds](part5/5.2.configureMavenBuild/5.2.0.configureMavenBuild.md)
-    * [Chapter 5.3 - Configure Automated Builds ](part5/5.3.configureAutomatedBuild/5.3.0.configureAutomatedBuild.md)
-        * [Chapter 5.3.1 - Configure Jenkins Build Jobs](part5/5.3.configureAutomatedBuild/5.3.1.configureJenkinsBuildJob.md)
-    * [Chapter 5.4 - Artifact Management](part5/5.4.artifactManagement/5.4.0.artifactManagement.md)
+    * [Chapter 5.3 - Configure Automated Builds ](build/ci/README.md)
+        * [Chapter 5.3.1 - Configure Jenkins Build Jobs](build/ci/jenkins/README.md)
+    * [Chapter 5.4 - Artifact Management](build/artifacts/README.md)
 
 -----
 * [Part 6 - Application Deployment](deploy/application/README.md)
