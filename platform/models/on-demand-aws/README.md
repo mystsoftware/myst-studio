@@ -2,7 +2,7 @@
 
 From the side menu navigate to`Modeling` > `Platform Model`, this will display a list of existing Platform Models. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Model` wizard.
 
-![](img/ModelBasic.png)
+![](../img/ModelBasic.png)
 
 In the initial dialogue, we need to specify the following details about our Platform Model:
 
@@ -107,7 +107,7 @@ For the Platform Model we need to specify the following details:
 
 It is common to have different JVM Memory Arguments and Logging configurations in upstream dev and test environments. The `Advanced` tab allows you override the settings in the Platform Blueprint.
 
-![](img/ModelConfigureAdvanced.png)
+![](../img/ModelConfigureAdvanced.png)
 
 For the Platform Model, we need to specify the following details:
 

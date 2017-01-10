@@ -2,7 +2,7 @@
 
 From the side menu navigate to`Modeling` > `Platform Model`, this will display a list of existing Platform Models. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Model` wizard.
 
-![](img/ModelBasic.png)
+![](../img/ModelBasic.png)
 
 In the initial dialogue, we need to specify the following details about our Platform Model:
 
@@ -18,7 +18,7 @@ Once we have entered the basic details about our Platform Model click `Next`.
 ### Select Infrastructure Provider
 Next, we need to specify the Infrastructure Provider for our Platform Model. From the corresponding drop-down, select a Pre-Existing Infrastructure Provider. MyST will list all the target hosts within the Pre-Existing Infrastructure provider for the Platform Model Environment Type.
 
-![](img/PreModelInfrastructure.png)
+![](../img/PreModelInfrastructure.png)
 
 Once done, click `Next`.
 
@@ -67,7 +67,7 @@ For the Platform Model, we need to specify the following details:
 #### <div id="override">Override Default Memory and Logging Settings</div>
 It is common to have different JVM Memory Arguments and Logging configurations in upstream dev and test environments. The `Advanced` tab allows you override the settings in the Platform Blueprint.
 
-![](img/ModelConfigureAdvanced.png)
+![](../img/ModelConfigureAdvanced.png)
 
 For the Platform Model we need to specify the following details:
 

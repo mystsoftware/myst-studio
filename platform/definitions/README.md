@@ -12,8 +12,8 @@ This declarative approach to defining target state enables MyST to treat Oracle 
 
 This chapter contains the following sections:
 
-* [3.4.1 - Platform Blueprint and Model Version Control](3.4.editPlatformBlueprint/3.4.1.platformVersionControl.md)
+* [3.4.1 - Platform Blueprint and Model Version Control](/platform/definitions/version-control/README.md)
 
-* [3.4.2 - Editing Platform Blueprints and Models](3.4.editPlatformBlueprint/3.4.2.platformBlueprintEditor.md)
+* [3.4.2 - Editing Platform Blueprints and Models](/platform/definitions/editor/README.md)
 
 

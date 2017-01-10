@@ -13,9 +13,9 @@ When we create the Platform Model, we also have the ability to override many of 
 Once we have created our Platform Model we are then ready to provision a Platform Instance.
 
 This chapter contains the following sections:
-* [3.2.1 - Creating a Platform Model for Pre-Existing Infrastructure](3.2.1.createPlatformModelPreExisting.md)
+* [3.2.1 - Creating a Platform Model for Pre-Existing Infrastructure](/platform/models/pre-existing/README.md)
 
-* [3.2.2 - Creating a Platform Model for AWS On Demand](3.2.2.createPlatformModelAwsOnDemand.md)
+* [3.2.2 - Creating a Platform Model for AWS On Demand](/platform/models/on-demand-aws/README.md)
 
 
 
