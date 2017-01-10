@@ -63,7 +63,7 @@
         * [Chapter 7.1.2 - Stream Types](release/pipeline/organization/stream-types/README.md)
     * [Chapter 7.2 - Pipeline Templates](release/pipeline/templates/README.md)
     * [Chapter 7.3 - Configuring Release Pipelines](release/pipeline/README.md)
-    * [Chapter 7.4 - Release Pipeline Dashboards](release/pipeline/dashboard.md)
+    * [Chapter 7.4 - Release Pipeline Dashboards](release/pipeline/dashboard/README.md)
 
 -----
 * [Part 8 - Role-Based Access Control](administration/README.md)
