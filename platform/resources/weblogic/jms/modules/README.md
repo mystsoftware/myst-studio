@@ -6,7 +6,7 @@ When configuring the Java Messaging Service, we will typically need to configure
 
 * **JMS Servers** - We will typically want to define a JMS Server for each managed server instance in the targeted cluster. Each JMS Server will need to be pinned to a separate managed server in the cluster.
 
-* **Persistent Store** - We will need to define dedicated persistence store for each JMS Server. See [Configuring Persistent Stores](/part4/4.4.configureJmsSaf/4.4.1.configurePersistentStores.md) for further details.
+* **Persistent Store** - We will need to define dedicated persistence store for each JMS Server. See [Configuring Persistent Stores](/platform/resources/weblogic/jms/persistent-stores/README.md) for further details.
 
 
 * **JMS Module** - We will typically define a JMS Module targetted at a specific cluster. This acts as a configuration container for JMS Resources, such as:
