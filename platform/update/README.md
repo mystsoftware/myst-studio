@@ -133,4 +133,4 @@ If we click `View` under `Execution log`. This will open a window showing the ex
 
 > Note: Whilst in this example the configuration change that we applied was to add a new data source, we would follow an identical approach to modify an existing data source. The only difference being that we would update an existing data source configuration in the Platform Blueprint. MyST will determine and perform the required steps to apply the necessary changes.
 
-See [Part 4 - Platform Configuration](../../part4/part4.md) for details on how define other configuration requirements within a Platform Blueprint / Model.
+See [Part 4 - Platform Configuration](/platform/resources/weblogic/README.md) for details on how define other configuration requirements within a Platform Blueprint / Model.
