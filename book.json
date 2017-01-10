@@ -1,0 +1,10 @@
+{
+    "gitbook": "3.2.2",
+    "plugins": ["plugin-hints"],
+    "links": {
+        "sidebar": {
+            "Support": "http://support.rubiconred.com"
+        }
+    },
+    "pluginsConfig": {}
+}
