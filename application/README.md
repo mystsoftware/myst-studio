@@ -8,10 +8,10 @@ Over this journey, Application Blueprints are used to define the artifacts that 
 
 This part contains the following chapters:
 
-* [Chapter 6.1 - Configuring Application Blueprints](6.1.configureApplicationBlueprint/6.1.0.configureApplicationBlueprint.md)   
+* [Chapter 6.1 - Configuring Application Blueprints](/application/blueprints/README.md)   
 
 <!-- TO DO
-* [Chapter 6.2 - Configuring Application Models](6.2.configureApplicationModels/6.2.0.configureApplicationModels.md)   
+* [Chapter 6.2 - Configuring Application Models](/application/models/README.md)    
 -->
 
 

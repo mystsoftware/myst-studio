@@ -53,8 +53,8 @@
     * [Chapter 5.4 - Artifact Management](part5/5.4.artifactManagement/5.4.0.artifactManagement.md)
 
 -----
-* [Part 6 - Application Deployment](part6/part6.md)
-    * [Chapter 6.1 - Configuring Application Blueprints](part6/6.1.configureApplicationBlueprint/6.1.0.configureApplicationBlueprint.md)
+* [Part 6 - Application Deployment](application/README.md)
+    * [Chapter 6.1 - Configuring Application Blueprints](application/blueprints/README.md)
 
 -----
 * [Part 7 - Release Pipelines](release/README.md)
