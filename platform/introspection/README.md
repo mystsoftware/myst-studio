@@ -87,6 +87,4 @@ MyST will create the corresponding Platform Blueprint and take you to the Platfo
 
 We can now use this Platform Blueprint to provision an equivalent WebLogic Domain either on-premise or in the cloud.
 
-Alternatively, we can upgrade the Platform Blueprint to a newer version and use it provision an equivalent upgraded environment - see [Chapter 3.8 Side by Side Upgrades](../3.8.sideBySideUpgrade/3.8.0.sideBySideUpgrade.md) for further details.
-
-.
+Alternatively, we can upgrade the Platform Blueprint to a newer version and use it provision an equivalent upgraded environment - see [Chapter 3.8 Side by Side Upgrades](/platform/upgrades/README.md) for further details.
