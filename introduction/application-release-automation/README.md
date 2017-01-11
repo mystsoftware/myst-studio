@@ -15,9 +15,9 @@ The declarative approach means incremental changes are simple to make and propag
 
 
 ### Repeatable, Reliable Process for Deploying Releases 
-MyST Release Pipelines allows you to establish a standardized process for automating the deployment of Oracle Middleware applications through each stage of the software delivery lifecycle.
+MyST Release Pipelines allow you to establish a standardized process for automating the deployment of Oracle Middleware applications through each stage of the software delivery lifecycle.
 
-The powerful configuration management features in Release Pipelines enables you to combine multiple applications into a single release, as well as deploy a release across multiple WebLogic domains.
+The powerful configuration management features in Release Pipelines enable you to combine multiple applications into a single release, as well as deploy a release across multiple WebLogic domains.
 
 The Release Pipeline Dashboard provides a ‘single pane of glass’ to monitor and manage the promotion of application changes and platform configuration changes through staging environments and into Production.
 
@@ -31,6 +31,6 @@ MyST has plugins for popular continuous integration tools including Jenkins, Git
 The output of each build is stored in a software repository, such as Artifactory or Nexus. MyST automatically tracks artifact versions as they change, including the revision of the source code used for each build. 
 
 ### End-to-End Traceability
-MyST provides an inventory that shows which applications, artifacts, and configurations have been deployed to which environments along with dates, times, and versions.
+MyST provides an inventory that shows which applications, artifacts, and configurations have been deployed to which environments along with dates, times and versions.
 This provides end-to-end visibility and traceability from the version of the artifact deployed in each environment back to the revision of the source code used to build that artifact, as well as allowing detailed comparisons between what is deployed in each environment in the Release Pipeline.
 
