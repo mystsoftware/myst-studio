@@ -1,6 +1,6 @@
 ## {{ page.title }}
 
-In this section we cover how to configure an automated build job in Jenkins, this will perform the following steps:
+In this section, we cover how to configure an automated build job in Jenkins, this will perform the following steps:
 * Periodically poll our source code repository for new code commits.
 * On detection of a new code commit, initiate Maven to build and package the code.
 * Publish the packaged code (or artifact) to a Software Repository, such as Artifactory, Nexus or Archiva.
@@ -21,27 +21,26 @@ Locate the `Global properties` section and click on the `Environment variables` 
 Click `Save`. We will re-use these variables later in our automated jobs.
 
 ### Create Automated Build Job
-From with the Jenkins console, click on `New Item`. In `Item Name` enter an appropriate name for our Maven build job. Next select `Maven project`.
+From within the Jenkins console, click on `New Item`. In `Item Name` enter an appropriate name for our Maven build job. Next select `Maven project` as job type.
 
 ![](img/jenkinsNewItem.png)
 
 Click `OK`.
 
 #### Specify Source Code Location
-Under `Source Code Management` select your source code repository type (such as  Subversion or Git). For the URL enter the full path to the JDeveloper project directory in our source code repository.
+Under `Source Code Management` select your source code repository type (such as  Subversion or Git). For the URL, enter the full path to the JDeveloper project directory in our source code repository.
 
 ![](img/jenkinsNewItemSourceCode.png)
 
-We can leave the all the other defaults.
+We can leave the all the other fields with default values.
 
 > When checking out an Oracle OSB project we need to specify the project's parent directory, this is due to a constraint with the Oracle OSB Maven build which needs to take the deployment URI from the parent directory. 
 
 > This means, when Jenkins checks out the project, by default it will look for the POM file in the parent directory, so we need to specify the relative path to the POM file in the project sub-directory.
 
-You can leave all the other defaults.
 
 #### Configure Build Triggers
-Under `Build Triggers` tick `Poll SCM` and enter the schedule, for example, a schedule of `H/10 * * * *` means to poll every ten minute.
+Under `Build Triggers` tick `Poll SCM` and enter the schedule, for example, a schedule of `H/10 * * * *` means to poll every ten minutes.
 
 #### Add Pre-Build Step
 Click on `Add pre-build step` and then select `Invoke top-level Maven targets`
@@ -75,7 +74,7 @@ Click `Save`. This will take us to the main job screen for our newly created job
 ### Execute Build Job
 To test the job is executing correctly, either wait for Jenkins to initiate the job according to the specified schedule or click `Build Now` to manually trigger the job.
 
-This will take you back to the main job screen.
+This will take us back to the main job screen.
 Once initiated, click on the progress bar to see the Console Output.
 
 > The first time Jenkins executes a build job for a particular component type, Maven has to download all of the build dependencies, as a result the initial execution can take a while, future builds should be significantly faster.
