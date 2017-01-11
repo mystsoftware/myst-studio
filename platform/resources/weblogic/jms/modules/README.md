@@ -6,14 +6,14 @@ When configuring the Java Messaging Service, we will typically need to configure
 
 * **JMS Servers** - We will typically want to define a JMS Server for each managed server instance in the targeted cluster. Each JMS Server will need to be pinned to a separate managed server in the cluster.
 
-* **Persistent Store** - We will need to define dedicated persistence store for each JMS Server. See [Configuring Persistent Stores](/platform/resources/weblogic/jms/persistent-stores/README.md) for further details.
+* **Persistent Store** - We will need to define a dedicated persistence store for each JMS Server. See [Configuring Persistent Stores](/platform/resources/weblogic/jms/persistent-stores/README.md) for further details.
 
 
-* **JMS Module** - We will typically define a JMS Module targetted at a specific cluster. This acts as a configuration container for JMS Resources, such as:
+* **JMS Module** - We will typically define a JMS Module targeted at a specific cluster. This acts as a configuration container for JMS Resources, such as:
    * **Sub Deployment** - We will typically define one sub deployment per JMS Module and target it to the set of JMS servers running on the WebLogic Server cluster targeted by the JMS Module
    * **Connection Factories** - Used to create a connection with a JMS provider (i.e. queue or topic).
-   * **Uniform Distributed Queue** - A JMS queue for a JMS server. 
-   * **Uniform Distributed Topic** - A JMS Topic for a JSM server
+   * **Uniform Distributed Queue** - A JMS Queue for a JMS server. 
+   * **Uniform Distributed Topic** - A JMS Topic for a JMS server
 
 The following screenshot illustrates a typical JMS configuration within a Platform Blueprint, for a two node cluster, we would define two JMS Servers as illustrated below. Plus a corresponding JMS Module consisting of one Sub Deployment and the required connection factories, queues and topics.
 
@@ -49,9 +49,9 @@ Either select an existing JMS Module to edit or click on the `+` icon next to JM
 For each JMS Module we need to specify the following properties:
 * **Name** - Name for the JMS Module.
 
-* **Target** - The cluster or set of servers instance to which the JMS Module is targetted. It is recommended that the target is defined as a MyST property reference, for example `${[rxr.wls.Cluster-1].name}`.
+* **Target** - The cluster or set of servers instance to which the JMS Module is targeted. It is recommended that the target is defined as a MyST property reference, for example `${[rxr.wls.Cluster-1].name}`.
 
-We will typically define a JMS Module targetted at a specific cluster, as illustrated below.
+We will typically define a JMS Module targeted at a specific cluster, as illustrated below.
 
 ![](img/exampleJmsModule.png)
 
@@ -65,7 +65,7 @@ For each Sub Deployment we need to specify the following properties:
 
 * **Name** - Name for the Sub Deployment.
 
-* **Target** - The set of JMS Servers targetted by the Sub Deployment. It is recommended that the target be defined using MyST property references, for example `${[rxr.wls.JmsServer-1].name}, ${[rxr.wls.JmsServer-2].name}`.
+* **Target** - The set of JMS Servers targeted by the Sub Deployment. It is recommended that the target be defined using MyST property references, for example `${[rxr.wls.JmsServer-1].name}, ${[rxr.wls.JmsServer-2].name}`.
 
 We will typically define one sub deployment per JMS Module and target it to the set of JMS servers running on the WebLogic Server cluster/instances targeted by the JMS Module, as illustrated below.
 
@@ -75,9 +75,9 @@ We will typically define one sub deployment per JMS Module and target it to the 
 Navigate to Connection Factory under the JMS module. Either select an existing Connection Factory to edit or click on the `+` icon to add a Connection Factory.
 
 For each Connection Factory we need to specify the following properties:
-* **JMS Module** - The JMS Module to which the Connection Factory is targetted.
+* **JMS Module** - The JMS Module to which the Connection Factory is targeted.
 
-* **Sub Deployment** - The Sub Deployment to which the Connection Factory is targetted.
+* **Sub Deployment** - The Sub Deployment to which the Connection Factory is targeted.
 
 * **Name** - Name for the Connection Factory.
 
@@ -90,8 +90,8 @@ For each Connection Factory we need to specify the following properties:
 Navigate to Uniform Disributed Queue under the JMS module. Either select an existing queue to edit or click on the `+` icon to add a queue.
 
 For each Uniform Distributed Queue we need to specify the following associations:
-* **JMS Module** - The JMS Module to which the Queue is targetted.
-* **Sub Deployment** - The Sub Deployment to which the Queue is targetted.
+* **JMS Module** - The JMS Module to which the Queue is targeted.
+* **Sub Deployment** - The Sub Deployment to which the Queue is targeted.
 
 For each Uniform Distributed Queue we need to specify the following properties (if not specified WebLogic will use default values):
 * **Name** - Name of the distributed queue.
@@ -122,8 +122,8 @@ The following screen shot illustrates the configuration of Uniform Distributed Q
 Navigate to Uniform Distributed Topic under the JMS module. Either select an existing topic to edit or click on the `+` icon to add a topic.
 
 For each Uniform Distributed Topic we need to specify the following associations:
-* **JMS Module** - The JMS Module to which the Topic is targetted.
-* **Sub Deployment** - The Sub Deployment to which the Topic is targetted.
+* **JMS Module** - The JMS Module to which the Topic is targeted.
+* **Sub Deployment** - The Sub Deployment to which the Topic is targeted.
 
 For each Uniform Distributed Topic we need to specify the following properties (if not specified WebLogic will use default values):
 * **Name** - Name of the distributed topic.
