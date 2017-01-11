@@ -35,7 +35,9 @@ Click on `Edit Configuration`. In the tree view expand the domain and click on t
 
 Select the new data source in the tree view, MyST will display its current configuration. We will see that initially none of its properties have been set.
 
-> Note: An alternative way of creating a new Data Source is to select an existing data source, right click on it and select clone.
+{% hints style='tip' %}
+An alternative way of creating a new Data Source is to select an existing data source, right click on it and select clone.
+{% endhints %}
 
 ![](img/createDataSourceStep1.png)
 
