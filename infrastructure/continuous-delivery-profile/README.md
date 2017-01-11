@@ -1,7 +1,7 @@
 ## {{ page.title }}
 
 A continuous delivery profile in MyST is used to configure how MyST should connect to the other components involved in build and deployment process, specifically:
-* **Version Control System** - This contains information about the source code management system used for managing for artifact source code.
+* **Version Control System** - This contains information about the source code management system used for managing artifact source code.
 * **Continuous Integration Server** - This is the CI Server, for example, Jenkins, TeamCity, Bamboo that is used to build the artifacts from the source code.
 * **Binary Repository** - This is the Software Repository, for example, Artifactory, Nexus or Archiva that is used to store the binaries produced by the build.
 
