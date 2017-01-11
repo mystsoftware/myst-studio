@@ -1,11 +1,11 @@
 ## {{ page.title }}
 
 ### List Release Pipelines
-From the side menu navigate to`Release Management` > `Pipelines`. This will display a list of existing Release Pipelines, similar to the one below.
+From the side menu, navigate to`Release Management` > `Pipelines`. This will display a list of existing Release Pipelines, similar to the one below.
 
 ![](img/releasePipelineList.png)
 
-### Creating a New Release Pipeline
+### Creating a Release Pipeline
 Click `+ Create New`. This will open the **Release Pipeline** dialogue. 
 
 ![](img/releasePipelineCreate.png)
@@ -57,10 +57,10 @@ For each stream, we need to define its target Platform Blueprint and Version. On
 
 This is to ensure the Platform Instance deployed to at each stage of the Release Pipeline has the same configuration.
 
-As it's possible to have multiple revisions of the same Platform Blueprint version, MyST also allows us to specify how we want MyST to handle a scenario where a Platform Instance is not on the latest committed revision of the Platform Blueprint version. 
+As it is possible to have multiple revisions of the same Platform Blueprint version, MyST also allows us to specify how we want MyST to handle a scenario where a Platform Instance is not on the latest committed revision of the Platform Blueprint version. 
 
 This is controlled with the `Behavior` option, which can be one of:
-* **Update** - MyST will update the Platform Instance to the latest committed revision of the specified version of the Platform Blueprint & Model. The update action will be performed prior to deploying any Application Blueprints to the Platform Instance.
+* **Update** - MyST will update the Platform Instance to the latest committed revision of the specified version of the Platform Blueprint and Model. The update action will be performed prior to deploying any Application Blueprints to the Platform Instance.
 
 * **None** - MyST will not perform any platform specific actions against the Platform Instance.
 
@@ -100,13 +100,13 @@ When we select the Platform Model, MyST will update the Release Pipeline to show
 ### Activate Release Pipeline
 Once we have configured our Release Pipeline, we need to **activate** it before it can be used to promote a release into any environment.
 
-Once activated the pipeline will execute periodically to automatically promote changes through the pipeline (where configured to do so) as well as allow the manual promotion of releases.
+Once activated, the pipeline will execute periodically to automatically promote changes through the pipeline (where configured to do so) as well as allow the manual promotion of releases.
 
 As soon as we do this, MyST is going to start deploying our application into our CI environment because we set the CI stage to automatic.
 
 Upon activation, MyST will take us to the Release Pipeline Dashboard. Click on Refresh. We should now see that the deployment is pending.
 
-> Whilst activated, you can not edit the configuration of the release pipeline. The only changes that we can make is to the Application Model Properties. If we need to edit the Release Pipeline, we first need to deactivate it. We can then make the required changes before re-activating the pipeline.
+> Whilst activated, the release pipeline configuration cannot be edited. The only change that can be made is to the Application Model Properties. If we need to edit the Release Pipeline, we first need to deactivate it. We can then make the required changes before re-activating the pipeline.
 
 To activate a Release Pipeline Template, from the side menu navigate to`Release Management` > `Pipelines`. This will display a list of existing Release Pipelines.
 
