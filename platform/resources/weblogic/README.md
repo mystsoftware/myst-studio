@@ -24,21 +24,22 @@ This section only covers a subset of the configurations that can be performed by
 
 This part contains the following chapters:
 
-* [Chapter 4.1 - WebLogic Server Configuration](/platform/resources/weblogic/servers/README.md)
+* [WebLogic Server Configuration](/platform/resources/weblogic/servers/README.md)
 
-* [Chapter 4.2 - Patching](/platform/resources/weblogic/patches/README.md)
+* [Patch Configuration](/platform/resources/weblogic/patches/README.md)
 
-* [Chapter 4.3 - Configuring JDBC Data Sources](/platform/resources/weblogic/jdbc/README.md)
+* [Data Sources Configuration](/platform/resources/weblogic/jdbc/README.md)
 
-* [Chapter 4.4 - JMS and SAF Configuration](/platform/resources/weblogic/jms/README.md)
+* [JMS and SAF Configuration](/platform/resources/weblogic/jms/README.md)
 
-    * [4.4.1 - Persistent Store Configuration](/platform/resources/weblogic/jms/persistent-stores/README.md)
-    * [4.4.2 - Java Message Service (JMS) Configuration](/platform/resources/weblogic/jms/modules/README.md)
-    * [4.4.3 - Store and Forward (SAF) Configuration](/platform/resources/weblogic/jms/store-and-forward/README.md)
+    * [Persistent Store Configuration](/platform/resources/weblogic/jms/persistent-stores/README.md)
+    * [Java Message Service (JMS) Configuration](/platform/resources/weblogic/jms/modules/README.md)
+    * [Store and Forward (SAF) Configuration](/platform/resources/weblogic/jms/store-and-forward/README.md)
 
-* [Chapter 4.5 - JCA Adapter Configuration](/platform/resources/weblogic/jca-adapters/README.md)
 
-* [Chapter 4.6 - Work Manager Configuration](/platform/resources/weblogic/jms/work-managers/README.md)
+* [JCA Adapter Configuration](/platform/resources/weblogic/jca-adapters/README.md)
+
+* [Work Manager Configuration](/platform/resources/weblogic/jms/work-managers/README.md)
 
 <!-- TO DO
 * [Chapter 4.7 - Configuring Authentication Providers](4.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)

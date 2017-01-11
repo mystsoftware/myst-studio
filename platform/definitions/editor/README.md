@@ -89,7 +89,6 @@ To edit a property, within the TreeView browse to the component where you want t
 This will allow you to edit the property definitions for each property within the selected component. Once you have finished making your changes, click `Save`.
 
 {% hint style='danger' %}
-**Important** - 
 Saving changes at the component level only saves the changes with the current editing session. The Platform Editor allows you to make all the changes you need to the Platform Blueprint or Model, and save them to the MyST Repository all at once by clicking `Apply Changes` Alternatively, clicking `Discard Changes` will discard all the changes made within the current `Edit Session`. 
 {% endhint %}
 
@@ -119,7 +118,9 @@ The simplest way to derive the expression to reference a property is to locate t
 
 ![](img/propertyExpression.png)
 
-**Note:** The Platform Editor needs to be in Edit mode.
+{% hint style='into' %}
+The Platform Editor needs to be in Edit mode.
+{% endhint %}
 
 #### Understand the MyST Property Path
 In general, a dot notation is used to traverse the property hierarchy. For example, `a.b.c` would mean locate `c` within `b` within `a`. 

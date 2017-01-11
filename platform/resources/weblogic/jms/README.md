@@ -21,9 +21,9 @@ When configuring the Java Messaging Service (JMS) and Store and Forward (SAF) se
    * **SAF Imported Destinations** - which encapsulate the configuration for specific remote JMS queues that an SAF Agent will interact with
    
 This chapter details how to configure JMS and SAF resources and contains the following sections:
-* [4.4.1 - Persistent Store Configuration](/platform/resources/weblogic/jms/persistent-stores/README.md)
-* [4.4.2 - Java Message Service (JMS) Configuration](/platform/resources/weblogic/jms/modules/README.md)
-* [4.4.3 - Store and Forward (SAF) Configuration](/platform/resources/weblogic/jms/store-and-forward/README.md)
+* [Persistent Store Configuration](/platform/resources/weblogic/jms/persistent-stores/README.md)
+* [Java Message Service (JMS) Configuration](/platform/resources/weblogic/jms/modules/README.md)
+* [Store and Forward (SAF) Configuration](/platform/resources/weblogic/jms/store-and-forward/README.md)
 
 
 
