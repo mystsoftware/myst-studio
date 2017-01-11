@@ -38,11 +38,10 @@ When we select `File System` as our persistence strategy, MyST will automaticall
 | BPMJMSFileStore_auto_*[n]* | soa_server*[n]* | One per SOA Managed Server |
 | SOAJMSFileStore_auto_*[n]* | soa_server*[n]* | One per SOA Managed Server |
 
-Where `[n]` is rep
 
 
 #### Configure a File Persistence Store
-We can configure additional File Persistence Store in the Platform Blueprint. To do this, open the Platform Blueprint Editor and navigate to `Blueprint > WebLogic Domains > [domain_name] > Persistence Stores > File Stores`. Expand this component to see a list of currently defined file stores.
+We can configure additional File Persistence Stores in the Platform Blueprint. To do this, open the Platform Blueprint Editor and navigate to `Blueprint > WebLogic Domains > [domain_name] > Persistence Stores > File Stores`. Expand this component to see a list of currently defined file stores.
 
 Either select an existing File Store to edit or click on the `+` icon to add a File Store.
 
@@ -86,7 +85,7 @@ WebLogic 10.3.6 and later support persistence to a JDBC-enabled database. Howeve
 | Patch ID | File | Notes |
 | -------- | ---- | ----- |
 | WPI2 | p19565095_1036_Generic.zip | Create domain using WLST produces incorrect JMSSERVER name in 50% of the invocations. |
-| IHFB | p16063328_1036_Generic.zip | BEA-149500 ERROR WITH JDBC TLOG STORE
+| IHFB | p16063328_1036_Generic.zip | BEA-149500 ERROR WITH JDBC TLOG STORE |
 | BADF | p16104758_1036_Generic.zip | LIFECYCLESHUTDOWNSEQUENCETEST fails with the ILLEGALSTATEEXCEPTION error. |
 
 ##### WebLogic 12.1.3 Patches
