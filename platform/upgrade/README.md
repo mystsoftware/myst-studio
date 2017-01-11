@@ -6,8 +6,8 @@ In order to get the latest bug fixes and feature enhancements from your Oracle p
 <!-- TODO: The above link should ideally go to the patching sub-section -->
 
 * **Upgrades**: An upgrade will introduce a significant number of bug fixes and major enhancements in one hit. Without MyST, an upgrade is usually resource intensive and risky. With MyST, an upgrade can be automated which significantly de-risks the upgrade process. This section primarily focuses on this type of upgrade. Upgrades can be either:
-* **Side-by-Side**: also known as *Out-of-place* or *Blue/Green*
-* or **Direct**: also known as *In-place*
+ * **Side-by-Side**: also known as *Out-of-place* or *Blue/Green*
+ * or **Direct**: also known as *In-place*
 
 ### Side-By-Side Upgrades
 Most organizations, when migrating to Oracle SOA 12c or Oracle BPM 12c, choose to perform a side-by-side upgrade as it:
@@ -181,7 +181,7 @@ From the `Actions` menu for any Platform Instance, there is the option to `Termi
 {% hint style='danger' %}
 Warning
 {% endhint %}
-Please be aware when this is performed, existing application state will be lost. Do not use this approach for an application architecture with long running processes. In this case, it is advisable to perform a State-preserving Upgrade which can be facilitated by raising a request to [MyST Support](http://support.rubiconred.com).
+>Please be aware when this is performed, existing application state will be lost. Do not use this approach for an application architecture with long running processes. In this case, it is advisable to perform a State-preserving Upgrade which can be facilitated by raising a request to [MyST Support](http://support.rubiconred.com).
 
 
 When ready to do a fresh direct upgrade to an instance associated with the upgraded Platform Blueprint, simply trigger the `Terminate` then perform a `Reprovision`.
