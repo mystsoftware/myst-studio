@@ -181,8 +181,10 @@ With these minor edits, we are now ready to upgrade our environments. Typically 
 From the `Actions` menu for any Platform Instance there is the option to `Terminate`. This will destroy the WebLogic Domain on the file system to allow for it to be upgrade. This approach is described in more detail in the section on [Managing Platform Instances](/platform/management/README.md).
 
 {% hint style='danger' %}
-Please be aware when this is performed you will loose any existing application state. Do not use this approach for an application architecture with long running processes. In this case, it is advisable to perform a State-preserving Upgrade which can be facilitated by raising a request to [MyST Support](http://support.rubiconred.com).
+Warning
 {% endhint %}
+> 
+Please be aware when this is performed you will loose any existing application state. Do not use this approach for an application architecture with long running processes. In this case, it is advisable to perform a State-preserving Upgrade which can be facilitated by raising a request to [MyST Support](http://support.rubiconred.com).
 
 When ready to do a fresh direct upgrade to an instance associated with the upgraded Platform Blueprint, simply trigger the `Terminate` then perform a `Reprovision`.
 
