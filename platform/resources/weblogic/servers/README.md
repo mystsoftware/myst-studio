@@ -66,7 +66,7 @@ By default WebLogic Server startup classes are run after the server initializes 
 > Note: The startup or shutdown class must be on the classpath of each server to which it is assigned. See [System Application Blueprints](tbc) for further details.
 
 ### Configure JTA Timeout
-To set the JTA Timeout in the Platform Blueprint, open the Platform Blueprint Editor and navigate to `Blueprint > WebLogic Domains > [domain_name].
+To set the JTA Timeout in the Platform Blueprint, open the Platform Blueprint Editor and navigate to `Blueprint` > `WebLogic Domains` > `[domain_name]`.
 
 Click `Edit` and enable advanced properties for the component. Scroll to the bottom of the component edit view and update the `MyST Extension` with the following snippet:
 
