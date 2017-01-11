@@ -9,7 +9,7 @@ Pipeline Templates allow us to pre-define a set of ordered stages with promotion
 So in the above example, we could define two templates: one for project releases and a second for patch releases.
 
 ### List Release Pipeline Templates
-From the side menu navigate to`Release Management` > `Pipeline Template`. This will display a list of existing Release Pipeline Templates, similar to the one below.
+From the side menu, navigate to`Release Management` > `Pipeline Template`. This will display a list of existing Release Pipeline Templates, similar to the one below.
 
 ![](img/releasePipelineTemplatesList.png)
 
@@ -17,7 +17,6 @@ From the side menu navigate to`Release Management` > `Pipeline Template`. This w
 Click `+ Create New`. This will open the **Release Pipeline Template** dialogue. Specify the following values:
 
 * **Name** - Shorthand name for the Pipeline Template.
-
 * **Description** - A longer description of the Pipeline Template.
 
 ![](img/releasePipelineTemplateCreate.png)
@@ -32,7 +31,6 @@ To add a stage, click `Add Stage`. This will open the **Stage** dialogue.
 For each stage, we need to specify the following values:
 
 * **Name** - Shorthand name for the stage.
-
 * **Description** - A longer description of the stage.
 
 * **Environment** - The Environment Type to be used for this stage. Only Platform Models with the same environment type will be available for use in this stage.
