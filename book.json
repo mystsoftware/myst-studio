@@ -1,9 +1,12 @@
 {
     "gitbook": "3.2.2",
-    "plugins": ["hints"],
+    "plugins": [
+        "hints",
+        "numbered-headings"
+    ],
     "pluginsConfig": {
-     "theme-default": {
-        "showLevel": true
-      }
+        "theme-default": {
+            "showLevel": true
+        }
     }
 }
