@@ -28,7 +28,7 @@ A common use case for multiple Release Streams would be if you wanted to perform
 For each stream, we would specify zero, one or more Application Blueprints that we want to deploy.
 
 #### Deployment Platforms
-For each Stage / Release Stream combination we need to specify the Platform Instances that we want to target the deployment of the corresponding Platform Blueprint and Application Blueprints to.
+For each Stage / Release Stream combination, we need to specify the Platform Instances that we want to target the deployment of the corresponding Platform Blueprint and Application Blueprints to.
 
 For example, if we have the stages *CI*, *SIT*, *UAT* and *PROD* in our Release Pipeline and a single stream *SOA* to manage the deployment of Oracle SOA artifacts, then we would need to specify the following four deployment targets:
 
@@ -37,7 +37,7 @@ For example, if we have the stages *CI*, *SIT*, *UAT* and *PROD* in our Release 
 * UAT SOA Platform
 * PROD SOA Platform 
 
-And for every additional stream, we would need to add an additional four Platform Instances.
+And for every additional stream, we would need to specify an additional four Platform Instances.
 
 #### Pipeline Groups and Stream Types
 Pipeline Groups and Stream Types are user defined. These allows us to categorize each Release Pipeline and Stream and are used for reporting purposes. 
