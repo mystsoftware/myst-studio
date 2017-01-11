@@ -114,7 +114,7 @@ A Direct Upgrade involves taking an existing platform including all of its confi
 As a general rule, Side-by-Side Upgrades are the safest and simplest type of upgrade to execute. However, there are some circumstances where a Direct Upgrade may be the only option.
 
 1. When we are unable to do a Side-by-Side upgrade due to unavailablity of hardware resources to support it.
-2. When we have a lot of model-specific settings in MyST Studio and want to avoid re-creating your Platform Models
+2. When we have a lot of model-specific settings in MyST Studio and want to avoid re-creating the Platform Models
 3. When our application is architected in a way that we are unable to do a side-by-side upgrade.
 
 #### Types of Direct Upgrades
