@@ -12,11 +12,11 @@ For each platform instance, we create a separate platform model to define all th
 
 Splitting the *“platform definition”* into two layers provides infrastructure independence, enabling you to provision consistent middleware platforms across all environments regardless of infrastructure type, on premise and on cloud.
 
-##### Note:
-
+{% hint style='tip' %}
 Most Oracle Middleware products run on Oracle WebLogic Application Server. WebLogic supports the concept of a Domain to group related clusters and servers. Some organizations use separate domains for each business unit or capability, others use it to group computational workload. How it is used is up to the organization. 
 
-For Oracle products that run on WebLogic, a *Platform Blueprint represents a logical definition of a WebLogic domain*. For this reason, it is typical for a separate blueprint to be created in MyST Studio for each unique WebLogic domain type in an enterprise (e.g. SOA, ADF)
+For Oracle products that run on WebLogic, a Platform Blueprint represents a logical definition of a WebLogic domain. For this reason, it is typical for a separate blueprint to be created in MyST Studio for each unique WebLogic domain type in an enterprise (e.g. SOA, ADF)
+{% endhint %}
 
 ### Introspect Existing WebLogic Domains
 
