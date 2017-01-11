@@ -132,7 +132,7 @@ If you do not have Platform Blueprint and Models for your existing environments 
 
 When performing a fresh direct upgrade for a platform instance, you simply terminate the instance, update the version number within the Platform Blueprint then re-provision the instance.
 
-The end-to-end process consists of three simple steps and can be performed in minutes.
+The end-to-end process consists of two simple steps and can be performed in minutes.
 
 For the purpose of this guide, we are going to upgrade an existing Oracle Service Bus 12.1.3 environment to 12.2.1 using a Fresh Direct Upgrade approach.
 
@@ -152,10 +152,6 @@ Change the version to `12.2.1.0.0` (or another version of you choice) and click 
 
 ![](img/directChangeVersion1221.png)
 
-When prompted, enter a description for the change.
-
-![](img/directConfirmUpgradeEdit.png)
-
 ##### View/Edit Platform Blueprint
 
 MyST will automatically convert our 12.1.3 Platform Blueprint to an equivalent 12.2.1 Platform Blueprint whilst preserving the custom configurations that were previously applied to our 11g environment. This includes configurations such as JDBC Data Sources, File Stores, JMS Servers, JMS Modules, JCA Adapters and SAF Agents.
@@ -166,31 +162,19 @@ If we look closely at our 12c Platform Blueprint, we can see that there is some 
 If you are you using a custom `Home Directory` under `Middleware Settings` you must change this to be unique before performing an upgrade. For example, if it is set to `/opt/my-company/12.1.3.0.0/soa` you should change it to `/opt/my-company/12.2.1.0.0/soa`. Remember, you can use a reference to the version `${[rxr.wls.Fmw-1].version}` e.g. `/opt/my-company/${[rxr.wls.Fmw-1].version}/soa`. If you were already using this property reference then it would have changed the path automatically and you don't need to do anything. Once the property reference is set within the `Home Directory` you can be sure it will update automatically for future upgrades. Make sure that any other property references to the version in the configuration which are hardcoded are using a reference, whilst it may not cause the upgrade to fail it will be a source of confusion for the upgraded platform. 
 {% endhint %}
  
-   that the number of Data Sources is different. In our 11g Platform Blueprint we had 12 JDBC Data Sources, but in our 12c Platform Blueprint we have 15 JDBC Data Sources (see box **1** outlined in red above). This is because in SOA 12c there have been changes to database schemas and corresponding JDBC Data Sources required by the Oracle SOA Platform.
+Once you are happy with the upgraded Platform Blueprint click on `Save & Commit`. When prompted, enter a description for the change.
 
-When upgrading to 12c, MyST has the knowledge to remove the no longer needed 11g data sources, and create the additional ones required for 12c. If we look more closely, we will see MyST has preserved our three custom data sources, which are colored white (as opposed to light green).
+![](img/directConfirmUpgradeEdit.png)
 
-In addition, we can see that when the SOA 11gR1 domain was originally created, the middleware version number was specified as part of the Domain Name as its still set to `acme11g_domain`. The corresponding directory locations `Domain Home`, `Domain Aserver Home`, etc, also have this in their file path (see box **2** outlined in red above).
+With these minor edit, we are now ready to upgrade our environments. Typically when upgrading, we will want to create multiple non-Productions, such as DEV, SIT, PRE-PROD and PROD to test and validate that the migrated code is performing as expected before promoting into Production. With MyST we can use the same Platform Blueprint to upgrade all these environments, ensuring each environment is consistent with Production.
 
-![](img/edit12cPlatformBlueprint1.png)
+#### Step 2 - Terminate and Re-provision the existing environment
 
-To change this, place the Platform Blueprint into `Edit` mode and update the WebLogic Domain name to `acme12c_domain` and click `Save`.
+From the `Actions` menu for any Platform Instance there is the option to `Terminate`. This will destroy the WebLogic Domain on the file system to allow for it to be upgrade. This is described in more detail in the section on [Managing Platform Instances](/platform/management/README.md).
 
-We can see that MyST automatically updates all the other values that reference this property.
+{% hint style='danger' %}
+Please be aware when this is performed you will loose any existing application state. You should not use this approach for an application architecture with long running processes. In this cases, you just do a State-preserving Direct Upgrade instead of a Fresh Direct Upgrade.
+{% endhint %}
 
-![](img/edit12cPlatformBlueprint2.png)
-
-With this minor edit, we are now ready to provision our new 12c environment. Typically when migrating to 12c, we will want to create multiple non-Productions, such as DEV, SIT, PRE-PROD and PROD to test and validate that the migrated code is performing as expected before promoting into Production.
-
-With MyST we can use the same Platform Blueprint to provision all these environments, ensuring each environment is consistent with Production. For each environment we want to provision, we need to create a Platform Model. This essentially maps the Platform Blueprint to the target infrastructure and captures environment specific configuration details, such as credentials.
-
-##### Step 2 - Terminate existing environment
-
-From the `Actions` menu for any Platform Instance there is the option to `Terminate`. This will destroy the WebLogic Domain on the file system to allow for it to be re-provisioned. This is described in more detail in the section on [Managing Platform Instances](/platform/management/README.md).
-
-When you are ready to upgrade an instance associated with the upgraded Platform Blueprint, you can do a terminate followed by a re-provision.
-
-#### Step 3 - Reprovision the Platform Model
-
-Once we have finalized our migrated Platform Blueprint, the next step is to....
+When ready to do a Fresh Direct Upgrade to an instance associated with the upgraded Platform Blueprint, simply trigger the `Terminate` then perform a `Reprovision`.
 
