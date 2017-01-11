@@ -120,7 +120,7 @@ The simplest way to derive the expression to reference a property is to locate t
 ![](img/propertyExpression.png)
 
 {% hint style='info' %}
-The Platform Editor needs to be in Edit mode.
+The Platform Editor needs to be in Edit mode in order to be able to view a property reference expression.
 {% endhint %}
 
 #### Understand the MyST Property Path
