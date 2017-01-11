@@ -126,7 +126,7 @@ There is two types of Direct Upgrades
 
 #### Direct Upgrades made Simple
 
-Before performing a Fresh Direct Upgrade with MyST you will need an existing Platform Blueprint and one or more Platform Models based off that.
+Before performing a fresh direct upgrade with MyST you will need an existing Platform Blueprint and one or more Platform Models based off that.
 
 If you do not have a Platform Blueprint and Models for your existing environments you can [introspect them using MyST](/platform/introspection/README.md).
 
