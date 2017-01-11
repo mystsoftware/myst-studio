@@ -27,8 +27,8 @@ Next, we need to add the required artifacts to our application blueprint. Click 
 ![](img/applicationBlueprintAddArtifacts.png)
 
 For each artifact, MyST displays the following information:
-* **Artifact Name** - The artifact name
-* **Artifact Group Id** - The maven group id of the artifact.
+* **Name** - The artifact name
+* **Group Id** - The maven group id of the artifact.
 * **Artifact Id** - The maven artifact id of the artifact.
 * **Component Type** - This is the type of artifact, for example, OSB, SCA, MDS, JAR and so on.
 
@@ -41,13 +41,13 @@ Once happy with the selection click `Add`. This will return us to our Applicatio
 ![](img/applicationBlueprintCreateWithArtifacts.png)
 
 For each artifact selected, we need to specify 
-* **Artifact Version** - This is the artifact binary version. 
-* **Build No** - The build number of the artifact. Notice it defaults to the LATEST build number. If we want to lock the artifact down to a specific build we can select a specific Build number.
+* **Version** - This is the artifact binary version. 
+* **Build No** - The build number of the artifact. Notice it defaults to the LATEST build number. If we want to lock the artifact down to a specific build, we can select a specific Build number.
 
 Once we are happy with the content of our Application Blueprint, click `Save`.
 
 ### Editing Application Blueprint
-Over the Application Lifecycle we can have multiple **versions** of an Application Blueprint, though typically we would have a maximum of two versions under development at any point in time: one for main development (like a trunk in version control) and another one optionally for patches (like a production fix for an earlier version of the Application Blueprint deployed into Production).
+Over the Application Lifecycle, we can have multiple **versions** of an Application Blueprint. Typically we would have a maximum of two versions under development at any point in time: one for main development (like a trunk in version control) and another one optionally for patches (like a production fix for an earlier version of the Application Blueprint deployed into Production).
 
 Each time we edit the artifacts within an Application Blueprint Version, or a new build of an artifact contained within an Application Blueprint is published, MyST automatically creates a new revision. These revisions are tracked through the Release Pipeline so we can determine exactly what is deployed into each environment at any point in time.
 
@@ -62,7 +62,7 @@ Within the editor we can update the Application Blueprint **Name** and **Descrip
 We can also add, delete or edit the list of artifacts contained within an Application Blueprint. These changes are version specific and will result in a new revision of the Application Blueprint.
 
 #### Create New Application Blueprint Version
-To create a new version of an Application Blueprint, first, we need to open an existing version of the Application Blueprint. 
+To create a new version of an Application Blueprint, we need to open an existing version of the Application Blueprint. 
 
 Select the option `Save as new version`. MyST will prompt us to provide the new version number for the Application Blueprint. Once entered, click `Save`.
 

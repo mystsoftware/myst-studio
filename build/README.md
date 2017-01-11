@@ -2,7 +2,7 @@
 
 Application Release Automation starts with building the artifacts that will be deployed into each of our staging environments and eventually production.
 
-The build process is orchestrated by a CI Server, such as Jenkins, TeamCity or Bamboo. During this process, the CI Server will periodically poll the source code repository, such as Subversion or Git, for any code changes (or commits) since the previous build. 
+The build process is orchestrated by a Continuous Integration (CI) Server, such as Jenkins, TeamCity or Bamboo. During this process, the CI Server will periodically poll the source code repository, such as Subversion or Git, for any code changes (or commits) since the previous build. 
 
 On discovering a new version of the source code, the CI Sever will check out the latest committed version of the code into a temporary directory and invoke the necessary steps to build the code.  The build itself is typically performed using [Maven](https://en.wikipedia.org/wiki/Maven), which has become the default build tool for Oracle Middleware.
 
