@@ -88,11 +88,18 @@ To edit a property, within the TreeView browse to the component where you want t
 
 This will allow you to edit the property definitions for each property within the selected component. Once you have finished making your changes, click `Save`.
 
-**Important** - Saving changes at the component level only saves the changes with the current editing session. The Platform Editor allows you to make all the changes you need to the Platform Blueprint or Model, and save them to the MyST Repository all at once by clicking `Apply Changes` Alternatively, click `Discard Changes` to discard all the changes made within the current `Edit Session`. 
+{% hint style='danger' %}
+**Important** - 
+Saving changes at the component level only saves the changes with the current editing session. The Platform Editor allows you to make all the changes you need to the Platform Blueprint or Model, and save them to the MyST Repository all at once by clicking `Apply Changes` Alternatively, clicking `Discard Changes` will discard all the changes made within the current `Edit Session`. 
+{% endhint %}
 
-> Any edits made to a Property Definition which have not yet been saved to the MyST Repository are highlighted in yellow to indicate this.
+{% hint style='tip' %}
+Any edits made to a Property Definition which have not yet been saved to the MyST Repository are highlighted in yellow to indicate this.
+{% endhint %}
 
-**Every time you apply changes to a blueprint version, a new revision is created of the blueprint. You can only view the latest revision of the blueprint. However, if the latest revision of the blueprint is not the same as the revision used to provision an instance, you will need to update the instance from the Platform Model or Platform Instances page.**
+{% hint style='info' %}
+Every time you apply changes to a blueprint version, a new revision is automatically created of the blueprint. From the  editor, we can only view the latest revision of the blueprint. If the latest revision of the blueprint is not the same as the last revision used to provision or change an instance, we will need to update the Platform Model before the new revision changes are applied.
+{% endhint %}
 
 ### Property Expansion in MyST
 To make editing and maintenance of Platform Blueprints easier, MyST supports property expansion when defining the value of a property. This allows us to define the value of a property based on the value of one or more other properties.
