@@ -2,7 +2,7 @@
 
 Configuring JDBC Data Sources in MyST is a two stage process. 
 * First, define the Data Source in the Platform Blueprint. Here we define the common and default configuration details for the Data Source. 
-* Second, define the environment specific details in each of the Platform Models. For example the database URL and connection credentials.
+* Second, define the environment specific details in each of the Platform Models, for example the database URL and connection credentials.
 
 ### Configuring Data Source in Platform Blueprint
 

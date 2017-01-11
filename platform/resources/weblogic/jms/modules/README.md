@@ -12,8 +12,8 @@ When configuring the Java Messaging Service, we will typically need to configure
 * **JMS Module** - We will typically define a JMS Module targetted at a specific cluster. This acts as a configuration container for JMS Resources, such as:
    * **Sub Deployment** - We will typically define one sub deployment per JMS Module and target it to the set of JMS servers running on the WebLogic Server cluster targeted by the JMS Module
    * **Connection Factories** - Used to create a connection with a JMS provider (i.e. queue or topic).
-   * **Uniform Distributed Queue** - A JMS queue for a JMS server. 
-   * **Uniform Distributed Topic** - A JMS Topic for a JSM server
+   * **Uniform Distributed Queue** - A JMS Queue for a JMS server. 
+   * **Uniform Distributed Topic** - A JMS Topic for a JMS server
 
 The following screenshot illustrates a typical JMS configuration within a Platform Blueprint, for a two node cluster, we would define two JMS Servers as illustrated below. Plus a corresponding JMS Module consisting of one Sub Deployment and the required connection factories, queues and topics.
 
