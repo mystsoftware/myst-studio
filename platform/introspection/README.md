@@ -10,13 +10,13 @@ This supports a number of use cases, including:
 
 * **Manage Existing Platform Instance** - When introspecting a Platform instance, we have the option of creating a *Platform Model* for the introspected WebLogic Domain, we can then use MyST to manage on-going configuration changes and code deployments to the introspected platform.
 
-* **Replicate PROD Environment** - We can introspect an existing 11g/12c environment, for example, Production and then use this to provision equivalent non-prod environments (e.g. DEV, SIT, UAT, PRE), and thus quickly ensure all environments are identically configured and eliminate configuration drift.
+* **Replicate PROD Environment** - We can introspect an existing 11g/12c environment, for example Production, and then use this to provision equivalent non-prod environments (e.g. DEV, SIT, UAT, PRE), and thus quickly ensure that all environments are identically configured and eliminate configuration drift.
 
 The end-to-end process consists of three simple steps and can be performed in minutes.
 
 ### Step 1. Identify WebLogic Domain to Introspect
 
-For the purpose of this documentation, we are going to introspect an existing Oracle SOA 11.1.1.7 environment running on two VMs, that consists of a 2 node SOA Cluster and 2 node OSB Cluster. As illustrated in the WebLogic Admin Console.
+For the purpose of this documentation, we are going to introspect an existing Oracle SOA 11.1.1.7 environment running on two VMs, that consists of a 2 node SOA Cluster and 2 node OSB Cluster, as illustrated in the WebLogic Admin Console.
 
 ![](img/11gAdminConsole.png)
 
@@ -28,7 +28,7 @@ Before we can introspect an existing domain we need to provide details of the ph
 
 To do this in MyST, we need to add each WebLogic host to the Pre-Existing Infrastructure Providers. From the side menu navigate to`Infrastructure` > `Infrastructure Providers`, this will display a list of existing Infrastructure Providers. From here, open the required Infrastructure Provider (or simply add a new one).
 
-This will open the **Infrastructure Providers** screen, from here we need to define a host for each of our existing WebLogic hosts. To do this, click `Add Host`.
+This will open the **Infrastructure Providers** screen. From here we need to define a host for each of our existing WebLogic hosts. To do this, click `Add Host`.
 
 ![](img/addHost.png)
 
