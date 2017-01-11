@@ -17,7 +17,7 @@ Click on the `+` icon next to JCA Adapters (outlined in red). This will create a
 
 Select the new JCA Adapter in the tree view, MyST will display its current configuration. Initially, none of its properties will be set. Click `Edit` to put the JCA Adapter into edit mode.
 
-Set the component name to the name JCA Adapter type we want to configure, as shown in the WebLogic console. In the example below (outlined in red), we have set the component name to `DbAdapter`.
+Set the component name to the JCA Adapter type we want to configure, as shown in the WebLogic console. In the example below (outlined in red), we have set the component name to `DbAdapter`.
 
 ![](img/createJcaAdapterStep2.png)
 
