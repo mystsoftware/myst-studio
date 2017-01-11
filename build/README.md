@@ -12,15 +12,15 @@ In addition, details of the artifact are registered with MyST, allowing MyST to 
 
 This part covers build automation and contains the following chapters:
 
-* [Chapter 5.1 - Server Configuration](/build/server/configuration/README.md)
-    * [5.1.1 - Configure MyST Continuous Delivery Profile](/infrastructure/continuous-delivery-profile/README.md)
-    * [5.1.2 - Configure the MyST Studio plugin for Jenkins](/build/server/configuration/jenkins/README.md)
+* [Server Configuration](/build/server/configuration/README.md)
+    * [Configure MyST Continuous Delivery Profile](/infrastructure/continuous-delivery-profile/README.md)
+    * [Configure the MyST Studio plugin for Jenkins](/build/server/configuration/jenkins/README.md)
 
 
-* [Chapter 5.2 - Configure Maven Builds](/build/maven/README.md)  
+* [Configure Maven Builds](/build/maven/README.md)  
 
-* [Chapter 5.3 - Configure Automated Builds ](/build/ci/README.md)
-    * [Chapter 5.3.1 - Configure Jenkins Build Jobs](/build/ci/jenkins/README.md)
+* [Configure Automated Builds ](/build/ci/README.md)
+    * [Configure Jenkins Build Jobs](/build/ci/jenkins/README.md)
 
 
-* [Chapter 5.4 - Artifact Management](/build/artifacts/README.md)
+* [Artifact Management](/build/artifacts/README.md)

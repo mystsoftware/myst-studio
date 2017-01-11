@@ -8,8 +8,8 @@ Prior to automating the build we need to configure MyST to connect to the other 
 In addition, as part of the build process, we require the CI Server to publish details of each artifact build to MyST Studio. To enable this we need to install and configure the MyST Studio plugin.
 
 This chapter contains the following sections:
-* [5.1.1 - Configure MyST Continuous Delivery Profile](/infrastructure/continuous-delivery-profile/README.md)
-* [5.1.2 - Configure the MyST Studio plugin for Jenkins](/build/server/configuration/jenkins/README.md)
+* [Configure MyST Continuous Delivery Profile](/infrastructure/continuous-delivery-profile/README.md)
+* [Configure the MyST Studio plugin for Jenkins](/build/server/configuration/jenkins/README.md)
 
 
 
