@@ -51,9 +51,9 @@ For example, in the above scenario, we could define two templates: one for proje
 
 This part contains the following chapters:
 
-* [Chapter 7.1 - Pipeline Organization](/release/pipeline/organization/README.md)   
-    * [Chapter 7.1.1 - Pipeline Groups](/release/pipeline/organization/groups/README.md)   
-    * [Chapter 7.1.2 - Stream Types](/release/pipeline/organization/stream-types/README.md)
-* [Chapter 7.2 - Pipeline Templates](/release/pipeline/templates/README.md)
-* [Chapter 7.3 - Configuring Release Pipelines](/release/pipeline/README.md)
-* [Chapter 7.4 - Release Pipeline Dashboards](/release/pipeline/dashboard/README.md)
+* [Pipeline Organization](/release/pipeline/organization/README.md)   
+    * [Pipeline Groups](/release/pipeline/organization/groups/README.md)   
+    * [Stream Types](/release/pipeline/organization/stream-types/README.md)
+* [Pipeline Templates](/release/pipeline/templates/README.md)
+* [Configuring Release Pipelines](/release/pipeline/README.md)
+* [Release Pipeline Dashboards](/release/pipeline/dashboard/README.md)
