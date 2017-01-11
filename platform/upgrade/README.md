@@ -25,6 +25,10 @@ The end-to-end process consists of three simple steps and can be performed in mi
 ### Step 1 - Introspect SOA / BPM 11gR1 Domain
 For the purpose of this guide, we are going to introspect an existing Oracle SOA 11.1.1.7 environment running on two VMs, that consists of a 2 node SOA Cluster and 2 node OSB Cluster.
 
+{% hint style='tip' %}
+Although this example is for an 11g to 12c upgrade, the approach would be consistent for alternative version upgrades such as an upgrade from 12.1.3.0.0 to 12.2.1.0.0 or from 12.2.1.0.0 to 12.2.1.1.0.
+{% endhint %}
+
 The steps for introspecting an existing Oracle SOA or BPM environment are documented in the chapter - [Creating a Platform Blueprint from an Existing WebLogic Domain](/platform/introspection/README.md).
 
 {% hint style='tip' %}
