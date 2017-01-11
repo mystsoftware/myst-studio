@@ -126,5 +126,5 @@ MyST will display a Summary screen showing all the key inputs specified in the P
 
 ![](img/AwsModelSummary.png)
 
-Once done, click `Finish`. MyST will create the corresponding Platform Model and take you to the Platform Model Editor where you can make additional changes if required. See [Editing Platform Models](../3.4.editPlatformBlueprint/3.4.0.editPlatformBlueprint.md) for further details.
+Once done, click `Finish`. MyST will create the corresponding Platform Model and take you to the Platform Model Editor where you can make additional changes if required. See [Editing Platform Models](/platform/definitions/README.md) for further details.
 

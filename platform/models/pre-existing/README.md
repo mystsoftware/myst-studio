@@ -84,4 +84,4 @@ MyST will display a Summary screen showing all the key inputs specified in the P
 
 ![](img/PreModelSummary.png)
 
-Once done, click `Finish`. MyST will create the corresponding Platform Model and take you to the Platform Model Editor where you can make additional changes if required. See [Editing Platform Models](/part3/editPlatformBlueprint/editPlatformBlueprint.md) for further details.
+Once done, click `Finish`. MyST will create the corresponding Platform Model and take you to the Platform Model Editor where you can make additional changes if required. See [Editing Platform Models](/platform/definitions/README.md) for further details.
