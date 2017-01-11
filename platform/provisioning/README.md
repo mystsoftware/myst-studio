@@ -3,7 +3,9 @@
 ### Provision Platform Instance
 Once we have created our Platform Model, we are now ready to provision it. 
 
-> Before we can provision a Platform Instance, there needs to be a committed version of the corresponding Platform Blueprint and Platform Model. See [Platform Blueprint and Model Versioning](/platform/definitions/version-control/README.md) for more details.
+{% hint style='info' %}
+Before we can provision a Platform Instance, there needs to be a committed version of the corresponding Platform Blueprint and Platform Model. See [Platform Blueprint and Model Versioning](/platform/definitions/version-control/README.md) for more details.
+{% endhint %}
 
 From the side menu navigate to`Provisioning` > `Platform Instances`, this will display a list of existing Platform Models. 
 
