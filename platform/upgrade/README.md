@@ -27,8 +27,8 @@ For the purpose of this guide, we are going to introspect an existing Oracle SOA
 
 The steps for introspecting an existing Oracle SOA or BPM environment are documented in the chapter - [Creating a Platform Blueprint from an Existing WebLogic Domain](/platform/introspection/README.md).
 
-{% hint style='info' %}
-Important info: this note needs to be highlighted
+{% hint style='tip' %}
+Introspection is only required if you environment to be upgraded was provisioned outside of MyST (e.g. by manual installation or another alternative method). If you built the environment with MyST, you simple upgrade the Blueprint (as shown in the next step) rather than introspecting it first.
 {% endhint %}
 
 ### Step 2 - Upgrade 11g Platform Blueprint to 12c
