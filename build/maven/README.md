@@ -13,7 +13,7 @@ In this section, we provide a detailed walkthrough on how to create a POM file i
 ### Building Oracle Service Bus Projects with Maven
 This section provides details on how to use the Oracle Service Bus Maven archetypes to build Oracle Service Bus applications.
 
-Within JDeveloper, locate the OSB project that we wish to build with Maven. Right click on the project and click `New` and then select `Fron Gallery`.
+Within JDeveloper, locate the OSB project that we wish to build with Maven. Right click on the project and click `New` and then select `From Gallery`.
 
 ![](img/jdevCreatePom.png)
 
@@ -59,7 +59,7 @@ Click on the Source tab. The source should look similar to the following:
 
 Once completed, save the POM.
 
-> When creating a POM for a different artifact type, we will need to specify the appropriate **packaging** and parent **groupId**, **artifactId** and **version**. For this, we can refer to the Oracle Documentation.
+> When creating a POM for a different artifact type, we will need to specify the appropriate **packaging** and parent **groupId**, **artifactId** and **version**. For further details, refer to the Oracle [Documentation](https://docs.oracle.com/middleware/1221/core/MAVEN/toc.htm).
 
 #### Test Maven Build
 Prior to configuring our CI Server to automatically execute our Maven build, it is good practice to test that we have correctly configured our POM file by executing the Maven build from within JDeveloper.
