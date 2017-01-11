@@ -1,8 +1,7 @@
 {
     "gitbook": "3.2.2",
     "plugins": [
-        "hints",
-        "numbered-headings"
+        "hints"
     ],
     "pluginsConfig": {
         "theme-default": {
