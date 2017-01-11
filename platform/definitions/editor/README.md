@@ -119,7 +119,7 @@ The simplest way to derive the expression to reference a property is to locate t
 
 ![](img/propertyExpression.png)
 
-{% hint style='into' %}
+{% hint style='info' %}
 The Platform Editor needs to be in Edit mode.
 {% endhint %}
 
