@@ -10,10 +10,12 @@ This means incremental configuration changes are simple to make and propagate a
 
 This declarative approach to defining target state enables MyST to treat Oracle Middleware infrastructure as code. Platform Blueprints and Models are put under version control, allowing us to easily propose, review, test, promote and deploy configuration changes.
 
-This chapter contains the following sections:
+To learn how to create a Platform Blueprints and Models can be Version Controlled it is recommended to follow the guide:
 
-* [3.4.1 - Platform Blueprint and Model Version Control](/platform/definitions/version-control/README.md)
+* [Platform Blueprint and Model Version Control](/platform/definitions/version-control/README.md)
 
-* [3.4.2 - Editing Platform Blueprints and Models](/platform/definitions/editor/README.md)
+To learn how to edit configuration for Platform Blueprints and Models it is recommended to follow the guide:
+
+* [Editing Platform Blueprints and Models](/platform/definitions/editor/README.md)
 
 
