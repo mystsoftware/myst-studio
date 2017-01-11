@@ -1,19 +1,19 @@
 ## {{ page.title }}
 
-Before an artifact can be deployed it must first be registered with MyST. There are two methods for registering an artifact, these are:
+Before an artifact can be deployed, it must first be registered with MyST. There are two methods for registering an artifact, these are:
 * **CI Server Registration** - Used for registering artifacts that are built by the CI Server as part of the build process.
 
-* **3rd Party Registration** - Used for registering artifacts that are built by a 3rd party, for example commercial or 3rd party open source libraries.
+* **Third Party Registration** - Used for registering artifacts that are built by a third party, for example commercial or open source libraries.
 
 ### List Artifacts
-From the side menu navigate to`Release Management` > `Artifacts`, this will display a list of existing Artifacts, similar to the one below.
+From the side menu, navigate to`Release Management` > `Artifacts`. This will display a list of existing Artifacts, similar to the one below.
 
 ![](img/artifactListView.png)
 
 For each artifact, MyST displays the following summary information:
 * **Component Type** - This is the type of artifact, for example, OSB, SCA, MDS, JAR and so on.
-* **Artifact Group Id** - The maven group id of the artifact.
-* **Artifact Id** - The maven artifact id of the artifact.
+* **Artifact Group Id** - The maven group id of the artifact
+* **Artifact Id** - The maven artifact id of the artifact
 * **Version (latest)** - The latest version number of the artifact
 * **Build # (latest)** - The latest build number for the latest version of the artifact
 * **Blueprint #** - The number of Application Blueprints that contain the artifact
@@ -40,7 +40,7 @@ This provides basic information about the artifact, including:
 * **Name** - The artifact name.
 * **Description** - An optional description of the artifact.
 * **Managed By** - Set to either `CI Server` or `Third Party` to indicate who is responsible for building and registering the artifact.
-* **Component Type** - The Artifact type, for example, OSB, OSB Custom XPath, SCA, Java EAR, Jar Library, MDS, and so on.
+* **Component Type** - The Artifact type, for example, OSB, OSB Custom XPath, SCA, Java EAR, JAR Library, MDS and so on.
 
 #### Build
 This provides the following build information about the artifact, and is used by MyST to locate the artifact within the software repository:
@@ -65,8 +65,8 @@ This shows the artifact metadata which is used by MyST to manage the deployment 
 
 This is detailed further in Part 6, which covers Automated Deployment.
 
-### Register 3rd Party Artifact
-As part of any application, we may want to include 3rd party artifacts, for example, commercial or 3rd party open source libraries. These artifacts are typically provided as pre-built libraries.
+### Register Third Party Artifact
+As part of any application, we may want to include third party artifacts, for example, commercial or party open source libraries. These artifacts are typically provided as pre-built libraries.
 
 To use MyST to manage the deployment of these pre-built artifacts, we need to first upload the artifact to our Software Repository and then register it with MyST.
 
