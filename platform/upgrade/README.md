@@ -69,7 +69,7 @@ We can review these details. Once done, click `Finish`.
 
 MyST will automatically convert our 11gR1 SOA Platform blueprint to an equivalent SOA 12c Platform Blueprint whilst preserving the custom configurations that were previously applied to our 11g environment. This includes configurations such as JDBC Data Sources, File Stores, JMS Servers, JMS Modules, JCA Adapters and SAF Agents.
 
-Once created, MyST will open the [Platform Blueprint Editor](../3.4.editPlatformBlueprint/3.4.0.editPlatformBlueprint.md) where you can make any additional configuration changes; for example, we may want to add in the Enterprise Scheduler Service that wasn't included in 11gR1. 
+Once created, MyST will open the [Platform Blueprint Editor](/platform/definitions/editor/README.md) where you can make any additional configuration changes; for example, we may want to add in the Enterprise Scheduler Service that wasn't included in 11gR1. 
 
 ![](img/12cPlatformBlueprint.png)
 
