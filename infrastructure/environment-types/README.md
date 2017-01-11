@@ -24,7 +24,9 @@ Click `+ Create New`, this will open the **Add Environment Type** dialogue. Spec
 
 * **Name** - Shorthand name for the Environment, such as SIT, UAT or PROD
 * **Description** - A longer description of the environment \(e.g. System Integration Test\)
-* **Order** - Used to indicate the promotion flow for a piece of code to be deployed as it progresses through the Software Development Lifecycle. This can be overridden for each Release Pipeline. TODO: Need to update based on https://rubiconred.jiveon.com/thread/4344
+* **Order** - Used to indicate the promotion flow for a piece of code to be deployed as it progresses through the Software Development Lifecycle. This can be overridden for each Release Pipeline. 
+
+<!-- TODO: Need to update based on https://rubiconred.jiveon.com/thread/4344 -->
 
 ![](img/EnvironmentTypeAdd.png)
 
