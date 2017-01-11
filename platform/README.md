@@ -10,7 +10,7 @@ Within MyST, the target state is captured in the *“platform definition”*, wh
 
 For each platform instance, we create a separate platform model to define all the environment specific configuration information.
 
-Splitting the *“platform definition”* into two layers, provides infrastructure independence, enabling you to provision consistent middleware platforms across all environments regardless of infrastructure type, on premise and on cloud.
+Splitting the *“platform definition”* into two layers provides infrastructure independence, enabling you to provision consistent middleware platforms across all environments regardless of infrastructure type, on premise and on cloud.
 
 ##### Note:
 
@@ -36,13 +36,13 @@ Platform Blueprints and Platform Models are put under version control, allowing 
 
 This means incremental configuration changes are simple to make and propagate across all environments. Users just update the Platform Blueprint / Model to reflect the required target state; MyST will determine and perform the required steps to apply the necessary changes. 
 
-MyST Release Pipelines allows you to establish a single integrated process for automating the promotion of Oracle Middleware platform configurations through each stage of the software delivery lifecycle.
+MyST Release Pipelines allow you to establish a single integrated process for automating the promotion of Oracle Middleware platform configurations through each stage of the software delivery lifecycle.
 
 ### Enables Hybrid Cloud
 
 With built-in support for Oracle Cloud and Amazon Web Services, MyST enables you to define a standard process for delivering Oracle Middleware on premise and on cloud.
 
-MyST provides cloud independence, allowing you to move your middleware infrastructure across different cloud providers as well as provide a path for migrating on-premise platforms to the cloud.
+MyST provides cloud independence, allowing you to move your middleware infrastructure across different cloud providers as well as providing a path for migrating on-premise platforms to the cloud.
 
 Creating a platform blueprint, platform model, and provisioning a new fully operational FMW environment is a simple three step process which can be performed in minutes.
 
