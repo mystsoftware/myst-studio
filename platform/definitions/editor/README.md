@@ -92,7 +92,7 @@ This will allow you to edit the property definitions for each property within th
 
 > Any edits made to a Property Definition which have not yet been saved to the MyST Repository are highlighted in yellow to indicate this.
 
-**Every time you apply changes to a blueprint version, a new revision is created of the blueprint. You can only view the latest revision of the blueprint. However, if the latest revision of the blueprint is not the same as the revision used to provision an instance, you will need to update the instance from the Platform Model or Platform Instances page.** Update for commit.
+**Every time you apply changes to a blueprint version, a new revision is created of the blueprint. You can only view the latest revision of the blueprint. However, if the latest revision of the blueprint is not the same as the revision used to provision an instance, you will need to update the instance from the Platform Model or Platform Instances page.**
 
 ### Property Expansion in MyST
 To make editing and maintenance of Platform Blueprints easier, MyST supports property expansion when defining the value of a property. This allows us to define the value of a property based on the value of one or more other properties.
@@ -189,7 +189,7 @@ Thus the component property path to the second cluster in the list would be expr
 `${[rxr.wls.Cluster-2].name}`
 
 #### Referencing a property value within a property of type `paramList`
-As we mentioned earlier a component is a complex type consisting of a **pre-defined** collection of object types. However, we often want to add additional properties to a component, that aren't defined in advance. 
+As we mentioned earlier, a component is a complex type consisting of a **pre-defined** collection of object types. However, we often want to add additional properties to a component, that aren't defined in advance. 
 
 We can do this using a paramList. A paramList is a list of zero, one or more `property` types. The list of properties is not fixed and can be added to using the Platform Editor.
 
