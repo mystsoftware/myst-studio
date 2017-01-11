@@ -24,13 +24,13 @@ MyST also allows us to introspect an existing WebLogic Domain and use that to ge
 
 We can then use MyST to manage on-going configuration changes for the introspected platform as well as provision new environments with the same configuration. For example, you may want to re-provision your Dev and Test environments to ensure that the configuration of these environments is consistent with Production.
 
-### Side-by-Side Upgrade
+### Side-by-Side Automated Upgrade
 
 MyST provides a simple and automated process for side-by-side upgrades. MyST allows you to introspect an existing 11g environment to create a corresponding 11g Platform Blueprint.
 
 Next, just specify the Oracle Middleware 12c version required. MyST will automatically update the blueprint to one that is compliant with the Oracle Enterprise Deployment Guide for SOA 12c, whilst preserving your 11g configurations. This can then be used to provision an equivalent 12c Oracle Middleware platform.
 
-## Version Control
+### Built-in Version Control
 
 Platform Blueprints and Platform Models are put under version control, allowing you to easily edit, review, test, promote and deploy configuration changes across all your environments.
 
@@ -46,27 +46,37 @@ MyST provides cloud independence, allowing you to move your middleware infrastru
 
 Creating a platform blueprint, platform model, and provisioning a new fully operational FMW environment is a simple three step process which can be performed in minutes.
 
-This part contains the following chapters:
+In the *Platform Fundamentals* section we will look at:
 
-* [Chapter 3.1 - Creating a Platform Blueprint](/platform/blueprints/README.md)   
+* Platform Modeling
 
-* [Chapter 3.2 - Creating a Platform Model](/platform/models/README.md)
-    * [3.2.1 - Creating a Platform Model for Pre-Existing Infrastructure](/platform/models/pre-existing/README.md)
-    * [3.2.2 - Creating a Platform Model for AWS On Demand](/platform/models/on-demand-aws/README.md)
+ * [Creating Platform Blueprints](/platform/blueprints/README.md)   
 
+ * [Creating Platform Models](/platform/models/README.md)
 
-* [Chapter 3.3 - Provision and Manage Platform Instance](/platform/provisioning/README.md)
-
-* [Chapter 3.4 - Editing a Platform Blueprint / Model](/platform/definitions/README.md)
-    * [3.4.1 - Platform Blueprint and Model Version Control](/platform/definitions/version-control/README.md)
-    * [3.4.2 - Editing Platform Blueprints and Models](/platform/definitions/editor/README.md)
+ * [Editing Platform Blueprints and Models](/platform/definitions/README.md)
+    * [Version Control](/platform/definitions/version-control/README.md)
+    * [Web-based Editor](/platform/definitions/editor/README.md)
 
 
-* [Chapter 3.5 - Updating Platform Configuration](/platform/update/README.md)
+* Automated Provisioning
 
-* [Chapter 3.6 - Managing a Platform Instance](/platform/management/README.md)
+ * [Provisioning Platform Instances](/platform/provisioning/README.md)
 
-* [Chapter 3.7 - Introspecting an existing WebLogic Domain](/platform/introspection/README.md)
 
-* [Chapter 3.8 - Side by Side Upgrade](/platform/upgrade/README.md)
+* Automated Change Management
+
+ * [Updating Platform Configuration](/platform/update/README.md)
+
+ * [Managing a Platform Instance](/platform/management/README.md)
+
+
+* Automated Discovery
+
+ * [Introspecting an existing WebLogic Domain](/platform/introspection/README.md)
+
+
+* Automated Upgrade
+
+ * [Side-by-Side Automated Upgrade](/platform/upgrade/README.md)
 
