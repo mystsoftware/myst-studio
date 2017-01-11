@@ -10,7 +10,9 @@ During the Provisioning process, MyST connects to each of the target hosts via S
 
 The credentials that MyST uses to connect to and execute jobs on each of the hosts via SSH are known in MyST as the **OS Agent Credentials**. These credentials consist of a username and password or username and key pair. 
 
-> Tip: When creating these credentials in MyST, the username should be the `oracle` user we configured in Target Host Configuration.
+{% hint style='tip' %}
+When creating these credentials in MyST, the username should be the `oracle` user we configured as per the [Host Prerequisites](/infrastructure/providers/hosts/README.md).
+{% endhint %}
 
 MyST Studio has support for creating the **OS Agent Credential** if it does not exist on the target hosts. In order to do this, you need to provide a privileged user account known as **OS Admin Credential**. 
 
