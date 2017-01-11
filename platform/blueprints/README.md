@@ -13,7 +13,7 @@ For each platform instance, we create a separate platform model to define all th
 * **Consistency** - Configuration across all environments, from Development through to Production, is managed through a centralized *Platform Blueprint*.
 * **Infrastructure Independence** - Enabling you to provision consistent middleware platforms across all environments regardless of infrastructure type, on premise and on cloud
 * **Reliability** - Through *automation* MyST will reduce risk by bringing platforms to a desired state no matter what the initial state of the target platform is. This is known as *idempotency* 
-* **Flexibility** - Environment specific overrides can be applied through *Platform Models*, allowing for configuration differences to be safely managed. This is discussed in detail in [a later topic](/intro/lab3/establish-a-demo-environment-model.html) 
+* **Flexibility** - Environment specific overrides can be applied through *Platform Models*, allowing for configuration differences to be safely managed.
 * **Governance** - Platform Blueprint and Platform Models are *version controlled*. Release Pipelines provide complete control in promoting configuration changes across environments. 
 * **Simplicity** - Easy-to-use graphical editor for defining target state of Oracle Middleware configuration. There is no need to write scripts or have specialist skills in a programming language
 
@@ -73,7 +73,9 @@ Next specify the Oracle Middleware version (for example 11.1.1.7, 12.1.3, 12.2.1
 
 Finally select the required Oracle Middleware components to be included within your Platform Blueprint. You will notice that MyST automatically selects any mandatory components, for example, if you select Oracle B2B then Oracle SOA Suite will automatically be selected. 
 
-> Note that each Platform Blueprint can only include components from a single Product Catalog. Components that are available in multiple Product Catalogs (e.g. Web Services Manager) appear in all the applicable Product Catalogs.
+{% hint style='info' %} 
+Each Platform Blueprint can only include components from a single Product Catalog. Components that are supported in multiple Product Catalogs (e.g. Web Services Manager) appear in all the applicable Product Catalogs.
+{% endhint %}
 
 Once all components have been specified, click `Next`.
 
@@ -96,7 +98,9 @@ The other consideration when specifying our domain topology, is whether to have 
 
 As the admin server cannot be clustered, when selecting a stand-alone admin node, MyST will set the maximum number of nodes to one. When including it within an existing compute group, MyST will only provision the admin server to the first node in the compute group.
 
-> Note: If you select a stand-alone admin server in the Platform Blueprint, you still have the option of overriding this in the Platform Model. This provides an additional level of flexibility, as you may want a stand-alone admin server in Production, but to co-locate it with another managed server in some environments in order to save resources. 
+{% hint style='tip' %}
+If you select a stand-alone admin server in the Platform Blueprint, you still have the option of overriding this in the Platform Model. This provides an additional level of flexibility, as you may want a stand-alone admin server in Production, but to co-locate it with another managed server in some environments in order to save resources.
+{% endhint %} 
 
 #### Define Compute Group
 To define the Compute Groups that we want in our Platform Blueprint, we first need to specify the following values:
