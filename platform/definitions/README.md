@@ -12,7 +12,7 @@ This declarative approach to defining target state enables MyST to treat Oracle 
 
 To learn how to create a Platform Blueprints and Models can be Version Controlled it is recommended to follow the guide:
 
-* [Platform Blueprint and Model Version Control](/platform/definitions/version-control/README.md)
+* [Understanding Platform Blueprint and Model Version Control](/platform/definitions/version-control/README.md)
 
 To learn how to edit configuration for Platform Blueprints and Models it is recommended to follow the guide:
 

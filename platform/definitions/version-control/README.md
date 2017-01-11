@@ -11,7 +11,9 @@ When working on a new revision, the revision is initially in a `DRAFT` state. Wh
 
 Once we are happy with our changes, MyST allows us to explicitly commit the revision permanently to source control (which can then be applied to a Platform Instance). If we make any subsequent changes, then MyST will automatically create a newer revision.
 
-> MyST allows us to go back to any previously committed revision.
+{% hint style='tip' %}
+MyST allows us to go back to any previously committed revision.
+{% endhint %}
 
 In MyST, a platform blueprint version obeys the naming convention, `1.0.0[pr3]`. Here, `1.0.0` is the version of the blueprint, `pr` is the standard prefix for a platform blueprint revision and `3` is the current revision number for it.
 
