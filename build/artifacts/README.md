@@ -70,7 +70,7 @@ As part of any application, we may want to include third party artifacts, for ex
 
 To use MyST to manage the deployment of these pre-built artifacts, we need to first upload the artifact to our Software Repository and then register it with MyST.
 
-From the side menu navigate to`Release Management` > `Artifacts`. Click `Create New`, this will open the **New Artifact** dialogue. Here we need to specify the **General Information**, **Build** and **Metadata** details as covered above.
+From the side menu, navigate to`Release Management` > `Artifacts`. Click `Create New`, this will open the **New Artifact** dialogue. Here we need to specify the **General Information**, **Build** and **Metadata** details as covered above.
 
 ![](img/artifactNew.png)
 
@@ -78,11 +78,11 @@ From the side menu navigate to`Release Management` > `Artifacts`. Click `Create 
 
 Click `Save` to register the 3rd Party Artifact.
 
-#### Edit 3rd Party Artifact
+#### Edit Third Party Artifact
 To edit the `Metadata` properties for a third party artifact, open the artifact from artifact list. Make the required changes and click `Save`.
 
-#### Register New Version of 3rd Party Artifact
-To register a new version of a 3rd Party Artifact, open the artifact from artifact list and click `Save as new version`. MyST will save a new version of the Artifact.
+#### Register New Version of Third Party Artifact
+To register a new version of a third Party Artifact, open the artifact from artifact list and click `Save as new version`. MyST will save a new version of the Artifact.
 
 ### Delete Artifact
 To delete an `Artifact` from MyST, open the artifact from artifact list and click on the `Actions` drop-down and select `Delete`.
