@@ -4,11 +4,11 @@ Rubicon Red MyST is the most advanced and intuitive DevOps solution for Oracle M
 
 This allows them to transform what is typically a resource intensive and highly error prone process into one that is automated, predictable and low risk.
 
-This part contains the following chapters:
+The key MyST functional areas are:
 
-* [Chapter 1.1 - Overview of Platform Provisioning and Configuration](/introduction/platform-provisioning/README.md)
+* [Platform Provisioning and Configuration](/introduction/platform-provisioning/README.md)
 
-* [Chapter 1.2 - Overview of Application Release Automation](/introduction/application-release-automation/README.md)
+* [Application Release Automation](/introduction/application-release-automation/README.md)
 
 
 
