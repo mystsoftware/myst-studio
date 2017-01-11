@@ -31,14 +31,14 @@ Next, just specify the Oracle Middleware version required. MyST will automatical
 
 Finally, specify the target environment(s), for the new upgraded domain. Then at the click of a button, MyST will automatically provision an equivalent upgraded Oracle Middleware platform.
 
-The end-to-end process consists of three simple steps and can be performed in minutes.
-
-##### Step 1 - Introspect SOA / BPM 11gR1 Domain
-For the purpose of this guide, we are going to introspect an existing Oracle SOA 11.1.1.7 environment running on two VMs, that consists of a 2 node SOA Cluster and 2 node OSB Cluster.
+The end-to-end process consists of three simple steps and can be performed in minutes as shown below.
 
 {% hint style='tip' %}
 Although this example is for an 11g to 12c upgrade, the approach would be consistent for alternative version upgrades such as an upgrade from 12.1.3.0.0 to 12.2.1.0.0 or from 12.2.1.0.0 to 12.2.1.1.0.
 {% endhint %}
+
+##### Step 1 - Introspect SOA / BPM 11gR1 Domain
+For the purpose of this guide, we are going to introspect an existing Oracle SOA 11.1.1.7 environment running on two VMs, that consists of a 2 node SOA Cluster and 2 node OSB Cluster.
 
 The steps for introspecting an existing Oracle SOA or BPM environment are documented in the chapter - [Creating a Platform Blueprint from an Existing WebLogic Domain](/platform/introspection/README.md).
 
@@ -134,15 +134,32 @@ When performing a fresh direct upgrade for a platform instance, you simply termi
 
 The end-to-end process consists of three simple steps and can be performed in minutes.
 
-For the purpose of this guide, we are going to upgrade an existing Oracle Service Bus 12.1.3.0.0 environment to 12.2.1.0.0 using a Fresh Direct Upgrade approach.
+For the purpose of this guide, we are going to upgrade an existing Oracle Service Bus 12.1.3 environment to 12.2.1 using a Fresh Direct Upgrade approach.
+
+{% hint style='tip' %}
+Although this example is for a 12.1.3 to 12.2.1 upgrade, the approach would be consistent for alternative version upgrades such as an upgrade 11.1.1.7.0 to 12.1.3.0.0 or from 12.2.1.0.0 to 12.2.1.1.0.
+{% endhint %}
+
+#### Step 1 - Upgrade 12.1.3.0.0 Platform Blueprint to 12.2.1.0.0
+
+##### Specify Oracle Middleware Upgrade Version
+
+From the [Blueprint Editor](/platform/definitions/editor/README.md) click `Edit Configuration`. Then, navigate to the `Middleware Settings` and click `Edit` in the Property Panel.
+
+![](/platform/upgrade/img/directEditMiddlewareSettings.png)
+
+![](/platform/upgrade/img/directConfirmUpgradeEdit.png)
+
+Change the version to `12.2.1.0.0` (or another version of you choice) and click `Save` in the Property Panel then `Save & Commit` for the Blueprint.
+
+![](/platform/upgrade/img/directChangeVersion1221.png)
+
+When prompted, enter a description for the change.
+![](/platform/upgrade/img/directConfirmUpgradeEdit.png)
 
 ##### Step 1 - Terminate existing environment
 
-TODO: Link to terminate
-
-#### Step 2 - Upgrade 11g Platform Blueprint to 12c
-
-TODO: Open the Platform Blueprint and update the version
+From the `Actions` menu for any Platform Instance there is the option to `Terminate`. This will destroy the WebLogic Domain on the file system to allow for it to be re-provisioned. This is described in more detail in the section on [Managing Platform Instances](/platform/management/README.md).
 
 ##### Specify Oracle Middleware Upgrade Version
 
