@@ -1,5 +1,15 @@
 ## {{ page.title }}
 
+In order to get the latest bug fixes and feature enhancements from your Oracle product investments you will likely wish to upgrade them on a regularly to semi-regular basis. Fundamental there is two types of upgrades.
+
+ * **One-off patches**: These are provided by Oracle and available from download from [My Oracle Support](http://support.oracle.com) to fix a specific defect or add a minor enhancement.  These can be can be applied directly through MyST by [defining them within a Platform Blueprint](/platform/resources/weblogic/patches/README.md) and applying them through a Platform Model as described in the "Patching" sub-section within the guide on [Managing a Platform Instance](/platform/management/README.mr).
+
+ * **Upgrades**: An upgrade will introduce a significant number of bug fixes and major enhancements in one hit. Without MyST an upgrade is usually resource intensive, risky and has the potential to introduce breaking changes. With MyST an upgrade can be automated which significantly de-risks the upgrade process. This guide primarily focuses on this type of upgrade.
+ 
+Upgrades can be be either **Side-by-Side** (also known as Out-of-place or Blue/Green) or they can be **Direct** (also known as in-place)
+
+### Side-By-Side Upgrades 
+ 
 Most organizations, when migrating to Oracle SOA 12c or Oracle BPM 12c, choose to perform a side-by-side upgrade as it:
 
 * requires zero downtime
@@ -13,7 +23,7 @@ Most organizations fail to maintain accurate documentation of their current 11g 
 
 Rubicon Red MyST provides a simple and automated process for side-by-side upgrades. MyST allows you to introspect an existing 11g environment, extract the key configuration information and then use this to automatically provision an equivalent 12c environment in minutes.
 
-### Side-By-Side Upgrades made Simple
+#### Side-By-Side Upgrades made Simple
 When performing a side-by-side upgrade, you simply point MyST at an existing 11g environment, MyST will introspect the platform instance and create a corresponding 11g Platform Blueprint.
 
 Next, just specify the Oracle Middleware 12c version required. MyST will automatically convert the blueprint to one that is compliant with the Oracle Enterprise Deployment Guide for SOA 12c whilst preserving your 11g configurations.
@@ -93,4 +103,6 @@ With MyST we can use the same Platform Blueprint to provision all these environm
 
 ### Step 3 - Create Platform Model and Provision
 Once we have finalized our migrated Platform Blueprint, the next step is to create a Platform Model and then use that to provision a Platform Instance. For more details on how to do this see [Chapter 3.2 - Creating a Platform Model](/platform/models/README.md).
+
+### Direct Upgrades 
 
