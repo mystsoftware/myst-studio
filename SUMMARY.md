@@ -27,8 +27,8 @@
         * [3.4.2 - Editing Platform Blueprints and Models](platform/definitions/editor/README.md)
     * [Chapter 3.5 - Updating Platform Configuration](platform/update/README.md)
     * [Chapter 3.6 - Managing a Platform Instance](platform/management/README.md)
-    * [Chapter 3.7 - Introspecting an existing WebLogic Domain](platform/introspection/README.md)
-    * [Chapter 3.8 - Side by Side Upgrade](platform/upgrade/README.md)
+    * [Chapter 3.7 - Introspecting an Existing WebLogic Domain](platform/introspection/README.md)
+    * [Chapter 3.8 - Upgrading an Existing Platform](platform/upgrade/README.md)
 
 -----
 * [Part 4 - Platform Configuration](platform/resources/weblogic/README.md)

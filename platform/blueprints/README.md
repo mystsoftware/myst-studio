@@ -10,10 +10,10 @@ Within MyST, the target state is captured in the _“platform definition”_, wh
 
 For each platform instance, we create a separate platform model to define all the environment specific configuration information. This approach provides a number of benefits, including:
 
-* **Consistency** - Configuration across all environments from Development through to Production is managed through a centralized *Platform Blueprint*.
+* **Consistency** - Configuration across all environments, from Development through to Production, is managed through a centralized *Platform Blueprint*.
 * **Infrastructure Independence** - Enabling you to provision consistent middleware platforms across all environments regardless of infrastructure type, on premise and on cloud
 * **Reliability** - Through *automation* MyST will reduce risk by bringing platforms to a desired state no matter what the initial state of the target platform is. This is known as *idempotency* 
-* **Flexibility** - Environment-specific overrides can be applied through *Platform Models*, allowing for configuration differences to be safely managed. This is discussed in detail in [a later topic](/intro/lab3/establish-a-demo-environment-model.html) 
+* **Flexibility** - Environment specific overrides can be applied through *Platform Models*, allowing for configuration differences to be safely managed. This is discussed in detail in [a later topic](/intro/lab3/establish-a-demo-environment-model.html) 
 * **Governance** - Platform Blueprint and Platform Models are *version controlled*. Release Pipelines provide complete control in promoting configuration changes across environments. 
 * **Simplicity** - Easy-to-use graphical editor for defining target state of Oracle Middleware configuration. There is no need to write scripts or have specialist skills in a programming language
 
@@ -69,7 +69,7 @@ Next specify the Oracle Middleware version (for example 11.1.1.7, 12.1.3, 12.2.1
 
 Finally select the required Oracle Middleware components to be included within your Platform Blueprint. You will notice that MyST automatically selects any mandatory components, for example, if you select Oracle B2B then Oracle SOA Suite will automatically be selected. 
 
-> Note that each Platform Blueprint can only include components from a single product catalog. Components that are available in multiple Product Catalogs (e.g. Web Services Manager) appear in all the applicable Product Catalogs.
+> Note that each Platform Blueprint can only include components from a single Product Catalog. Components that are available in multiple Product Catalogs (e.g. Web Services Manager) appear in all the applicable Product Catalogs.
 
 Once all components have been specified, click `Next`.
 
@@ -95,19 +95,19 @@ As the admin server cannot be clustered, when selecting a stand-alone admin node
 > Note: If you select a stand-alone admin server in the Platform Blueprint, you still have the option of overriding this in the Platform Model. This provides an additional level of flexibility, as you may want a stand-alone admin server in Production, but to co-locate it with another managed server in some environments in order to save resources. 
 
 #### Define Compute Group
-To define the compute groups that we want in our Platform Blueprint, we first need to specify the following values:
+To define the Compute Groups that we want in our Platform Blueprint, we first need to specify the following values:
 
-* **stand-alone Admin Node** - From the drop-down, select whether you want to have a stand-alone admin server (`Yes`) or include it within an existing compute group (`No`)
-* **Number of Compute Groups** - From the drop-down, select the required number of compute groups.
+* **Stand-alone Admin Node** - From the drop-down, select whether you want to have a stand-alone admin server (`Yes`) or include it within an existing Compute Group (`No`)
+* **Number of Compute Groups** - From the drop-down, select the required number of Compute Groups.
 
 ![](img/SmartWizardComputeGroups.png)
 
 For each Compute Group, we need to specify the following values:
 * **Name** - Provide a short name (such as web, soa, osb) for the Compute Group.
-* **Components** - Click on the appropriate check boxes to add the required components to a compute group. Note: A component can only belong to a single Compute Group, so selecting it for one Compute Group will automatically deselect it from its previous Compute Group.
-* **Node Constraints** - Specify the default, minimum and maximum number of nodes in the compute group. When creating a Platform Model, it will use the default value for the number of nodes. This can then be modified with the minimum and maximum constraints.
+* **Components** - Click on the appropriate check boxes to add the required components to a Compute Group. Note: A component can only belong to a single Compute Group, so selecting it for one Compute Group will automatically deselect it from its previous Compute Group.
+* **Node Constraints** - Specify the default, minimum and maximum number of nodes in the Compute Group. When creating a Platform Model, it will use the default value for the number of nodes. This can then be modified with the minimum and maximum constraints.
 
-Finally, we need to select from the drop-down the target compute definition for all target hosts that will be used within each compute group.
+Finally, we need to select from the drop-down the target ompute definition for all target hosts that will be used within each Compute Group.
 
 Once done, click `Next`.
 
@@ -129,7 +129,7 @@ MyST will default these options based on the most common configurations, we shou
 Once done, click `Next`.
 
 ### Review the Summary
-MyST will display a Summary screen showing all the keys inputs specified in the Platform Blueprint Wizard. 
+MyST will display a Summary screen showing all the key inputs specified in the Platform Blueprint Wizard. 
 
 ![](img/SmartWizardSummary.png)
 

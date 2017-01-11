@@ -1,0 +1,5 @@
+{
+    "gitbook": "3.2.2",
+    "plugins": ["hints"],
+    "pluginsConfig": {}
+}

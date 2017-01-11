@@ -104,7 +104,7 @@ Or use your installation method of choice. For more information see [Installing 
 * Oracle Fusion Middleware 12.2.1 requires Java 8  
 * Oracle Fusion Middleware 12.1.3 and prior requires Java 7  
 
-If you are planning on provisioning both Middleware versions on the same target hosts, ensure that both Java versions are installed and that you are referencing the correct Java home in your Platform Blueprint. This is covered in more detail in the Provisioning Section . 
+If you are planning on provisioning both Middleware versions on the same target hosts, ensure that both Java versions are installed and that you are referencing the correct Java home in your Platform Blueprint. This is covered in more detail in the Provisioning Section. 
 
 **Note 2**:  
 Due to a known issue with the MyST Studio SSH client, you need to create a symbolic link from `/usr/bin/java` to your actual java binary. For example, if your Java Home is at `/usr/java/latest`, run the following command on each host:

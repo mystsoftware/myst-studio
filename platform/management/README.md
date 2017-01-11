@@ -1,8 +1,8 @@
 ## {{ page.title }}
 
 In this section we detail how to use MyST to perform common platform administration tasks, including how to:
-* View Platform Instance Configuration
-* Report on Platform Instance
+* View a Platform Instance Configuration
+* Report on a Platform Instance
 * Start, Stop and Restart a Platform Instance
 * Check for and Correct Configuration Drift
 * Terminate and Re-Provision a Platform Instance

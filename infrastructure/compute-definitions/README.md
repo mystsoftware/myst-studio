@@ -33,7 +33,7 @@ To see a list of defined Compute Definitions, click `Infrastructure` &gt; `Compu
 
 Click `+ Create New`, this will open the **Create Compute Definition** dialogue. Specify the...
 
-* **Name** - Name of your compute definition. This is what is visible when we reference it in a Platform Blueprint or Host.
+* **Name** - The name of your compute definition. This is what is visible when we reference it in a Platform Blueprint or Host.
 * **OS Type** - The operating system type, for example Linux, Solaris.
 * **OS Distribution** - The operating system distribution, for example Oracle Linux, RedHat Linux.
 * **OS Architecture** - The chip architecture for the operating system, for example x86-64.
@@ -53,7 +53,7 @@ Here you can modify the Name of the Compute Definition. Remember, the Name of th
 
 ### Activate / Deactivate Compute Definition
 
-By default, when you create a Compute Definition it is in an active state. This means we can instantly create Platform Blueprints, Models and target Hosts that reference that Compute Definition.
+By default, when you create a Compute Definition it is in an active state. This means we can instantly create Platform Blueprints, Models and Target Hosts that reference that Compute Definition.
 
 To prevent any new Platform Blueprint from referencing a Compute Definition, we can deactivate the Compute Definition. This may be useful if you have a legacy operating system which you want to no longer support for future infrastructure definitions.
 

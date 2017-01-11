@@ -1,12 +1,12 @@
 ## {{ page.title }}
 
-Within MyST, a Pre-Existing Infrastructure Provider is used to capture the list of virtual or physical hosts that are available to provision our Oracle Middleware environment too. 
+Within MyST, a Pre-Existing Infrastructure Provider is used to capture the list of virtual or physical hosts that are available to provision our Oracle Middleware environment to. 
 
 During the Provisioning process, MyST connects to each of the target hosts via SSH to perform some of the initial install and configuration tasks. 
 
-1. MyST connects to host where the WebLogic Admin Server will be installed and downloads the MyST Agent.
+1. MyST connects to the host where the WebLogic Admin Server will be installed and downloads the MyST Agent.
 2. The MyST agent will perform the initial install and configuration tasks. These tasks are performed locally by the MyST agent on the Admin Host.
-3. The MyST Agent on the Admin Server will connect remotely via SSH to the other target host in the WebLogic Domain and perform install and configuration tasks remotely.
+3. The MyST Agent on the Admin Server will connect remotely via SSH to the other target hosts in the WebLogic Domain and perform install and configuration tasks remotely.
 
 The credentials that MyST uses to connect to and execute jobs on each of the hosts via SSH are known in MyST as the **OS Agent Credentials**. These credentials consist of a username and password or username and key pair. 
 
@@ -37,7 +37,7 @@ For each infrastructure provider, we can add one or more:
 
   Once we have defined a key pair, we can use it in one or more OS Agent Credentials and OS Admin Credentials.
 
-* **OS Agent credentials:**  The OS agent credentials is the set of credentials that MyST uses to connect to and execute jobs on the target hosts. Each Credential consists of a username and credential, which can be either a Key Pair or Password.
+* **OS Agent Credentials:**  The OS agent credentials is the set of credentials that MyST uses to connect to and execute jobs on the target hosts. Each Credential consists of a username and credential, which can be either a Key Pair or Password.
 
     Once we have defined an OS Agent Credential, we can use it in one or more Hosts.
 
@@ -57,7 +57,7 @@ To add a key pair, click `Add Key Pair`, enter a name, add the private key conte
 > The key value format must be PEM and the key must not have a pass-phrase.
 
 #### Edit Key Pair
-To edit a key pair; click on the name of the key pair within the Infrastructure Provider, this will open the **Edit Key Pair** dialogue.
+To edit a key pair, click on the name of the key pair within the Infrastructure Provider, this will open the **Edit Key Pair** dialogue.
 
 Here you can modify the content of the Private Key; to do this click `Change Content` and you will be prompted to enter the Private Key content. Once done, click `Save` to confirm your changes.
 
@@ -105,7 +105,7 @@ To add a new host, click `Add Host`. MyST will open the `Add Host` dialogue, spe
 Once we have specified the host details, click `Add`. MyST will return us to the Pre-Existing Infrastructure editor, click `Save` to confirm our changes.
 
 #### Edit Hosts
-To edit a host; click on the name of the host within the Infrastructure Provider, this will open the `Edit Host` dialogue.
+To edit a host, click on the name of the host within the Infrastructure Provider, this will open the `Edit Host` dialogue.
 
 Here we can modify the host configuration as required. Once done, click `Save` to confirm your changes. MyST will return us to the Pre-Existing Infrastructure editor, click `Save` to confirm our changes.
 

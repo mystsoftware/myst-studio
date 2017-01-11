@@ -33,7 +33,7 @@ Once complete, click `Save`. This will create the new version of our Platform Bl
 #### Adding a Data Source
 Click on `Edit Configuration`. In the tree view expand the domain and click on the `+` icon next to JDBC Data Sources (outlined in red). This will create a new Data Source, `Jdbc Data Source - 13` in the example below.
 
-Select the new data source in the tree view, MyST will display it current configuration. We will see that initially none of its properties have been set.
+Select the new data source in the tree view, MyST will display its current configuration. We will see that initially none of its properties have been set.
 
 > Note: An alternative way of creating a new Data Source is to select an existing data source, right click on it and select clone.
 
@@ -94,13 +94,13 @@ Once done, click `Save` to save these values within the Data Source and then cli
 ### Performing a Dry Run
 We are now ready to update our Platform Instance with its additional configuration. When we run a platform update, we have the option of specifying whether we first want to perform a dry run. 
 
-With a dry run, MyST doesn't perform the actual changes, rather it goes through the process of determining what changes need to be applied (in exactly the same way it does when making the actual changes) and then produces a report detailing the changes that will be made.
+With a dry run, MyST doesn't perform the actual changes. Rather, it goes through the process of determining what changes need to be applied (in exactly the same way it does when making the actual changes) and then produces a report detailing the changes that will be made.
 
-This allows us to quickly validate the changes to be applied are as expected, and if not, go back and make the appropriate corrections to our Platform Blueprint and or Platform Model.
+This allows us to quickly validate that the changes to be applied are as expected, and if not, go back and make the appropriate corrections to our Platform Blueprint and or Platform Model.
 
 From the side menu navigate to`Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model to be updated. MyST will display summary details about the Platform Model and its corresponding Platform Instance.
 
-We can see, that under `Versions` a list of Platform Model versions. Looking at the `Instance Details` we can see that the Platform Instance is currently on version`1.0.0` of the Platform Blueprint\Model.
+We can see that under `Versions` a list of Platform Model versions. Looking at the `Instance Details` we can see that the Platform Instance is currently on version`1.0.0` of the Platform Blueprint\Model.
 
 ![](img/dryrunAction.png)
 
@@ -127,10 +127,10 @@ Once we have initiated the update, MyST will return us to the summary view of th
 
 ![](img/updatePlatformComplete.png)
 
-If we click `View` under `Execution log`. This will open a window showing the execution log for the update, as shown below.
+If we click `View` under `Execution log` this will open a window showing the execution log for the update, as shown below.
 
 ![](img/updatePlatformLog.png)
 
-> Note: Whilst in this example the configuration change that we applied was to add a new data source, we would follow an identical approach to modify an existing data source. The only difference being that we would update an existing data source configuration in the Platform Blueprint. MyST will determine and perform the required steps to apply the necessary changes.
+> Note: Whilst this example configuration change showed us adding a new data source, we would follow an identical approach if modifying an existing data source. In the latter case we would be updating an existing data source configuration in the Platform Blueprint. MyST will determine and perform the required steps to apply the necessary changes.
 
 See [Part 4 - Platform Configuration](/platform/resources/weblogic/README.md) for details on how define other configuration requirements within a Platform Blueprint / Model.

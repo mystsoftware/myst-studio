@@ -59,7 +59,7 @@ Release Pipelines allow us to implement a continuous integration/delivery proces
 
 As a first step towards continuous delivery, one normally would set up a continuous integration server and a CI environment where code gets deployed to every time a commit happens. 
 
-Similarly, every configuration change can be and should be applied continuously to a CI environment on a commit. For this, MyST plays the role of a CI server for configuration where it periodically polls for committed Platform Blueprints changes and then applies these changes to the target CI environment.
+Similarly, every configuration change can be and should be applied continuously to a CI environment on a commit. For this, MyST plays the role of a CI server for configuration where it periodically polls for committed Platform Blueprint changes and then applies these changes to the target CI environment.
 
 Once applied, MyST can trigger an automated test to validate the configuration changes, in a similar way that we would when deploying code. 
 
