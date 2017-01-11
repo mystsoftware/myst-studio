@@ -117,6 +117,13 @@ As a general rule, Side-by-Side Upgrades are the safest and simplest type of upg
 2. When we have a lot of model-specific settings in MyST Studio and want to avoid re-creating the Platform Models
 3. When our application is architected in a way that we are unable to do a side-by-side upgrade.
 
+#### When not to do a Direct Upgrade
+
+We should avoid doing a Direct Upgrade 
+
+1. When we want to be able to rollback immediately in the event of a failure.
+2. When we want to minimise downtime or avoid a downtime altogether.
+
 #### Types of Direct Upgrades
 
 There is two types of Direct Upgrades
