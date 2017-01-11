@@ -35,9 +35,9 @@ Click on `Edit Configuration`. In the tree view expand the domain and click on t
 
 Select the new data source in the tree view, MyST will display its current configuration. We will see that initially none of its properties have been set.
 
-{% hints style='tip' %}
+{% hint style='tip' %}
 An alternative way of creating a new Data Source is to select an existing data source, right click on it and select clone.
-{% endhints %}
+{% endhint %}
 
 ![](img/createDataSourceStep1.png)
 
@@ -133,6 +133,8 @@ If we click `View` under `Execution log` this will open a window showing the exe
 
 ![](img/updatePlatformLog.png)
 
-> Note: Whilst this example configuration change showed us adding a new data source, we would follow an identical approach if modifying an existing data source. In the latter case we would be updating an existing data source configuration in the Platform Blueprint. MyST will determine and perform the required steps to apply the necessary changes.
+{% hint style='info' %}
+Whilst this example configuration change showed us adding a new data source, we would follow an identical approach if modifying an existing data source. In the latter case we would be updating an existing data source configuration in the Platform Blueprint. MyST will determine and perform the required steps to apply the necessary changes.
+{% endhint %}
 
 See [Part 4 - Platform Configuration](/platform/resources/weblogic/README.md) for details on how define other configuration requirements within a Platform Blueprint / Model.
