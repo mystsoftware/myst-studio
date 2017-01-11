@@ -146,34 +146,27 @@ Although this example is for a 12.1.3 to 12.2.1 upgrade, the approach would be c
 
 From the [Blueprint Editor](/platform/definitions/editor/README.md) click `Edit Configuration`. Then, navigate to the `Middleware Settings` and click `Edit` in the Property Panel.
 
-![](/platform/upgrade/img/directEditMiddlewareSettings.png)
+![](img/directEditMiddlewareSettings.png)
 
-![](/platform/upgrade/img/directConfirmUpgradeEdit.png)
+Change the version to `12.2.1.0.0` (or another version of you choice) and click `Save` in the Property Panel then `Save` for the Blueprint.
 
-Change the version to `12.2.1.0.0` (or another version of you choice) and click `Save` in the Property Panel then `Save & Commit` for the Blueprint.
-
-![](/platform/upgrade/img/directChangeVersion1221.png)
+![](img/directChangeVersion1221.png)
 
 When prompted, enter a description for the change.
-![](/platform/upgrade/img/directConfirmUpgradeEdit.png)
 
-##### Step 1 - Terminate existing environment
-
-From the `Actions` menu for any Platform Instance there is the option to `Terminate`. This will destroy the WebLogic Domain on the file system to allow for it to be re-provisioned. This is described in more detail in the section on [Managing Platform Instances](/platform/management/README.md).
-
-##### Specify Oracle Middleware Upgrade Version
-
-...
+![](img/directConfirmUpgradeEdit.png)
 
 ##### View/Edit Platform Blueprint
 
-MyST will automatically convert our 11gR1 SOA Platform blueprint to an equivalent SOA 12c Platform Blueprint whilst preserving the custom configurations that were previously applied to our 11g environment. This includes configurations such as JDBC Data Sources, File Stores, JMS Servers, JMS Modules, JCA Adapters and SAF Agents.
+MyST will automatically convert our 12.1.3 Platform Blueprint to an equivalent 12.2.1 Platform Blueprint whilst preserving the custom configurations that were previously applied to our 11g environment. This includes configurations such as JDBC Data Sources, File Stores, JMS Servers, JMS Modules, JCA Adapters and SAF Agents.
 
-Once created, MyST will open the [Platform Blueprint Editor](/platform/definitions/editor/README.md) where you can make any additional configuration changes; for example, we may want to add in the Enterprise Scheduler Service that wasn't included in 11gR1. 
+If we look closely at our 12c Platform Blueprint, we can see that there is some subtle differences. For example, if we are using the defaults Fusion Middleware Home Directory of `/u01/app/oracle/product/fmw1213` we will see that it has changed to `/u01/app/oracle/product/fmw1221`. 
 
-![](img/12cPlatformBlueprint.png)
-
-If we look closely at our 12c Platform Blueprint, we can see that the number of Data Sources is different. In our 11g Platform Blueprint we had 12 JDBC Data Sources, but in our 12c Platform Blueprint we have 15 JDBC Data Sources (see box **1** outlined in red above). This is because in SOA 12c there have been changes to database schemas and corresponding JDBC Data Sources required by the Oracle SOA Platform.
+{% hint style='danger' %}
+If you are you using a custom `Home Directory` under `Middleware Settings` you must change this to be unique before performing an upgrade. For example, if it is set to `/opt/my-company/12.1.3.0.0/soa` you should change it to `/opt/my-company/12.2.1.0.0/soa`. Remember, you can use a reference to the version `${[rxr.wls.Fmw-1].version}` e.g. `/opt/my-company/${[rxr.wls.Fmw-1].version}/soa`. If you were already using this property reference then it would have changed the path automatically and you don't need to do anything. Once the property reference is set within the `Home Directory` you can be sure it will update automatically for future upgrades. Make sure that any other property references to the version in the configuration which are hardcoded are using a reference, whilst it may not cause the upgrade to fail it will be a source of confusion for the upgraded platform. 
+{% endhint %}
+ 
+   that the number of Data Sources is different. In our 11g Platform Blueprint we had 12 JDBC Data Sources, but in our 12c Platform Blueprint we have 15 JDBC Data Sources (see box **1** outlined in red above). This is because in SOA 12c there have been changes to database schemas and corresponding JDBC Data Sources required by the Oracle SOA Platform.
 
 When upgrading to 12c, MyST has the knowledge to remove the no longer needed 11g data sources, and create the additional ones required for 12c. If we look more closely, we will see MyST has preserved our three custom data sources, which are colored white (as opposed to light green).
 
@@ -190,6 +183,12 @@ We can see that MyST automatically updates all the other values that reference t
 With this minor edit, we are now ready to provision our new 12c environment. Typically when migrating to 12c, we will want to create multiple non-Productions, such as DEV, SIT, PRE-PROD and PROD to test and validate that the migrated code is performing as expected before promoting into Production.
 
 With MyST we can use the same Platform Blueprint to provision all these environments, ensuring each environment is consistent with Production. For each environment we want to provision, we need to create a Platform Model. This essentially maps the Platform Blueprint to the target infrastructure and captures environment specific configuration details, such as credentials.
+
+##### Step 2 - Terminate existing environment
+
+From the `Actions` menu for any Platform Instance there is the option to `Terminate`. This will destroy the WebLogic Domain on the file system to allow for it to be re-provisioned. This is described in more detail in the section on [Managing Platform Instances](/platform/management/README.md).
+
+When you are ready to upgrade an instance associated with the upgraded Platform Blueprint, you can do a terminate followed by a re-provision.
 
 #### Step 3 - Reprovision the Platform Model
 
