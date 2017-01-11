@@ -128,7 +128,7 @@ We should avoid doing a Direct Upgrade
 
 There is two types of Direct Upgrades
 
- * **Fresh**: Performing a Fresh Direct Upgrade involves terminating the current instance and then re-provisioning  it on the new version. It is the safest type of Direct Upgrade as it relies on a standard Oracle installation rather than the in-place upgrade tools from Oracle which are less reliable and do not work in all cases. 
+ * **Fresh**: This involves terminating the current instance and then re-provisioning  it on the new version. It is the safest type of Direct Upgrade as it relies on a standard Oracle installation rather than the in-place upgrade tools from Oracle which are less reliable and do not work in all cases. 
  * **State-preserving**: This is the riskiest type of upgrade but it has the benefit of preserving the long running state of existing deployed applications. If you want to perform a State-preserving upgrade with MyST we would recommend [raising a support ticket](http://support.rubiconred.com).
 
 #### Direct Upgrades made Simple
