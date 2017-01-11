@@ -134,10 +134,10 @@ When performing a fresh direct upgrade for a platform instance, you simply termi
 
 The end-to-end process consists of two simple steps and can be performed in minutes.
 
-For the purpose of this guide, we are going to upgrade an existing Oracle Service Bus 12.1.3 environment to 12.2.1 using a Fresh Direct Upgrade approach.
+For the purpose of this guide, we are going to upgrade an existing Oracle Service Bus 12.1.3 environment to 12.2.1 using a fresh direct upgrade approach.
 
 {% hint style='tip' %}
-Although this example is for a 12.1.3 to 12.2.1 upgrade, the approach would be consistent for alternative version upgrades such as an upgrade 11.1.1.7.0 to 12.1.3.0.0 or from 12.2.1.0.0 to 12.2.1.1.0.
+Although this example is for a 12.1.3 to 12.2.1 upgrade, the approach would be consistent for alternative version upgrades such as an upgrade of 11.1.1.7.0 to 12.1.3.0.0 or from 12.2.1.0.0 to 12.2.1.1.0.
 {% endhint %}
 
 #### Step 1 - Upgrade 12.1.3.0.0 Platform Blueprint to 12.2.1.0.0
@@ -154,13 +154,14 @@ Change the version to `12.2.1.0.0` (or another version of you choice) and click 
 
 ##### View/Edit Platform Blueprint
 
-MyST will automatically convert our 12.1.3 Platform Blueprint to an equivalent 12.2.1 Platform Blueprint whilst preserving the custom configurations that were previously applied to our 11g environment. This includes configurations such as JDBC Data Sources, File Stores, JMS Servers, JMS Modules, JCA Adapters and SAF Agents.
+MyST will automatically convert our 12.1.3 Platform Blueprint to an equivalent 12.2.1 Platform Blueprint whilst preserving the custom configurations that were previously applied to our environment. This includes configurations such as JDBC Data Sources, File Stores, JMS Servers, JMS Modules, JCA Adapters and SAF Agents.
 
-If we look closely at our 12c Platform Blueprint, we can see that there is some subtle differences. For example, if we are using the defaults Fusion Middleware Home Directory of `/u01/app/oracle/product/fmw1213` we will see that it has changed to `/u01/app/oracle/product/fmw1221`. 
+If we look closely at our Platform Blueprint, we can see that there is some subtle differences. For example, if we are using the default Fusion Middleware Home Directory of `/u01/app/oracle/product/fmw1213` we will see that it has changed to `/u01/app/oracle/product/fmw1221`. 
 
 {% hint style='danger' %}
-If you are you using a custom `Home Directory` under `Middleware Settings` you must change this to be unique before performing an upgrade. For example, if it is set to `/opt/my-company/12.1.3.0.0/soa` you should change it to `/opt/my-company/12.2.1.0.0/soa`. Remember, you can use a reference to the version `${[rxr.wls.Fmw-1].version}` e.g. `/opt/my-company/${[rxr.wls.Fmw-1].version}/soa`. If you were already using this property reference then it would have changed the path automatically and you don't need to do anything. Once the property reference is set within the `Home Directory` you can be sure it will update automatically for future upgrades. Make sure that any other property references to the version in the configuration which are hardcoded are using a reference, whilst it may not cause the upgrade to fail it will be a source of confusion for the upgraded platform. 
+Warning
 {% endhint %}
+> If you are you using a custom `Home Directory` under `Middleware Settings` you must change this to be unique before performing an upgrade. For example, if it is set to `/opt/my-company/12.1.3.0.0/soa` you should change it to `/opt/my-company/12.2.1.0.0/soa`. Remember, you can use a reference to the version `${[rxr.wls.Fmw-1].version}` e.g. `/opt/my-company/${[rxr.wls.Fmw-1].version}/soa`. If you were already using this property reference then it would have changed the path automatically and you don't need to do anything. Once the property reference is set within the `Home Directory` you can be sure it will update automatically for future upgrades. Make sure that any other property references to the version in the configuration which are hardcoded are using a reference, whilst it may not cause the upgrade to fail it will be a source of confusion for the upgraded platform. 
  
 Once you are happy with the upgraded Platform Blueprint click on `Save & Commit`. When prompted, enter a description for the change.
 
