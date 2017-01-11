@@ -8,8 +8,9 @@ Within MyST, **Hosts** are the logical representation of the Virtual, Physical o
 ### Pre-Configuring Hosts
 In Unix/Linux, root is the account that by default has access to all commands and files on the operating system. It is a heavily guarded privilege which of course should not be given out lightly. MyST keeps it simple and does not need any root privileges to roll out Oracle Middleware platforms. By default, MyST will assume that root-privileged actions have already been performed on the host by a system administrator at the time that it uses the hosts for provisioning.
 
-
-> **Tip**: When using a Cloud provider such as Amazon Web Services, an administrator or automation tool can pre-configure a Linux host with the root-privileged actions and create a template. That way, when MyST provisions Oracle Middleware platforms from scratch on a Cloud, it can use the template as the basis for the Linux hosts. This means that the root privileged actions only need to be performed once which improves security, reduces effort and results in consistent base Linux hosts for all Oracle Middleware platforms.
+{% hint style='tip' %}
+When using a Cloud provider such as Amazon Web Services, an administrator or automation tool can pre-configure a Linux host with the root-privileged actions and create a template. That way, when MyST provisions Oracle Middleware platforms from scratch on a Cloud, it can use the template as the basis for the Linux hosts. This means that the root privileged actions only need to be performed once which improves security, reduces effort and results in consistent base Linux hosts for all Oracle Middleware platforms.
+{% endhint %}
 
 ### Pre-Configuring Middleware Host
 A target Linux host for Oracle Middleware typically requires root privileges to set up a number of prerequisite operating system dependencies. As such, these dependencies are often best addressed by a privileged user or tool prior to using MyST Studio to provision Oracle Middleware on to them. These dependencies are as follows:
