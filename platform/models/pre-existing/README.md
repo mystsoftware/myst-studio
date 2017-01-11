@@ -18,7 +18,7 @@ Once we have entered the basic details about our Platform Model click `Next`.
 ### Select Infrastructure Provider
 Next, we need to specify the Infrastructure Provider for our Platform Model. From the corresponding drop-down, select a Pre-Existing Infrastructure Provider. MyST will list all the target hosts within the Pre-Existing Infrastructure provider for the Platform Model Environment Type.
 
-![](../img/PreModelInfrastructure.png)
+![](img/PreModelInfrastructure.png)
 
 Once done, click `Next`.
 
