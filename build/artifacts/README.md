@@ -63,10 +63,10 @@ This shows the artifact metadata which is used by MyST to manage the deployment 
 * soa.service-endpoint
 * soa.subject
 
-This is detailed further in Part 6, which covers Automated Deployment.
+This is detailed further in the section below which covers [Automated Deployment](https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/deploy/application/).
 
 ### Register Third Party Artifact
-As part of any application, we may want to include third party artifacts, for example, commercial or party open source libraries. These artifacts are typically provided as pre-built libraries.
+As part of any application, we may want to include third party artifacts, for example, commercial or third party open source libraries. These artifacts are typically provided as pre-built libraries.
 
 To use MyST to manage the deployment of these pre-built artifacts, we need to first upload the artifact to our Software Repository and then register it with MyST.
 
@@ -76,13 +76,13 @@ From the side menu, navigate to`Release Management` > `Artifacts`. Click `Create
 
 > The property `Managed By` will automatically set to `Third Party`.
 
-Click `Save` to register the 3rd Party Artifact.
+Click `Save` to register the third party artifact.
 
 #### Edit Third Party Artifact
 To edit the `Metadata` properties for a third party artifact, open the artifact from artifact list. Make the required changes and click `Save`.
 
 #### Register New Version of Third Party Artifact
-To register a new version of a third Party Artifact, open the artifact from artifact list and click `Save as new version`. MyST will save a new version of the Artifact.
+To register a new version of a third party artifact, open the artifact from artifact list and click `Save as new version`. MyST will save a new version of the Artifact.
 
 ### Delete Artifact
 To delete an `Artifact` from MyST, open the artifact from artifact list and click on the `Actions` drop-down and select `Delete`.
