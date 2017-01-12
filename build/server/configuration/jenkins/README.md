@@ -15,14 +15,14 @@ Next, select `Manage Plugins` and select the `Advanced` tab. Scroll down to the 
 
 Jenkins will upload and install the plugin. We will need to restart our Jenkins instance once the plugin has been uploaded.
 
-After restarting Jenkins, to validate that the plugin has been successfully installed. Go to the `Manage Plugins` page and select the `Installed` tab.
+After restarting Jenkins, to validate that the plugin has been successfully installed, go to the `Manage Plugins` page and select the `Installed` tab.
 
 Enter `myst` in the `Filter` criteria and we should be able to see the installed MyST plugin as shown below.
 
 ![](img/installedJenkinsPlugin.png)
 
 #### Retrieve the API key from MyST Studio
-Next step is to retrieve the API Key for connecting to MyST Studio. Login to MyST Studio and from the side menu navigate to `Administration` > `Users`, this will display the list of MyST Users. Locate the `mystsystemuser` - we can filter on `User Name` to make this simpler.
+The next step is to retrieve the API Key for connecting to MyST Studio. Login to MyST Studio and from the side menu navigate to `Administration` > `Users`, this will display the list of MyST Users. Locate the `mystsystemuser` - we can filter on `User Name` to make this simpler.
 
 ![](img/mystSystemUser.png)
 
