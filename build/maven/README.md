@@ -62,7 +62,7 @@ Once completed, save the POM.
 > When creating a POM for a different artifact type, we will need to specify the appropriate **packaging** and parent **groupId**, **artifactId** and **version**. For further details, refer to the Oracle [Documentation](https://docs.oracle.com/middleware/1221/core/MAVEN/toc.htm).
 
 #### Test Maven Build
-Prior to configuring our CI Server to automatically execute our Maven build, it is good practice to test that we have correctly configured our POM file by executing the Maven build from within JDeveloper.
+Prior to configuring our CI Server to automatically executing our Maven build, it is good practice to test that we have correctly configured our POM file by executing the Maven build from within JDeveloper.
 
 Right-click on the project and click `Run Maven` then `package`.
 

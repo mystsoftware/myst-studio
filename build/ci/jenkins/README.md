@@ -14,7 +14,7 @@ Locate the `Global properties` section and click on the `Environment variables` 
 
 * **MAVEN_REPO_URL** -  This is the URL of the Software Repository (such as Artifactory, Nexus or Archiva) that we will publish our built artifacts to.
 
-* **FMW_HOME** = The location of the Oracle Fusion Middleware Oracle Home where the Oracle Middleware is installed.
+* **FMW_HOME** - The location of the Oracle Fusion Middleware Oracle Home where the Oracle Middleware is installed.
 
 ![](img/jenkinsConfigureGlobalProperties.png)
 
@@ -32,7 +32,7 @@ Under `Source Code Management` select your source code repository type (such as 
 
 ![](img/jenkinsNewItemSourceCode.png)
 
-We can leave the all the other fields with default values.
+We can leave all the other fields with default values.
 
 > When checking out an Oracle OSB project we need to specify the project's parent directory, this is due to a constraint with the Oracle OSB Maven build which needs to take the deployment URI from the parent directory. 
 
@@ -72,7 +72,7 @@ For the Goals and options field enter `clean package -DoracleHome=$FMW_HOME`.
 Click `Save`. This will take us to the main job screen for our newly created job.
 
 ### Execute Build Job
-To test the job is executing correctly, either wait for Jenkins to initiate the job according to the specified schedule or click `Build Now` to manually trigger the job.
+To test that the job is executing correctly, either wait for Jenkins to initiate the job according to the specified schedule or click `Build Now` to manually trigger the job.
 
 This will take us back to the main job screen.
 Once initiated, click on the progress bar to see the Console Output.
@@ -138,4 +138,4 @@ Once the job completes, at the end of the output we should see output similar to
   }
 }
 ```
-Your artifact has now been published to MyST Studio. See section [5.4 - Artifact Management]() for details on how to view this artifact in MyST Studio.
+Your artifact has now been published to MyST Studio. See section [Artifact Management](/rubicon-red-myst-studio-user-guide/content/build/artifacts/) for details on how to view this artifact in MyST Studio.
