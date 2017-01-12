@@ -71,3 +71,7 @@
     * [Role Management](administration/roles/README.md)
     * [Workspace Management](administration/workspaces/README.md)
 
+## Untitled Part
+* [How do I...?](how-do-i.md)
+    * [Use MyST Generic Configuration Plans](use-myst-generic-configuration-plans.md)
+
