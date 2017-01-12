@@ -1,7 +1,7 @@
 ## {{ page.title }}
 
 ### List Release Pipelines
-From the side menu, navigate to`Release Management` > `Pipelines`. This will display a list of existing Release Pipelines, similar to the one below.
+From the side menu, navigate to`Release Management > Pipelines`. This will display a list of existing Release Pipelines, similar to the one below.
 
 ![](img/releasePipelineList.png)
 
@@ -17,7 +17,7 @@ Specify the following values:
 * **Pipeline Template** - Select the Pipeline Template that we wish to base our Release Pipeline on. We can see that the list of Stages is automatically populated based on the selected template.
 * **Pipeline Group** - Select the Release Pipeline Group to which the pipeline belongs. 
 
-By default, the stages in our Release Pipeline, plus the sequence and configuration of each stage is pre-configured as defined by the Release Pipeline Template. We can edit these if required.
+By default, the stages in our Release Pipeline, plus the sequence and configuration of each stage, is pre-configured as defined by the Release Pipeline Template. We can edit these if required.
 
 * **Add Stage** - To add a stage, click `Add Stage`. This will open the **Stage** dialogue. Here we need to specify the Stage Name, Description, Stage Environment Type and Promotion Rules.
 
@@ -50,8 +50,8 @@ To add a stream to our Release Pipeline, click `Add Stream`. This will open the 
 
 * **Application Blueprint(s)** - Select the Application Blueprints to be promoted through the stream
 
-#### Configuring a Streams Platform Blueprint Version
-For each stream, we need to define its target Platform Blueprint and Version. Once defined MyST will only make available for deployment Platform Models / Instances that are based on the streams Platform Blueprint and Version.
+#### Configuring a Stream's Platform Blueprint Version
+For each stream, we need to define its target Platform Blueprint and Version. Once defined MyST will only make available for deployment Platform Models / Instances that are based on the stream's Platform Blueprint and Version.
 
 ![](img/streamPlatformBlueprint.png)
 
@@ -71,7 +71,7 @@ Within the `Application Blueprint(s)` section of the `Stream` editor, select the
 
 ![](img/streamApplicationBlueprints.png)
 
-For each application Blueprint we need to specify:
+For each Application Blueprint we need to specify:
 * **Version** - Specifies the version of an Application Blueprint to be deployed.
 
 * **Revision** - Each time there is a new revision of an artifact contained within an Application Blueprint, MyST will create a new revision of the Application Blueprint. Within a Release Stream, we can configure MyST to always use the latest revision of an Application Blueprint or pin a specific revision of an Application Blueprint to the stream.
@@ -108,7 +108,7 @@ Upon activation, MyST will take us to the Release Pipeline Dashboard. Click on R
 
 > Whilst activated, the release pipeline configuration cannot be edited. The only change that can be made is to the Application Model Properties. If we need to edit the Release Pipeline, we first need to deactivate it. We can then make the required changes before re-activating the pipeline.
 
-To activate a Release Pipeline Template, from the side menu navigate to`Release Management` > `Pipelines`. This will display a list of existing Release Pipelines.
+To activate a Release Pipeline Template, from the side menu navigate to`Release Management > Pipelines`. This will display a list of existing Release Pipelines.
 
 ![](img/releasePipelineActivate.png)
 
@@ -117,12 +117,12 @@ Click on the `Actions` drop-down in the top right-hand corner of the pipeline yo
 > Alternatively, from within the Release Pipeline editor, we choose the option of `Save + Activate`. MyST will save any changes made to the Release Pipeline and then activate the Pipeline. Once active, MyST will open the Release Pipeline Dashboard.
 
 ### Deactivate Release Pipeline
-There are a number of occasions, where we may want to deactivate (or pause the execution of) a release pipeline, this includes:
+There are a number of occasions, where we may want to deactivate (or pause the execution of) a release pipeline, this includes when:
 * We want to make configuration changes to our Release Pipeline. For example, we may want to add additional Application Blueprints to an existing stream. 
 * We have successfully delivered a release into Production, so may want to permanently deactivate the corresponding Release Pipeline.
 * We may want to delete a Release Pipeline, for example, we may be merging multiple releases into a single Pipeline.
 
-To deactivate a Release Pipeline, from the side menu navigate to`Release Management` > `Pipelines`. This will display a list of existing Release Pipelines. 
+To deactivate a Release Pipeline, from the side menu navigate to`Release Management > Pipelines`. This will display a list of existing Release Pipelines. 
 
 Click on the `Actions` drop-down in the top right-hand corner of the pipeline you wish to deactivate and select `Deactivate`. MyST will prompt for confirmation of the Deactivate action, click `Yes` to proceed.
 
@@ -131,7 +131,7 @@ Once deactivated, MyST will stop the execution of the Release Pipeline until re-
 ### Delete Release Pipeline
 MyST only allows the deletion of inactive pipelines. If we wish to delete a pipeline that is currently active, we first need to deactivate it.
 
-To delete an inactive Release Pipeline, from the side menu navigate to`Release Management` > `Pipelines`. This will display a list of existing Release Pipelines. 
+To delete an inactive Release Pipeline, from the side menu navigate to`Release Management > Pipelines`. This will display a list of existing Release Pipelines. 
 
 Click on the `Actions` drop-down in the top right-hand corner of the pipeline you wish to remove and select `Delete`. MyST will prompt for confirmation of the Delete action, click `Yes` to proceed with the deletion of the Release Pipeline.
 

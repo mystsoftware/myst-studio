@@ -2,7 +2,7 @@
 
 The Release Pipeline Dashboard provides a ‘single pane of glass’ to monitor and manage the promotion of applications and platform configuration changes through each staging environment and into Production.
 
-To view the dashboard of an active Release Pipeline; from the side menu navigate to`Release Management` > `Pipelines`, this will display a list of existing Release Pipelines. 
+To view the dashboard of an active Release Pipeline; from the side menu navigate to`Release Management > Pipelines`, this will display a list of existing Release Pipelines. 
 
 Click on the `Actions` drop-down in the top right-hand corner of the pipeline whose dashboard we wish to view and select `Dashboard`.
 

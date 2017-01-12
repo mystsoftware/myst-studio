@@ -56,7 +56,7 @@ Once we are happy with our Release Pipeline Template, click `Save` to Save the n
 To remove a stage from the Release Pipeline Template, click on the corresponding  `trash can` icon in the `Actions` column for the stage to be deleted.
 
 ### Edit Release Pipeline Template.
-To edit the Pipeline Template; from the side menu navigate to`Release Management` > `Pipeline Template`. This will display a list of existing Release Pipeline Templates.
+To edit the Pipeline Template, from the side menu navigate to`Release Management` > `Pipeline Template`. This will display a list of existing Release Pipeline Templates.
 
 ![](img/releasePipelineTemplateEdit.png)
 
@@ -67,7 +67,7 @@ Click on the `Actions` drop-down in the top right-hand corner of the template yo
 > Note: Any changes we make to a Release Pipeline Template will only be applied to new Release Pipelines created against the new version of the template.
 
 ### Delete Release Pipeline Template.
-To deleted a  Pipeline Template, from the side menu navigate to`Release Management` > `Pipeline Template`. This will display a list of existing Release Pipeline Templates. 
+To delete a  Pipeline Template, from the side menu navigate to`Release Management` > `Pipeline Template`. This will display a list of existing Release Pipeline Templates. 
 
 Click on the `Actions` drop-down in the top right-hand corner of the template you wish to remove and select `Delete`. MyST will prompt for confirmation of the Delete action. Click `Yes` to proceed with the deletion of the Release Pipeline Template.
 
