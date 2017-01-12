@@ -138,4 +138,4 @@ Once the job completes, at the end of the output we should see output similar to
   }
 }
 ```
-Your artifact has now been published to MyST Studio. See section [Artifact Management](/rubicon-red-myst-studio-user-guide/content/build/artifacts/) for details on how to view this artifact in MyST Studio.
+Your artifact has now been published to MyST Studio. See section [Artifact Management](https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/build/artifacts/) for details on how to view this artifact in MyST Studio.
