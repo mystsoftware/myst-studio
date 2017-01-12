@@ -1,14 +1,14 @@
 ## {{ page.title }}
 
 Within MyST, a Role is used to define the type of MyST resources that a user in that role has access to, and the actions that can be performed against the resources. Specifically it  will define:
-* What actions a user can perform against each resource type, for example, Platform Blueprints / Models, Platform Instances, Artifacts, Application Blueprint / Models.
+* What actions a user can perform against each resource type, for example, Platform Blueprints / Models, Platform Instances, Artifacts, Application Blueprints / Models.
 * Where a resource, such as Platform, Instance or Application Models is Environment specific then the role will define which actions can be performed against that resource in each environment.
 * A separate reserved MyST Administrator Role will be used to manage system specific configurations, for example, user and role management, tag management
 * A separate reserved MyST Workspace Administrator Role will be used to manage workspace specific configurations, for example defining which users have which roles within a workspace.
 
 
 ### List Roles
-To see a list of MyST Roles, click  `Administration` > `Roles`. This will display a list of Roles similar to the one below.
+To see a list of MyST Roles, click  `Administration > Roles`. This will display a list of Roles similar to the one below.
 
 ![](img/roleList.png)
 
@@ -61,7 +61,7 @@ The following table details the access permissions for Platform resources.
 | | No | Delete | Allows a role to delete an existing Platform Model |
 | Platform Instance | Yes | Create | Allows a user to provision a new environment as defined by its corresponding Platform Model |
 | | Yes | Delete | Allows a user to terminate a platform instance. Note that a user needs both create and delete access to re-provision a platform instance |
-| | Yes | Execute | Allows a user to execute actions against the Platform Instance, including updating a platform instance (as defined by its Platform Model), starting and stopping the Platform Instance. |
+| | Yes | Execute | Allows a user to execute actions against the Platform Instance, including updating a platform instance (as defined by its Platform Model), starting and stopping the Platform Instance |
 
 ##### Release Management
 The following table details the access permissions for Release Management resources.
