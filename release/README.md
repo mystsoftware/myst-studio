@@ -1,6 +1,6 @@
 # {{ page.title }}
 
-During the lifetime of a project, source code will be built and promoted to various staging environments such as Development, System Integration and Test (SIT), User Acceptance Test (UAT), Pre-Prod, and Production.
+During the lifetime of a project, source code will be built and promoted to various staging environments such as Development, System Integration Test (SIT), User Acceptance Test (UAT), Pre-Prod, and Production.
 
 MyST **Release Pipelines** allows you to quickly establish a standardized and repeatable process for managing the deployment and promotion of Oracle Middleware applications and platform configurations through each stage of the Software Delivery Pipeline.
 
@@ -40,7 +40,7 @@ For example, if we have the stages *CI*, *SIT*, *UAT* and *PROD* in our Release 
 And for every additional stream, we would need to specify an additional four Platform Instances.
 
 #### Pipeline Groups and Stream Types
-Pipeline Groups and Stream Types are user defined. These allows us to categorize each Release Pipeline and Stream and are used for reporting purposes. 
+Pipeline Groups and Stream Types are user defined. These allow us to categorize each Release Pipeline and Stream and are used for reporting purposes. 
 
 ### Role of Pipeline Templates
 Most organizations will have a *"standard"* software delivery lifecycle (SDLC) that they follow for the implementation of Oracle Middleware projects. These may vary slightly based on the type of release. For example, we may follow one SDLC for *"project releases"*, but have a shorter SDLC for *"patch"* releases.
