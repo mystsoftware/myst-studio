@@ -1,7 +1,0 @@
-MyST can be used to execute SQL files at deploy-time. This approach can be useful for updating BPM Flexfields at deploy-time. To use this approach, you first need to create a Maven project in you SCM which will be used to store the SQL file which contains the BPM Flexfields for deployment. This project can be very simple and just contain the following files:
-
-    pom.xml
-    flexfields.sql
-    
-Samples of these are below:
-
