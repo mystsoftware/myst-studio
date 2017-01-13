@@ -2,7 +2,7 @@
 
 * [Title and Copyright Information](README.md)
 
------
+## USER GUIDE
 * [Introduction to Rubicon Red MyST](introduction/README.md)
     * [Platform Provisioning and Configuration](introduction/platform-provisioning/README.md)
     * [Application Release Automation](introduction/application-release-automation/README.md)
@@ -71,7 +71,7 @@
     * [Role Management](administration/roles/README.md)
     * [Workspace Management](administration/workspaces/README.md)
 
-## Untitled Part
+## COOKBOOK
 * [How do I...?](how-do-i.md)
     * [Use MyST Generic Configuration Plans](howtos/use-myst-generic-configuration-plans.md)
     * [Perform Rolling Restarts for Patches](howtos/perform-rolling-restarts-for-patches.md)
