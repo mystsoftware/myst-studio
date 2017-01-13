@@ -1,4 +1,4 @@
-# MyST Studio User Guide
+# MyST Studio Documentation
 
 * [Title and Copyright Information](README.md)
 
@@ -7,6 +7,7 @@
     * [Platform Automation](introduction/platform-provisioning/README.md)
     * [Application Release Automation](introduction/application-release-automation/README.md)
 
+-----
 * [Infrastructure Management](infrastructure/README.md)
     * [Environment Types](infrastructure/environment-types/README.md)
     * [Compute Definitions](infrastructure/compute-definitions/README.md)
@@ -14,6 +15,7 @@
     * [On-Demand Infrastructure](infrastructure/providers/on-demand/aws/README.md)
     * [Host Prerequisites](infrastructure/providers/hosts/README.md)
 
+-----
 * [Platform Fundamentals](platform/README.md)
     * [Platform Blueprints](platform/blueprints/README.md)
     * [Platform Models](platform/models/README.md)
@@ -28,6 +30,7 @@
     * [Introspecting Existing Instances](platform/introspection/README.md)
     * [Upgrading Instances](platform/upgrade/README.md)
 
+-----
 * [Platform Configuration](platform/resources/weblogic/README.md)
     * [WebLogic Servers](platform/resources/weblogic/servers/README.md)
     * [Oracle Patches](platform/resources/weblogic/patches/README.md)
@@ -39,6 +42,7 @@
     * [JCA Adapters](platform/resources/weblogic/jca-adapters/README.md)
     * [Work Managers](platform/resources/weblogic/work-managers/README.md)
 
+-----
 * [Build Automation](build/README.md)
     * [Build Server Configuration](build/server/configuration/README.md)
         * [Continuous Delivery Profile](infrastructure/continuous-delivery-profile/README.md)
@@ -48,9 +52,11 @@
         * [Configuring Jenkins Build Jobs](build/ci/jenkins/README.md)
     * [Artifact Management](build/artifacts/README.md)
 
+-----
 * [Application Deployment](deploy/application/README.md)
     * [Configuring Application Blueprints](deploy/application/blueprints/README.md)
 
+-----
 * [Release Pipelines](release/README.md)
     * [Pipeline Organization](release/pipeline/organization/README.md)
         * [Pipeline Groups](release/pipeline/organization/groups/README.md)
@@ -59,6 +65,7 @@
     * [Configuring Release Pipelines](release/pipeline/README.md)
     * [Release Pipeline Dashboards](release/pipeline/dashboard/README.md)
 
+-----
 * [Role-Based Access Control](administration/README.md)
     * [User Management](administration/users/README.md)
     * [Role Management](administration/roles/README.md)
