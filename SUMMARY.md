@@ -72,7 +72,7 @@
     * [Workspace Management](administration/workspaces/README.md)
 
 ## Untitled Part
-* [How do I...?](how-do-i.md)
+* [How do I...?](howtos/how-do-i.md)
     * [Use MyST Generic Configuration Plans](howtos/use-myst-generic-configuration-plans.md)
     * [Perform Rolling Restarts for Patches](howtos/perform-rolling-restarts-for-patches.md)
 
