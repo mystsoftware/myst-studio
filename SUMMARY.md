@@ -4,7 +4,7 @@
 
 ## USER GUIDE
 * [Introduction to Rubicon Red MyST](introduction/README.md)
-    * [Platform Provisioning and Configuration](introduction/platform-provisioning/README.md)
+    * [Platform Automation](introduction/platform-provisioning/README.md)
     * [Application Release Automation](introduction/application-release-automation/README.md)
 
 -----
