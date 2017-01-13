@@ -23,11 +23,11 @@
         * [On Demand \(AWS\)](platform/models/on-demand-aws/README.md)
     * [Provision](platform/provisioning/README.md)
     * [Update](platform/update/README.md)
-    * [Edit](platform/definitions/README.md)
-        * [Platform Blueprint and Model Version Control](platform/definitions/version-control/README.md)
-        * [Editing Platform Blueprints and Models](platform/definitions/editor/README.md)
-    * [Management](platform/management/README.md)
-    * [Introspection](platform/introspection/README.md)
+    * [Maintain](platform/definitions/README.md)
+        * [Platform Version Control](platform/definitions/version-control/README.md)
+        * [Platform Editor](platform/definitions/editor/README.md)
+    * [Manage](platform/management/README.md)
+    * [Introspect](platform/introspection/README.md)
     * [Upgrade](platform/upgrade/README.md)
 
 -----
