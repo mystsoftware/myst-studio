@@ -10,7 +10,7 @@ An Infrastructure Provider typically maps to a data center or a cloud provider r
 
 * [Pre-Existing](/infrastructure/providers/pre-existing/README.md)
 : A Pre-Existing infrastructure provider is one where the hosts onto which the Oracle Middleware will be provisioned have been set-up and configured externally to MyST. This can be used with any existing bare-metal, virtual machines (such as VMWare, Oracle VM) or cloud providers (such as Oracle Cloud, AWS or Azure) that we want to use as the target hosts for our Oracle Middleware platforms. 
-* [On Demand (AWS)](/infrastructure/providers/on-demand-aws/README.md)
+* [On Demand (AWS)](/infrastructure/providers/on-demand/aws/README.md)
 : An On-Demand (AWS) infrastructure provider is one where hosts will be created on-demand as part of the process of provisioning the Oracle Middleware platform. This approach relies upon an Amazon Machine Image (AMI), which is a Virtual Machine template, for creation of the target hosts that underpin the Oracle Middleware platforms.
 
 Before registering a host or machine image with MyST it should be setup to conform to the [Host Prerequisites](/infrastructure/providers/hosts/README.md).
