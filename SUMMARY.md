@@ -1,10 +1,10 @@
-# MyST Studio Documentation
+# Summary
 
 * [Title and Copyright Information](README.md)
 
 ## User Guide
 * [Introduction to Rubicon Red MyST](introduction/README.md)
-    * [Platform Automation](introduction/platform-provisioning/README.md)
+    * [Platform Provisioning & Configuration](introduction/platform-provisioning/README.md)
     * [Application Release Automation](introduction/application-release-automation/README.md)
 
 -----
