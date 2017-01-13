@@ -45,7 +45,7 @@
 -----
 * [Build Automation](build/README.md)
     * [Build Server Configuration](build/server/configuration/README.md)
-        * [Continuous Delivery Profiles](infrastructure/continuous-delivery-profile/README.md)
+        * [Continuous Delivery Profile](infrastructure/continuous-delivery-profile/README.md)
         * [MyST Studio Plugin for Jenkins](build/server/configuration/jenkins/README.md)
     * [Configuring Maven Builds](build/maven/README.md)
     * [Configuring Automated Builds ](build/ci/README.md)
