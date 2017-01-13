@@ -73,5 +73,6 @@
 
 ## Untitled Part
 * [How do I...?](how-do-i.md)
-    * [Use MyST Generic Configuration Plans](use-myst-generic-configuration-plans.md)
+    * [Use MyST Generic Configuration Plans](howtos/use-myst-generic-configuration-plans.md)
+    * [Perform Rolling Restarts for Patches](howtos/perform-rolling-restarts-for-patches.md)
 
