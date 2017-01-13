@@ -17,18 +17,18 @@
 
 -----
 * [Platform Fundamentals](platform/README.md)
-    * [Creating a Platform Blueprint](platform/blueprints/README.md)
-    * [Creating a Platform Model](platform/models/README.md)
-        * [Creating a Platform Model for Pre-Existing Infrastructure](platform/models/pre-existing/README.md)
-        * [Creating a Platform Model for AWS On Demand](platform/models/on-demand-aws/README.md)
-    * [Provision and Manage Platform Instance](platform/provisioning/README.md)
-    * [Editing a Platform Blueprint \/ Model](platform/definitions/README.md)
+    * [Platform Blueprints](platform/blueprints/README.md)
+    * [Platform Models](platform/models/README.md)
+        * [Pre-Existing Infrastructure](platform/models/pre-existing/README.md)
+        * [On Demand \(AWS\)](platform/models/on-demand-aws/README.md)
+    * [Provision](platform/provisioning/README.md)
+    * [Update](platform/update/README.md)
+    * [Edit](platform/definitions/README.md)
         * [Platform Blueprint and Model Version Control](platform/definitions/version-control/README.md)
         * [Editing Platform Blueprints and Models](platform/definitions/editor/README.md)
-    * [Updating Platform Configuration](platform/update/README.md)
-    * [Managing a Platform Instance](platform/management/README.md)
-    * [Introspecting an Existing WebLogic Domain](platform/introspection/README.md)
-    * [Upgrading an Existing Platform](platform/upgrade/README.md)
+    * [Management](platform/management/README.md)
+    * [Introspection](platform/introspection/README.md)
+    * [Upgrade](platform/upgrade/README.md)
 
 -----
 * [Platform Configuration](platform/resources/weblogic/README.md)
