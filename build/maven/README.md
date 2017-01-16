@@ -38,7 +38,10 @@ Corresponding maven settings file
   </servers>
   <profiles>
 	<profile>
-	  <id>oracle-repo</id>
+	  <id>oracle-repo</id>			  
+	  <properties>
+	     <oracleHome>/opt/app/oracle/product/fmw1221</oracleHome>
+	  </properties>
 	  <repositories>		
 		<repository>
 		  <id>artifactory</id>
