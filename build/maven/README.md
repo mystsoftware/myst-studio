@@ -8,10 +8,64 @@ The Project Object Model or POM is an XML File that provides all the configurati
 
 For each artifact that we wish to build, we need to create a corresponding POM file. Once created, we need to commit that to our Version Control System so that we can perform automated builds from our CI Server.
 
-In this section, we provide a detailed walkthrough on how to create a POM file in JDeveloper. In this example, we will show how to create a POM file for an OSB project. A similar approach would also be used for other artifact types.
+### Populating Binary Repository with Maven plugin
+
+The Oracle Maven Synchronization plugin supports populating local and remote repositories with artifacts from a given Oracle Middleware installation. Follow instructions in Oracle documentation to setup your Binary repository. 
+
+Sample commands are shown below. Update the values of **ORACLE_HOME**, and **ARTIFACTORY_SERVER** to suit the target environment. Note: This command can take anywhere between 2 and 4 hours to complete.
+
+```
+export ORACLE_HOME=/opt/app/oracle/product/fmw1221
+
+mvn deploy:deploy-file -Dfile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.jar -DpomFile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.pom -Durl=http://<ARTFIACTORY_SERVER>:8081/artifactory/ext-release-local/ -DrepositoryId=artifactory
+
+mvn com.oracle.maven:oracle-maven-sync:push -DoracleHome=${ORACLE_HOME} -DtestingOnly=false -DserverId=artifactory
+
+```
+
+Corresponding maven settings file
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+  <servers>	
+    <server>  
+      <username>admin</username>  
+      <password>password</password>  
+      <id>artifactory</id>  
+    </server>  
+  </servers>
+  <profiles>
+	<profile>
+	  <id>oracle-repo</id>
+	  <repositories>		
+		<repository>
+		  <id>artifactory</id>
+		  <name>artifactory</name>
+		  <url>http://localhost:8081/artifactory/ext-release-local</url>
+		  <layout>default</layout>
+          <snapshots>
+             <enabled>false</enabled>
+          </snapshots>
+          <releases>
+            <updatePolicy>never</updatePolicy>
+          </releases>
+		</repository>
+	  </repositories>
+	</profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>oracle-repo</activeProfile>
+  </activeProfiles>
+
+</settings>
+
+```
 
 ### Building Oracle Service Bus Projects with Maven
-This section provides details on how to use the Oracle Service Bus Maven archetypes to build Oracle Service Bus applications.
+
+In this section, we provide a detailed walkthrough on how to create a POM file in JDeveloper. In this example, we will show how to create a POM file for an OSB project. A similar approach would also be used for other artifact types.
 
 Within JDeveloper, locate the OSB project that we wish to build with Maven. Right click on the project and click `New` and then select `From Gallery`.
 
