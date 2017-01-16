@@ -12,7 +12,7 @@ For each artifact that we wish to build, we need to create a corresponding POM f
 
 The Oracle Maven Synchronization plugin supports populating local and remote repositories with artifacts from a given Oracle Middleware installation. Follow instructions in [Oracle documentation](https://docs.oracle.com/middleware/1221/core/MAVEN/config_maven.htm#MAVEN311) to setup your Binary repository. 
 
-Sample commands are shown below. Update the values of **ORACLE_HOME**, and **ARTIFACTORY_SERVER** to suit the target environment. Note: This command can take anywhere between 2 and 4 hours to complete.
+Sample commands are shown below. Update the values of **ORACLE_HOME**, and **ARTIFACTORY_SERVER** to suit the target environment. Note: This command could take upto 2 hours to complete, depending on network performance.
 
 ```
 export ORACLE_HOME=/opt/app/oracle/product/fmw1221
