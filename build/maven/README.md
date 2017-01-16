@@ -10,7 +10,7 @@ For each artifact that we wish to build, we need to create a corresponding POM f
 
 ### Populating Binary Repository with Maven plugin
 
-The Oracle Maven Synchronization plugin supports populating local and remote repositories with artifacts from a given Oracle Middleware installation. Follow instructions in Oracle documentation to setup your Binary repository. 
+The Oracle Maven Synchronization plugin supports populating local and remote repositories with artifacts from a given Oracle Middleware installation. Follow instructions in [Oracle documentation](https://docs.oracle.com/middleware/1221/core/MAVEN/config_maven.htm#MAVEN311) to setup your Binary repository. 
 
 Sample commands are shown below. Update the values of **ORACLE_HOME**, and **ARTIFACTORY_SERVER** to suit the target environment. Note: This command can take anywhere between 2 and 4 hours to complete.
 
