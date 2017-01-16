@@ -81,7 +81,7 @@
 
 ## Installation
 
-* [MyST Studio](#)
+* [MyST Studio](installation/myst-studio/README.md)
 
 ## Cookbook
 
