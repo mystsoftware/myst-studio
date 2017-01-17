@@ -2,8 +2,6 @@
 
 * [Title and Copyright Information](README.md)
 
-* [Installation](installation/myst-studio/README.md)
-
 ## User Guide
 
 * [Introduction to Rubicon Red MyST](introduction/README.md)
@@ -80,6 +78,10 @@
   * [User Management](administration/users/README.md)
   * [Role Management](administration/roles/README.md)
   * [Workspace Management](administration/workspaces/README.md)
+
+## Installation
+
+* [MyST Studio](#)
 
 ## Cookbook
 
