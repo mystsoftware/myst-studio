@@ -1,7 +1,8 @@
 {
     "gitbook": "3.2.2",
     "plugins": [
-        "hints"
+        "hints",
+        "page-toc"
     ],
     "pluginsConfig": {
         "theme-default": {
