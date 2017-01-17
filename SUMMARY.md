@@ -91,8 +91,6 @@
   * [Configure JCA Adapters](howtos/configure-jca-adapters.md)
   * [Deploy BPM Flexfields](howtos/deploy-bpm-flexfields.md)
 
-
-
 ## Appendix
 
 * [Artifact Type and Properties](/appendix/artifact/README.md)
