@@ -6,6 +6,7 @@ This allows users to transform what is typically a resource intensive and highly
 
 In this guide we will learn about using MyST to deliver Automation, Auditability and Governance of [Platform Change](/introduction/platform-provisioning/README.md) and [Application Release](/introduction/application-release-automation/README.md) for Oracle Middleware.
 
+When following the User Guide you will need to have access to MyST Studio. For details on installing MyST please visit the [MyST Studio Installation Guide](/installation/myst-studio/README.md).
 
 
 
