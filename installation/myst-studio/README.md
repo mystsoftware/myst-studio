@@ -67,26 +67,36 @@ If desired, you can generate a silent installation script which can be used to p
 
 ![](/assets/Screen Shot 2016-07-20 at 2.22.33 PM.jpeg)
 
-To run a silent installation you can execute the following:
-
+{% hint style='tip' %}
+Silent Installation
+{% endhint %}
+> To run a silent installation you can execute the following:
 ```
 java -jar <installer file> <response file>
 ```
 
 The installation will setup the following files and folders:
 
-After the successful installation navigate to the MyST Studio home (in our example, /opt/myst-studio) and execute the following:
+![](/assets/pastedImage_5.jpeg)
+
+After the successful installation navigate to the MyST Studio home (in our example, `/opt/myst-studio`) and execute the following:
+```
 cd /opt/myst-studio/bin
 ./build-data-container.sh
 ./pull.sh <Version>
 ./start.sh
-Once the start.sh has completed you should be able to access the MyST Studio console at https://<your host>/console
-If your instances are running correctly, the output of "docker ps", should be similar to the following:
+```
+
+Once the `start.sh` has completed you should be able to access the MyST Studio console at `https://<your host>/console`
+If your instances are running correctly, the output of "`docker ps`", should be similar to the following:
+
+```
 CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                                        NAMES
 cb296567bcb5        nginx               "nginx -g 'daemon off"   About a minute ago   Up About a minute   0.0.0.0:443->443/tcp, 0.0.0.0:5555->80/tcp   myststudio_https
  
 4930ee08812c        myst-studio         "catalina.sh run"        About a minute ago   Up About a minute   8080/tcp                                     myststudio_web
  
 9a922bcbb4a0        mysql               "docker-entrypoint.sh"   About a minute ago   Up About a minute   0.0.0.0:3306->3306/tcp                       myststudio_db
+```
   
 
