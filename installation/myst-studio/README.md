@@ -1,4 +1,4 @@
-# {{ page.title }} Installation
+# {{ page.title }}
 
 ## Prerequisites
 
