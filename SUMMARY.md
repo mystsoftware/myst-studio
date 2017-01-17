@@ -3,7 +3,7 @@
 * [Title and Copyright Information](README.md)
 
 ## Installation Guide
-* [MyST Studio](myst-studio.md)
+* [Installing MyST](installation/myst-studio/README.md)
 
 ## User Guide
 * [Introduction to Rubicon Red MyST](introduction/README.md)
