@@ -7,6 +7,10 @@
     "pluginsConfig": {
         "theme-default": {
             "showLevel": false
+        }, 
+        "toc": {
+            "addClass": true,
+            "className": "toc"
         }
     }
 }
