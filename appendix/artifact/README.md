@@ -123,7 +123,7 @@
 |target-directory|||
 |target-is-domain-directory|||
 
-#### JAR Shared Library
+#### Java Shared Library
 |Property|Optional?|Description|
 |---|---|---|
 |j2ee.deployment-order|||
