@@ -7,6 +7,9 @@
     "pluginsConfig": {
         "theme-default": {
             "showLevel": false
+        },
+        "page-toc": {
+            "position": top
         }
     }
 }
