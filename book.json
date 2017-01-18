@@ -9,7 +9,7 @@
             "showLevel": false
         },
         "page-toc": {
-            "position": top
+            "position": "top"
         }
     }
 }
