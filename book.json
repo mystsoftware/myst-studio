@@ -2,14 +2,11 @@
     "gitbook": "3.2.2",
     "plugins": [
         "hints",
-        "page-toc"
+        "toc"
     ],
     "pluginsConfig": {
         "theme-default": {
             "showLevel": false
-        },
-        "page-toc": {
-            "position": top
         }
     }
 }
