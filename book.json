@@ -2,15 +2,15 @@
     "gitbook": "3.2.2",
     "plugins": [
         "hints",
-        "toc"
+        "simple-page-toc"
     ],
     "pluginsConfig": {
         "theme-default": {
             "showLevel": false
         }, 
-        "toc": {
-            "addClass": true,
-            "className": "toc"
+        "simple-page-toc": {
+            "maxDepth": 7,
+            "skipFirstH1": true
         }
     }
 }
