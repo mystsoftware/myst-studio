@@ -51,6 +51,7 @@
     * [Configuring Automated Builds ](build/ci/README.md)
         * [Configuring Jenkins Build Jobs](build/ci/jenkins/README.md)
     * [Artifact Management](build/artifacts/README.md)
+    * [Deploy Time Customizations](build/deploy-time-customizations.md)
 
 -----
 * [Application Deployment](deploy/application/README.md)
@@ -80,12 +81,7 @@
     * [Perform Rolling Restarts for Patches](howtos/perform-rolling-restarts-for-patches.md)
     * [Configure JCA Adapters](howtos/configure-jca-adapters.md)
     * [Deploy BPM Flexfields](howtos/deploy-bpm-flexfields.md)
-    
+
 ## Appendix
-
-* [Artifact Type and Properties](/appendix/artifact/README.md)
-
-
-
-
+* [Artifact Type and Properties](appendix/artifact/README.md)
 
