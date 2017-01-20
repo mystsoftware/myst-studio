@@ -3,7 +3,7 @@
 * [Title and Copyright Information](README.md)
 
 ## User Guide
-* [Introduction to Rubicon Red MyST](introduction/README.md)
+* [Rubicon Red MyST](introduction/README.md)
     * [Platform Provisioning & Configuration](introduction/platform-provisioning/README.md)
     * [Application Release Automation](introduction/application-release-automation/README.md)
 
