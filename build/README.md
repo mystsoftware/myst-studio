@@ -24,3 +24,6 @@ This part covers build automation and contains the following chapters:
 
 
 * [Artifact Management](/build/artifacts/README.md)
+
+* [Deploy Time Customizations](/build/deploy-config/README.md)
+

@@ -51,7 +51,7 @@
     * [Configuring Automated Builds ](build/ci/README.md)
         * [Configuring Jenkins Build Jobs](build/ci/jenkins/README.md)
     * [Artifact Management](build/artifacts/README.md)
-    * [Deploy Time Customizations](build/deploy-time-customizations.md)
+    * [Deploy Time Customizations](build/deploy-config/README.md)
 
 -----
 * [Application Deployment](deploy/application/README.md)
