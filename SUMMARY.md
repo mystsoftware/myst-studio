@@ -75,13 +75,3 @@
 ## Installation
 * [MyST Studio Installation](installation/myst-studio/README.md)
 
-## Cookbook
-* [How do I...?](howtos/how-do-i.md)
-    * [Use MyST Generic Configuration Plans](howtos/use-myst-generic-configuration-plans.md)
-    * [Perform Rolling Restarts for Patches](howtos/perform-rolling-restarts-for-patches.md)
-    * [Configure JCA Adapters](howtos/configure-jca-adapters.md)
-    * [Deploy BPM Flexfields](howtos/deploy-bpm-flexfields.md)
-
-## Appendix
-* [Artifact Type and Properties](appendix/artifact/README.md)
-
