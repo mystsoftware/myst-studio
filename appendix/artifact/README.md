@@ -3,25 +3,25 @@
 <!-- toc -->
 
 #### SCA  
-|Property|Optional?|Description|
-|---|---|---|
-|composite.configuration-plan|||
-|composite.name|||
-|composite.partition|||
-|composite.redeploy|||
-|composite.revision|||
-|keepInstancesOnRedeploy|||
-|soa.policies|||
-|soa.service-client|||
-|soa.service-endpoint|||
-|soa.subject|||
+|Property|Description|
+|---|---|
+|composite.configuration-plan|Optional: SOA configuration plan to override endpoint, fault policy location etc. Can be a path on the target host ( <DOMAIN_HOME>/plans/cap.sca.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/cap.sca.configplan.xml)|
+|composite.name|SOA composite name for deployment or undeployment|
+|composite.partition|SOA partition name to deploy composite into. Also used to undeploy composite|
+|composite.redeploy|Boolean flag to control if existing composite can be overriden|
+|composite.revision|Deployment version for SOA Composite|
+|keepInstancesOnRedeploy|Boolean flag to allow existing running instances to continue on redeployment |
+|soa.policies|TODO: web service policy|
+|soa.service-client|TODO: |
+|soa.service-endpoint|TODO: |
+|soa.subject|TODO: |
 
 #### OSB
-|Property|Optional?|Description|
-|---|---|---|
-|customization-file|||
-|myst-config-plan-apply|||
-|myst-config-plan-location|||
+|Property|Description|
+|---|---|
+|customization-file|OSB customization file to replace endpoint and other properties|
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( <DOMAIN_HOME>/plans/myst.osb.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.osb.configplan.xml) |
 
 #### MDS
 |Property|Optional?|Description|
