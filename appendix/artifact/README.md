@@ -26,24 +26,24 @@
 #### MDS
 |Property|Description|
 |---|---|
-|mds.folder-names||
-|mds.redeploy||
+|mds.folder-names|Optional: Specify folders within archive to update MDS with |
+|mds.redeploy|Boolean flag to control whether MDS can be overwritten. |
 
 #### ADF
 |Property|Description|
 |---|---|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
-|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.adf.configplan.xml) |
+|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.adf.configplan.xml) |
 
 
 #### Java EAR
 |Property|Description|
 |---|---|
-|j2ee.deployment-order||
-|j2ee.deployment-plan||
-|j2ee.redeploy||
-|j2ee.stage-mode||
-|j2ee.target||
+|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code|
+|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)|
+|j2ee.redeploy|Boolean flag to control whether application can be redeployed with same version.|
+|j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE|
+|j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml) |
 |strip-version|||
@@ -51,11 +51,11 @@
 #### Java WAR
 |Property|Description|
 |---|---|
-|j2ee.deployment-order||
-|j2ee.deployment-plan||
-|j2ee.redeploy||
-|j2ee.stage-mode||
-|j2ee.target||
+|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code|
+|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)|
+|j2ee.redeploy|Boolean flag to control whether application can be redeployed with same version.|
+|j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE|
+|j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml) 
 |strip-version||
@@ -87,15 +87,11 @@
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.bam.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.bam.configplan.xml) |
 
-
-
 #### MFT
 |Property|Description|
 |---|---|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.mft.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.mft.configplan.xml) |
-
-
 
 #### Application Configuration (Properties/XML)
 |Property|Description|
@@ -115,11 +111,6 @@
 |---|---|
 |extract-files||
 
-#### SOA Extension
-|Property|Description|
-|---|---|
-|||
-
 #### JAR Library
 |Property|Description|
 |---|---|
@@ -129,9 +120,9 @@
 #### Java Shared Library
 |Property|Description|
 |---|---|
-|j2ee.deployment-order||
-|j2ee.redeploy||
-|j2ee.stage-mode||
-|j2ee.target||
+|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code|
+|j2ee.redeploy|Boolean flag to control whether application can be redeployed with same version.|
+|j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE|
+|j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
 |strip-version||
 
