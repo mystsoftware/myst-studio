@@ -26,7 +26,7 @@
 #### MDS
 |Property|Description|
 |---|---|
-|mds.folder-names|Optional: Specify folders within archive to update MDS with |
+|mds.folder-names|List of folder names from artifact to deploy into MDS. Also used during redeployment.  |
 |mds.redeploy|Boolean flag to control whether MDS can be overwritten. |
 
 #### ADF
@@ -46,7 +46,7 @@
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml) |
-|strip-version|||
+|strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.ear becomes Stock.ear)|
 
 #### Java WAR
 |Property|Description|
@@ -59,7 +59,7 @@
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml) 
-|strip-version||
+|strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.war becomes Stock.war. This means context root will be /Stock instead of /Stock-1.0.0)|
 
 #### SQL
 |Property|Description|
@@ -97,26 +97,26 @@
 #### Application Configuration (Properties/XML)
 |Property|Description|
 |---|---|
-|expand-properties|TODO:|
-|extract-files|TODO:|
-|target-directory|TODO:|
-|target-is-domain-directory|TODO:|
+|expand-properties|Replace files with MyST properties|
+|extract-files|Files to extract from archive|
+|target-directory|Target directory to place extracted files|
+|target-is-domain-directory|Boolean flag to indicate path if path is relative to domain home directory|
 
 #### OSB Custom XPath
 |Property|Description|
 |---|---|
-|extract-files|TODO:|
+|extract-files|Files to extract from archive|
 
 #### OWSM Policy
 |Property|Description|
 |---|---|
-|extract-files|TODO:|
+|extract-files|Files to extract from archive|
 
 #### JAR Library
 |Property|Description|
 |---|---|
-|target-directory|TODO:|
-|target-is-domain-directory|TODO:|
+|target-directory|Target directory to place extracted files|
+|target-is-domain-directory|Boolean flag to indicate path if path is relative to domain home directory|
 
 #### Java Shared Library
 |Property|Description|
@@ -125,5 +125,7 @@
 |j2ee.redeploy|Boolean flag to control whether application can be redeployed with same version.|
 |j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE|
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
-|strip-version|TODO:|
+|strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.jar becomes Stock.jar)|
+
+
 
