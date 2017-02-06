@@ -11,7 +11,7 @@
 |composite.redeploy|Boolean flag to control if existing composite can be overriden|
 |composite.revision|Deployment version for SOA Composite|
 |keepInstancesOnRedeploy|Boolean flag to allow existing running instances to continue on redeployment |
-|soa.policies|TODO: web service policy|
+|soa.policies|TODO: web service policy?|
 |soa.service-client|TODO: |
 |soa.service-endpoint|TODO: |
 |soa.subject|TODO: |
@@ -66,13 +66,13 @@
 |---|---|
 |sql.client|Command that can run sql files. e.g. sqlplus|
 |sql.data-source-driver|Optional: Assumes Oracle JDBC Driver. Specify if non-Oracle|
-|sql.data-source-password||
-|sql.data-source-sys-role||
-|sql.data-source-url||
-|sql.data-source-username|JDBC username, can be a property like ${core.product[rcu].param[db-url]}|
-|sql.delimiter||
-|sql.execute||
-|sql.fail-on-error||
+|sql.data-source-password|JDBC password, can be a property like ${[rxr.def.Product-rcu].param[db-password]}|
+|sql.data-source-sys-role|Optional: Boolean flag to determine if username specified has a sysdba privileges|
+|sql.data-source-url|JDBC URL, can be a property like ${[rxr.def.Product-rcu].param[db-url]}|
+|sql.data-source-username|JDBC username, can be a property like ${[rxr.def.Product-rcu].param[db-user-prefix]}_SOAINFRA|
+|sql.delimiter|Optional: Specify delimiter in sql file to differentiate multiple commands in single file. e.g. ;|
+|sql.execute|Path within archive for sql script e.g. (EMBEDDED)/01\_db\_change89778.sql|
+|sql.fail-on-error|Optional: Boolean flag to allow script to continue on failure|
 
 #### B2B
 |Property|Description|
@@ -97,26 +97,26 @@
 #### Application Configuration (Properties/XML)
 |Property|Description|
 |---|---|
-|expand-properties||
-|extract-files||
-|target-directory||
-|target-is-domain-directory||
+|expand-properties|TODO:|
+|extract-files|TODO:|
+|target-directory|TODO:|
+|target-is-domain-directory|TODO:|
 
 #### OSB Custom XPath
 |Property|Description|
 |---|---|
-|extract-files||
+|extract-files|TODO:|
 
 #### OWSM Policy
 |Property|Description|
 |---|---|
-|extract-files||
+|extract-files|TODO:|
 
 #### JAR Library
 |Property|Description|
 |---|---|
-|target-directory||
-|target-is-domain-directory||
+|target-directory|TODO:|
+|target-is-domain-directory|TODO:|
 
 #### Java Shared Library
 |Property|Description|
@@ -125,5 +125,5 @@
 |j2ee.redeploy|Boolean flag to control whether application can be redeployed with same version.|
 |j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE|
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
-|strip-version||
+|strip-version|TODO:|
 
