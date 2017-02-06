@@ -21,7 +21,7 @@
 |---|---|
 |customization-file|OSB customization file to replace endpoint and other properties|
 |myst-config-plan-apply|Optional: Boolean flag to specify whether to apply myst config plan|
-|myst-config-plan-location|Optional: MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.osb.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.osb.configplan.xml) |
+|myst-config-plan-location|Optional: MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.osb.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.osb.configplan.xml) |
 
 #### MDS
 |Property|Description|
@@ -78,7 +78,7 @@
 |Property|Description|
 |---|---|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
-|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.b2b.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.b2b.configplan.xml) |
+|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.b2b.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.b2b.configplan.xml) |
 
 
 
@@ -86,13 +86,13 @@
 |Property|Description|
 |---|---|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
-|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.bam.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.bam.configplan.xml) |
+|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.bam.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.bam.configplan.xml) |
 
 #### MFT
 |Property|Description|
 |---|---|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
-|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.mft.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.mft.configplan.xml) |
+|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.mft.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.mft.configplan.xml) |
 
 #### Application Configuration (Properties/XML)
 |Property|Description|
@@ -121,7 +121,7 @@
 #### Java Shared Library
 |Property|Description|
 |---|---|
-|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code|
+|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application deployments|
 |j2ee.redeploy|Boolean flag to control whether application can be redeployed with same version.|
 |j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE|
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
