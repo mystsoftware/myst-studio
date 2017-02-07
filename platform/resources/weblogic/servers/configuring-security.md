@@ -8,7 +8,7 @@ The security configuration in MyST can contain the following definitions:
 * Create, update, and delete credentials maps.
 * Create security policies on the JMS modules.
 
-The users, roles, groups, credentials maps, and the security policies must be defined in the core.custom container, using the following properties.
+The users, roles, groups, credentials maps, and the security policies must be defined as Global Variables, using the properties below. They will be applied by  the `Control > Custom > "security"` action. Alternatively  you can include it at provisioning time by adding `action.configure.post=security`. \(_**To be clarified\)**_
 
 User parameters
 
@@ -98,8 +98,8 @@ Credentials map parameters
 | credential.map.&lt;credential map&gt;.&lt;key&gt;.present | Specify whether the credential map key should be present or not. If set to false the credential map key is deleted. The default value is set to true. |
 | credential.map.&lt;credential map&gt;.&lt;key&gt;.update-if-exists | Specify whether the credential map key should be updated if it already exists. The default value is false, which means that if the credential map key already exists it will not be updated. |
 
-
 Example
+
 ```
 credential.maps=oracle.wsm.security
 credential.map.oracle.wsm.security.keys=owsm-key
@@ -108,7 +108,8 @@ credential.map.oracle.wsm.security.owsm-key.password=welcome1
 credential.map.oracle.wsm.security.owsm-key.description=Deployment Administrator
 ```
 
-The following is an example of a security policies definition created in the custom container.
+The following is an example of a security policies definition created via Global Variables
+
 ```
 add.policies=myjmsmodule
 myjmsmodule.type=jms
@@ -116,4 +117,6 @@ myjmsmodule.application=MyJMSModule
 myjmsmodule.credential.type=user
 myjmsmodule.credential.value=jsmith
 ```
+
+
 
