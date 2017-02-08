@@ -11,10 +11,10 @@
 |composite.redeploy|Boolean flag to control if existing composite can be overriden|
 |composite.revision|Deployment version for SOA Composite|
 |keepInstancesOnRedeploy|Boolean flag to allow existing running instances to continue on redeployment |
-|soa.policies|TODO: web service policy?|
-|soa.service-client|TODO: |
-|soa.service-endpoint|TODO: |
-|soa.subject|TODO: |
+|soa.policies|Reserved for future capability to specify web service policy|
+|soa.service-client|Reserved for future capability to specify web service policy |
+|soa.service-endpoint|Reserved for future capability to specify web service policy |
+|soa.subject|Reserved for future capability to specify web service policy |
 
 #### OSB
 |Property|Description|
