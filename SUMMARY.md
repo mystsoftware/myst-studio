@@ -72,6 +72,9 @@
     * [Role Management](administration/roles/README.md)
     * [Workspace Management](administration/workspaces/README.md)
 
-## Installation
+## Installation Guide
 * [MyST Studio Installation](installation/myst-studio/README.md)
+
+## Property References
+* [Artifact Types and Properties](appendix/artifact/README.md)
 
