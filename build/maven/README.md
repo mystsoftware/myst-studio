@@ -22,12 +22,17 @@ Sample commands are shown below.
 
 This is useful for a basic local build setup.
 
+Update the values of **ORACLE_HOME** to suit the target environment.
+
 ```
 export ORACLE_HOME=/opt/app/oracle/product/fmw1221
 
-mvn install:install-file -Dfile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.jar -DpomFile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.pom
+mvn install:install-file \
+-Dfile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.jar \
+-DpomFile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.pom
 
-mvn com.oracle.maven:oracle-maven-sync:push -DoracleHome=${ORACLE_HOME} -DtestingOnly=false 
+mvn com.oracle.maven:oracle-maven-sync:push \
+-DoracleHome=${ORACLE_HOME} -DtestingOnly=false 
 
 ```
 
@@ -40,9 +45,13 @@ Update the values of **ORACLE_HOME**, and **MAVEN_SERVER** to suit the target en
 ```
 export ORACLE_HOME=/opt/app/oracle/product/fmw1221
 
-mvn deploy:deploy-file -Dfile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.jar -DpomFile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.pom -Durl=http://${MAVEN_SERVER}:8081/artifactory/ext-release-local/ -DrepositoryId=artifactory
+mvn deploy:deploy-file \
+-Dfile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.jar \
+-DpomFile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.pom \
+-Durl=http://${MAVEN_SERVER}:8081/artifactory/ext-release-local/ -DrepositoryId=artifactory
 
-mvn com.oracle.maven:oracle-maven-sync:push -DoracleHome=${ORACLE_HOME} -DtestingOnly=false -DserverId=artifactory
+mvn com.oracle.maven:oracle-maven-sync:push \
+-DoracleHome=${ORACLE_HOME} -DtestingOnly=false -DserverId=artifactory
 
 ```
 
