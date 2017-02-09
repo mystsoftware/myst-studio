@@ -98,7 +98,75 @@ For the above to work, you should define your Maven Repository connection detail
 
 ```
 
-### Building Oracle Service Bus Projects with Maven
+### Defining our Project Object Model
+
+Each automated Maven build should have a Project Object Model (also knows as `pom`) which is defined in a `pom.xml` file at the project root directory.
+
+At a minimum a `pom.xml` must contain a `groupId`, `artifactId` and `version` (also known as a GAV classifier) and a `modelVersion` to indicate the version of the Maven Project Object Model itself. At the time of writing, `4.0.0` is the latest `pom` version.
+
+Below is an example of the most minimal `pom.xml` to create a single jar file
+
+```
+<project>
+ <modelVersion>4.0.0</modelVersion>
+ <groupId>com.acme</groupId>
+ <artifactId>my-jar-achive</artifactId>
+ <version>1.0-SNAPSHOT</version>
+</project>
+```
+
+Given this `pom.xml` and a source code structure as follows...
+```
+hello-world
+├── pom.xml
+└── src
+    └── main
+        └── java
+            └── com
+                └── acme
+                    └── hello_world
+                        └── Main.java
+
+6 directories, 2 files
+```
+...when I navigate to the `hello-world` project directory from a Terminal and execute `mvn package` then a Java Archive will be compiled and packaged to `target/hello-world-1.0-SNAPSHOT.jar`
+
+#### Maven Parents
+
+Maven supports the concept of project inheritance. This can be useful when you want to have a common set of properties and plugins that are reused by multiple projects. This is also the mechanism that Oracle use to enable a given `pom.xml` to build a certain project type. 
+
+Project inheritance is achieved through the concept of a **Parent POM** which is in-turn referenced by the **Project POM**. Below is an example `pom.xml` for building an Oracle Service Bus (OSB) archive for the 12.2.1.0.0 version of Oracle SOA Suite.
+
+```
+<project>  
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.oracle.servicebus</groupId>
+    <artifactId>sbar-project-common</artifactId>
+    <version>12.1.3-0-0</version>
+  </parent>
+  <groupId>com.acme</groupId>
+  <artifactId>stock-services</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>sbar</packaging>
+</project>
+```
+
+In addition to the automated build, the MyST build plugin will use the `parent` for Oracle-specific artifacts to determine the deploy-time Artifact Type. This is important as MyST uses different deploy-time strategies depending on the Artifact Type.
+
+The below table contains the details of common Parent POMs provided by Oracle and their corresponding MyST Artifact Type.
+
+| MyST Artifact Type | Group ID | Artifact ID | Support Versions |
+| ------------------ | ------- | ---------- | -------- |
+| ADF | com.oracle.adf | adf-parent | 12.1.3-0-0, 12.2.1-0-0 |
+| SOA/BPM Composites | com.oracle.soa | sar-common | 12.1.3-0-0, 12.2.1-0-0 |
+| OSB Configuration | com.oracle.servicebus | sbar-project-common | 12.1.3-0-0, 12.2.1-0-0 |
+
+### JDeveloper Examples
+
+Oracle JDeveloper 12c has native support for Apache Maven.
+
+#### Building Oracle Service Bus Projects in JDeveloper with Maven
 
 In this section, we provide a detailed walkthrough on how to create a POM file in JDeveloper. In this example, we will show how to create a POM file for an OSB project. A similar approach would also be used for other artifact types.
 
