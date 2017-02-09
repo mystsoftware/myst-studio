@@ -10,20 +10,43 @@ For each artifact that we wish to build, we need to create a corresponding POM f
 
 ### Populating Binary Repository with Maven plugin
 
-The Oracle Maven Synchronization plugin supports populating local and remote repositories with artifacts from a given Oracle Middleware installation. Follow instructions in [Oracle documentation](https://docs.oracle.com/middleware/1221/core/MAVEN/config_maven.htm#MAVEN311) to setup your Binary repository. 
+The Oracle Maven Synchronization plugin supports populating local and remote repositories with artifacts from a given Oracle Middleware installation. Detailed instructions are available in the [Oracle documentation](https://docs.oracle.com/middleware/1221/core/MAVEN/config_maven.htm#MAVEN311) on how to setup your Binary repository. 
 
-Sample commands are shown below. Update the values of **ORACLE_HOME**, and **ARTIFACTORY_SERVER** to suit the target environment. Note: This command could take upto 2 hours to complete, depending on network performance.
+{% hint style='danger' %}
+You must perform the one-off synchonization step in your local environment or Continuous Integration server before you can build Oracle SOA and related artifacts using Maven.
+{% endhint %}
+
+Sample commands are shown below. 
+
+#### Seeding a local repository
+
+This is useful for a basic local build setup.
 
 ```
 export ORACLE_HOME=/opt/app/oracle/product/fmw1221
 
-mvn deploy:deploy-file -Dfile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.jar -DpomFile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.pom -Durl=http://<ARTFIACTORY_SERVER>:8081/artifactory/ext-release-local/ -DrepositoryId=artifactory
+mvn install:install-file -Dfile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.jar -DpomFile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.pom
+
+mvn com.oracle.maven:oracle-maven-sync:push -DoracleHome=${ORACLE_HOME} -DtestingOnly=false 
+
+```
+
+#### Seeding a remote repository
+
+This approach is recommended for a Continuous Integration server and/or a team of developers. When a build is run on any server with the same Maven `settings.xml` the required libraries will be automatically downloaded if they are missing.
+
+Update the values of **ORACLE_HOME**, and **MAVEN_SERVER** to suit the target environment. Note: This command could take up to 2 hours to complete, depending on network performance.
+
+```
+export ORACLE_HOME=/opt/app/oracle/product/fmw1221
+
+mvn deploy:deploy-file -Dfile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.jar -DpomFile=${ORACLE_HOME}/oracle_common/plugins/maven/com/oracle/maven/oracle-maven-sync/12.2.1/oracle-maven-sync-12.2.1.pom -Durl=http://${MAVEN_SERVER}:8081/artifactory/ext-release-local/ -DrepositoryId=artifactory
 
 mvn com.oracle.maven:oracle-maven-sync:push -DoracleHome=${ORACLE_HOME} -DtestingOnly=false -DserverId=artifactory
 
 ```
 
-Corresponding maven settings file
+For the above to work, you should define your Maven Repository connection details in the Maven `settings.xml`. Below is an example for Artifactory.
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0"
