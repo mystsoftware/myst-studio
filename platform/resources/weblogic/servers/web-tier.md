@@ -1,3 +1,5 @@
+## {{ page.title }}
+
 The Oracle Web Tier provides the interface between your external load balancer and the applications. This topic helps you understand the basic configuration parameters for Oracle Web Tier that you can define in the platform blueprint. The WebTier configuration is optional, and you can add it only when you need WebTier in your configuration.
 
 Before you begin defining the configuration, the Web Tier must be listed as a product in the product-list in your configuration file.
