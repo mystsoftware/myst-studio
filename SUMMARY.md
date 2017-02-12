@@ -46,7 +46,7 @@
   * [JCA Adapters](platform/resources/weblogic/jca-adapters/README.md)
   * [Work Managers](platform/resources/weblogic/work-managers/README.md)
   * [Load Balancer](platform/resources/weblogic/servers/load-balancer-configuration.md)
-  * [Web Tier](platform/resources/weblogic/servers/web-tier.md)
+  * [Web Tier Routing Rules](platform/resources/weblogic/servers/web-tier.md)
   * [Configuring Security](platform/resources/weblogic/servers/configuring-security.md)
   * [Applying Certificates](platform/resources/weblogic/servers/applying-certificates.md)
   * [Setting Startup and Shutdown Classes](platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.md)
