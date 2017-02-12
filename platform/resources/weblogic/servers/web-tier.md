@@ -1,8 +1,12 @@
 ## {{ page.title }}
 
-The Oracle Web Tier provides the interface between your external load balancer and the applications. This topic helps you understand the basic configuration parameters for Oracle Web Tier that you can define in the platform blueprint. The WebTier configuration is optional, and you can add it only when you need WebTier in your configuration.
+The **Oracle Webtier** (also known as **Oracle HTTP Server** provides the interface between your external load balancer and the applications. This topic helps you understand the basic configuration parameters for Oracle Web Tier that you can define in the platform blueprint. The WebTier configuration is optional, and you can add it only when you need WebTier in your configuration.
 
-Before you begin defining the configuration, the Web Tier must be listed as a product in the product-list in your configuration file.
+## Prequisites
+
+Before you begin defining the configuration, the Webtier must be listed as a product in your Platform Blueprint. If you did not select **Oracle Webtier** during the [Platform Blueprint Wizard](platform/blueprints/README.md) then you can add it your Blueprint at a later stage as follows:
+
+
 
 > Note: When you enable root permissions through the flag core.product\[webtier\].param\[root-permissions-enabled\], it is assumed that the operating system group which owns the home defined by core.product\[webtier\].home is "oracle". If this is not the case, then this property must be overridden with the custom property webtier.oracle.group. For example:
 
