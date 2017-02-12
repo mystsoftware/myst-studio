@@ -1,9 +1,5 @@
 Add certificates that you want to apply to your platform. The properties for applying certificates are listed in the following table. These properties are defined as Global Variables in the Platform Blueprint. 
 
-They will be applied by  the `Control > Custom > "security"` action. Alternatively  you can apply the certificates at provisioning time by adding `action.configure.post=security`. \(_**To be clarified\)**_
-
-
-
 | Property | Description |
 | :--- | :--- |
 | certificate\[ID\].file | The file system location of the certificate to be added to the keystore. |
@@ -31,6 +27,8 @@ certificate.wls-pub.alias=dss_ad_pub
 certificate.wls-pub.keytool.location=${core.product[java].home}/bin/keytool
 certificate.wls-pub.machines=${product.weblogic.node-list}
 ```
+
+> They will be applied by  the `Control > Custom > "security"` action. Alternatively  you can apply the certificates at provisioning time by adding `action.configure.post=security`. \(_**To be clarified\)**_
 
 
 
