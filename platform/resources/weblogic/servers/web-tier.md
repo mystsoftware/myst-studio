@@ -2,17 +2,23 @@
 
 The **Oracle Webtier** (also known as **Oracle HTTP Server** provides the interface between your external load balancer and the applications. This topic helps you understand the basic configuration parameters for Oracle Web Tier that you can define in the platform blueprint. The WebTier configuration is optional, and you can add it only when you need WebTier in your configuration.
 
-## Prequisites
+## Prerequisites
 
-Before you begin defining the configuration, the Webtier must be listed as a product in your Platform Blueprint. If you did not select **Oracle Webtier** during the [Platform Blueprint Wizard](platform/blueprints/README.md) then you can add it your Blueprint at a later stage as follows:
+Before you begin defining the configuration, the Webtier must be listed as a product in your Platform Blueprint. 
 
-1. In Edit-mode
+If you did not select **Oracle Webtier** during the [Platform Blueprint Wizard](platform/blueprints/README.md) then you can add it your Blueprint at a later stage as follows:
 
-> Note: When you enable root permissions through the flag core.product\[webtier\].param\[root-permissions-enabled\], it is assumed that the operating system group which owns the home defined by core.product\[webtier\].home is "oracle". If this is not the case, then this property must be overridden with the custom property webtier.oracle.group. For example:
+From the Edit mode in a Platform Blueprint navigate to the **Products** component and click on **+** icon to add a new product.
 
-`webtier.oracle.group=dba`
+![](/assets/Screenshot 2017-02-13 09.05.03.png)
 
-The Oracle HTTP Server in the Web Tier is configured through moduleconf files that you define outside your platform blueprint. The MyST agent references the configuration information from your moduleconf file. A moduleconf file is a standard Oracle HTTP Server configuration. MyST automatically copies moduleconf configuration to the target Oracle HTTP Server hosts and replaces any property references defined in the files with the associated values in configuration. The moduleconf file is stored in the MYST\_WORKSPACE/resources/ohs/moduleconf. This is the default path where MyST tries to locate the moduleconf files to copy to the node. If there is a need to have different moduleconf for environments, then they should be stored in separate folders. For example, if there was a separate OHS configuration for single node and cluster, there should be two folders created as follows:
+You will then be prompted to select the product to compute group targeting. Select **Oracle Webtier** and target it to the compute group of your choice.
+
+![](/assets/Screenshot 2017-02-13 09.04.52.png)
+
+## Understanding how Webtier Location Routing Rules are defined
+
+The Webtier is configured through moduleconf files that you define outside your platform blueprint. The MyST agent references the configuration information from your moduleconf file. A moduleconf file is a standard Oracle HTTP Server configuration. MyST automatically copies moduleconf configuration to the target Oracle HTTP Server hosts and replaces any property references defined in the files with the associated values in configuration. The moduleconf file is stored in the MYST\_WORKSPACE/resources/ohs/moduleconf. This is the default path where MyST tries to locate the moduleconf files to copy to the node. If there is a need to have different moduleconf for environments, then they should be stored in separate folders. For example, if there was a separate OHS configuration for single node and cluster, there should be two folders created as follows:
 
 * MYST\_WORKSPACE/resources/ohs/moduleconf/single
 * MYST\_WORKSPACE/resources/ohs/moduleconf/cluster
@@ -62,6 +68,10 @@ ${core.server[soa.server1].listen-address}:${core.server[soa.server1].listen-por
 ```
 
 ...which would resolve to WebLogicCluster soa-machine01:8001,soa-machine02:8001. To simplify this, there is a property that is dynamically created at runtime, which can be used to automatically retrieve this list of server addresses. This property is core.webtier.cluster\[CLUSTER-ID\].server-addresses. At run time, it will automatically create the server list as above without the need to explicitly define all the listen-address and listen-port elements of the servers in the cluster.
+
+> Note: When you enable root permissions through the flag core.product\[webtier\].param\[root-permissions-enabled\], it is assumed that the operating system group which owns the home defined by core.product\[webtier\].home is "oracle". If this is not the case, then this property must be overridden with the custom property webtier.oracle.group. For example:
+
+`webtier.oracle.group=dba`
 
 In addition to the moduleconf definition, the following table describes the configuration properties that you must set for Web Tier in the platform blueprint.
 
