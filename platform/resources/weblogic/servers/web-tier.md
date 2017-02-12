@@ -6,7 +6,7 @@ The **Oracle Webtier** (also known as **Oracle HTTP Server** provides the interf
 
 Before you begin defining the configuration, the Webtier must be listed as a product in your Platform Blueprint. If you did not select **Oracle Webtier** during the [Platform Blueprint Wizard](platform/blueprints/README.md) then you can add it your Blueprint at a later stage as follows:
 
-
+1. In Edit-mode
 
 > Note: When you enable root permissions through the flag core.product\[webtier\].param\[root-permissions-enabled\], it is assumed that the operating system group which owns the home defined by core.product\[webtier\].home is "oracle". If this is not the case, then this property must be overridden with the custom property webtier.oracle.group. For example:
 
