@@ -8,7 +8,7 @@ A load balancer definition in MyST can have many frontend definitions. A fronten
 
 Some of the parameters for the frontend, such as the host, are environment-specific and need not be specified in a blueprint. In this case, you can enter the value "?" for these parameters, and define them in your platform model. MyST will validate that you have defined this value in your platform model at the time of a platform update or provision. When you define the same parameters in your platform model, the values provided in the platform model will take precedence over the values provided in the platform blueprint.
 
-# Creating a frontend entry
+### Creating a frontend entry
 
 Setting up a load balancer frontend in your platform blueprint requires you to set the following properties.
 
