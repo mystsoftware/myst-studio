@@ -8,7 +8,7 @@ This section details how to define some of the more common Oracle Middleware con
 * **[WebLogic Servers](/platform/resources/weblogic/servers/README.md)** - For example, JTA Timeout, Server Startup Arguments and Classes.
 * **[Oracle Patches](/platform/resources/weblogic/patches/README.md)** - To guarantee correct patch-levels
 * **[JDBC Data Sources](/platform/resources/weblogic/jdbc/README.md)** - With examples for Oracle RAC, Microsoft SQL Server and IBM DB2
-* **[Java Messaging Service (JMS)](/platform/resources/weblogic/jms/README.md)** -  
+* **[Java Messaging Service (JMS)](/platform/resources/weblogic/jms/README.md)**
   * [Persistent Store Configuration](/platform/resources/weblogic/jms/persistent-stores/README.md)
   * [JMS Modules, Queues and Topics](/platform/resources/weblogic/jms/modules/README.md)
   * [Store and Forward (SAF) Services](/platform/resources/weblogic/jms/store-and-forward/README.md).
