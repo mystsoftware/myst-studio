@@ -10,7 +10,7 @@ When configuring the Java Messaging Service (JMS) and Store and Forward (SAF) se
 * **JMS Module** - We will typically define a JMS Module targeted at a specific cluster. This acts as a configuration container for JMS Resources, such as:
    * **Sub Deployment** - We will typically define one sub deployment per JMS Module and target it to the set of JMS servers running on the WebLogic Server cluster targeted by the JMS Module
    * **Connection Factories** - Used to create a connection with a JMS provider (i.e. queue or topic).
-   * **Uniform Distributed Queue** - A JMS queue for a JMS server. 
+   * **Uniform Distributed Queue** - A JMS queue for a JMS server 
    * **Uniform Distributed Topic** - A JMS Topic for a JSM server
 
 

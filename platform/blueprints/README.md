@@ -63,7 +63,7 @@ Finally, we need to specify how we want to create the Platform Blueprint. Keep t
 ### Specify Oracle Middleware Components
 The next stage is to select which Oracle Middleware components are to be included within our Platform Blueprint. First, select the Oracle Middleware Product Catalog in which we are interested, this could be one of:
 * Integration and Process Management
-* Social Business & Collaboration
+* Social Business and Collaboration
 * Business Intelligence
 * Identity Management
 

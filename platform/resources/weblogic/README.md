@@ -8,7 +8,7 @@ This section details how to define some of the more common Oracle Middleware con
 * **WebLogic Server Configurations** - For example, JTA Timeout, Server Startup Arguments and Classes.
 * **Patches**
 * **JDBC Data Sources** - With examples for Oracle RAC, Microsoft SQL Server and IBM DB2
-* **JMS & SAF Configuration** - Configuration of Persistent Stores, JMS Modules, Java Messaging Service (JMS) and Store and Forward (SAF) services
+* **JMS and SAF Configuration** - Configuration of Persistent Stores, JMS Modules, Java Messaging Service (JMS) and Store and Forward (SAF) services
 * **JCA Adapters** - Configuration of JCA Adapters and JCA Adapter instances
 * **Work Managers** -  Configuration of work managers, including constraints and request classes
 
