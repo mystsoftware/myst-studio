@@ -44,8 +44,8 @@
     * [Webtier Routing Rules](platform/resources/weblogic/servers/web-tier.md)
     * [Users, Groups, Roles and Policies](platform/resources/weblogic/servers/configuring-security.md)
     * [Keystore Certificates](platform/resources/weblogic/servers/applying-certificates.md)
-    * [Startup and Shutdown Classes](platform/resources/weblogic/servers/setting-startup-and-shutdown-class.md)
-    * [Weblogic Deployment Targetting](platform/resources/weblogic/servers/weblogic-deployment-targetting.md) 
+    * [Startup and Shutdown Classes](platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.md)
+    * [Weblogic Deployment Targeting](platform/resources/weblogic/servers/weblogic-deployment-targeting.md) 
 
 -----
 * [Build Automation](build/README.md)
