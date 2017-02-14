@@ -49,7 +49,7 @@
   * [Webtier Routing Rules](platform/resources/weblogic/servers/web-tier.md)
   * [Configuring Security](platform/resources/weblogic/servers/configuring-security.md)
   * [Applying Certificates](platform/resources/weblogic/servers/applying-certificates.md)
-  * [Setting Startup and Shutdown Classes](platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.md)
+  * [Startup and Shutdown Classes](platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.md)
   * [Weblogic Deployment Targetting](platform/resources/weblogic/servers/weblogic-deployment-targetting.md)
 
 ---
