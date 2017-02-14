@@ -2,7 +2,7 @@
 
 The **Oracle Webtier** (also known as **Oracle HTTP Server** provides the interface between your external load balancer and the applications. This topic helps you understand the basic configuration parameters for Oracle Web Tier that you can define in the platform blueprint. The WebTier configuration is optional, and you can add it only when you need WebTier in your configuration.
 
-## Prerequisites
+### Prerequisites
 
 Before you begin defining the configuration, the Webtier must be listed as a product in your Platform Blueprint. 
 
@@ -15,6 +15,21 @@ From the Edit mode in a Platform Blueprint navigate to the **Products** componen
 You will then be prompted to select the product to compute group targeting. Select **Oracle Webtier** and target it to the compute group of your choice.
 
 ![](/assets/Screenshot 2017-02-13 09.04.52.png)
+
+### Webtier Product Parameters
+
+The following table describes the configuration properties that can be set for Webtier in the platform blueprint.
+
+| Property | Description |
+| :--- | :--- |
+| Products \[Oracle Webtier\] &gt; Name Value Parameters\[webcache-enabled\]  | Whether to enable Webcache or not |
+| Products \[Oracle Webtier\] &gt; Name Value Parameters\[opmn-remote-port\] | The Oracle Process Manager and Notification \(OPMN\) remote port. If not set, the default value is taken as 6701. |
+| Products \[Oracle Webtier\] &gt; Name Value Parameters\[opmn-local-port\] | The Oracle Process Manager and Notification \(OPMN\) local port. If not set, it defaults to 6700 |
+| Products \[Oracle Webtier\] &gt; Name Value Parameters\[base-port\] | Listen port for the Oracle HTTP Server component. If not set, the default value is taken as 7777. |
+| Products \[Oracle Webtier\] &gt; Name Value Parameters\[ssl-port\] | SSL listen port for the Oracle HTTP Server component.  |
+| Products \[Oracle Webtier\] &gt; Name Value Parameters\[root-permissions-enabled\] | This is required when setting base-port or ssl-port to be in the range from 1-1024 |
+
+<!--
 
 ## Understanding how Webtier Location Routing Rules are defined
 
@@ -59,7 +74,7 @@ WebLogicCluster ${core.webtier.cluster[soa].server-addresses}
 </VirtualHost>
 ```
 
-Note: **Special property for server addresses**
+#### Special property for server addresses
 
 When routing to the multiple nodes in a cluster the WebLogicCluster property in the OHS moduleconf would typically be set as follows:
 
@@ -73,23 +88,12 @@ ${core.server[soa.server1].listen-address}:${core.server[soa.server1].listen-por
 
 `webtier.oracle.group=dba`
 
-In addition to the moduleconf definition, the following table describes the configuration properties that you must set for Web Tier in the platform blueprint.
 
-| Property | Description |
-| :--- | :--- |
-| Node List \[ID\] &gt; Instance Home  | The Oracle HTTP Server instance home. |
-| Node List \[ID\] &gt; System component Id | The Oracle HTTP Server component name. |
-| Named Virtual Host Enabled | Specifies whether to enable name-based virtual hosts or not. |
-| Moduleconf Source &gt; Directory | The location of the moduleconf files, which are replaced with variables and copied to the server. If not set, the default location is taken as ${myst.workspace}/resources/ohs/moduleconf |
-| Moduleconf Source &gt; Allow Unexpanded Properties | Allows unexpanded properties to be defined in the moduleconf. This is required to allow adding the Oracle HTTP Server properties that are not related to the MyST properties. If not set, the default is set to false. If set to true, the user running MyST must have sudoers NOPASSWD access to the system. |
-| Cluser List \[ID\] &gt; Server Addresses | Computed from core.domain.server\[_\].listen-address and core.domain.server\[_\].listen-port for all servers within the cluster. |
-|  | core.product\[webtier\].param\[webcache-enabled\] |
-| Products \[Oracle Webtier\] &gt; Name Value Parameters\[opmn-remote-port\] | The Oracle Process Manager and Notification \(OPMN\) remote port. If not set, the default value is taken as 6701. |
-| Products \[Oracle Webtier\] &gt; Name Value Parameters\[opmn-local-port\] | The Oracle Process Manager and Notification \(OPMN\) local port. If not set, it defaults to 6700 |
-| Products \[Oracle Webtier\] &gt; Name Value Parameters\[base-port\] | Listen port for the Oracle HTTP Server component. If not set, the default value is taken as 7777. |
-| Load Balancers\[ID\] &gt; Https Port | The frontend load balancer HTTPS port. |
-| Load Balancers\[ID\] &gt; Http Port | The frontend load balancer HTTP port. |
-| Load Balancers\[ID\] &gt; Host | The front-end load balancer host. |
+
+TODO: Determine if the below content migrated from CLI should be included or not.
+
+| Cluser List \[ID\] &gt; Server Addresses | Computed from Servers in a given cluster and used within the generate moduleconf routing rules |
+
 
 > Note: The above configuration contains only the details required for the Oracle HTTP Server configuration. However, typically there are a number of additional configuration properties which are also required for WebLogic server configuration as well. By defining the Oracle HTTP Server and WLS configuration in the same definition, it is possible to perform the Oracle HTTP Server configuration at the same time as WebLogic server configuration. To do this, add the configure-webtier action to the start of the definition of the provision flow as follows:
 
@@ -98,5 +102,5 @@ In addition to the moduleconf definition, the following table describes the conf
 | action.configure.pre | configure-webtier,stop-via-as,stop-nm,stop,create-domain,patch-domain,apply-jrf,start-nm,start,configure-nm,create-resource,reassociate-security-store,stop,copy-domain,start-as-via-nm,start-via-as,configure-soa,configure-ums |
 | action.provision.pre | install,configure |
 
-
+-->
 
