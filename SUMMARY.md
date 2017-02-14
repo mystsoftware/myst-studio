@@ -56,18 +56,7 @@
     * [Configuring Automated Builds ](build/ci/README.md)
         * [Configuring Jenkins Build Jobs](build/ci/jenkins/README.md)
     * [Artifact Management](build/artifacts/README.md)
-  
-  
-  
-      * [Load Balancer](platform/resources/weblogic/servers/load-balancer-configuration.md)
-  * [Webtier Routing Rules](platform/resources/weblogic/servers/web-tier.md)
-  * [Users, Groups, Roles and Policies](platform/resources/weblogic/servers/configuring-security.md)
-  * [Keystore Certificates](platform/resources/weblogic/servers/applying-certificates.md)
-  * [Startup and Shutdown Classes](platform/resources/weblogic/servers/setting-startup-and-shutdown-classes
-  
-  
-  .md)
-  * [Weblogic Deployment Targetting](platform/resources/weblogic/servers/weblogic-deployment-targetting.md)  * [Deploy Time Customizations](build/deploy-config/README.md)
+    * [Deploy Time Customizations](build/deploy-config/README.md)
 
 -----
 * [Application Deployment](deploy/application/README.md)
