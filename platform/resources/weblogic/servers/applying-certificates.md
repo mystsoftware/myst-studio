@@ -30,7 +30,10 @@ certificate.wls-pub.keytool.location=${core.product[java].home}/bin/keytool
 certificate.wls-pub.machines=${product.weblogic.node-list}
 ```
 
+<!--
+
 > They will be applied by  the `Control > Custom > "security"` action. Alternatively  you can apply the certificates at provisioning time by adding `action.configure.post=security`. \(_**To be clarified\)**_
 
+-->
 
 
