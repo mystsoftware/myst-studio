@@ -1,5 +1,4 @@
 # Summary
-
 * [Title and Copyright Information](README.md)
 
 ## User Guide
@@ -40,7 +39,15 @@
         * [JMS Modules and Components](platform/resources/weblogic/jms/modules/README.md)
         * [Store and Forward \(SAF\) Configuration](platform/resources/weblogic/jms/store-and-forward/README.md)
     * [JCA Adapters](platform/resources/weblogic/jca-adapters/README.md)
-    * [Work Managers](platform/resources/weblogic/work-managers/README.md)
+    * [Work Managers](platform/resources/weblogic/work-managers/README.md)   * [Load Balancer](platform/resources/weblogic/servers/load-balancer-configuration.md)
+  * [Webtier Routing Rules](platform/resources/weblogic/servers/web-tier.md)
+  * [Users, Groups, Roles and Policies](platform/resources/weblogic/servers/configuring-security.md)
+  * [Keystore Certificates](platform/resources/weblogic/servers/applying-certificates.md)
+  * [Startup and Shutdown Classes](platform/resources/weblogic/servers/setting-startup-and-shutdown-class.md)
+  * [Weblogic Deployment Targetting](platform/resources/weblogic/servers/weblogic-deployment-targetting.md) 
+       * [Work Managers](platform/resources/weblogic/work-managers/README.md) 
+       * [Work Managers](platform/resources/weblogic/work-managers/README.md)
+
 
 -----
 * [Build Automation](build/README.md)
@@ -51,7 +58,18 @@
     * [Configuring Automated Builds ](build/ci/README.md)
         * [Configuring Jenkins Build Jobs](build/ci/jenkins/README.md)
     * [Artifact Management](build/artifacts/README.md)
-    * [Deploy Time Customizations](build/deploy-config/README.md)
+  
+  
+  
+      * [Load Balancer](platform/resources/weblogic/servers/load-balancer-configuration.md)
+  * [Webtier Routing Rules](platform/resources/weblogic/servers/web-tier.md)
+  * [Users, Groups, Roles and Policies](platform/resources/weblogic/servers/configuring-security.md)
+  * [Keystore Certificates](platform/resources/weblogic/servers/applying-certificates.md)
+  * [Startup and Shutdown Classes](platform/resources/weblogic/servers/setting-startup-and-shutdown-classes
+  
+  
+  .md)
+  * [Weblogic Deployment Targetting](platform/resources/weblogic/servers/weblogic-deployment-targetting.md)  * [Deploy Time Customizations](build/deploy-config/README.md)
 
 -----
 * [Application Deployment](deploy/application/README.md)

@@ -38,6 +38,36 @@ The Name-Value parameters are used to define properties that are used to configu
 
 > Alternatively, click on `Edit Bulk` to open the property bulk editor
 
+Some JCA adapters support the setting of global connection pool parameters. Setting connection pool parameters is supported for the following JCA Adapters: 
+
+
+* AQ Adapter
+* DB Adapter
+* File Adapter
+* MQ Series Adapter
+* Oracle Apps Adapter
+* Socket Adapter
+
+The connection pool parameters are set in the WebLogic Admin Console under the Connection Pool tab. The following table describes the MyST parameters that correspond to the fields on the WebLogic Admin Console. 
+
+| Admin Console Field | MyST Parameters |	Type|
+| --------- | ---------- | ----- | 
+|Max Capacity 	|max-capacity 	|Number|
+|Connection Reserve Timeout Seconds 	|connection-reserve-timeout-seconds 	|Number|
+|Highest Num Waiters 	|highest-num-waiters 	|Number|
+|Match Connections Supported 	|match-connections-supported 	|Number|
+|Initial Capacity 	|initial-capacity 	|Number|
+|Capacity Increment 	|capacity-increment 	|Number|
+|Shrinking Enabled 	|shrinking-enabled 	|Boolean|
+|Shrink Frequency Seconds 	|shrink-frequency-seconds 	|Number|
+|Highest Num Unavailable 	|highest-num-unavailable 	|Number|
+|Connection Creation Retry Frequency Seconds 	|connection-creation-retry-frequency-seconds 	|Number|
+|Test Frequency Seconds 	|test-frequency-seconds 	|Boolean|
+|Test Connections On Create 	|test-connections-on-create 	|Boolean|
+|Test Connections On Release 	|test-connections-on-release 	|Boolean|
+|Test Connections On Reserve 	|test-connections-on-reserve 	|Boolean|
+
+
 #### Edit JCA Adapter in Platform Blueprint
 To edit an existing JCA adapter in the Platform Blueprint, open the Platform Blueprint Editor and navigate to `Blueprint > WebLogic Domains > [domain_name] > JCA Adapters`. Expand this component to see a list of currently defined adapters and select the JCA adapter you wish to edit.
 
