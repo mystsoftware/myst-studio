@@ -1,10 +1,10 @@
 ## {{ page.title }}
 
-The **Oracle Webtier** (also known as **Oracle HTTP Server** provides the interface between your external load balancer and the applications. This topic helps you understand the basic configuration parameters for Oracle Web Tier that you can define in the platform blueprint. The WebTier configuration is optional, and you can add it only when you need WebTier in your configuration.
+The **Oracle Webtier** (also known as **Oracle HTTP Server**) provides the interface between your external load balancer and the applications. This topic helps you understand the basic configuration parameters for Oracle Web Tier that you can define in the platform blueprint. The WebTier configuration is optional, and you can add it only when you need WebTier in your configuration.
 
 ### Prerequisites
 
-Before you begin defining the configuration, the Webtier must be listed as a product in your Platform Blueprint. 
+Before you begin defining the configuration, the Webtier must be listed as a product in your Platform Blueprint.
 
 If you did not select **Oracle Webtier** during the [Platform Blueprint Wizard](platform/blueprints/README.md) then you can add it your Blueprint at a later stage as follows:
 
@@ -103,4 +103,3 @@ TODO: Determine if the below content migrated from CLI should be included or not
 | action.provision.pre | install,configure |
 
 -->
-
