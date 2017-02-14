@@ -47,8 +47,8 @@
   * [Work Managers](platform/resources/weblogic/work-managers/README.md)
   * [Load Balancer](platform/resources/weblogic/servers/load-balancer-configuration.md)
   * [Webtier Routing Rules](platform/resources/weblogic/servers/web-tier.md)
-  * [Configuring Security](platform/resources/weblogic/servers/configuring-security.md)
-  * [Applying Certificates](platform/resources/weblogic/servers/applying-certificates.md)
+  * [Users, Groups, Roles and Policies](platform/resources/weblogic/servers/configuring-security.md)
+  * [Keystore Certificates](platform/resources/weblogic/servers/applying-certificates.md)
   * [Startup and Shutdown Classes](platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.md)
   * [Weblogic Deployment Targetting](platform/resources/weblogic/servers/weblogic-deployment-targetting.md)
 
