@@ -13,7 +13,7 @@ This section details how to define some of the more common Oracle Middleware con
   * [JMS Modules, Queues and Topics](/platform/resources/weblogic/jms/modules/README.md)
   * [Store and Forward (SAF) Services](/platform/resources/weblogic/jms/store-and-forward/README.md).
 * **[JCA Adapters](/platform/resources/weblogic/jca-adapters/README.md)** - Such as DB, JMS and File Adapters
-* **[Work Managers](/platform/resources/weblogic/jms/work-managers/README.md)** - Such as constraint and request classes
+* **[Work Managers](/platform/resources/weblogic/work-managers/README.md)** - Such as constraint and request classes
 * **[Load Balancer Frontends](/platform/resources/weblogic/servers/load-balancer-configuration.md)** - To ensure correct rewriting of server URLs
 * **[Webtier Routing Rules](/platform/resources/weblogic/servers/web-tier.md)** - To define Oracle HTTP Server routings
 * **[Users, Groups, Roles and Policies](/platform/resources/weblogic/servers/configuring-security.md)** - For advanced setting such as Role Conditions and Credential Maps
