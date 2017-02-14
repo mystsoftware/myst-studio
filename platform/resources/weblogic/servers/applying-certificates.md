@@ -1,3 +1,5 @@
+## {{ page.title }}
+
 Add certificates that you want to apply to your platform. The properties for applying certificates are listed in the following table. These properties are defined as Global Variables in the Platform Blueprint. 
 
 | Property | Description |
