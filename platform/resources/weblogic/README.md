@@ -5,12 +5,21 @@ MyST's approach of using Platform Blueprints / Models to define the target state
 This configuration can be applied, either as part of the initial provisioning of the platform instance or later by modifying Platform Blueprints / Model and performing an update action against the Platform Instances.
 
 This section details how to define some of the more common Oracle Middleware configurations, such as:
-* **WebLogic Server Configurations** - For example, JTA Timeout, Server Startup Arguments and Classes.
-* **Patches**
-* **JDBC Data Sources** - With examples for Oracle RAC, Microsoft SQL Server and IBM DB2
-* **JMS & SAF Configuration** - Configuration of Persistent Stores, JMS Modules, Java Messaging Service (JMS) and Store and Forward (SAF) services
-* **JCA Adapters** - Configuration of JCA Adapters and JCA Adapter instances
-* **Work Managers** -  Configuration of work managers, including constraints and request classes
+* **[WebLogic Servers](/platform/resources/weblogic/servers/README.md)** - For example, JTA Timeout, Server Startup Arguments and Classes.
+* **[Oracle Patches](/platform/resources/weblogic/patches/README.md)** - To guarantee correct patch-levels
+* **[JDBC Data Sources](/platform/resources/weblogic/jdbc/README.md)** - With examples for Oracle RAC, Microsoft SQL Server and IBM DB2
+* **[Java Messaging Service (JMS)](/platform/resources/weblogic/jms/README.md)** - Such as 
+  * [Persistent Store Configuration](/platform/resources/weblogic/jms/persistent-stores/README.md)
+  * [JMS Modules, Queues and Topics](/platform/resources/weblogic/jms/modules/README.md)
+  * [Store and Forward (SAF) Services](/platform/resources/weblogic/jms/store-and-forward/README.md).
+* **[JCA Adapters](/platform/resources/weblogic/jca-adapters/README.md)** - Such as DB, JMS and File Adapters
+* **[Work Managers](/platform/resources/weblogic/jms/work-managers/README.md)** - Such as constraint and request classes
+* **[Load Balancer Frontends](/platform/resources/weblogic/servers/load-balancer-configuration.md)** - To ensure correct rewriting of server URLs
+* **[Webtier Routing Rules](/platform/resources/weblogic/servers/web-tier.md)** - To define Oracle HTTP Server routings
+* **[Users, Groups, Roles and Policies](/platform/resources/weblogic/servers/configuring-security.md)** - For advanced setting such as Role Conditions and Credential Maps
+* **[Keystore Certificates](/platform/resources/weblogic/servers/applying-certificates.md)** - For apply certificates to keystores
+* **[Startup and Shutdown Classes](/platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.md)** - To trigger custom startup or shutdown operations
+* **[WebLogic Deployment Targeting](/platform/resources/weblogic/servers/weblogic-deployment-targeting.md)** - For targeting of default resources
 
 <!-- TO DO
 * **Authentication Providers** - Such as configuring LDAP setup for WebLogic
@@ -19,32 +28,6 @@ This section details how to define some of the more common Oracle Middleware con
 * **Custom Identity and Trust Store**
 -->
 
-
 This section only covers a subset of the configurations that can be performed by MyST. If the configuration you need to apply is not documented here, please raise a ticket at [support.rubiconred.com](htttp://support.rubiconred.com) to ask for assistance.
-
-This part contains the following chapters:
-
-* [WebLogic Server Configuration](/platform/resources/weblogic/servers/README.md)
-
-* [Patch Configuration](/platform/resources/weblogic/patches/README.md)
-
-* [Data Sources Configuration](/platform/resources/weblogic/jdbc/README.md)
-
-* [JMS and SAF Configuration](/platform/resources/weblogic/jms/README.md)
-
-    * [Persistent Store Configuration](/platform/resources/weblogic/jms/persistent-stores/README.md)
-    * [Java Message Service (JMS) Configuration](/platform/resources/weblogic/jms/modules/README.md)
-    * [Store and Forward (SAF) Configuration](/platform/resources/weblogic/jms/store-and-forward/README.md)
-
-
-* [JCA Adapter Configuration](/platform/resources/weblogic/jca-adapters/README.md)
-
-* [Work Manager Configuration](/platform/resources/weblogic/jms/work-managers/README.md)
-
-<!-- TO DO
-* [Chapter 4.7 - Configuring Authentication Providers](4.7.introspectPlatformBlueprint/3.7.0.introspectPlatformBlueprint.md)
-
-* [Chapter 4.8 - Configuring Mail Sessions](4.8.sideBySideUpgrade/4.8.0.sideBySideUpgrade.md)
--->
 
 
