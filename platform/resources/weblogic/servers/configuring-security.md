@@ -10,7 +10,9 @@ MyST supports automating the security configuration of the following:
 
 The users, roles, groups, credentials maps, and the security policies must be defined as **Global Variables** within the Platform Blueprint (or if desired, the Platform Model) using the properties below. 
 
+<!--
 > They will be applied by the `Control > Custom > "security"` action. Alternatively you can include it at provisioning time by adding `action.configure.post=security`. \(_**To be clarified\)**_
+-->
 
 ### User definitions
 
