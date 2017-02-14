@@ -13,8 +13,8 @@ Where MDS artifacts containing environment specific values are being manually de
 
 A common solution is to create sets of Ant/Maven scripts, and search and replace values of these files before deployment by looking up environment specific values defined in property files. This approach provides an improvement over the manual approach, but a number of issues remain, namely:
 
-1. There is a risk that non-centralized property files & values will be copied and pasted around, increasing the risk of configuration drift over time.
-2. Such bespoke Build & Deploy scripting tends to grow more complex and less maintainable over time.
+1. There is a risk that non-centralized property files and values will be copied and pasted around, increasing the risk of configuration drift over time.
+2. This type of bespoke build and deploy scripting tends to grow more complex and less maintainable over time.
 3. There is a significant ongoing effort involved in bringing custom scripting to a robust level of usability.
 
 The ideal MDS deployment solution should overcome all of the above issues, and MyST Late Binding from MyST Studio does exactly that.
