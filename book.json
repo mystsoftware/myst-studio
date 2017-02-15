@@ -2,7 +2,8 @@
     "gitbook": "3.2.2",
     "plugins": [
         "hints",
-        "simple-page-toc"
+        "simple-page-toc",
+        "custom-favicon"
     ],
     "pluginsConfig": {
         "theme-default": {
@@ -11,6 +12,7 @@
         "simple-page-toc": {
             "maxDepth": 7,
             "skipFirstH1": true
-        }
+        },
+        "favicon": "assets/favicon.ico"
     }
 }
