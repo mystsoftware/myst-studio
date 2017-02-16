@@ -113,5 +113,3 @@ Once a template has been finalized, it can be published and marked as `Final`.  
 
 
 ![](img/TemplateFinal.png)
-
-  
