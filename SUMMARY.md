@@ -16,6 +16,7 @@
 
 -----
 * [Platform Fundamentals](platform/README.md)
+    * [Platform Templates](platform/templates/README.md)
     * [Platform Blueprints](platform/blueprints/README.md)
     * [Platform Models](platform/models/README.md)
         * [Pre-Existing Infrastructure](platform/models/pre-existing/README.md)
@@ -45,7 +46,7 @@
     * [Users, Groups, Roles and Policies](platform/resources/weblogic/servers/configuring-security.md)
     * [Keystore Certificates](platform/resources/weblogic/servers/applying-certificates.md)
     * [Startup and Shutdown Classes](platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.md)
-    * [Weblogic Deployment Targeting](platform/resources/weblogic/servers/weblogic-deployment-targeting.md) 
+    * [Weblogic Deployment Targeting](platform/resources/weblogic/servers/weblogic-deployment-targeting.md)
 
 -----
 * [Build Automation](build/README.md)
@@ -82,4 +83,3 @@
 
 ## Property References
 * [Artifact Types and Properties](appendix/artifact/README.md)
-
