@@ -46,6 +46,8 @@ In the *Platform Fundamentals* section we will look at:
 
  * [Creating Platform Blueprints](/platform/blueprints/README.md)   
 
+ * [Understanding Platform Templates](/platform/templates/README.md)
+
  * [Creating Platform Models](/platform/models/README.md)
 
  * [Editing Platform Blueprints and Models](/platform/definitions/README.md)
