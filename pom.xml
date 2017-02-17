@@ -121,7 +121,7 @@
                                 <property environment="env" />
                                 <exec executable="/bin/bash" dir="${build-tmpdir}" failonerror="true">
                                     <arg value="-c" />
-                                    <arg value="git status &amp;&amp; git add . &amp;&amp; git commit -m 'Update by ${user.name} on ${current-time}'" />
+                                    <arg value="git status &amp;&amp; git add . &amp;&amp; git commit -m 'Updated to ${project.version} by ${user.name} on ${current-time}'" />
                                 </exec>
                                 <!-- Push the website out and revert back to the main branch -->
                                 <exec executable="/bin/bash" dir="${build-tmpdir}" failonerror="true">
