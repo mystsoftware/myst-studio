@@ -1,7 +1,7 @@
 {{page.title}}  
 
 
-\#\#JavaMail Sessions
+##JavaMail Sessions
 
 ...
 
