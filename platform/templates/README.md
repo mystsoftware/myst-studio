@@ -1,5 +1,5 @@
 ## {{ page.title }}
-A Platform Template provides a definition of a specific middleware topology and configuration that can be used as the basis for creating a [Platform Blueprint](/platform/templates/README.md).
+A Platform Template provides a definition of a specific middleware topology and configuration that can be used as the basis for creating a [Platform Blueprint](/platform/blueprints/README.md).
 
 Platform Templates provide a number of key advantages:
 
