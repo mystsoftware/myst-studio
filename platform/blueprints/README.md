@@ -146,7 +146,7 @@ Once done, click `Finish`. MyST will create the corresponding Platform Blueprint
 ## Creating a Platform Blueprint from a Pre-Defined Template
 MyST comes with a catalog of certified Platform Templates, with _"built-in"_ best practices for enterprise deployment of Oracle Middleware. We can use these to create our initial Platform Blueprint.
 
-MyST also allows us to [create our own Platform Templates](tbd), which can be used to create our initial Platform Blueprint. This can be useful if we have multiple domains in Production for the same Product Components. For example, we may have multiple SOA domains each designated to a particular line of business. Platform Templates allows us to capture a base "Platform Blueprint" that can be re-used to create the Platform Blueprint for each domain.
+MyST also allows us to [create our own Platform Templates](platform/templates/README.md), which can be used to create our initial Platform Blueprint. This can be useful if we have multiple domains in Production for the same Product Components. For example, we may have multiple SOA domains each designated to a particular line of business. Platform Templates allows us to capture a base "Platform Blueprint" that can be re-used to create the Platform Blueprint for each domain.
 
 ### Launching the Platform Blueprint Wizard
 From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Blueprint` wizard.
