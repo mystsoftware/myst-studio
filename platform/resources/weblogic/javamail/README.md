@@ -1,9 +1,0 @@
-{{page.title}}  
-
-
-##JavaMail Sessions
-
-...
-
-
-
