@@ -115,7 +115,7 @@ For each Compute Group, we need to specify the following values:
 * **Components** - Click on the appropriate check boxes to add the required components to a Compute Group. Note: A component can only belong to a single Compute Group, so selecting it for one Compute Group will automatically deselect it from its previous Compute Group.
 * **Node Constraints** - Specify the default, minimum and maximum number of nodes in the Compute Group. When creating a Platform Model, it will use the default value for the number of nodes. This can then be modified with the minimum and maximum constraints.
 
-Finally, we need to select from the drop-down the target ompute definition for all target hosts that will be used within each Compute Group.
+Finally, we need to select from the drop-down the target compute definition for all target hosts that will be used within each Compute Group.
 
 Once done, click `Next`.
 
