@@ -4,7 +4,7 @@ disqus: false
 
 # Rubicon Red MyST Studio User Guide
 
-**Implementing DevOps for Oracle Middleware**
+**Implementing DevOps for Oracle Middleware!**
 
 February 2017
 
