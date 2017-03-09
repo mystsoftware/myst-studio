@@ -56,11 +56,10 @@ add.groups=Group1,Group2
 | grant.app\_roles | Comma-separated list of application role grant IDs to be created |
 | GRANT_APP_ROLE_ID.app\_stripe | The name of the application stripe where the role exists. |
 | GRANT_APP_ROLE_ID.app\_role\_name | The name of the application role to be granted for the principal. |
-| GRANT_APP_ROLE_ID.principal\_type | The type of the principal, either "user" or "group". |
+| GRANT_APP_ROLE_ID.principal\_type | The type of the principal, either "user" or "group" or "role". |
 | GRANT_APP_ROLE_ID.principal\_name | The name of the principal to be granted the role |
 | role.expressions | A comma-separated list of WebLogic roles to be have their role conditions updated. |
 | role.expression.ROLE | The role expression for the given role. |
-|  |  |
 
 #### Example Role definitions
 

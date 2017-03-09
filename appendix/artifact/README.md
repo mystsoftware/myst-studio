@@ -15,6 +15,9 @@
 |soa.service-client|Reserved for future capability to specify web service policy |
 |soa.service-endpoint|Reserved for future capability to specify web service policy |
 |soa.subject|Reserved for future capability to specify web service policy |
+|composite.redeploy| Whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application. |
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.sca.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.sca.configplan.xml) |
 
 #### OSB
 |Property|Description|
@@ -27,7 +30,9 @@
 |Property|Description|
 |---|---|
 |mds.folder-names|List of folder names from artifact to deploy into MDS. Also used during redeployment.  |
-|mds.redeploy|Boolean flag to control whether MDS can be overwritten. |
+|mds.redeploy| Whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application. |
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.mds.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.mds.configplan.xml) |
 
 #### ADF
 |Property|Description|
@@ -39,6 +44,7 @@
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.adf.configplan.xml) |
+|j2ee.redeploy|Whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.|
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.ear becomes Stock.ear)|
 
 #### Java EAR
@@ -49,6 +55,7 @@
 |j2ee.redeploy|Boolean flag to control whether application can be redeployed with same version.|
 |j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE|
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
+|j2ee.redeploy|Whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml) |
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.ear becomes Stock.ear)|
@@ -62,6 +69,7 @@
 |j2ee.redeploy|Boolean flag to control whether application can be redeployed with same version.|
 |j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE|
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
+|j2ee.redeploy|Whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml) 
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.war becomes Stock.war. This means context root will be /Stock instead of /Stock-1.0.0)|
@@ -84,8 +92,6 @@
 |---|---|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.b2b.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.b2b.configplan.xml) |
-
-
 
 #### BAM
 |Property|Description|
