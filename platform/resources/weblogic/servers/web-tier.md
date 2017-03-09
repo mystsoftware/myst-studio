@@ -14,7 +14,7 @@ From the Edit mode in a Platform Blueprint navigate to the **Products** componen
 
 You will then be prompted to select the product to compute group targeting. Select **Oracle Webtier** and target it to the compute group of your choice.
 
-![](/assets/Screenshot 2017-02-13 09.04.52.png)
+![](/assets/Screenshot 2017-03-10 08.07.06.png)
 
 ### Webtier Product Parameters
 
