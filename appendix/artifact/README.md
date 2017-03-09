@@ -32,9 +32,14 @@
 #### ADF
 |Property|Description|
 |---|---|
+|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code|
+|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)|
+|j2ee.redeploy|Boolean flag to control whether application can be redeployed with same version.|
+|j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE|
+|j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.adf.configplan.xml) |
-
+|strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.ear becomes Stock.ear)|
 
 #### Java EAR
 |Property|Description|
