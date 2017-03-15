@@ -87,10 +87,10 @@
   * [Role Management](administration/roles/README.md)
   * [Workspace Management](administration/workspaces/README.md)
 
-## Installation Guide
+## Administration Guides
 
-* [MyST Studio Installation](installation/myst-studio/README.md)
-* [MyST Studio Upgrade](administration/upgrade/README.md)
+* [MyST Installation](installation/myst-studio/README.md)
+* [MyST Upgrade](administration/upgrade/README.md)
 
 ## Property References
 
