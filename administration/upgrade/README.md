@@ -27,52 +27,57 @@ This can be executed by running the following on the MyST Studio host.
 This will require an outage of the MyST Studio instance. For a typical upgrade the outage should be no longer than 5 minutes.
 
 
-|| MyST Studio Script || Description ||
-| `/opt/myst-studio/bin/pull.sh` | Pulls the MyST Studio container from the Public MyST Docker Registry using the customer key and tags it as myst-studio. |
+| MyST Studio Script | Description |
+|---|---|
+| `/opt/myst-studio/bin/pull.sh` | Pulls the MyST Studio container from the Public MyST Docker Registry using the customer key and tags it as myst-studio. If internet access is not available from the MyST Studio host this will need to be performed manually by downloading the Docker image from the MyST website and performing the following steps. `docker load -i <MyST Studio Docker Image>` `docker tag <Image Name> myst-studio` |
+| `/opt/myst-studio/bin/backup-database.sh` | Performs a backup of the database to MyST Studio home under the backup directory with a datetime suffix. The location is printed to the output. For example: `Backed up to /opt/myst-studio/backup/myst-studio-1468979016.sql` Take note of the location as you will require this later if you intend to perform a rollback. |
+| `/opt/myst-studio/bin/stop.sh`	| Stops the MyST Studio instances
+| `/opt/myst-studio/bin/start.sh`	| Starts the MyST Studio instances. On boot, the MyST Studio web instance will upgrade the database.
+| `/opt/myst-studio/bin/output-logs.sh` |	This displays the MyST Studio start up logs during startup.  This can be closed by typing Ctrl+C. |
 
-..
+##### Step 2: Verify the upgrade
 
-If internet access is not available from the MyST Studio host this will need to be performed manually by downloading the Docker image from the MyST website and performing the following steps.
-docker load -i <MyST Studio Docker Image>
-docker tag <Image Name> myst-studio
-/opt/myst-studio/bin/backup-database.sh	
-Performs a backup of the database to MyST Studio home under the backup directory with a datetime suffix. The location is printed to the output. For example:
-Backed up to /opt/myst-studio/backup/myst-studio-1468979016.sql
-Take note of the location as you will require this later if you intend to perform a rollback.
-/opt/myst-studio/bin/stop.sh	Stops the MyST Studio instances
-/opt/myst-studio/bin/start.sh	Starts the MyST Studio instances. On boot, the MyST Studio web instance will upgrade the database.
-/opt/myst-studio/bin/output-logs.sh	This displays the MyST Studio start up logs during startup. 
-This can be closed by typing Ctrl+C. 
-Step 2: Verify the upgrade
 At a minimum, the following upgrade verification steps should be performed.
-Check there are no errors shown in the MyST Studio start up log
-Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct. 
-Rollback Steps
+ * Check there are no errors shown in the MyST Studio start up log
+ * Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct. 
+
+#### Rollback Steps
+
 In the event of a failure during the upgrade the following steps can be performed to rollback the instance.
-Step 1: Re-tag the old image
+
+##### Step 1: Re-tag the old image
 Find the previous version of the MyST Studio Docker Image. To see all version, you can execute the following:
+```
 docker images | grep myst-studio
+```
 Re-tag the image to be called "myst-studio". This will ensure on the next startup that the earlier version of MyST Studio is used. Below is an example for downgrade to MyST 3.9.0.3
+```
 docker tag 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst-studio:3.9.0.3 myst-studio
-Step 2: Restore the database
+```
+##### Step 2: Restore the database
 This can be executed by running the following on the MyST Studio host.
+```
 /opt/myst-studio/bin/update-database.sh <Path to previous backup>
+```
 This step will perform an outage of the MyST Studio instance. This outage should be no longer than 5 minutes.
 The following steps are performed as part of the database update.
-The MyST Studio web instance is stopped.
-The backup SQL is executed on the database
-The MyST Studio web instance is started.
-Step 3: Verify the downgrade
+1. The MyST Studio web instance is stopped.
+2. The backup SQL is executed on the database
+3. The MyST Studio web instance is started.
+##### Step 3: Verify the downgrade
 At a minimum, the following downgrade verification steps should be performed.
-Check there are no errors shown in the MyST Studio start up log
-Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct. 
-Pros / Cons
-Pros:
-Simple to setup
-No need to manage the migration of data between instances
-Cons:
-Requires an outage to perform an upgrade
-No way to test an upgrade prior to applying it
+ * Check there are no errors shown in the MyST Studio start up log
+ * Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct. 
+
+#### Pros / Cons
+
+##### Pros:
+ * Simple to setup
+ * No need to manage the migration of data between instances
+
+##### Cons:
+ * Requires an outage to perform an upgrade
+ * No way to test an upgrade prior to applying it
 
 ### Phased Upgrade
 
