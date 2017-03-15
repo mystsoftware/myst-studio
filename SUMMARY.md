@@ -90,6 +90,7 @@
 ## Installation Guide
 
 * [MyST Studio Installation](installation/myst-studio/README.md)
+* [MyST Studio Upgrade](administration/myst-studio/upgrade/README.md)
 
 ## Property References
 
