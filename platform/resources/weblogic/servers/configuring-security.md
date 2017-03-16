@@ -103,7 +103,7 @@ Grp(IntegrationAdministrators)|Grp(Group1)
 | credential.map.CREDENTIAL_MAP_ID.KEY.present | Specify whether the credential map key should be present or not. If set to false the credential map key is deleted. The default value is set to true. |
 | credential.map.CREDENTIAL_MAP_ID.KEY.update-if-exists | Specify whether the credential map key should be updated if it already exists. The default value is false, which means that if the credential map key already exists it will not be updated. |
 
-#### Example Credentail Map
+#### Example Credential Map
 
 ```
 credential.maps=oracle.wsm.security
