@@ -143,7 +143,55 @@ Login to the MyST Studio console and check that the version shown in the bottom 
 
 ### Zero Downtime Upgrade
 
-...
+With this upgrade strategy, there is two instances (blue and green). At any given time, the DNS record will point to one of the two instances. This allows for an upgrade to be performed on the non-active instance in isolation and once ready, the DNS record can be updated to point traffic to this instance. This approach has the benefit of there not being any outage required when performing the upgrade.
+
+#### Upgrade Steps
+Below are the steps for upgrading our green instance and switching over from our blue instance. If our green instance were the active instance we would reverse blue and green in the below steps.
+##### Step 1: Download the latest version of MyST Studio on the green instance
+This can be executed by running the following command.
+/opt/myst-studio/bin/pull.sh <VERSION>
+If internet access is not available from the MyST Studio host this will need to be performed manually by downloading the Docker image from the MyST website and performing the following steps.
+`docker load -i <MyST Studio Docker Image>`
+`docker tag <Image Name> myst-studio`
+##### Step 2: Set blue repository to read-only (optional)
+Prior to upgrading the instance, we will take an export of our blue instance database. During this period, if a user were to make a change on the blue instance it would be lost when we switch over to the green instance. In order to prevent changes, you may wish to make the blue repository read-only as follows:
+```
+docker exec -ti myststudio_db mysql -u root -pwelcome1
+mysql> FLUSH TABLES WITH READ LOCK;
+mysql> SET GLOBAL read_only = ON;
+mysql> exit
+```
+##### Step 3: Take a copy of the latest blue instance state and import to the green instance
+The involves first taking a copy of blue database of MyST Studio by executing the following
+`/opt/myst-studio/bin/backup-database.sh`
+The location of the backup will be output to the terminal.
+Next, the backup will need to be copied to the green host and the following will need to be executed.
+`/opt/myst-studio/bin/update-database.sh <Path to backup>`
+This step will shutdown and restart the MyST Studio web instance. Because we previously downloaded the latest MyST Studio, it will be upgraded to the latest MyST Studio version on startup.
+Be sure to disable the read only mode on the database by executing the following:
+```
+docker exec -ti myststudio_db mysql -u root -pwelcome1
+mysql> SET GLOBAL read_only = OFF;
+mysql> UNLOCK TABLES;
+mysql> exit
+```
+##### Step 4: Verify the upgrade on the green instance
+At a minimum, the following upgrade verification steps should be performed.
+Check there are no errors shown in the MyST Studio start up log
+Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct. 
+##### Step 5: If upgrade is successful, switch the DNS record to point to the green instance
+This would simply involve updating the DNS record which is currently pointing to the blue instance so that it points to the green instance.
+For the next upgrade, the DNS record will be pointed back to the blue instance.
+#### Rollback Steps
+The rollback process is straight forward for Blue / Green. If an issue is encountered during the upgrade process then it won't impact the active instance so there is no rollback required other than setting the instance back from read-only if this was set.
+#### Pros / Cons
+##### Pros
+* Allows for an upgrade to be tested without any production outage
+* Takes the pressure off an upgrade by allowing it to be done independently of an outage
+* Build-in DR strategy
+##### Cons
+* More complex to setup than single instance 
+* While the database is in read-only, any builds from the CI server (e.g. Jenkins) will not be propagated to MyST Studio. The would need to be re-run afterwards for all the failed build jobs.
 
 ## Upgrading from CLI to Studio
 
