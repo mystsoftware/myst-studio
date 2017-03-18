@@ -195,5 +195,9 @@ The rollback process is straight forward for Blue / Green. If an issue is encoun
 
 ## Upgrading from CLI to Studio
 
-...
+MyST CLI users will have a MyST Workspace which is a folder for storing Platform Blueprints and Models in XML or Properties notation. The easiest way to start managing these Platform Instances outside the MyST CLI is to first push them to up to MyST Studio. This can be done by executing the following from the MyST Workspace.
+```
+/opt/myst-studio/bin/cli2studio -h localhost -p 443
+```
+...where in the example above MyST Studio is running on `localhost:443`
 
