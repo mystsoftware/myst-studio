@@ -89,8 +89,8 @@
 
 ## Administration Guides
 
-* [MyST Installation](installation/myst-studio/README.md)
-* [MyST Upgrade](administration/upgrade/README.md)
+* [MyST Installation Guide](installation/myst-studio/README.md)
+* [MyST Upgrade Guide](administration/upgrade/README.md)
 
 ## Property References
 
