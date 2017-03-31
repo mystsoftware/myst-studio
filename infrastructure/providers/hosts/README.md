@@ -172,14 +172,14 @@ The following prerequisites are required in order to use the 'run as user' (sudo
 
 1. The SSH user is configured in `/etc/sudoers` to allow sudo
 
-1. The SSH user can execute `/bin/bash` as sudo user
+2. The SSH user can execute `/bin/bash` as sudo user
 
-1. Disable requiretty for the ssh user in /etc/sudoers (in this case `myst` SSH user)
-`Defaults:myst !requiretty`
+3. Disable requiretty for the ssh user in /etc/sudoers (in this case `myst` SSH user)
+  `Defaults:myst !requiretty`
 
-1. MyST executes following command
-`sudo -i -u <SUDO_USER> bash -c "<COMMAND>"`
-**Note** - SUDO_USER being the SSH sudo user and COMMAND being the myst command. This information is for troubleshooting purposes.
+4. MyST executes following command
+  `sudo -i -u <SUDO_USER> bash -c "<COMMAND>"`
+ **Note** - SUDO_USER being the SSH sudo user and COMMAND being the MyST command. This information is for troubleshooting purposes.
 
 #### Oracle Installation Binaries
 The Oracle Fusion Middleware installation files should be made available on each target host as a network share.  The default location for this is `/u01/app/software`
