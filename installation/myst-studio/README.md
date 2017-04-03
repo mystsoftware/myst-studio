@@ -41,8 +41,8 @@ Optionally, you can choose:
  * **MyST Build Server**: Pre-configured Build Server for use with MyST for if you don't already have one.
  * **MyST Artifact Repository**: Pre-configured Maven Artifact Repository for if you don't already have one.
  * **Build Extension for Oracle Middleware**: Enables automated build for applications build on SOA, BPM, OSB, ADF and other products related to Oracle Middleware. When you choose this, it will automatically select **MyST Build Server** if it is not already selected. The Build Extensions are currently supported for:
- * 12.2.1.2.0
- * 12.2.1.1.0
+  * 12.2.1.2.0
+  * 12.2.1.1.0
  
 Import the MyST license key. The file is provided when you sign up for MyST and is in a format similar to `MyST-*.lic.tar.gz`
 
