@@ -44,7 +44,9 @@ Optionally, you can choose:
   * 12.2.1.2.0
   * 12.2.1.1.0
  
-Import the MyST license key. The file is provided when you sign up for MyST and is in a format similar to `MyST-*.lic.tar.gz`
+Click Next.
+
+In the next step, you will be prompted to import the MyST license key. The file is provided when you sign up for MyST and is in a format similar to `MyST-*.lic.tar.gz`
 
 ![](/assets/Screenshot 2017-04-04 08.53.19.png)
 
