@@ -97,7 +97,7 @@ Warning
 `./bin/start.sh -u`
 If you are yet to start the stack, please continue on to the next steps. MyST will automatically build the data container on the first start.
 
-## Post-Installation for Build Extensions
+## Configuring Build Extensions
 
 If you choose the **Build Extensions for Oracle Middleware** then you will need to download Oracle installers and place them in the MyST home at the following locations depending on the versions you chose
 
@@ -128,3 +128,15 @@ cd /opt/myst-studio/bin
 Once the `start.sh` has completed you should be able to access the MyST Studio console at `https://<your host>/console`.
 
 You can see the details of your running instances by executing `docker ps` from the command line.
+
+## Configuring Maven for Automated Build of Oracle Middleware
+
+If you choose **Build Extensions for Oracle Middleware** when installing MyST, Maven must be configured on the build server, before you can build applications to run on products such as SOA, BPM, OSB and ADF. This can be done by simply executing the following from the MyST Studio home:
+```
+cd bin
+./configure-maven.sh
+```
+{% hint style='ifo' %}
+If you skipped the post-installation steps documented in the section on **Configuring the Build Extensions** the above command will not succeed.
+{% endhint %}
+
