@@ -93,7 +93,7 @@ To update the certificates, replace the demo certificates at the following locat
 {% hint style='danger' %}
 Warning
 {% endhint %}
-If you have already started the MyST Studio stack, you must force a rebuild of the data container when you restart the stack, this can be done with the following command.
+> If you have already started the MyST Studio stack, you must force a rebuild of the data container when you restart the stack, this can be done with the following command.
 `./bin/start.sh -u`
 If you are yet to start the stack, please continue on to the next steps. MyST will automatically build the data container on the first start.
 
