@@ -5,10 +5,8 @@
 The following prerequisites should be in place on the server that will host MyST Studio prior to running the MyST installer.
 
  * Java 1.6+ is installed.
- * Docker 1.7+ and Docker Compose is installed.
- * The MyST license (MyST.lic) and customer API key (api.key) must be available. These are provided when you sign up to try MyST Studio.
- * MyST Studio utilities installer must be downloaded.
- * In addition, an SSL certificate (cert.crt) and SSL key (cert.key) is required for configuring the MyST Studio HTTPS frontend. 
+ * Docker 1.10+ and Docker Compose is installed.
+ * The MyST license tar.gz file must be available. This is provided when you sign up to try MyST Studio.
 
 After the installation, internet access is required for the latest version of MyST to be pulled down directly from the public MyST Docker Registry.
 
@@ -28,44 +26,47 @@ java -jar <installer file> -console
 
 In the first step, you will be provided with an overview of the prerequisites. 
 
-![](/assets/Screen Shot 2016-07-20 at 2.20.08 PM.jpeg)
+![](/assets/Screenshot 2017-04-04 08.52.06.png)
  
-In the next step, you will be asked to enter a path for the MyST Studio utilities. The standard convention is to installer under /opt/myst-studio however any path can be used.
+In the next step, you will be asked to enter a path for the MyST Studio utilities. The standard convention is to installer under `/opt/myst-studio` however any path can be used.
  
-![](/assets/Screen Shot 2016-07-20 at 2.20.17 PM.jpeg)
+![](/assets/Screenshot 2017-04-04 08.52.34.png)
  
-In the next step, we can leave the defaults and click Next.
+In the next step, we can choose which packs we wish to install. At a minimum **MyST Studio** will be selected.
 
-![](/assets/Screen Shot 2016-07-20 at 2.20.43 PM.jpeg)
+![](/assets/Screenshot 2017-04-04 08.53.08.png)
+
+Optionally, you can choose:
+
+ * **MyST Build Server**: Pre-configured Build Server for use with MyST for if you don't already have one.
+ * **MyST Artifact Repository**: Pre-configured Maven Artifact Repository for if you don't already have one.
+ * **Build Extension for Oracle Middleware**: Enables automated build for applications build on SOA, BPM, OSB, ADF and other products related to Oracle Middleware. When you choose this, it will automatically select **MyST Build Server** if it is not already selected. The Build Extensions are currently supported for:
+ * 12.2.1.2.0
+ * 12.2.1.1.0
  
-Import the MyST license key. This file must be named as MyST.lic
+Import the MyST license key. The file is provided when you sign up for MyST and is in a format similar to `MyST-*.lic.tar.gz`
 
-![](/assets/Screen Shot 2016-07-20 at 2.21.09 PM.jpeg)
+![](/assets/Screenshot 2017-04-04 08.53.19.png)
+
+{% hint style='tip ' %}
+Prior to April 2017, MyST users were provided with a separate `api.key` and `MyST.lic` file. In installers prior to 5.5.0.0, these had to be imported separately. If you do not have a `tar.gz` file but have `api.key` and `MyST.lic` you can compress them to a new `tar.gz` and use that for that installer.
+{% endhint %}
  
-Import the SSL Certificate and SSL Key. These files must be named cert.crt and cert.key respectively.
-
-![](/assets/Screen Shot 2016-07-20 at 2.21.45 PM.jpeg)
-   
-Demo certificates are provided below:
- cert.key
- cert.crt
-
-Import the API key. The file must be named as api.key
-
-![](/assets/Screen Shot 2016-07-20 at 2.21.52 PM.jpeg)
-
 You will be prompted to confirm installation. Click Next.
+
+![](/assets/Screenshot 2017-04-04 08.53.41.png)
+
 The installation should take only a second or two.
 
-![](/assets/Screen Shot 2016-07-20 at 2.22.27 PM.jpeg)
+![](/assets/Screenshot 2017-04-04 08.53.51.png)
  
 After the installation is successful, you will be prompted with the next steps to be performed.
 
-![](/assets/Screen Shot 2016-07-20 at 2.22.30 PM.jpeg)
+![](/assets/Screenshot 2017-04-04 08.53.55.png)
  
 If desired, you can generate a silent installation script which can be used to perform an installation silently.
 
-![](/assets/Screen Shot 2016-07-20 at 2.22.33 PM.jpeg)
+![](/assets/Screenshot 2017-04-04 08.53.58.png)
 
 {% hint style='tip' %}
 Silent Installation
@@ -75,28 +76,53 @@ Silent Installation
 java -jar <installer file> <response file>
 ```
 
-The installation will setup the following files and folders:
+## Providing Certificates for SSL
 
-![](/assets/pastedImage_5.jpeg)
+By default, MyST Studio will boot up with demo SSL certificates, this may be ok for a development or sandbox environment but should  not be used for production. 
+
+{% hint style='danger' %}
+If you do not replace the demo certificates, you will get security warnings from your browser when you access the MyST Studio console.
+{% endhint %}
+
+To update the certificates, replace the demo certificates at the following locations with your real certificates:
+ * conf/data/nginx/ssl/cert.crt
+ * conf/data/nginx/ssl/cert.key
+
+{% hint style='danger' %}
+Warning
+{% endhint %}
+If you have already started the MyST Studio stack, you must force a rebuild of the data container when you restart the stack, this can be done with the following command.
+`./bin/start.sh -u`
+If you are yet to start the stack, please continue on to the next steps. MyST will automatically build the data container on the first start.
+
+## Post-Installation for Build Extensions
+
+If you choose the **Build Extensions for Oracle Middleware** then you will need to download Oracle installers and place them in the MyST home at the following locations depending on the versions you chose
+
+| Version | File |
+| --- | -- |
+| All | `conf/fmw/context/jdk/jdk-8u121-linux-x64.tar.gz` |
+| 12.2.1.2.0 | `conf/fmw/context/12.2.1.2.0/installers/fmw_12.2.1.2.0_infrastructure.jar` |
+| 12.2.1.2.0 | `conf/fmw/context/12.2.1.2.0/installers/fmw_12.2.1.2.0_osb.jar` |
+| 12.2.1.2.0 | `conf/fmw/context/12.2.1.2.0/installers/fmw_12.2.1.2.0_soa.jar` |
+| 12.2.1.1.0 | `conf/fmw/context/12.2.1.1.0/installers/fmw_12.2.1.2.0_infrastructure.jar` |
+| 12.2.1.1.0 | `conf/fmw/context/12.2.1.1.0/installers/fmw_12.2.1.2.0_osb.jar` |
+| 12.2.1.1.0 | `conf/fmw/context/12.2.1.1.0/installers/fmw_12.2.1.2.0_soa.jar` |
+
+Once the Oracle installers are placed in the desired locations, you will need to build the FMW extensions by executing the following:
+
+```
+./bin/build-fmw-extensions.sh
+```
+
+## Starting the MyST Studio Stack
 
 After the successful installation navigate to the MyST Studio home (in our example, `/opt/myst-studio`) and execute the following:
 ```
 cd /opt/myst-studio/bin
-./build-data-container.sh
-./pull.sh <Version>
 ./start.sh
 ```
 
-Once the `start.sh` has completed you should be able to access the MyST Studio console at `https://<your host>/console`
-If your instances are running correctly, the output of "`docker ps`", should be similar to the following:
+Once the `start.sh` has completed you should be able to access the MyST Studio console at `https://<your host>/console`.
 
-```
-CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                                        NAMES
-cb296567bcb5        nginx               "nginx -g 'daemon off"   About a minute ago   Up About a minute   0.0.0.0:443->443/tcp, 0.0.0.0:5555->80/tcp   myststudio_https
- 
-4930ee08812c        myst-studio         "catalina.sh run"        About a minute ago   Up About a minute   8080/tcp                                     myststudio_web
- 
-9a922bcbb4a0        mysql               "docker-entrypoint.sh"   About a minute ago   Up About a minute   0.0.0.0:3306->3306/tcp                       myststudio_db
-```
-  
-
+You can see the details of your running instances by executing `docker ps` from the command line.
