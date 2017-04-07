@@ -116,7 +116,7 @@ ln -s /usr/java/latest/bin/java /usr/bin/java
 ```
 
 **Note 3**:  
-There is a known bug in java that can impact the performance of the Weblogic Scripting Tool (WLST).  To workaround this issue, we need to edit the file `<java_home>/jre/lib/security`
+There is a known bug in java that can impact the performance of the Weblogic Scripting Tool (WLST).  To workaround this issue, we need to edit the file `<java_home>/jre/lib/security/java.security`
 
 1. Comment out the line:  
   `#securerandom.source=file:/dev/urandom`
