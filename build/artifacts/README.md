@@ -63,7 +63,7 @@ This shows the artifact metadata which is used by MyST to manage the deployment 
 * soa.service-endpoint
 * soa.subject
 
-This is detailed further in the section below which covers [Automated Deployment](https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/deploy/application/).
+This is detailed further in the section below which covers [Automated Deployment](https://docs.rubiconred.com/myst-studio/deploy/application/).
 
 ### Register Third Party Artifact
 As part of any application, we may want to include third party artifacts, for example, commercial or third party open source libraries. These artifacts are typically provided as pre-built libraries.
