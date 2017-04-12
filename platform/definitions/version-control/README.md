@@ -71,7 +71,7 @@ The Release Pipeline allows us to track the promotion of committed changes throu
 
 MyST allows us to combine the promotion of code and configuration into a release pipeline. 
 
-For more details on how to configure a release pipeline see [Part x - Release Pipelines](tbc).
+For more details on how to configure a release pipeline see [Release Pipelines](https://docs.rubiconred.com/myst-studio/release/).
 
 ####Tying it all together - An example
 
