@@ -73,7 +73,7 @@ MyST will open the Platform Instance in the `Platform Viewer`. From here we can 
 
 3. **Property View** - Displays the list of properties and corresponding values defined for the selected component in your Platform Instance. 
 
-See the documentation on the [Platform Viewer / Editor](tbc) for more details on how to navigate and interpret the configuration information.
+See the documentation on the [Platform Viewer / Editor](/platform/definitions/editor/README.md) for more details on how to navigate and interpret the configuration information.
 
 ### Platform Instance Report
 The Platform instance report provides a summary report of all the key configuration information for our Platform Instance.
