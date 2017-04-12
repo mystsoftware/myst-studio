@@ -63,7 +63,7 @@ This shows the artifact metadata which is used by MyST to manage the deployment 
 * soa.service-endpoint
 * soa.subject
 
-The metadata is detailed further in the [Artifact Types and Properties](https://docs.rubiconred.com/myst-studio/appendix/artifact/) section.
+The metadata is detailed further in the [Artifact Types and Properties](/appendix/artifact/README.md) section.
 
 ### Register Third Party Artifact
 As part of any application, we may want to include third party artifacts, for example, commercial or third party open source libraries. These artifacts are typically provided as pre-built libraries.
