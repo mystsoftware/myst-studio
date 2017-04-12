@@ -109,19 +109,19 @@
 |Property|Description|
 |---|---|
 |expand-properties|Replace files with MyST properties|
-|extract-files|Files to extract from archive|
+|extract-files|Comma separated list of files to extract from archive|
 |target-directory|Target directory to place extracted files|
 |target-is-domain-directory|Boolean flag to indicate path if path is relative to domain home directory|
 
 #### OSB Custom XPath
 |Property|Description|
 |---|---|
-|extract-files|Files to extract from archive|
+|extract-files|Comma separated list of files to extract from archive|
 
 #### OWSM Policy
 |Property|Description|
 |---|---|
-|extract-files|Files to extract from archive|
+|extract-files|Comma separated list of files to extract from archive|
 
 #### JAR Library
 |Property|Description|
