@@ -6,7 +6,7 @@ The **Oracle Webtier** (also known as **Oracle HTTP Server**) provides the inter
 
 Before you begin defining the configuration, the Webtier must be listed as a product in your Platform Blueprint.
 
-If you did not select **Oracle Webtier** during the [Platform Blueprint Wizard](platform/blueprints/README.md) then you can add it your Blueprint at a later stage as follows:
+If you did not select **Oracle Webtier** during the [Platform Blueprint Wizard](/platform/blueprints/README.md) then you can add it your Blueprint at a later stage as follows:
 
 From the Edit mode in a Platform Blueprint navigate to the **Products** component and click on **+** icon to add a new product.
 
