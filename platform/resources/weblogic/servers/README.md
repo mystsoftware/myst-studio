@@ -63,7 +63,7 @@ By default WebLogic Server startup classes are run after the server initializes 
 
 * **Load Before App Activation** - Causes the targeted servers to load and run a startup class before it activates applications and EJBs.
 
-> Note: The startup or shutdown class must be on the classpath of each server to which it is assigned. See [System Application Blueprints](tbc) for further details.
+> Note: The startup or shutdown class must be on the classpath of each server to which it is assigned. See [Application Blueprints](deploy/application/blueprints/README.md) for further details.
 
 ### Configure JTA Timeout
 To set the JTA Timeout in the Platform Blueprint, open the Platform Blueprint Editor and navigate to `Blueprint > WebLogic Domains > [domain_name]`.
