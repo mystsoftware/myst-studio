@@ -73,7 +73,7 @@ MyST will open the Platform Instance in the `Platform Viewer`. From here we can 
 
 3. **Property View** - Displays the list of properties and corresponding values defined for the selected component in your Platform Instance. 
 
-See the documentation on the [Platform Viewer / Editor](/platform/definitions/editor/README.md) for more details on how to navigate and interpret the configuration information.
+See the documentation on the [Platform Editor](/platform/definitions/editor/README.md) for more details on how to navigate and interpret the configuration information.
 
 ### Platform Instance Report
 The Platform instance report provides a summary report of all the key configuration information for our Platform Instance.
@@ -183,7 +183,7 @@ MyST will open the `New Platform Instance` dialogue. Here we can select which ve
 ### Patching a Platform Instance
 MyST allows us to easily patch a Platform Instance. When performing these actions, we can choose to perform these actions against the entire cluster or we can choose to perform the action on specific nodes within the cluster.
 
-Before applying a patch to a Platform Instance, we must first add the patches to the Platform Blueprint - see [Oracle Patches](/myst-studio/platform/resources/weblogic/patches/) for further details.
+Before applying a patch to a Platform Instance, we must first add the patches to the Platform Blueprint - see [Oracle Patches](/platform/resources/weblogic/patches/README.md) for further details.
 
 From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialogue.
 
