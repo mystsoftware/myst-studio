@@ -36,7 +36,7 @@ The following steps are required to achieve MDS customization using MyST Late Bi
 
   * Note: The plugin will automatically register _Artifacts_ in Myst Studio for your successful MDS builds - you don't need to create them manually. 
 
-* Create further configurations for MDS deployment in MyST Studio, such as creating a [Release Pipeline](/ https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline/) or a Release Definition.
+* Create further configurations for MDS deployment in MyST Studio, such as creating a [Release Pipeline](/release/pipeline/README.md) or a Release Definition.
 
 * Run MDS deployment via MyST Studio and the customization will be applied correctly.
 
