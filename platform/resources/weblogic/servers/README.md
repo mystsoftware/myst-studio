@@ -32,7 +32,7 @@ MyST makes it simple to override the startup arguments defined in the Platform B
 
 To do this, navigate to the Global Variables within the Platform Model. By default, MyST will show the start-up arguments inherited from the Platform Blueprint. To override these simply edit the values as required within the Platform Model.
 
-> We also have the option of overriding the startup arguments when we first create the Platform Model by specifying these on the [Advanced tab of the Platform Model Configuration](/part3/3.2.createPlatformModel/3.2.1.createPlatformModelPreExisting.md#override) stage of the Platform Model wizard.
+> We also have the option of overriding the startup arguments when we first create the Platform Model by specifying these on the [Advanced tab of the Platform Model Configuration](platform/models/pre-existing/README.md#override-default-memory-and-logging-settings) override stage of the Platform Model wizard.
 
 ### Startup and Shutdown Classes
 WebLogic allows us to configure startup and shutdown classes in order to perform tasks when we start up or gracefully shut down the server. 
