@@ -10,7 +10,7 @@ In this section, we cover how to configure an automated build job in Jenkins, th
 
 Before performing a SOA, OSB or ADF build it assumed that:
 1. the Oracle products are installed on our CI server and
-2. the local or remote Maven Repository used by the CI server has been pre-seeded with the required Oracle Maven dependencies as described in [Configuring Maven Builds](build//maven/README.md).
+2. the local or remote Maven Repository used by the CI server has been pre-seeded with the required Oracle Maven dependencies as described in [Configuring Maven Builds](/build/maven/README.md).
 
 ### Setup global variables in Jenkins
 To simplify the on-going configuration of jobs in Jenkins, we recommend defining a couple of global properties. Log into the Jenkins console, click on `Manage Jenkins` and select `Configure System`.
