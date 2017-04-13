@@ -176,7 +176,7 @@ Looking at the log file we can see that we have not defined the following applic
 * stock.port
 
 ### Updating the Platform Model and Re-Deploying
-The above issue can easily be resolved by setting these properties in the Platform Model for the SIT Platform Instances. See [Platform Model Editor](platform/definitions/editor/README.md) for details on how to do this.
+The above issue can easily be resolved by setting these properties in the Platform Model for the SIT Platform Instances. See [Platform Model Editor](/platform/definitions/editor/README.md) for details on how to do this.
 
 Once the Platform Model has been updated, the next execution of the Release Pipeline will detect the updated Platform Model and set the status of the release to `Ready for release`.
 
