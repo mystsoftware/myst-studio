@@ -49,7 +49,7 @@ If you find that late binding is not sufficient for your particular use case, yo
 This section summarizes the steps to apply a MyST Generic Configuration Plan to an MDS deployment in MyST Studio.
 
 * Update all Platform Models with the latest environment specific values in MyST Studio. 
-* In your file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see [MyST Generic Configuration Plans](https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/howtos/use-myst-generic-configuration-plans.html)
+* In your file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see [MyST Generic Configuration Plans](/howtos/use-myst-generic-configuration-plans.html)
 
 * Put this file under the META-INF folder in the MDS project's root directory.
 

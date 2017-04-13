@@ -64,6 +64,7 @@
     * [Configuring Jenkins Build Jobs](build/ci/jenkins/README.md)
   * [Artifact Management](build/artifacts/README.md)
   * [Deploy Time Customizations](build/deploy-config/README.md)
+    * [MyST Configuration Plans](howtos/use-myst-generic-configuration-plans.md)
 
 ---
 

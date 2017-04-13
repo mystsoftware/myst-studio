@@ -1,29 +1,22 @@
 ## {{ page.title }}
 
+Some Oracle product artifacts cannot be customised at runtime using the out-of-the-box capabilities. The MyST configuration plan is a solution for performing generic customisations to any artifact type. This can be especially useful for Oracle products that follow an import/export deployment model such as BAM and MFT.
 
+MyST uses a generic configuration plan to take environment properties and applys them to an artifact during deployment.
 
-As Oracle release more products that use an import/export deployment approach, MyST requires a solution to respond to environment customizations that need to be applied on such deployments. 
-
-MyST uses a generic configuration plan framework that can capture environment properties and apply them to an artifact during deployment.
-
-The configuration plan will intentionally be targeting MFT v12.1.3. 
-
-### Usual Chain of Events
+### Using MyST Configuration Plans with Import/Export Artifacts
 
 There are 3 steps to successfully completing a deployment for export/import.
 
-
 ![](/assets/export-import-steps.png)
-
 
 ### Generic configuration plan moving parts
 
-The configuration plan will cater to the following features:
+The configuration plan provides the ability to:
 
-* Ability to search and replace a character sequence on a set of files
-* Specify a XPath, File and replacement value
-* To expand all myst properties
-
+* search and replace a character sequence on a set of files
+* specify an XPath, file and replacement value
+* expand all myst properties referenced on a set of files
 
 ### Example configuration plans
 
@@ -135,7 +128,6 @@ The use cases are:
  
 | Question | Answer |
 | -------- | ------ | 
-| Who creates the configuration plan? | The developer. We could look at supporting automation regarding this at a later date | 
-| Can we use properties in the replace element? | Certainly. If it is an existing property known to MyST it will fall under the core.x convention (there are other registered properties however).  For developer introduced properties we should follow the convention: deployment.<type>.<identifier>.<property> e.g. deployment.mft.AppTransfer.folder deployment.<type>. becomes the property prefix |	
+| Who creates the configuration plan? | The developer. |
+| Can we use properties in the replace element? | Yes. If it is an existing property known to MyST it will replace the property |
 | Can I specify a search and an xpath? | No. You have a choice on either performing a full search of files mentioned in the includes / excludes, or at a specified xpath location. |
-| Do we specify the configuration plans as XML or JSON	| Currently they are defined in XML only. |
