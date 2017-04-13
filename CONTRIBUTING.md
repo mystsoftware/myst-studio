@@ -8,7 +8,7 @@ We love pull requests from everyone and appreciate your support!
 
 1. Find the page which you want to change and click the edit icon.
 2. Make your desired changes using [Github Markdown format](https://guides.github.com/features/mastering-markdown/)
-3. Help us to understand the change by explaining it and click **Propose file change**
+3. Help us to understand the change by explaining it and click **Commit changes**
 
 At this point you're waiting on us.
 We may suggest some changes, improvements or alternatives or we may accept the changes verbatim.
