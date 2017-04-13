@@ -175,10 +175,10 @@ Looking at the log file we can see that we have not defined the following applic
 * stock.host
 * stock.port
 
-### Updating the Application Model and Re-Deploying
-The above issue can easily be resolved by setting these properties in the Application Model for the SIT Platform Instances. See [Setting Application Model Properties](tbc) for details on how to do this.
+### Updating the Platform Model and Re-Deploying
+The above issue can easily be resolved by setting these properties in the Platform Model for the SIT Platform Instances. See [Platform Model Editor](platform/definitions/editor/README.md) for details on how to do this.
 
-Once the Application Model has been updated, the next execution of the Release Pipeline will detect the updated Application Model and set the status of the release to `Ready for release`.
+Once the Platform Model has been updated, the next execution of the Release Pipeline will detect the updated Platform Model and set the status of the release to `Ready for release`.
 
 Select the option to `Deploy Release`, ensuring the latest Stream Model is selected.
 

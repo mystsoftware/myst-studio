@@ -10,7 +10,7 @@ In this section, we cover how to configure an automated build job in Jenkins, th
 
 Before performing a SOA, OSB or ADF build it assumed that:
 1. the Oracle products are installed on our CI server and
-2. the local or remote Maven Repository used by the CI server has been pre-seeded with the required Oracle Maven dependencies as described in [Configuring Maven Builds](build//maven/README.md).
+2. the local or remote Maven Repository used by the CI server has been pre-seeded with the required Oracle Maven dependencies as described in [Configuring Maven Builds](/build/maven/README.md).
 
 ### Setup global variables in Jenkins
 To simplify the on-going configuration of jobs in Jenkins, we recommend defining a couple of global properties. Log into the Jenkins console, click on `Manage Jenkins` and select `Configure System`.
@@ -143,4 +143,4 @@ Once the job completes, at the end of the output we should see output similar to
   }
 }
 ```
-Your artifact has now been published to MyST Studio. See section [Artifact Management](https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/build/artifacts/) for details on how to view this artifact in MyST Studio.
+Your artifact has now been published to MyST Studio. See section [Artifact Management](/build/artifacts/README.md) for details on how to view this artifact in MyST Studio.
