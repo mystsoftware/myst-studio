@@ -22,7 +22,8 @@
 #### OSB
 |Property|Description|
 |---|---|
-|customization-file|OSB customization file to replace endpoint and other properties|
+| osb.project-name | Optional value for listing the OSB project name(s). This will be used for deleting the artifact. Use comma-separated list (e.g. `a,b,c`) for multiple projects within one Artifact. |
+|osb.customization-file|OSB customization file to replace endpoint and other properties|
 |myst-config-plan-apply|Optional: Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|Optional: MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.osb.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.osb.configplan.xml) |
 
