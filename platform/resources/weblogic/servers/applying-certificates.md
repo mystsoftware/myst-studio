@@ -30,10 +30,6 @@ certificate.wls-pub.keytool.location=${[rxr.def.Product-java].home}/bin/keytool
 certificate.wls-pub.machines=rxr.infra.Compute-2,rxr.infra.Compute-1
 ```
 
-<!--
-
-> They will be applied by  the `Control > Custom > "security"` action. Alternatively  you can apply the certificates at provisioning time by adding `action.configure.post=security`. \(_**To be clarified\)**_
-
--->
+> They will be applied by  the `Control > Custom > "apply-certificates"` action. Alternatively  you can apply the certificates at provisioning time by adding `action.configure.post=apply-certificates`.
 
 
