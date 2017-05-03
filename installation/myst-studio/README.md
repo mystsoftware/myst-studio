@@ -10,6 +10,10 @@ The following prerequisites should be in place on the server that will host MyST
 
 After the installation, internet access is required for the latest version of MyST to be pulled down directly from the public MyST Docker Registry.
 
+{% hint style='info' %}
+If you are unable to use Docker, there are details on non-Docker installation [here](alternative-myst-installation-non-docker.md)
+{% endhint %}
+
 ## Installation
 
 The installation wizard can be kicked off by executing the jar installer using Java as follows:
@@ -136,7 +140,7 @@ If you choose **Build Extensions for Oracle Middleware** when installing MyST, M
 cd bin
 ./configure-maven.sh
 ```
-{% hint style='ifo' %}
+{% hint style='info' %}
 If you skipped the post-installation steps documented in the section on **Configuring the Build Extensions** the above command will not succeed.
 {% endhint %}
 
