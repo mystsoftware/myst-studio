@@ -91,6 +91,7 @@
 ## Administration Guides
 
 * [MyST Installation Guide](installation/myst-studio/README.md)
+  * [Alternative MyST Installation \(non-Docker\)](installation/myst-studio/alternative-myst-installation-non-docker.md)
 * [MyST Upgrade Guide](administration/upgrade/README.md)
 
 ## Property References
