@@ -1,7 +1,7 @@
 # {{ page.title }}
 
 {% hint style='danger' %}
-Generally, it is recommended that MyST be installed on Docker. This will enable the easiest rollout process of MyST and it's associated components as well as allowing for effortless upgrades. As new releases of MyST are shipped regularly, being able to upgrade in seconds is a desirable trait of the system. For details on installing MyST with Docker please visit [this link](README.md).
+Generally, it is recommended that MyST be installed on Docker. This will enable the easiest rollout process of MyST and it's associated components as well as allowing for effortless upgrades. As new releases of MyST are shipped regularly, being able to upgrade in seconds is a desirable trait of the system. For details on installing MyST with Docker please visit [this link](../README.md).
 {% endhint %} 
 
 Recommendations aside, it is important to recognise there can be some internal constraints within an organization which prevents the use of Docker, at least in the short-term. This guide is designed for such scenarios.

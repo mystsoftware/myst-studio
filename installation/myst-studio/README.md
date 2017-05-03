@@ -11,7 +11,7 @@ The following prerequisites should be in place on the server that will host MyST
 After the installation, internet access is required for the latest version of MyST to be pulled down directly from the public MyST Docker Registry.
 
 {% hint style='info' %}
-If you are unable to use Docker, there are details on non-Docker installation [here](alternative-myst-installation-non-docker.md)
+If you are unable to use Docker, there are details on non-Docker installation [here](alternatives/README.md)
 {% endhint %}
 
 ## Installation
