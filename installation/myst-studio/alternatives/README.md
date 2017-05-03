@@ -11,17 +11,17 @@ Recommendations aside, it is important to recognise there can be some internal c
 An enterprise may lag behind high-performing companies for various reasons. Below are a list of common constraints in an enterprise that may prevent the use of Docker.
 
  * **Unable to use up-to-date kernel**
- Docker requires a new-*ish* kernel version. Enterprises may have a Standard Operating Environment (SOE) and may not be ready to upgrade their Linux kernel to support Docker. Please refer to the [Docker documentation](https://docs.docker.com/engine/installation) for your specific Operating System to determine the kernel version required.
+   Docker requires a new-*ish* kernel version. Enterprises may have a Standard Operating Environment (SOE) and may not be ready to upgrade their Linux kernel to support Docker. Please refer to the [Docker documentation](https://docs.docker.com/engine/installation) for your specific Operating System to determine the kernel version required.
 
  * **Require out-of-date Docker version**
- This is related to the previous point. If an organisation's SOE prevents the use of an up-to-date kernel then there may be a need to install an older version of Docker. Alternatively, an organisation may have an out-of-date Operating System package manager responsible for delivering out-of-date Docker versions to an operation system.
+   This is related to the previous point. If an organisation's SOE prevents the use of an up-to-date kernel then there may be a need to install an older version of Docker. Alternatively, an organisation may have an out-of-date Operating System package manager responsible for delivering out-of-date Docker versions to an operation system.
  
- MyST relies on the [v2 compose file format](https://docs.docker.com/compose/compose-file/compose-file-v2/) meaning that it will not work with earlier versions of Docker. If you wish to use an earlier version of Docker, please raise a [support ticket](http://support.rubiconred.com) for assistance in configuring MyST to work with earlier versions of Docker.
+   MyST relies on the [v2 compose file format](https://docs.docker.com/compose/compose-file/compose-file-v2/) meaning that it will not work with earlier versions of Docker. If you wish to use an earlier version of Docker, please raise a [support ticket](http://support.rubiconred.com) for assistance in configuring MyST to work with earlier versions of Docker.
       
  * **Waiting on a purchasing decision**
- Organisation's may choose to use RedHat or Oracle Linux. Since version 17.3+,  Docker Enterprise Edition (EE) must be licensed for  Red Hat / Oracle Linux. 
+   Organisation's may choose to use RedHat or Oracle Linux. Since version 17.3+,  Docker Enterprise Edition (EE) must be licensed for  Red Hat / Oracle Linux. 
  
- In this case, an organisation can choose to use Docker Community Edition (CE) with non-RedHat / Oracle Linux operating systems such as the RedHat-based CentOS or other Linux derivatives such as Ubuntu. If an organisation is not willing to license EE, downgrade Docker or use a CE supporting operating system, Docker may no longer be a viable option.
+   In this case, an organisation can choose to use Docker Community Edition (CE) with non-RedHat / Oracle Linux operating systems such as the RedHat-based CentOS or other Linux derivatives such as Ubuntu. If an organisation is not willing to license EE, downgrade Docker or use a CE supporting operating system, Docker may no longer be a viable option.
  
 This document exists for edge cases where an alternative means for installing MyST Studio is required. While the Docker-based installation can take minutes, the manual installation could take several hours and should be followed as a late resort only.
 
