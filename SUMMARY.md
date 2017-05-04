@@ -94,7 +94,7 @@
   * [Alternative Installation Approaches](installation/myst-studio/alternatives/README.md)
 * [MyST Upgrade Guide](administration/upgrade/README.md)
 
-## Property References
+## Appendix
 
-* [Artifact Types and Properties](appendix/artifact/README.md)
-
+* [Supported Artifacts](appendix/artifact/README.md)
+* [Error Codes](appendix/errors/README.md)
