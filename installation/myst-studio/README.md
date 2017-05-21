@@ -16,7 +16,22 @@ After the installation, internet access is required for the latest version of My
 If you are unable to use Docker, there are details on non-Docker installation [here](alternatives/README.md)
 {% endhint %}
 
-## Installation
+## Network Requirements
+
+As MyST is a management tool, it is best suited in a management network so that it can access all of the environments that it needs to manage. The below table provides a set of recommended firewall rules for the MyST Studio server itself in a case where the MyST Build Server and MyST Artifact Repository are all residing on the same host.
+
+| Source | Destination | Protocol | Note |
+| ------ | ----------- | -------- | ---- |
+| Any | `myst-studio:443` | HTTPS | Access to MyST Studio Console |
+| Any | `myst-studio:8081` | HTTP | Access to MyST Build Server |
+| Any | `myst-studio:8083` | HTTP | Access to MyST Artifact Repository |
+| `myst-studio` | OFMW Admin Server Host(s) | SSH | MyST Studio will connect over ssh to the Admin Server of each environment for management operations. |
+| OFMW Admin Server Host(s) | OFMW Managed Server Hosts | SSH | MyST Agent will ssh from admin to managed server hosts if needed for installation and patching. |
+| OFMW Admin Server Host(s) | `myst-studio:8083` | HTTP | MyST Agent will retrieve built artifacts for deployment from the MyST Artifact Repository |
+
+Optionally, the MyST Build Server and MyST Artifact Repository can be frontend by a HTTP Server similar to MyST Studio allowing for HTTPS traffic only. If you are not using the MyST Build Server and Artifact Repository and instead integrating with a different Build (CI) Server or Maven-based Artifact Repository, similar firewalling rules should be in place although the ports may be different.
+
+## Installation using the Wizard
 
 The installation wizard can be kicked off by executing the jar installer using Java as follows:
 
