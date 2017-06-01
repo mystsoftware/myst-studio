@@ -7,7 +7,7 @@ Under the `bin` directory (eg. `/opt/myst-studio/bin`) of the MyST Studio home, 
 ### Scripts
 | MyST Studio Script | Description |
 |---|---|
-| `pull.sh` | Pulls the MyST Studio container from the Public MyST Docker Registry using the customer key and tags it as myst-studio. If internet access is not available from the MyST Studio host this will need to be performed manually by downloading the Docker image from the MyST website and performing the following steps.<br>`docker load -i <MyST Studio Docker Image>` `docker tag <Image Name> myst-studio` |
+| `pull.sh` | Pulls the MyST Studio container from the Public MyST Docker Registry using the customer key and tags it as myst-studio.<br><br>If internet access is not available from the MyST Studio host this will need to be performed manually by downloading the Docker image from the MyST website and performing the following steps:<br>`docker load -i <MyST Studio Docker Image>`<br>`docker tag <Image Name> myst-studio` |
 | `backup-database.sh` | Performs a backup of the database to MyST Studio home under the backup directory with a datetime suffix. The location is printed to the output. For example:<br>`Backed up to /opt/myst-studio/backup/myst-studio-1468979016.sql`<br><br>Take note of the location as you will require this later if you intend to perform a rollback. |
 | `update-database.sh` | Updates/Restores the MyST Studio database from a previous backup as follows:<br>`./update-database.sh <path to previous backup file>`<br><br>Before updating the database, the MyST Studio web container will be shutdown and then started up after the database update is complete. |
 | `stop.sh`	| Stops the MyST Studio instances |
