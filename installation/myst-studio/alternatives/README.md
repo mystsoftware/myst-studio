@@ -29,7 +29,7 @@ This document exists for edge cases where an alternative means for installing My
 
 MyST can be installed to run without Docker through a three step process.
 1. Install MySQL
-2. Install MyST on a Docker supporting system to extract the MyST application and configuration.
+2. Install MyST on a Docker supporting system to extract the MyST application and configuration or download the MyST zip bundle directly.
 3. Copy the extracted MyST application and configuration to the non-Docker host and wire it to the MySQL database.
 
 ## Install MySQL Community Edition
@@ -93,7 +93,13 @@ MySQL's validate_password plugin is installed by default. This will require that
     max_allowed_packet = 256M
     ```
 
-## Obtain the MyST product from a Docker installation.
+## Obtain the MyST product
+
+### Option 1: Download the MyST Studio zip bundle
+
+After login at [myst.rubiconred.com](https://myst.rubiconred.com), you will be able to download the MyST Studio zip bundle from the following link `https://myst.rubiconred.com/webhelp/installer/release/tomcat-myststudio-bundle-$VERSION.tar.gz`. Be sure to replace `$VERSION` with the actual version number.
+
+### Option 2: Obtain the MysT Studio zip bundle from the Docker image
 
 To keep the MyST installation in line with what is built and delivered as part of the Docker image for MyST, we obtain a non-Docker copy of MyST product by first installing MyST on a machine which supports Docker, followed by retrieving the MyST file system and copying it to a non-Docker host. This will involve installing Docker on a supporting operating system and pulling down a specific version of a docker image for MyST, followed by creating a tar achive of the tomcat directory with the related MyST application and configuration. For information on Docker and MyST Studio installation refer to 
  *[Docker install](https://docs.docker.com/engine/installation/) for your operating system version
@@ -156,17 +162,245 @@ To keep the MyST installation in line with what is built and delivered as part o
 5.  Install the MyST license by copying the `MyST.lic` to `tomcat/conf/fusioncloud/license`
     ```
     mkdir -p /opt/myst-studio/tomcat/conf/fusioncloud/license
-    cp MyST.lic /opt/app/myst-studio/tomcat/conf/fusioncloud/license
+    cp MyST.lic /opt/myst-studio/tomcat/conf/fusioncloud/license
     ```
     The `MyST.lic` can be obtained from the MyST license bundle as follows:
     `tar -xf /path/to/MyST-*.lic.tar.gz MyST.lic`
 6.  We need to change the tomcat port to 8085. Modify the following tag in `/opt/myst-studio/tomcat/conf/server.xml`.
     ```<Connector connectionTimeout="20000" port="8085" protocol="HTTP/1.1" redirectPort="8443"/>```
-7.  To reflect the port change and allow authentication to work properly, update the following value in `/opt/app/myst-studio/tomcat/conf/fusioncloud/fc-configuration.properties`
+7.  To reflect the port change and allow authentication to work properly, update the following value in `/opt/myst-studio/tomcat/conf/fusioncloud/fc-configuration.properties`
     ```fc.oauth.endpoint=http://localhost:8085/fc```
 8.  Update `/opt/myst-studio/tomcat/conf/context.xml` with the password you used the `fusioncloud` MySQL user.
-9.  Set the java memory parameters by adding the following line to `/opt/app/myst-studio/tomcat/bin/catalina.sh`
+9.  Set the java memory parameters by adding the following line to `/opt/myst-studio/tomcat/bin/catalina.sh`
     ```export JAVA_OPTS="-Dfile.encoding=UTF-8 -Xms128m -Xmx1024m -XX:PermSize=64m -XX:MaxPermSize=256m"```
 10.  Start Tomcat as follows:
-    ```/opt/app/myst-studio/tomcat/bin/startup.sh```
+    ```/opt/myst-studio/tomcat/bin/startup.sh```
 11. Access MyST Studio by going to `http://<host>:8085/console`
+
+## Install MyST Studio as a service
+
+MyST can be setup to run as a service so that it automatically starts up on system boot. The steps to do this different depending on the Operating System version.
+
+### RedHat/OracleLinux/Centos distribution prior to 7
+
+Take the below `myst` sysvinit script and place it in 
+`/etc/rc.d/init.d`. Make sure that you update the paths to the MyST Studio installation location in the `start`, `stop` and `restart` actions if needed
+
+``` 
+#!/bin/bash
+#
+# /etc/rc.d/init.d/myst
+#
+# <description of the *service*>
+# <any general comments about this init script>
+#
+# <tags -- see below for tag definitions. *Every line* from the top
+# of the file to the end of the tags section must begin with a #
+# character. After the tags section, there should be a blank line.
+# This keeps normal comments in the rest of the file from being
+# mistaken for tags, should they happen to fit the pattern.>
+
+# chkconfig: 2345 95 05
+# description: MyST Studio start script
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+case "$1" in
+     start)
+          echo -n "Starting MyST Studio services: "
+          daemon --user=myst /opt/myst-studio/tomcat/bin/startup.sh
+          touch /var/lock/subsys/myststudio
+     ;;
+     stop)
+          echo -n "Shutting down MyST Studio services: "
+          daemon --user=myst /opt/myst-studio/tomcat/bin/shutdown.sh
+          rm -f /var/lock/subsys/myststudio
+     ;;
+     status)
+                pid=`ps -eo pid,command | grep tomcat | grep -v grep | awk '{print $1}'`
+                if [[ ! -z $pid ]] 
+                then
+                   echo "MyST Studio is running: $pid"
+                else
+                   echo "MyST Studio is not running"
+                fi
+     ;;
+     restart)
+                daemon --user=myst /opt/myst-studio/tomcat/bin/shutdown.sh
+                daemon --user=myst /opt/myst-studio/tomcat/bin/startup.sh
+     ;;
+     reload)
+     ;;
+     probe)
+     ;;
+     *)
+          echo "Usage: <servicename> {start|stop|status|restart}"
+          exit 1
+     ;;
+esac
+```
+ 
+Now you should be able to start, stop and restart MyST Studio by
+``` 
+service myst start
+service myst restart
+service myst stop
+```
+
+### RedHat/OracleLinux/Centos distribution on 7+
+
+7+ operating systems use `systemd` to manage services, and uses the concept of unit files. We place the unit file (called `myst.service`) in to `/etc/systemd/system/`.
+ 
+Make sure that you update (if needed):
+- The path to the MyST Studio installation
+- The users who MyST Studio is supposed to run as (e.g. `myst`, `oracle`, etc.)
+
+```
+[Unit]
+Description=MyST Studio
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=myst
+ExecStart=/opt/myst-studio/bin/start.sh
+ExecStop=/opt/myst-studio/bin/stop.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Set the correct file permissions
+```
+chmod 664 /etc/systemd/system/myst.service
+```
+
+Load the new service
+```
+systemctl daemon-reload
+```
+
+Make the service start a boot
+```
+systemclt enable myst
+```
+
+Start the MyST Studio now
+```
+systemctl start myst
+```
+
+
+## Automated installation reference
+
+Below are the details steps for installing MyST from scratch on a RedHat/OracleLinux/Centos based machine. These steps are completely headless so are ideal for automating in a bash script or adapting for a Operating System Configuration Management tool of choice.
+
+For the automated steps below, it is assumed that the following files are copied to `/usr/share/myst` and accessible (ideally owned) by the `myst` user. 
+ - tomcat-myststudio-bundle-$VERSION.tar.gz
+ - myst.service
+
+The steps below are designed to be performed by `root` user or by a user with `sudo` access.
+
+### Setup MyST user group and path
+
+```
+groupadd -r myst
+useradd -m -d /home/myst -s /bin/bash -g myst myst
+mkdir -p /opt/myst-studio
+chown -R myst:myst /opt/myst-studio
+echo 'myst:myst' | sudo chpasswd
+```
+
+### Provide sudo access for myst (Optional)
+
+```
+echo "myst ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+```
+
+### Install MySQL
+
+```
+wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+yum localinstall -y mysql57-community-release-el7-11.noarch.rpm
+yum install -y mysql-community-server
+```
+
+### Start MySQL
+
+```
+service mysqld start
+service mysqld status mysqld
+```
+
+### Configure MySQL
+
+```
+MYSQL_TEMP_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk 'NF>1{print $NF}')
+MYSQL_ROOT_PASSWORD="welcome1"
+MYSQL_FUSIONCLOUD_PASSWORD="welcome1"
+mysql -uroot -p$MYSQL_TEMP_PASSWORD --connect-expired-password -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$MYSQL_TEMP_PASSWORD'; uninstall plugin validate_password; ALTER USER 'root'@'localhost' IDENTIFIED BY '$MYSQL_ROOT_PASSWORD';"
+mysql -uroot -p$MYSQL_ROOT_PASSWORD --connect-expired-password -e "CREATE USER 'fusioncloud'@'localhost' IDENTIFIED BY '$MYSQL_FUSIONCLOUD_PASSWORD'; CREATE DATABASE fusioncloud; GRANT ALL PRIVILEGES ON fusioncloud.* to 'fusioncloud'@'localhost' WITH GRANT OPTION;"
+echo "max_allowed_packet = 256M" >> /etc/my.cnf
+```
+
+### Install and Configure MyST Studio
+
+Be sure to replace `MYST_VERSION` with your desired version.
+```
+MYST_VERSION="5.6.0.0"
+cd /opt
+mkdir myst-studio
+tar -xvf /usr/share/myst/tomcat-myststudio-bundle-$MYST_VERSION.tar.gz -C myst-studio
+mkdir /opt/myst-studio/bin
+mkdir -p /opt/myst-studio/tomcat/conf/fusioncloud/license
+cp /usr/share/myst/MyST-Craig.lic.tar.gz /opt/myst-studio/tomcat/conf/fusioncloud/license
+# If you do not want to do this step....
+sed -i.bak '/^127\.0\.0\.1/ s/$/ db/' /etc/hosts
+# ...you can do this instead
+sed -i.bak 's/db:/localhost:/' /opt/myst-studio/tomcat/conf/context.xml
+sed -i.bak 's/8080/8085/' /opt/myst-studio/tomcat/conf/server.xml
+sed -i.bak 's/8080/8085/' /opt/myst-studio/tomcat/conf/fusioncloud/fc-configuration.properties
+# Begin workaround
+histchars=
+# This contains Jenkins params but the memory and UTF-8 args are for MyST Studio
+printf "#!/bin/sh\nexport JAVA_OPTS=\"-DJENKINS_HOME=/opt/myst-studio/jenkins -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true -Dfile.encoding=UTF-8 -Xms128m -Xmx1024m -XX:PermSize=64m -XX:MaxPermSize=256m\"\n/opt/myst-studio/tomcat/bin/startup.sh" > /opt/myst-studio/bin/start.sh
+unset histchars
+# The above histchars unset is to workaround exclamation mark expansion in bash
+# as described at https://stackoverflow.com/questions/15011824/how-to-printf-an-exclamation-mark-in-bash
+# End workaround
+ln -s /opt/myst-studio/tomcat/logs /opt/myst-studio/logs
+ln -s /opt/myst-studio/tomcat/bin/shutdown.sh /opt/myst-studio/bin/stop.sh
+chmod +x /opt/myst-studio/bin/start.sh
+chown -R myst:myst /opt/myst-studio
+```
+
+### Install Jenkins (Optional)
+
+Be sure to replace `JENKINS_VERSION` with your desired version.
+
+```
+JENKINS_VERSION="2.46.3"
+wget https://updates.jenkins-ci.org/download/war/$JENKINS_VERSION/jenkins.war -P /opt/myst-studio/tomcat/webapps
+mkdir -p /opt/myst-studio/jenkins
+```
+
+### Install Jenkins (Optional)
+
+Be sure to replace `JENKINS_VERSION` with your desired version.
+
+```
+JENKINS_VERSION="2.46.3"
+wget https://updates.jenkins-ci.org/download/war/$JENKINS_VERSION/jenkins.war -P /opt/myst-studio/tomcat/webapps
+mkdir -p /opt/myst-studio/jenkins
+```
+
+### Setup MyST Studio as a Service
+
+```
+cp /usr/share/myst/myst.service /etc/systemd/system/myst.service
+chmod 664 /etc/systemd/system/myst.service
+systemctl daemon-reload
+systemctl enable myst
+systemctl start myst
+```
