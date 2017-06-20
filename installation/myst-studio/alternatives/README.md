@@ -294,7 +294,7 @@ systemctl start myst
 
 ## Automated installation reference
 
-Below are the details steps for installing MyST from scratch on a RedHat/OracleLinux/Centos based machine. These steps are completely headless so are ideal for automating in a bash script or adapting for a Operating System Configuration Management tool of choice.
+Below are the details steps for installing MyST from scratch on a RedHat/OracleLinux/Centos based machine on 7+. These steps are completely headless so are ideal for automating in a bash script or adapting for a Operating System Configuration Management tool of choice.
 
 For the automated steps below, it is assumed that the following files are copied to `/usr/share/myst` and accessible (ideally owned) by the `myst` user. 
  - tomcat-myststudio-bundle-$VERSION.tar.gz
