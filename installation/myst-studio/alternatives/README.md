@@ -298,6 +298,7 @@ Below are the details steps for installing MyST from scratch on a RedHat/OracleL
 
 For the automated steps below, it is assumed that the following files are copied to `/usr/share/myst` and accessible (ideally owned) by the `myst` user. 
  - tomcat-myststudio-bundle-$VERSION.tar.gz
+ - MyST.lic.tar.gz
  - myst.service
 
 The steps below are designed to be performed by `root` user or by a user with `sudo` access.
@@ -354,7 +355,7 @@ mkdir myst-studio
 tar -xvf /usr/share/myst/tomcat-myststudio-bundle-$MYST_VERSION.tar.gz -C myst-studio
 mkdir /opt/myst-studio/bin
 mkdir -p /opt/myst-studio/tomcat/conf/fusioncloud/license
-cp /usr/share/myst/MyST-Craig.lic.tar.gz /opt/myst-studio/tomcat/conf/fusioncloud/license
+cp /usr/share/myst/MyST.lic.tar.gz /opt/myst-studio/tomcat/conf/fusioncloud/license
 # If you do not want to do this step....
 sed -i.bak '/^127\.0\.0\.1/ s/$/ db/' /etc/hosts
 # ...you can do this instead
@@ -373,16 +374,6 @@ ln -s /opt/myst-studio/tomcat/logs /opt/myst-studio/logs
 ln -s /opt/myst-studio/tomcat/bin/shutdown.sh /opt/myst-studio/bin/stop.sh
 chmod +x /opt/myst-studio/bin/start.sh
 chown -R myst:myst /opt/myst-studio
-```
-
-### Install Jenkins (Optional)
-
-Be sure to replace `JENKINS_VERSION` with your desired version.
-
-```
-JENKINS_VERSION="2.46.3"
-wget https://updates.jenkins-ci.org/download/war/$JENKINS_VERSION/jenkins.war -P /opt/myst-studio/tomcat/webapps
-mkdir -p /opt/myst-studio/jenkins
 ```
 
 ### Install Jenkins (Optional)
