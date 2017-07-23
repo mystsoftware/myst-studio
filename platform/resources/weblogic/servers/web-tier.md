@@ -29,7 +29,23 @@ The following table describes the configuration properties that can be set for W
 | Products \[Oracle Webtier\] &gt; Name Value Parameters\[ssl-port\] | SSL listen port for the Oracle HTTP Server component.  |
 | Products \[Oracle Webtier\] &gt; Name Value Parameters\[root-permissions-enabled\] | This is required when setting base-port or ssl-port to be in the range from 1-1024 |
 
+## Auto-generating the default Webtier Location Routing Rules
+
+If you selected "Yes" to the prompt about creating a Load Balancer, then you will see an `fmw` [Load Balancer](/platform/resources/weblogic/servers/load-balancer-configuration.md) record under **Load Balancers** > **Load Balancer** in the [Platform Definition](/platform/definitions/README.md). When this is set in combination with the Webtier product, it will default the load balancer to the Webtier host and port and auto-generate the product-specific Webtier Location Routing Rules under the **Webtier Configuration** within the Platform Definition. If the Webtier is fronted by another External Load Balancer, such as an F5, be sure to replace the Host and HTTP/S ports accordingly so that the URLs are re-written correctly to match the External Load Balanacer.
+
+![](/assets/Screenshot%202017-02-13%2008.56.58.png)
+
+## Adding custom Webtier Location Routing Rules
+
+Custom routing rules can be added within the **Frontend List** under **Webtier Configuration** alongside the auto-generated product-specific routing rules.
+
+![](/assets/Screen Shot 2017-07-23 at 7.20.51 pm.png)
+
+Based on this, the `Location` definitions within the Webtier Configuration are automatically generated.
+
 <!--
+TODO...
+The below is copied from MyST CLI docs but still needs to be updated to reflect MyST Studio
 
 ## Understanding how Webtier Location Routing Rules are defined
 
