@@ -56,7 +56,7 @@
                                         <fail if="git.check.failed" message="You must have a working Git installation to push this project to Github Pages." />
                                         <exec executable="/bin/bash" resultproperty="gitbook.result" failonerror="false">
                                             <arg value="-c" />
-                                            <arg value="gitbook version" />
+                                            <arg value="gitbook -V" />
                                         </exec>
                                         <condition property="gitbook.check.failed">
                                             <not>
