@@ -1,5 +1,7 @@
 # {{ page.title }}
 
+<!-- toc -->
+
 New MyST features and bug fixes are frequently made available. Enterprises can easily upgrade their on-premise instance of MyST Studio by pulling down the latest version directly from the web or in-directly by downloading the associated Docker images and copying them up to the MyST host.
 
 If you are a MyST customer, who started using MyST prior to 2016, you may still be using the MyST Command-Line Interface. For details on upgrading from MyST CLI to MyST Studio see the associated section within this guide.
@@ -192,6 +194,27 @@ The rollback process is straight forward for Blue / Green. If an issue is encoun
 ##### Cons
 * More complex to setup than single instance 
 * While the database is in read-only, any builds from the CI server (e.g. Jenkins) will not be propagated to MyST Studio. The would need to be re-run afterwards for all the failed build jobs.
+
+## Offline Upgrade
+
+If you are unable to provide access to the MyST Docker Registry either directly or via Proxy Server, you will need to perform the upgrade process offline. This will require pre-downloading the Docker Image from [myst.rubiconred.com](https://myst.rubiconred.com) (to do this you will need to login) and copying the image up to the MyST host. Once this is done, perform the following:
+
+1. Change directory to `/u01/myst-studio/bin`
+2. Execute `backup-database.sh` script to take the backup of the current state.
+3. Execute `stop.sh` to stop the MyST instance.
+4. Gunzip the installer file using below command
+```
+gunzip myst-studio-docker-image-<version>.tar.gz
+```
+5. Load the MyST Studio docker image using below command
+```
+sudo docker load -i myst-studio-docker-image-<version>.tar
+```
+6. Tag the image to myst-studio
+```
+docker tag 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst-studio:<version> myst-studio
+```
+7. Execute `start.sh` script to start the MyST Studio in the new version.
 
 ## Upgrading from CLI to Studio
 
