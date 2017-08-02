@@ -163,7 +163,7 @@ If you skipped the post-installation steps documented in the section on **Config
 
 ## Offline Installation
 
-It is highly recommended that proxied internet access be available for the MyST server. This allows for easy upgrade of MyST by simplify specifying a version number to download (e.g. `./upgrade.sh 5.5.0.0`). In an event that MyST Studio does not have internet access, you will need to download the required MyST Studio Docker Images from a host with internet access and then copy them to the MyST Server before executing the `start.sh` or `upgrade.sh`. Depending on whether you choose "MyST Build Server" and "MyST Artifact Repository", there may be multiple Docker images that need to be downloaded and copied to the server.
+It is highly recommended that proxied internet access be available for the MyST server. This allows for easy upgrade of MyST by simply specifying a version number to download (e.g. `./upgrade.sh 5.5.0.0`). In an event that MyST Studio does not have internet access, you will need to download the required MyST Studio Docker Images from a host with internet access and then copy them to the MyST Server before executing the `start.sh` or `upgrade.sh`. Depending on whether you choose "MyST Build Server" and "MyST Artifact Repository", there may be multiple Docker images that need to be downloaded and copied to the server.
 
 ### MyST Studio (Offline)
 
