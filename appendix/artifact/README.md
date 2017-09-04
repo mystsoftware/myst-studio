@@ -2,6 +2,16 @@
 
 <!-- toc -->
 
+#### PCS
+
+Process Cloud Service
+`myst.component.type=opaas-pcs`
+
+|Property|Description|
+|---|---|
+|pcs.configuration-plan|Optional: A custom deployment configuration JSON payload in format of the PCS deploy REST API. The file can be a path on the target host or a path in the packaged artifact (e.g. `(EMBEDDED)/pcs.json`). |
+|pcs.space-name|Design-time space for the given project|
+
 #### SCA  
 |Property|Description|
 |---|---|
