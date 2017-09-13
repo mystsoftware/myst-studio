@@ -6,6 +6,8 @@
 
 Process Cloud Service
 
+{% include "test.md" %}
+
 `myst.component.type=opaas-pcs`
 
 |Property|Description|
