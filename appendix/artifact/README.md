@@ -28,16 +28,15 @@ PCS_PROJECT_ID="Administer%20Patient%20Well%20Being"
 PCS_SPACE_NAME="RxR"
 PCS_EXPORT_FILE_NAME="AdministerPatientWellBeing.exp"
 ```
-**Note:** 
-- The `PCS_SPACE_NAME` must match the design-time space where your Process Application is located. In the example above, it is in the `RxR` space. 
-- Any space character in your project name must be replaced with the `%20` character.
+ - Ensure `PCS_SPACE_NAME` matches the design-time space where your Process Application is located. In the example above, it is in the `RxR` space. 
+ - And, ensure that any space character in your project name is replaced with the `%20` character.
 3. Execute the following to export your project.
 ```
 export PCS_SPACE_ID=$(curl -u ${PCS_USERNAME}:${PCS_PASSWORD} https://${PCS_HOST}/bpm/api/4.0/spaces/ | jq -r ".items[] | select( .name == \"${PCS_SPACE_NAME}\") | .id")
 curl -u ${PCS_USERNAME}:${PCS_PASSWORD} https://${PCS_HOST}/bpm/api/4.0/spaces/${PCS_SPACE_ID}/projects/${PCS_PROJECT_ID}/exp > ${PCS_EXPORT_FILE_NAME}
 ```
 
-**Note:** At the time of writing, Oracle do not support automated deployment of Decision Model Applications. Therefore, MyST is only able to support Process Applications.
+At the time of writing, Oracle do not support automated deployment of Decision Model Applications. Therefore, MyST is only able to support deployment of Process Applications at this time.
 
 **Step 2: Create the Maven pom.xml**
 
@@ -75,7 +74,12 @@ MyST supports the following PCS-specific deploy-time properties being defined wi
 We can achieve the publish using Maven. For example:
 
 ```
-mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifactory/libs-release-local -Dfile=AdministerPatientWellBeing.exp -DgroupId=com.rubiconred -DartifactId=AdministerPatientWellBeing -Dversion=1.0-${BUILD_NUMBER} -Dpackaging=jar
+mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifactory/libs-release-local \
+  -Dfile=AdministerPatientWellBeing.exp \
+  -DgroupId=com.rubiconred \
+  -DartifactId=AdministerPatientWellBeing \
+  -Dversion=1.0-${BUILD_NUMBER} \
+  -Dpackaging=jar
 ```
 
 **Note:** Be sure to publish to the same Artifact Repository that is defined within the MyST [Continuous Delivery Profile](/infrastructure/continuous-delivery-profile/README.md). These ensures that MyST will be able to retrieve the artifact at deploy-time.
