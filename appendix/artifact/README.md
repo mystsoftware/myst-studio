@@ -26,19 +26,22 @@ PCS_PASSWORD="your-password"
 PCS_HOST="your-instance.process.us2.oraclecloud.com"
 PCS_PROJECT_ID="Administer%20Patient%20Well%20Being"
 PCS_SPACE_NAME="RxR"
+PCS_EXPORT_FILE_NAME="AdministerPatientWellBeing.exp"
 ```
 **Note:** 
-- The PCS **Space Name** must match the design-time space where your Process Application is located. In the example above, it is in the `RxR` space. 
+- The `PCS_SPACE_NAME` must match the design-time space where your Process Application is located. In the example above, it is in the `RxR` space. 
 - Any space character in your project name must be replaced with the `%20` character.
 3. Execute the following to export your project.
 ```
 export PCS_SPACE_ID=$(curl -u ${PCS_USERNAME}:${PCS_PASSWORD} https://${PCS_HOST}/bpm/api/4.0/spaces/ | jq -r ".items[] | select( .name == \"${PCS_SPACE_NAME}\") | .id")
-curl -u ${PCS_USERNAME}:${PCS_PASSWORD} https://${PCS_HOST}/bpm/api/4.0/spaces/${PCS_SPACE_ID}/projects/${PCS_PROJECT_ID}/exp > AdministerPatientWellBeing.exp
+curl -u ${PCS_USERNAME}:${PCS_PASSWORD} https://${PCS_HOST}/bpm/api/4.0/spaces/${PCS_SPACE_ID}/projects/${PCS_PROJECT_ID}/exp > ${PCS_EXPORT_FILE_NAME}
 ```
 
-**Step 1: Create the Maven pom.xml**
+**Note:** At the time of writing, Oracle do not support automated deployment of Decision Model Applications. Therefore, MyST is only able to support Process Applications.
 
-1. Create a `pom.xml`. Be sure to set the Maven details to match your environment. An example is shown below.
+**Step 2: Create the Maven pom.xml**
+
+1. Create a `pom.xml`. Be sure to set the Maven details to match your environment. An example `pom.xml` is shown below.
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <project
@@ -59,19 +62,29 @@ curl -u ${PCS_USERNAME}:${PCS_PASSWORD} https://${PCS_HOST}/bpm/api/4.0/spaces/$
 </project>
 ```
 
-**Step 2: Export your application from Process Cloud**
-
-
-
-
-**Note:** At the time of writing, Oracle do not support automated deployment of Decision Model Applications. Therefore, MyST is only able to support Process Applications.
-
-We can configure a PCS deployment with the 
+MyST supports the following PCS-specific deploy-time properties being defined with the Maven `pom.xml`.
 
 |Property|Description|
 |---|---|
+|pcs.space-name|Design-time space for the given project. If the application already exists in the design-time space, it will be overwritten.|
 |pcs.configuration-plan|Optional: A custom deployment configuration JSON payload in format of the PCS deploy REST API. The file can be a path on the target host or a path in the packaged artifact (e.g. `(EMBEDDED)/pcs.json`). |
-|pcs.space-name|Design-time space for the given project|
+|pcs.deployment-name|Optional: Name of the deployed application. If not set, it will default to the Maven `artifactId`|
+
+**Step 3: Publish your application to a Maven Repository**
+
+We can achieve the publish using Maven. For example:
+
+```
+mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifactory/libs-release-local -Dfile=AdministerPatientWellBeing.exp -DgroupId=com.rubiconred -DartifactId=AdministerPatientWellBeing -Dversion=1.0-${BUILD_NUMBER} -Dpackaging=jar
+```
+
+**Note:** Be sure to publish to the same Artifact Repository that is defined within the MyST [Continuous Delivery Profile](/infrastructure/continuous-delivery-profile/README.md). These ensures that MyST will be able to retrieve the artifact at deploy-time.
+
+**Step 4: Register the artifact with MyST**
+
+This can be achieved through the MyST Java SDK or via the REST API. Alternatively, if you are using Jenkins, you can use the MyST Jenkins Plugin.
+
+Once the Artifact is registered with MyST it can be added to a new or existing [Application Blueprint](/deploy/application/blueprints/README.md) and promoted across Process Cloud Service instances using a [Release Pipeline](/release/pipeline/README.md).
 
 #### SCA  
 |Property|Description|
