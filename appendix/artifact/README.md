@@ -82,7 +82,7 @@ mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifa
   -Dpackaging=jar
 ```
 
-**Note:** Be sure to publish to the same Artifact Repository that is defined within the MyST [Continuous Delivery Profile](/infrastructure/continuous-delivery-profile/README.md). These ensures that MyST will be able to retrieve the artifact at deploy-time.
+Be sure to publish to the same Artifact Repository that is defined within the MyST [Continuous Delivery Profile](/infrastructure/continuous-delivery-profile/README.md). These ensures that MyST will be able to retrieve the artifact at deploy-time.
 
 **Step 4: Register the artifact with MyST**
 
