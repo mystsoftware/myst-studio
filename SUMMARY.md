@@ -25,7 +25,7 @@
   * [Platform Models](platform/models/README.md)
     * [Pre-Existing Infrastructure](platform/models/pre-existing/README.md)
     * [On Demand \(AWS\)](platform/models/on-demand-aws/README.md)
-  * [Registering Cloud Instances](platform/blueprints/registering-cloud-instances.md)
+  * [Registering Cloud Instances](platform/cloud/instances/README.md)
   * [Provisioning Platform Instances](platform/provisioning/README.md)
   * [Updating Platform Instances](platform/update/README.md)
   * [Maintaining Platform Definitions](platform/definitions/README.md)
