@@ -17,5 +17,7 @@ To register a **Process Cloud Service** platform instance.
 
 After the instance is created, the Platform Instance will be available for use within a [MyST Release Pipeline](/release/pipeline/README.md)
   
+{% hint style='info' %}
 Please be aware, only Oracle PAAS-flavoured Infrastructure Providers and Blueprints will be available from the dropdown.
+{% endhint %}
 
