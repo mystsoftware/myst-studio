@@ -12,12 +12,6 @@ Process Cloud Service
 
 {% include book.file1 %}
 
-...
-
-{% include book.myst_repo+"/myst/fc-parent/fc-sdk/fc-studio-sdk-payload/src/test/resources/src/artifacts/sca/pom.xml" %}
-
-
-
 `myst.component.type=opaas-pcs`
 
 |Property|Description|
