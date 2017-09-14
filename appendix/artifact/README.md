@@ -4,15 +4,69 @@
 
 #### PCS
 
-Process Cloud Service
+Oracle Process Cloud Service (PCS) Applications can be deployed using MyST. For each version of a PCS application which you wish to deploy, you must first register it with MyST. These steps can be performed manually, however, it is recommended to include these steps in a CI server job, so that they can be triggered automatically as required.
 
-{% include "test.md" %}
+**Step 1: Export your application from Process Cloud**
 
-...
+We can export either from the web console or via the REST API.
 
-{% include book.file1 %}
+To use the web console:
 
-`myst.component.type=opaas-pcs`
+1. Navigate to **Develop Processes** within the Process Cloud console
+2. Download the Application. This will download a file with the `.exp` file extension.
+![](/assets/pcs-export.png)
+
+To use the REST API:
+
+1. Ensure you have `curl` and `jq` installed and are running on Linux based machine
+2. Set the following environmental variables to match your environment:
+```
+PCS_USERNAME="your-email@your-company.com"
+PCS_PASSWORD="your-password"
+PCS_HOST="your-instance.process.us2.oraclecloud.com"
+PCS_PROJECT_ID="Administer%20Patient%20Well%20Being"
+PCS_SPACE_NAME="RxR"
+```
+**Note:** 
+- The PCS **Space Name** must match the design-time space where your Process Application is located. In the example above, it is in the `RxR` space. 
+- Any space character in your project name must be replaced with the `%20` character.
+3. Execute the following to export your project.
+```
+export PCS_SPACE_ID=$(curl -u ${PCS_USERNAME}:${PCS_PASSWORD} https://${PCS_HOST}/bpm/api/4.0/spaces/ | jq -r ".items[] | select( .name == \"${PCS_SPACE_NAME}\") | .id")
+curl -u ${PCS_USERNAME}:${PCS_PASSWORD} https://${PCS_HOST}/bpm/api/4.0/spaces/${PCS_SPACE_ID}/projects/${PCS_PROJECT_ID}/exp > AdministerPatientWellBeing.exp
+```
+
+**Step 1: Create the Maven pom.xml**
+
+1. Create a `pom.xml`. Be sure to set the Maven details to match your environment. An example is shown below.
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.rubiconred</groupId>
+  <artifactId>AdministerPatientWellBeing</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-1</version>
+  <name>Administer Patient Well Being</name>
+  <properties>
+      <myst.component.type>opaas-pcs</myst.component.type>
+      <pcs.deployment-name>Administer Patient Well Being</pcs.deployment-name>
+      <pcs.space-name>RxR</pcs.space-name>
+      <artifact.repository.type>exp</artifact.repository.type>
+  </properties>
+</project>
+```
+
+**Step 2: Export your application from Process Cloud**
+
+
+
+
+**Note:** At the time of writing, Oracle do not support automated deployment of Decision Model Applications. Therefore, MyST is only able to support Process Applications.
+
+We can configure a PCS deployment with the 
 
 |Property|Description|
 |---|---|
