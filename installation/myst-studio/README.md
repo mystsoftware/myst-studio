@@ -10,7 +10,7 @@ The following prerequisites should be in place on the server that will host MyST
  * Docker 1.10+ and Docker Compose is installed.
  * The MyST license tar.gz file must be available. This is provided when you sign up to try MyST Studio.
 
-{% hint style='danger' %}
+{% hint style='info' %}
 Note
 {% endhint %}
 > The user account used for the MyST Studio installation **must** be in the docker group in order to access the docker services.
@@ -137,7 +137,7 @@ If you choose the **Build Extensions for Oracle Middleware** then you will need 
 | 12.2.1.1.0 | `conf/fmw/context/12.2.1.1.0/installers/fmw_12.2.1.1.0_osb.jar` |
 | 12.2.1.1.0 | `conf/fmw/context/12.2.1.1.0/installers/fmw_12.2.1.1.0_soa.jar` |
 
-{% hint style='danger' %}
+{% hint style='info' %}
 Note
 {% endhint %}
 > Due to dependencies in Oracle's Maven POMs in 12.2.1.2 on 12.2.1.1 POMs, you will need to provide both sets of installation files if you're using 12.2.1.2
