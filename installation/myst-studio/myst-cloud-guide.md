@@ -11,9 +11,9 @@ services:
   web:
     image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst-studio:oow17
     ports:
-     - "8085:8085"
+     - "8085:8080"
     expose:
-     - "8085" 
+     - "8080" 
   db:
     image: mysql:5.7.17
     environment:
