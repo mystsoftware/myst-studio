@@ -94,6 +94,7 @@
   * [Alternative Installation Approaches](installation/myst-studio/alternatives/README.md)
 * [MyST Management Scripts](administration/management/README.md)
 * [MyST Upgrade Guide](administration/upgrade/README.md)
+* [MyST Cloud Guide](installation/myst-studio/myst-cloud-guide.md)
 
 ## Appendix
 
