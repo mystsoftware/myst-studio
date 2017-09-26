@@ -12,6 +12,8 @@ services:
     image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst-studio:oow17
     ports:
      - "8085:8085"
+    expose:
+     - "8085" 
   db:
     image: mysql:5.7.17
     environment:
@@ -19,8 +21,12 @@ services:
      - MYSQL_DATABASE=fusioncloud 
      - MYSQL_USER=fusioncloud
      - MYSQL_PASSWORD=welcome1
+    expose:
+     - "3306"
+  https:
+    image: nginx:1.11.13
     ports:
-     - "3306:3306"
+     - "443:443"
 ```
 
 https://129.144.253.160/api/v2/registries/validate
