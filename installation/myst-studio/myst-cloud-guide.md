@@ -29,9 +29,29 @@ services:
     image: nginx:1.11.13
     ports:
      - "443:443"
+     - "80:80"
+    volumes:
+     - /etc/nginx/nginx.conf:/etc/nginx/nginx.conf 
     links:
      - "web" 
 ```
+
+Put this within HTTP
+
+    server {  
+      server_name moce.testdrive.fusioncloud.com;  
+      listen 80;  
+      
+      location / {  
+        proxy_set_header        Host $host;  
+        proxy_set_header        X-Real-IP $remote_addr;  
+        proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;  
+        proxy_set_header        X-Forwarded-Proto $scheme;  
+      
+        proxy_read_timeout  90;  
+        proxy_pass http://web:8080;  
+      }  
+    } 
 
 https://129.144.253.160/api/v2/registries/validate
 {"username":"AWS","password":"eyJwYXlsb2FkIjoibDBiNk9xdHIzTHNndnJVTmx1UTIzMDJneGs5Qlk5Sm1DMmN5K1ZEOHZxMWFSYlNhME16QW1wa0toZjNlUCsxN3VkMmhXQlE1OEtZMm1LbFZlRkNacmdFZDFQbkxCbzdCcitoa1kzcDVjbFdKZi9jRXNhZkJuaTdXRWRISUZ1VTlJdk1mRUY4REgvNjlhY0VLWWU4UjE1bHRZc3p2eGFJeGF1Vm4wNlFVbElTZkJDUzMwWmRHcjNpNmQ0QzVGVXFyc2ZONDV4dnRCRk9yR3l3K1ZJN2tEeXR5VjVHbnBic0RNS3gyanJiM1d4bmNUR2lUNEhJQSt5N2h6K3dNaUlxUHIvZUQ1OEljRWpkK1Uwb2dxWTJYdGRUU05jaTI4NWFxQnp1SVJJb21Ib2NRRzhOVTJSbDNQWTdGQkhKZWdhVVhKbXU5a2xZcGM3bjZJTU1sNTlhTTZ6QWUyQmhtUnlZdE5BL3NrOEQ1R3RLZlpMaEtVNFJXR1c4Vm1yZ3hVNlV6YkgvYTRiSjZUZzZzcVUzMGJVc3pEbUM1NjdtQkpxWk5aU2tXZ2ZyWW4wOUZRK1ZtS0ZiOEt4REc3TFZMVzhuSlVBSk10WUhlQ1krNDhrc2dKT2dVaFhOVFdlSzF6a1VIUVBhTHJ3MURjUkJKK3RLeTdBTVRLMXJ5emxNb2hOd2hyQmVJRHhpUUlKbWY3cHhuNXhBTkpIeU5WSjFWUkpHeW9mc3U2VXpDTHNWVnhsdzhCQzNZaVZyVndtTFZHeThuWmJqRXNJeENkK214SW8yM3FsKzhiZjNFZlR6U3NFd0x2STFDenJldGxGMXNuVmdNZHJ3d0NSYWRPOGZhVDhPczNwVkRpVnZqZzA4VmNqZ2EzbVB3dlIrKzB2bTNRS3cyLzJ0RURnUFhYTnlDaWc4N3BxU3dqY1dlVjQrc1FHK0RuVDU1c1BPYXBPRWhXVjgwT051RDYxN3kyNzQvNVRPT09lZGE0TDYvZHVwa1h2QmdEcU9Cc3FhNW53WFhiYlF5VWlPRzlOOUR5dUpUVER1dGcrTlBubnBlNktJQlZmMDkxd3RhL25BaTNYd0RoM2lTaUIyU0IyMkhFdHBvMkJCbjNpRFkzQWNrY09qZlRlSGxXN1l4Rlp3Ulk0RHowTXk4elZISGpTbWE3V1RPdEZMb2cxMXBmaDdIa2pTZXk5NytRTkh2QWxrZk1sbWhrWW96b0F0b281MzNWN0ZBQ1hsWE5IamZwL0FubUJpUExkd245YVd5dTdlR3VhMk9vSWVSTm1VUDF6Vy9VbTBqYUJvSDNuZUJpYnVId0x3eUZYRngzaFhYclhVSnAwTjE1MlAwZHpwTWllVkduYzZVbDJETU9aK0NUcjJJdHdzMHVnV0ZWbG1SWHI2Rjc1ckJqTklnTXR5OFFNY21uU0w3bis5Y0VXam1adEpqS1p6biIsImRhdGFrZXkiOiJBUUVCQUhqNmxjNFhJSncvN2xuMEhjMDBETWVrNkdFeEhDYlk0UklwVE1DSTU4SW5Vd0FBQUg0d2ZBWUpLb1pJaHZjTkFRY0dvRzh3YlFJQkFEQm9CZ2txaGtpRzl3MEJCd0V3SGdZSllJWklBV1VEQkFFdU1CRUVES3laeU1MY1Q4RGlWalFYSndJQkVJQTdZbllZRmQ4SkRvcVEvdjB3anN0MSt0ZXBhWmtBT1VyNFYvRU9pQTRpcTQ4dHRLUE5IOS9RSkEyRXU2WHFpanZQdXZ6Z0dEUzNZaVNvbUZjPSIsInZlcnNpb24iOiIxIiwidHlwZSI6IkRBVEFfS0VZIn0=","url":"https://067343992071.dkr.ecr.us-west-2.amazonaws.com","description":"Rubicon Red MyST Registry"}
