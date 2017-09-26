@@ -12,6 +12,8 @@ services:
     image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst-studio:oow17
     ports:
      - "8085:8080"
+    links:
+     - "db" 
     expose:
      - "8080" 
   db:
@@ -27,6 +29,8 @@ services:
     image: nginx:1.11.13
     ports:
      - "443:443"
+    links:
+     - "web" 
 ```
 
 https://129.144.253.160/api/v2/registries/validate
