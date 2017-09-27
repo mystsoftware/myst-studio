@@ -25,6 +25,12 @@ services:
      - MYSQL_PASSWORD=welcome1
     expose:
      - "3306"
+  oauth2proxy:
+    image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/oauth2proxy
+  ci:
+    image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst/jenkins/myhealth-demo
+    ports:
+     - "8081:8080"  
   https:
     image: nginx:1.11.13
     ports:
