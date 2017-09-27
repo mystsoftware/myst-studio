@@ -40,17 +40,17 @@ services:
     ports:
      - "8083:8081"
   https:
-    image: nginx:1.11.13
+    image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst/https/myhealth-demo
     ports:
      - "443:443"
      - "80:80"
-    volumes:
-     - /etc/nginx/nginx.conf:/etc/nginx/nginx.conf 
     links:
      - "web" 
      - "repo"
      - "ci"
 ```
+
+    command: oauth2_proxy --email-domain="rubiconred.com" --upstream=http://books/ --client-id=279173790648-shle9464orla2raf8o381ki0585k6dtt.apps.googleusercontent.com --client-secret=p2hZD-9SuzjoR7x-OPLlTF4s --cookie-secret=1-YOO_cscSgYzgPtbjKmYw==
 
 Put this within HTTP
 
