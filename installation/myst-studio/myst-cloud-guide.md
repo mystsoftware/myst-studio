@@ -13,7 +13,8 @@ services:
     ports:
      - "8085:8080"
     links:
-     - "db" 
+     - "db"
+     - "repo"
     expose:
      - "8080" 
   db:
@@ -29,8 +30,15 @@ services:
     image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/oauth2proxy
   ci:
     image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst/jenkins/myhealth-demo
+    links:
+     - "web"
+     - "repo"
     ports:
      - "8081:8080"  
+  repo:
+    image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst/artifactory
+    ports:
+     - "8083:8081"
   https:
     image: nginx:1.11.13
     ports:
@@ -40,6 +48,8 @@ services:
      - /etc/nginx/nginx.conf:/etc/nginx/nginx.conf 
     links:
      - "web" 
+     - "repo"
+     - "ci"
 ```
 
 Put this within HTTP
