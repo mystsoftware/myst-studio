@@ -29,7 +29,7 @@ services:
   oauth2proxy:
     image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/oauth2proxy
   ci:
-    image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst/jenkins/myhealth-demo
+    image: 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst/jenkins/myhealth-demo:2.60.2
     links:
      - "web"
      - "repo"
