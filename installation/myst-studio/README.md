@@ -6,7 +6,7 @@
 
 The following prerequisites should be in place on the server that will host MyST Studio prior to running the MyST installer.
 
- * Java 1.6+ is installed.
+ * Java 1.7+ is installed.
  * Docker 1.10+ and Docker Compose is installed.
  * The MyST license tar.gz file must be available. This is provided when you sign up to try MyST Studio.
 
