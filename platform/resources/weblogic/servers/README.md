@@ -73,5 +73,5 @@ Click `Edit` and click the `Generate` button.
 
 Set the `TimeoutSeconds` attribute to the required value. Once done your settings for the `[domain_name]` component should look something like:
 
-![](img/setJTATimeout.png)
+![](/assets/JTA Timeout - Configuration.png)
 
