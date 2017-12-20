@@ -160,10 +160,10 @@ You can see the details of your running instances by executing `docker ps` from 
 
 ## Configuring Maven for Automated Build of Oracle Middleware
 
-If you choose **Build Extensions for Oracle Middleware** when installing MyST, Maven must be configured on the build server, before you can build applications to run on products such as SOA, BPM, OSB and ADF. This can be done by simply executing the following from the MyST Studio home:
+If you choose **Build Extensions for Oracle Middleware** when installing MyST, Maven must be configured on the build server, before you can build applications to run on products such as SOA, BPM, OSB and ADF. This can be done by simply executing the following from the MyST Studio home where SHORT_VERSION could be 122130 if you installed OFMW 12.2.1.3.0.
 ```
 cd /opt/myst-studio/bin
-./configure-maven.sh
+./configure-maven.sh <SHORT_VERSION>
 ```
 {% hint style='info' %}
 If you skipped the post-installation steps documented in the section on **Configuring the Build Extensions** the above command will not succeed.
