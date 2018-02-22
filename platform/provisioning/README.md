@@ -14,7 +14,7 @@ To provision a Platform Instance, select the corresponding Platform Model (outli
 
 ![](img/provisionPlatformInstance.png)
 
-Click on the `Actions` menu and select `Provision`. MyST will open a dialogue allowing you to enter any notes and requesting confirmation of the action, Click `Finish`.
+Click on the `Actions` menu and select `Provision`. MyST will open a dialog allowing you to enter any notes and requesting confirmation of the action, Click `Finish`.
 
 ![](img/newPlatformInstance.png)
 

@@ -12,7 +12,7 @@ By default, MyST will display the list of Application Blueprints using the `Card
 In the list view, we are able to filter the list by typing part of the Application Blueprint name in the `Name` filter (outlined above in red).
 
 ### Create Application Blueprint
-Click `+ Create New`, this will open the **Application Blueprint** dialogue. Here we need to specify the following values:
+Click `+ Create New`, this will open the **Application Blueprint** dialog. Here we need to specify the following values:
 
 ![](img/applicationBlueprintCreate.png)
 

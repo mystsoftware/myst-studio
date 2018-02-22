@@ -50,7 +50,7 @@ Based on the answers provided, MyST will generate an Oracle EDG Compliant Platfo
 From the side menu navigate to`Modeling` > `Platform Blueprint`. This will display a list of existing Platform Blueprints. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Blueprint` wizard.
 
 ![](img/SmartWizardBasic.png)
-In the initial dialogue, we need to specify the following details about our Platform Blueprint:
+In the initial dialog, we need to specify the following details about our Platform Blueprint:
 
 * **Name** - Shorthand name for the Platform Blueprint
 * **Description** - A longer description of the Platform Blueprint
@@ -117,6 +117,25 @@ For each Compute Group, we need to specify the following values:
 
 Finally, we need to select from the drop-down the target compute definition for all target hosts that will be used within each Compute Group.
 
+#### Cluster Grouping
+
+By default, MyST follows the Oracle Enterprise Deployment Guide and hosts individual components within separate WebLogic clusters.
+
+However, there may be instances where you might want to host more than one component in the same WebLogic cluster. To allow for this, you can choose `Yes` for `Enable Cluster Grouping` in this step and associate a logical label for the components you want to group together.
+
+![](img/SmartWizardClusterGroup.png)
+
+Here, we have enabled cluster grouping and associated the label, `soagroup` with both Oracle SOA Suite and Oracle Service Bus. This will result in them being co-hosted inside the same cluster as shown below
+
+![](img/TopologyClusterGroup.png)
+
+{% hint style='danger' %}
+Note that cluster grouping is not supported for all product combinations as of now. The only combinations which we support are
+1. Oracle SOA Suite + Oracle Service Bus
+2. Oracle SOA Suite + Oracle Enterprise Scheduler
+3. Oracle Service Bus + Oracle Enterprise Scheduler
+{% endhint %}
+
 Once done, click `Next`.
 
 ### Specify Other Key Configurations
@@ -141,7 +160,7 @@ MyST will display a Summary screen showing all the key inputs specified in the P
 
 ![](img/SmartWizardSummary.png)
 
-Once done, click `Finish`. MyST will create the corresponding Platform Blueprint and take you to the Platform Blueprint Editor where you can make additional changes if required. See Editing Platform Blueprints for further details.
+Once done, click `Finish`. MyST will create the corresponding Platform Blueprint and take you to the Platform Blueprint Editor where you can make additional changes if required. See [Editing Platform Blueprints](/platform/definitions/editor/README.md) for further details.
 
 ## Creating a Platform Blueprint from a Pre-Defined Template
 MyST comes with a catalog of certified Platform Templates, with _"built-in"_ best practices for enterprise deployment of Oracle Middleware. We can use these to create our initial Platform Blueprint.
@@ -175,7 +194,7 @@ MyST will display a Summary screen showing all the key inputs specified in the P
 
 ![](img/TemplateSummary.png)
 
-Once done, click `Finish`. MyST will create the corresponding Platform Blueprint and take you to the Platform Blueprint Editor where you can make additional changes if required. See Editing Platform Blueprints for further details.
+Once done, click `Finish`. MyST will create the corresponding Platform Blueprint and take you to the Platform Blueprint Editor where you can make additional changes if required. See [Editing Platform Blueprints](/platform/definitions/editor/README.md) for further details.
 
 <!-- ## Creating a Platform Blueprint from an existing WebLogic Domain -->
 

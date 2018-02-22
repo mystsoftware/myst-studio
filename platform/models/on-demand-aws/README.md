@@ -4,7 +4,7 @@ From the side menu navigate to`Modeling` > `Platform Model`, this will display a
 
 ![](../img/ModelBasic.png)
 
-In the initial dialogue, we need to specify the following details about our Platform Model:
+In the initial dialog, we need to specify the following details about our Platform Model:
 
 * **Platform Blueprint** - The Platform Blueprint that we will use for our Platform Model.
 
@@ -24,7 +24,7 @@ Once we have entered the basic details about our Platform Model click `Next`.
 
 Next, we need to specify the Infrastructure Provider for our Platform Model. From the corresponding drop-down, select Infrastructure Provider of type `AWS On-Demand`. 
 
-In the initial dialogue, we need to specify the following details about our Platform Model:
+In the initial dialog, we need to specify the following details about our Platform Model:
 
 * **Virtual Private Cloud (VPC)** - From the corresponding drop-down, select the VPC that you wish to provision your Platform Instance on.
 

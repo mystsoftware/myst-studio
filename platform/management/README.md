@@ -88,7 +88,7 @@ To access this select the corresponding Platform Instance, then click on the `Ac
 MyST allows us to easily Start, Stop and Restart Platform Instances. When performing these actions, we can choose to perform these actions against the entire cluster or we can choose to perform the action on specific nodes within the cluster.
 
 #### Stopping a Platform Instance
-From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialogue.
+From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialog.
 
 ![](img/platformInstanceControl.png)
 
@@ -130,7 +130,7 @@ Once completed, click on `View` execution log. MyST will display the results.
 In the above report, we can see that the value of the property `MaxCapacity` has drifted to 100. 
 
 #### Reset Drift
-From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialogue.
+From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialog.
 
 ![](img/resetDrift.png)
 
@@ -151,7 +151,7 @@ MyST allows us to terminate and re-provision our Platform Instances. This can be
 * Re-provision corrupted environment, for example, if we suspect the underlying file system has been corrupted, we can re-provision the platform instance.
 
 #### Terminate a Platform Instance
-From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Terminate`, MyST will open the `Terminate Platform Instance` dialogue and prompt for confirmation to proceed.
+From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Terminate`, MyST will open the `Terminate Platform Instance` dialog and prompt for confirmation to proceed.
 
 ![](img/terminatePreExisting.png)
 
@@ -178,14 +178,14 @@ From the side menu navigate to`Modeling` > `Platform Models`, this will display 
 
 To re-provision a terminated Platform Instance, select the corresponding Platform Model, MyST will display the Platform Model and Instance summary. Click on the `Actions` menu and select `Provision`.
 
-MyST will open the `New Platform Instance` dialogue. Here we can select which version of the Platform Instance we want to re-provision. Once selected, enter any `Provisioning Notes` and click `Finish`.
+MyST will open the `New Platform Instance` dialog. Here we can select which version of the Platform Instance we want to re-provision. Once selected, enter any `Provisioning Notes` and click `Finish`.
 
 ### Patching a Platform Instance
 MyST allows us to easily patch a Platform Instance. When performing these actions, we can choose to perform these actions against the entire cluster or we can choose to perform the action on specific nodes within the cluster.
 
 Before applying a patch to a Platform Instance, we must first add the patches to the Platform Blueprint - see [Oracle Patches](/platform/resources/weblogic/patches/README.md) for further details.
 
-From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialogue.
+From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialog.
 
 ![](img/platformInstanceControlPatch.png)
 

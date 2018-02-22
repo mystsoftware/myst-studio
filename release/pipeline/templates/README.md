@@ -14,7 +14,7 @@ From the side menu, navigate to`Release Management` > `Pipeline Template`. This 
 ![](img/releasePipelineTemplatesList.png)
 
 ### Creating a New Release Pipeline Template
-Click `+ Create New`. This will open the **Release Pipeline Template** dialogue. Specify the following values:
+Click `+ Create New`. This will open the **Release Pipeline Template** dialog. Specify the following values:
 
 * **Name** - Shorthand name for the Pipeline Template.
 * **Description** - A longer description of the Pipeline Template.
@@ -24,7 +24,7 @@ Click `+ Create New`. This will open the **Release Pipeline Template** dialogue.
 Next, we need to define the stages in our Release Pipeline Template.
 
 #### Add Stage
-To add a stage, click `Add Stage`. This will open the **Stage** dialogue. 
+To add a stage, click `Add Stage`. This will open the **Stage** dialog. 
 
 ![](img/releasePipelineTemplateAddStage.png)
 

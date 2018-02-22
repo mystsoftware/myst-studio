@@ -137,7 +137,7 @@ To trigger the release, click on the `Cog` icon next to the corresponding `Ready
 
 ![](img/dashboardDeployRelease.png)
 
-MyST will open the `Revision Selection` dialogue, where we can select which stream revision we wish to deploy and the corresponding stream model revision.
+MyST will open the `Revision Selection` dialog, where we can select which stream revision we wish to deploy and the corresponding stream model revision.
 
 ![](img/revisionSelection.png)
 
@@ -193,7 +193,7 @@ To redeploy the last release to a stage, click on the `Cog` icon next to the las
 
 ![](img/dashboardRedeploy.png)
 
-This will open the redeploy dialogue.
+This will open the redeploy dialog.
 
 ![](img/redeploy.png)
 
