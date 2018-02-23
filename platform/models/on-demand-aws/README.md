@@ -22,7 +22,7 @@ Once we have entered the basic details about our Platform Model click `Next`.
 
 ### Select Infrastructure Provider
 
-Next, we need to specify the Infrastructure Provider for our Platform Model. From the corresponding drop-down, select Infrastructure Provider of type `AWS On-Demand`. 
+Next, we need to specify the Infrastructure Provider for our Platform Model. From the corresponding drop-down, select Infrastructure Provider of type `AWS On-Demand`.
 
 In the initial dialog, we need to specify the following details about our Platform Model:
 
@@ -73,38 +73,44 @@ For each compute node, in addition, we need to specify:
 
 Once done, click `Next`.
 
+### Tag your AWS instances
+At this step you can optionally provide tags that will be associated with your AWS EC2 instances once they are provisioned.
+
+![](img/AwsModelTagging.png)
+
+Once done, click `Next`.
+
 ### Specify Platform Model Configurations
 
 The final stage is to specify configuration properties that are specific to the Platform Model.
 
 ![](img/AwsModelConfigureGeneral.png)
 
-For the Platform Model we need to specify the following details:
+For the Platform Model, we need to specify the following details:
 
 * **Domain Name** - This is the WebLogic Domain name, it will default to the value specified in the Platform Blueprint, but can be overridden in the Platform Model.
-
 * **WebLogic Admin User** - Enter the WebLogic Admin user, it defaults to Weblogic.
-
 * **Weblogic Admin Password** - Enter the password to be used for the WebLogic Admin User.
-
-* **JDBC Data Source type** - This option is used to specify the Data Source Type for Oracle Middleware specific schemas which are created by the Oracle Middleware Repository Creation Utility (RCU). If using AWS RDS Oracle for RCU, then select `Generic Datasource (RDS)`.
-
-* **RCU Components** - This details the RCU specific schemas that will be created. This is pre-populated based on the Oracle Middleware Components specified in the Platform Blueprint. This is for information purposes only and can't be modified.
-
-* **RCU Database URL** - Enter the database URL for the database that will host the RCU Schemas.
-
-* **RCU Prefix** - Specify the RCU Prefix to be used. The prefix is prepended to and separated from the schema name with an underscore (_) character. The Prefix must be unique among all Platform Instances sharing a given Oracle Database.
-
+* **Database Host** - The host name for the database that will host the RCU schemas. 
+* **Database Port** - The port number for the database.
+* **Database Service Name** - The service name / SID of the database. 
+* **JDBC Data Source type** - This option is used to specify the Data Source Type for Oracle Middleware specific schemas which are created by the Oracle Middleware Repository Creation Utility (RCU). If using AWS RDS Oracle for RCU, then select `Generic Datasource (AWS RDS)`.
+* **RCU Components** - This details the RCU specific schemas that will be created. This is pre-populated based on the Oracle Middleware Components specified in the Platform Blueprint, this is for information purposes only and can't be modified.
+* **RCU Prefix** - Specify the RCU Prefix to be used. The prefix is prepended to and separated from the schema name with an underscore (_) character.
 * **RCU Database Password** Enter the password to be used for each of the schema owners created by RCU.
-
-* **RCU SYS User** - Enter the user name for the RCU database. This should be a username with DBA or SYSDBA privileges, for example SYS. Note that SYS user is not allowed on AWS RDS, so you will need to create an "admin" user as the RDS master user.
-
+* **RCU SYS User** - Enter the user name for the RCU database. This should be a username with DBA or SYSDBA privileges, for example, SYS.
 * **RCU SYS Password** - Enter the password for the RCU Sys User.
 
 > Note: All passwords stored by MyST are encrypted.
 
-#### Override Default Memory and Logging Settings
+#### GridLink and ONS nodes configuration
+In case you are using a GridLink (RAC) database, you can specify the additional property, **ONS Nodes** and set specify the list of ONS nodes following standard Oracle documentation.
 
+![](img/AwsModelConfigureONS.png)
+
+> MyST will auto-calculate the GridLink Database URLs as appropriate which you can change in the model editor later if you wish to override.
+
+#### Override Default Memory and Logging Settings
 It is common to have different JVM Memory Arguments and Logging configurations in upstream dev and test environments. The `Advanced` tab allows you override the settings in the Platform Blueprint.
 
 ![](../img/ModelConfigureAdvanced.png)
