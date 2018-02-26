@@ -25,9 +25,10 @@ Click `+ Create New`, this will open the **Add Environment Type** dialog. Specif
 * **Name** - Shorthand name for the Environment, such as SIT, UAT or PROD
 * **Description** - A longer description of the environment \(e.g. System Integration Test\)
 * **Order** - Used to indicate the promotion flow for a piece of code to be deployed as it progresses through the Software Development Lifecycle. This can be overridden for each Release Pipeline.
+**Allow draft provisioning** - If checked, this would allow platform configuration in `draft` state to be applied to instances created for this environment type. This is mainly intended to be used by developers / platform architects while they are creating their initial platform configuration in a trial-and-error mode.
 
-{% hint style='working' %}
-**Allow draft provisioning** - This flag currently has no significance and DOES NOT impact how MyST behaves in any way.
+{% hint style='info' %}
+Note that environments earmarked for draft provisioning cannot be added as `stages` of a release pipeline.
 {% endhint %}
 
 ![](img/EnvironmentTypeAdd.png)
