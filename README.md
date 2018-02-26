@@ -6,13 +6,13 @@ disqus: false
 
 **Implementing DevOps for Oracle Middleware**
 
-February 2017
+March 2018
 
 Documentation for Oracle Middleware Administrators and Developers on how to implement DevOps solutions to automate the provisioning and on-going configuration management of Oracle Middleware Platforms, and implement a standardized, repeatable and automated process for the build and deployment of Oracle Middleware applications, at each stage in the Software Delivery Pipeline. Providing organizations with visibility, automation, and control to consistently deliver Oracle Middleware solutions faster and with less risk.
 
 ---
 
-Copyright © 2011 - 2017, Rubicon Red and/or its affiliates. All rights reserved.
+Copyright © 2011 - 2018, Rubicon Red and/or its affiliates. All rights reserved.
 
 Primary Author:  Rubicon Red
 

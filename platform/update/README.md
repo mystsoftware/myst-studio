@@ -14,7 +14,7 @@ For the purpose of this section, we are going to walk through the process of add
 When we update a Platform Blueprint we can either do this as a revision to the current blueprint, assuming its state is not FINAL, or create a new version of the Platform Blueprint. For our example, we are going to create a new version.
 
 #### Create New Version of a Platform Blueprint
-From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on the `Actions` drop-down in the top right-hand corner of the Platform Blueprint we want to view/edit and select `Open`. This will open the Platform Blueprint in the `Platform Editor` in view mode.
+From the side menu navigate to`Modeling` > `Platform Blueprints`, this will display a list of existing Platform Blueprints. Click on the `Actions` drop-down in the top right-hand corner of the Platform Blueprint we want to view/edit and select `Open`. This will open the Platform Blueprint in the `Platform Editor` in view mode.
 
 To create a new version of a Platform Blueprint, ensure the correct version of the Platform Blueprint is selected in the `Control Bar` then click on the `Actions` drop-down and select `Save as new version` (outlined in red below).
 
@@ -63,7 +63,7 @@ Finally click `Save & Commit`.
 ### Update Platform Model
 
 #### Create New Version of Platform Model
-From the side menu navigate to`Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model to be updated. MyST will display summary details about the Platform Model and its corresponding Platform Instance. Click on the `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open the Platform Model in the `Platform Editor` in view mode.
+From the side menu navigate to `Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model to be updated. MyST will display summary details about the Platform Model and its corresponding Platform Instance. Click on the `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open the Platform Model in the `Platform Editor` in view mode.
 
 By default, MyST will open the Platform Model for the **previous** version of the Platform Blueprint. In the `Control Bar` select the Platform Blueprint **version** created in the previous step.
 
@@ -117,9 +117,9 @@ Click on the `Actions` drop-down and select `Update`, MyST will open the Platfor
 
 ![](img/dryrunUpdate.png)
 
-For the dropdown `Update to Version` select the new version of our Platform Model.
+For the dropdown `Update to Version` select the new version of our Platform Model. By default, MyST will have that version of the model selected at which the instance is currently at (in this case `1.0.0[pr1][pm1]`).
 
-Next, ensure the check-box `Do a dry run` has been selected. Lastly, enter any updated notes and then click `Update`. MyST will initiate the Dry run and return us to the summary view of the Platform Model and Instance.
+Next, ensure the check-box `Do a dry run` has been selected. Lastly, enter any notes for this action and then click `Update`. MyST will initiate the Dry run and return us to the summary view of the Platform Model and Instance.
 
 ![](img/dryrunComplete.png)
 

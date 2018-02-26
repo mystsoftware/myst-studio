@@ -67,7 +67,7 @@ The next stage is to select which Oracle Middleware components are to be include
 * Business Intelligence
 * Identity Management
 
-Next specify the Oracle Middleware version (for example 11.1.1.7, 12.1.3, 12.2.1.0, 12.2.1.1). For the specified Oracle Middleware Product Catalog and Version, MyST will list the components that are available for inclusion within the Platform Blueprint.
+Next specify the Oracle Middleware version (for example 11.1.1.7, 12.1.3, 12.2.1.0, 12.2.1.3). For the specified Oracle Middleware Product Catalog and Version, MyST will list the components that are available for inclusion within the Platform Blueprint.
 
 ![](img/SmartWizardComponents.png)
 
@@ -176,10 +176,10 @@ In the initial screen, we need to specify the following details about our Platfo
 
 * **Name** - Shorthand name for the Platform Blueprint
 * **Description** - A longer description of the Platform Blueprint
-* **Workspaces** - This defines the Workspaces to which the Platform Blueprint belongs. See Role Based Access Control for further details.
-* **Initial Version** - This specifies the initial version of the Platform Blueprint. See Platform Blueprint and Model Versioning for further details.
+* **Workspaces** - This defines the Workspaces to which the Platform Blueprint belongs. See [Role Based Access Control](/administration/README.md) for further details.
+* **Initial Version** - This specifies the initial version of the Platform Blueprint. See [Platform Blueprint and Model Versioning](/platform/definitions/version-control/README.md) for further details.
 
-Finally, we need to specify that we want to use a **template **to create the Platform Blueprint. Select `Template`and click `Next`.
+Finally, we need to specify that we want to use a **template** to create the Platform Blueprint. Select `Template`and click `Next`.
 
 ### Select Template
 The next stage is to select which template to use for our Platform Blueprint. 
@@ -196,5 +196,7 @@ MyST will display a Summary screen showing all the key inputs specified in the P
 
 Once done, click `Finish`. MyST will create the corresponding Platform Blueprint and take you to the Platform Blueprint Editor where you can make additional changes if required. See [Editing Platform Blueprints](/platform/definitions/editor/README.md) for further details.
 
-<!-- ## Creating a Platform Blueprint from an existing WebLogic Domain -->
+## Other ways of creating a Platform Blueprint
 
+1. **Using Introspection** - There are scenarios where we might want to reverse-engineer our platform blueprints from pre-existing environments. For such situations, MyST allows one to **introspect** the platform and discover the existing configuration and create a blueprint out of it. See [Introspecting Existing Instances](/platform/introspection/README.md) for further details.
+2. **Upgrading from an existing blueprint** - This option allows us to upgrade configuration from a lower middleware version to a higher middleware version and create a new blueprint based on the higher version. See [Upgrading Instances](/platform/upgrade/README.md) for further details. 
