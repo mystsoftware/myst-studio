@@ -5,7 +5,7 @@
 #### SCA  
 |Property|Description|
 |---|---|
-|composite.configuration-plan|Optional: SOA configuration plan to override endpoint, fault policy location etc. Can be a path on the target host ( [DOMAIN_HOME]/plans/cap.sca.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/cap.sca.configplan.xml)|
+|configuration-plan|Optional: SOA configuration plan to override endpoint, fault policy location etc. Can be a path on the target host ( [DOMAIN_HOME]/plans/cap.sca.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/cap.sca.configplan.xml)|
 |composite.name|SOA composite name for deployment or undeployment|
 |composite.partition|SOA partition name to deploy composite into. Also used to undeploy composite|
 |composite.redeploy|Boolean flag to control if existing composite can be overriden|
