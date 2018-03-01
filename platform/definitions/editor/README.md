@@ -3,66 +3,106 @@
 MyST holds the configuration details of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure. The Platform Editor is used to view and edit Platform Blueprints and Platform Models.
 
 ### Opening a Platform Blueprint in the Platform Editor
-From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on the `Actions` drop-down in the top right-hand corner of the Platform Blueprint we want to view / edit and select `Open`. This will open the Platform Blueprint in the `Platform Editor` in view mode.
+From the side menu navigate to`Modeling` > `Platform Blueprints`, this will display a list of existing Platform Blueprints. Click on any one of the blueprints. This will open the it in the `Platform Editor` in view mode.
 
 ![](img/platformBlueprintEditor.png)
 
 ### Opening a Platform Model in the Platform Editor
 
-From the side menu navigate to`Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model you are interested in and MyST will display summary details about the Platform Model and its corresponding instance as shown below.
+From the side menu navigate to `Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model you are interested in and MyST will display summary details about the Platform Model and its corresponding instance as shown below.
 
 ![](img/platformModelSummary.png)
 
-Click on the `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open the Platform Model in the `Platform Editor` in view mode.
+Click on the `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open the model in the `Platform Editor` in view mode.
 
 ### Platform Editor Layout
-The Platform Editor is split into four core sections:
+The Platform Editor is split into the following core sections:
 
-1. **Control Bar** - Displays the version, revison and state of the Platform Blueprint or Model you are viewing, plus allows you to perform actions such as editing.
-2. **Tree View** - Displays a hierarchical view of the Platform Blueprint. That can be used to navigate the Platform Blueprint or Model configuration. Selecting a component in the tree view will display a list of properties defined for that component in the properties view.
-3. **Topology View** - Helps to visualize the configuration that is defined in the Platform Blueprint or Model. Selecting a component in the topology diagram will display a list of properties defined for that component in the properties view.
-4. **Property View** - Displays the list of properties and corresponding values defined for the selected component in your Platform Blueprint. 
+1. **Control Bar** - Displays the version, revison and state of the platform configuration, and allows us to perform contextual actions such as editing.
+2. **Configuration View**
+This presents a rich user interface for navigating through the various portions of the configuration and viewing / changing them. It is split into two parts:
+   1. **Tree View** - Displays a hierarchical view of the top level configuration elements. This can can be used to easily navigate through the configuration as well as add and remove components from it.
+   Selecting a component in the tree view will display a list of properties defined for that component in the `Property View`.
+   2. **Property View** - Displays the list of properties and corresponding values defined for the selected component in the tree.
+3. **Topology View** - Helps to visualize the topology of the platform. This can be used to get a high-level picture of the physical architecture of the platform.
+4. **Source View** - This presents the raw JSON data which backs the platform configuration. This is a read-only view and is intended to be used in conjunction with the REST APIs for programmatic configuration changes.
 
-You can re-size each view by dragging the gray bars which separate each section. By clicking on the appropriate arrow you can close / open the corresponding view.
 
-#### Control Bar
-The Control Bar Displays the version, revision and state of the Platform Blueprint or Model. For further details on versioning see [Platform Blueprint and Model Versioning]().
+### Control Bar
 
-By default the Platform Editor is opened in read-only mode, selecting `Edit Configuration` will put the Platform Editor into edit mode, allowing us to make and save changes. [See ...]()
+![](img/controlBar.png)
 
-In addition, the `Actions` drop down allows you to perform a number of additional actions, these are:
-* `Save as new version` - Allows you to create a new version of the Platform Blueprint
-* `Delete` - Allows you to delete the current version of the Platform Blueprint or Model. Note we can only delete a Platform Model that does not have an active Platform Instance and we can only delete a Platform Blueprint that does not have any dependent Platform Models.
-* `Publish` - Sets the status of the Platform Blueprint or Model to `FINAL` meaning no further changes can be made against that version.
+The Control Bar displays the version, revision and state of the platform configuration. For further details on versioning, see [Platform Version Control](/platform/definitions/version-control/README.md).
+
+By default the Platform Editor is opened in read-only mode. We can perform several actions from the control bar by clicking on buttons in the bar itself or within the button drop-down besides the revision number. These are outlined in red above. Only the relevant actions are shown based on the appropriate state of the configuration.
+
+The table below describes all the actions and also highlights under which conditions each one of them is applicable. 
+
+| Action | Applies To | State | Description |
+| -------- | ---------- | --------- | ------------ |
+| *Commit* | Blueprint / Model | Draft | Commits the current revision of the configuration with a comment |
+| *View Previous Commit* | Blueprint / Model | Any | In case of more than one revision, this action lets one go to the configuration of the previous commit. We can start editing as well based on this, thereby effectively using this as the baseline of the newer revision and overwriting any changes made in the current one.
+| *View Commit History* | Blueprint / Model | Any | Shows the entire commit history for a version of the blueprint / model along with the comments for each revision. We can click on any of the older revisions to open its configuration. Similar to above, we can also use this as the baseline for the latest revision. |
+| *Delete Draft* | Blueprint / Model | Draft | Discards the current draft revision and reverts back to the previously committed one |
+| *Edit Configuration* | Blueprint / Model | Draft / Committed | Switches the user interface into `edit mode`, exposing all controls for making changes to configuration. In case, the current revision is committed, this will auto-increment the revision number in `edit mode`. |
+| *Save* | Blueprint / Model | Draft | Saves changes made to the current revision permanently. However, this does not increment the revision number and hence is a way of periodically saving work without committing every time. |
+| *Save & Commit* | Blueprint / Model | Draft | Saves changes made to the current revision permanently and also commits the revision, thereby making it eligible for performing platform updates. Subsequent changes will have to be made in a newer revision. |
+| *Discard Changes* | Blueprint / Model | Draft | Discards all changes made in the current edit session and restores the last saved configuration. |
+| *Save as new version* | Blueprint | Committed / Final | Creates a new version of a platform blueprint based on the selected version. |
+| *Save as Template* | Blueprint | Committed / Final | Saves the active blueprint configuration as a platform template so that it can be reused for other blueprints. |
+| *Delete / Delete Version* | Blueprint / Model | Any | Deletes the current version of the configuration in case it has not been applied to a platform instance. |
+| *Publish* | Blueprint | Committed | Publishes the blueprint version and marks it as `Final` so that it is locked for future editing. |
+| *Create Model* | Model | N / A | Creates a new configuration of the model for a blueprint version which does not have one already created. We can base this on any previous configuration version of the model. |
+
+### Configuration View
+
+The configuration view is where we navigate through the various portions of the configuration and view / change them. It is split into two parts:
 
 #### Tree View
-MyST holds the configuration details of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure, consisting of the following object types:
-* `property` - Primitive type consisting of a key-value pair used to hold the value of a property.
-* `component` - Complex type consisting of a pre-defined collection of object types.
-* `list` - Complex type consisting of a list of zero, one or more components of the same type.
-* `paramList` - List of zero, one or more `property` types.
 
-The Tree View provides a hierarchical view of the Platform Blueprint and Platform Model, providing a simple way to navigate the configuration details of a Platform Blueprint or Model.
+![](img/treeView.png)
 
-Clicking on the plus sign (![](img/platformBlueprintExpand.png)) of a component will expand it to show any child components. Selecting a child element will display the list of properties and values defined for that component in the properties view. 
+The Tree View provides a hierarchical view of the platform configuration. It groups components logically and allows us to easily search and traverse through the top level confiuration elements as well as add and remove elements from it.
 
-At the top level, a Platform Blueprint or Model will consist of some or all of the following components:
+The different parts of the tree user interface are numbered in the image above. We will now explain what they mean and how each one can be used.
 
-* **Global Variables** - List of zero, one or more `string` property types.
-* **Middleware Settings** - Defines core properties such as the Oracle Base and Oracle Middleware home directory.
-* **Products** - Defines the core products that make up the Platform, such as Java, WebLogic, Oracle SOA, etc.
-* **Compute Groups** - Defines the Compute Groups for the Platform.
-* **Load Balancers** - Configuration details for Load Balancers
-* **WebTier Configuration** - Configuration details for Oracle Http Server
-* **WebLogic Domain** - Configuration details of the WebLogic domain
-* **Keystores** - Holds details of any Keystores used by the Platform
+1. **Search Bar** - This can be used to type and search for components within the tree. Once we start typing text, the matching components will get filtered out and the search text will be highlighted in yellow for each one of them.
 
-#### Topology View
-The topology view provides a summary visualization of your Platform Blueprint or Model and provides a quick shortcut for referencing key components. Specifically, it displays:
-* **Load Balancer** - Clicking on this will select the LoadBalancer component located at `[Blueprint|Model] > Load Balancers > LoadBalancer` and display its corresponding properties in the Property View.
-* **Compute Groups** - The topology view shows each Compute Group and the components it contains. Clicking on a Compute Group will select the corresponding Compute Group element in the Platform Blueprint or Model located at `[Blueprint|Model] > Compute Groups > [Compute Group Name]` and display its corresponding properties in the Property View.
-* **Clusters** - The topology view shows each WebLogic Cluster and the corresponding Product Components. Clicking on a WebLogic Cluster will select the corresponding component in the Platform located at `[Blueprint|Model] > WebLogic Domains > [domain_name] > WebLogic Clusters > [Cluster Name] ` and display its corresponding properties in the Property View.
-* **Product** - Clicking on a Product will select the corresponding component in the Platform located at `[Blueprint|Model] > Products > [component_name]` and display its corresponding properties in the Property View.
+  ![](img/treeSearch.png)
+
+  See how when typing `jdb`, only JDBC Data Sources and JDBC Stores get shown and the search text `jdb` is highlighted for each one of them. Also note, how the parent nodes of the matched ones get auto-expanded. In this example see how Persistent Stores got auto-expanded to reveal JDBC Stores.
+
+ {% hint style='tip' %}
+ The node expansion when we type in text is just temporary. If we clear the search text, we will notice how the tree gets restored back to the state where it was originally at. As in, it would show the nodes in collapsed or expanded state based on how we had originally clicked them. 
+ {% endhint %}
+
+2. **Selected Node** - Nodes in the tree could either be actual configuration elements or just logical categories for ease of visualization. Only actual configuration elements are selectable. When we click on any such node, it gets highlighted in bold with a black outline and the `Properties View` displays properties specific to that node.
+
+  > The browser URL at this stage can also be bookmarked in you case we want to open this view directly with the same component pre-selected. 
+
+3. **Computed Configuration** - Any component shown in a green background represents something which MyST has automatically computed and that which the user has not explicitly defined / overriden. For example, in the image, the `AdminServer` node has been auto-computed by MyST based on the other user-defined inputs.
+
+4. **Add New Component** - For any component types which are collections, e.g. JDBC Data Sources, WebLogic clusters etc. and that which are editable, MyST provides us with this `+` control which when clicked can add a new component of that type. In the image above, when we click on the `+` button, MyST will prompt us with a modal dialog to capture the WebLogic cluster name and based on that will add a new cluster to the model and select it.
+
+5. **Context Menu** - For any components which are collections, e.g. JDBC Data Sources, MyST provides us with a context menu to take certain actions. These actions include `Remove` to remove the component from the model and `Clone` to create a similar component based on the current one.
+
+6. **Categories** - These are just logical grouping of similar configuration and themselves do not represent any configuration elements. For example, in the image above, `Startup & Shutdown Classes` is just a group which consists of the configuration of individual startup and shutdown classes within it.
+
+7. **Expanding / Collapsing** - Clicking on the plus sign (`+`) of a node will expand it to show any child components and make it collapsible by revealing the minus sign (`-`). Needless to say, clicking this will collapse the component and hide the child components. 
+
+At the top level, platform configuration consists of the following components:
+
+* **Global Variables** - List of zero, one or more key-value pairs which could represent simple variables or in some cases flags and even full-blown configuration elements.
+* **Middleware Settings** - The high level Fusion middleware configuration such as the the middleware version, the middleware home directory, etc.
+* **Products** - The core products that make up the platform, such as Java, WebLogic, Oracle SOA Suite, etc.
+* **Compute Groups** - The heteregenous grouping of compute nodes. It is assumed that each node in a group will have similar confiugration.
+* **Compute Nodes** - The physical or virtual machines that host the platform. These are mapped to the actual hosts from the infrastructure provider.
+* **WebLogic Domain Configuration** - The entire configuration of the WebLogic domain. Typically, the elements here are what we end up configuring inside WebLogic through the admin console.
+* **WebTier Configuration** - The Oracle HTTP Server configuration in case it has been selected as a product. This would include module config file locations, virtual host definition, routing rules, etc.
+* **Load Balancer Configuration** - In case a load balancer is present, this just represents a list of frontend definitions which can be referenced by other components such as managed servers, etc.
+* **Java KeyStores** - Reusable definitions for Java keystores (JKS files) which can be referenced by managed servers, node managers, etc. for specifying their SSL requirements (identity, trust, etc.)
+* **System Artifacts** - Artifacts which are deployed as part of the platform provisioning lifecycle. Examples include any custom SQL scripts to run one-off, any libraries to be copied into the WebLogic domain directory, etc. Typically these represent those artifacts which may well be considered a part of the platform itself rather than being separately handled through release management.
+
 
 #### Property View
 The `Property View` displays the properties and values for the selected component. A component may also contain other components. For example, the screenshot below shows the properties for the *soa_domain* component. This contains the component `Credentials` which has the properties `Username` and `Password`.

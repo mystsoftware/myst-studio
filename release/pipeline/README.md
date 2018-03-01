@@ -6,7 +6,7 @@ From the side menu, navigate to`Release Management > Pipelines`. This will displ
 ![](img/releasePipelineList.png)
 
 ### Creating a Release Pipeline
-Click `+ Create New`. This will open the **Release Pipeline** dialogue. 
+Click `+ Create New`. This will open the **Release Pipeline** dialog. 
 
 ![](img/releasePipelineCreate.png)
 
@@ -19,9 +19,9 @@ Specify the following values:
 
 By default, the stages in our Release Pipeline, plus the sequence and configuration of each stage, is pre-configured as defined by the Release Pipeline Template. We can edit these if required.
 
-* **Add Stage** - To add a stage, click `Add Stage`. This will open the **Stage** dialogue. Here we need to specify the Stage Name, Description, Stage Environment Type and Promotion Rules.
+* **Add Stage** - To add a stage, click `Add Stage`. This will open the **Stage** dialog. Here we need to specify the Stage Name, Description, Stage Environment Type and Promotion Rules.
 
-* **Edit Stage** - To edit a stage, click on the pencil icon for the corresponding stage. This will open the  **Stage** dialogue. Here we can modify the Stage Name, Description, and Promotion Rules.
+* **Edit Stage** - To edit a stage, click on the pencil icon for the corresponding stage. This will open the  **Stage** dialog. Here we can modify the Stage Name, Description, and Promotion Rules.
 
 * **Delete Stage** - To delete a stage, click on the trash can icon for the corresponding stage. MyST will prompt for confirmation of the Delete action, click `Yes` to proceed with the deletion of the stage.
 

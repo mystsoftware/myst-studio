@@ -15,7 +15,7 @@ To see a list of MyST Roles, click  `Administration > Roles`. This will display 
 The list can be filtered/sorted by Role Name, Description, Environments or Status, by entering the filter criteria in the filter fields (outlined in red in the above screen-shot).
 
 ### Creating a New Role
-Click `+ Create Role`, this will open the **Add Role** dialogue. Specify the following values:
+Click `+ Create Role`, this will open the **Add Role** dialog. Specify the following values:
 
 * **Name:** Role Name
 * **Description:** Description of the role
@@ -93,7 +93,7 @@ The following table details the access permissions for other resources in MyST.
 |  | No | Delete | Allows a role to delete a Continuous Delivery Profile |
 
 ### Edit Role
-To edit the user account, click on the `Edit` button for the corresponding role. This will open the **Edit Role** dialogue.
+To edit the user account, click on the `Edit` button for the corresponding role. This will open the **Edit Role** dialog.
 
 Here you can modify the Description, Environments and Access Permissions of the Role. Once done, click `Save` to confirm your changes.
 

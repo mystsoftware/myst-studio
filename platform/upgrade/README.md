@@ -50,7 +50,7 @@ The next step is to upgrade the 11g SOA Platform Blueprint to create a new SOA 1
 
 ![](img/platformBlueprintUpgradeStep1.png)
 
-In the initial dialogue, we need to specify the following details about the Platform Blueprint:
+In the initial dialog, we need to specify the following details about the Platform Blueprint:
 
 * **Name** - Shorthand name for the Platform Blueprint.
 * **Description** - A longer description of the Platform Blueprint.
