@@ -33,7 +33,7 @@ Finally, specify the target environment(s) for the new upgraded domain. Then at 
 The end-to-end process consists of three simple steps and can be performed in minutes as shown below.
 
 {% hint style='tip' %}
-Although this example is for an 11g to 12c upgrade, the approach would be consistent for alternative version upgrades such as an upgrade from 12.1.3.0.0 to 12.2.1.0.0 or from 12.2.1.0.0 to 12.2.1.1.0.
+Although this example is for an 11g to 12c upgrade, the approach would be consistent for alternative version upgrades such as an upgrade from 12.1.3.0.0 to 12.2.1.2.0 or from 12.2.1.0.0 to 12.2.1.3.0.
 {% endhint %}
 
 ##### Step 1 - Introspect SOA / BPM 11gR1 Domain
@@ -46,7 +46,7 @@ Introspection is only required if the environment to be upgraded was provisioned
 {% endhint %}
 
 ##### Step 2 - Upgrade 11g Platform Blueprint to 12c
-The next step is to upgrade the 11g SOA Platform Blueprint to create a new SOA 12c Platform Blueprint. From the side menu navigate to `Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Blueprint` wizard.
+The next step is to upgrade the 11g SOA Platform Blueprint to create a new SOA 12c Platform Blueprint. From the side menu navigate to `Modeling` > `Platform Blueprints`, this will display a list of existing Platform Blueprints. Click on `Create New` in the top right-hand corner of the screen. This will launch the `New Platform Blueprint` wizard.
 
 ![](img/platformBlueprintUpgradeStep1.png)
 
@@ -81,19 +81,23 @@ MyST will automatically convert our 11gR1 SOA Platform blueprint to an equivalen
 
 Once created, MyST will open the [Platform Blueprint Editor](/platform/definitions/editor/README.md) where additional configuration changes can be made; for example, we may want to add in the Enterprise Scheduler Service that wasn't included in 11gR1.
 
+![](img/11gPlatformBlueprint.png)
+
 ![](img/12cPlatformBlueprint.png)
 
-If we look closely at the 12c Platform Blueprint, we can see that the number of Data Sources is different. In the 11g Platform Blueprint, there were 12 JDBC Data Sources but in the 12c Platform Blueprint, there are 15 JDBC Data Sources (see box **1** outlined in red above). This is because in SOA 12c, changes were made to database schemas and corresponding JDBC Data Sources required by the Oracle SOA Platform.
+The first image above is that of the 11g Platform Blueprint while the second one below is that of the 12c one we created just now.
 
-When upgrading to 12c, MyST has the knowledge to remove the 11g data sources that are no longer needed and create the additional ones required for 12c. MyST has preserved the three custom data sources, which are colored white (as opposed to product data sources in light green) in the screenshot above.
+If we look closely at the 12c Platform Blueprint, we can see that the number of Data Sources is different. In the 11g Platform Blueprint, there were 10 JDBC Data Sources but in the 12c Platform Blueprint, there are 15 JDBC Data Sources (see box **1** outlined in red above). This is because in SOA 12c, changes were made to database schemas and corresponding JDBC Data Sources required by the Oracle SOA Platform.
+
+When upgrading to 12c, MyST has the knowledge to remove the 11g data sources that are no longer needed and create the additional ones required for 12c. MyST has preserved the one custom data source, `StockDS` which is colored white (as opposed to product data sources in light green) in the screenshot above.
 
 In addition, when the SOA 11gR1 domain was originally created, the middleware version number was specified as part of the Domain Name, for example `acme11g_domain`. The corresponding directory locations `Domain Home`, `Domain Aserver Home`, etc, also have this in their file path (see box **2** outlined in red above).
 
 ![](img/edit12cPlatformBlueprint1.png)
 
-To change this, place the Platform Blueprint into `Edit` mode and update the WebLogic Domain name to `acme12c_domain` and click `Save`.
+To change this, place the Platform Blueprint into `Edit` mode and update the WebLogic Domain name to `acme12c_domain`. Click on `Calculate resolved values` now.
 
-We can see that MyST automatically updates all the other values that reference this property.
+We can see that MyST automatically shows the resolved values based on the new name.
 
 ![](img/edit12cPlatformBlueprint2.png)
 
@@ -150,11 +154,9 @@ Although this example is for a 12.1.3 to 12.2.1 upgrade, the approach would be c
 
 ##### Specify Oracle Middleware Upgrade Version
 
-From the [Blueprint Editor](/platform/definitions/editor/README.md) click `Edit Configuration`. Then, navigate to the `Middleware Settings` and click `Edit` in the Property Panel.
+From the [Blueprint Editor](/platform/definitions/editor/README.md) click `Edit Configuration`. Then, navigate to the `Middleware Settings` in the tree.
 
-![](img/directEditMiddlewareSettings.png)
-
-Change the version to `12.2.1.0.0` and click `Save` in the Property Panel then `Save` for the Blueprint.
+Choose the version, `12.2.1.0.0` from the drop-down, the click `Save` to save the Blueprint.
 
 ![](img/directChangeVersion1221.png)
 
@@ -165,9 +167,13 @@ MyST will automatically convert the 12.1.3 Platform Blueprint to an equivalent 1
 If we look closely at our Platform Blueprint, we can see that there are some subtle differences. For example, if we are using the default Fusion Middleware Home Directory of `/u01/app/oracle/product/fmw1213` we will see that it has changed to `/u01/app/oracle/product/fmw1221`.
 
 {% hint style='danger' %}
-Warning
+If a custom `Home Directory` under `Middleware Settings` is being used, this must be changed so that it is unique before performing an upgrade. For example, if it is set to `/opt/my-company/12.1.3.0.0/soa`, it should be changed to `/opt/my-company/12.2.1.0.0/soa`.
+
+Remember, a reference to the version `${[rxr.wls.Fmw-1].version}` may be used e.g. `/opt/my-company/${[rxr.wls.Fmw-1].version}/soa`. If this property reference is already being used, then it would have changed the path automatically. Once the property reference is set within the `Home Directory`, it will update automatically for future upgrades.
+
+Make sure that any other property references to the version in the configuration which are hardcoded are using a reference, whilst it may not cause the upgrade to fail it will be a source of confusion for the upgraded platform.
 {% endhint %}
-> If a custom `Home Directory` under `Middleware Settings` is being used, this must be changed so that it is unique before performing an upgrade. For example, if it is set to `/opt/my-company/12.1.3.0.0/soa`, it should be changed to `/opt/my-company/12.2.1.0.0/soa`. Remember, a reference to the version `${[rxr.wls.Fmw-1].version}` may be used e.g. `/opt/my-company/${[rxr.wls.Fmw-1].version}/soa`. If this property reference is already being used, then it would have changed the path automatically. Once the property reference is set within the `Home Directory`, it will update automatically for future upgrades. Make sure that any other property references to the version in the configuration which are hardcoded are using a reference, whilst it may not cause the upgrade to fail it will be a source of confusion for the upgraded platform. 
+ 
 Once the upgraded Platform Blueprint has been reviewed, click on `Save & Commit`. When prompted, enter a description for the change.
 
 ![](img/directConfirmUpgradeEdit.png)
@@ -179,9 +185,8 @@ With these minor edits, we are now ready to upgrade our environments. Typically 
 From the `Actions` menu for any Platform Instance, there is the option to `Terminate`. This will destroy the WebLogic Domain on the file system to allow for it to be upgraded. This approach is described in more detail in the section on [Managing Platform Instances](/platform/management/README.md).
 
 {% hint style='danger' %}
-Warning
+Please be aware when this is performed, existing application state will be lost. Do not use this approach for an application architecture with long running processes. In this case, it is advisable to perform a State-preserving Upgrade which can be facilitated by raising a request to [MyST Support](http://support.rubiconred.com).
 {% endhint %}
->Please be aware when this is performed, existing application state will be lost. Do not use this approach for an application architecture with long running processes. In this case, it is advisable to perform a State-preserving Upgrade which can be facilitated by raising a request to [MyST Support](http://support.rubiconred.com).
 
 
 When ready to do a fresh direct upgrade to an instance associated with the upgraded Platform Blueprint, simply trigger the `Terminate` then perform a `Reprovision`.
