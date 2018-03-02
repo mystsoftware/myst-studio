@@ -37,19 +37,21 @@ To do this, navigate to the Global Variables within the Platform Model. By defau
 ### Startup and Shutdown Classes
 WebLogic allows us to configure startup and shutdown classes in order to perform tasks when we start up or gracefully shut down the server. 
 
-To add start-up and shutdown classes to the Platform Blueprint, open the Platform Blueprint Editor and navigate to `Blueprint > WebLogic Domains > [domain_name] > Startup & Shutdown Classes`.
+To add start-up and shutdown classes to the Platform Blueprint, open the Platform Blueprint Editor and type `startup` in the search bar and locate `Startup & Shutdown Classes`.
 
 ![](img/navigateStartupClasses.png)
 
-To add a Startup or Shutdown Class, click on the corresponding `+` symbol. This will create a new Startup/Shutdown Class; `Startup Class - 1` in the example below.
+To add a Startup or Shutdown Class, click on the corresponding `+` symbol. This will show a dialog prompting you to enter a name for the class.
 
-![](img/newStartupClass.png)
+![](img/newStartupClassDialog.png)
+
+Enter a name and press `OK`. The startup class should now be selected and available for configuring additional properties.
 
 For each Startup/Shutdown Class we need to specify the following properties:
 
 * **Name** - An alpha-numeric value that identifies the startup class configuration. This name attribute is for your identification purposes only.
 
-* **Target** - The cluster to which the class is to be deployed. *It is recommended that the target be defined as a MyST property reference rather than a direct value*.
+* **Targets** - The cluster to which the class is to be deployed.
 
 * **Class Name** - Fully qualified name of the Java class.
 
@@ -66,12 +68,13 @@ By default WebLogic Server startup classes are run after the server initializes 
 > Note: The startup or shutdown class must be on the classpath of each server to which it is assigned. See [Application Blueprints](deploy/application/blueprints/README.md) for further details.
 
 ### Configure JTA Timeout
-To set the JTA Timeout in the Platform Blueprint, open the Platform Blueprint Editor and navigate to `Blueprint > WebLogic Domains > [domain_name] > JTA Configuration`.
+To set the JTA Timeout in the Platform Blueprint, open the Platform Blueprint Editor and type `jta` in the search bar and locate `JTA Configuration`.
 
-Click `Edit` and click the `Generate` button.
-![](/assets/JTA Timeout - Generate.png)
+![](img/navigateJta.png)
 
-Set the `TimeoutSeconds` attribute to the required value. Once done your settings for the `[domain_name]` component should look something like:
+Click the `Generate` button (outlined above).
 
-![](/assets/JTA Timeout - Configuration.png)
+Set the `Timeout Seconds` attribute to the required value. Once done your settings for the component should look something like:
+
+![](img/setJtaTimeout.png)
 
