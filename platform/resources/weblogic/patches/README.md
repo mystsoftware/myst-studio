@@ -30,6 +30,10 @@ This will add a new `Patch` to the Patch List. For each Patch we need to specify
 
 Once done click `Save`.
 
+### Handling Patch Dependencies
+
+From time to time, you may need a prerequisite patch to be installed before you can apply a patch. This can be handled by defining the prerequisite patch and referencing it's identifier in the `Pre-requisite patches` field. This field can contain comma-separated values in a case of multiple prerequisites.
+
 ### Applying the Patch to a Platform Instance
 If the patch is added to the Platform Blueprint prior to provisioning the Platform Instance then the patch will be automatically applied as part of the provisioning process.
 
