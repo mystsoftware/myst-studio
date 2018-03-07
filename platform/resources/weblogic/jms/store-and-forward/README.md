@@ -9,12 +9,8 @@ The following object types are supported by MyST Studio:
 * **SAF Error Handling** - which encapsulates specific behavior used to process messages in the event of an error
 * **SAF Imported Destinations** - which encapsulate the configuration for specific remote JMS queues that an SAF Agent will interact with
 
-To create SAF objects, open a blueprint or model for any configuration with components using a WebLogic Server domain (eg. Oracle Service Bus, Oracle Traffic Director) and expand the object tree for the domain under *WebLogic Domains*.
+To create SAF objects, open a blueprint or model for any configuration with components using a WebLogic Server domain (eg. Oracle Service Bus, Oracle Traffic Director) and expand the object tree for the domain under `WebLogic Domain Configuration` > `Messaging Configuration`
 
-Store and Forward Agents are found at the top level of the domain structure.
-
-![](img/exampleSafAgent.png)
-
-The remainder of the objects used to support SAF are found within the configuration of a JMS module. When configuring SAF, a sub deployment is required as part of the JMS module configuration in order to target SAF components correctly.
+When configuring SAF, a sub deployment is required as part of the JMS module configuration in order to target SAF components correctly.
 
 ![](img/exampleSafJmsModules.png)
