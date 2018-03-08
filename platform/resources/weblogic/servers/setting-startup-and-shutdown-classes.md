@@ -23,7 +23,7 @@ A shutdown class is a Java program that is automatically loaded and executed whe
 | Property | Description |
 | :--- | :--- |
 | Name | A human-readable name for this entry |
-| Targets | Target server(s) or cluster(s) for the startup class. |
+| Targets | Target server(s) or cluster(s) for the shutdown class. |
 | Class Name | Package-qualified name of the class to execute |
 | Deployment Order | A priority that the server uses to determine when it deploys an item. The priority is relative to other deployable items of the same type |
 | Arguments | Arguments that a server uses to initialize a class.  |

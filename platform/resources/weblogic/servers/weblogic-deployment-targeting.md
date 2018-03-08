@@ -9,7 +9,7 @@ The library list comprises a list of shared libraries used by the deployed WebLo
 | Property | Description |
 | :--- | :--- |
 | Name | A human-readable name for this entry. |
-| Target | Comma-separated list of target server or cluster for the startup class. The value can either be a server name or a cluster name. |
+| Targets | Target server(s) or cluster(s) for the library. |
 
 ### Applications
 
@@ -18,8 +18,7 @@ The Application deployment configuration specifies where to target your deployed
 | Property | Description |
 | :--- | :--- |
 | Name | A human-readable name for this entry. |
-| Target | Comma-separated list of target server or cluster for the startup class. The value can either be a server name or a cluster name. |
-|  |  |
+| Targets | Target server(s) or cluster(s) for the application. |
 
 ### WebLogic Diagnostics Framework \(WLDF\)
 
@@ -28,8 +27,4 @@ The WLDF enables generating, gathering, analyzing, and persisting diagnostic dat
 | Property | Description |
 | :--- | :--- |
 | Name | A human readable name for this entry. |
-| Target | Comma-separated list of target server or cluster for the startup class. The value can either be a server name or a cluster name. |
-|  |  |
-
-
-
+| Targets | Target server(s) or cluster(s) for the WLDF configuration. |
