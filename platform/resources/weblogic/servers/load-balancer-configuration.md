@@ -10,19 +10,23 @@ Some of the parameters for the frontend, such as the host, are environment-speci
 
 ### Creating a frontend entry
 
-Setting up a load balancer frontend in your platform blueprint requires you to set the following properties.
+Setting up a load balancer frontend requires settings across the Platform Blueprint and Model as shown below.
 
-| Property | Description |
-| :--- | :--- |
-| Identifier | The load-balancer ID used to reference the frontend when defining clusters and managed servers. |
-| Host | The frontend host's address. |
-| Http Port | The frontend host's HTTP address. |
-| Https Port | The frontend host's HTTPS address. |
+| Property | Description | Scope |
+| :--- | :--- | :--- |
+| Identifier | The load-balancer ID used to reference the frontend when defining clusters and managed servers. | Blueprint |
+| Host | The frontend host's address. | Model |
+| Http Port | The frontend host's HTTP address. | Blueprint |
+| Https Port | The frontend host's HTTPS address. | Blueprint |
 
-From the Edit mode in a Platform Blueprint navigate to the **Frontend List** within **Load Balancer** and click **Add Item**.
+From the Edit mode in a Platform Blueprint navigate to the **Frontend List** within **Load Balancer Configuration** and click **Add Item**.
 
-Enter an identifier for the Frontend. This is an important part of the definition as the identifier will be used to reference our frontend from given clusters or servers. Through the targeting to a frontend to a cluster or server we tell WebLogic to ensure all URLs are re-written back through this host and port(s).
+Enter an identifier for the Frontend. This is an important part of the definition as the identifier will be used to reference our frontend from given clusters or servers. Through the targeting of a frontend to a cluster or server we tell WebLogic to ensure all URLs are re-written back through this host and port(s).
 
-![](/assets/Screenshot 2017-02-13 08.56.58.png)
+![](img/addFrontendBlueprint.png)
 
 In our example above we have set the identifier to `fmw`. This is a special identifier. When we set it to this, MyST will automatically set the frontend for every cluster and the admin server to be the `fmw` frontend. This saves you time in manually targeting but should be avoided if you require different frontends per cluster (e.g. `soa.mycompany.com` for SOA Suite Cluster and `osb.mycompany.com` for Oracle Service Bus Cluster).
+
+Once one or more Frontends are set in the Platform Blueprint, you will need to define the `Host` in the Platform Model as shown below. This field will show once you have selected to `Edit Configuration` in the Model editor.
+
+![](img/addFrontendModel.png)
