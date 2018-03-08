@@ -9,12 +9,12 @@ A startup class is a Java program that is automatically loaded and executed when
 | Property | Description |
 | :--- | :--- |
 | Name | A human-readable name for this entriy |
-| Target | Comma-separated list of target server or cluster for the startup class. The value can either be a server name or a cluster name. |
+| Targets | Target server(s) or cluster(s) for the startup class. |
 | Class Name | Package-qualified name of the class to execute |
 | Deployment Order | Lower numbered classes are class-loaded before higher numbered classes |
-| Arguments |  |
-| Load Before App Deployments |  |
-| Load Before App Activation |  |
+| Arguments | Arguments that a server uses to initialize a class |
+| Run Before Application Deployments | Specifies whether the targeted servers load and run this startup class before activating JMS and JDBC services and before starting deployment for applications and EJBs |
+| Run Before Application Activations | Specifies whether the targeted servers load and run this startup class after activating JMS and JDBC services and before activating applications and EJBs |
 
 ### Shutdown Classes
 
@@ -22,12 +22,8 @@ A shutdown class is a Java program that is automatically loaded and executed whe
 
 | Property | Description |
 | :--- | :--- |
-| Name | Ahuman-readable name for this entry |
-| Target | Comma-separated list of target server or cluster for the startup class. The value can either be a server name or a cluster name. |
+| Name | A human-readable name for this entry |
+| Targets | Target server(s) or cluster(s) for the startup class. |
 | Class Name | Package-qualified name of the class to execute |
-| Deployment Order | Comma-separated list of target server or cluster for the startup class. The value can either be a server name or a cluster name. |
-|  |  |
-| Arguments |  |
-
-
-
+| Deployment Order | A priority that the server uses to determine when it deploys an item. The priority is relative to other deployable items of the same type |
+| Arguments | Arguments that a server uses to initialize a class.  |
