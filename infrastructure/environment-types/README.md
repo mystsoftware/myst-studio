@@ -20,13 +20,16 @@ To see a list of defined Environment Types, click  `Infrastructure > Environment
 
 ### Creating a New environment type
 
-Click `+ Create New`, this will open the **Add Environment Type** dialogue. Specify the following values:
+Click `+ Create New`, this will open the **Add Environment Type** dialog. Specify the following values:
 
 * **Name** - Shorthand name for the Environment, such as SIT, UAT or PROD
 * **Description** - A longer description of the environment \(e.g. System Integration Test\)
-* **Order** - Used to indicate the promotion flow for a piece of code to be deployed as it progresses through the Software Development Lifecycle. This can be overridden for each Release Pipeline. 
+* **Order** - Used to indicate the promotion flow for a piece of code to be deployed as it progresses through the Software Development Lifecycle. This can be overridden for each Release Pipeline.
+**Allow draft provisioning** - If checked, this would allow platform configuration in `draft` state to be applied to instances created for this environment type. This is mainly intended to be used by developers / platform architects while they are creating their initial platform configuration in a trial-and-error mode.
 
-<!-- TODO: Need to update based on https://rubiconred.jiveon.com/thread/4344 -->
+{% hint style='info' %}
+Note that environments earmarked for draft provisioning cannot be added as `stages` of a release pipeline.
+{% endhint %}
 
 ![](img/EnvironmentTypeAdd.png)
 
@@ -34,26 +37,20 @@ Click `Create` to save the new Environment Type.
 
 ### Edit Environment Type
 
-To edit the Environment Type click on the `Edit` button for the corresponding Environment Type. This will open the **Edit Environment Type** dialogue.
+To edit the Environment Type click on the `Edit` button for the corresponding Environment Type. This will open the **Edit Environment Type** dialog.
 
-![](img/EnvironmentTypeEdit_withborder.png)
+![](img/EnvironmentTypeEdit.png)
 
 Here you can modify the Name, Description and Order of the Environment Type. Once done, click `Modify` to confirm your changes.
 
-### Activate / Deactivate Environment Type
+### Deleting Environment Type
 
 By default, when you create an Environment Type, it is in an active state. This means that we can create new MyST Resources that are tagged to that Environment.
 
-To prevent any new resources being tagged to an Environment, we can deactivate the Environment Type.
+To stop using this environment type, you can delete it using the `Delete` button as illustrated below.
 
-**Note**:
+![](img/EnvironmentTypeDelete.png)
 
-* Deactivating an existing environment type does not affect resources that are currently mapped to the environment type.
-* A deactivated Environment Type can be reactivated at any time.
-
-To deactivate an environment click on the  **Actions** drop-down menu for the corresponding Environment Type and select `Deactivate` as illustrated below.
-
-![](img/EnvironmentTypeDeactivate.png)
-
-To activate a deactivated environment click on the  **Actions** drop-down menu for the corresponding Environment Type and select `Activate`.
-
+<% hint %>
+You cannot delete an Environment Type if it is already associated with any hosts / platform models, etc.
+<% endhint %>

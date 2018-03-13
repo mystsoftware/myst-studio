@@ -12,7 +12,7 @@ From the side menu, navigate to`Release Management > Pipeline Groups`. This will
 ![](img/releasePipelineGroupsList.png)
 
 ### Creating a New Release Pipeline Group
-Click `+ Create New`. This will open the **Release Pipeline Group** dialogue. Specify the following values:
+Click `+ Create New`. This will open the **Release Pipeline Group** dialog. Specify the following values:
 
 * **Name** - Shorthand name for the Pipeline Group.
 * **Description** - A longer description of the Pipeline Group.
@@ -22,7 +22,7 @@ Click `+ Create New`. This will open the **Release Pipeline Group** dialogue. Sp
 Click `Save` to Save the new Release Pipeline Group.
 
 ## Edit Release Pipeline Group
-To edit the Pipeline Group, click on the `Edit` button for the corresponding Pipeline Group. This will open the **Edit Release Pipeline Group** dialogue.
+To edit the Pipeline Group, click on the `Edit` button for the corresponding Pipeline Group. This will open the **Edit Release Pipeline Group** dialog.
 
 Here we can modify the Name and Description of the Pipeline Group. Once done, click `Modify` to confirm the changes.
 

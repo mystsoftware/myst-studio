@@ -3,80 +3,37 @@
 MyST holds the configuration details of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure. The Platform Editor is used to view and edit Platform Blueprints and Platform Models.
 
 ### Opening a Platform Blueprint in the Platform Editor
-From the side menu navigate to`Modeling` > `Platform Blueprint`, this will display a list of existing Platform Blueprints. Click on the `Actions` drop-down in the top right-hand corner of the Platform Blueprint we want to view / edit and select `Open`. This will open the Platform Blueprint in the `Platform Editor` in view mode.
+From the side menu navigate to`Modeling` > `Platform Blueprints`, this will display a list of existing Platform Blueprints. Click on any one of the blueprints. This will open the it in the `Platform Editor` in view mode.
 
 ![](img/platformBlueprintEditor.png)
 
 ### Opening a Platform Model in the Platform Editor
 
-From the side menu navigate to`Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model you are interested in and MyST will display summary details about the Platform Model and its corresponding instance as shown below.
+From the side menu navigate to `Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model you are interested in and MyST will display summary details about the Platform Model and its corresponding instance as shown below.
 
 ![](img/platformModelSummary.png)
 
-Click on the `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open the Platform Model in the `Platform Editor` in view mode.
+Click on the `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open the model in the `Platform Editor` in view mode.
 
 ### Platform Editor Layout
-The Platform Editor is split into four core sections:
 
-1. **Control Bar** - Displays the version, revison and state of the Platform Blueprint or Model you are viewing, plus allows you to perform actions such as editing.
-2. **Tree View** - Displays a hierarchical view of the Platform Blueprint. That can be used to navigate the Platform Blueprint or Model configuration. Selecting a component in the tree view will display a list of properties defined for that component in the properties view.
-3. **Topology View** - Helps to visualize the configuration that is defined in the Platform Blueprint or Model. Selecting a component in the topology diagram will display a list of properties defined for that component in the properties view.
-4. **Property View** - Displays the list of properties and corresponding values defined for the selected component in your Platform Blueprint. 
+The Platform Editor is split into the following core sections:
 
-You can re-size each view by dragging the gray bars which separate each section. By clicking on the appropriate arrow you can close / open the corresponding view.
+1. **Control Bar** - Displays the version, revison and state of the platform configuration, and allows us to perform contextual actions such as editing. See [here](/platform/definitions/editor/control-bar/README.md) for more details.
+2. **Configuration View**
+This presents a rich user interface for navigating through the various portions of the configuration and viewing / changing them. It is split into two parts:
+   1. **Tree View** - Displays a hierarchical view of the top level configuration elements. This can can be used to easily navigate through the configuration as well as add and remove components from it. See [here](/platform/definitions/editor/tree-view/README.md) for more details.
+   2. **Properties View** - Displays the list of properties and corresponding values defined for the selected component in the tree. See [here](/platform/definitions/editor/properties-view/README.md) for more details.
+3. **Topology View** - Helps to visualize the topology of the platform. This can be used to get a high-level picture of the physical architecture of the platform. See [here](/platform/definitions/editor/topology-view/README.md) for more details.
+4. **Source View** - This presents the raw JSON data which backs the platform configuration. This is a read-only view and is intended to be used in conjunction with the REST APIs for programmatic configuration changes. See [here](/platform/definitions/editor/source-view/README.md) for more details.
 
-#### Control Bar
-The Control Bar Displays the version, revision and state of the Platform Blueprint or Model. For further details on versioning see [Platform Blueprint and Model Versioning]().
+#### Full-screen mode
 
-By default the Platform Editor is opened in read-only mode, selecting `Edit Configuration` will put the Platform Editor into edit mode, allowing us to make and save changes. [See ...]()
+![](img/tabs.png)
 
-In addition, the `Actions` drop down allows you to perform a number of additional actions, these are:
-* `Save as new version` - Allows you to create a new version of the Platform Blueprint
-* `Delete` - Allows you to delete the current version of the Platform Blueprint or Model. Note we can only delete a Platform Model that does not have an active Platform Instance and we can only delete a Platform Blueprint that does not have any dependent Platform Models.
-* `Publish` - Sets the status of the Platform Blueprint or Model to `FINAL` meaning no further changes can be made against that version.
+It is possible to switch the configuration section into full-screen mode by clicking on the `resize` control in the configuration bar (highlighted in red above)
 
-#### Tree View
-MyST holds the configuration details of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure, consisting of the following object types:
-* `property` - Primitive type consisting of a key-value pair used to hold the value of a property.
-* `component` - Complex type consisting of a pre-defined collection of object types.
-* `list` - Complex type consisting of a list of zero, one or more components of the same type.
-* `paramList` - List of zero, one or more `property` types.
-
-The Tree View provides a hierarchical view of the Platform Blueprint and Platform Model, providing a simple way to navigate the configuration details of a Platform Blueprint or Model.
-
-Clicking on the plus sign (![](img/platformBlueprintExpand.png)) of a component will expand it to show any child components. Selecting a child element will display the list of properties and values defined for that component in the properties view. 
-
-At the top level, a Platform Blueprint or Model will consist of some or all of the following components:
-
-* **Global Variables** - List of zero, one or more `string` property types.
-* **Middleware Settings** - Defines core properties such as the Oracle Base and Oracle Middleware home directory.
-* **Products** - Defines the core products that make up the Platform, such as Java, WebLogic, Oracle SOA, etc.
-* **Compute Groups** - Defines the Compute Groups for the Platform.
-* **Load Balancers** - Configuration details for Load Balancers
-* **WebTier Configuration** - Configuration details for Oracle Http Server
-* **WebLogic Domain** - Configuration details of the WebLogic domain
-* **Keystores** - Holds details of any Keystores used by the Platform
-
-#### Topology View
-The topology view provides a summary visualization of your Platform Blueprint or Model and provides a quick shortcut for referencing key components. Specifically, it displays:
-* **Load Balancer** - Clicking on this will select the LoadBalancer component located at `[Blueprint|Model] > Load Balancers > LoadBalancer` and display its corresponding properties in the Property View.
-* **Compute Groups** - The topology view shows each Compute Group and the components it contains. Clicking on a Compute Group will select the corresponding Compute Group element in the Platform Blueprint or Model located at `[Blueprint|Model] > Compute Groups > [Compute Group Name]` and display its corresponding properties in the Property View.
-* **Clusters** - The topology view shows each WebLogic Cluster and the corresponding Product Components. Clicking on a WebLogic Cluster will select the corresponding component in the Platform located at `[Blueprint|Model] > WebLogic Domains > [domain_name] > WebLogic Clusters > [Cluster Name] ` and display its corresponding properties in the Property View.
-* **Product** - Clicking on a Product will select the corresponding component in the Platform located at `[Blueprint|Model] > Products > [component_name]` and display its corresponding properties in the Property View.
-
-#### Property View
-The `Property View` displays the properties and values for the selected component. A component may also contain other components. For example, the screenshot below shows the properties for the *soa_domain* component. This contains the component `Credentials` which has the properties `Username` and `Password`.
-
-To expand a component within the property view click on the `+` symbol, and to collapse a component click on the `-` symbol. Alternatively to expand or collapse all components within the property view click on the corresponding `Expand All` or `Collapse All` button.
-
-![](img/propertyValues.png)
-
-By default, MyST only shows the core properties for a component. To see all properties, select `Show advanced properties` (outlined in red above).
-
-MyST auto-computes many of the property values in accordance with Oracle Enterprise Deployment Guide.  The auto-computed values are highlighted in green, if we choose to change any of these, then MyST will display the user entered property in white.
-
-### Editing Properties
-To edit either a Platform Blueprint or Platform Model, click `Edit Configuration`. This will put the Platform Editor in **Edit** mode. 
+---------------------------------------------------------
 
 When defining the value of a property, we can reference the value of one or more other properties, see [MyST Property Overview](). Once in **Edit** mode, the Property Viewer will display the property definition for calculating the property value, which may include references to other property values. Underneath that, MyST will display the actual resolved (or calculated) value of the property after property references have been substituted with actual values, as shown below.
 
