@@ -4,7 +4,7 @@
 
 New MyST features and bug fixes are frequently made available. Enterprises can easily upgrade their on-premise instance of MyST Studio by pulling down the latest version directly from the web or in-directly by downloading the associated Docker images and copying them up to the MyST host.
 
-> An upgrade of the MyST container will also include the latest patches for the underlying images which it is based off such as `tomcat` and the underlying `alpine` operating system.
+> An upgrade of the MyST container will also include the latest patches for the underlying images which it is based off such as `tomcat` and the operating system which it is based off.
 
 If you are a MyST customer, who started using MyST prior to 2016, you may still be using the MyST Command-Line Interface. For details on upgrading from MyST CLI to MyST Studio see the associated section within this guide.
 
