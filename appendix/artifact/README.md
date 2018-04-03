@@ -14,6 +14,7 @@ To export via the Oracle Integration Cloud console:
 
 1. Navigate to **Integrations** within the Oracle Integration Cloud console
 2. Download the Integration. This will download a file with the `.iar` file extension.
+
 ![](/assets/Screenshot 2018-04-03 11.20.39.png)
 
 To export via the Oracle Integration Cloud REST API:
@@ -28,7 +29,9 @@ OIC_ICS_PROJECT_ID="ECHO|01.00.0000"
 OIC_ICS_EXPORT_FILE_NAME="ECHO_01.00.0000.iar"
 ```
 - The `OIC_ICS_PROJECT_ID` can be obtained by combining the integration identifier with the version. These details can be found under the **Primary Info** menu item for the integration.
+
 ![](/assets/Screenshot 2018-04-03 11.40.24.png)
+
 3. Execute the following to export your project.
 ```
 curl -u ${OIC_USERNAME}:${OIC_PASSWORD} \
