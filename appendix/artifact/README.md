@@ -2,6 +2,204 @@
 
 <!-- toc -->
 
+#### Integration Cloud Archive 
+
+Oracle Integration Cloud Archives can be deployed using MyST. These artifact types can be deployed to either Oracle Integration Cloud or the Legacy Integration Cloud Service. For each version of an Oracle Integration Cloud Archive which you wish to deploy, you must first register it with MyST. These steps can be performed manually, however, it is recommended to include these steps in a CI server job, so that they can be triggered automatically as required.
+
+**Step 1: Export your Integration Cloud Archive**
+
+We can export either from the Oracle Integration Console, Integration Cloud Service console or via the REST API for either service.
+
+To export via the Oracle Integration Cloud console:
+
+1. Navigate to **Integrations** then **Applications** within the Oracle Cloud Integration console
+2. Download the Integration. This will download a file with the `.iar` file extension.
+![](/assets/Screenshot 2018-04-03 11.20.39.png)
+
+To export via the Oracle Integration Cloud REST API:
+
+1. Ensure you have `curl` installed and are running on a Linux based machine
+2. Set the following environmental variables to match your environment:
+```
+OIC_USERNAME="your-email@your-company.com"
+OIC_PASSWORD="your-password"
+OIC_HOST="your-instance.uscom-central-1.oraclecloud.com"
+OIC_ICS_PROJECT_ID="ECHO|01.00.0000"
+OIC_ICS_EXPORT_FILE_NAME="ECHO_01.00.0000.iar"
+```
+- The `OIC_ICS_PROJECT_ID` can be obtained by combining the integration identifier with the version. These details can be found under the **Primary Info** menu item for the integration.
+![](/assets/Screenshot 2018-04-03 11.40.24.png)
+3. Execute the following to export your project.
+```
+curl -u ${OIC_USERNAME}:${OIC_PASSWORD} \
+https://${OIC_HOST}/icsapis/v2/integrations/${OIC_ICS_PROJECT_ID}/archive > ${ICS_PROJECT_ID}.iar
+```
+
+To export via the Process Cloud Service console:
+
+1. Navigate to **Develop Processes** within the Process Cloud console
+2. Download the Application. This will download a file with the `.exp` file extension.
+![](/assets/pcs-export.png)
+
+To export via the Process Cloud Service REST API:
+
+1. Ensure you have `curl` and `jq` installed and are running on a Linux based machine
+2. Set the following environmental variables to match your environment:
+```
+PCS_USERNAME="your-email@your-company.com"
+PCS_PASSWORD="your-password"
+PCS_HOST="your-instance.process.us2.oraclecloud.com"
+PCS_PROJECT_ID="Administer%20Patient%20Well%20Being"
+PCS_SPACE_NAME="RxR"
+PCS_EXPORT_FILE_NAME="AdministerPatientWellBeing.exp"
+```
+- Ensure `PCS_SPACE_NAME` matches the design-time space where your Process Application is located. In the example above, it is in the `RxR` space.
+- Also, ensure that any space character in your project name is replaced with the `%20` character.
+3. Execute the following to export your project.
+```
+curl -u ${ICS_USERNAME}:${ICS_PASSWORD} \
+https://${ICS_HOST}/icsapis/v2/integrations/${ICS_PROJECT_ID}/archive > ${ICS_PROJECT_ID}.iar
+```
+
+At the time of writing, Oracle do not support automated deployment of Decision Model Applications. Therefore, MyST is only able to support deployment of Process Applications at this time.
+
+**Step 2: Create the Maven pom.xml**
+
+1. Create a `pom.xml`. Be sure to set the Maven details to match your environment. An example `pom.xml` is shown below.
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>com.rubiconred</groupId>
+<artifactId>AdministerPatientWellBeing</artifactId>
+<packaging>jar</packaging>
+<version>1.0-SNAPSHOT</version>
+<name>Administer Patient Well Being</name>
+<properties>
+<myst.component.type>opaas-pcs</myst.component.type>
+<pcs.deployment-name>Administer Patient Well Being</pcs.deployment-name>
+<pcs.space-name>RxR</pcs.space-name>
+</properties>
+<build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-shade-plugin</artifactId>
+<executions>
+<execution>
+<phase>package</phase>
+<goals>
+<goal>shade</goal>
+</goals>
+<configuration>
+<filters>
+<filter>
+<artifact>*:*</artifact>
+<excludes>
+<exclude>META-INF/</exclude>
+</excludes>
+</filter>
+</filters>
+</configuration>
+</execution>
+</executions>
+</plugin>
+</plugins>
+<resources>
+<resource>
+<directory>${project.basedir}</directory>
+<excludes>
+<exclude>pom.xml*</exclude>
+</excludes>
+</resource>
+</resources>
+</build>
+</project>
+```
+
+MyST supports the following PCS-specific deploy-time properties being defined with the Maven `pom.xml`.
+
+|Property|Description|
+|---|---|
+|pcs.space-name|Design-time space for the given project. If the application already exists in the design-time space, it will be overwritten.|
+|pcs.configuration-plan|Optional: A custom deployment configuration JSON payload in format of the REST API call for deploying Process Applications. The file can be a path on the target host or a path in the packaged artifact (e.g. `(EMBEDDED)/pcs.json`). |
+|pcs.deployment-name|Optional: Name of the deployed application. If not set, it will default to the Maven `artifactId`|
+
+**Step 3: Create a configuration plan** (Optional)
+
+By default, Process Applications are deployed with the following configuration plan
+```
+{
+"revisionId": "1.0",
+"overwrite": true,
+"forceDefault": true
+}
+```
+
+To use an alternative configuration plan, create a file at the same directory as the `pom.xml` so that it will be included in the artifact when it is built. Make sure the location of this file is indicated against the `pcs.configuration-plan` property in the `pom.xml`.
+
+**Step 4: Unpack the archive to the version control system** (Optional)
+
+Whilst it is possible to publish the artifact directly to Maven. It is recommended to rebuild the artifact from source. This will ensure that individual files changes are version controlled. This approach also allows for the configuration plan to be easily packaged alongside the artifact. An unpacked archive has a structure similar to the following
+```
+├── Administer\ Patient\ Well\ Being
+│   └── SOA
+│   ├── HumanTasks
+│   ├── Schemas
+│   ├── WADLs
+│   ├── WSDLs
+│   ├── businessCatalog
+│   ├── businessIndicators.bi
+│   ├── composite.xml
+│   ├── connectors
+│   ├── contentMetadata.xml
+│   ├── forms
+│   ├── kpis.kpi
+│   ├── measurementActions.xml
+│   ├── measurements.xml
+│   ├── organization.xml
+│   ├── processes
+│   ├── projectInfo.xml
+│   ├── resources
+│   ├── simulations
+│   ├── socialMetadata.xml
+│   ├── wsm-assembly.xml
+│   └── xsl
+├── pcs.json
+└── pom.xml
+```
+
+**Step 5: Set a unique version number for our artifact**
+
+When publish an artifact to Maven and later registering it with MyST, it is important to ensure that the version number of the artifact is unique. This can be done via Maven prior to building the artifact. An example of this is described
+[here](/build/ci/jenkins/README.md#add-pre-build-step).
+
+**Step 6: Build and publish your application to a Maven Repository**
+
+We can achieve the build and publish using Maven. For example:
+
+```
+mvn clean deploy
+```
+
+Alternatively, if we skipped step 3 and 4 and would rather publish our artifact directly to Maven, we may wish to do this directly using the `deploy:deploy-file` goal. For example:
+```
+mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifactory/libs-release-local \
+-Dfile=AdministerPatientWellBeing.exp \
+-DgroupId=com.rubiconred \
+-DartifactId=AdministerPatientWellBeing \
+-Dversion=1.0-${BUILD_NUMBER} \
+-Dpackaging=jar
+```
+
+Be sure to publish to the same Artifact Repository that is defined within the MyST [Continuous Delivery Profile](/infrastructure/continuous-delivery-profile/README.md). This ensures that MyST will be able to retrieve the artifact at deploy-time.
+
+**Step 7: Register the artifact with MyST**
+
+This can be achieved through the MyST Java SDK or via the REST API. Alternatively, if you are using Jenkins, you can use the MyST Jenkins Plugin.
+
+Once the Artifact is registered with MyST it can be added to a new or existing [Application Blueprint](/deploy/application/blueprints/README.md) and promoted across Oracle Integration Cloud or Process Cloud Service instances using a [Release Pipeline](/release/pipeline/README.md).
+
 #### Process Cloud Archive
 
 Oracle Process Cloud Archives can be deployed using MyST. These artifact types can be deployed to either Oracle Integration Cloud or the Legacy Process Cloud Service. For each version of an Oracle Process Cloud Archive which you wish to deploy, you must first register it with MyST. These steps can be performed manually, however, it is recommended to include these steps in a CI server job, so that they can be triggered automatically as required.
