@@ -141,13 +141,39 @@ To use an alternative configuration plan, create a file at the same directory as
 
 **Step 4: Unpack the archive to the version control system** (Optional)
 
-...
+Whilst it is possible to publish the artifact directly to Maven. It is recommended to rebuild the artifact from source. This will ensure that individual files changes are version controlled. This approach also allows for the configuration plan to be easily packaged alongside the artifact. An unpacked archive has a structure similar to the following
+```
+├── Administer\ Patient\ Well\ Being
+│   └── SOA
+│       ├── HumanTasks
+│       ├── Schemas
+│       ├── WADLs
+│       ├── WSDLs
+│       ├── businessCatalog
+│       ├── businessIndicators.bi
+│       ├── composite.xml
+│       ├── connectors
+│       ├── contentMetadata.xml
+│       ├── forms
+│       ├── kpis.kpi
+│       ├── measurementActions.xml
+│       ├── measurements.xml
+│       ├── organization.xml
+│       ├── processes
+│       ├── projectInfo.xml
+│       ├── resources
+│       ├── simulations
+│       ├── socialMetadata.xml
+│       ├── wsm-assembly.xml
+│       └── xsl
+├── pcs.json
+└── pom.xml
+```
 
 **Step 5: Set a unique version number for our artifact**
 
-
-[Test](/build/ci/jenkins/README.md#add-pre-build-step)
-adssd
+When publish an artifact to Maven and later registering it with MyST, it is important to ensure that the version number of the artifact is unique. This can be done via Maven prior to building the artifact. An example of this is described 
+[here](/build/ci/jenkins/README.md#add-pre-build-step).
 
 **Step 6: Build and publish your application to a Maven Repository**
 
@@ -157,7 +183,7 @@ We can achieve the build and publish using Maven. For example:
 mvn clean deploy
 ```
 
-Alternatively, if we skipped step 3 and 4 and would rather publish our artifact directly to Maven, we may wish to do this directly as follows:
+Alternatively, if we skipped step 3 and 4 and would rather publish our artifact directly to Maven, we may wish to do this directly using the `deploy:deploy-file` goal. For example:
 ```
 mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifactory/libs-release-local \
   -Dfile=AdministerPatientWellBeing.exp \
@@ -173,7 +199,7 @@ Be sure to publish to the same Artifact Repository that is defined within the My
 
 This can be achieved through the MyST Java SDK or via the REST API. Alternatively, if you are using Jenkins, you can use the MyST Jenkins Plugin.
 
-Once the Artifact is registered with MyST it can be added to a new or existing [Application Blueprint](/deploy/application/blueprints/README.md) and promoted across Process Cloud Service instances using a [Release Pipeline](/release/pipeline/README.md).
+Once the Artifact is registered with MyST it can be added to a new or existing [Application Blueprint](/deploy/application/blueprints/README.md) and promoted across Oracle Integration Cloud or Process Cloud Service instances using a [Release Pipeline](/release/pipeline/README.md).
 
 #### SCA  
 |Property|Description|
