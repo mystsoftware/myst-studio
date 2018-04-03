@@ -155,7 +155,7 @@ mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifa
 ```
 
 Be sure to publish to the same Artifact Repository that is defined within the MyST [Continuous Delivery Profile](/infrastructure/continuous-delivery-profile/README.md). This ensures that MyST will be able to retrieve the artifact at deploy-time.
-
+Wh
 **Step 7: Register the artifact with MyST**
 
 This can be achieved through the MyST Java SDK or via the REST API. Alternatively, if you are using Jenkins, you can use the MyST Jenkins Plugin.
