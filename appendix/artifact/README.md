@@ -8,11 +8,11 @@ Oracle Integration Cloud Archives can be deployed using MyST. These artifact typ
 
 **Step 1: Export your Integration Cloud Archive**
 
-We can export either from the Oracle Integration Console, Integration Cloud Service console or via the REST API for either service.
+We can export either from the Oracle Integration Cloud console, Integration Cloud Service console or via the REST API for either service.
 
 To export via the Oracle Integration Cloud console:
 
-1. Navigate to **Integrations** then **Applications** within the Oracle Cloud Integration console
+1. Navigate to **Integrations** within the Oracle Integration Cloud console
 2. Download the Integration. This will download a file with the `.iar` file extension.
 ![](/assets/Screenshot 2018-04-03 11.20.39.png)
 
@@ -32,36 +32,13 @@ OIC_ICS_EXPORT_FILE_NAME="ECHO_01.00.0000.iar"
 3. Execute the following to export your project.
 ```
 curl -u ${OIC_USERNAME}:${OIC_PASSWORD} \
-https://${OIC_HOST}/icsapis/v2/integrations/${OIC_ICS_PROJECT_ID}/archive > ${ICS_PROJECT_ID}.iar
+https://${OIC_HOST}/ic/api/integration/v1/integrations/${OIC_ICS_PROJECT_ID}/archive > ${OIC_ICS_EXPORT_FILE_NAME}
 ```
-
-To export via the Process Cloud Service console:
-
-1. Navigate to **Develop Processes** within the Process Cloud console
-2. Download the Application. This will download a file with the `.exp` file extension.
-![](/assets/pcs-export.png)
-
-To export via the Process Cloud Service REST API:
-
-1. Ensure you have `curl` and `jq` installed and are running on a Linux based machine
-2. Set the following environmental variables to match your environment:
+If using the Legacy Integration Cloud Service, then use the following instead
 ```
-PCS_USERNAME="your-email@your-company.com"
-PCS_PASSWORD="your-password"
-PCS_HOST="your-instance.process.us2.oraclecloud.com"
-PCS_PROJECT_ID="Administer%20Patient%20Well%20Being"
-PCS_SPACE_NAME="RxR"
-PCS_EXPORT_FILE_NAME="AdministerPatientWellBeing.exp"
+curl -u ${OIC_USERNAME}:${OIC_PASSWORD} \
+https://${OIC_HOST}/icsapi/v2/integrations/${OIC_ICS_PROJECT_ID}/archive > ${OIC_ICS_EXPORT_FILE_NAME}
 ```
-- Ensure `PCS_SPACE_NAME` matches the design-time space where your Process Application is located. In the example above, it is in the `RxR` space.
-- Also, ensure that any space character in your project name is replaced with the `%20` character.
-3. Execute the following to export your project.
-```
-curl -u ${ICS_USERNAME}:${ICS_PASSWORD} \
-https://${ICS_HOST}/icsapis/v2/integrations/${ICS_PROJECT_ID}/archive > ${ICS_PROJECT_ID}.iar
-```
-
-At the time of writing, Oracle do not support automated deployment of Decision Model Applications. Therefore, MyST is only able to support deployment of Process Applications at this time.
 
 **Step 2: Create the Maven pom.xml**
 
@@ -69,51 +46,27 @@ At the time of writing, Oracle do not support automated deployment of Decision M
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-<modelVersion>4.0.0</modelVersion>
-<groupId>com.rubiconred</groupId>
-<artifactId>AdministerPatientWellBeing</artifactId>
-<packaging>jar</packaging>
-<version>1.0-SNAPSHOT</version>
-<name>Administer Patient Well Being</name>
-<properties>
-<myst.component.type>opaas-pcs</myst.component.type>
-<pcs.deployment-name>Administer Patient Well Being</pcs.deployment-name>
-<pcs.space-name>RxR</pcs.space-name>
-</properties>
-<build>
-<plugins>
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-shade-plugin</artifactId>
-<executions>
-<execution>
-<phase>package</phase>
-<goals>
-<goal>shade</goal>
-</goals>
-<configuration>
-<filters>
-<filter>
-<artifact>*:*</artifact>
-<excludes>
-<exclude>META-INF/</exclude>
-</excludes>
-</filter>
-</filters>
-</configuration>
-</execution>
-</executions>
-</plugin>
-</plugins>
-<resources>
-<resource>
-<directory>${project.basedir}</directory>
-<excludes>
-<exclude>pom.xml*</exclude>
-</excludes>
-</resource>
-</resources>
-</build>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.rubiconred</groupId>
+  <artifactId>RetrieveAllAirlines</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Retrieve All Airlines</name>
+  <properties>
+    <myst.component.type>opaas-ics</myst.component.type>
+    <ics.deployment-name>RetrieveAllAirlines</ics.deployment-name>
+    <ics.configuration-plan>(EMBEDDED)/ics.json</ics.configuration-plan>
+  </properties>
+  <build>
+    <resources>
+      <resource>
+        <directory>${project.basedir}</directory>
+        <excludes>
+          <exclude>pom.xml</exclude>
+        </excludes>
+      </resource>
+    </resources>
+  </build>
 </project>
 ```
 
@@ -121,51 +74,60 @@ MyST supports the following PCS-specific deploy-time properties being defined wi
 
 |Property|Description|
 |---|---|
-|pcs.space-name|Design-time space for the given project. If the application already exists in the design-time space, it will be overwritten.|
-|pcs.configuration-plan|Optional: A custom deployment configuration JSON payload in format of the REST API call for deploying Process Applications. The file can be a path on the target host or a path in the packaged artifact (e.g. `(EMBEDDED)/pcs.json`). |
-|pcs.deployment-name|Optional: Name of the deployed application. If not set, it will default to the Maven `artifactId`|
+|ics.configuration-plan|Optional: Used for defining configuration for the integration connections. The file can be a path on the target host or a path in the packaged artifact (e.g. `(EMBEDDED)/ics.json`). |
+|ics.deployment-name|Optional: Name of the deployed application. If not set, it will default to the Maven `artifactId`|
 
 **Step 3: Create a configuration plan** (Optional)
 
-By default, Process Applications are deployed with the following configuration plan
+If the integration has connections, then these will need to be defined in a JSON file that is packaged with the artifact itself. Below is an example configuration containing two REST API connections.
+
 ```
 {
-"revisionId": "1.0",
-"overwrite": true,
-"forceDefault": true
+    "connections": {
+        "FLIGHTAIRLINESREST": {
+            "connectionProperties": [
+                {
+                    "propertyValue": "https://${flights.api.host}", 
+                    "propertyName": "connectionUrl"
+                }
+            ]
+        },
+        "LOGGERREST": {
+           "connectionProperties": [
+                {
+                    "propertyValue": "https://${logger.api.host}", 
+                    "propertyName": "connectionUrl"
+                }
+           ]
+        }
+    }
 }
 ```
 
-To use an alternative configuration plan, create a file at the same directory as the `pom.xml` so that it will be included in the artifact when it is built. Make sure the location of this file is indicated against the `pcs.configuration-plan` property in the `pom.xml`.
+Property references (e.g. `flights.api.host` and `logger.api.host` in the example above) will be automatically made available as artifact properties in MyST. These properties can be defined with different values per environment.
+
+The connection identifiers (e.g. `FLIGHTAIRLINESREST` and `LOGGERREST` in the example above) must match the identifiers of the connections shown in the console. These identifier for a given connection can be found by clicking on **Primary Info** when viewing the connection.
+
+Each connection type may have different available properties. The available properties for a given connection can be obtained by calling the connection through a `GET` API call on `https://${OIC_HOST}/ic/api/integration/v1/connections/${OIC_CONNECTION_ID}`.
+
+Make sure the location of the JSON file is indicated against the `ics.configuration-plan` property in the `pom.xml`.
 
 **Step 4: Unpack the archive to the version control system** (Optional)
 
-Whilst it is possible to publish the artifact directly to Maven. It is recommended to rebuild the artifact from source. This will ensure that individual files changes are version controlled. This approach also allows for the configuration plan to be easily packaged alongside the artifact. An unpacked archive has a structure similar to the following
+Whilst it is possible to publish the artifact directly to Maven. It is recommended to rebuild the artifact from source. This will ensure that individual files changes are version controlled. This approach also allows for the configuration plan to be easily packaged alongside the artifact. An unpacked Integration Cloud Archive has a structure similar to the following
+
 ```
-├── Administer\ Patient\ Well\ Being
-│   └── SOA
-│   ├── HumanTasks
-│   ├── Schemas
-│   ├── WADLs
-│   ├── WSDLs
-│   ├── businessCatalog
-│   ├── businessIndicators.bi
-│   ├── composite.xml
-│   ├── connectors
-│   ├── contentMetadata.xml
-│   ├── forms
-│   ├── kpis.kpi
-│   ├── measurementActions.xml
-│   ├── measurements.xml
-│   ├── organization.xml
-│   ├── processes
-│   ├── projectInfo.xml
-│   ├── resources
-│   ├── simulations
-│   ├── socialMetadata.xml
-│   ├── wsm-assembly.xml
-│   └── xsl
-├── pcs.json
+├── ics.json
+├── icspackage
+│   ├── appinstances
+│   │   ├── FLIGHTAIRLINESREST.xml
+│   │   └── LOGGERREST.xml
+│   └── project
+│       └── RETRIEVEALLAIRLINES_01.00.0000
+│           ├── PROJECT-INF
+│           │   └── project.xml
+│           ├── ics_project_attributes.properties
+│           └── resources
 └── pom.xml
 ```
 
@@ -185,9 +147,9 @@ mvn clean deploy
 Alternatively, if we skipped step 3 and 4 and would rather publish our artifact directly to Maven, we may wish to do this directly using the `deploy:deploy-file` goal. For example:
 ```
 mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifactory/libs-release-local \
--Dfile=AdministerPatientWellBeing.exp \
+-Dfile=RetrieveAllAirlines.iar \
 -DgroupId=com.rubiconred \
--DartifactId=AdministerPatientWellBeing \
+-DartifactId=RetrieveAllAirlines \
 -Dversion=1.0-${BUILD_NUMBER} \
 -Dpackaging=jar
 ```
@@ -198,7 +160,7 @@ Be sure to publish to the same Artifact Repository that is defined within the My
 
 This can be achieved through the MyST Java SDK or via the REST API. Alternatively, if you are using Jenkins, you can use the MyST Jenkins Plugin.
 
-Once the Artifact is registered with MyST it can be added to a new or existing [Application Blueprint](/deploy/application/blueprints/README.md) and promoted across Oracle Integration Cloud or Process Cloud Service instances using a [Release Pipeline](/release/pipeline/README.md).
+Once the Artifact is registered with MyST it can be added to a new or existing [Application Blueprint](/deploy/application/blueprints/README.md) and promoted across Oracle Integration Cloud or Integration Cloud Service instances using a [Release Pipeline](/release/pipeline/README.md).
 
 #### Process Cloud Archive
 
@@ -206,11 +168,11 @@ Oracle Process Cloud Archives can be deployed using MyST. These artifact types c
 
 **Step 1: Export your Process Cloud Archive**
 
-We can export either from the Oracle Integration Console, Process Cloud Service console or via the REST API for either service.
+We can export either from the Oracle Integration Cloud console, Process Cloud Service console or via the REST API for either service.
 
 To export via the Oracle Integration Cloud console:
 
-1. Navigate to **Process Builder** then **Applications** within the Oracle Cloud Integration console
+1. Navigate to **Process Builder** then **Applications** within the Oracle Integration Cloud console
 2. Download the Application. This will download a file with the `.exp` file extension.
 ![](/assets/Screenshot 2018-04-03 10.37.19.png)
 
@@ -321,7 +283,7 @@ MyST supports the following PCS-specific deploy-time properties being defined wi
 |Property|Description|
 |---|---|
 |pcs.space-name|Design-time space for the given project. If the application already exists in the design-time space, it will be overwritten.|
-|pcs.configuration-plan|Optional: A custom deployment configuration JSON payload in format of the REST API call for deploying Process Applications. The file can be a path on the target host or a path in the packaged artifact (e.g. `(EMBEDDED)/pcs.json`). |
+|pcs.configuration-plan|Optional: A custom deployment configuration JSON payload in the format of the REST API call for deploying Process Applications. The file can be a path on the target host or a path in the packaged artifact (e.g. `(EMBEDDED)/pcs.json`). |
 |pcs.deployment-name|Optional: Name of the deployed application. If not set, it will default to the Maven `artifactId`|
 
 **Step 3: Create a configuration plan** (Optional)
