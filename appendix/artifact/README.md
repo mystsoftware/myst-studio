@@ -2,23 +2,49 @@
 
 <!-- toc -->
 
-#### PCS
+#### Process Cloud Archive
 
-Oracle Process Cloud Service (PCS) Applications can be deployed using MyST. For each version of a PCS application which you wish to deploy, you must first register it with MyST. These steps can be performed manually, however, it is recommended to include these steps in a CI server job, so that they can be triggered automatically as required.
+Oracle Process Cloud Archives can be deployed using MyST. These artifact types can be deployed to either Oracle Integration Cloud or the Legacy Process Cloud Service. For each version of an Oracle Process Cloud Archive which you wish to deploy, you must first register it with MyST. These steps can be performed manually, however, it is recommended to include these steps in a CI server job, so that they can be triggered automatically as required.
 
-**Step 1: Export your application from Process Cloud**
+**Step 1: Export your Process Cloud Archive**
 
-We can export either from the web console or via the REST API.
+We can export either from the Oracle Integration Console, Process Cloud Service console or via the REST API for either service.
 
-To use the web console:
+To export via the Oracle Integration Cloud console:
+
+1. Navigate to **Process Builder** then **Applications** within the Oracle Cloud Integration console
+2. Download the Application. This will download a file with the `.exp` file extension.
+![](/assets/Screenshot 2018-04-03 10.37.19.png)
+
+To export via the Oracle Integration Cloud REST API:
+
+1. Ensure you have `curl` and `jq` installed and are running on a Linux based machine
+2. Set the following environmental variables to match your environment:
+```
+OIC_USERNAME="your-email@your-company.com"
+OIC_PASSWORD="your-password"
+OIC_HOST="your-instance.uscom-central-1.oraclecloud.com"
+OIC_PCS_PROJECT_ID="Administer%20Patient%20Well%20Being"
+OIC_PCS_SPACE_NAME="RxR"
+OIC_PCS_EXPORT_FILE_NAME="AdministerPatientWellBeing.exp"
+```
+- Ensure `OIC_PCS_SPACE_NAME` matches the design-time space where your Process Application is located. In the example above, it is in the `RxR` space.
+- Also, ensure that any space character in your project name is replaced with the `%20` character.
+3. Execute the following to export your project.
+```
+export OIC_PCS_SPACE_ID=$(curl -u ${OIC_USERNAME}:${OIC_PASSWORD} https://${OIC_HOST}/bpm/api/4.0/spaces/ | jq -r ".items[] | select( .name == \"${OIC_PCS_SPACE_NAME}\") | .id")
+curl -u ${OIC_USERNAME}:${OIC_PASSWORD} https://${OIC_HOST}/ic/api/process/v1/spaces/${OIC_PCS_SPACE_ID}/projects/${OIC_PCS_PROJECT_ID}/exp > ${OIC_PCS_EXPORT_FILE_NAME}
+```
+
+To export via the Process Cloud Service console:
 
 1. Navigate to **Develop Processes** within the Process Cloud console
 2. Download the Application. This will download a file with the `.exp` file extension.
 ![](/assets/pcs-export.png)
 
-To use the REST API:
+To export via the Process Cloud Service REST API:
 
-1. Ensure you have `curl` and `jq` installed and are running on Linux based machine
+1. Ensure you have `curl` and `jq` installed and are running on a Linux based machine
 2. Set the following environmental variables to match your environment:
 ```
 PCS_USERNAME="your-email@your-company.com"
@@ -29,7 +55,7 @@ PCS_SPACE_NAME="RxR"
 PCS_EXPORT_FILE_NAME="AdministerPatientWellBeing.exp"
 ```
  - Ensure `PCS_SPACE_NAME` matches the design-time space where your Process Application is located. In the example above, it is in the `RxR` space. 
- - And, ensure that any space character in your project name is replaced with the `%20` character.
+ - Also, ensure that any space character in your project name is replaced with the `%20` character.
 3. Execute the following to export your project.
 ```
 export PCS_SPACE_ID=$(curl -u ${PCS_USERNAME}:${PCS_PASSWORD} https://${PCS_HOST}/bpm/api/4.0/spaces/ | jq -r ".items[] | select( .name == \"${PCS_SPACE_NAME}\") | .id")
@@ -43,21 +69,52 @@ At the time of writing, Oracle do not support automated deployment of Decision M
 1. Create a `pom.xml`. Be sure to set the Maven details to match your environment. An example `pom.xml` is shown below.
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.rubiconred</groupId>
   <artifactId>AdministerPatientWellBeing</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0-1</version>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
   <name>Administer Patient Well Being</name>
   <properties>
-      <myst.component.type>opaas-pcs</myst.component.type>
-      <pcs.deployment-name>Administer Patient Well Being</pcs.deployment-name>
-      <pcs.space-name>RxR</pcs.space-name>
-      <artifact.repository.type>exp</artifact.repository.type>
+    <myst.component.type>opaas-pcs</myst.component.type>
+    <pcs.deployment-name>Administer Patient Well Being</pcs.deployment-name>
+    <pcs.space-name>RxR</pcs.space-name>
   </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <resources>
+      <resource>
+        <directory>${project.basedir}</directory>
+        <excludes>
+          <exclude>pom.xml*</exclude>
+        </excludes>
+      </resource>
+    </resources>
+  </build>
 </project>
 ```
 
@@ -66,13 +123,41 @@ MyST supports the following PCS-specific deploy-time properties being defined wi
 |Property|Description|
 |---|---|
 |pcs.space-name|Design-time space for the given project. If the application already exists in the design-time space, it will be overwritten.|
-|pcs.configuration-plan|Optional: A custom deployment configuration JSON payload in format of the PCS deploy REST API. The file can be a path on the target host or a path in the packaged artifact (e.g. `(EMBEDDED)/pcs.json`). |
+|pcs.configuration-plan|Optional: A custom deployment configuration JSON payload in format of the REST API call for deploying Process Applications. The file can be a path on the target host or a path in the packaged artifact (e.g. `(EMBEDDED)/pcs.json`). |
 |pcs.deployment-name|Optional: Name of the deployed application. If not set, it will default to the Maven `artifactId`|
 
-**Step 3: Publish your application to a Maven Repository**
+**Step 3: Create a configuration plan** (Optional)
 
-We can achieve the publish using Maven. For example:
+By default, Process Applications are deployed with the following configuration plan
+```
+{
+  "revisionId": "1.0", 
+  "overwrite": true, 
+  "forceDefault": true
+}
+```
 
+To use an alternative configuration plan, create a file at the same directory as the `pom.xml` so that it will be included in the artifact when it is built. Make sure the location of this file is indicated against the `pcs.configuration-plan` property in the `pom.xml`.
+
+**Step 4: Unpack the archive to the version control system** (Optional)
+
+...
+
+**Step 5: Set a unique version number for our artifact**
+
+
+[Test](/build/ci/jenkins/README.md#add-pre-build-step)
+adssd
+
+**Step 6: Build and publish your application to a Maven Repository**
+
+We can achieve the build and publish using Maven. For example:
+
+```
+mvn clean deploy
+```
+
+Alternatively, if we skipped step 3 and 4 and would rather publish our artifact directly to Maven, we may wish to do this directly as follows:
 ```
 mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifactory/libs-release-local \
   -Dfile=AdministerPatientWellBeing.exp \
@@ -84,7 +169,7 @@ mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifa
 
 Be sure to publish to the same Artifact Repository that is defined within the MyST [Continuous Delivery Profile](/infrastructure/continuous-delivery-profile/README.md). This ensures that MyST will be able to retrieve the artifact at deploy-time.
 
-**Step 4: Register the artifact with MyST**
+**Step 7: Register the artifact with MyST**
 
 This can be achieved through the MyST Java SDK or via the REST API. Alternatively, if you are using Jenkins, you can use the MyST Jenkins Plugin.
 
