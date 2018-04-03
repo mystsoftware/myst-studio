@@ -31,7 +31,7 @@ To see a list of defined Compute Definitions, click `Infrastructure` &gt; `Compu
 
 ### Creating a New Compute Definition
 
-Click `+ Create New`, this will open the **Create Compute Definition** dialogue. Specify the...
+Click `+ Create New`, this will open the **Create Compute Definition** dialog. Specify the...
 
 * **Name** - The name of your compute definition. This is what is visible when we reference it in a Platform Blueprint or Host.
 * **OS Type** - The operating system type, for example Linux, Solaris.
@@ -47,7 +47,7 @@ TIP: It is common for all target hosts across an Oracle Middleware landscape to 
 
 ### Edit Compute Definition
 
-To edit the Compute Definition, click on the `Edit` button for the corresponding Compute Definition. This will open the **Edit Compute Definition** dialogue.
+To edit the Compute Definition, click on the `Edit` button for the corresponding Compute Definition. This will open the **Edit Compute Definition** dialog.
 
 Here you can modify the Name of the Compute Definition. Remember, the Name of the Compute Definition is what you see when you reference it in a Platform Blueprint or Host, so it can be useful sometimes to be able to adjust this if desired. Once done, click `Save` to confirm your changes.
 

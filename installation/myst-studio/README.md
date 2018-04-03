@@ -6,7 +6,7 @@
 
 The following prerequisites should be in place on the server that will host MyST Studio prior to running the MyST installer.
 
- * Java 1.6+ is installed.
+ * Java 1.7+ is installed.
  * Docker 1.10+ and Docker Compose is installed.
  * The MyST license tar.gz file must be available. This is provided when you sign up to try MyST Studio.
 
@@ -62,6 +62,7 @@ Optionally, you can choose:
  * **MyST Build Server**: Pre-configured Build Server for use with MyST for if you don't already have one.
  * **MyST Artifact Repository**: Pre-configured Maven Artifact Repository for if you don't already have one.
  * **Build Extension for Oracle Middleware**: Enables automated build for applications build on SOA, BPM, OSB, ADF and other products related to Oracle Middleware. When you choose this, it will automatically select **MyST Build Server** if it is not already selected. The Build Extensions are currently supported for:
+  * 12.2.1.3.0
   * 12.2.1.2.0
   * 12.2.1.1.0
 
@@ -120,23 +121,30 @@ If you are yet to start the stack, please continue on to the next steps. MyST wi
 
 ## Configuring Build Extensions
 
-If you choose the **Build Extensions for Oracle Middleware** then you will need to download Oracle installers and place them in the MyST home at the following locations depending on the versions you chose
+If you choose the **Build Extensions for Oracle Middleware** then you will need to download Oracle installers and a JDK. Place them in the MyST home at the following locations depending on the versions you chose:
+
+{% hint style='info' %}
+Build Extensions in docker data containers are deprecated. MyST 5.8.6 uses docker volume mounts.
+
+Docker volume mounts allow Oracle installers to be installed on the filesystem then volume mounted to the MyST Build Server docker container.
+{% endhint %}
 
 | Version | File |
 | --- | -- |
-| All | `conf/fmw/context/jdk/jdk-8u121-linux-x64.tar.gz` |
-| 12.2.1.2.0 | `conf/fmw/context/12.2.1.2.0/installers/fmw_12.2.1.2.0_infrastructure.jar` |
-| 12.2.1.2.0 | `conf/fmw/context/12.2.1.2.0/installers/fmw_12.2.1.2.0_osb.jar` |
-| 12.2.1.2.0 | `conf/fmw/context/12.2.1.2.0/installers/fmw_12.2.1.2.0_soa.jar` |
-| 12.2.1.1.0 | `conf/fmw/context/12.2.1.1.0/installers/fmw_12.2.1.2.0_infrastructure.jar` |
-| 12.2.1.1.0 | `conf/fmw/context/12.2.1.1.0/installers/fmw_12.2.1.2.0_osb.jar` |
-| 12.2.1.1.0 | `conf/fmw/context/12.2.1.1.0/installers/fmw_12.2.1.2.0_soa.jar` |
+| 12.2.1.1.0 | conf/fmw/context/jdk/jdk-8u121-linux-x64.tar.gz<br> conf/fmw/context/12211/installers/fmw_12.2.1.1.0_infrastructure.jar<br> conf/fmw/context/12211/installers/fmw_12.2.1.1.0_osb.jar<br> conf/fmw/context/12211/installers/fmw_12.2.1.1.0_soa.jar |
+| 12.2.1.2.0 | conf/fmw/context/jdk/jdk-8u121-linux-x64.tar.gz<br> conf/fmw/context/12212/installers/fmw_12.2.1.2.0_infrastructure.jar<br> conf/fmw/context/12212/installers/fmw_12.2.1.2.0_osb.jar<br> conf/fmw/context/12212/installers/fmw_12.2.1.2.0_soa.jar |
+| 12.2.1.3.0 | conf/fmw/context/jdk/jdk-8u131-linux-x64.tar.gz<br> conf/fmw/context/12213/installers/fmw_12.2.1.3.0_infrastructure.jar<br> conf/fmw/context/12213/installers/fmw_12.2.1.3.0_osb.jar<br> conf/fmw/context/12213/installers/fmw_12.2.1.3.0_soa.jar |
 
-Once the Oracle installers are placed in the desired locations, you will need to build the FMW extensions by executing the following:
+Once the Oracle installers are placed in the desired locations, you will need to install FMW by executing the following:
 
 ```
-./bin/build-fmw-extensions.sh
+cd /opt/myst-studio/fmw
+./install-fmw.sh
 ```
+
+{% hint style='info' %}
+For version 12.2.1.3.0 the `install-fmw.sh` script will also fix Oracle Maven Plugin dependency errors.
+{% endhint %}
 
 ## Starting the MyST Studio Stack
 
@@ -152,10 +160,10 @@ You can see the details of your running instances by executing `docker ps` from 
 
 ## Configuring Maven for Automated Build of Oracle Middleware
 
-If you choose **Build Extensions for Oracle Middleware** when installing MyST, Maven must be configured on the build server, before you can build applications to run on products such as SOA, BPM, OSB and ADF. This can be done by simply executing the following from the MyST Studio home:
+If you choose **Build Extensions for Oracle Middleware** when installing MyST, Maven must be configured on the build server, before you can build applications to run on products such as SOA, BPM, OSB and ADF. This can be done by simply executing the following from the MyST Studio home where SHORT_VERSION could be 122130 if you installed OFMW 12.2.1.3.0.
 ```
-cd bin
-./configure-maven.sh
+cd /opt/myst-studio/bin
+./configure-maven.sh <SHORT_VERSION>
 ```
 {% hint style='info' %}
 If you skipped the post-installation steps documented in the section on **Configuring the Build Extensions** the above command will not succeed.
@@ -163,7 +171,7 @@ If you skipped the post-installation steps documented in the section on **Config
 
 ## Offline Installation
 
-It is highly recommended that proxied internet access be available for the MyST server. This allows for easy upgrade of MyST by simplify specifying a version number to download (e.g. `./upgrade.sh 5.5.0.0`). In an event that MyST Studio does not have internet access, you will need to download the required MyST Studio Docker Images from a host with internet access and then copy them to the MyST Server before executing the `start.sh` or `upgrade.sh`. Depending on whether you choose "MyST Build Server" and "MyST Artifact Repository", there may be multiple Docker images that need to be downloaded and copied to the server.
+It is highly recommended that proxied internet access be available for the MyST server. This allows for easy upgrade of MyST by simply specifying a version number to download (e.g. `./upgrade.sh 5.5.0.0`). In an event that MyST Studio does not have internet access, you will need to download the required MyST Studio Docker Images from a host with internet access and then copy them to the MyST Server before executing the `start.sh` or `upgrade.sh`. Depending on whether you choose "MyST Build Server" and "MyST Artifact Repository", there may be multiple Docker images that need to be downloaded and copied to the server.
 
 ### MyST Studio (Offline)
 

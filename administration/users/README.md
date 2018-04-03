@@ -16,7 +16,7 @@ The list can be filtered \/ sorted by User Name or Status, by entering the filte
 
 ### Creating a New User
 
-Click `+ Create User`, this will open the **Add User** dialogue. Specify the following values:
+Click `+ Create User`, this will open the **Add User** dialog. Specify the following values:
 
 * **First Name:** First name of the user
 
@@ -40,17 +40,17 @@ Click `Save` to create the User Account. Once saved the user will be able to log
 
 ### Edit User Account
 
-To edit the user account, click on the `Edit` button for the corresponding User. This will open the **Edit User** dialogue.
+To edit the user account, click on the `Edit` button for the corresponding User. This will open the **Edit User** dialog.
 
 Here you can modify the First Name, Last Name, Email Address and System Specific Roles of the User. Once done, click `Save` to confirm your changes.
 
 #### Change User Password
 
-To reset the user password, from within the Edit User dialogue, click `Change Password`. This will open the **Change Password** dialogue. Enter the new password and click `Change Password` to confirm.
+To reset the user password, from within the Edit User dialog, click `Change Password`. This will open the **Change Password** dialog. Enter the new password and click `Change Password` to confirm.
 
 #### Change Username
 
-To change the username, from within the Edit User dialogue, click `Change Username`. This will open the **Change Username** dialogue. Enter the new username and click `Change username` to confirm.
+To change the username, from within the Edit User dialog, click `Change Username`. This will open the **Change Username** dialog. Enter the new username and click `Change username` to confirm.
 
 ### Activate \/ Deactivate User
 

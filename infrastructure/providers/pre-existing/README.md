@@ -26,7 +26,7 @@ To see details of the defined Infrastructure Providers, click  `Infrastructure` 
 ![](img/PreExistingInfraList.png)
 
 ### Create Pre-Existing Infrastructure
-Click `Create New` and select `Pre Existing` from the options provided. This will open the **Create New Pre Existing** dialogue. Here we need to specify the following values:
+Click `Create New` and select `Pre Existing` from the options provided. This will open the **Create New Pre Existing** dialog. Here we need to specify the following values:
 
 * **Name** - Shorthand name for the Pre-Existing Infrastructure Provider
 * **Description** - A longer description of the Pre-Existing Infrastructure Provider
@@ -59,14 +59,14 @@ To add a key pair, click `Add Key Pair`, enter a name, add the private key conte
 > The key value format must be PEM and the key must not have a pass-phrase.
 
 #### Edit Key Pair
-To edit a key pair, click on the name of the key pair within the Infrastructure Provider, this will open the **Edit Key Pair** dialogue.
+To edit a key pair, click on the name of the key pair within the Infrastructure Provider, this will open the **Edit Key Pair** dialog.
 
 Here you can modify the content of the Private Key; to do this click `Change Content` and you will be prompted to enter the Private Key content. Once done, click `Save` to confirm your changes.
 
 ![](img/KeyPairEdit.png)
 
 #### Delete Key Pair
-To delete a key pair, open the Edit Key Pair dialogue and click `Delete`. MyST will return us to the Pre-Existing Infrastructure editor, click `Save` to confirm our changes.
+To delete a key pair, open the Edit Key Pair dialog and click `Delete`. MyST will return us to the Pre-Existing Infrastructure editor, click `Save` to confirm our changes.
 
 > We can only delete Key Pairs that are not assigned to any OS Agent Credentials or OS Admin Credentials.
 
@@ -94,7 +94,7 @@ Within MyST, **Hosts** are the logical representation of the Virtual, Physical, 
 MyST can use pre-existing Virtual, Physical or Container-based hosts as the target for hosting Oracle Middleware platforms. With this approach, MyST is dependent on a system administrator or a Configuration Management solution like Puppet or Chef to pre-configure the host before it is used as a target by MyST.
 
 #### Add Hosts
-To add a new host, click `Add Host`. MyST will open the `Add Host` dialogue, specify the following values:
+To add a new host, click `Add Host`. MyST will open the `Add Host` dialog, specify the following values:
 * **Name**: Name within MyST used to refer to the host
 * **Host Name**: Network address of the host, can also be the IP Address
 * **SSH Port**: The SSH Port of the target host, defaults to 22.
@@ -107,12 +107,12 @@ To add a new host, click `Add Host`. MyST will open the `Add Host` dialogue, spe
 Once we have specified the host details, click `Add`. MyST will return us to the Pre-Existing Infrastructure editor, click `Save` to confirm our changes.
 
 #### Edit Hosts
-To edit a host, click on the name of the host within the Infrastructure Provider, this will open the `Edit Host` dialogue.
+To edit a host, click on the name of the host within the Infrastructure Provider, this will open the `Edit Host` dialog.
 
 Here we can modify the host configuration as required. Once done, click `Save` to confirm your changes. MyST will return us to the Pre-Existing Infrastructure editor, click `Save` to confirm our changes.
 
 #### Delete Hosts
-To delete a host, open the Edit Host dialogue and click `Delete`. MyST will prompt for confirmation, click `Yes` to delete the host definition. MyST will return us to the Pre-Existing Infrastructure editor, click `Save` to confirm our changes.
+To delete a host, open the Edit Host dialog and click `Delete`. MyST will prompt for confirmation, click `Yes` to delete the host definition. MyST will return us to the Pre-Existing Infrastructure editor, click `Save` to confirm our changes.
 
 
 

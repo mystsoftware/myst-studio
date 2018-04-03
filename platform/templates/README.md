@@ -90,10 +90,10 @@ From the Platform Blueprint editor, click the `Actions` button and select the `S
 {% hint style='info' %}
 A blueprint must be in a committed state before it can be saved as a template.{% endhint %}
 
-In the New Platform Template panel specify the **Name** and a **Description** for the new Platform Template and click `Save` to complete the process.
+In the New Platform Template dialog specify the **Name** and a **Description** for the new Platform Template and click `Save` to complete the process.
 
 
-![](img/BlueprintSaveAsTemplate.png)
+![](img/NewPlatformTemplate.png)
 
 ### Review and Edit Template
 

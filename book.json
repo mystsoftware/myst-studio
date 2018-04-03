@@ -4,7 +4,8 @@
         "hints",
         "simple-page-toc",
         "custom-favicon",
-        "ga"
+        "ga",
+        "fancybox"
     ],
     "pluginsConfig": {
         "theme-default": {
@@ -20,6 +21,8 @@
         },
         "ga": {
             "token": "UA-35856338-5"
+        },
+        "fancybox": {
         }
     },
     "variables": {
