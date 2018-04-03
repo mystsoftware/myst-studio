@@ -33,6 +33,7 @@
     * [Platform Editor](platform/definitions/editor/README.md)
   * [Managing Platform Instances](platform/management/README.md)
   * [Introspecting Existing Platform Instances](platform/introspection/README.md)
+  * [Upgrading Platform Instances](platform/upgrade/README.md)
 
 ---
 

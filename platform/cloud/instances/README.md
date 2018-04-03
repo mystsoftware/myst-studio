@@ -1,6 +1,6 @@
 # {{ page.title }}
 
-In addition to the rich support for [introspecting](/platform/introspection/README.md) existing WebLogic-based Platform Instances. MyST supports the direct registration of various Oracle Platform-as-a-Service instances. These instances do not need to have been previously provisioned via MyST. Once these instances have been registered they can be used as deployment targets for Application Release Automation.
+In addition to the rich support for [introspecting](/platform/introspection/README.md) existing WebLogic-based Platform Instances, MyST supports the direct registration of various Oracle Platform-as-a-Service instances. These instances do not need to have been previously provisioned via MyST. Once these instances have been registered they can be used as deployment targets for Application Release Automation.
 
 MyST supports the following Oracle Platform-as-a-Service types:
  - Oracle Integration Cloud
