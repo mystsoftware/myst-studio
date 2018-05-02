@@ -95,12 +95,9 @@ To accomplish this, use a single network time server and then point each server 
 
 We must have a version of Java Hotspot installed on each target host. This is required by the MyST agent runtime (this dependency will be removed in a future version).
 
-To install Java you can run the following command:
+Open JDK is not supported by Fusion Middleware so be sure to use the Oracle JDK.
 
-```sh
-sudo yum install java
-```
-Or use your installation method of choice. For more information see [Installing Java on Linux](https://java.com/en/download/help/linux_install.xml).
+For more information see [Installing Java on Linux](https://java.com/en/download/help/linux_install.xml).
 
 **Note 1**:  
 * Oracle Fusion Middleware 12.2.1 requires Java 8  
