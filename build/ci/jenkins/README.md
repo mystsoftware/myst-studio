@@ -1,5 +1,7 @@
 ## {{ page.title }}
 
+<!-- toc -->
+
 In this section, we cover how to configure an automated build job in Jenkins, this will perform the following steps:
 * Periodically poll our source code repository for new code commits.
 * On detection of a new code commit, initiate Maven to build and package the code.
@@ -15,7 +17,7 @@ Before performing a SOA, OSB or ADF build it assumed that:
 ### Setup global variables in Jenkins
 To simplify the on-going configuration of jobs in Jenkins, we recommend defining a couple of global properties. Log into the Jenkins console, click on `Manage Jenkins` and select `Configure System`.
 
-Locate the `Global properties` section and click on the `Environment variables` checkbox if not already selected. Then click `Add` to add the following variables. 
+Locate the `Global properties` section and click on the `Environment variables` checkbox if not already selected. Then click `Add` to add the following variables.
 
 * **MAVEN_REPO_URL** -  This is the URL of the Software Repository (such as Artifactory, Nexus or Archiva) that we will publish our built artifacts to.
 
@@ -39,7 +41,7 @@ Under `Source Code Management` select your source code repository type (such as 
 
 We can leave all the other fields with default values.
 
-> When checking out an Oracle OSB project we need to specify the project's parent directory, this is due to a constraint with the Oracle OSB Maven build which needs to take the deployment URI from the parent directory. 
+> When checking out an Oracle OSB project we need to specify the project's parent directory, this is due to a constraint with the Oracle OSB Maven build which needs to take the deployment URI from the parent directory.
 
 > This means, when Jenkins checks out the project, by default it will look for the POM file in the parent directory, so we need to specify the relative path to the POM file in the project sub-directory.
 
@@ -54,12 +56,12 @@ Select Maven as the Maven Version and enter the following into the Goals field:
 
 ```
 build-helper:parse-version versions:set '-DnewVersion=${parsedVersion.majorVersion}.${parsedVersion.minorVersion}-${BUILD_NUMBER}'
-``` 
+```
 This tells Maven to always append the build number to the artifact version.
 
 ![](img/jenkinsNewItemPreStep.png)
 
-Click on `Advanced...` below the step. For POM specify the location of the `pom.xml` file relative to the URL we set under `Source Code Management`. 
+Click on `Advanced...` below the step. For POM specify the location of the `pom.xml` file relative to the URL we set under `Source Code Management`.
 
 ![](img/jenkinsNewItemPreStepPom.png)
 
@@ -87,7 +89,7 @@ Once initiated, click on the progress bar to see the Console Output.
 ### Update Build Job to Publish to Artifactory
 Once our build job is performing as expected, we need to modify it to publish the built artifact to our software repository.
 
-From the main screen for our build job, click `Configure` to return to the configuration screen. 
+From the main screen for our build job, click `Configure` to return to the configuration screen.
 
 Navigate to the `Build` section and add the following to the end of the `Goals and options` field:
 
@@ -100,7 +102,7 @@ install:install deploy:deploy - DaltDeploymentRepository=central::default::$MAVE
 ### Update Build Job to Register Artifact with MyST Studio
 Once our build job is performing as expected, we need to modify it to register the built artifact with MyST.
 
-From the main screen for our build job, click `Configure` to return to the configuration screen. 
+From the main screen for our build job, click `Configure` to return to the configuration screen.
 
 Navigate to the `Post-build Actions` section at the bottom of the page. Click on `Add post-build action` and then select `Publish to MyST Studio`.
 
@@ -108,7 +110,7 @@ Navigate to the `Post-build Actions` section at the bottom of the page. Click on
 
 Make sure the `Active` box is ticked.
 
-Click `Save` to save our changes and return from to main job screen within Jenkins. 
+Click `Save` to save our changes and return from to main job screen within Jenkins.
 
 #### Validate Registration with MyST
 Click `Build Now` to manually trigger the job. Click on the progress bar for the job that appears in the `Build History` and go to the Console Output.
@@ -144,3 +146,22 @@ Once the job completes, at the end of the output we should see output similar to
 }
 ```
 Your artifact has now been published to MyST Studio. See section [Artifact Management](/build/artifacts/README.md) for details on how to view this artifact in MyST Studio.
+
+### Jenkins Plugin for Oracle PAAS
+
+Oracle PAAS services are often developed in the Cloud. These services can be exported to an archive that can then be promoted into multiple environments.
+
+Rubicon Red provide an experimental Jenkins plugin that can be used for the registration of various Oracle PAAS Artifacts to MyST Studio.
+
+The Jenkins Plugin for Oracle PAAS, allows for the configuration of the design-time environment for OIC, PCS and/or ICS. Users can then a create job which automatically allow a given artifact to be pulled from a given Oracle PAAS service, packaged as a Maven artifact and then pushed to MyST Studio.
+
+#### Supported Artifact Types
+
+* Oracle Integration Artifacts for OIC and ICS
+* Oracle Process Artifacts for OIC and PCS
+
+#### How to install the Oracle PAAS Plugin
+
+1. Login to the MyST website
+2. Download the plugin from [here](https://myst.rubiconred.com/webhelp/installer/release/oracle-integration-cloud-jenkins-plugin.hpi)
+3. Install the Plugin into Jenkins
