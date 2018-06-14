@@ -149,7 +149,7 @@ Your artifact has now been published to MyST Studio. See section [Artifact Manag
 
 ### Jenkins Plugin for Oracle PAAS
 
-Oracle PAAS services are often developed in the Cloud. These services can be exported to an archive that can then be promoted into multiple environments.
+Oracle PAAS services are developed in the Cloud. These services can be exported to an archive that can then be promoted into multiple environments.
 
 Rubicon Red provide an experimental Jenkins plugin that can be used for the registration of various Oracle PAAS Artifacts to MyST Studio.
 
