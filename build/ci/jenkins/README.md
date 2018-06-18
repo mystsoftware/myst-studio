@@ -176,7 +176,7 @@ We can define a separate Integration Cloud for **Integration Artifacts** and **P
 
 Once this is established, users can a create Jenkins freestyle build job and use the plugin to automatically allow a given artifact to be:
 
-1. pulled from a given Oracle PAAS servic
+1. pulled from a given Oracle PAAS service
 2. packaged as a Maven artifact
 3. pushed to MyST Studio.
 
