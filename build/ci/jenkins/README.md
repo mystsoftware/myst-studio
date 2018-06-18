@@ -149,19 +149,44 @@ Your artifact has now been published to MyST Studio. See section [Artifact Manag
 
 ### Jenkins Plugin for Oracle PAAS
 
-Oracle PAAS services are developed in the Cloud. These services can be exported to an archive that can then be promoted into multiple environments.
+Oracle PAAS services can be exported to an archive that can then be promoted into multiple environments. To simplify this process, Rubicon Red provide a Jenkins plugin that can be used for the automatic registration of Oracle PAAS Artifacts directly from the Cloud runtime to MyST Studio.
 
-Rubicon Red provide an experimental Jenkins plugin that can be used for the registration of various Oracle PAAS Artifacts to MyST Studio.
+The plugin is currently in BETA. We are continually looking to improve it. If you have any feedback on the plugin, please share it via [Rubicon Red Support](http://support.rubiconred.com/).
 
-The Jenkins Plugin for Oracle PAAS, allows for the configuration of the design-time environment for OIC, PCS and/or ICS. Users can then a create job which automatically allow a given artifact to be pulled from a given Oracle PAAS service, packaged as a Maven artifact and then pushed to MyST Studio.
+#### Currently Supported Artifact Types
 
-#### Supported Artifact Types
+* Oracle Integration Artifacts for OIC
+* Oracle Process Artifacts for OIC
 
-* Oracle Integration Artifacts for OIC and ICS
-* Oracle Process Artifacts for OIC and PCS
-
-#### How to install the Oracle PAAS Plugin
+#### How to install the plugin
 
 1. Login to the MyST website
 2. Download the plugin from [here](https://myst.rubiconred.com/webhelp/installer/release/oracle-integration-cloud-jenkins-plugin.hpi)
 3. Install the Plugin into Jenkins
+
+#### How to setup the plugin (one-time configuration)
+
+Before using the plugin, we must first point to our chosen Oracle PAAS environments for design-time. This may also be known as our "Development" or "Configuration Integration" environment.
+
+This one-time configuration is configurable under **Manage Jenkins** then **Configure System**.
+
+![](img/jenkinsOTC.jpg)
+
+We can define a separate Integration Cloud for **Integration Artifacts** and **Process Artifacts** or we can set them both to point to the same instance.
+
+Once this is established, users can a create Jenkins freestyle build job and use the plugin to automatically allow a given artifact to be:
+
+1. pulled from a given Oracle PAAS servic
+2. packaged as a Maven artifact
+3. pushed to MyST Studio.
+
+#### Using the plugin from a Jenkins freestyle build job
+
+From the freestyle build configuration screen under **Build** click on **Add build step** and choose the desired action. Currently the options are:
+
+- Export Oracle Integration Cloud Artifact
+- Export Oracle Process Cloud Artifact
+
+![](img/jenkinsOICDropdown.png)
+
+It is recommended to create a separate job for each artifact that needs to be exported.
