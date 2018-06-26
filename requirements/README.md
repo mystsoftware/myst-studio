@@ -14,7 +14,7 @@ Please note: It is recommended **NOT** to install MyST onto an Exalogic VServer 
 | O/S | Red Hat Enterprise Linux 7.x with Kernel 3.10 and higher<br>Oracle Linux 6.7+ or 7.x with Kernel 4.1.12 and higher |
 | vCPU | 4 |
 | Memory | 16 GB |
-| Storage | /root (base)                 **`20GB`**<br>/var/lib/docker            **`60GB`**<br>/opt/myst-studio        **`20GB`** |
+| Storage | /root (base)                 **20GB**<br>/var/lib/docker            **60GB**<br>/opt/myst-studio        **20GB** |
 | Installed Software | Java 1.8.0\_77+<br>docker-engine (latest; 1.10+ minimum)<br>docker-compose (latest; 1.10+ minimum) (see https://docs.docker.com/compose/install/) |
 | Groups | docker<br>myst |
 | Users | myst:myst,docker <br> **Note:** The myst user should have a uid of 1000 in order for Jenkins to read the FMW installation |
@@ -54,7 +54,7 @@ The following are required for Artifactory.
 | Installed Software | Java 1.8.0\_77+<br>docker-engine (latest; 1.10+ minimum)<br>docker-compose (latest; 1.10+ minimum) (see https://docs.docker.com/compose/install/) |
 | vCPU | 2 |
 | Memory | 8 GB |
-| Storage | /root (base)                 **`20GB`**<br>/var/lib/docker            **`20GB`**<br>/opt/myst-studio        **`10GB`** |
+| Storage | /root (base)                 **20GB**<br>/var/lib/docker            **20GB**<br>/opt/myst-studio        **10GB** |
 | Groups | docker<br>myst |
 | Users | myst:myst,docker |
 
@@ -67,7 +67,7 @@ The following are required for Artifactory.
 | Installed Software | docker-engine (latest)<br>docker-compose (latest) (see https://docs.docker.com/compose/install/) |
 | vCPU | 2 |
 | Memory | 8 GB |
-| Storage | /root (base)                 **`20GB`**<br>/var/lib/docker            **`20GB`**<br>/u01/app/oracle         **`20GB`** |
+| Storage | /root (base)                 **20GB**<br>/var/lib/docker            **20GB**<br>/u01/app/oracle         **20GB** |
 | Groups | docker<br>myst |
 | Users | myst:myst,docker |
 ||**Note:** The myst user should have a uid of 1000 in order for Jenkins to read the FMW installation|
