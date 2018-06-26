@@ -81,6 +81,6 @@ The following are required for Artifactory.
 | Installed Software | docker-engine (latest)<br>docker-compose (latest) (see https://docs.docker.com/compose/install/) |
 | vCPU | 2 |
 | Memory | 4 GB |
-| Storage | /root (base)                  **`20GB`**<br>/var/lib/docker            **`20GB`** |
+| Storage | /root (base)                  **20GB**<br>/var/lib/docker            **20GB** |
 | Groups | docker<br>myst |
 | Users | myst:myst,docker |
