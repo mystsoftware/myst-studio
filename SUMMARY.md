@@ -97,6 +97,7 @@
 
 ## Administration Guides
 
+* [Installation Prerequisites](requirements/README.md)
 * [MyST Installation Guide](installation/myst-studio/README.md)
   * [Alternative Installation Approaches](installation/myst-studio/alternatives/README.md)
 * [MyST Management Scripts](administration/management/README.md)
@@ -107,4 +108,3 @@
 * [Supported Artifacts](appendix/artifact/README.md)
 * [Supported Configuration](appendix/configuration/README.md)
 * [Error Codes](appendix/errors/README.md)
-
