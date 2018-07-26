@@ -26,7 +26,7 @@ The MyST Server can be established on modern container runtimes such as `docker`
 State for the stack is automatically stored in a container volume and accessed via `myststudio_db`.
 
 The following additional containers can be optionally installed:
-- `ci-server` - MyST Build Server exposing `8081` by default
+- `myststudio_ci` - MyST Build Server exposing `8081` by default
 - `maven-repository` - MyST Maven Repository exposing `8083` by default
 
 Exposed ports can be configured by adjusting the port mappings in the `docker-compose` / `docker stack` configuration
