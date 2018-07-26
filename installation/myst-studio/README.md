@@ -33,7 +33,7 @@ Exposed ports can be configured by adjusting the port mappings in the `docker-co
 
 ## Alternative MyST Topologies
 
-In an event that container-based topology is undesired, the stack can be rolled out on a non-container infrastructure. More details on this approach are documented in the [Alternative Installations](/installation/myst-studio/alternatives) section.
+In an event that container-based topology is undesired, the stack can be rolled out on a non-container infrastructure. More details on this approach are documented in the [Alternative Installations](alternatives/README.md) section.
 
 ## System Requirements
 
@@ -51,7 +51,7 @@ The following prerequisites should be in place on the server that will host MyST
 
 ## Network Requirements
 
-As MyST is a management tool, it is best suited in a management network so that it can access all of the environments that it needs to manage. MyST will connect to the instances that it manages via `ssh` protocol and `tcp` as needed. More details on network requirements are available in the [Network Requirements](/installation/myst-studio/docker/#network-requirements) section.
+As MyST is a management tool, it is best suited in a management network so that it can access all of the environments that it needs to manage. MyST will connect to the instances that it manages via `ssh` protocol and `tcp` as needed. More details on network requirements are available [here](docker/README.md#network-requirements) section.
 
 ## Installation in 3 simple steps
 
@@ -67,4 +67,4 @@ java -jar fc-installer-6.3.1.jar
 ```
 3. By default, the MyST Studio console is accessible from  `https://localhost/console`.
 
-Detailed installation instructions are available within the [Docker-based Installation Guide](/installation/myst-studio/docker/). For non-Docker installation, please consult the [Alternative Installations Guide](/installation/myst-studio/alternatives/)
+Detailed installation instructions are available within the [Docker-based Installation Guide](docker/README.md). For non-Docker installation, please consult the [Alternative Installations Guide](alternatives/README.md)
