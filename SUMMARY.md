@@ -97,9 +97,10 @@
 
 ## Administration Guides
 
-* [Installation Prerequisites](requirements/README.md)
 * [MyST Installation Guide](installation/myst-studio/README.md)
-  * [Alternative Installation Approaches](installation/myst-studio/alternatives/README.md)
+  * [System Requirements](installation/myst-studio/requirements/README.md)
+  * [Docker-based Installation](installation/myst-studio/docker/README.md)
+  * [Alternative Installations](installation/myst-studio/alternatives/README.md)
 * [MyST Management Scripts](administration/management/README.md)
 * [MyST Upgrade Guide](administration/upgrade/README.md)
 
