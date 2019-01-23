@@ -378,7 +378,7 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 |composite.redeploy| Whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application. |
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.sca.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.sca.configplan.xml) |
-|forceDefault|Boolean flag to set whether the composite is default|
+|forceDefault|Optional: (true|false) Boolean flag to set whether the composite is default. Defaults to true.|
 
 #### OSB
 |Property|Description|
