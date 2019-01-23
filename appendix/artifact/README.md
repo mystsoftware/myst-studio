@@ -387,11 +387,11 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 |osb.customization-file|OSB customization file to replace endpoint and other properties|
 |myst-config-plan-apply|Optional: Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|Optional: MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.osb.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.osb.configplan.xml) |
-|preserve-security-and-policy-values|Optional: Preserve security and policy values|
-|preserve-credentials|Optional: Preserve credentials|
-|preserve-access-control-policies|Optional: Preserve access control policies|
-|preserve-environment-variable-values|Optional: Preserve environment variable values|
-|preserve-operational-values|Optional: Preserve operational values|
+|preserve-security-and-policy-values|Optional: (true|false) Preserve security and policy values. Defaults to true. |
+|preserve-credentials|Optional: (true|false) Preserve credentials. Defaults to true. |
+|preserve-access-control-policies|Optional: (true|false) Preserve access control policies. Defaults to true. |
+|preserve-environment-variable-values|Optional: (true|false) Preserve environment variable values. Defaults to true. |
+|preserve-operational-values|Optional: (true|false) Preserve operational values. Defaults to true. |
 
 #### MDS
 |Property|Description|
