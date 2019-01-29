@@ -35,7 +35,9 @@ Once done click `Save`.
 From time to time, you may need a prerequisite patch to be installed before you can apply a patch. This can be handled by defining the prerequisite patch and referencing it's identifier in the `Pre-requisite patches` field. This field can contain comma-separated values in a case of multiple prerequisites.
 
 ### Applying the Patch to a Platform Instance
-If the patch is added to the Platform Blueprint prior to provisioning the Platform Instance then the patch will be automatically applied as part of the provisioning process.
+If the patch is added to the Platform Blueprint prior to **provisioning** the Platform Instance then the patch will be automatically applied as part of the **provisioning** process.
 
-If the Platform Instance has already been provisioned then we will need to apply the patch. For details on how to do this, see the section on [Patching a Platform Instance
+If the Platform Instance has already been provisioned then we will need to **update** the Platform Instance and then **apply** the patch. 
+
+For details on how to do this, see the section on [Patching a Platform Instance
  in Chapter 3.6 - Managing Platform Instances](/platform/management/README.md) for further details.
