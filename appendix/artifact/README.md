@@ -2,7 +2,7 @@
 
 <!-- toc -->
 
-#### Integration Cloud Archive 
+#### Integration Cloud Archive
 
 Oracle Integration Cloud Archives can be deployed using MyST. These artifact types can be deployed to either Oracle Integration Cloud or the Legacy Integration Cloud Service. For each version of an Oracle Integration Cloud Archive which you wish to deploy, you must first register it with MyST. These steps can be performed manually, however, it is recommended to include these steps in a CI server job, so that they can be triggered automatically as required.
 
@@ -88,7 +88,7 @@ If the integration has connections, then these will need to be defined in a JSON
         "FLIGHTAIRLINESREST": {
             "connectionProperties": [
                 {
-                    "propertyValue": "https://${flights.api.host}", 
+                    "propertyValue": "https://${flights.api.host}",
                     "propertyName": "connectionUrl"
                 }
             ]
@@ -96,7 +96,7 @@ If the integration has connections, then these will need to be defined in a JSON
         "LOGGERREST": {
            "connectionProperties": [
                 {
-                    "propertyValue": "https://${logger.api.host}", 
+                    "propertyValue": "https://${logger.api.host}",
                     "propertyName": "connectionUrl"
                 }
            ]
@@ -215,7 +215,7 @@ PCS_PROJECT_ID="Administer%20Patient%20Well%20Being"
 PCS_SPACE_NAME="RxR"
 PCS_EXPORT_FILE_NAME="AdministerPatientWellBeing.exp"
 ```
- - Ensure `PCS_SPACE_NAME` matches the design-time space where your Process Application is located. In the example above, it is in the `RxR` space. 
+ - Ensure `PCS_SPACE_NAME` matches the design-time space where your Process Application is located. In the example above, it is in the `RxR` space.
  - Also, ensure that any space character in your project name is replaced with the `%20` character.
 3. Execute the following to export your project.
 ```
@@ -292,8 +292,8 @@ MyST supports the following PCS-specific deploy-time properties being defined wi
 By default, Process Applications are deployed with the following configuration plan
 ```
 {
-  "revisionId": "1.0", 
-  "overwrite": true, 
+  "revisionId": "1.0",
+  "overwrite": true,
   "forceDefault": true
 }
 ```
@@ -333,7 +333,7 @@ Whilst it is possible to publish the artifact directly to Maven. It is recommend
 
 **Step 5: Set a unique version number for our artifact**
 
-When publish an artifact to Maven and later registering it with MyST, it is important to ensure that the version number of the artifact is unique. This can be done via Maven prior to building the artifact. An example of this is described 
+When publish an artifact to Maven and later registering it with MyST, it is important to ensure that the version number of the artifact is unique. This can be done via Maven prior to building the artifact. An example of this is described
 [here](/build/ci/jenkins/README.md#add-pre-build-step).
 
 **Step 6: Build and publish your application to a Maven Repository**
@@ -378,6 +378,7 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 |composite.redeploy| Whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application. |
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.sca.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.sca.configplan.xml) |
+|forceDefault|Optional: (true|false) Boolean flag to set whether the composite is default. Defaults to true.|
 
 #### OSB
 |Property|Description|
@@ -386,11 +387,11 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 |osb.customization-file|OSB customization file to replace endpoint and other properties|
 |myst-config-plan-apply|Optional: Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|Optional: MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.osb.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.osb.configplan.xml) |
-|preserve-security-and-policy-values|Optional: Preserve security and policy values|
-|preserve-credentials|Optional: Preserve credentials|
-|preserve-access-control-policies|Optional: Preserve access control policies|
-|preserve-environment-variable-values|Optional: Preserve environment variable values|
-|preserve-operational-values|Optional: Preserve operational values|
+|preserve-security-and-policy-values|Optional: (true|false) Preserve security and policy values. Defaults to true. |
+|preserve-credentials|Optional: (true|false) Preserve credentials. Defaults to true. |
+|preserve-access-control-policies|Optional: (true|false) Preserve access control policies. Defaults to true. |
+|preserve-environment-variable-values|Optional: (true|false) Preserve environment variable values. Defaults to true. |
+|preserve-operational-values|Optional: (true|false) Preserve operational values. Defaults to true. |
 
 #### MDS
 |Property|Description|
@@ -437,7 +438,7 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
 |j2ee.redeploy|Whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
-|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml) 
+|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml)
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.war becomes Stock.war. This means context root will be /Stock instead of /Stock-1.0.0)|
 
 #### SQL
@@ -503,6 +504,3 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 |j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE|
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.jar becomes Stock.jar)|
-
-
-
