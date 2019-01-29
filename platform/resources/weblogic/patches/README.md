@@ -37,7 +37,7 @@ From time to time, you may need a prerequisite patch to be installed before you 
 ### Applying the Patch to a Platform Instance
 If the patch is added to the Platform Blueprint prior to **provisioning** the Platform Instance then the patch will be automatically applied as part of the **provisioning** process.
 
-If the Platform Instance has already been provisioned then we will need to first run an **update** action the Platform Instance and then run **patch** action to apply the patch. 
+If the Platform Instance has already been provisioned then we will need to first run an **update** action on the Platform Instance and then run **patch** action to apply the patch. 
 
 For details on how to do this, see the section on [Patching a Platform Instance
  in Chapter 3.6 - Managing Platform Instances](/platform/management/README.md) for further details.
