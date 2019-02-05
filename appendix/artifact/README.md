@@ -2,6 +2,13 @@
 
 <!-- toc -->
 
+#### Property Exclusions
+
+A list of artifact properties excluded from being published to MyST Studio. Avoid using the following properties:
+
+- `core.*`
+- `internal*`
+
 #### Integration Cloud Archive
 
 Oracle Integration Cloud Archives can be deployed using MyST. These artifact types can be deployed to either Oracle Integration Cloud or the Legacy Integration Cloud Service. For each version of an Oracle Integration Cloud Archive which you wish to deploy, you must first register it with MyST. These steps can be performed manually, however, it is recommended to include these steps in a CI server job, so that they can be triggered automatically as required.
