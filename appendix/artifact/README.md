@@ -411,11 +411,11 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 #### ADF
 |Property|Description|
 |---|---|
-|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code<br /><br />For MyST CLI use property: `deployment.order`|
-|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)<br /><br />For MyST CLI use property: `deployment-plan`|
-|j2ee.redeploy|Boolean flag to control whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.<br /><br />For MyST CLI use property: `redeploy`|
-|j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE<br /><br />For MyST CLI use property: `stage-mode`|
-|j2ee.target|List of targets to deploy application to. Can be managed server or cluster<br /><br />For MyST CLI use property: `target`|
+|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `deployment.order`|
+|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `deployment-plan`|
+|j2ee.redeploy|Boolean flag to control whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `redeploy`|
+|j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `stage-mode`|
+|j2ee.target|List of targets to deploy application to. Can be managed server or cluster<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `target`|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.adf.configplan.xml) |
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.ear becomes Stock.ear)|
@@ -423,11 +423,11 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 #### Java EAR
 |Property|Description|
 |---|---|
-|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code<br /><br />For MyST CLI use property: `deployment.order`|
-|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)<br /><br />For MyST CLI use property: `deployment-plan`|
-|j2ee.redeploy|Boolean flag to control whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.<br /><br />For MyST CLI use property: `redeploy`|
-|j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE<br /><br />For MyST CLI use property: `stage-mode`|
-|j2ee.target|List of targets to deploy application to. Can be managed server or cluster<br /><br />For MyST CLI use property: `target`|
+|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `deployment.order`|
+|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `deployment-plan`|
+|j2ee.redeploy|Boolean flag to control whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `redeploy`|
+|j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `stage-mode`|
+|j2ee.target|List of targets to deploy application to. Can be managed server or cluster<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `target`|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml) |
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.ear becomes Stock.ear)|
@@ -435,12 +435,12 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 #### Java WAR
 |Property|Description|
 |---|---|
-|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code<br /><br />For MyST CLI use property: `deployment.order`|
-|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)<br /><br />For MyST CLI use property: `deployment-plan`|
+|j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `deployment.order`|
+|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `deployment-plan`|
 |j2ee.name| Application name |
-|j2ee.redeploy|Boolean flag to control whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.<br /><br />For MyST CLI use property: `redeploy`|
-|j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE<br /><br />For MyST CLI use property: `stage-mode`|
-|j2ee.target|List of targets to deploy application to. Can be managed server or cluster<br /><br />For MyST CLI use property: `target`|
+|j2ee.redeploy|Boolean flag to control whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `redeploy`|
+|j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `stage-mode`|
+|j2ee.target|List of targets to deploy application to. Can be managed server or cluster<br /><br />For MyST CLI or Platform Blueprint > System Artifacts use property: `target`|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml)
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.war becomes Stock.war. This means context root will be /Stock instead of /Stock-1.0.0)|
@@ -479,11 +479,10 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 #### Application Configuration (Properties/XML)
 |Property|Description|
 |---|---|
-|expand-properties|Replace files with MyST properties|
+|expand-properties|Optional: (true/false) defaults to true. Used with extract-files property. <br><br>Takes files from the extract-files property with Maven/Ant-style references (eg. ${my.property} and substitutes them with name/value pairs from the MyST Platform Model properties. <br><br> For MyST CLI or Platform Blueprint > System Artifacts use property: `customize`|
 |extract-files|Comma separated list of files to extract from archive|
 |target-directory|Target directory to place extracted files|
 |target-is-domain-directory|Boolean flag to indicate path if path is relative to domain home directory|
-|customize|Optional: (true/false) defaults to true. Used with extract-files property. <br><br>Takes files from the extract-files property with Maven/Ant-style references (eg. ${my.property} and substitutes them with name/value pairs from the MyST Platform Model properties. |
 
 #### OSB Custom XPath
 |Property|Description|
