@@ -483,6 +483,7 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 |extract-files|Comma separated list of files to extract from archive|
 |target-directory|Target directory to place extracted files|
 |target-is-domain-directory|Boolean flag to indicate path if path is relative to domain home directory|
+|customize|Optional: (true/false) defaults to true. Used with extract-files property. <br><br>Takes files from the extract-files property with Maven/Ant-style references (eg. ${my.property} and substitutes them with name/value pairs from the MyST Platform Model properties. |
 
 #### OSB Custom XPath
 |Property|Description|
