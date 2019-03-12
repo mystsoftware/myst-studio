@@ -5,7 +5,7 @@ Post deployment action can be configured by following the steps from [Configure 
 
 > Note : configure post deployment action with no parameters
 
-Then create one more job with job name as test.&stagename.&applicationblueprinname 
+Then create one more job with job name as test.stagename.applicationblueprinname 
 ex:  test.CI.SOABlueprint
 
 Trigger post deployment actions
