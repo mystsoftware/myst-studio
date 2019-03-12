@@ -94,7 +94,7 @@ From this, we can select the Platform Model of the Platform Instance that we wis
 When we select the Platform Model, MyST will update the Release Pipeline to show the Platform Blueprint and Platform Model revision for the corresponding Platform Instance (as outlined in red above). If the Platform Instance has not yet been provisioned, then this will be indicated.
 
 ### Configuring Post Deployment Actions
-For each stream stage we can configure post deployment action in the release pipeline.  MySt is going to trigger target jenkins job after successful deployment.
+For each stream stage we can configure post deployment action in the release pipeline.  MyST is going to trigger target jenkins job after successful deployment.
 
 To configure post deployment action, we will see a drop down in the streamstage (as in the image below) and click on post deployment action
 
