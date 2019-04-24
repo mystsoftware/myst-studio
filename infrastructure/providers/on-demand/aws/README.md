@@ -42,6 +42,17 @@ Click **Save** to save your infrastructure provider.
 
 * **OS Admin Credentials:** Reserved for future functionality.
 
+#### Add OS Agent Credential
+To add an OS Agent Credential, click `Add OS Agent Credential`, specify the following values:
+
+* **Name** - Shorthand name for the OS Agent Credential
+* **SSH User Name** - The SSH User Name that will be used to connect to the host
+* **Connect Using** - Specifies the type of credentials used to authenticate the SSH user, can be  either `Key Pair` or `Password`
+* **Key Pair** - If `Key Pair` is specified, then select the Key Pair to use from the Drop Down.
+* **Password** - If `Password` is specified, then enter the password to be used to authenticate the user.
+* **Run as different user** - Select this to use **sudo** to enable the MyST agent to run as a different user.
+* **Other User Name** - If `Run as different user` is set to `Yes`. Specify the user account under whose identity the MyST agent will perform all tasks.
+
 
 
 
