@@ -34,6 +34,9 @@ Click on create.Once you click on create you can see all the information like VP
 * **OS Agent Credentials:**  The OS agent credentials is the set of credentials that MyST uses to connect to and execute jobs on the target hosts. Each Credential consists of a username and credential, which can be either a Key Pair or Password.
 
     Once we have defined an OS Agent Credential, we can use it in one or more Infrastructures.
+    
+
+* **OS Admin Credentials:** Reserved for future functionality.
 
 Click **Save** to save your infrastructure provider.
 
