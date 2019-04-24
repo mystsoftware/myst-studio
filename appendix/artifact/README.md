@@ -399,7 +399,6 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 |preserve-access-control-policies|Optional: (true/false) Preserve access control policies. Defaults to true. |
 |preserve-environment-variable-values|Optional: (true/false) Preserve environment variable values. Defaults to true. |
 |preserve-operational-values|Optional: (true/false) Preserve operational values. Defaults to true. |
-
 #### MDS
 |Property|Description|
 |---|---|
