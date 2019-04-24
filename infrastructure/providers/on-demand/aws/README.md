@@ -13,7 +13,11 @@ Click `Create New` and select `On Demand(AWS)` from the options provided. This w
 * **Region** - Select your AWS Region.
 * **Authentication Mechanism** - Select Access Keys / Secret Keys Authentication Mechanism and provide valid Access Key and Secret Key.
 
-![](aws/img/OnDemandInfraAdd.png)
+![](img/OnDemandInfraAdd.png).
+
+Click on create.
+
+
 
 
 
