@@ -15,7 +15,15 @@ Click `Create New` and select `On Demand(AWS)` from the options provided. This w
 
 ![](img/OnDemandInfraAdd.png).
 
-Click on create.
+Click on create.Once you click on create you can see all the information like VPCs, Subnets, Security Groups, AMIs, Instance Types and AWS Key Pairs present in the region with given Authentication Mechanism.
+
+![](img/OnDemandCreate.png).
+
+* **VPC(Virtual Private Cloud)** - Select the respective VPC where you want to create your Infrastructure.
+* **Subnet** - Select the subnet from your VPC where you want to launch your AWS Infrastructure.
+
+
+
 
 
 
