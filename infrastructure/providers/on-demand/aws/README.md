@@ -19,6 +19,7 @@ Click on create.Once you click on create you can see all the information like VP
 
 ![](img/OnDemandCreate.png).
 
+
 * **VPC(Virtual Private Cloud)** - Select the respective VPC where you want to create your Infrastructure.
 * **Subnet** - Select the subnet from your VPC where you want to launch your AWS Infrastructure.
 * **Security Group** - Select the corresponding security group that's created for the VPC you selected.
