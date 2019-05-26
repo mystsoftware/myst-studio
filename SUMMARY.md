@@ -95,6 +95,10 @@
   * [User Management](administration/users/README.md)
   * [Role Management](administration/roles/README.md)
   * [Workspace Management](administration/workspaces/README.md)
+---
+
+* [Migration](migration/README.md)
+  * [OCI Migration](migration/oci-migration/README.md)
 
 ## Administration Guides
 
