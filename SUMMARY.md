@@ -7,6 +7,7 @@
 * [Rubicon Red MyST](introduction/README.md)
   * [Platform Provisioning and Configuration](introduction/platform-provisioning/README.md)
   * [Application Release Automation](introduction/application-release-automation/README.md)
+  * [Security Salt and Hash](platform/security/README.md)
 
 ---
 
