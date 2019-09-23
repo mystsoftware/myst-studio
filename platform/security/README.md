@@ -13,39 +13,21 @@ my.custom.password={AES}AZ12azasfdASDF9876asdf\=\=
 
 ### After 6.6.0 (rc2)
 
-Two key points.
-1. A salt (file) is generated on initial startup and is used to hash myst properties that are passwords.  
+Passwords are now hashed with a salt and seen as:
+
+```
+my.custom.password=ENC(abcZYX123!@#abcABC123)
+```
+
+Some additional points to be aware of:
+
+1. A salt (file) is generated on initial startup and used to hash myst password properties.  
    `/opt/myst/data/key`
-2. On initial startup a myst studio database entry is populated to flag the salt has been generated. This prevents a new salt file being generated and overwriting the previous.
+2. On initial startup the myst studio database populates an entry to flag that a salt has been generated. This prevents a new salt file being generated and overwriting the previous.
 
 ## What does this mean for existing users?
 
 Users upgrading to the new password security enhancement will find their existing passwords remain `{AES}` encrypted. To use the new salt, simply update existing password properties and myst will use the salt and hash the password as `ENC()`.
-
-## The Master key
-
-A **salt** (also referred to as the *key*) is used to encrypt and decrypt passwords. 
-
-### Where is the key?
-
-The salt is placed in a file named "**key**" located inside the myststudio_web docker container.
-`myststudio_web:/opt/myst/data/key`
-
-When performing actions, Myst will copy the key onto the filesystem `$MYST_HOME/key` in order for MyST CLI to access.
-
-### How is the key file mounted?
-
-The key file location is mounted using [docker volumes](https://docs.docker.com/storage/volumes/) part of the docker image. You do not need to do anything. Upgrading or recreating the container does not affect the key file as it is persisted. If you delete the docker volume then the key will be deleted.
-
-Execute the command `docker inspect myststudio_web`, to see the volume location.
-```
-            "Image": "myst-studio",
-            "Volumes": {
-                "/opt/myst/data": {},
-                "/usr/local/tomcat/conf/fusioncloud/ext": {},
-                "/usr/local/tomcat/conf/fusioncloud/license": {}
-            },
-```
 
 ### Importance of Backing up the key
 
@@ -79,6 +61,31 @@ wc -c key
 
 # The result should be:
 15 key
+```
+
+## The Master key
+
+A **salt** (also referred to as the *key*) is used to encrypt and decrypt passwords. 
+
+### Where is the key?
+
+The salt is placed in a file named "**key**" located inside the myststudio_web docker container.
+`myststudio_web:/opt/myst/data/key`
+
+When performing actions, Myst will copy the key onto the filesystem `$MYST_HOME/key` in order for MyST CLI to access.
+
+### How is the key file mounted?
+
+The key file location is mounted using [docker volumes](https://docs.docker.com/storage/volumes/) part of the docker image. You do not need to do anything. Upgrading or recreating the container does not affect the key file as it is persisted. If you delete the docker volume then the key will be deleted.
+
+Execute the command `docker inspect myststudio_web`, to see the volume location.
+```
+            "Image": "myst-studio",
+            "Volumes": {
+                "/opt/myst/data": {},
+                "/usr/local/tomcat/conf/fusioncloud/ext": {},
+                "/usr/local/tomcat/conf/fusioncloud/license": {}
+            },
 ```
 
 ## What does this mean for new users?
