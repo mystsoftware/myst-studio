@@ -1,0 +1,1548 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Workspace Management · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../installation/myst-studio/" />
+    
+    
+    <link rel="prev" href="../roles/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Title and Copyright Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../introduction/">
+            
+                <a href="../../introduction/">
+            
+                    
+                    Rubicon Red MyST
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../introduction/platform-provisioning/">
+            
+                <a href="../../introduction/platform-provisioning/">
+            
+                    
+                    Platform Provisioning and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../introduction/application-release-automation/">
+            
+                <a href="../../introduction/application-release-automation/">
+            
+                    
+                    Application Release Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../platform/security/">
+            
+                <a href="../../platform/security/">
+            
+                    
+                    Security Salt and Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../infrastructure/">
+            
+                <a href="../../infrastructure/">
+            
+                    
+                    Infrastructure Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../infrastructure/environment-types/">
+            
+                <a href="../../infrastructure/environment-types/">
+            
+                    
+                    Environment Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../infrastructure/compute-definitions/">
+            
+                <a href="../../infrastructure/compute-definitions/">
+            
+                    
+                    Compute Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../infrastructure/providers/pre-existing/">
+            
+                <a href="../../infrastructure/providers/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../infrastructure/providers/on-demand/aws/">
+            
+                <a href="../../infrastructure/providers/on-demand/aws/">
+            
+                    
+                    On-Demand Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../infrastructure/providers/hosts/">
+            
+                <a href="../../infrastructure/providers/hosts/">
+            
+                    
+                    Host Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../platform/">
+            
+                <a href="../../platform/">
+            
+                    
+                    Platform Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../platform/blueprints/">
+            
+                <a href="../../platform/blueprints/">
+            
+                    
+                    Platform Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../platform/templates/">
+            
+                <a href="../../platform/templates/">
+            
+                    
+                    Platform Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../platform/models/">
+            
+                <a href="../../platform/models/">
+            
+                    
+                    Platform Models
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../../platform/models/pre-existing/">
+            
+                <a href="../../platform/models/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../../platform/models/on-demand-aws/">
+            
+                <a href="../../platform/models/on-demand-aws/">
+            
+                    
+                    On Demand (AWS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../platform/cloud/instances/">
+            
+                <a href="../../platform/cloud/instances/">
+            
+                    
+                    Registering Cloud Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../platform/provisioning/">
+            
+                <a href="../../platform/provisioning/">
+            
+                    
+                    Provisioning Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../platform/update/">
+            
+                <a href="../../platform/update/">
+            
+                    
+                    Updating Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../platform/definitions/">
+            
+                <a href="../../platform/definitions/">
+            
+                    
+                    Maintaining Platform Definitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" data-path="../../platform/definitions/version-control/">
+            
+                <a href="../../platform/definitions/version-control/">
+            
+                    
+                    Platform Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2" data-path="../../platform/definitions/editor/">
+            
+                <a href="../../platform/definitions/editor/">
+            
+                    
+                    Platform Editor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.2.1" data-path="../../platform/definitions/editor/control-bar/">
+            
+                <a href="../../platform/definitions/editor/control-bar/">
+            
+                    
+                    Control Bar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.2" data-path="../../platform/definitions/editor/tree-view/">
+            
+                <a href="../../platform/definitions/editor/tree-view/">
+            
+                    
+                    Tree View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.3" data-path="../../platform/definitions/editor/properties-view/">
+            
+                <a href="../../platform/definitions/editor/properties-view/">
+            
+                    
+                    Properties View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.4" data-path="../../platform/definitions/editor/topology-view/">
+            
+                <a href="../../platform/definitions/editor/topology-view/">
+            
+                    
+                    Topology View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.5" data-path="../../platform/definitions/editor/source-view/">
+            
+                <a href="../../platform/definitions/editor/source-view/">
+            
+                    
+                    Source View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.6" data-path="../../platform/definitions/editor/property-references/">
+            
+                <a href="../../platform/definitions/editor/property-references/">
+            
+                    
+                    Using Property References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../platform/management/">
+            
+                <a href="../../platform/management/">
+            
+                    
+                    Managing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../platform/introspection/">
+            
+                <a href="../../platform/introspection/">
+            
+                    
+                    Introspecting Existing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../../platform/upgrade/">
+            
+                <a href="../../platform/upgrade/">
+            
+                    
+                    Upgrading Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../platform/resources/weblogic/">
+            
+                <a href="../../platform/resources/weblogic/">
+            
+                    
+                    Platform Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../platform/resources/weblogic/servers/">
+            
+                <a href="../../platform/resources/weblogic/servers/">
+            
+                    
+                    WebLogic Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../platform/resources/weblogic/patches/">
+            
+                <a href="../../platform/resources/weblogic/patches/">
+            
+                    
+                    Oracle Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../platform/resources/weblogic/jdbc/">
+            
+                <a href="../../platform/resources/weblogic/jdbc/">
+            
+                    
+                    Data Sources (JDBC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../platform/resources/weblogic/jms/">
+            
+                <a href="../../platform/resources/weblogic/jms/">
+            
+                    
+                    Java Messaging Service (JMS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../../platform/resources/weblogic/jms/persistent-stores/">
+            
+                <a href="../../platform/resources/weblogic/jms/persistent-stores/">
+            
+                    
+                    Persistent Stores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.2" data-path="../../platform/resources/weblogic/jms/modules/">
+            
+                <a href="../../platform/resources/weblogic/jms/modules/">
+            
+                    
+                    JMS Modules and Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.3" data-path="../../platform/resources/weblogic/jms/store-and-forward/">
+            
+                <a href="../../platform/resources/weblogic/jms/store-and-forward/">
+            
+                    
+                    Store and Forward (SAF) Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../../platform/resources/weblogic/jca-adapters/">
+            
+                <a href="../../platform/resources/weblogic/jca-adapters/">
+            
+                    
+                    JCA Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../../platform/resources/weblogic/work-managers/">
+            
+                <a href="../../platform/resources/weblogic/work-managers/">
+            
+                    
+                    Work Managers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../../platform/resources/weblogic/servers/load-balancer-configuration.html">
+            
+                <a href="../../platform/resources/weblogic/servers/load-balancer-configuration.html">
+            
+                    
+                    Load Balancer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../../platform/resources/weblogic/servers/web-tier.html">
+            
+                <a href="../../platform/resources/weblogic/servers/web-tier.html">
+            
+                    
+                    Webtier Routing Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.9" data-path="../../platform/resources/weblogic/servers/configuring-security.html">
+            
+                <a href="../../platform/resources/weblogic/servers/configuring-security.html">
+            
+                    
+                    Users, Groups, Roles and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.10" data-path="../../platform/resources/weblogic/servers/applying-certificates.html">
+            
+                <a href="../../platform/resources/weblogic/servers/applying-certificates.html">
+            
+                    
+                    Keystore Certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.11" data-path="../../platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                <a href="../../platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                    
+                    Startup and Shutdown Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.12" data-path="../../platform/resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                <a href="../../platform/resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                    
+                    Weblogic Deployment Targeting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../build/">
+            
+                <a href="../../build/">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../build/server/configuration/">
+            
+                <a href="../../build/server/configuration/">
+            
+                    
+                    Build Server Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1.1" data-path="../../infrastructure/continuous-delivery-profile/">
+            
+                <a href="../../infrastructure/continuous-delivery-profile/">
+            
+                    
+                    Continuous Delivery Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.2" data-path="../../build/server/configuration/jenkins/">
+            
+                <a href="../../build/server/configuration/jenkins/">
+            
+                    
+                    MyST Studio Plugin for Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../../build/maven/">
+            
+                <a href="../../build/maven/">
+            
+                    
+                    Configuring Maven Builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../../build/ci/">
+            
+                <a href="../../build/ci/">
+            
+                    
+                    Configuring Automated Builds 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.3.1" data-path="../../build/ci/jenkins/">
+            
+                <a href="../../build/ci/jenkins/">
+            
+                    
+                    Configuring Jenkins Build Jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../../build/artifacts/">
+            
+                <a href="../../build/artifacts/">
+            
+                    
+                    Artifact Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../../build/deploy-config/">
+            
+                <a href="../../build/deploy-config/">
+            
+                    
+                    Deploy Time Customizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.5.1" data-path="../../howtos/use-myst-generic-configuration-plans.html">
+            
+                <a href="../../howtos/use-myst-generic-configuration-plans.html">
+            
+                    
+                    MyST Configuration Plans
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../deploy/application/">
+            
+                <a href="../../deploy/application/">
+            
+                    
+                    Application Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../deploy/application/blueprints/">
+            
+                <a href="../../deploy/application/blueprints/">
+            
+                    
+                    Configuring Application Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../release/">
+            
+                <a href="../../release/">
+            
+                    
+                    Release Pipelines
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../release/pipeline/organization/">
+            
+                <a href="../../release/pipeline/organization/">
+            
+                    
+                    Pipeline Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1.1" data-path="../../release/pipeline/organization/groups/">
+            
+                <a href="../../release/pipeline/organization/groups/">
+            
+                    
+                    Pipeline Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.1.2" data-path="../../release/pipeline/organization/stream-types/">
+            
+                <a href="../../release/pipeline/organization/stream-types/">
+            
+                    
+                    Stream Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../release/pipeline/templates/">
+            
+                <a href="../../release/pipeline/templates/">
+            
+                    
+                    Pipeline Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../release/pipeline/">
+            
+                <a href="../../release/pipeline/">
+            
+                    
+                    Configuring Release Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../../release/pipeline/dashboard/">
+            
+                <a href="../../release/pipeline/dashboard/">
+            
+                    
+                    Release Pipeline Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Role-Based Access Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../users/">
+            
+                <a href="../users/">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../roles/">
+            
+                <a href="../roles/">
+            
+                    
+                    Role Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="9.1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Workspace Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Administration Guides</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../installation/myst-studio/">
+            
+                <a href="../../installation/myst-studio/">
+            
+                    
+                    MyST Installation Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../installation/myst-studio/requirements/">
+            
+                <a href="../../installation/myst-studio/requirements/">
+            
+                    
+                    System Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../installation/myst-studio/docker/">
+            
+                <a href="../../installation/myst-studio/docker/">
+            
+                    
+                    Docker-based Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../../installation/myst-studio/alternatives/">
+            
+                <a href="../../installation/myst-studio/alternatives/">
+            
+                    
+                    Alternative Installations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../management/">
+            
+                <a href="../management/">
+            
+                    
+                    MyST Management Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../upgrade/">
+            
+                <a href="../upgrade/">
+            
+                    
+                    MyST Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendix</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../appendix/artifact/">
+            
+                <a href="../../appendix/artifact/">
+            
+                    
+                    Supported Artifacts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../../appendix/configuration/">
+            
+                <a href="../../appendix/configuration/">
+            
+                    
+                    Supported Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../../appendix/errors/">
+            
+                <a href="../../appendix/errors/">
+            
+                    
+                    Error Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Workspace Management</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="workspace-management">Workspace Management</h2>
+<p>MyST Workspaces provide a flexible way to control which resources in MyST a user has access to and what actions a user can perform against each resource type.</p>
+<p>Each resource within MyST can be associated with one or more workspaces. When a user is assigned to a workspace, they are assigned one or more Roles. The role defines what actions the user can perform against resources associated with that workspace.</p>
+<p><strong>Note:</strong> when a user is assigned multiple roles, they receive the combined set of access permissions defined by their assigned roles. </p>
+<p>Workspaces are typically used to associate users with particular work streams within an organization. These could be project based, for example, an SOA development project, or team based, for example, the Middleware Operations team. </p>
+<p>When a resource is first created, the user must specify which Workspace(s) the resource should be associated with. This can only be a workspace where the user has the appropriate privileges to create a resource of that type.</p>
+<p>Once created, any changes to which workspaces a resource is associated with need to be done using the <strong>Associate Resources</strong> dialog under Workspace Administration.</p>
+<h3 id="list-workspaces">List Workspaces</h3>
+<p>To see a list of MyST Workspaces, click  <code>Administration</code> &gt; <code>Workspaces</code>. This will display a tiled view of Workspaces similar to the one below.</p>
+<p>     <a href="img/workspaceList.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/workspaceList.png" alt="">
+     </a></p>
+<p>For each workspace, MyST provides a summary of the number of resources contained in the workspace, including:</p>
+<ul>
+<li>Users</li>
+<li>Platform Templates</li>
+<li>Platform Blueprints</li>
+<li>Platform Models</li>
+<li>Platform Instances</li>
+<li>Infrastructure Providers</li>
+</ul>
+<h3 id="creating-a-new-workspace">Creating a New Workspace</h3>
+<p>Click <code>+ Create Workspace</code>, this will open the <strong>Add Workspace</strong> dialog. Specify the following values:</p>
+<ul>
+<li><strong>Name:</strong> Name of the Workspace</li>
+<li><strong>Description:</strong> Description of the Workspace</li>
+</ul>
+<p>Click <code>Save</code> to create the Workspace. Once saved we can configure workspace users and associate resources with the workspace.</p>
+<h3 id="configure-users">Configure Users</h3>
+<p>To configure workspace users, click on the  <strong>Actions</strong> drop-down menu for the corresponding Workspace and select <code>Configure Users</code>, as illustrated below. </p>
+<p>     <a href="img/workspaceAction.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/workspaceAction.png" alt="">
+     </a></p>
+<p>This will open the <strong>Configure Users</strong> dialog.</p>
+<p>     <a href="img/workspaceConfigureUsers.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/workspaceConfigureUsers.png" alt="">
+     </a></p>
+<h4 id="add-users">Add Users</h4>
+<p>To add new users to the Workspace, click <code>+ Add Users</code>. This will open the <strong>Add Users</strong> dialog which will display the list of users and roles defined to MyST.</p>
+<p>     <a href="img/workspaceAddUsers.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/workspaceAddUsers.png" alt="">
+     </a></p>
+<p>The list can be filtered/sorted by User Name, First Name, Last Name or Email Address by entering the filter criteria in the filter fields (outlined in red in the above screen-shot).</p>
+<p>To choose the user(s) we wish to add to the workspace, simply select the corresponding checkbox for each user required.</p>
+<p>Once selected the next step is to choose the roles we wish to assign to the selected users. The role list can be filtered/sorted by role Name by entering the filter criteria in the filter fields.</p>
+<p>To specify the roles(s) we want to provide to the selected users, simply check the corresponding check box for each role required.</p>
+<p>Once we have specified the users and their corresponding roles, click <code>Add Users</code> to confirm our selection and return to the <code>Configure Users</code> dialog. From here we <strong>must</strong> click <code>Save</code> to save our changes to the Workspace.</p>
+<p><strong>Note:</strong> we can select a user who is already assigned to the workspace, for example, if we want to assign them another role.</p>
+<h4 id="edit-user-roles">Edit User Roles</h4>
+<p>To edit roles assigned to a user account, click on the <code>Edit</code> button for the corresponding user. This will open the <strong>Edit User Roles</strong> dialog. This will display the list of roles defined to MyST and indicate which of these roles are currently assigned to the user.</p>
+<p>To add or remove roles from the user, simply set the corresponding checkbox for each role as required. Once done, click <code>Edit User Configuration</code> to confirm our selection and return to the main <code>Configure Users</code> dialog. From here we <strong>must</strong> click Save to save our changes to the Workspace.</p>
+<h4 id="delete-user">Delete User</h4>
+<p>To delete a User from the Workspace, click on the  <strong>Actions</strong> drop-down menu for the corresponding User and select <code>Delete</code>. We will be prompted to confirm our action, click <code>Yes</code> to proceed. From here we <strong>must</strong> click Save to save our changes to the Workspace.</p>
+<h3 id="associate-resources">Associate Resources</h3>
+<p>Users within a Workspace are only granted access privileges against resources that are associated with the workspace. </p>
+<p><strong>Note:</strong> Resources can be associated with multiple workspaces.</p>
+<p>When we first create a resource, we need to specify the workspace(s) to which we want to associate the resource. Once created, then if we want to associate the resource with additional workspaces or remove its association with a workspace, we perform this activity as part of Workspace Administration.</p>
+<p>Within Workspace Administration, click on the  <strong>Actions</strong> drop-down menu for the corresponding Workspace and select <code>Associate Resources</code>. This will open the <strong>Associate Resources</strong> dialog.</p>
+<p>     <a href="img/workspaceAssociateResource.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/workspaceAssociateResource.png" alt="">
+     </a></p>
+<p>For each <em>Resource Type</em>, MyST will provide a summary of the number of resources associated with this workspace and by default expand the Platform Templates section to list the Platform Templates associated with the Workspace.</p>
+<p>Click on the corresponding <code>&gt;</code> expand icon (outlined in red above) to expand the resource type you are interested in.</p>
+<h4 id="add-resource-association">Add Resource Association</h4>
+<p>To add a Resource Association expand the corresponding resource type and click on <code>Associate &lt;Resource Type&gt;</code> (for example <code>Associate Platform Template</code>). This will open the corresponding <code>Associate &lt;Resource Type&gt;</code> dialog.</p>
+<p>     <a href="img/workspaceAssociateResourceType.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/workspaceAssociateResourceType.png" alt="">
+     </a></p>
+<p>The list can be filtered/sorted by Name and Description, by entering the filter criteria in the filter fields (outlined in red above).</p>
+<p>To choose the resource(s) we wish to associate with the workspace, simply select the corresponding checkbox for each user resource.</p>
+<p>Once we have specified the resources, click <code>Associate &lt;Resource Type&gt;</code> to confirm our selection and return to the main <code>Associate Resource</code> dialog. From here we <strong>must</strong> click Save to save our changes to the Workspace.</p>
+<h4 id="delete-resource-association">Delete Resource Association</h4>
+<p>To delete a Resource Association, expand the corresponding resource type and click on the delete icon in the <em>Actions</em> column. This will remove the corresponding resource association from the Workspace. Finally, click <code>Save</code> to save our changes to the Workspace.</p>
+<h3 id="edit-workspace">Edit Workspace</h3>
+<p>To edit a workspace, click on the <strong>Actions</strong> drop-down menu for the corresponding Workspace and select <code>Open</code>, this will open the <strong>Edit Workspace</strong> dialog.</p>
+<p>Here you can modify the Name and Description of the Workspace. Once done, click <code>Save</code> to confirm your changes.</p>
+<h3 id="activate--deactivate-workspace">Activate / Deactivate Workspace</h3>
+<p>By default, when you create a Workspace, it is in an active state. We can deactivate a Workspace at any time. Deactivating a Workspace does not remove any workspace roles a user has been granted but deactivates the permissions they have been granted through that role.</p>
+<p>A deactivated workspace can be reactivated at any time, at which point any user assigned a role within that workspace will receive back the corresponding access permissions.</p>
+<p>To deactivate a Workspace, click on the  <strong>Actions</strong> drop-down menu for the corresponding Workspace and select <code>Deactivate</code>.</p>
+<p>To activate a deactivated environment, click on the <strong>Actions</strong> drop-down menu for the corresponding Workspace and select <code>Activate</code>.</p>
+<h3 id="delete-workspace">Delete Workspace</h3>
+<p>To delete a Workspace, click on the <strong>Actions</strong> drop-down menu for the corresponding Workspace and select <code>Delete</code>. MyST will prompt us to confirm out action, click <code>Yes</code> to proceed.</p>
+<p><strong>Note:</strong> You will need to delete all Resource Associations from a Workspace prior to deleting it.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../roles/" class="navigation navigation-prev " aria-label="Previous page: Role Management">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../installation/myst-studio/" class="navigation navigation-next " aria-label="Next page: MyST Installation Guide">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Workspace Management","level":"9.1.3","depth":2,"next":{"title":"MyST Installation Guide","level":"10.1","depth":1,"path":"installation/myst-studio/README.md","ref":"installation/myst-studio/README.md","articles":[{"title":"System Requirements","level":"10.1.1","depth":2,"path":"installation/myst-studio/requirements/README.md","ref":"installation/myst-studio/requirements/README.md","articles":[]},{"title":"Docker-based Installation","level":"10.1.2","depth":2,"path":"installation/myst-studio/docker/README.md","ref":"installation/myst-studio/docker/README.md","articles":[]},{"title":"Alternative Installations","level":"10.1.3","depth":2,"path":"installation/myst-studio/alternatives/README.md","ref":"installation/myst-studio/alternatives/README.md","articles":[]}]},"previous":{"title":"Role Management","level":"9.1.2","depth":2,"path":"administration/roles/README.md","ref":"administration/roles/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{"myst_repo":"../../demos/myst-build","file1":"../../demos/myst-build/myst/fc-parent/fc-sdk/fc-studio-sdk-payload/src/test/resources/src/artifacts/sca/pom.xml"},"plugins":["hints","simple-page-toc","custom-favicon","ga","fancybox"],"pluginsConfig":{"disqus":{"shortName":"myst-studio-documentation"},"fancybox":{"helpers":{"buttons":{}}},"simple-page-toc":{"maxDepth":7,"skipFirstH1":true},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"assets/favicon.ico","custom-favicon":{},"ga":{"configuration":"auto","token":"UA-35856338-5"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"administration/workspaces/README.md","mtime":"2018-03-13T05:37:12.487Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-09-23T06:17:23.355Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

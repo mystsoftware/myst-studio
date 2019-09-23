@@ -1,0 +1,1691 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Docker-based Installation · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../alternatives/" />
+    
+    
+    <link rel="prev" href="../requirements/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Title and Copyright Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../introduction/">
+            
+                <a href="../../../introduction/">
+            
+                    
+                    Rubicon Red MyST
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../introduction/platform-provisioning/">
+            
+                <a href="../../../introduction/platform-provisioning/">
+            
+                    
+                    Platform Provisioning and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../../introduction/application-release-automation/">
+            
+                <a href="../../../introduction/application-release-automation/">
+            
+                    
+                    Application Release Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../../platform/security/">
+            
+                <a href="../../../platform/security/">
+            
+                    
+                    Security Salt and Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../infrastructure/">
+            
+                <a href="../../../infrastructure/">
+            
+                    
+                    Infrastructure Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../../infrastructure/environment-types/">
+            
+                <a href="../../../infrastructure/environment-types/">
+            
+                    
+                    Environment Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../../infrastructure/compute-definitions/">
+            
+                <a href="../../../infrastructure/compute-definitions/">
+            
+                    
+                    Compute Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../../infrastructure/providers/pre-existing/">
+            
+                <a href="../../../infrastructure/providers/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../../infrastructure/providers/on-demand/aws/">
+            
+                <a href="../../../infrastructure/providers/on-demand/aws/">
+            
+                    
+                    On-Demand Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../../infrastructure/providers/hosts/">
+            
+                <a href="../../../infrastructure/providers/hosts/">
+            
+                    
+                    Host Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../platform/">
+            
+                <a href="../../../platform/">
+            
+                    
+                    Platform Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../../platform/blueprints/">
+            
+                <a href="../../../platform/blueprints/">
+            
+                    
+                    Platform Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../../platform/templates/">
+            
+                <a href="../../../platform/templates/">
+            
+                    
+                    Platform Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../../platform/models/">
+            
+                <a href="../../../platform/models/">
+            
+                    
+                    Platform Models
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../../../platform/models/pre-existing/">
+            
+                <a href="../../../platform/models/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../../../platform/models/on-demand-aws/">
+            
+                <a href="../../../platform/models/on-demand-aws/">
+            
+                    
+                    On Demand (AWS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../../platform/cloud/instances/">
+            
+                <a href="../../../platform/cloud/instances/">
+            
+                    
+                    Registering Cloud Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../../platform/provisioning/">
+            
+                <a href="../../../platform/provisioning/">
+            
+                    
+                    Provisioning Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../../platform/update/">
+            
+                <a href="../../../platform/update/">
+            
+                    
+                    Updating Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../../platform/definitions/">
+            
+                <a href="../../../platform/definitions/">
+            
+                    
+                    Maintaining Platform Definitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" data-path="../../../platform/definitions/version-control/">
+            
+                <a href="../../../platform/definitions/version-control/">
+            
+                    
+                    Platform Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2" data-path="../../../platform/definitions/editor/">
+            
+                <a href="../../../platform/definitions/editor/">
+            
+                    
+                    Platform Editor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.2.1" data-path="../../../platform/definitions/editor/control-bar/">
+            
+                <a href="../../../platform/definitions/editor/control-bar/">
+            
+                    
+                    Control Bar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.2" data-path="../../../platform/definitions/editor/tree-view/">
+            
+                <a href="../../../platform/definitions/editor/tree-view/">
+            
+                    
+                    Tree View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.3" data-path="../../../platform/definitions/editor/properties-view/">
+            
+                <a href="../../../platform/definitions/editor/properties-view/">
+            
+                    
+                    Properties View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.4" data-path="../../../platform/definitions/editor/topology-view/">
+            
+                <a href="../../../platform/definitions/editor/topology-view/">
+            
+                    
+                    Topology View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.5" data-path="../../../platform/definitions/editor/source-view/">
+            
+                <a href="../../../platform/definitions/editor/source-view/">
+            
+                    
+                    Source View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.6" data-path="../../../platform/definitions/editor/property-references/">
+            
+                <a href="../../../platform/definitions/editor/property-references/">
+            
+                    
+                    Using Property References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../../platform/management/">
+            
+                <a href="../../../platform/management/">
+            
+                    
+                    Managing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../../platform/introspection/">
+            
+                <a href="../../../platform/introspection/">
+            
+                    
+                    Introspecting Existing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../../../platform/upgrade/">
+            
+                <a href="../../../platform/upgrade/">
+            
+                    
+                    Upgrading Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../../platform/resources/weblogic/">
+            
+                <a href="../../../platform/resources/weblogic/">
+            
+                    
+                    Platform Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../../platform/resources/weblogic/servers/">
+            
+                <a href="../../../platform/resources/weblogic/servers/">
+            
+                    
+                    WebLogic Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../../platform/resources/weblogic/patches/">
+            
+                <a href="../../../platform/resources/weblogic/patches/">
+            
+                    
+                    Oracle Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../../platform/resources/weblogic/jdbc/">
+            
+                <a href="../../../platform/resources/weblogic/jdbc/">
+            
+                    
+                    Data Sources (JDBC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../../platform/resources/weblogic/jms/">
+            
+                <a href="../../../platform/resources/weblogic/jms/">
+            
+                    
+                    Java Messaging Service (JMS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../../../platform/resources/weblogic/jms/persistent-stores/">
+            
+                <a href="../../../platform/resources/weblogic/jms/persistent-stores/">
+            
+                    
+                    Persistent Stores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.2" data-path="../../../platform/resources/weblogic/jms/modules/">
+            
+                <a href="../../../platform/resources/weblogic/jms/modules/">
+            
+                    
+                    JMS Modules and Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.3" data-path="../../../platform/resources/weblogic/jms/store-and-forward/">
+            
+                <a href="../../../platform/resources/weblogic/jms/store-and-forward/">
+            
+                    
+                    Store and Forward (SAF) Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../../../platform/resources/weblogic/jca-adapters/">
+            
+                <a href="../../../platform/resources/weblogic/jca-adapters/">
+            
+                    
+                    JCA Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../../../platform/resources/weblogic/work-managers/">
+            
+                <a href="../../../platform/resources/weblogic/work-managers/">
+            
+                    
+                    Work Managers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../../../platform/resources/weblogic/servers/load-balancer-configuration.html">
+            
+                <a href="../../../platform/resources/weblogic/servers/load-balancer-configuration.html">
+            
+                    
+                    Load Balancer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../../../platform/resources/weblogic/servers/web-tier.html">
+            
+                <a href="../../../platform/resources/weblogic/servers/web-tier.html">
+            
+                    
+                    Webtier Routing Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.9" data-path="../../../platform/resources/weblogic/servers/configuring-security.html">
+            
+                <a href="../../../platform/resources/weblogic/servers/configuring-security.html">
+            
+                    
+                    Users, Groups, Roles and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.10" data-path="../../../platform/resources/weblogic/servers/applying-certificates.html">
+            
+                <a href="../../../platform/resources/weblogic/servers/applying-certificates.html">
+            
+                    
+                    Keystore Certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.11" data-path="../../../platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                <a href="../../../platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                    
+                    Startup and Shutdown Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.12" data-path="../../../platform/resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                <a href="../../../platform/resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                    
+                    Weblogic Deployment Targeting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../../build/">
+            
+                <a href="../../../build/">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../../build/server/configuration/">
+            
+                <a href="../../../build/server/configuration/">
+            
+                    
+                    Build Server Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1.1" data-path="../../../infrastructure/continuous-delivery-profile/">
+            
+                <a href="../../../infrastructure/continuous-delivery-profile/">
+            
+                    
+                    Continuous Delivery Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.2" data-path="../../../build/server/configuration/jenkins/">
+            
+                <a href="../../../build/server/configuration/jenkins/">
+            
+                    
+                    MyST Studio Plugin for Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../../../build/maven/">
+            
+                <a href="../../../build/maven/">
+            
+                    
+                    Configuring Maven Builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../../../build/ci/">
+            
+                <a href="../../../build/ci/">
+            
+                    
+                    Configuring Automated Builds 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.3.1" data-path="../../../build/ci/jenkins/">
+            
+                <a href="../../../build/ci/jenkins/">
+            
+                    
+                    Configuring Jenkins Build Jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../../../build/artifacts/">
+            
+                <a href="../../../build/artifacts/">
+            
+                    
+                    Artifact Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../../../build/deploy-config/">
+            
+                <a href="../../../build/deploy-config/">
+            
+                    
+                    Deploy Time Customizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.5.1" data-path="../../../howtos/use-myst-generic-configuration-plans.html">
+            
+                <a href="../../../howtos/use-myst-generic-configuration-plans.html">
+            
+                    
+                    MyST Configuration Plans
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../../deploy/application/">
+            
+                <a href="../../../deploy/application/">
+            
+                    
+                    Application Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../../deploy/application/blueprints/">
+            
+                <a href="../../../deploy/application/blueprints/">
+            
+                    
+                    Configuring Application Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../../release/">
+            
+                <a href="../../../release/">
+            
+                    
+                    Release Pipelines
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../../release/pipeline/organization/">
+            
+                <a href="../../../release/pipeline/organization/">
+            
+                    
+                    Pipeline Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1.1" data-path="../../../release/pipeline/organization/groups/">
+            
+                <a href="../../../release/pipeline/organization/groups/">
+            
+                    
+                    Pipeline Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.1.2" data-path="../../../release/pipeline/organization/stream-types/">
+            
+                <a href="../../../release/pipeline/organization/stream-types/">
+            
+                    
+                    Stream Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../../release/pipeline/templates/">
+            
+                <a href="../../../release/pipeline/templates/">
+            
+                    
+                    Pipeline Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../../release/pipeline/">
+            
+                <a href="../../../release/pipeline/">
+            
+                    
+                    Configuring Release Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../../../release/pipeline/dashboard/">
+            
+                <a href="../../../release/pipeline/dashboard/">
+            
+                    
+                    Release Pipeline Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../../administration/">
+            
+                <a href="../../../administration/">
+            
+                    
+                    Role-Based Access Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../../administration/users/">
+            
+                <a href="../../../administration/users/">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../../../administration/roles/">
+            
+                <a href="../../../administration/roles/">
+            
+                    
+                    Role Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../../../administration/workspaces/">
+            
+                <a href="../../../administration/workspaces/">
+            
+                    
+                    Workspace Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Administration Guides</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    MyST Installation Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../requirements/">
+            
+                <a href="../requirements/">
+            
+                    
+                    System Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="10.1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker-based Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../alternatives/">
+            
+                <a href="../alternatives/">
+            
+                    
+                    Alternative Installations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../../administration/management/">
+            
+                <a href="../../../administration/management/">
+            
+                    
+                    MyST Management Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../../administration/upgrade/">
+            
+                <a href="../../../administration/upgrade/">
+            
+                    
+                    MyST Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendix</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../../appendix/artifact/">
+            
+                <a href="../../../appendix/artifact/">
+            
+                    
+                    Supported Artifacts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../../../appendix/configuration/">
+            
+                <a href="../../../appendix/configuration/">
+            
+                    
+                    Supported Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../../../appendix/errors/">
+            
+                <a href="../../../appendix/errors/">
+            
+                    
+                    Error Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Docker-based Installation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="docker-based-installation">Docker-based Installation</h1>
+<!-- toc -->
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#network-requirements">Network Requirements</a></li>
+<li><a href="#installation-using-the-wizard">Installation using the Wizard</a></li>
+<li><a href="#providing-certificates-for-ssl">Providing Certificates for SSL</a></li>
+<li><a href="#configuring-build-extensions">Configuring Build Extensions</a></li>
+<li><a href="#starting-the-myst-studio-stack">Starting the MyST Studio Stack</a></li>
+<li><a href="#configuring-maven-for-automated-build-of-oracle-middleware">Configuring Maven for Automated Build of Oracle Middleware</a></li>
+<li><a href="#offline-installation">Offline Installation</a><ul>
+<li><a href="#myst-studio-offline">MyST Studio (Offline)</a></li>
+<li><a href="#myst-build-server-offline">MyST Build Server (Offline)</a></li>
+<li><a href="#myst-artifact-repository-offline">MyST Artifact Repository (Offline)</a></li>
+<li><a href="#build-extensions-for-oracle-middleware-offline">Build Extensions for Oracle Middleware (Offline)</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<h2 id="prerequisites">Prerequisites</h2>
+<p>The following prerequisites should be in place on the server that will host MyST Studio prior to running the MyST installer.</p>
+<ul>
+<li>Java 1.7+ is installed.</li>
+<li>Docker 1.10+ and Docker Compose is installed.</li>
+<li>The MyST license tar.gz file must be available. This is provided when you sign up to try MyST Studio.</li>
+</ul>
+<p>After the installation, internet access is required for the latest version of MyST to be pulled down directly from the public MyST Docker Registry. If you are behind an internet proxy, please follow <a href="https://rubiconred.gitbooks.io/myst-help-center/content/how-do-i-setup-myst-and-associated-components-to-use-an-internet-proxy.html" target="_blank">these steps</a> to ensure all installation dependencies can be directly pulled from the Rubicon Red Docker Registry.</p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>If you are unable to use Docker, there are details on non-Docker installation <a href="alternatives/README.md">here</a></p>
+</div></div></p>
+<h2 id="network-requirements">Network Requirements</h2>
+<p>As MyST is a management tool, it is best suited in a management network so that it can access all of the environments that it needs to manage. The below table provides a set of recommended firewall rules for the MyST Studio server itself in a case where the MyST Build Server and MyST Artifact Repository are all residing on the same host.</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Destination</th>
+<th>Protocol</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Any</td>
+<td><code>myst-studio:443</code></td>
+<td>HTTPS</td>
+<td>Access to MyST Studio Console</td>
+</tr>
+<tr>
+<td>Any</td>
+<td><code>myst-studio:8081</code></td>
+<td>HTTP</td>
+<td>Access to MyST Build Server</td>
+</tr>
+<tr>
+<td>Any</td>
+<td><code>myst-studio:8083</code></td>
+<td>HTTP</td>
+<td>Access to MyST Artifact Repository</td>
+</tr>
+<tr>
+<td><code>myst-studio</code></td>
+<td>OFMW Admin Server Host(s)</td>
+<td>SSH</td>
+<td>MyST Studio will connect over ssh to the Admin Server of each environment for management operations.</td>
+</tr>
+<tr>
+<td>OFMW Admin Server Host(s)</td>
+<td>OFMW Managed Server Hosts</td>
+<td>SSH</td>
+<td>MyST Agent will ssh from admin to managed server hosts if needed for installation and patching.</td>
+</tr>
+<tr>
+<td>OFMW Admin Server Host(s)</td>
+<td><code>myst-studio:8083</code></td>
+<td>HTTP</td>
+<td>MyST Agent will retrieve built artifacts for deployment from the MyST Artifact Repository</td>
+</tr>
+</tbody>
+</table>
+<p>Optionally, the MyST Build Server and MyST Artifact Repository can be frontend by a HTTP Server similar to MyST Studio allowing for HTTPS traffic only. If you are not using the MyST Build Server and Artifact Repository and instead integrating with a different Build (CI) Server or Maven-based Artifact Repository, similar firewalling rules should be in place although the ports may be different.</p>
+<h2 id="installation-using-the-wizard">Installation using the Wizard</h2>
+<p>The installation wizard can be kicked off by executing the jar installer using Java as follows:</p>
+<pre><code>java -jar &lt;installer file&gt;
+</code></pre><p>If you need to run MyST Studio installer from the console (non-graphical), you can execute the following:</p>
+<pre><code>java -jar &lt;installer file&gt; -console
+</code></pre><p>In the first step, you will be provided with an overview of the prerequisites.</p>
+<p>     <a href="../../../assets/Screenshot%202017-04-04%2008.52.06.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="../../../assets/Screenshot 2017-04-04 08.52.06.png" alt="">
+     </a></p>
+<p>In the next step, you will be asked to enter a path for the MyST Studio utilities. The standard convention is to installer under <code>/opt/myst-studio</code> however any path can be used.</p>
+<p>     <a href="../../../assets/Screenshot%202017-04-04%2008.52.34.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="../../../assets/Screenshot 2017-04-04 08.52.34.png" alt="">
+     </a></p>
+<p>In the next step, we can choose which packs we wish to install. At a minimum <strong>MyST Studio</strong> will be selected.</p>
+<p>     <a href="../../../assets/Screenshot%202017-04-04%2008.53.08.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="../../../assets/Screenshot 2017-04-04 08.53.08.png" alt="">
+     </a></p>
+<p>Optionally, you can choose:</p>
+<ul>
+<li><strong>MyST Build Server</strong>: Pre-configured Build Server for use with MyST for if you don&apos;t already have one.</li>
+<li><strong>MyST Artifact Repository</strong>: Pre-configured Maven Artifact Repository for if you don&apos;t already have one.</li>
+<li><strong>Build Extension for Oracle Middleware</strong>: Enables automated build for applications build on SOA, BPM, OSB, ADF and other products related to Oracle Middleware. When you choose this, it will automatically select <strong>MyST Build Server</strong> if it is not already selected. The Build Extensions are currently supported for:<ul>
+<li>12.2.1.3.0</li>
+<li>12.2.1.2.0</li>
+<li>12.2.1.1.0</li>
+</ul>
+</li>
+</ul>
+<p>Click Next.</p>
+<p>In the next step, you will be prompted to import the MyST license key. The file is provided when you sign up for MyST and is in a format similar to <code>MyST-*.lic.tar.gz</code></p>
+<p>     <a href="../../../assets/Screenshot%202017-04-04%2008.53.19.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="../../../assets/Screenshot 2017-04-04 08.53.19.png" alt="">
+     </a></p>
+<p><div class="alert alert-undefined hints-alert"><div class="hints-icon"><i class="undefined"></i></div><div class="hints-container"><p>Prior to April 2017, MyST users were provided with a separate <code>api.key</code> and <code>MyST.lic</code> file. In installers prior to 5.5.0.0, these had to be imported separately. If you do not have a <code>tar.gz</code> file but have <code>api.key</code> and <code>MyST.lic</code> you can compress them to a new <code>tar.gz</code> and use that for that installer.</p>
+</div></div></p>
+<p>You will be prompted to confirm installation. Click Next.</p>
+<p>     <a href="../../../assets/Screenshot%202017-04-04%2008.53.41.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="../../../assets/Screenshot 2017-04-04 08.53.41.png" alt="">
+     </a></p>
+<p>The installation should take only a second or two.</p>
+<p>     <a href="../../../assets/Screenshot%202017-04-04%2008.53.51.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="../../../assets/Screenshot 2017-04-04 08.53.51.png" alt="">
+     </a></p>
+<p>After the installation is successful, you will be prompted with the next steps to be performed.</p>
+<p>     <a href="../../../assets/Screenshot%202017-04-04%2008.53.55.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="../../../assets/Screenshot 2017-04-04 08.53.55.png" alt="">
+     </a></p>
+<p>If desired, you can generate a silent installation script which can be used to perform an installation silently.</p>
+<p>     <a href="../../../assets/Screenshot%202017-04-04%2008.53.58.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="../../../assets/Screenshot 2017-04-04 08.53.58.png" alt="">
+     </a></p>
+<p><div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-mortar-board"></i></div><div class="hints-container"><p>Silent Installation</p>
+</div></div></p>
+<blockquote>
+<p>To run a silent installation you can execute the following:</p>
+<pre><code>java -jar &lt;installer file&gt; &lt;response file&gt;
+</code></pre></blockquote>
+<h2 id="providing-certificates-for-ssl">Providing Certificates for SSL</h2>
+<p>By default, MyST Studio will boot up with demo SSL certificates, this may be ok for a development or sandbox environment but should  not be used for production.</p>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p>If you do not replace the demo certificates, you will get security warnings from your browser when you access the MyST Studio console.</p>
+</div></div></p>
+<p>To update the certificates, replace the demo certificates at the following locations with your real certificates:</p>
+<ul>
+<li>conf/data/nginx/ssl/cert.crt</li>
+<li>conf/data/nginx/ssl/cert.key</li>
+</ul>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p>Warning</p>
+</div></div></p>
+<blockquote>
+<p>If you have already started the MyST Studio stack, you must force a rebuild of the data container when you restart the stack, this can be done with the following command.
+<code>./bin/start.sh -u</code>
+If you are yet to start the stack, please continue on to the next steps. MyST will automatically build the data container on the first start.</p>
+</blockquote>
+<h2 id="configuring-build-extensions">Configuring Build Extensions</h2>
+<p>If you choose the <strong>Build Extensions for Oracle Middleware</strong> then you will need to download Oracle installers and a JDK. Place them in the MyST home at the following locations depending on the versions you chose:</p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>Build Extensions in docker data containers are deprecated. MyST 5.8.6 uses docker volume mounts.</p>
+<p>Docker volume mounts allow Oracle installers to be installed on the filesystem then volume mounted to the MyST Build Server docker container.</p>
+</div></div></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12.2.1.1.0</td>
+<td>conf/fmw/context/jdk/jdk-8u121-linux-x64.tar.gz<br> conf/fmw/context/12211/installers/fmw_12.2.1.1.0_infrastructure.jar<br> conf/fmw/context/12211/installers/fmw_12.2.1.1.0_osb.jar<br> conf/fmw/context/12211/installers/fmw_12.2.1.1.0_soa.jar</td>
+</tr>
+<tr>
+<td>12.2.1.2.0</td>
+<td>conf/fmw/context/jdk/jdk-8u121-linux-x64.tar.gz<br> conf/fmw/context/12212/installers/fmw_12.2.1.2.0_infrastructure.jar<br> conf/fmw/context/12212/installers/fmw_12.2.1.2.0_osb.jar<br> conf/fmw/context/12212/installers/fmw_12.2.1.2.0_soa.jar</td>
+</tr>
+<tr>
+<td>12.2.1.3.0</td>
+<td>conf/fmw/context/jdk/jdk-8u131-linux-x64.tar.gz<br> conf/fmw/context/12213/installers/fmw_12.2.1.3.0_infrastructure.jar<br> conf/fmw/context/12213/installers/fmw_12.2.1.3.0_osb.jar<br> conf/fmw/context/12213/installers/fmw_12.2.1.3.0_soa.jar</td>
+</tr>
+</tbody>
+</table>
+<p>Once the Oracle installers are placed in the desired locations, you will need to install FMW by executing the following:</p>
+<pre><code>cd /opt/myst-studio/fmw
+./install-fmw.sh
+</code></pre><p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>For version 12.2.1.3.0 the <code>install-fmw.sh</code> script will also fix Oracle Maven Plugin dependency errors.</p>
+</div></div></p>
+<h2 id="starting-the-myst-studio-stack">Starting the MyST Studio Stack</h2>
+<p>After the successful installation navigate to the MyST Studio home (in our example, <code>/opt/myst-studio</code>) and execute the following:</p>
+<pre><code>cd /opt/myst-studio/bin
+./start.sh
+</code></pre><p>Once the <code>start.sh</code> has completed you should be able to access the MyST Studio console at <code>https://&lt;your host&gt;/console</code>.</p>
+<p>You can see the details of your running instances by executing <code>docker ps</code> from the command line.</p>
+<h2 id="configuring-maven-for-automated-build-of-oracle-middleware">Configuring Maven for Automated Build of Oracle Middleware</h2>
+<p>If you choose <strong>Build Extensions for Oracle Middleware</strong> when installing MyST, Maven must be configured on the build server, before you can build applications to run on products such as SOA, BPM, OSB and ADF. This can be done by simply executing the following from the MyST Studio home where SHORT_VERSION could be 122130 if you installed OFMW 12.2.1.3.0.</p>
+<pre><code>cd /opt/myst-studio/bin
+./configure-maven.sh &lt;SHORT_VERSION&gt;
+</code></pre><p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>If you skipped the post-installation steps documented in the section on <strong>Configuring the Build Extensions</strong> the above command will not succeed.</p>
+</div></div></p>
+<h2 id="offline-installation">Offline Installation</h2>
+<p>It is highly recommended that proxied internet access be available for the MyST server. This allows for easy upgrade of MyST by simply specifying a version number to download (e.g. <code>./upgrade.sh 5.5.0.0</code>). In an event that MyST Studio does not have internet access, you will need to download the required MyST Studio Docker Images from a host with internet access and then copy them to the MyST Server before executing the <code>start.sh</code> or <code>upgrade.sh</code>. Depending on whether you choose &quot;MyST Build Server&quot; and &quot;MyST Artifact Repository&quot;, there may be multiple Docker images that need to be downloaded and copied to the server.</p>
+<h3 id="myst-studio-offline">MyST Studio (Offline)</h3>
+<p>The MyST Studio Docker Image can be downloaded from the MyST website.</p>
+<p>     <a href="install.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="install.png" alt="">
+     </a></p>
+<p>After downloading the MyST Studio installer from the website, copy it to the MyST host and execute the following</p>
+<pre><code>gunzip myst-studio-docker-image-5.5.0.0.tar.gz
+sudo docker load -i myst-studio-docker-image-5.5.0.0.tar
+docker tag  docker-registry.rubiconred.aws:5000/myst-studio:5.5.0.0 myst-studio
+</code></pre><p>Make sure that you replace the above version details to correspond to that version of MyST that was downloaded.</p>
+<h3 id="myst-build-server-offline">MyST Build Server (Offline)</h3>
+<p>If you are planning to use MyST Build Server on a host without internet access, from a host with internet access and Docker installed run the following:</p>
+<pre><code>docker pull jenkins
+docker save jenkins &gt; myst-build-base.tar
+</code></pre><p>Then copy the <code>myst-build-base.tar</code> to the MyST host and execute the following:</p>
+<pre><code>docker load -i myst-build-base.tar
+</code></pre><h3 id="myst-artifact-repository-offline">MyST Artifact Repository (Offline)</h3>
+<p>If you are planning to use MyST Artifact Repository on a host without internet access, from a host with internet access and Docker + MyST installed run the following:</p>
+<pre><code>/opt/myst-studio/bin/pull.sh
+docker save maven-repository &gt; maven-repository.tar
+</code></pre><p>Then copy the <code>maven-repository.tar</code> to the MyST host and execute the following:</p>
+<pre><code>docker load -i maven-repository.tar
+</code></pre><h3 id="build-extensions-for-oracle-middleware-offline">Build Extensions for Oracle Middleware (Offline)</h3>
+<p>If you are planning to use MyST Artifact Repository on a host without internet access, from a host with internet access and Docker + MyST installed run the following:</p>
+<pre><code>docker pull oraclelinux:7
+docker save oraclelinux:7 &gt; oracle-linux.tar
+</code></pre><p>Then copy the <code>oracle-linux.tar</code> to the MyST host and execute the following:</p>
+<pre><code>docker load -i oracle-linux.tar
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../requirements/" class="navigation navigation-prev " aria-label="Previous page: System Requirements">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../alternatives/" class="navigation navigation-next " aria-label="Next page: Alternative Installations">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Docker-based Installation","level":"10.1.2","depth":2,"next":{"title":"Alternative Installations","level":"10.1.3","depth":2,"path":"installation/myst-studio/alternatives/README.md","ref":"installation/myst-studio/alternatives/README.md","articles":[]},"previous":{"title":"System Requirements","level":"10.1.1","depth":2,"path":"installation/myst-studio/requirements/README.md","ref":"installation/myst-studio/requirements/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{"myst_repo":"../../demos/myst-build","file1":"../../demos/myst-build/myst/fc-parent/fc-sdk/fc-studio-sdk-payload/src/test/resources/src/artifacts/sca/pom.xml"},"plugins":["hints","simple-page-toc","custom-favicon","ga","fancybox"],"pluginsConfig":{"disqus":{"shortName":"myst-studio-documentation"},"fancybox":{"helpers":{"buttons":{}}},"simple-page-toc":{"maxDepth":7,"skipFirstH1":true},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"assets/favicon.ico","custom-favicon":{},"ga":{"configuration":"auto","token":"UA-35856338-5"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"installation/myst-studio/docker/README.md","mtime":"2018-07-26T04:57:13.210Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-09-23T06:17:23.355Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1664 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Users, Groups, Roles and Policies · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="applying-certificates.html" />
+    
+    
+    <link rel="prev" href="web-tier.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Title and Copyright Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../../introduction/">
+            
+                <a href="../../../../introduction/">
+            
+                    
+                    Rubicon Red MyST
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../../introduction/platform-provisioning/">
+            
+                <a href="../../../../introduction/platform-provisioning/">
+            
+                    
+                    Platform Provisioning and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../../../introduction/application-release-automation/">
+            
+                <a href="../../../../introduction/application-release-automation/">
+            
+                    
+                    Application Release Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../../security/">
+            
+                <a href="../../../security/">
+            
+                    
+                    Security Salt and Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../../infrastructure/">
+            
+                <a href="../../../../infrastructure/">
+            
+                    
+                    Infrastructure Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../../../infrastructure/environment-types/">
+            
+                <a href="../../../../infrastructure/environment-types/">
+            
+                    
+                    Environment Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../../../infrastructure/compute-definitions/">
+            
+                <a href="../../../../infrastructure/compute-definitions/">
+            
+                    
+                    Compute Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../../../infrastructure/providers/pre-existing/">
+            
+                <a href="../../../../infrastructure/providers/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../../../infrastructure/providers/on-demand/aws/">
+            
+                <a href="../../../../infrastructure/providers/on-demand/aws/">
+            
+                    
+                    On-Demand Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../../../infrastructure/providers/hosts/">
+            
+                <a href="../../../../infrastructure/providers/hosts/">
+            
+                    
+                    Host Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Platform Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../../blueprints/">
+            
+                <a href="../../../blueprints/">
+            
+                    
+                    Platform Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../../templates/">
+            
+                <a href="../../../templates/">
+            
+                    
+                    Platform Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../../models/">
+            
+                <a href="../../../models/">
+            
+                    
+                    Platform Models
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../../../models/pre-existing/">
+            
+                <a href="../../../models/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../../../models/on-demand-aws/">
+            
+                <a href="../../../models/on-demand-aws/">
+            
+                    
+                    On Demand (AWS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../../cloud/instances/">
+            
+                <a href="../../../cloud/instances/">
+            
+                    
+                    Registering Cloud Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../../provisioning/">
+            
+                <a href="../../../provisioning/">
+            
+                    
+                    Provisioning Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../../update/">
+            
+                <a href="../../../update/">
+            
+                    
+                    Updating Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../../definitions/">
+            
+                <a href="../../../definitions/">
+            
+                    
+                    Maintaining Platform Definitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" data-path="../../../definitions/version-control/">
+            
+                <a href="../../../definitions/version-control/">
+            
+                    
+                    Platform Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2" data-path="../../../definitions/editor/">
+            
+                <a href="../../../definitions/editor/">
+            
+                    
+                    Platform Editor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.2.1" data-path="../../../definitions/editor/control-bar/">
+            
+                <a href="../../../definitions/editor/control-bar/">
+            
+                    
+                    Control Bar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.2" data-path="../../../definitions/editor/tree-view/">
+            
+                <a href="../../../definitions/editor/tree-view/">
+            
+                    
+                    Tree View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.3" data-path="../../../definitions/editor/properties-view/">
+            
+                <a href="../../../definitions/editor/properties-view/">
+            
+                    
+                    Properties View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.4" data-path="../../../definitions/editor/topology-view/">
+            
+                <a href="../../../definitions/editor/topology-view/">
+            
+                    
+                    Topology View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.5" data-path="../../../definitions/editor/source-view/">
+            
+                <a href="../../../definitions/editor/source-view/">
+            
+                    
+                    Source View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.6" data-path="../../../definitions/editor/property-references/">
+            
+                <a href="../../../definitions/editor/property-references/">
+            
+                    
+                    Using Property References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../../management/">
+            
+                <a href="../../../management/">
+            
+                    
+                    Managing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../../introspection/">
+            
+                <a href="../../../introspection/">
+            
+                    
+                    Introspecting Existing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../../../upgrade/">
+            
+                <a href="../../../upgrade/">
+            
+                    
+                    Upgrading Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Platform Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    WebLogic Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../patches/">
+            
+                <a href="../patches/">
+            
+                    
+                    Oracle Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../jdbc/">
+            
+                <a href="../jdbc/">
+            
+                    
+                    Data Sources (JDBC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../jms/">
+            
+                <a href="../jms/">
+            
+                    
+                    Java Messaging Service (JMS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../jms/persistent-stores/">
+            
+                <a href="../jms/persistent-stores/">
+            
+                    
+                    Persistent Stores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.2" data-path="../jms/modules/">
+            
+                <a href="../jms/modules/">
+            
+                    
+                    JMS Modules and Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.3" data-path="../jms/store-and-forward/">
+            
+                <a href="../jms/store-and-forward/">
+            
+                    
+                    Store and Forward (SAF) Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../jca-adapters/">
+            
+                <a href="../jca-adapters/">
+            
+                    
+                    JCA Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../work-managers/">
+            
+                <a href="../work-managers/">
+            
+                    
+                    Work Managers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="load-balancer-configuration.html">
+            
+                <a href="load-balancer-configuration.html">
+            
+                    
+                    Load Balancer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="web-tier.html">
+            
+                <a href="web-tier.html">
+            
+                    
+                    Webtier Routing Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.1.9" data-path="configuring-security.html">
+            
+                <a href="configuring-security.html">
+            
+                    
+                    Users, Groups, Roles and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.10" data-path="applying-certificates.html">
+            
+                <a href="applying-certificates.html">
+            
+                    
+                    Keystore Certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.11" data-path="setting-startup-and-shutdown-classes.html">
+            
+                <a href="setting-startup-and-shutdown-classes.html">
+            
+                    
+                    Startup and Shutdown Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.12" data-path="weblogic-deployment-targeting.html">
+            
+                <a href="weblogic-deployment-targeting.html">
+            
+                    
+                    Weblogic Deployment Targeting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../../../build/">
+            
+                <a href="../../../../build/">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../../../build/server/configuration/">
+            
+                <a href="../../../../build/server/configuration/">
+            
+                    
+                    Build Server Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1.1" data-path="../../../../infrastructure/continuous-delivery-profile/">
+            
+                <a href="../../../../infrastructure/continuous-delivery-profile/">
+            
+                    
+                    Continuous Delivery Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.2" data-path="../../../../build/server/configuration/jenkins/">
+            
+                <a href="../../../../build/server/configuration/jenkins/">
+            
+                    
+                    MyST Studio Plugin for Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../../../../build/maven/">
+            
+                <a href="../../../../build/maven/">
+            
+                    
+                    Configuring Maven Builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../../../../build/ci/">
+            
+                <a href="../../../../build/ci/">
+            
+                    
+                    Configuring Automated Builds 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.3.1" data-path="../../../../build/ci/jenkins/">
+            
+                <a href="../../../../build/ci/jenkins/">
+            
+                    
+                    Configuring Jenkins Build Jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../../../../build/artifacts/">
+            
+                <a href="../../../../build/artifacts/">
+            
+                    
+                    Artifact Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../../../../build/deploy-config/">
+            
+                <a href="../../../../build/deploy-config/">
+            
+                    
+                    Deploy Time Customizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.5.1" data-path="../../../../howtos/use-myst-generic-configuration-plans.html">
+            
+                <a href="../../../../howtos/use-myst-generic-configuration-plans.html">
+            
+                    
+                    MyST Configuration Plans
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../../../deploy/application/">
+            
+                <a href="../../../../deploy/application/">
+            
+                    
+                    Application Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../../../deploy/application/blueprints/">
+            
+                <a href="../../../../deploy/application/blueprints/">
+            
+                    
+                    Configuring Application Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../../../release/">
+            
+                <a href="../../../../release/">
+            
+                    
+                    Release Pipelines
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../../../release/pipeline/organization/">
+            
+                <a href="../../../../release/pipeline/organization/">
+            
+                    
+                    Pipeline Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1.1" data-path="../../../../release/pipeline/organization/groups/">
+            
+                <a href="../../../../release/pipeline/organization/groups/">
+            
+                    
+                    Pipeline Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.1.2" data-path="../../../../release/pipeline/organization/stream-types/">
+            
+                <a href="../../../../release/pipeline/organization/stream-types/">
+            
+                    
+                    Stream Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../../../release/pipeline/templates/">
+            
+                <a href="../../../../release/pipeline/templates/">
+            
+                    
+                    Pipeline Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../../../release/pipeline/">
+            
+                <a href="../../../../release/pipeline/">
+            
+                    
+                    Configuring Release Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../../../../release/pipeline/dashboard/">
+            
+                <a href="../../../../release/pipeline/dashboard/">
+            
+                    
+                    Release Pipeline Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../../../administration/">
+            
+                <a href="../../../../administration/">
+            
+                    
+                    Role-Based Access Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../../../administration/users/">
+            
+                <a href="../../../../administration/users/">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../../../../administration/roles/">
+            
+                <a href="../../../../administration/roles/">
+            
+                    
+                    Role Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../../../../administration/workspaces/">
+            
+                <a href="../../../../administration/workspaces/">
+            
+                    
+                    Workspace Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Administration Guides</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../../../installation/myst-studio/">
+            
+                <a href="../../../../installation/myst-studio/">
+            
+                    
+                    MyST Installation Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../../../installation/myst-studio/requirements/">
+            
+                <a href="../../../../installation/myst-studio/requirements/">
+            
+                    
+                    System Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../../../installation/myst-studio/docker/">
+            
+                <a href="../../../../installation/myst-studio/docker/">
+            
+                    
+                    Docker-based Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../../../../installation/myst-studio/alternatives/">
+            
+                <a href="../../../../installation/myst-studio/alternatives/">
+            
+                    
+                    Alternative Installations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../../../administration/management/">
+            
+                <a href="../../../../administration/management/">
+            
+                    
+                    MyST Management Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../../../administration/upgrade/">
+            
+                <a href="../../../../administration/upgrade/">
+            
+                    
+                    MyST Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendix</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../../../appendix/artifact/">
+            
+                <a href="../../../../appendix/artifact/">
+            
+                    
+                    Supported Artifacts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../../../../appendix/configuration/">
+            
+                <a href="../../../../appendix/configuration/">
+            
+                    
+                    Supported Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../../../../appendix/errors/">
+            
+                <a href="../../../../appendix/errors/">
+            
+                    
+                    Error Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >Users, Groups, Roles and Policies</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="users-groups-roles-and-policies">Users, Groups, Roles and Policies</h2>
+<p>MyST supports automating the security configuration of the following:</p>
+<ul>
+<li>Creating LDAP users and groups.</li>
+<li>Assigning role conditions.</li>
+<li>Assigning users to groups and roles.</li>
+<li>Creating, updating, and deleting credentials maps.</li>
+<li>Creating security policies on JMS modules.</li>
+</ul>
+<p>The users, roles, groups, credentials maps, and the security policies must be defined as <strong>Global Variables</strong> within the Platform Blueprint (or if desired, the Platform Model) using the properties below. </p>
+<!--
+> They will be applied by the `Control > Custom > "security"` action. Alternatively you can include it at provisioning time by adding `action.configure.post=security`. \(_**To be clarified\)**_
+-->
+<h3 id="user-definitions">User definitions</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Property name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">add.users</td>
+<td style="text-align:left">A comma-separated list of user names to be created.</td>
+</tr>
+<tr>
+<td style="text-align:left">USERNAME.password</td>
+<td style="text-align:left">Password for the user name.</td>
+</tr>
+<tr>
+<td style="text-align:left">USERNAME.description</td>
+<td style="text-align:left">Description for the user name.</td>
+</tr>
+<tr>
+<td style="text-align:left">USERNAME.group</td>
+<td style="text-align:left">Comma-separated list of groups to which you want to add the user name.</td>
+</tr>
+<tr>
+<td style="text-align:left">remove.users</td>
+<td style="text-align:left">Comma-separated list of users you want to remove</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-user-definitions">Example User definitions</h4>
+<pre><code>add.users=asmith,jstein
+asmith.password=welcome1
+asmith.group=Administrators
+jstein.password=welcome1
+</code></pre><h3 id="group-definitions">Group definitions</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Property name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">add.groups</td>
+<td style="text-align:left">Comma-separated list of groups you want to create.</td>
+</tr>
+<tr>
+<td style="text-align:left">remove.groups</td>
+<td style="text-align:left">Comma-separated list of groups you want to remove.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-group-definitions">Example Group definitions</h4>
+<pre><code>add.groups=Group1,Group2
+</code></pre><h3 id="application-role-definitions">Application Role definitions</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Property name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">add.app_roles</td>
+<td style="text-align:left">Comma-separated list of application role IDs that you want to create.</td>
+</tr>
+<tr>
+<td style="text-align:left">APP_ROLE_ID.app_stripe</td>
+<td style="text-align:left">The name of the application stripe for a given application role id.</td>
+</tr>
+<tr>
+<td style="text-align:left">APP_ROLE_ID.app_role_name</td>
+<td style="text-align:left">The name of the application role for a given application role id.</td>
+</tr>
+<tr>
+<td style="text-align:left">grant.app_roles</td>
+<td style="text-align:left">Comma-separated list of application role grant IDs to be created</td>
+</tr>
+<tr>
+<td style="text-align:left">GRANT_APP_ROLE_ID.app_stripe</td>
+<td style="text-align:left">The name of the application stripe where the role exists.</td>
+</tr>
+<tr>
+<td style="text-align:left">GRANT_APP_ROLE_ID.app_role_name</td>
+<td style="text-align:left">The name of the application role to be granted for the principal.</td>
+</tr>
+<tr>
+<td style="text-align:left">GRANT_APP_ROLE_ID.principal_type</td>
+<td style="text-align:left">The type of the principal, either &quot;user&quot; or &quot;group&quot; or &quot;role&quot;.</td>
+</tr>
+<tr>
+<td style="text-align:left">GRANT_APP_ROLE_ID.principal_name</td>
+<td style="text-align:left">The name of the principal to be granted the role</td>
+</tr>
+<tr>
+<td style="text-align:left">role.expressions</td>
+<td style="text-align:left">A comma-separated list of WebLogic roles to be have their role conditions updated.</td>
+</tr>
+<tr>
+<td style="text-align:left">role.expression.ROLE</td>
+<td style="text-align:left">The role expression for the given role.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-role-definitions">Example Role definitions</h4>
+<pre><code>add.app_roles=customArchitectRole,
+customDeveloperRole
+
+customArchitectRole.app_stripe=soa-infra
+customArchitectRole.app_role_name=customArchitectRole
+
+customDeveloperRole.app_stripe=soa-infra
+customDeveloperRole.app_role_name=customArchitectRole
+
+grant.app_roles=report-architect-jstein,report-architect-Group1
+
+report-architect-jstein.app_stripe=oracle-bam#11.1.1
+report-architect-jstein.app_role_name=Report Architect
+report-architect-jstein.principal_type=user
+report-architect-jstein.principal_name=jstein
+
+report-architect-Group1.app_stripe=oracle-bam#11.1.1
+report-architect-Group1.app_role_name=Report Architect
+report-architect-Group1.principal_type=group
+report-architect-Group1.principal_name=Group1
+
+role.expressions=Admin,IntegrationAdmin
+role.expression.Admin=Grp(Administrators)|Usr(jstein)
+role.expression.IntegrationAdmin=
+Grp(IntegrationAdministrators)|Grp(Group1)
+</code></pre><h3 id="credentials-map-definitions">Credentials Map definitions</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Property name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">credential.maps</td>
+<td style="text-align:left">Comma-separated list of credential map IDs.</td>
+</tr>
+<tr>
+<td style="text-align:left">credential.map.CREDENTIAL_MAP_ID.keys</td>
+<td style="text-align:left">Comma-separated list of credential map keys.</td>
+</tr>
+<tr>
+<td style="text-align:left">credential.map.CREDENTIAL_MAP_ID.KEY.username</td>
+<td style="text-align:left">The user name for the credential map key.</td>
+</tr>
+<tr>
+<td style="text-align:left">credential.map.CREDENTIAL_MAP_ID.KEY.password</td>
+<td style="text-align:left">The password for the credential map key.</td>
+</tr>
+<tr>
+<td style="text-align:left">credential.map.CREDENTIAL_MAP_ID.KEY.description</td>
+<td style="text-align:left">The description for the credential map key.</td>
+</tr>
+<tr>
+<td style="text-align:left">credential.map.CREDENTIAL_MAP_ID.KEY.present</td>
+<td style="text-align:left">Specify whether the credential map key should be present or not. If set to false the credential map key is deleted. The default value is set to true.</td>
+</tr>
+<tr>
+<td style="text-align:left">credential.map.CREDENTIAL_MAP_ID.KEY.update-if-exists</td>
+<td style="text-align:left">Specify whether the credential map key should be updated if it already exists. The default value is false, which means that if the credential map key already exists it will not be updated.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-credential-map">Example Credential Map</h4>
+<pre><code>credential.maps=oracle.wsm.security
+credential.map.oracle.wsm.security.keys=owsm-key
+credential.map.oracle.wsm.security.owsm-key.username=DeploymentAdmin_ES
+credential.map.oracle.wsm.security.owsm-key.password=welcome1
+credential.map.oracle.wsm.security.owsm-key.description=Deployment Administrator
+</code></pre><h3 id="jms-security-policy-definitions">JMS Security Policy definitions</h3>
+<h4 id="example-jms-security-policy">Example JMS Security policy</h4>
+<p>The following is an example of a security policies definition created via <strong>Global Variables</strong>.</p>
+<pre><code>add.policies=myjmsmodule
+myjmsmodule.type=jms
+myjmsmodule.application=MyJMSModule
+myjmsmodule.credential.type=user
+myjmsmodule.credential.value=jsmith
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="web-tier.html" class="navigation navigation-prev " aria-label="Previous page: Webtier Routing Rules">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="applying-certificates.html" class="navigation navigation-next " aria-label="Next page: Keystore Certificates">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Users, Groups, Roles and Policies","level":"5.1.9","depth":2,"next":{"title":"Keystore Certificates","level":"5.1.10","depth":2,"path":"platform/resources/weblogic/servers/applying-certificates.md","ref":"platform/resources/weblogic/servers/applying-certificates.md","articles":[]},"previous":{"title":"Webtier Routing Rules","level":"5.1.8","depth":2,"path":"platform/resources/weblogic/servers/web-tier.md","ref":"platform/resources/weblogic/servers/web-tier.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{"myst_repo":"../../demos/myst-build","file1":"../../demos/myst-build/myst/fc-parent/fc-sdk/fc-studio-sdk-payload/src/test/resources/src/artifacts/sca/pom.xml"},"plugins":["hints","simple-page-toc","custom-favicon","ga","fancybox"],"pluginsConfig":{"disqus":{"shortName":"myst-studio-documentation"},"fancybox":{"helpers":{"buttons":{}}},"simple-page-toc":{"maxDepth":7,"skipFirstH1":true},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"assets/favicon.ico","custom-favicon":{},"ga":{"configuration":"auto","token":"UA-35856338-5"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"platform/resources/weblogic/servers/configuring-security.md","mtime":"2018-03-09T01:49:37.586Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-09-23T06:17:23.355Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

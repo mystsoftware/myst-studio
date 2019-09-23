@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.rubiconred</groupId>
+    <artifactId>myst-studio-docs</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <skipChecks>false</skipChecks>
+        <build-tmpdir>/tmp/myst-studio</build-tmpdir>
+    </properties>
+    <profiles>
+        <profile>
+            <id>run-dependency-check</id>
+            <activation>
+                <property>
+                    <name>!skipChecks</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.7</version>
+                        <executions>
+                            <execution>
+                                <id>remove-generated-files</id>
+                                <phase>clean</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <target>
+                                        <delete dir="${build-tmpdir}" />
+                                    </target>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>check-dependencies-exists</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <target>
+                                        <exec executable="/bin/bash" resultproperty="git.result" failonerror="false">
+                                            <arg value="-c" />
+                                            <arg value="git version" />
+                                        </exec>
+                                        <condition property="git.check.failed">
+                                            <not>
+                                                <equals arg1="${git.result}" arg2="0" />
+                                            </not>
+                                        </condition>
+                                        <fail if="git.check.failed" message="You must have a working Git installation to push this project to Github Pages." />
+                                        <exec executable="/bin/bash" resultproperty="gitbook.result" failonerror="false">
+                                            <arg value="-c" />
+                                            <arg value="gitbook -V" />
+                                        </exec>
+                                        <condition property="gitbook.check.failed">
+                                            <not>
+                                                <equals arg1="${gitbook.result}" arg2="0" />
+                                            </not>
+                                        </condition>
+                                        <fail if="gitbook.check.failed" message="You must have a working Gitbook installation to build this documentation." />
+                                    </target>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <id>build-website</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <exec executable="/bin/bash" resultproperty="build.result" failonerror="false">
+                                    <arg value="-c" />
+                                    <arg value="gitbook install &amp;&amp; gitbook build" />
+                                </exec>
+                                <condition property="build.check.failed">
+                                    <not>
+                                        <equals arg1="${build.result}" arg2="0" />
+                                    </not>
+                                </condition>
+                                <fail if="build.check.failed" message="Gitbook build failed" />
+                            </target>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>github</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <!-- Pull latest gh-pages branch and copy in the latest files -->
+                                <exec executable="/bin/bash" dir="/tmp" failonerror="true">
+                                    <arg value="-c" />
+                                    <arg value="git clone git@github.com:rubiconred/myst-studio.git &amp;&amp; cd ${build-tmpdir} &amp;&amp; git checkout --orphan gh-pages &amp;&amp; rm -rf ${build-tmpdir}/* &amp;&amp; cp -R ${project.basedir}/_book/* ${build-tmpdir}" />
+                                </exec>
+                                <!-- Add the updated files and commit the change -->
+                                <tstamp>
+                                    <format property="current-time" pattern="MM/dd/yyyy hh:mm aa" />
+                                </tstamp>
+                                <property environment="env" />
+                                <exec executable="/bin/bash" dir="${build-tmpdir}" failonerror="true">
+                                    <arg value="-c" />
+                                    <arg value="git status &amp;&amp; git add . &amp;&amp; git commit -m 'Updated to ${project.version} by ${user.name} on ${current-time}'" />
+                                </exec>
+                                <!-- Push the website out and revert back to the main branch -->
+                                <exec executable="/bin/bash" dir="${build-tmpdir}" failonerror="true">
+                                    <arg value="-c" />
+                                    <arg value="git push origin gh-pages --force &amp;&amp; git checkout master" />
+                                </exec>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <descriptor>assembly.xml</descriptor>
+                    <appendAssemblyId>false</appendAssemblyId>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>create-archive</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

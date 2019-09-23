@@ -1,0 +1,1586 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Configuring Release Pipelines · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dashboard/" />
+    
+    
+    <link rel="prev" href="templates/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Title and Copyright Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../introduction/">
+            
+                <a href="../../introduction/">
+            
+                    
+                    Rubicon Red MyST
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../introduction/platform-provisioning/">
+            
+                <a href="../../introduction/platform-provisioning/">
+            
+                    
+                    Platform Provisioning and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../introduction/application-release-automation/">
+            
+                <a href="../../introduction/application-release-automation/">
+            
+                    
+                    Application Release Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../platform/security/">
+            
+                <a href="../../platform/security/">
+            
+                    
+                    Security Salt and Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../infrastructure/">
+            
+                <a href="../../infrastructure/">
+            
+                    
+                    Infrastructure Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../infrastructure/environment-types/">
+            
+                <a href="../../infrastructure/environment-types/">
+            
+                    
+                    Environment Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../infrastructure/compute-definitions/">
+            
+                <a href="../../infrastructure/compute-definitions/">
+            
+                    
+                    Compute Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../infrastructure/providers/pre-existing/">
+            
+                <a href="../../infrastructure/providers/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../infrastructure/providers/on-demand/aws/">
+            
+                <a href="../../infrastructure/providers/on-demand/aws/">
+            
+                    
+                    On-Demand Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../infrastructure/providers/hosts/">
+            
+                <a href="../../infrastructure/providers/hosts/">
+            
+                    
+                    Host Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../platform/">
+            
+                <a href="../../platform/">
+            
+                    
+                    Platform Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../platform/blueprints/">
+            
+                <a href="../../platform/blueprints/">
+            
+                    
+                    Platform Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../platform/templates/">
+            
+                <a href="../../platform/templates/">
+            
+                    
+                    Platform Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../platform/models/">
+            
+                <a href="../../platform/models/">
+            
+                    
+                    Platform Models
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../../platform/models/pre-existing/">
+            
+                <a href="../../platform/models/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../../platform/models/on-demand-aws/">
+            
+                <a href="../../platform/models/on-demand-aws/">
+            
+                    
+                    On Demand (AWS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../platform/cloud/instances/">
+            
+                <a href="../../platform/cloud/instances/">
+            
+                    
+                    Registering Cloud Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../platform/provisioning/">
+            
+                <a href="../../platform/provisioning/">
+            
+                    
+                    Provisioning Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../platform/update/">
+            
+                <a href="../../platform/update/">
+            
+                    
+                    Updating Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../platform/definitions/">
+            
+                <a href="../../platform/definitions/">
+            
+                    
+                    Maintaining Platform Definitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" data-path="../../platform/definitions/version-control/">
+            
+                <a href="../../platform/definitions/version-control/">
+            
+                    
+                    Platform Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2" data-path="../../platform/definitions/editor/">
+            
+                <a href="../../platform/definitions/editor/">
+            
+                    
+                    Platform Editor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.2.1" data-path="../../platform/definitions/editor/control-bar/">
+            
+                <a href="../../platform/definitions/editor/control-bar/">
+            
+                    
+                    Control Bar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.2" data-path="../../platform/definitions/editor/tree-view/">
+            
+                <a href="../../platform/definitions/editor/tree-view/">
+            
+                    
+                    Tree View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.3" data-path="../../platform/definitions/editor/properties-view/">
+            
+                <a href="../../platform/definitions/editor/properties-view/">
+            
+                    
+                    Properties View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.4" data-path="../../platform/definitions/editor/topology-view/">
+            
+                <a href="../../platform/definitions/editor/topology-view/">
+            
+                    
+                    Topology View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.5" data-path="../../platform/definitions/editor/source-view/">
+            
+                <a href="../../platform/definitions/editor/source-view/">
+            
+                    
+                    Source View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.6" data-path="../../platform/definitions/editor/property-references/">
+            
+                <a href="../../platform/definitions/editor/property-references/">
+            
+                    
+                    Using Property References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../platform/management/">
+            
+                <a href="../../platform/management/">
+            
+                    
+                    Managing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../platform/introspection/">
+            
+                <a href="../../platform/introspection/">
+            
+                    
+                    Introspecting Existing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../../platform/upgrade/">
+            
+                <a href="../../platform/upgrade/">
+            
+                    
+                    Upgrading Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../platform/resources/weblogic/">
+            
+                <a href="../../platform/resources/weblogic/">
+            
+                    
+                    Platform Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../platform/resources/weblogic/servers/">
+            
+                <a href="../../platform/resources/weblogic/servers/">
+            
+                    
+                    WebLogic Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../platform/resources/weblogic/patches/">
+            
+                <a href="../../platform/resources/weblogic/patches/">
+            
+                    
+                    Oracle Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../platform/resources/weblogic/jdbc/">
+            
+                <a href="../../platform/resources/weblogic/jdbc/">
+            
+                    
+                    Data Sources (JDBC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../platform/resources/weblogic/jms/">
+            
+                <a href="../../platform/resources/weblogic/jms/">
+            
+                    
+                    Java Messaging Service (JMS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../../platform/resources/weblogic/jms/persistent-stores/">
+            
+                <a href="../../platform/resources/weblogic/jms/persistent-stores/">
+            
+                    
+                    Persistent Stores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.2" data-path="../../platform/resources/weblogic/jms/modules/">
+            
+                <a href="../../platform/resources/weblogic/jms/modules/">
+            
+                    
+                    JMS Modules and Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.3" data-path="../../platform/resources/weblogic/jms/store-and-forward/">
+            
+                <a href="../../platform/resources/weblogic/jms/store-and-forward/">
+            
+                    
+                    Store and Forward (SAF) Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../../platform/resources/weblogic/jca-adapters/">
+            
+                <a href="../../platform/resources/weblogic/jca-adapters/">
+            
+                    
+                    JCA Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../../platform/resources/weblogic/work-managers/">
+            
+                <a href="../../platform/resources/weblogic/work-managers/">
+            
+                    
+                    Work Managers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../../platform/resources/weblogic/servers/load-balancer-configuration.html">
+            
+                <a href="../../platform/resources/weblogic/servers/load-balancer-configuration.html">
+            
+                    
+                    Load Balancer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../../platform/resources/weblogic/servers/web-tier.html">
+            
+                <a href="../../platform/resources/weblogic/servers/web-tier.html">
+            
+                    
+                    Webtier Routing Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.9" data-path="../../platform/resources/weblogic/servers/configuring-security.html">
+            
+                <a href="../../platform/resources/weblogic/servers/configuring-security.html">
+            
+                    
+                    Users, Groups, Roles and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.10" data-path="../../platform/resources/weblogic/servers/applying-certificates.html">
+            
+                <a href="../../platform/resources/weblogic/servers/applying-certificates.html">
+            
+                    
+                    Keystore Certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.11" data-path="../../platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                <a href="../../platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                    
+                    Startup and Shutdown Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.12" data-path="../../platform/resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                <a href="../../platform/resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                    
+                    Weblogic Deployment Targeting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../build/">
+            
+                <a href="../../build/">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../build/server/configuration/">
+            
+                <a href="../../build/server/configuration/">
+            
+                    
+                    Build Server Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1.1" data-path="../../infrastructure/continuous-delivery-profile/">
+            
+                <a href="../../infrastructure/continuous-delivery-profile/">
+            
+                    
+                    Continuous Delivery Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.2" data-path="../../build/server/configuration/jenkins/">
+            
+                <a href="../../build/server/configuration/jenkins/">
+            
+                    
+                    MyST Studio Plugin for Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../../build/maven/">
+            
+                <a href="../../build/maven/">
+            
+                    
+                    Configuring Maven Builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../../build/ci/">
+            
+                <a href="../../build/ci/">
+            
+                    
+                    Configuring Automated Builds 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.3.1" data-path="../../build/ci/jenkins/">
+            
+                <a href="../../build/ci/jenkins/">
+            
+                    
+                    Configuring Jenkins Build Jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../../build/artifacts/">
+            
+                <a href="../../build/artifacts/">
+            
+                    
+                    Artifact Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../../build/deploy-config/">
+            
+                <a href="../../build/deploy-config/">
+            
+                    
+                    Deploy Time Customizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.5.1" data-path="../../howtos/use-myst-generic-configuration-plans.html">
+            
+                <a href="../../howtos/use-myst-generic-configuration-plans.html">
+            
+                    
+                    MyST Configuration Plans
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../deploy/application/">
+            
+                <a href="../../deploy/application/">
+            
+                    
+                    Application Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../deploy/application/blueprints/">
+            
+                <a href="../../deploy/application/blueprints/">
+            
+                    
+                    Configuring Application Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Release Pipelines
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="organization/">
+            
+                <a href="organization/">
+            
+                    
+                    Pipeline Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1.1" data-path="organization/groups/">
+            
+                <a href="organization/groups/">
+            
+                    
+                    Pipeline Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.1.2" data-path="organization/stream-types/">
+            
+                <a href="organization/stream-types/">
+            
+                    
+                    Stream Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="templates/">
+            
+                <a href="templates/">
+            
+                    
+                    Pipeline Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="8.1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Configuring Release Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="dashboard/">
+            
+                <a href="dashboard/">
+            
+                    
+                    Release Pipeline Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../administration/">
+            
+                <a href="../../administration/">
+            
+                    
+                    Role-Based Access Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../administration/users/">
+            
+                <a href="../../administration/users/">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../../administration/roles/">
+            
+                <a href="../../administration/roles/">
+            
+                    
+                    Role Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../../administration/workspaces/">
+            
+                <a href="../../administration/workspaces/">
+            
+                    
+                    Workspace Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Administration Guides</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../installation/myst-studio/">
+            
+                <a href="../../installation/myst-studio/">
+            
+                    
+                    MyST Installation Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../installation/myst-studio/requirements/">
+            
+                <a href="../../installation/myst-studio/requirements/">
+            
+                    
+                    System Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../installation/myst-studio/docker/">
+            
+                <a href="../../installation/myst-studio/docker/">
+            
+                    
+                    Docker-based Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../../installation/myst-studio/alternatives/">
+            
+                <a href="../../installation/myst-studio/alternatives/">
+            
+                    
+                    Alternative Installations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../administration/management/">
+            
+                <a href="../../administration/management/">
+            
+                    
+                    MyST Management Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../administration/upgrade/">
+            
+                <a href="../../administration/upgrade/">
+            
+                    
+                    MyST Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendix</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../appendix/artifact/">
+            
+                <a href="../../appendix/artifact/">
+            
+                    
+                    Supported Artifacts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../../appendix/configuration/">
+            
+                <a href="../../appendix/configuration/">
+            
+                    
+                    Supported Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../../appendix/errors/">
+            
+                <a href="../../appendix/errors/">
+            
+                    
+                    Error Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Configuring Release Pipelines</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="configuring-release-pipelines">Configuring Release Pipelines</h2>
+<h3 id="list-release-pipelines">List Release Pipelines</h3>
+<p>From the side menu, navigate to<code>Release Management &gt; Pipelines</code>. This will display a list of existing Release Pipelines, similar to the one below.</p>
+<p>     <a href="img/releasePipelineList.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/releasePipelineList.png" alt="">
+     </a></p>
+<h3 id="creating-a-release-pipeline">Creating a Release Pipeline</h3>
+<p>Click <code>+ Create New</code>. This will open the <strong>Release Pipeline</strong> dialog. </p>
+<p>     <a href="img/releasePipelineCreate.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/releasePipelineCreate.png" alt="">
+     </a></p>
+<p>Specify the following values:</p>
+<ul>
+<li><strong>Name</strong> - Shorthand name for the Pipeline Template.</li>
+<li><strong>Description</strong> - A longer description of the Pipeline Template.</li>
+<li><strong>Pipeline Template</strong> - Select the Pipeline Template that we wish to base our Release Pipeline on. We can see that the list of Stages is automatically populated based on the selected template.</li>
+<li><strong>Pipeline Group</strong> - Select the Release Pipeline Group to which the pipeline belongs. </li>
+</ul>
+<p>By default, the stages in our Release Pipeline, plus the sequence and configuration of each stage, is pre-configured as defined by the Release Pipeline Template. We can edit these if required.</p>
+<ul>
+<li><p><strong>Add Stage</strong> - To add a stage, click <code>Add Stage</code>. This will open the <strong>Stage</strong> dialog. Here we need to specify the Stage Name, Description, Stage Environment Type and Promotion Rules.</p>
+</li>
+<li><p><strong>Edit Stage</strong> - To edit a stage, click on the pencil icon for the corresponding stage. This will open the  <strong>Stage</strong> dialog. Here we can modify the Stage Name, Description, and Promotion Rules.</p>
+</li>
+<li><p><strong>Delete Stage</strong> - To delete a stage, click on the trash can icon for the corresponding stage. MyST will prompt for confirmation of the Delete action, click <code>Yes</code> to proceed with the deletion of the stage.</p>
+</li>
+<li><p><strong>Sequence Stages</strong> - Releases are promoted through each stage from left to right. If we want to change the stage sequence, simply click on the left or right arrow next to the stage (outlined in red in the above screenshot) to move it to an earlier or later stage in the pipeline.</p>
+</li>
+</ul>
+<h3 id="configuring-release-streams">Configuring Release Streams</h3>
+<p>Within a Release Pipeline, a Stream is used to define the Platform Blueprint and Application Blueprint(s) to be promoted through each stage.</p>
+<p>A Release Pipeline can consist of one or more Release Streams. A Release Stream is targeted to an Oracle Middleware platform as defined by its Platform Blueprint and can contain zero or more Application Blueprints. </p>
+<p>A common use case for multiple Release Streams would be if you wanted to perform a release across multiple WebLogic domains such as a release to an ADF and SOA WebLogic Domain.</p>
+<p>For each stream, we would specify zero or more Application Blueprints that we want to deploy.</p>
+<h3 id="add-streams">Add Streams</h3>
+<p>To add a stream to our Release Pipeline, click <code>Add Stream</code>. This will open the  Stream Editor. Here we need to specify the following values:</p>
+<ul>
+<li><p><strong>Name</strong> - Shorthand name for the Release Stream.</p>
+</li>
+<li><p><strong>Description</strong> - A longer description of the Release Stream.</p>
+</li>
+<li><p><strong>Stream Type</strong> - Select the Stream Type to which the stream belongs.</p>
+</li>
+<li><p><strong>Platform Blueprint and Version</strong> - See Configuring a Streams Platform Blueprint Version.</p>
+</li>
+<li><p><strong>Application Blueprint(s)</strong> - Select the Application Blueprints to be promoted through the stream</p>
+</li>
+</ul>
+<h4 id="configuring-a-streams-platform-blueprint-version">Configuring a Stream&apos;s Platform Blueprint Version</h4>
+<p>For each stream, we need to define its target Platform Blueprint and Version. Once defined MyST will only make available for deployment Platform Models / Instances that are based on the stream&apos;s Platform Blueprint and Version.</p>
+<p>     <a href="img/streamPlatformBlueprint.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/streamPlatformBlueprint.png" alt="">
+     </a></p>
+<p>This is to ensure the Platform Instance deployed to at each stage of the Release Pipeline has the same configuration.</p>
+<p>As it is possible to have multiple revisions of the same Platform Blueprint version, MyST also allows us to specify how we want MyST to handle a scenario where a Platform Instance is not on the latest committed revision of the Platform Blueprint version. </p>
+<p>This is controlled with the <code>Behavior</code> option, which can be one of:</p>
+<ul>
+<li><p><strong>Update</strong> - MyST will update the Platform Instance to the latest committed revision of the specified version of the Platform Blueprint and Model. The update action will be performed prior to deploying any Application Blueprints to the Platform Instance.</p>
+</li>
+<li><p><strong>None</strong> - MyST will not perform any platform specific actions against the Platform Instance.</p>
+</li>
+</ul>
+<h4 id="configuring-a-streams-application-blueprints">Configuring a Stream&apos;s Application Blueprints</h4>
+<p>For each stream, we need to define the set of Application Blueprints whose deployment and promotion we want to manage as part of the release pipeline.</p>
+<p>Within the <code>Application Blueprint(s)</code> section of the <code>Stream</code> editor, select the required Application Blueprints from the list of Application Blueprints. </p>
+<p>     <a href="img/streamApplicationBlueprints.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/streamApplicationBlueprints.png" alt="">
+     </a></p>
+<p>For each Application Blueprint we need to specify:</p>
+<ul>
+<li><p><strong>Version</strong> - Specifies the version of an Application Blueprint to be deployed.</p>
+</li>
+<li><p><strong>Revision</strong> - Each time there is a new revision of an artifact contained within an Application Blueprint, MyST will create a new revision of the Application Blueprint. Within a Release Stream, we can configure MyST to always use the latest revision of an Application Blueprint or pin a specific revision of an Application Blueprint to the stream.</p>
+</li>
+<li><p><strong>Sequence</strong> - This defines the sequence in which Application Blueprints are deployed. To change the order, simply click on the up or down arrow next to the Application Blueprint (outlined in red above) to move it to an earlier or later stage in the deployment.</p>
+</li>
+</ul>
+<h4 id="configuring-platform-deployment-targets">Configuring Platform Deployment Targets</h4>
+<p>For each stream, we need to specify the target platform for each stage in the Release Pipeline. The target platform is the Platform Instance to which MyST will apply the Platform Configuration changes as defined by the Platform Blueprint as well as deploy and configure the artifacts defined by the Application Blueprints.</p>
+<p>For each Stream / Stage combination, we will see a drop down in the Release Pipeline (as outlined in red below). </p>
+<p>     <a href="img/releasePipelinePlatformTargets.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/releasePipelinePlatformTargets.png" alt="">
+     </a></p>
+<p>From this, we can select the Platform Model of the Platform Instance that we wish to target for deployment. The Platform Models available in the drop down will be automatically filtered:</p>
+<ul>
+<li><strong>Platform Blueprint and Version</strong> - The drop down list will be automatically filtered to only show Platform Models based on the Platform Blueprint and Version as specified in the stream configuration.</li>
+<li><strong>Environment Type</strong> - The drop down list will be automatically filtered to only show Platform Models for the stage environment type as specified in the stage configuration.</li>
+</ul>
+<p>When we select the Platform Model, MyST will update the Release Pipeline to show the Platform Blueprint and Platform Model revision for the corresponding Platform Instance (as outlined in red above). If the Platform Instance has not yet been provisioned, then this will be indicated.</p>
+<!-- TO DO
+### Post Deployment Actions
+-->
+<h3 id="activate-release-pipeline">Activate Release Pipeline</h3>
+<p>Once we have configured our Release Pipeline, we need to <strong>activate</strong> it before it can be used to promote a release into any environment.</p>
+<p>Once activated, the pipeline will execute periodically to automatically promote changes through the pipeline (where configured to do so) as well as allow the manual promotion of releases.</p>
+<p>As soon as we do this, MyST is going to start deploying our application into our CI environment because we set the CI stage to automatic.</p>
+<p>Upon activation, MyST will take us to the Release Pipeline Dashboard. Click on Refresh. We should now see that the deployment is pending.</p>
+<blockquote>
+<p>Whilst activated, the release pipeline configuration cannot be edited. The only change that can be made is to the Application Model Properties. If we need to edit the Release Pipeline, we first need to deactivate it. We can then make the required changes before re-activating the pipeline.</p>
+</blockquote>
+<p>To activate a Release Pipeline Template, from the side menu navigate to<code>Release Management &gt; Pipelines</code>. This will display a list of existing Release Pipelines.</p>
+<p>     <a href="img/releasePipelineActivate.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/releasePipelineActivate.png" alt="">
+     </a></p>
+<p>Click on the <code>Actions</code> drop-down in the top right-hand corner of the pipeline you wish to activate and select <code>Activate</code>. MyST will prompt for confirmation of the activation, click <code>Yes</code> to proceed.</p>
+<blockquote>
+<p>Alternatively, from within the Release Pipeline editor, we choose the option of <code>Save + Activate</code>. MyST will save any changes made to the Release Pipeline and then activate the Pipeline. Once active, MyST will open the Release Pipeline Dashboard.</p>
+</blockquote>
+<h3 id="deactivate-release-pipeline">Deactivate Release Pipeline</h3>
+<p>There are a number of occasions, where we may want to deactivate (or pause the execution of) a release pipeline, this includes when:</p>
+<ul>
+<li>We want to make configuration changes to our Release Pipeline. For example, we may want to add additional Application Blueprints to an existing stream. </li>
+<li>We have successfully delivered a release into Production, so may want to permanently deactivate the corresponding Release Pipeline.</li>
+<li>We may want to delete a Release Pipeline, for example, we may be merging multiple releases into a single Pipeline.</li>
+</ul>
+<p>To deactivate a Release Pipeline, from the side menu navigate to<code>Release Management &gt; Pipelines</code>. This will display a list of existing Release Pipelines. </p>
+<p>Click on the <code>Actions</code> drop-down in the top right-hand corner of the pipeline you wish to deactivate and select <code>Deactivate</code>. MyST will prompt for confirmation of the Deactivate action, click <code>Yes</code> to proceed.</p>
+<p>Once deactivated, MyST will stop the execution of the Release Pipeline until re-activated.</p>
+<h3 id="delete-release-pipeline">Delete Release Pipeline</h3>
+<p>MyST only allows the deletion of inactive pipelines. If we wish to delete a pipeline that is currently active, we first need to deactivate it.</p>
+<p>To delete an inactive Release Pipeline, from the side menu navigate to<code>Release Management &gt; Pipelines</code>. This will display a list of existing Release Pipelines. </p>
+<p>Click on the <code>Actions</code> drop-down in the top right-hand corner of the pipeline you wish to remove and select <code>Delete</code>. MyST will prompt for confirmation of the Delete action, click <code>Yes</code> to proceed with the deletion of the Release Pipeline.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="templates/" class="navigation navigation-prev " aria-label="Previous page: Pipeline Templates">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dashboard/" class="navigation navigation-next " aria-label="Next page: Release Pipeline Dashboards">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Configuring Release Pipelines","level":"8.1.3","depth":2,"next":{"title":"Release Pipeline Dashboards","level":"8.1.4","depth":2,"path":"release/pipeline/dashboard/README.md","ref":"release/pipeline/dashboard/README.md","articles":[]},"previous":{"title":"Pipeline Templates","level":"8.1.2","depth":2,"path":"release/pipeline/templates/README.md","ref":"release/pipeline/templates/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{"myst_repo":"../../demos/myst-build","file1":"../../demos/myst-build/myst/fc-parent/fc-sdk/fc-studio-sdk-payload/src/test/resources/src/artifacts/sca/pom.xml"},"plugins":["hints","simple-page-toc","custom-favicon","ga","fancybox"],"pluginsConfig":{"disqus":{"shortName":"myst-studio-documentation"},"fancybox":{"helpers":{"buttons":{}}},"simple-page-toc":{"maxDepth":7,"skipFirstH1":true},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"assets/favicon.ico","custom-favicon":{},"ga":{"configuration":"auto","token":"UA-35856338-5"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"release/pipeline/README.md","mtime":"2018-03-13T05:37:12.616Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-09-23T06:17:23.355Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

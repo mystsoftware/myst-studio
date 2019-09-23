@@ -1,0 +1,1600 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Properties View · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../topology-view/" />
+    
+    
+    <link rel="prev" href="../tree-view/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Title and Copyright Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../../introduction/">
+            
+                <a href="../../../../introduction/">
+            
+                    
+                    Rubicon Red MyST
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../../introduction/platform-provisioning/">
+            
+                <a href="../../../../introduction/platform-provisioning/">
+            
+                    
+                    Platform Provisioning and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../../../introduction/application-release-automation/">
+            
+                <a href="../../../../introduction/application-release-automation/">
+            
+                    
+                    Application Release Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../../security/">
+            
+                <a href="../../../security/">
+            
+                    
+                    Security Salt and Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../../infrastructure/">
+            
+                <a href="../../../../infrastructure/">
+            
+                    
+                    Infrastructure Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../../../infrastructure/environment-types/">
+            
+                <a href="../../../../infrastructure/environment-types/">
+            
+                    
+                    Environment Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../../../infrastructure/compute-definitions/">
+            
+                <a href="../../../../infrastructure/compute-definitions/">
+            
+                    
+                    Compute Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../../../infrastructure/providers/pre-existing/">
+            
+                <a href="../../../../infrastructure/providers/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../../../infrastructure/providers/on-demand/aws/">
+            
+                <a href="../../../../infrastructure/providers/on-demand/aws/">
+            
+                    
+                    On-Demand Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../../../infrastructure/providers/hosts/">
+            
+                <a href="../../../../infrastructure/providers/hosts/">
+            
+                    
+                    Host Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Platform Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../../blueprints/">
+            
+                <a href="../../../blueprints/">
+            
+                    
+                    Platform Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../../templates/">
+            
+                <a href="../../../templates/">
+            
+                    
+                    Platform Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../../models/">
+            
+                <a href="../../../models/">
+            
+                    
+                    Platform Models
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../../../models/pre-existing/">
+            
+                <a href="../../../models/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../../../models/on-demand-aws/">
+            
+                <a href="../../../models/on-demand-aws/">
+            
+                    
+                    On Demand (AWS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../../cloud/instances/">
+            
+                <a href="../../../cloud/instances/">
+            
+                    
+                    Registering Cloud Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../../provisioning/">
+            
+                <a href="../../../provisioning/">
+            
+                    
+                    Provisioning Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../../update/">
+            
+                <a href="../../../update/">
+            
+                    
+                    Updating Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Maintaining Platform Definitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" data-path="../../version-control/">
+            
+                <a href="../../version-control/">
+            
+                    
+                    Platform Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Platform Editor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.2.1" data-path="../control-bar/">
+            
+                <a href="../control-bar/">
+            
+                    
+                    Control Bar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.2" data-path="../tree-view/">
+            
+                <a href="../tree-view/">
+            
+                    
+                    Tree View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.7.2.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Properties View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.4" data-path="../topology-view/">
+            
+                <a href="../topology-view/">
+            
+                    
+                    Topology View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.5" data-path="../source-view/">
+            
+                <a href="../source-view/">
+            
+                    
+                    Source View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.6" data-path="../property-references/">
+            
+                <a href="../property-references/">
+            
+                    
+                    Using Property References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../../management/">
+            
+                <a href="../../../management/">
+            
+                    
+                    Managing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../../introspection/">
+            
+                <a href="../../../introspection/">
+            
+                    
+                    Introspecting Existing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../../../upgrade/">
+            
+                <a href="../../../upgrade/">
+            
+                    
+                    Upgrading Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../../resources/weblogic/">
+            
+                <a href="../../../resources/weblogic/">
+            
+                    
+                    Platform Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../../resources/weblogic/servers/">
+            
+                <a href="../../../resources/weblogic/servers/">
+            
+                    
+                    WebLogic Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../../resources/weblogic/patches/">
+            
+                <a href="../../../resources/weblogic/patches/">
+            
+                    
+                    Oracle Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../../resources/weblogic/jdbc/">
+            
+                <a href="../../../resources/weblogic/jdbc/">
+            
+                    
+                    Data Sources (JDBC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../../resources/weblogic/jms/">
+            
+                <a href="../../../resources/weblogic/jms/">
+            
+                    
+                    Java Messaging Service (JMS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../../../resources/weblogic/jms/persistent-stores/">
+            
+                <a href="../../../resources/weblogic/jms/persistent-stores/">
+            
+                    
+                    Persistent Stores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.2" data-path="../../../resources/weblogic/jms/modules/">
+            
+                <a href="../../../resources/weblogic/jms/modules/">
+            
+                    
+                    JMS Modules and Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.3" data-path="../../../resources/weblogic/jms/store-and-forward/">
+            
+                <a href="../../../resources/weblogic/jms/store-and-forward/">
+            
+                    
+                    Store and Forward (SAF) Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../../../resources/weblogic/jca-adapters/">
+            
+                <a href="../../../resources/weblogic/jca-adapters/">
+            
+                    
+                    JCA Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../../../resources/weblogic/work-managers/">
+            
+                <a href="../../../resources/weblogic/work-managers/">
+            
+                    
+                    Work Managers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../../../resources/weblogic/servers/load-balancer-configuration.html">
+            
+                <a href="../../../resources/weblogic/servers/load-balancer-configuration.html">
+            
+                    
+                    Load Balancer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../../../resources/weblogic/servers/web-tier.html">
+            
+                <a href="../../../resources/weblogic/servers/web-tier.html">
+            
+                    
+                    Webtier Routing Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.9" data-path="../../../resources/weblogic/servers/configuring-security.html">
+            
+                <a href="../../../resources/weblogic/servers/configuring-security.html">
+            
+                    
+                    Users, Groups, Roles and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.10" data-path="../../../resources/weblogic/servers/applying-certificates.html">
+            
+                <a href="../../../resources/weblogic/servers/applying-certificates.html">
+            
+                    
+                    Keystore Certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.11" data-path="../../../resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                <a href="../../../resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                    
+                    Startup and Shutdown Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.12" data-path="../../../resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                <a href="../../../resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                    
+                    Weblogic Deployment Targeting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../../../build/">
+            
+                <a href="../../../../build/">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../../../build/server/configuration/">
+            
+                <a href="../../../../build/server/configuration/">
+            
+                    
+                    Build Server Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1.1" data-path="../../../../infrastructure/continuous-delivery-profile/">
+            
+                <a href="../../../../infrastructure/continuous-delivery-profile/">
+            
+                    
+                    Continuous Delivery Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.2" data-path="../../../../build/server/configuration/jenkins/">
+            
+                <a href="../../../../build/server/configuration/jenkins/">
+            
+                    
+                    MyST Studio Plugin for Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../../../../build/maven/">
+            
+                <a href="../../../../build/maven/">
+            
+                    
+                    Configuring Maven Builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../../../../build/ci/">
+            
+                <a href="../../../../build/ci/">
+            
+                    
+                    Configuring Automated Builds 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.3.1" data-path="../../../../build/ci/jenkins/">
+            
+                <a href="../../../../build/ci/jenkins/">
+            
+                    
+                    Configuring Jenkins Build Jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../../../../build/artifacts/">
+            
+                <a href="../../../../build/artifacts/">
+            
+                    
+                    Artifact Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../../../../build/deploy-config/">
+            
+                <a href="../../../../build/deploy-config/">
+            
+                    
+                    Deploy Time Customizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.5.1" data-path="../../../../howtos/use-myst-generic-configuration-plans.html">
+            
+                <a href="../../../../howtos/use-myst-generic-configuration-plans.html">
+            
+                    
+                    MyST Configuration Plans
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../../../deploy/application/">
+            
+                <a href="../../../../deploy/application/">
+            
+                    
+                    Application Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../../../deploy/application/blueprints/">
+            
+                <a href="../../../../deploy/application/blueprints/">
+            
+                    
+                    Configuring Application Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../../../release/">
+            
+                <a href="../../../../release/">
+            
+                    
+                    Release Pipelines
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../../../release/pipeline/organization/">
+            
+                <a href="../../../../release/pipeline/organization/">
+            
+                    
+                    Pipeline Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1.1" data-path="../../../../release/pipeline/organization/groups/">
+            
+                <a href="../../../../release/pipeline/organization/groups/">
+            
+                    
+                    Pipeline Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.1.2" data-path="../../../../release/pipeline/organization/stream-types/">
+            
+                <a href="../../../../release/pipeline/organization/stream-types/">
+            
+                    
+                    Stream Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../../../release/pipeline/templates/">
+            
+                <a href="../../../../release/pipeline/templates/">
+            
+                    
+                    Pipeline Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../../../release/pipeline/">
+            
+                <a href="../../../../release/pipeline/">
+            
+                    
+                    Configuring Release Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../../../../release/pipeline/dashboard/">
+            
+                <a href="../../../../release/pipeline/dashboard/">
+            
+                    
+                    Release Pipeline Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../../../administration/">
+            
+                <a href="../../../../administration/">
+            
+                    
+                    Role-Based Access Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../../../administration/users/">
+            
+                <a href="../../../../administration/users/">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../../../../administration/roles/">
+            
+                <a href="../../../../administration/roles/">
+            
+                    
+                    Role Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../../../../administration/workspaces/">
+            
+                <a href="../../../../administration/workspaces/">
+            
+                    
+                    Workspace Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Administration Guides</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../../../installation/myst-studio/">
+            
+                <a href="../../../../installation/myst-studio/">
+            
+                    
+                    MyST Installation Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../../../installation/myst-studio/requirements/">
+            
+                <a href="../../../../installation/myst-studio/requirements/">
+            
+                    
+                    System Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../../../installation/myst-studio/docker/">
+            
+                <a href="../../../../installation/myst-studio/docker/">
+            
+                    
+                    Docker-based Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../../../../installation/myst-studio/alternatives/">
+            
+                <a href="../../../../installation/myst-studio/alternatives/">
+            
+                    
+                    Alternative Installations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../../../administration/management/">
+            
+                <a href="../../../../administration/management/">
+            
+                    
+                    MyST Management Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../../../administration/upgrade/">
+            
+                <a href="../../../../administration/upgrade/">
+            
+                    
+                    MyST Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendix</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../../../appendix/artifact/">
+            
+                <a href="../../../../appendix/artifact/">
+            
+                    
+                    Supported Artifacts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../../../../appendix/configuration/">
+            
+                <a href="../../../../appendix/configuration/">
+            
+                    
+                    Supported Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../../../../appendix/errors/">
+            
+                <a href="../../../../appendix/errors/">
+            
+                    
+                    Error Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >Properties View</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="properties-view">Properties View</h2>
+<p>The Properties View displays the list of properties and corresponding values defined for the selected component in the <a href="../tree-view/">Tree View</a>. It allows one to view as well as change configuration for individual attributes of a component.</p>
+<p>These attributes may just be simple types such as text values, numbers, enumerations, etc. but can also themselves be quite complex structures such as lists and maps.</p>
+<p>The view changes significantly based on whether it is seen in <code>view mode</code> or <code>edit mode</code>. Hence, each of these modes and the constructs within them are described in separate sections below.</p>
+<h3 id="view-mode">View Mode</h3>
+<p>The <code>view mode</code> is for viewing the properties and their values. It only shows those properties whose values have been set and not the entire set of properties that are available for the component being viewed.</p>
+<p>     <a href="img/viewMode.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/viewMode.png" alt="">
+     </a></p>
+<p>The different components of the property view are numbered in the image above. We will now explain what they mean and how each one can be used.</p>
+<ol>
+<li><p><strong>Component Title</strong> - This is a read-only title for the component which quickly helps us understand what it is. It normally consists of the name of the component and the type of it. </p>
+<p>In case there can be only one component of a particular type, the name attribute is omitted and only the type of the component is displayed which is sufficient to explain what it is.</p>
+<p>Above, we can see that the component is a <code>JDBC Data Source</code> with name <code>StockDS</code>.</p>
+</li>
+<li><p><strong>Component Help</strong> - On clicking on the component title, a popover is shown providing contextual help about it. This can help those who have previously not worked with this component in terms of understanding what it represents and how they can use it. </p>
+</li>
+<li><p><strong>Advanced Mode</strong> - A switch which if turned on, will display those properties which are earmarked as <code>advanced</code>. Advanced properties are those which normally are not shown to the user as most often they would not be configuring these.</p>
+<p>So, having the switch set to off would show lesser configuration to the user and hence reduces visual noise by hiding the lesser used properties.</p>
+<blockquote>
+<p>Once the switch is turned on, MyST remembers the setting for the current session and it will continue to stay on even when the user navigates to other components.</p>
+</blockquote>
+</li>
+<li><p><strong>Auto-Computed Properties</strong> - Any property value shown in a green background represents something which MyST has automatically computed and that which the user has not explicitly defined / overriden. For example, in the image, the type of the data source is auto-computed by MyST as <code>Generic</code>.</p>
+<p>The way MyST does this computation is based on various aspects. The most common among these is to rely on the basic information supplied by the user and guessing other configuration based on it. Other aspects include compliance with the Oracle Enterprise Deployment Guide, best practices learnt over time by working with different customer environments, etc.</p>
+<p><div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-mortar-board"></i></div><div class="hints-container"><p> All other properties whose values are shown in white represent user-defined properties. These also include those where MyST had computed an initial value but the the user chose to override it with his own value.</p>
+</div></div></p>
+</li>
+<li><p><strong>Resolved Values</strong> - When viewing properties, MyST shows the <code>resolved value</code> for it. If we hover over the value we will also see something called the <code>raw value</code> for the property. MyST only persists the <code>raw value</code> and while displaying shows the <code>resolved value</code>. </p>
+<p>     <a href="img/rawValue.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/rawValue.png" alt="">
+     </a></p>
+<p>In most cases, the resolved value and the raw value will be identical. However, the instances where these will be different are:</p>
+<p> a. When we have defined the original value using property references. In such cases, MyST expands the references and show the final value after expansion as the <code>resolved value</code>. Property references are explained in more depth <a href="../property-reference/README.md">here</a>.</p>
+<p> b. Boolean fields, drop-downs etc. In such cases, it is possible that the value shown as <code>resolved value</code> is just a display label whereas the <code>raw value</code> is the actual key. e.g. <code>Yes</code> might be shown as the <code>resolved value</code> whereas the actual <code>raw value</code> might be <code>true</code>. </p>
+</li>
+<li><p><strong>Property Help</strong> - Clicking on the question-mark sign (<code>?</code>) besides each property name shows a popover containing helpful information about it. </p>
+<p>     <a href="img/propertyHelpView.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/propertyHelpView.png" alt="">
+     </a></p>
+<p>This can help those who have previously not worked with this property in terms of understanding what it represents and how they can use / specify it.</p>
+</li>
+</ol>
+<h3 id="edit-mode">Edit Mode</h3>
+<p>The <code>edit mode</code> is for editing the properties and their values. It shows the entire set of properties that are available for the component being edited and guides us so that we can enter suitable values for each one of them.</p>
+<p>     <a href="img/editMode.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/editMode.png" alt="">
+     </a></p>
+<p>The different components of the property view in <code>edit mode</code> are numbered in the image above. We will now explain what they mean and how each one can be used. Note that the ones we already covered while describing the <code>view mode</code> are omitted here.</p>
+<ol>
+<li><p><strong>Simple Textual Property</strong> - The most basic form of capturing value for a property is by providing a <code>simple text</code> box. We just type in the desired value for out property into this box as shown in the image. These properties can be further split into three variations.</p>
+<p>A variation of this is the <code>number</code> property which shows a text box restricted to typing in integer values. </p>
+</li>
+<li><p><strong>Relationship Property</strong> - Often, we need to establish relationships between different components. The relationships could be one-to-one or one-to-many. In MyST, these relationships are also captured through property values.</p>
+<p>As shown in the image, here a <code>JDBC Data Source</code> has to specify the WebLogic clusters / servers where it needs to be targeted to. For this, it has a <code>Targets</code> property which presents a multi-select drop-down of clusters and servers based on the configuration and we have chosen <code>soa_cluster</code> from the available options.</p>
+<p>     <a href="img/multiRelationship.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/multiRelationship.png" alt="">
+     </a></p>
+</li>
+<li><p><strong>Enum Property</strong> - Many properties are restricted to a limited set of allowed values. For this, MyST has enum properties which allows us to choose from a pre-defined list of options.</p>
+<p>An often used form of this is the <code>boolean</code> property which shows a simple dropdown with <code>Yes</code> and <code>No</code> options which when chosen results in MyST storing either <code>true</code> or <code>false</code> as the property value.</p>
+<p>     <a href="img/singleSelect.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/singleSelect.png" alt="">
+     </a></p>
+</li>
+<li><p><strong>Password Property</strong> - As suggested by the name, these are properties whose values are sensitive and hence are captured as password fields. MyST stores values for such properties in an encrypted format.</p>
+</li>
+<li><p><strong>Key-Value Property</strong> - These properties allow us to specify values in a <code>map</code> like format where we can define multiple keys and their corresponding values. </p>
+<p>     <a href="img/keyValueParam.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/keyValueParam.png" alt="">
+     </a></p>
+<p>To add a new key, we should click on the <code>+</code> button. This will add a new row and allow us to fill in values for both the key and its corresponding value.</p>
+<p>We can also delete already added key-value pairs using the <code>Delete</code> button against each of them.</p>
+<p>Sometimes, it is more convenient to edit these key-value pairs in bulk when the number of such pairs is high or when we need to easily copy and paste from a properties file for example. To allow this, we can click on the green <code>Bulk Edit</code> button which will switch the editor into a <code>text-area</code> view such as below</p>
+<p>     <a href="img/bulkEdit.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/bulkEdit.png" alt="">
+     </a></p>
+<p>After making all changes inside this text-area, we should click on <code>Done</code> and we will be taken back to the original mode. </p>
+</li>
+<li><p><strong>Calculate Resolved Values</strong> - By default, MyST wont show the resolved values for every property. To display the resolved values at any time, we can click on the <code>Calculate resolved values</code> button. This will result in all resolved values showing up below the input values. </p>
+<p>     <a href="img/editResolvedValue.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/editResolvedValue.png" alt="">
+     </a></p>
+<p>In this context, <code>resolved value</code> means the final value that is going to be used by MyST when it configures the platform.</p>
+<p>In the image above, the data source type <code>Generic</code> resolves to <code>generic</code> in lower case as this is the actual value that MyST is going to use while configuring the data source.</p>
+<p>Another example is where the value has property references. In the image above, the database user property had a property reference <code>${[rxr.def.Product-rcu].param[db-user-prefix]}</code> which resolved to the value, <code>CI</code>, hence resulting in the value <code>CI_STOCK</code>. As before, this indicate that <code>CI_STOCK</code> is the value that is going to be used by MyST when it configures the data source.</p>
+</li>
+<li><p><strong>Complex Properties</strong> - As we told earlier, properties need not always be only simple types. Just as we saw examples of <code>map</code>style properties, we can also have <code>object</code> and <code>list</code> style properties.</p>
+<p>In the image above, <code>Driver Parameters</code> is an <code>object</code> style property which has other sub-properties within it.</p>
+<p>     <a href="img/complexList.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/complexList.png" alt="">
+     </a></p>
+<p>The image above is an example of a <code>list</code> style property. We can add items onto the list with an identifier for each of them. Each item in a list is itself an <code>object</code> style property which can again contain sub-properties as before.</p>
+<blockquote>
+<p>Note that complex properties can be at any level of depth.</p>
+</blockquote>
+</li>
+<li><p><strong>Mandatory Properties</strong> - For every component, there may be some properties which are mandatory and whose values have to be filled in before committing.</p>
+<p>     <a href="img/mandatory.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/mandatory.png" alt="">
+     </a></p>
+<p>If a mandatory property is left empty, MyST will show a validation error below it. However, MyST wont actually stop us from saving the configuration.</p>
+<p>This is because there might be instances where one wants to just save draft configuration without actually committing it and to allow for this, MyST prompts us but still allows to save.</p>
+<p><div class="alert alert-warning hints-alert"><div class="hints-icon"><i class="fa fa-wrench"></i></div><div class="hints-container"><p> Currently MyST does not do any mandatory property validations on a <code>commit</code>. In future, MyST may do validation of such configuration and prompt the user to fill in the values for all the missing properties.</p>
+</div></div></p>
+</li>
+<li><p><strong>Property Help</strong> - This is exactly same as described for the <code>view mode</code> with an exception. Here, the popover not only shows help text for the property but also shows an expression which can be used to reference the property in other places.</p>
+<p>     <a href="img/propertyHelpEdit.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/propertyHelpEdit.png" alt="">
+     </a></p>
+<p>In the image above, we can notice the <code>Expression</code> for the property. Using the <code>copy</code> button (outlined in red), we can also easily copy this expression to clipboard and then paste it wherever we need to reference it. To understand more about property references, see <a href="../property-reference/README.md">Using Property References</a></p>
+</li>
+<li><p><strong>Raw Mode Switch</strong> - This allows us to toggle between the displayed value / options and the actual raw value that MyST will store. This may prove to be quite useful in cases where we feel that the options MyST has presented are inadequate or in cases where we may want to use property references instead of choosing from the options.</p>
+<p>     <a href="img/editNonRawValue.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/editNonRawValue.png" alt="">
+     </a>
+     <a href="img/editRawValue.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/editRawValue.png" alt="">
+     </a></p>
+<p>See above how when the <code>Raw</code> switch is turned on, MyST shows a text box with the actual raw value, <code>generic</code> instead of the display label <code>Generic</code>. We can now go ahead and change this to any value we want, irrespective of whether or not it is a part of the allowed options.</p>
+<p>     <a href="img/editDifferentRawValue.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/editDifferentRawValue.png" alt="">
+     </a>
+In cases where we have entered a <code>raw value</code> which does not match any of the provided options and we wish to turn the <code>Raw</code> mode off, MyST will prompt us with a message asking us to decide whether we want to reset our value to what it was before or just stay on in the <code>Raw</code> mode.</p>
+<p>This is to prevent us from accidentally switching the <code>Raw</code> mode off and losing what we explictly entered as the value. It is a conscious choice that has to be made by us.</p>
+<p><strong>Relationships</strong> - For relationships, MyST automatically tries to use property references as the <code>raw value</code>.</p>
+<p>     <a href="img/editSelectResolvedValue.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/editSelectResolvedValue.png" alt="">
+     </a>
+     <a href="img/editSelectRawValue.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/editSelectRawValue.png" alt="">
+     </a></p>
+<p>See how in the example above, MyST tries to keep a property reference as the raw value instead of the literal value, <code>soa_cluster</code>.</p>
+<p>This is because even if someone goes ahead and changes the name of the cluster in future, the property value here would reflect the new name automatically rather than breaking the established relationship.</p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../tree-view/" class="navigation navigation-prev " aria-label="Previous page: Tree View">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../topology-view/" class="navigation navigation-next " aria-label="Next page: Topology View">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Properties View","level":"4.1.7.2.3","depth":4,"next":{"title":"Topology View","level":"4.1.7.2.4","depth":4,"path":"platform/definitions/editor/topology-view/README.md","ref":"platform/definitions/editor/topology-view/README.md","articles":[]},"previous":{"title":"Tree View","level":"4.1.7.2.2","depth":4,"path":"platform/definitions/editor/tree-view/README.md","ref":"platform/definitions/editor/tree-view/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{"myst_repo":"../../demos/myst-build","file1":"../../demos/myst-build/myst/fc-parent/fc-sdk/fc-studio-sdk-payload/src/test/resources/src/artifacts/sca/pom.xml"},"plugins":["hints","simple-page-toc","custom-favicon","ga","fancybox"],"pluginsConfig":{"disqus":{"shortName":"myst-studio-documentation"},"fancybox":{"helpers":{"buttons":{}}},"simple-page-toc":{"maxDepth":7,"skipFirstH1":true},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"assets/favicon.ico","custom-favicon":{},"ga":{"configuration":"auto","token":"UA-35856338-5"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"platform/definitions/editor/properties-view/README.md","mtime":"2018-03-13T05:37:12.495Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-09-23T06:17:23.355Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

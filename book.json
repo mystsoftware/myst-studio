@@ -1,0 +1,32 @@
+{
+    "gitbook": "3.2.2",
+    "plugins": [
+        "hints",
+        "simple-page-toc",
+        "custom-favicon",
+        "ga",
+        "fancybox"
+    ],
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": false
+        }, 
+        "simple-page-toc": {
+            "maxDepth": 7,
+            "skipFirstH1": true
+        },
+        "favicon": "assets/favicon.ico",
+        "disqus": {
+            "shortName": "myst-studio-documentation"
+        },
+        "ga": {
+            "token": "UA-35856338-5"
+        },
+        "fancybox": {
+        }
+    },
+    "variables": {
+       "myst_repo": "../../demos/myst-build",
+       "file1": "../../demos/myst-build/myst/fc-parent/fc-sdk/fc-studio-sdk-payload/src/test/resources/src/artifacts/sca/pom.xml"
+    }
+}

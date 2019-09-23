@@ -1,0 +1,1766 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Data Sources (JDBC) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../jms/" />
+    
+    
+    <link rel="prev" href="../patches/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Title and Copyright Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../../introduction/">
+            
+                <a href="../../../../introduction/">
+            
+                    
+                    Rubicon Red MyST
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../../introduction/platform-provisioning/">
+            
+                <a href="../../../../introduction/platform-provisioning/">
+            
+                    
+                    Platform Provisioning and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../../../introduction/application-release-automation/">
+            
+                <a href="../../../../introduction/application-release-automation/">
+            
+                    
+                    Application Release Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../../security/">
+            
+                <a href="../../../security/">
+            
+                    
+                    Security Salt and Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../../infrastructure/">
+            
+                <a href="../../../../infrastructure/">
+            
+                    
+                    Infrastructure Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../../../infrastructure/environment-types/">
+            
+                <a href="../../../../infrastructure/environment-types/">
+            
+                    
+                    Environment Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../../../infrastructure/compute-definitions/">
+            
+                <a href="../../../../infrastructure/compute-definitions/">
+            
+                    
+                    Compute Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../../../infrastructure/providers/pre-existing/">
+            
+                <a href="../../../../infrastructure/providers/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../../../infrastructure/providers/on-demand/aws/">
+            
+                <a href="../../../../infrastructure/providers/on-demand/aws/">
+            
+                    
+                    On-Demand Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../../../infrastructure/providers/hosts/">
+            
+                <a href="../../../../infrastructure/providers/hosts/">
+            
+                    
+                    Host Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Platform Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../../blueprints/">
+            
+                <a href="../../../blueprints/">
+            
+                    
+                    Platform Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../../templates/">
+            
+                <a href="../../../templates/">
+            
+                    
+                    Platform Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../../models/">
+            
+                <a href="../../../models/">
+            
+                    
+                    Platform Models
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../../../models/pre-existing/">
+            
+                <a href="../../../models/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../../../models/on-demand-aws/">
+            
+                <a href="../../../models/on-demand-aws/">
+            
+                    
+                    On Demand (AWS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../../cloud/instances/">
+            
+                <a href="../../../cloud/instances/">
+            
+                    
+                    Registering Cloud Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../../provisioning/">
+            
+                <a href="../../../provisioning/">
+            
+                    
+                    Provisioning Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../../update/">
+            
+                <a href="../../../update/">
+            
+                    
+                    Updating Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../../definitions/">
+            
+                <a href="../../../definitions/">
+            
+                    
+                    Maintaining Platform Definitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" data-path="../../../definitions/version-control/">
+            
+                <a href="../../../definitions/version-control/">
+            
+                    
+                    Platform Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2" data-path="../../../definitions/editor/">
+            
+                <a href="../../../definitions/editor/">
+            
+                    
+                    Platform Editor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.2.1" data-path="../../../definitions/editor/control-bar/">
+            
+                <a href="../../../definitions/editor/control-bar/">
+            
+                    
+                    Control Bar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.2" data-path="../../../definitions/editor/tree-view/">
+            
+                <a href="../../../definitions/editor/tree-view/">
+            
+                    
+                    Tree View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.3" data-path="../../../definitions/editor/properties-view/">
+            
+                <a href="../../../definitions/editor/properties-view/">
+            
+                    
+                    Properties View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.4" data-path="../../../definitions/editor/topology-view/">
+            
+                <a href="../../../definitions/editor/topology-view/">
+            
+                    
+                    Topology View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.5" data-path="../../../definitions/editor/source-view/">
+            
+                <a href="../../../definitions/editor/source-view/">
+            
+                    
+                    Source View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.6" data-path="../../../definitions/editor/property-references/">
+            
+                <a href="../../../definitions/editor/property-references/">
+            
+                    
+                    Using Property References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../../management/">
+            
+                <a href="../../../management/">
+            
+                    
+                    Managing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../../introspection/">
+            
+                <a href="../../../introspection/">
+            
+                    
+                    Introspecting Existing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../../../upgrade/">
+            
+                <a href="../../../upgrade/">
+            
+                    
+                    Upgrading Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Platform Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../servers/">
+            
+                <a href="../servers/">
+            
+                    
+                    WebLogic Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../patches/">
+            
+                <a href="../patches/">
+            
+                    
+                    Oracle Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Data Sources (JDBC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../jms/">
+            
+                <a href="../jms/">
+            
+                    
+                    Java Messaging Service (JMS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../jms/persistent-stores/">
+            
+                <a href="../jms/persistent-stores/">
+            
+                    
+                    Persistent Stores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.2" data-path="../jms/modules/">
+            
+                <a href="../jms/modules/">
+            
+                    
+                    JMS Modules and Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.3" data-path="../jms/store-and-forward/">
+            
+                <a href="../jms/store-and-forward/">
+            
+                    
+                    Store and Forward (SAF) Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../jca-adapters/">
+            
+                <a href="../jca-adapters/">
+            
+                    
+                    JCA Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../work-managers/">
+            
+                <a href="../work-managers/">
+            
+                    
+                    Work Managers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../servers/load-balancer-configuration.html">
+            
+                <a href="../servers/load-balancer-configuration.html">
+            
+                    
+                    Load Balancer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../servers/web-tier.html">
+            
+                <a href="../servers/web-tier.html">
+            
+                    
+                    Webtier Routing Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.9" data-path="../servers/configuring-security.html">
+            
+                <a href="../servers/configuring-security.html">
+            
+                    
+                    Users, Groups, Roles and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.10" data-path="../servers/applying-certificates.html">
+            
+                <a href="../servers/applying-certificates.html">
+            
+                    
+                    Keystore Certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.11" data-path="../servers/setting-startup-and-shutdown-classes.html">
+            
+                <a href="../servers/setting-startup-and-shutdown-classes.html">
+            
+                    
+                    Startup and Shutdown Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.12" data-path="../servers/weblogic-deployment-targeting.html">
+            
+                <a href="../servers/weblogic-deployment-targeting.html">
+            
+                    
+                    Weblogic Deployment Targeting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../../../build/">
+            
+                <a href="../../../../build/">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../../../build/server/configuration/">
+            
+                <a href="../../../../build/server/configuration/">
+            
+                    
+                    Build Server Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1.1" data-path="../../../../infrastructure/continuous-delivery-profile/">
+            
+                <a href="../../../../infrastructure/continuous-delivery-profile/">
+            
+                    
+                    Continuous Delivery Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.2" data-path="../../../../build/server/configuration/jenkins/">
+            
+                <a href="../../../../build/server/configuration/jenkins/">
+            
+                    
+                    MyST Studio Plugin for Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../../../../build/maven/">
+            
+                <a href="../../../../build/maven/">
+            
+                    
+                    Configuring Maven Builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../../../../build/ci/">
+            
+                <a href="../../../../build/ci/">
+            
+                    
+                    Configuring Automated Builds 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.3.1" data-path="../../../../build/ci/jenkins/">
+            
+                <a href="../../../../build/ci/jenkins/">
+            
+                    
+                    Configuring Jenkins Build Jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../../../../build/artifacts/">
+            
+                <a href="../../../../build/artifacts/">
+            
+                    
+                    Artifact Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../../../../build/deploy-config/">
+            
+                <a href="../../../../build/deploy-config/">
+            
+                    
+                    Deploy Time Customizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.5.1" data-path="../../../../howtos/use-myst-generic-configuration-plans.html">
+            
+                <a href="../../../../howtos/use-myst-generic-configuration-plans.html">
+            
+                    
+                    MyST Configuration Plans
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../../../deploy/application/">
+            
+                <a href="../../../../deploy/application/">
+            
+                    
+                    Application Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../../../deploy/application/blueprints/">
+            
+                <a href="../../../../deploy/application/blueprints/">
+            
+                    
+                    Configuring Application Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../../../release/">
+            
+                <a href="../../../../release/">
+            
+                    
+                    Release Pipelines
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../../../release/pipeline/organization/">
+            
+                <a href="../../../../release/pipeline/organization/">
+            
+                    
+                    Pipeline Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1.1" data-path="../../../../release/pipeline/organization/groups/">
+            
+                <a href="../../../../release/pipeline/organization/groups/">
+            
+                    
+                    Pipeline Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.1.2" data-path="../../../../release/pipeline/organization/stream-types/">
+            
+                <a href="../../../../release/pipeline/organization/stream-types/">
+            
+                    
+                    Stream Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../../../release/pipeline/templates/">
+            
+                <a href="../../../../release/pipeline/templates/">
+            
+                    
+                    Pipeline Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../../../release/pipeline/">
+            
+                <a href="../../../../release/pipeline/">
+            
+                    
+                    Configuring Release Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../../../../release/pipeline/dashboard/">
+            
+                <a href="../../../../release/pipeline/dashboard/">
+            
+                    
+                    Release Pipeline Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../../../administration/">
+            
+                <a href="../../../../administration/">
+            
+                    
+                    Role-Based Access Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../../../administration/users/">
+            
+                <a href="../../../../administration/users/">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../../../../administration/roles/">
+            
+                <a href="../../../../administration/roles/">
+            
+                    
+                    Role Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../../../../administration/workspaces/">
+            
+                <a href="../../../../administration/workspaces/">
+            
+                    
+                    Workspace Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Administration Guides</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../../../installation/myst-studio/">
+            
+                <a href="../../../../installation/myst-studio/">
+            
+                    
+                    MyST Installation Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../../../installation/myst-studio/requirements/">
+            
+                <a href="../../../../installation/myst-studio/requirements/">
+            
+                    
+                    System Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../../../installation/myst-studio/docker/">
+            
+                <a href="../../../../installation/myst-studio/docker/">
+            
+                    
+                    Docker-based Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../../../../installation/myst-studio/alternatives/">
+            
+                <a href="../../../../installation/myst-studio/alternatives/">
+            
+                    
+                    Alternative Installations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../../../administration/management/">
+            
+                <a href="../../../../administration/management/">
+            
+                    
+                    MyST Management Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../../../administration/upgrade/">
+            
+                <a href="../../../../administration/upgrade/">
+            
+                    
+                    MyST Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendix</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../../../appendix/artifact/">
+            
+                <a href="../../../../appendix/artifact/">
+            
+                    
+                    Supported Artifacts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../../../../appendix/configuration/">
+            
+                <a href="../../../../appendix/configuration/">
+            
+                    
+                    Supported Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../../../../appendix/errors/">
+            
+                <a href="../../../../appendix/errors/">
+            
+                    
+                    Error Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >Data Sources (JDBC)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="data-sources-jdbc">Data Sources (JDBC)</h2>
+<p>Configuring JDBC Data Sources in MyST is a two stage process.</p>
+<ul>
+<li>First, define the Data Source in the Platform Blueprint. Here we define the common and default configuration details for the Data Source.</li>
+<li>Second, define the environment specific details in each of the Platform Models, for example the database URL and connection credentials.</li>
+</ul>
+<h3 id="configuring-data-source-in-platform-blueprint">Configuring Data Source in Platform Blueprint</h3>
+<h4 id="add-data-source-to-platform-blueprint">Add Data Source to Platform Blueprint</h4>
+<p>To add a new data source in the Platform Blueprint, open the Platform Blueprint Editor and navigate to <code>Blueprint &gt; WebLogic Domain Configuration &gt; JDBC Data Sources</code>. Expand this component to see a list of currently defined data sources.</p>
+<p>Click on the <code>+</code> icon next to JDBC Data Sources (outlined in red) and enter a name for the JDBC Data Source. Click <code>OK</code>.</p>
+<p>     <a href="img/createDataSourceStep0.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/createDataSourceStep0.png" alt="">
+     </a></p>
+<blockquote>
+<p>Note: An alternative way of creating a new Data Source is to select an existing data source, right click on it and select <code>Clone</code>.</p>
+</blockquote>
+<p>     <a href="img/createDataSourceStep1.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/createDataSourceStep1.png" alt="">
+     </a></p>
+<p> Initially, none of the JDBC properties will be set.</p>
+<h4 id="edit-data-source-in-platform-blueprint">Edit Data Source in Platform Blueprint</h4>
+<p>To edit an existing data source in the Platform Blueprint, open the Platform Blueprint Editor and navigate to <code>Blueprint &gt; WebLogic Domain Configuration &gt; JDBC Data Sources</code>. Expand this component to see a list of currently defined data sources and select the data source you wish to edit. Enter the required values as detailed in <a href="#jdbc-data-source-properties">JDBC Data Source Properties</a></p>
+<h4 id="delete-data-source-from-platform-blueprint">Delete Data Source from Platform Blueprint</h4>
+<p>To delete an existing data source from a Platform Blueprint, open the Platform Blueprint Editor and navigate to <code>Blueprint &gt; WebLogic Domain Configuration &gt; JDBC Data Sources</code>.</p>
+<p>Expand this component to see a list of currently defined data sources. Select an existing data source, right click on it and select <code>Remove</code>.</p>
+<h3 id="jdbc-data-source-properties">JDBC Data Source Properties</h3>
+<p>This section details all the properties that we can set for a JDBC data source in the MyST platform blueprint. To see all properties that are available, ensure <code>Show advanced properties</code> has been enabled as illustrated below.</p>
+<p>     <a href="img/dataSourceProperties.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/dataSourceProperties.png" alt="">
+     </a></p>
+<p>The majority of these properties are optional. If a property is <code>Not Set</code> then MyST will not set that property when configuring a data source, meaning WebLogic will use the default value. Property values of type password are automatically encrypted by MyST.</p>
+<h4 id="component-properties">Component Properties</h4>
+<p>For each JDBC data source we need to specify the following component properties:</p>
+<ul>
+<li><p><strong>Name</strong> - Enter a name for this JDBC data source.</p>
+</li>
+<li><p><strong>Type</strong> - The type of data source. Supported types are <code>Generic</code>, <code>GridLink</code>. This value defaults to <code>Generic</code>.</p>
+</li>
+<li><p><strong>Target</strong> - Reference to the WebLogic Cluster or Admin Server that the JDBC Data Source is targeted to.</p>
+</li>
+<li><p><strong>Username</strong> - Username used to connect to the database. This may or may not be a generic value. If it changes per environment then you do not need to set it in your Platform Blueprint.</p>
+</li>
+</ul>
+<h4 id="general-parameters">General Parameters</h4>
+<p>Under <code>General Parameters</code> we can specify the following properties:</p>
+<ul>
+<li><p><strong>JNDI Name</strong> - Enter the JNDI path to where this JDBC data source will be bound.</p>
+</li>
+<li><p><strong>Transaction</strong> - The transaction protocol for a JDBC data source determines how connections from the data source are handled during transaction processing. Transactions within a JDBC data source are either global (XA) or non-global (local).</p>
+</li>
+<li><p><strong>Data Sources</strong> - Use this only when using Multi Data Source. Comma-separated list of data sources. If the Algorithm Type is set to <code>Failover</code>, the connection request is sent to the first data source in this list. In case the connection fails, the request is sent to the next data source in this list.</p>
+</li>
+<li><p><strong>Algorithm Type</strong> - Use this property only when using Multi Data Source. The algorithm type defines whether you want an active-active (load balancing) or an active-passive (failover) configuration. Supported types are <code>Load-Balancing</code> or <code>Failover</code>.</p>
+</li>
+<li><p><strong>Failover Request If Busy</strong> - Use this property only when using Multi Data Source and if the Algorithm Type is set to <code>Failover</code>. Set this property to <code>Yes</code> if you want to failover the connection request to the next data source if all the connections in the active data source are in busy.</p>
+</li>
+</ul>
+<h4 id="driver-parameters">Driver Parameters</h4>
+<p>Under <code>Driver Parameters</code> we need to specify the following properties:</p>
+<ul>
+<li><p><strong>URL</strong> - The JDBC connection URL.</p>
+</li>
+<li><p><strong>Driver Class Name</strong> - The fully qualified class name of the JDBC driver class used to create the physical database connections. Ensure that this driver class supports the transaction behavior you have configured in Global Transactions Protocol.</p>
+</li>
+<li><p><strong>Properties</strong> - Optional list of properties passed to the JDBC driver. For each property we need to define the following attributes:</p>
+<ul>
+<li><strong>Key</strong> - The property id</li>
+<li><strong>Value</strong> - The property value</li>
+</ul>
+</li>
+</ul>
+<h4 id="connection-pool">Connection Pool</h4>
+<p>Under <code>Connection Pool</code> we can specify the following properties (if not specified WebLogic will use default values):</p>
+<ul>
+<li><p><strong>Initial Capacity</strong> - The minimum number of physical connections to create when creating the connection pool.</p>
+</li>
+<li><p><strong>Capacity Increment</strong> - The number of additional connections created when new connections are added to the connection pool.</p>
+</li>
+<li><p><strong>Maximum Capacity</strong> - The maximum number of physical connections that this connection pool can contain.</p>
+</li>
+<li><p><strong>Minimum Capacity</strong> - The minimum number of physical connections that this connection pool maintains.</p>
+</li>
+<li><p><strong>Statement Cache Size</strong> - The number of prepared and callable statements stored in the cache. (This may increase server performance.)</p>
+</li>
+<li><p><strong>Test Connections On Reserve</strong> - Enables WebLogic Server to test a connection before giving it to a client. Requires that you specify a Test Table Name.</p>
+</li>
+<li><p><strong>Test Frequency</strong> - The number of seconds between when WebLogic Server tests unused connections. Requires that you specify a Test Table Name. Connections that fail the test are closed and reopened to re-establish a valid physical connection. If the test fails again, the connection is closed. When set to <code>0</code>, periodic testing is disabled.</p>
+</li>
+<li><p><strong>Test Table Name</strong> - The name of the database table to use when testing physical database connections. This name is required when you specify a Test Frequency and enable Test Reserved Connections.</p>
+</li>
+<li><p><strong>Seconds To Trust An Idle Pool Connection</strong> - The number of seconds within a connection use that WebLogic server trusts that the connection is still viable and will skip the connection test, either before delivering it to an application or during the periodic connection testing process.</p>
+</li>
+<li><p><strong>Connection Creation Retry Frequency Seconds</strong> - The number of seconds between attempts to establish connections to the database.</p>
+</li>
+<li><p><strong>Remove Infected Connections</strong> - When set to <code>Yes</code> (which is the default value), the physical connection is not returned to the connection pool after the application closes the logical connection. Instead, the physical connection is closed and recreated. When set to <code>No</code>, when the application closes the logical connection, the physical connection is returned to the connection pool and can be reused by the application or by another application.</p>
+</li>
+</ul>
+<h4 id="ons">ONS</h4>
+<p>Under <code>ONS</code> we can specify the following properties:</p>
+<ul>
+<li><p><strong>Fan Enabled</strong> - Applicable only to RAC configurations.</p>
+</li>
+<li><p><strong>ONS Nodes</strong> - JDBC Oracle parameters for ONS client configuration.</p>
+</li>
+</ul>
+<h3 id="configure-environment-specific-properties-in-platform-model">Configure environment specific properties in Platform Model</h3>
+<p>For each Platform Model we need to define the environment specific values for each Data Source, this typically comprises the following properties:</p>
+<ul>
+<li><p><strong>URL</strong> - This is the URL for the database that we want our Data Source to connect to.</p>
+</li>
+<li><p><strong>User Name</strong> - The user name used to connect to the database.</p>
+</li>
+<li><p><strong>Password</strong> - The password used to connect to the database.</p>
+</li>
+</ul>
+<p>When it comes to defining the <code>URL</code> and <code>User Name</code>, one option is to use MyST properties to minimize the number of specific property values we need to define within the Platform Model.</p>
+<p>For example, we could define username as</p>
+<pre><code>Username = ${[rxr.def.Product-rcu].param[db-user-prefix]}_STOCK
+</code></pre><p>The RCU prefix defined in the Platform Model will then be prepended to <code>_STOCK</code> to create the Username. So for example if the RCU prefix was <code>DEV</code> we would get the username <code>DEV_STOCK</code>.</p>
+<p>     <a href="img/modelDataSource.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/modelDataSource.png" alt="">
+     </a></p>
+<p>In addition, if we are creating multiple data sources against the same database, another option is to define a global variable in the Platform Blueprint, for example <code>stockDb.Url</code> which we can then reference in each Data Source that connects to that database as follows:</p>
+<pre><code>URL = ${var.stockDb.Url}
+</code></pre><p>We will, of course, need to set the value of <code>stockDb.Url</code> in the Platform Model, but would only need to set this once, irrespective of how many data sources referenced this.</p>
+<p>In addition, we may want to override other settings in the Platform Blueprint as they may differ between environments. For example, we may have smaller connection pools or only be using Oracle RAC in Pre-Prod and Prod.</p>
+<p>To edit a data source in the Platform Model, open the Platform Model Editor and navigate to <code>Blueprint &gt; WebLogic Domain Configuration &gt; JDBC Data Sources</code>. Expand this component to see a list of currently defined data sources and select the data source you wish to edit.</p>
+<p>Any values you enter here will override the corresponding value in the Platform Model. Once done, click <code>Save</code> to save these values within the Data Source and then click <code>Save &amp; Commit</code> to save the Platform Model and commit our changes.</p>
+<h3 id="example-jdbc-data-source-configurations">Example JDBC Data Source Configurations</h3>
+<p>The following section contains example JDBC Data Source configurations for:</p>
+<ul>
+<li>Oracle Database</li>
+<li>Oracle RAC</li>
+<li>IBM DB2</li>
+<li>Microsoft SQL Server</li>
+</ul>
+<h4 id="creating-a-jdbc-data-source-for-oracle-database">Creating a JDBC Data Source for Oracle Database</h4>
+<p>Below is an example configuration for an Oracle DB data source. The properties which are specific to Oracle DB are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Generic</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>jdbc:oracle:thin:@dbhost:1521/orcl</td>
+</tr>
+<tr>
+<td>Driver Class Name</td>
+<td>oracle.jdbc.OracleDriver</td>
+</tr>
+<tr>
+<td>Test Table Name</td>
+<td>SQL SELECT 1 FROM DUAL</td>
+</tr>
+</tbody>
+</table>
+<p>An example Oracle data source is shown below.</p>
+<p>     <a href="img/oracleDataSource.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/oracleDataSource.png" alt="">
+     </a></p>
+<h4 id="creating-a-jdbc-data-source-for-oracle-rac">Creating a JDBC Data Source for Oracle RAC</h4>
+<p>Below is an example configuration for an Oracle RAC data source. The properties which are specific to Oracle RAC in addition to the generic Oracle DB JDBC data source configuration are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Gridlink</td>
+</tr>
+<tr>
+<td>Url</td>
+<td>jdbc:oracle:thin:@(DESCRIPTION=(ENABLE=BROKEN)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=prod-dc1-scan)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=PRODDB.acme.com)))</td>
+</tr>
+<tr>
+<td>Fan Enabled</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Ons Nodes</td>
+<td>prod-dc1-scan:2016</td>
+</tr>
+</tbody>
+</table>
+<p>An example Oracle RAC data source is shown below.</p>
+<p>     <a href="img/oracleRacDataSource.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/oracleRacDataSource.png" alt="">
+     </a></p>
+<h4 id="creating-a-jdbc-data-source-for-microsoft-sql-server">Creating a JDBC Data Source for Microsoft SQL Server</h4>
+<p>Below is an example configuration for a Microsoft SQL Server data source. The properties which are specific to SQL Server are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>generic</td>
+</tr>
+<tr>
+<td>Url</td>
+<td>jdbc:weblogic:sqlserver://${var.sql.server.host}:${var.sql.server.port}</td>
+</tr>
+<tr>
+<td>Driver Name</td>
+<td>weblogic.jdbc.sqlserver.SQLServerDriver</td>
+</tr>
+</tbody>
+</table>
+<p>In addition we have specified the following Properties:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>databaseName</td>
+<td>${var.sql.server.sid}</td>
+</tr>
+<tr>
+<td>portNumber</td>
+<td>${var.sql.server.port}</td>
+</tr>
+<tr>
+<td>serverName</td>
+<td>${var.sql.server.host}</td>
+</tr>
+<tr>
+<td>user</td>
+<td>${var.sql.server.user}</td>
+</tr>
+</tbody>
+</table>
+<p>An example SQL Server data source is shown below.</p>
+<p>     <a href="img/sqlServerDataSource.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/sqlServerDataSource.png" alt="">
+     </a></p>
+<h4 id="creating-a-jdbc-data-source-for-ibm-db2">Creating a JDBC Data Source for IBM DB2</h4>
+<p>Below is an example configuration for a DB2 data source. The properties which are specific to DB2 are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>generic</td>
+</tr>
+<tr>
+<td>Url</td>
+<td>jdbc:db2://${var.db2host}:50000/${var.db2name}</td>
+</tr>
+<tr>
+<td>Driver Name</td>
+<td>com.ibm.db2.jcc.DB2Driver</td>
+</tr>
+<tr>
+<td>Test Table Name</td>
+<td>SQL SELECT COUNT(*) FROM SYSIBM.SYSTABLES</td>
+</tr>
+</tbody>
+</table>
+<p>In addition, we have specified the following Properties:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>driverType</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>An example DB2 data source is shown below.</p>
+<p>     <a href="img/db2DataSource.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/db2DataSource.png" alt="">
+     </a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../patches/" class="navigation navigation-prev " aria-label="Previous page: Oracle Patches">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../jms/" class="navigation navigation-next " aria-label="Next page: Java Messaging Service (JMS)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Data Sources (JDBC)","level":"5.1.3","depth":2,"next":{"title":"Java Messaging Service (JMS)","level":"5.1.4","depth":2,"path":"platform/resources/weblogic/jms/README.md","ref":"platform/resources/weblogic/jms/README.md","articles":[{"title":"Persistent Stores","level":"5.1.4.1","depth":3,"path":"platform/resources/weblogic/jms/persistent-stores/README.md","ref":"platform/resources/weblogic/jms/persistent-stores/README.md","articles":[]},{"title":"JMS Modules and Components","level":"5.1.4.2","depth":3,"path":"platform/resources/weblogic/jms/modules/README.md","ref":"platform/resources/weblogic/jms/modules/README.md","articles":[]},{"title":"Store and Forward (SAF) Configuration","level":"5.1.4.3","depth":3,"path":"platform/resources/weblogic/jms/store-and-forward/README.md","ref":"platform/resources/weblogic/jms/store-and-forward/README.md","articles":[]}]},"previous":{"title":"Oracle Patches","level":"5.1.2","depth":2,"path":"platform/resources/weblogic/patches/README.md","ref":"platform/resources/weblogic/patches/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{"myst_repo":"../../demos/myst-build","file1":"../../demos/myst-build/myst/fc-parent/fc-sdk/fc-studio-sdk-payload/src/test/resources/src/artifacts/sca/pom.xml"},"plugins":["hints","simple-page-toc","custom-favicon","ga","fancybox"],"pluginsConfig":{"disqus":{"shortName":"myst-studio-documentation"},"fancybox":{"helpers":{"buttons":{}}},"simple-page-toc":{"maxDepth":7,"skipFirstH1":true},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"assets/favicon.ico","custom-favicon":{},"ga":{"configuration":"auto","token":"UA-35856338-5"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"platform/resources/weblogic/jdbc/README.md","mtime":"2018-03-13T05:37:12.528Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-09-23T06:17:23.355Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

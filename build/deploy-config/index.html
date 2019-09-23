@@ -1,0 +1,1710 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Deploy Time Customizations · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../howtos/use-myst-generic-configuration-plans.html" />
+    
+    
+    <link rel="prev" href="../artifacts/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Title and Copyright Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../introduction/">
+            
+                <a href="../../introduction/">
+            
+                    
+                    Rubicon Red MyST
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../introduction/platform-provisioning/">
+            
+                <a href="../../introduction/platform-provisioning/">
+            
+                    
+                    Platform Provisioning and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../introduction/application-release-automation/">
+            
+                <a href="../../introduction/application-release-automation/">
+            
+                    
+                    Application Release Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../platform/security/">
+            
+                <a href="../../platform/security/">
+            
+                    
+                    Security Salt and Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../infrastructure/">
+            
+                <a href="../../infrastructure/">
+            
+                    
+                    Infrastructure Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../infrastructure/environment-types/">
+            
+                <a href="../../infrastructure/environment-types/">
+            
+                    
+                    Environment Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../infrastructure/compute-definitions/">
+            
+                <a href="../../infrastructure/compute-definitions/">
+            
+                    
+                    Compute Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../infrastructure/providers/pre-existing/">
+            
+                <a href="../../infrastructure/providers/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../infrastructure/providers/on-demand/aws/">
+            
+                <a href="../../infrastructure/providers/on-demand/aws/">
+            
+                    
+                    On-Demand Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../infrastructure/providers/hosts/">
+            
+                <a href="../../infrastructure/providers/hosts/">
+            
+                    
+                    Host Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../platform/">
+            
+                <a href="../../platform/">
+            
+                    
+                    Platform Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../platform/blueprints/">
+            
+                <a href="../../platform/blueprints/">
+            
+                    
+                    Platform Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../platform/templates/">
+            
+                <a href="../../platform/templates/">
+            
+                    
+                    Platform Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../platform/models/">
+            
+                <a href="../../platform/models/">
+            
+                    
+                    Platform Models
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../../platform/models/pre-existing/">
+            
+                <a href="../../platform/models/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../../platform/models/on-demand-aws/">
+            
+                <a href="../../platform/models/on-demand-aws/">
+            
+                    
+                    On Demand (AWS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../platform/cloud/instances/">
+            
+                <a href="../../platform/cloud/instances/">
+            
+                    
+                    Registering Cloud Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../platform/provisioning/">
+            
+                <a href="../../platform/provisioning/">
+            
+                    
+                    Provisioning Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../platform/update/">
+            
+                <a href="../../platform/update/">
+            
+                    
+                    Updating Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../platform/definitions/">
+            
+                <a href="../../platform/definitions/">
+            
+                    
+                    Maintaining Platform Definitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" data-path="../../platform/definitions/version-control/">
+            
+                <a href="../../platform/definitions/version-control/">
+            
+                    
+                    Platform Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2" data-path="../../platform/definitions/editor/">
+            
+                <a href="../../platform/definitions/editor/">
+            
+                    
+                    Platform Editor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.2.1" data-path="../../platform/definitions/editor/control-bar/">
+            
+                <a href="../../platform/definitions/editor/control-bar/">
+            
+                    
+                    Control Bar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.2" data-path="../../platform/definitions/editor/tree-view/">
+            
+                <a href="../../platform/definitions/editor/tree-view/">
+            
+                    
+                    Tree View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.3" data-path="../../platform/definitions/editor/properties-view/">
+            
+                <a href="../../platform/definitions/editor/properties-view/">
+            
+                    
+                    Properties View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.4" data-path="../../platform/definitions/editor/topology-view/">
+            
+                <a href="../../platform/definitions/editor/topology-view/">
+            
+                    
+                    Topology View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.5" data-path="../../platform/definitions/editor/source-view/">
+            
+                <a href="../../platform/definitions/editor/source-view/">
+            
+                    
+                    Source View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.6" data-path="../../platform/definitions/editor/property-references/">
+            
+                <a href="../../platform/definitions/editor/property-references/">
+            
+                    
+                    Using Property References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../platform/management/">
+            
+                <a href="../../platform/management/">
+            
+                    
+                    Managing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../platform/introspection/">
+            
+                <a href="../../platform/introspection/">
+            
+                    
+                    Introspecting Existing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../../platform/upgrade/">
+            
+                <a href="../../platform/upgrade/">
+            
+                    
+                    Upgrading Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../platform/resources/weblogic/">
+            
+                <a href="../../platform/resources/weblogic/">
+            
+                    
+                    Platform Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../platform/resources/weblogic/servers/">
+            
+                <a href="../../platform/resources/weblogic/servers/">
+            
+                    
+                    WebLogic Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../platform/resources/weblogic/patches/">
+            
+                <a href="../../platform/resources/weblogic/patches/">
+            
+                    
+                    Oracle Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../platform/resources/weblogic/jdbc/">
+            
+                <a href="../../platform/resources/weblogic/jdbc/">
+            
+                    
+                    Data Sources (JDBC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../platform/resources/weblogic/jms/">
+            
+                <a href="../../platform/resources/weblogic/jms/">
+            
+                    
+                    Java Messaging Service (JMS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../../platform/resources/weblogic/jms/persistent-stores/">
+            
+                <a href="../../platform/resources/weblogic/jms/persistent-stores/">
+            
+                    
+                    Persistent Stores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.2" data-path="../../platform/resources/weblogic/jms/modules/">
+            
+                <a href="../../platform/resources/weblogic/jms/modules/">
+            
+                    
+                    JMS Modules and Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.3" data-path="../../platform/resources/weblogic/jms/store-and-forward/">
+            
+                <a href="../../platform/resources/weblogic/jms/store-and-forward/">
+            
+                    
+                    Store and Forward (SAF) Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../../platform/resources/weblogic/jca-adapters/">
+            
+                <a href="../../platform/resources/weblogic/jca-adapters/">
+            
+                    
+                    JCA Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../../platform/resources/weblogic/work-managers/">
+            
+                <a href="../../platform/resources/weblogic/work-managers/">
+            
+                    
+                    Work Managers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../../platform/resources/weblogic/servers/load-balancer-configuration.html">
+            
+                <a href="../../platform/resources/weblogic/servers/load-balancer-configuration.html">
+            
+                    
+                    Load Balancer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../../platform/resources/weblogic/servers/web-tier.html">
+            
+                <a href="../../platform/resources/weblogic/servers/web-tier.html">
+            
+                    
+                    Webtier Routing Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.9" data-path="../../platform/resources/weblogic/servers/configuring-security.html">
+            
+                <a href="../../platform/resources/weblogic/servers/configuring-security.html">
+            
+                    
+                    Users, Groups, Roles and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.10" data-path="../../platform/resources/weblogic/servers/applying-certificates.html">
+            
+                <a href="../../platform/resources/weblogic/servers/applying-certificates.html">
+            
+                    
+                    Keystore Certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.11" data-path="../../platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                <a href="../../platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                    
+                    Startup and Shutdown Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.12" data-path="../../platform/resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                <a href="../../platform/resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                    
+                    Weblogic Deployment Targeting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../server/configuration/">
+            
+                <a href="../server/configuration/">
+            
+                    
+                    Build Server Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1.1" data-path="../../infrastructure/continuous-delivery-profile/">
+            
+                <a href="../../infrastructure/continuous-delivery-profile/">
+            
+                    
+                    Continuous Delivery Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.2" data-path="../server/configuration/jenkins/">
+            
+                <a href="../server/configuration/jenkins/">
+            
+                    
+                    MyST Studio Plugin for Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../maven/">
+            
+                <a href="../maven/">
+            
+                    
+                    Configuring Maven Builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../ci/">
+            
+                <a href="../ci/">
+            
+                    
+                    Configuring Automated Builds 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.3.1" data-path="../ci/jenkins/">
+            
+                <a href="../ci/jenkins/">
+            
+                    
+                    Configuring Jenkins Build Jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../artifacts/">
+            
+                <a href="../artifacts/">
+            
+                    
+                    Artifact Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Deploy Time Customizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.5.1" data-path="../../howtos/use-myst-generic-configuration-plans.html">
+            
+                <a href="../../howtos/use-myst-generic-configuration-plans.html">
+            
+                    
+                    MyST Configuration Plans
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../deploy/application/">
+            
+                <a href="../../deploy/application/">
+            
+                    
+                    Application Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../deploy/application/blueprints/">
+            
+                <a href="../../deploy/application/blueprints/">
+            
+                    
+                    Configuring Application Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../release/">
+            
+                <a href="../../release/">
+            
+                    
+                    Release Pipelines
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../release/pipeline/organization/">
+            
+                <a href="../../release/pipeline/organization/">
+            
+                    
+                    Pipeline Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1.1" data-path="../../release/pipeline/organization/groups/">
+            
+                <a href="../../release/pipeline/organization/groups/">
+            
+                    
+                    Pipeline Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.1.2" data-path="../../release/pipeline/organization/stream-types/">
+            
+                <a href="../../release/pipeline/organization/stream-types/">
+            
+                    
+                    Stream Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../release/pipeline/templates/">
+            
+                <a href="../../release/pipeline/templates/">
+            
+                    
+                    Pipeline Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../release/pipeline/">
+            
+                <a href="../../release/pipeline/">
+            
+                    
+                    Configuring Release Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../../release/pipeline/dashboard/">
+            
+                <a href="../../release/pipeline/dashboard/">
+            
+                    
+                    Release Pipeline Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../administration/">
+            
+                <a href="../../administration/">
+            
+                    
+                    Role-Based Access Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../administration/users/">
+            
+                <a href="../../administration/users/">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../../administration/roles/">
+            
+                <a href="../../administration/roles/">
+            
+                    
+                    Role Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../../administration/workspaces/">
+            
+                <a href="../../administration/workspaces/">
+            
+                    
+                    Workspace Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Administration Guides</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../installation/myst-studio/">
+            
+                <a href="../../installation/myst-studio/">
+            
+                    
+                    MyST Installation Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../installation/myst-studio/requirements/">
+            
+                <a href="../../installation/myst-studio/requirements/">
+            
+                    
+                    System Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../installation/myst-studio/docker/">
+            
+                <a href="../../installation/myst-studio/docker/">
+            
+                    
+                    Docker-based Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../../installation/myst-studio/alternatives/">
+            
+                <a href="../../installation/myst-studio/alternatives/">
+            
+                    
+                    Alternative Installations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../administration/management/">
+            
+                <a href="../../administration/management/">
+            
+                    
+                    MyST Management Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../administration/upgrade/">
+            
+                <a href="../../administration/upgrade/">
+            
+                    
+                    MyST Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendix</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../appendix/artifact/">
+            
+                <a href="../../appendix/artifact/">
+            
+                    
+                    Supported Artifacts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../../appendix/configuration/">
+            
+                <a href="../../appendix/configuration/">
+            
+                    
+                    Supported Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../../appendix/errors/">
+            
+                <a href="../../appendix/errors/">
+            
+                    
+                    Error Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Deploy Time Customizations</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jive_content_id_MDSCustomization">MDS Customization </h1>
+<p>This section provides details on customizing MDS projects with MyST Studio.</p>
+<p>There are two customizations that can be applied for customizing MDS projects against the target environment, these are:</p>
+<ul>
+<li>Applying MyST Late Binding</li>
+<li>Applying MyST Generic Configuration Plan</li>
+</ul>
+<p>Oracle Metadata Store (MDS) provides a common metadata repository solution for a number of Oracle technologies, namely ADF, WebCenter and SOA applications. Metadata files created during design time in JDeveloper are referenced from MDS at run time by these applications.</p>
+<p>Where MDS artifacts containing environment specific values are being manually deployed, these values must be modified at source before each deployment. This approach is not practical for continuous integration.</p>
+<p>A common solution is to create sets of Ant/Maven scripts, and search and replace values of these files before deployment by looking up environment specific values defined in property files. This approach provides an improvement over the manual approach, but a number of issues remain, namely:</p>
+<ol>
+<li>There is a risk that non-centralized property files and values will be copied and pasted around, increasing the risk of configuration drift over time.</li>
+<li>This type of bespoke build and deploy scripting tends to grow more complex and less maintainable over time.</li>
+<li>There is a significant ongoing effort involved in bringing custom scripting to a robust level of usability.</li>
+</ol>
+<p>The ideal MDS deployment solution should overcome all of the above issues, and MyST Late Binding from MyST Studio does exactly that.</p>
+<h2 id="jive_content_id_Applying_MySTLate_Binding">Applying MyST Late Binding </h2>
+<p>MyST Late Binding involves tokenizing files with MyST data model property references which will be de-referenced and expanded to their corresponding data values during  deployment (ie after build and initial packaging).</p>
+<p>During deployment, MyST Late Binding expands the MDS jar/zip file, and performs a MyST property search and replace on *.ep.wsdl, *.wsdl and *.xml files with environment specific values obtained from the MyST engine; it re-packages the files back into the MDS archive file, and performs deployment to import metadata to MDS runtime server.</p>
+<h3 id="jive_content_id_Steps">Steps </h3>
+<p>The following steps are required to achieve MDS customization using MyST Late Binding found in MyST Studio:</p>
+<ul>
+<li>Update all Platform Models with the latest environment specific values in MyST Studio.</li>
+<li><p>Update MDS metadata source files with MyST property references. Only *.ep.wsdl, *.wsdl and *.xml file types will be searched and replaced.</p>
+</li>
+<li><p>Create an MDS build job in a CI server that integrates with MyST Studio via MyST Reverse Register Plugin.</p>
+<ul>
+<li>Note: The plugin will automatically register <em>Artifacts</em> in Myst Studio for your successful MDS builds - you don&apos;t need to create them manually. </li>
+</ul>
+</li>
+<li><p>Create further configurations for MDS deployment in MyST Studio, such as creating a <a href="../../release/pipeline/">Release Pipeline</a> or a Release Definition.</p>
+</li>
+<li><p>Run MDS deployment via MyST Studio and the customization will be applied correctly.</p>
+</li>
+</ul>
+<h2 id="jive_content_id_Applying_MyST_GenericConfiguration_Plans">Applying MyST Generic Configuration Plans </h2>
+<p>If you find that late binding is not sufficient for your particular use case, you can use a MyST Generic Configuration Plan. This solution can update any file in the MDS project. Fortunately, a generic configuration plan only requires minimal configuration effort.</p>
+<h3 id="jive_content_id_Steps_725150">Steps </h3>
+<p>This section summarizes the steps to apply a MyST Generic Configuration Plan to an MDS deployment in MyST Studio.</p>
+<ul>
+<li>Update all Platform Models with the latest environment specific values in MyST Studio. </li>
+<li><p>In your file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see <a href="../../howtos/use-myst-generic-configuration-plans.html">MyST Generic Configuration Plans</a></p>
+</li>
+<li><p>Put this file under the META-INF folder in the MDS project&apos;s root directory.</p>
+</li>
+<li><p>Create an MDS build job in a CI server that integrates with MyST Studio via MyST Reverse Register Plugin.</p>
+<ul>
+<li>Note: The plugin will automatically register <em>Artifacts</em> in Myst Studio for your successful MDS builds - you don&apos;t need to create them manually.</li>
+</ul>
+</li>
+<li><p>Create configurations for deployment in MyST Studio , such as creating a <a href="../../%20https:/rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline">Release Pipeline</a> or a Release Definition.</p>
+</li>
+<li><p>Run MDS Deployment via MyST Studio and the customization will be applied correctly.</p>
+</li>
+</ul>
+<h1 id="jive_content_id_SOA_Customization">SOA Customization </h1>
+<p>This section provides details on customizing SOA projects with MyST Studio.</p>
+<p>There are two customizations that can be applied for customizing SOA projects against the target environment, these are:</p>
+<ul>
+<li>Applying MyST Late Binding on SOA Configuration Plan</li>
+<li>Applying MyST Generic Configuration Plan</li>
+</ul>
+<p>In SOA applications, Oracle provides a customization solution known as a Configuration Plan. A Configuration Plan is an xml document generated from a SOA composite.xml using JDeveloper or the WLST scripting tool.</p>
+<p>A configuration plan, when applied during deployment via JDeveloper or Oracle supplied Ant script, can modify the content of files within a SOA application, hence the SOA application is tailored for the target environment, such as Production.</p>
+<p>SOA configuration plans support customization of the composite file (composite.xml), any wsdl imported from composite.xml (.wsdl), any xml schema file (.xsd) and JCA adapter files (.jca).</p>
+<p>However, there are limitations to what can be changed by configuration plan, only certain properties and attributes can be modified. For detail please see: <a href="http://docs.oracle.com/cd/E29597_01/dev.1111/e10224/sca_lifecycle.htm#autoId22" target="_blank">Deploying SOA Composite Applications - 11g Release 1 (11.1.1.6.3)</a>. For any environment value tokenization that cannot be achieved via SOA configuration plan, you can always apply MyST Generic Configuration Plan. This will be discussed shortly.</p>
+<p>In a SOA project, typically developers generate one configuration plan from the composite.xml, then tailor the configuration plan for the target environment, or make various copies of the plan file. The maintenance of multiple configuration plans can be a nightmare. Firstly, the endpoint values are hard coded into the configuration plans. When an endpoint changes, developers must refactor that endpoint in all configuration plans across all affected SOA projects.</p>
+<p>A better solution common in continuous integration is to write custom Ant/Maven scripts to automatically search and replace a single configuration plan per SOA project. This approach provides an improvement over the first approach, but a number of issues similar to those discussed for custom MDS deployment scripts remain.</p>
+<p>The ideal SOA deployment solution:</p>
+<ul>
+<li>should maintain only a single configuration plan.</li>
+<li>does not require manual maintenance of property values across potentially numerous SCAs.</li>
+<li>should be a common and standardized solution across application tiers. </li>
+</ul>
+<p>MyST Late Binding from MyST Studio fulfills the above requirements.</p>
+<h2 id="jive_content_id_Applying_MyST_Late_Bindingon_SOA_Configuration_Plan_File">Applying MyST Late Binding on SOA Configuration Plan File </h2>
+<p>With MyST Studio, only a single configuration plan is required per SOA project regardless of the number of environments, and this is achieved by MyST property late binding. During deployment, MyST will expand the SOA jar/zip file, and perform a MyST property search and replace on *.ep.wsdl, *.wsdl and *.xml files with environment specific values obtained from the MyST engine; it then packages the files back into the SOA archive file and performs deployment.</p>
+<h3 id="jive_content_id_Steps_883746">Steps </h3>
+<p>This section summarizes the steps to apply an SOA configuration plan with MyST Studio.</p>
+<ul>
+<li>Update all Platform Models with the latest environment specific values in MyST Studio. </li>
+<li><p>In each SOA project, generate a configuration plan from the SOA composite.xml file and named it &quot;cfgplan.xml&quot;.</p>
+</li>
+<li><p>Modify the configuration plan to replace any environment specific detail with MyST property references.</p>
+</li>
+<li><p>Add any missing configuration in the configuration plan.</p>
+</li>
+<li><p>Create an SOA build job in a CI server that integrates with MyST Studio via MyST Reverse Register Plugin.</p>
+<ul>
+<li>Note: The plugin will automatically register <em>Artifacts</em> in Myst Studio for your successful SOA builds - you don&apos;t need to create them manually.</li>
+</ul>
+</li>
+<li><p>Create configurations for deployment in MyST Studio, such as creating a <a href="../../%20https:/rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline">Release Pipeline</a> or a Release Definition.</p>
+</li>
+<li><p>Run SOA Deployment via MyST Studio and the customization will be applied correctly.</p>
+</li>
+</ul>
+<h2 id="jive_content_id_Applying_MyST_GenericConfiguration_Plan">Applying MyST Generic Configuration Plan </h2>
+<p>If the standard SOA configuration plan is not sufficient for your particular use case, you can apply a MyST Generic Configuration Plan. This solution can update any file in the SOA project. Fortunately, generic configuration plan only requires minimal configuration effort.</p>
+<h3 id="jive_content_id_Steps_436539">Steps </h3>
+<p>This section summarizes the steps to apply a MyST Generic Configuration Plan to an SOA deployment in MyST Studio.</p>
+<ul>
+<li>Update all Platform Models with the latest environment specific values in MyST Studio. </li>
+<li><p>In your file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see <a href="https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/howtos/use-myst-generic-configuration-plans.html" target="_blank">MyST Generic Configuration Plans</a></p>
+</li>
+<li><p>Put this file under the META-INF folder in the SOA project&apos;s root directory.</p>
+</li>
+<li><p>Create an SOA build job in a CI server that integrates with MyST Studio via MyST Reverse Register Plugin.</p>
+<ul>
+<li>Note: The plugin will automatically register <em>Artifacts</em> in Myst Studio for your successful SOA builds - you don&apos;t need to create them manually.</li>
+</ul>
+</li>
+<li><p>Create configurations for deployment in MyST Studio, such as creating a <a href="../../%20https:/rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline">Release Pipeline</a> or a Release Definition.</p>
+</li>
+<li><p>Run SOA Deployment via MyST Studio and the customization will be applied correctly.</p>
+</li>
+</ul>
+<h1 id="jive_content_id_OSB_Customization">OSB Customization </h1>
+<p>This section provides details on customizing OSB projects with MyST Studio.</p>
+<p>There are two customizations that can be applied for customizing OSB projects against the target environment, these are:</p>
+<ul>
+<li>Applying MyST Late Binding on OSB Customization File</li>
+<li>Applying MyST Generic Configuration Plan</li>
+</ul>
+<h2 id="jive_content_id_Applying_MyST_Late_Bindingon_OSB_Customization_File">Applying MyST Late Binding on OSB Customization File </h2>
+<p>Customization of common OSB values, including environment values, operational settings, and reference mappings, can be achieved by using an OSB customization file. In 11g this customization file is called ALSBCustomizationFile.xml; in 12c it is called OSBCustomizationFile.xml. For details please see the Oracle documentation: <a href="https://docs.oracle.com/middleware/1213/osb/administer/GUID-6FBDE1BB-CAF5-40FC-BC88-D590828AB66C.htm#OSBAG1360" target="_blank">Customizing Oracle Service Bus Environments</a>.</p>
+<p>In many Oracle middleware projects, developers generate an OSB customization file from the OSB console on a given environment, eg TEST. They will then make a copy of the generated (TEST) configuration file for the other target environments and customize those copies accordingly (eg for UAT, PREPROD, PROD). In other words, there is a customization file to be maintained per environment/project combination.</p>
+<p>This approach generally works fine, but it requires maintenance for each environment. For example, if there are five environments and 20 OSB projects, 100 customization files must be maintained in a project.</p>
+<p>The solution to this problem is to maintain only 1 customization file per OSB project regardless of the number of environments .</p>
+<p>Instead of keeping environment specific values in the environment specific customization files, MyST Studio maintains these values in the Platform Models. In the OSB customization file, the environment specific values must be replaced with MyST property references. The benefit of this tokenization is that only a single OSB customization file needs to be maintained.</p>
+<p>During deployment, MyST Late Binding will expand the OSB jar file and perform a MyST property search and replace on OSB customization files with environment specific values obtained from the MyST engine; it packages the files back into the OSB archive file, and finally import OSB projects to OSB server.</p>
+<p>The major advantage of this approach is that all team members only need to maintain environment specific values in a single location, ie in the Platform Model.</p>
+<h3 id="jive_content_id_Steps_923503">Steps </h3>
+<p>This section summarizes the steps to apply an OSB customization file with MyST Studio.</p>
+<ul>
+<li>Update all Platform Models with the latest environment specific values in MyST Studio. </li>
+<li>In each OSB project, export the OSB customization file as OSBCustomizationFile.xml (for both 11g and 12c OSB projects) and put it under the root directory of the OSB project. The below diagram shows a 12c example. </li>
+</ul>
+<p>     <a href="img/deploy-config-1.osb-file.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/deploy-config-1.osb-file.png" alt="">
+     </a></p>
+<ul>
+<li>Modify the customization file to replace values with MyST property references. </li>
+</ul>
+<p>     <a href="img/deploy-config-2.osb-file-myst-ref.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/deploy-config-2.osb-file-myst-ref.png" alt="">
+     </a></p>
+<ul>
+<li><p>Add any missing customization where required.</p>
+</li>
+<li><p>Create an OSB build job in a CI server that integrates with MyST Studio via MyST Reverse Register Plugin.</p>
+<ul>
+<li>Note: The plugin will automatically register <em>Artifacts</em> in Myst Studio for your successful OSB builds - you don&apos;t need to create them manually.</li>
+</ul>
+</li>
+<li><p>Create configurations for deployment in MyST Studio, such as creating a <a href="../../%20https:/rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline">Release Pipeline</a> or a Release Definition.</p>
+</li>
+<li><p>Run OSB Deployment via MyST Studio and the customization is applied correctly.</p>
+</li>
+</ul>
+<h2 id="jive_content_id_Applying_MyST_GenericConfiguration_Plan_321599">Applying MyST Generic Configuration Plan </h2>
+<p>If the standard OSB customization file is not sufficient for your specific use case, then you can apply a MyST Generic Configuration Plan. This solution can update any file in the OSB project. Fortunately, generic configuration plan only requires minimal configuration effort.</p>
+<p>In some cases, an OSB customization file alone isn&apos;t enough to customize OSB projects to the target environment. For example, a proxy service may be configured with the File JCA transport, which contains environment specific JCA properties such as &quot;PhysicalArchiveDirectory&quot;. These properties must also be replaced before OSB deployment.</p>
+<p>In this case, MyST can use its own Generic Configuration Plan framework to capture environment properties and apply them to an artifact during deployment.</p>
+<p>During OSB deployment in MyST Studio, MyST reads the generic configuration plan and compiles it down to a list of actions to replace any environment specific values before importing the OSB jar file into the target environment via the OSB import function provided by MyST Studio.</p>
+<h3 id="jive_content_id_Steps_922110">Steps </h3>
+<p>This section summarizes the steps to apply a MyST Generic Configuration Plan to an OSB deployment in MyST Studio.</p>
+<ul>
+<li>Update all Platform Models with the latest environment specific values in MyST Studio. </li>
+<li>In your file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see <a href="https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/howtos/use-myst-generic-configuration-plans.html" target="_blank">MyST Generic Configuration Plans</a></li>
+</ul>
+<p>     <a href="img/deploy-config-3.myst-config-plan.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/deploy-config-3.myst-config-plan.png" alt="">
+     </a></p>
+<ul>
+<li><p>Put this file under the META-INF folder in the OSB project&apos;s root directory.</p>
+</li>
+<li><p>Create an OSB build job in a CI server that integrates with MyST Studio via MyST Reverse Register Plugin.</p>
+<ul>
+<li>Note: The plugin will automatically register <em>Artifacts</em> in Myst Studio for your successful OSB builds - you don&apos;t need to create them manually.</li>
+</ul>
+</li>
+<li><p>Create configurations for deployment in MyST Studio, such as creating a <a href="../../%20https:/rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline">Release Pipeline</a> or a Release Definition.</p>
+</li>
+<li><p>Run OSB Deployment via MyST Studio and the customization will be applied correctly.</p>
+</li>
+</ul>
+<h1 id="jive_content_id_BAM_Customization">BAM Customization </h1>
+<p>This section provides details on customizing BAM projects with MyST Studio.</p>
+<p>There is one customization that can be applied for customizing BAM projects against the target environment, this is:</p>
+<ul>
+<li>Applying MyST Generic Configuration Plan</li>
+</ul>
+<p>Oracle BAM allows users to create dashboards and monitor business services and processes. Typically, deploying BAM is a simple process of running the command line tool</p>
+<p>to export artifacts from a source environment into a zip file format, and then import that zip file into a target environment.</p>
+<p>The command line tools are different for 11g and 12c as follow:</p>
+<ul>
+<li>11g: icommand (Location: &lt;FMW_HOME&gt;/Oracle_SOA1/bam/bin)</li>
+<li>12c: bamcommand (Location: &lt;FMW_HOME&gt;/soa/bam/bin)</li>
+</ul>
+<p>There is no out-of-the-box customization solution for BAM provided by Oracle.</p>
+<p>In 12c, typically developers manually modify the bam zip file, or use bespoke scripting, to amend any files with environment specific values before running the bamcommand utility. However, this approach presents a challenge to automated continuous integration.</p>
+<p>Fortunately, MyST Studio&apos;s Generic Configuration Plans provide a simple yet powerful solution to overcome this issue. With generic configuration plans, only a single copy of the bam zip file needs to be maintained and no manual modification is required.</p>
+<h2 id="jive_content_id_Applying_MyST_GenericConfiguration_Plan_670429">Applying MyST Generic Configuration Plan </h2>
+<p>MyST uses the generic configuration plan framework that can capture environment properties and apply them to an artifact during deployment.</p>
+<p>In BAM deployment, a generic configuration plan replaces values in files within bam zip file with environment specific values before importing the bam zip file into the target environment via the bamcommand utility by MyST Studio.</p>
+<h4 id=""> </h4>
+<h3 id="jive_content_id_Steps_764945">Steps </h3>
+<p>This section summarizes the steps to apply MyST Generic Configuration Plans on BAM deployment in MyST Studio.</p>
+<ul>
+<li>Update all Platform Models with the latest environment specific values in MyST Studio. </li>
+<li><p>Perform the below prerequisite steps, then export a bam zip file from the bam console. </p>
+<p>  <strong>Setting up 12c bamcommand</strong></p>
+<p>  Update the <fmw_home>/soa/bam/BAMCommandConfig.xml file to point to the correct BAM server host and port. Default is localhost.</fmw_home></p>
+<p>  <strong>An example for exporting an EMS Object</strong></p>
+<pre><code>  bamcommand -cmd export -type ems -name JMS -file /tmp/BAMObjects12c.zip
+</code></pre><blockquote>
+<p>Note: The above command will export an EMS object called &quot;JMS&quot; as well as any associated DO object.</p>
+</blockquote>
+</li>
+<li><p>In the file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see <a href="https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/howtos/use-myst-generic-configuration-plans.html" target="_blank">MyST Generic Configuration Plans</a></p>
+</li>
+</ul>
+<p>     <a href="img/deploy-config-4.myst-config-plan-B.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/deploy-config-4.myst-config-plan-B.png" alt="">
+     </a></p>
+<p>This generic configuration plan instructs MyST Studio to perform a search and replace on the ems/JMS/Ems.xml file inside the bam zip file, where the to-be-replaced element&apos;s location is expressed in the xpath, and the replace value containing the MyST property reference ${internal.soa.admin_url} will come from the MyST internal runtime engine.</p>
+<ul>
+<li>Add this file to the bam zip file root directory. An example is given below.</li>
+</ul>
+<p>     <a href="img/deploy-config-5.BAM-plan-root-folder.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/deploy-config-5.BAM-plan-root-folder.png" alt="">
+     </a></p>
+<ul>
+<li><p>Create a BAM build job in a CI server that integrates with MyST Studio via MyST Reverse Register Plugin.</p>
+<ul>
+<li>Note: At the time of writing, the reverse register plugin will not automatically register a CI managed Artifact for BAM builds.</li>
+</ul>
+</li>
+<li><p>Manually create a Third Party managed Artifact in MyST Studio with the correct group-artifact-classifier-version (GAVC) values for your BAM built artifact.</p>
+</li>
+<li><p>Create further configurations for BAM deployment in MyST Studio, such as creating a <a href="../../%20https:/rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline">Release Pipeline</a> or a Release Definition.</p>
+</li>
+<li><p>Run BAM Deployment via MyST Studio and the customization will be applied correctly.</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../artifacts/" class="navigation navigation-prev " aria-label="Previous page: Artifact Management">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../howtos/use-myst-generic-configuration-plans.html" class="navigation navigation-next " aria-label="Next page: MyST Configuration Plans">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Deploy Time Customizations","level":"6.1.5","depth":2,"next":{"title":"MyST Configuration Plans","level":"6.1.5.1","depth":3,"path":"howtos/use-myst-generic-configuration-plans.md","ref":"howtos/use-myst-generic-configuration-plans.md","articles":[]},"previous":{"title":"Artifact Management","level":"6.1.4","depth":2,"path":"build/artifacts/README.md","ref":"build/artifacts/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{"myst_repo":"../../demos/myst-build","file1":"../../demos/myst-build/myst/fc-parent/fc-sdk/fc-studio-sdk-payload/src/test/resources/src/artifacts/sca/pom.xml"},"plugins":["hints","simple-page-toc","custom-favicon","ga","fancybox"],"pluginsConfig":{"disqus":{"shortName":"myst-studio-documentation"},"fancybox":{"helpers":{"buttons":{}}},"simple-page-toc":{"maxDepth":7,"skipFirstH1":true},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"assets/favicon.ico","custom-favicon":{},"ga":{"configuration":"auto","token":"UA-35856338-5"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/deploy-config/README.md","mtime":"2018-03-09T01:49:37.491Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-09-23T06:17:23.355Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

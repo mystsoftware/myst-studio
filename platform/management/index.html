@@ -1,0 +1,1675 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Managing Platform Instances · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../introspection/" />
+    
+    
+    <link rel="prev" href="../definitions/editor/property-references/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Title and Copyright Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../introduction/">
+            
+                <a href="../../introduction/">
+            
+                    
+                    Rubicon Red MyST
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../introduction/platform-provisioning/">
+            
+                <a href="../../introduction/platform-provisioning/">
+            
+                    
+                    Platform Provisioning and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../introduction/application-release-automation/">
+            
+                <a href="../../introduction/application-release-automation/">
+            
+                    
+                    Application Release Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../security/">
+            
+                <a href="../security/">
+            
+                    
+                    Security Salt and Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../infrastructure/">
+            
+                <a href="../../infrastructure/">
+            
+                    
+                    Infrastructure Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../infrastructure/environment-types/">
+            
+                <a href="../../infrastructure/environment-types/">
+            
+                    
+                    Environment Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../infrastructure/compute-definitions/">
+            
+                <a href="../../infrastructure/compute-definitions/">
+            
+                    
+                    Compute Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../infrastructure/providers/pre-existing/">
+            
+                <a href="../../infrastructure/providers/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../infrastructure/providers/on-demand/aws/">
+            
+                <a href="../../infrastructure/providers/on-demand/aws/">
+            
+                    
+                    On-Demand Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../infrastructure/providers/hosts/">
+            
+                <a href="../../infrastructure/providers/hosts/">
+            
+                    
+                    Host Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Platform Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../blueprints/">
+            
+                <a href="../blueprints/">
+            
+                    
+                    Platform Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../templates/">
+            
+                <a href="../templates/">
+            
+                    
+                    Platform Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../models/">
+            
+                <a href="../models/">
+            
+                    
+                    Platform Models
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../models/pre-existing/">
+            
+                <a href="../models/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../models/on-demand-aws/">
+            
+                <a href="../models/on-demand-aws/">
+            
+                    
+                    On Demand (AWS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../cloud/instances/">
+            
+                <a href="../cloud/instances/">
+            
+                    
+                    Registering Cloud Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../provisioning/">
+            
+                <a href="../provisioning/">
+            
+                    
+                    Provisioning Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../update/">
+            
+                <a href="../update/">
+            
+                    
+                    Updating Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../definitions/">
+            
+                <a href="../definitions/">
+            
+                    
+                    Maintaining Platform Definitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" data-path="../definitions/version-control/">
+            
+                <a href="../definitions/version-control/">
+            
+                    
+                    Platform Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2" data-path="../definitions/editor/">
+            
+                <a href="../definitions/editor/">
+            
+                    
+                    Platform Editor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.2.1" data-path="../definitions/editor/control-bar/">
+            
+                <a href="../definitions/editor/control-bar/">
+            
+                    
+                    Control Bar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.2" data-path="../definitions/editor/tree-view/">
+            
+                <a href="../definitions/editor/tree-view/">
+            
+                    
+                    Tree View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.3" data-path="../definitions/editor/properties-view/">
+            
+                <a href="../definitions/editor/properties-view/">
+            
+                    
+                    Properties View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.4" data-path="../definitions/editor/topology-view/">
+            
+                <a href="../definitions/editor/topology-view/">
+            
+                    
+                    Topology View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.5" data-path="../definitions/editor/source-view/">
+            
+                <a href="../definitions/editor/source-view/">
+            
+                    
+                    Source View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.6" data-path="../definitions/editor/property-references/">
+            
+                <a href="../definitions/editor/property-references/">
+            
+                    
+                    Using Property References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Managing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../introspection/">
+            
+                <a href="../introspection/">
+            
+                    
+                    Introspecting Existing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../upgrade/">
+            
+                <a href="../upgrade/">
+            
+                    
+                    Upgrading Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../resources/weblogic/">
+            
+                <a href="../resources/weblogic/">
+            
+                    
+                    Platform Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../resources/weblogic/servers/">
+            
+                <a href="../resources/weblogic/servers/">
+            
+                    
+                    WebLogic Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../resources/weblogic/patches/">
+            
+                <a href="../resources/weblogic/patches/">
+            
+                    
+                    Oracle Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../resources/weblogic/jdbc/">
+            
+                <a href="../resources/weblogic/jdbc/">
+            
+                    
+                    Data Sources (JDBC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../resources/weblogic/jms/">
+            
+                <a href="../resources/weblogic/jms/">
+            
+                    
+                    Java Messaging Service (JMS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../resources/weblogic/jms/persistent-stores/">
+            
+                <a href="../resources/weblogic/jms/persistent-stores/">
+            
+                    
+                    Persistent Stores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.2" data-path="../resources/weblogic/jms/modules/">
+            
+                <a href="../resources/weblogic/jms/modules/">
+            
+                    
+                    JMS Modules and Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.3" data-path="../resources/weblogic/jms/store-and-forward/">
+            
+                <a href="../resources/weblogic/jms/store-and-forward/">
+            
+                    
+                    Store and Forward (SAF) Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../resources/weblogic/jca-adapters/">
+            
+                <a href="../resources/weblogic/jca-adapters/">
+            
+                    
+                    JCA Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../resources/weblogic/work-managers/">
+            
+                <a href="../resources/weblogic/work-managers/">
+            
+                    
+                    Work Managers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../resources/weblogic/servers/load-balancer-configuration.html">
+            
+                <a href="../resources/weblogic/servers/load-balancer-configuration.html">
+            
+                    
+                    Load Balancer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../resources/weblogic/servers/web-tier.html">
+            
+                <a href="../resources/weblogic/servers/web-tier.html">
+            
+                    
+                    Webtier Routing Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.9" data-path="../resources/weblogic/servers/configuring-security.html">
+            
+                <a href="../resources/weblogic/servers/configuring-security.html">
+            
+                    
+                    Users, Groups, Roles and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.10" data-path="../resources/weblogic/servers/applying-certificates.html">
+            
+                <a href="../resources/weblogic/servers/applying-certificates.html">
+            
+                    
+                    Keystore Certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.11" data-path="../resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                <a href="../resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                    
+                    Startup and Shutdown Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.12" data-path="../resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                <a href="../resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                    
+                    Weblogic Deployment Targeting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../build/">
+            
+                <a href="../../build/">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../build/server/configuration/">
+            
+                <a href="../../build/server/configuration/">
+            
+                    
+                    Build Server Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1.1" data-path="../../infrastructure/continuous-delivery-profile/">
+            
+                <a href="../../infrastructure/continuous-delivery-profile/">
+            
+                    
+                    Continuous Delivery Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.2" data-path="../../build/server/configuration/jenkins/">
+            
+                <a href="../../build/server/configuration/jenkins/">
+            
+                    
+                    MyST Studio Plugin for Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../../build/maven/">
+            
+                <a href="../../build/maven/">
+            
+                    
+                    Configuring Maven Builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../../build/ci/">
+            
+                <a href="../../build/ci/">
+            
+                    
+                    Configuring Automated Builds 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.3.1" data-path="../../build/ci/jenkins/">
+            
+                <a href="../../build/ci/jenkins/">
+            
+                    
+                    Configuring Jenkins Build Jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../../build/artifacts/">
+            
+                <a href="../../build/artifacts/">
+            
+                    
+                    Artifact Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../../build/deploy-config/">
+            
+                <a href="../../build/deploy-config/">
+            
+                    
+                    Deploy Time Customizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.5.1" data-path="../../howtos/use-myst-generic-configuration-plans.html">
+            
+                <a href="../../howtos/use-myst-generic-configuration-plans.html">
+            
+                    
+                    MyST Configuration Plans
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../deploy/application/">
+            
+                <a href="../../deploy/application/">
+            
+                    
+                    Application Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../deploy/application/blueprints/">
+            
+                <a href="../../deploy/application/blueprints/">
+            
+                    
+                    Configuring Application Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../release/">
+            
+                <a href="../../release/">
+            
+                    
+                    Release Pipelines
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../release/pipeline/organization/">
+            
+                <a href="../../release/pipeline/organization/">
+            
+                    
+                    Pipeline Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1.1" data-path="../../release/pipeline/organization/groups/">
+            
+                <a href="../../release/pipeline/organization/groups/">
+            
+                    
+                    Pipeline Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.1.2" data-path="../../release/pipeline/organization/stream-types/">
+            
+                <a href="../../release/pipeline/organization/stream-types/">
+            
+                    
+                    Stream Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../release/pipeline/templates/">
+            
+                <a href="../../release/pipeline/templates/">
+            
+                    
+                    Pipeline Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../release/pipeline/">
+            
+                <a href="../../release/pipeline/">
+            
+                    
+                    Configuring Release Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../../release/pipeline/dashboard/">
+            
+                <a href="../../release/pipeline/dashboard/">
+            
+                    
+                    Release Pipeline Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../administration/">
+            
+                <a href="../../administration/">
+            
+                    
+                    Role-Based Access Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../administration/users/">
+            
+                <a href="../../administration/users/">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../../administration/roles/">
+            
+                <a href="../../administration/roles/">
+            
+                    
+                    Role Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../../administration/workspaces/">
+            
+                <a href="../../administration/workspaces/">
+            
+                    
+                    Workspace Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Administration Guides</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../installation/myst-studio/">
+            
+                <a href="../../installation/myst-studio/">
+            
+                    
+                    MyST Installation Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../installation/myst-studio/requirements/">
+            
+                <a href="../../installation/myst-studio/requirements/">
+            
+                    
+                    System Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../installation/myst-studio/docker/">
+            
+                <a href="../../installation/myst-studio/docker/">
+            
+                    
+                    Docker-based Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../../installation/myst-studio/alternatives/">
+            
+                <a href="../../installation/myst-studio/alternatives/">
+            
+                    
+                    Alternative Installations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../administration/management/">
+            
+                <a href="../../administration/management/">
+            
+                    
+                    MyST Management Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../administration/upgrade/">
+            
+                <a href="../../administration/upgrade/">
+            
+                    
+                    MyST Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendix</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../appendix/artifact/">
+            
+                <a href="../../appendix/artifact/">
+            
+                    
+                    Supported Artifacts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../../appendix/configuration/">
+            
+                <a href="../../appendix/configuration/">
+            
+                    
+                    Supported Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../../appendix/errors/">
+            
+                <a href="../../appendix/errors/">
+            
+                    
+                    Error Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Managing Platform Instances</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="managing-platform-instances">Managing Platform Instances</h2>
+<p>In this section we detail how to use MyST to perform common platform administration tasks, including how to:</p>
+<ul>
+<li>View a Platform Instance Configuration</li>
+<li>Report on a Platform Instance</li>
+<li>Start, Stop and Restart a Platform Instance</li>
+<li>Check for and Correct Configuration Drift</li>
+<li>Terminate and Re-Provision a Platform Instance</li>
+<li>Patch a Platform Instance</li>
+<li>Override the state of a Platform Instance</li>
+</ul>
+<p>In addition, we also cover the mechanism MyST uses to queue actions against a Platform Instance as well as how to view the Action History and current Pending Actions.</p>
+<p>All of these activities are performed from the <code>Platform Instance Summary</code> window. We can access this from the side menu by navigating to<code>Provisioning</code> &gt; <code>Platform Instances</code>. This will display a list of existing Platform Instances. </p>
+<p>     <a href="img/platformInstanceList.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceList.png" alt="">
+     </a></p>
+<p>Select the corresponding Platform Instance (outlined in red above), MyST will display summary information about the state of the Platform Model and Instance Details as shown below.</p>
+<p>     <a href="img/platformInstanceSummary.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceSummary.png" alt="">
+     </a></p>
+<p>The <strong>Platform Instance Summary</strong> is broken into three sections; <em>General Information</em>, <em>Versions</em> and <em>Instance Details</em>. Each section provides key information about the Platform Instance as detailed below.</p>
+<p>The <strong>General Information</strong> section provides the following information:</p>
+<ul>
+<li><p><strong>Name</strong> - This is the name of the Platform Instance as defined by the Platform Blueprint</p>
+</li>
+<li><p><strong>Description</strong> - This is the description of the Platform Instance as defined by the Platform Model</p>
+</li>
+</ul>
+<p>The <strong>Versions</strong> section lists each version of the Platform Blueprint, for each version of the Platform Blueprint it provides the following information:</p>
+<ul>
+<li><p><strong>Version</strong> This shows the latest revision of the Platform Blueprint and Platform Model.</p>
+</li>
+<li><p><strong>Blueprint Status</strong> - The status of the latest revision of the Platform Blueprint, this can be Draft, Committed or Final.</p>
+</li>
+<li><p><strong>Model Status</strong> - The status of the latest revision of the Platform Model, this can be Draft, Committed or Final.</p>
+</li>
+<li><p><strong>Notes</strong> - The Platform Model Version Notes.</p>
+</li>
+</ul>
+<p>The <strong>Instance Details</strong> section provides the following information:</p>
+<ul>
+<li><strong>Provisioned Version</strong> - This is the current version of the Platform Instance.</li>
+</ul>
+<ul>
+<li><strong>Instance State</strong> - This shows the current state of the Platform Instance. It can be one of:<ul>
+<li>Active</li>
+<li>Provisioning In Progress</li>
+<li>Provisioning Failed</li>
+<li>Termination In Progress</li>
+<li>Terminated</li>
+<li>Termination Failed</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Current Action</strong> - This shows details of the current action being performed (or the last action if completed). This includes:<ul>
+<li>Description - This is the action being performed, for example, Provisioning, Start, Stop, etc.</li>
+<li>Status - Which could be In Progress, Success or Failed</li>
+<li>Execution time - The start and stop time of the action</li>
+<li>Action(s) - Actions that can be taken here. These include ability to <code>view</code> and <code>download</code> execution logs, <code>download</code> support artifacts in event of failure, viewing <code>drift</code> and <code>dry run</code> reports.</li>
+</ul>
+</li>
+</ul>
+<p>Clicking on <code>Pending action(s)</code> will show the list of currently queued actions, whilst clicking on <code>Action History</code> will show us the list of actions performed against the Platform Instance till date.</p>
+<p>The <code>Actions</code> drop-down allows us to select and perform the various management activities against the Platform Instance.</p>
+<h3 id="view-platform-instance-configuration">View Platform Instance Configuration</h3>
+<p>MyST allows us to view the current configuration of each of our Platform Instances. From within the Platform Instance Summary window, click on the <code>Actions</code> drop-down and select <code>View Configuration</code>. </p>
+<p>     <a href="img/platformInstanceView.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceView.png" alt="">
+     </a></p>
+<p>MyST will open the Platform Instance in the <code>Platform Viewer</code>. From here we can browse the full configuration of the Platform Instance.</p>
+<p>     <a href="img/platformInstanceViewer.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceViewer.png" alt="">
+     </a></p>
+<p>In the initial view, we can see key information about the instance as well as important service URLs such as the Admin Console, Enterprise Manager Console, Service Bus Console.</p>
+<p>The rest of the configuration of the instance can be browsed through and navigated as we have previously seen <a href="../definitions/editor/">here</a>. Please go through that section for more details on how to navigate and access the configuration of the platform.</p>
+<p>For example, to view the physical topology of the platform, we can click on the <code>Topology</code> tab which will show us a topology diagram such as below.</p>
+<p>     <a href="img/platformInstanceTopology.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceTopology.png" alt="">
+     </a></p>
+<h3 id="platform-instance-report">Platform Instance Report</h3>
+<p>The Platform instance report provides a summary report of all the key configuration information for our Platform Instance.</p>
+<p>To access this select the corresponding Platform Instance, then click on the <code>Actions</code> menu and select <code>View Report</code>, MyST will open the Platform Instance Report as shown below.</p>
+<p>     <a href="img/platformInstanceReport.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceReport.png" alt="">
+     </a></p>
+<blockquote>
+<p>Note: By clicking on the header for each section, we can close and expand that part of the report as required.</p>
+</blockquote>
+<h3 id="start-stop-and-restarting-platform-instance">Start, Stop and Restarting Platform Instance</h3>
+<p>MyST allows us to easily Start, Stop and Restart Platform Instances. When performing these actions, we can choose to perform these actions against the entire cluster or we can choose to perform the action on specific nodes within the cluster.</p>
+<h4 id="stopping-a-platform-instance">Stopping a Platform Instance</h4>
+<p>From within the Platform Instance Summary window, click on the <code>Actions</code> drop-down and select <code>Control</code>, MyST will open the Platform Instance Control dialog.</p>
+<p>     <a href="img/platformInstanceControl.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceControl.png" alt="">
+     </a></p>
+<p>Select <code>Stop</code> as the action to perform (outlined in red above). By default, MyST will apply this action to all nodes within the cluster. If we only want to stop specific nodes, then first remove the nodes that we don&apos;t want to perform this action on.</p>
+<p>Enter any notes as to why we are performing the action and click <code>Execute</code>.</p>
+<p>MyST will queue the action in the list of Pending Actions for the Platform Instance and, when ready, will proceed to stop the Platform Instance.</p>
+<p>     <a href="img/platformInstanceStop.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceStop.png" alt="">
+     </a></p>
+<h4 id="starting-a-platform-instance">Starting a Platform Instance</h4>
+<p>To start a Platform Instance we follow the same process for stopping a Platform Instance, but select <code>Start</code> as the action to perform.</p>
+<h4 id="restarting-a-platform-instance">Restarting a Platform Instance</h4>
+<p>To restart a Platform Instance we follow the same process for stopping a Platform Instance, but select <code>Restart</code> as the action to perform.</p>
+<h3 id="check-for-and-correct-configuration-drift">Check for and Correct Configuration Drift</h3>
+<p>Configuration drift is caused by inconsistent configuration across different environments. Configuration drift occurs naturally in data center environments due to manual adhoc changes.</p>
+<p>MyST&apos;s approach to managing incremental change allows us to define, test, promote and track configuration changes across all environments and thus prevent configuration drift from occurring.</p>
+<p>However, this does not stop someone from directly using the WebLogic console to perform manual changes. When this occurs, we want the ability to detect such a change, and then either use MyST to restore the Platform Instance to its correct state or alternatively if the change is required, to incorporate the change into the Platform Blueprint so it can be applied consistently across all environments.</p>
+<p>Note: Many MyST users restrict their users from making configuration changes via the WebLogic console to prevent these scenarios&apos; from occurring.</p>
+<h4 id="check-for-drift">Check for Drift</h4>
+<p>MyST&apos;s Check for Drift capability allows us to check the configuration of the Platform Instance as defined by its Platform Blueprint / Model against the actual WebLogic domain and report on differences.</p>
+<p>From within the Platform Instance Summary window, click on the <code>Actions</code> drop-down and select <code>Check for Drift</code>, MyST will initiate the check for drift process.</p>
+<p>     <a href="img/checkForDriftComplete.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/checkForDriftComplete.png" alt="">
+     </a></p>
+<p>Once completed, click on the <code>View Report</code> icon (outlined in red above). MyST will display a complete drift report as below.</p>
+<p>     <a href="img/platformInstanceDrift.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceDrift.png" alt="">
+     </a></p>
+<p>In the above report, we can see that the value of the property <code>MaxCapacity</code> has drifted to 100. </p>
+<h4 id="reset-drift">Reset Drift</h4>
+<p>From within the Platform Instance Summary window, click on the <code>Actions</code> drop-down and select <code>Control</code>, MyST will open the Platform Instance Control dialog.</p>
+<p>     <a href="img/resetDrift.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/resetDrift.png" alt="">
+     </a></p>
+<p>Select <code>Reset Drift</code> as the action to perform (outlined in red above) add any <code>Action Notes</code> and click <code>Execute</code>. MyST will queue the Reset Drift action for execution and return us to the summary view of the Platform Model and Instance.</p>
+<p>Once the <code>Reset Drift</code> action has completed, click on the <code>View Log</code> icon under the <code>Current Action -&gt; Action(s)</code>. This will open a dialog showing the result of the Drift, as shown below.</p>
+<p>     <a href="img/resetDriftLog.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/resetDriftLog.png" alt="">
+     </a></p>
+<p>This will show details of all the changes made to correct any configuration drift. We can see from the log (outlined above) that MyST has reset the MaxCapacity property on the <em>StockDS</em> Data Source.</p>
+<h3 id="terminate-and-re-provision-a-platform-instance">Terminate and Re-Provision a Platform Instance</h3>
+<p>MyST allows us to terminate and re-provision our Platform Instances. This can be useful for a number of reasons:</p>
+<ul>
+<li>Reset a Platform Instance to a previous known state, for example, re-provision the Platform Instance based on an earlier version of the Platform Blueprint.</li>
+<li>Temporarily re-purpose the infrastructure, knowing we can re-provision the platform instance when required at a future date.</li>
+<li>Re-provision corrupted environment, for example, if we suspect the underlying file system has been corrupted, we can re-provision the platform instance.</li>
+</ul>
+<h4 id="terminate-a-platform-instance">Terminate a Platform Instance</h4>
+<p>From within the Platform Instance Summary window, click on the <code>Actions</code> drop-down and select <code>Terminate</code>, MyST will open the <code>Terminate Platform Instance</code> dialog and prompt for confirmation to proceed.</p>
+<p>     <a href="img/terminatePreExisting.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/terminatePreExisting.png" alt="">
+     </a></p>
+<p>Click <code>OK</code>. MyST will queue the Terminate action for execution and return us to the summary view of the Platform Model and Instance.</p>
+<p>     <a href="img/terminationInProgress.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/terminationInProgress.png" alt="">
+     </a></p>
+<p>Once terminated the status of the Platform Instance will be updated to <code>TERMINATED</code> and the Instance Details will indicate <code>Instance Not Provisioned</code>.</p>
+<p>     <a href="img/terminatedPlatformInstance.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/terminatedPlatformInstance.png" alt="">
+     </a></p>
+<p>Even though the Platform Instance has been terminated, we still have access to the <code>Action History</code> of the terminated instance.</p>
+<h4 id="terminate-aws-on-demand">Terminate AWS On-Demand</h4>
+<p>When terminating a Platform Instance running on infrastructure of type AWS On-Demand, MyST will also provide you with the option of terminating the AWS Instances</p>
+<p>     <a href="img/terminateAwsOnDemand.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/terminateAwsOnDemand.png" alt="">
+     </a></p>
+<p>If we select this option, MyST will terminate the AWS EC2 instances that were provisioned on-demand when the original Platform Instance was provisioned.</p>
+<h4 id="re-provisioning-a-terminated-platform-instance">Re-Provisioning a Terminated Platform Instance</h4>
+<p>MyST allows us to re-provision any previously terminated Platform Instance. 
+From the side menu navigate to <code>Modeling</code> &gt; <code>Platform Models</code>, this will display a list of existing Platform Models. </p>
+<p>To re-provision a terminated Platform Instance, select the corresponding Platform Model, MyST will display the Platform Model and Instance summary. Click on the <code>Actions</code> menu and select <code>Reprovision</code>.</p>
+<p>MyST will open the <code>New Platform Instance</code> dialog. Here we can select which version of the Platform Instance we want to re-provision. Here, you get access to the following controls</p>
+<p>     <a href="img/platformInstanceReprovision.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceReprovision.png" alt="">
+     </a></p>
+<ol>
+<li><strong>Version</strong> - Here, we can select the exact version of the platform blueprint and the exact revisions of the blueprint and model that we want to reprovision. By default, the latest and version and revisions will be pre-selected.</li>
+<li><strong>Environment already pre-provisioned?</strong> - Selecting this indicated to MyST that the instance is already provisioning and running. So, MyST will just do some connectivity checks and not actually kick off provisioning of the instance in case this option is checked.</li>
+<li><strong>Auto-deploy applications?</strong> - MyST keeps tracks of artifact deployments that were made over time to a platform instance. If we select this option, MyST will try to auto-deploy those artifacts once more to the instance to bring it to the same state as it was before termination.</li>
+<li><strong>Provisioning Notes</strong> - Any comments to indicate why we are reprovisioning the instance.</li>
+</ol>
+<p>Once done, click <code>Finish</code>. MyST will queue the Reprovision action for execution and return us to the summary view of the Platform Model and Instance.</p>
+<h3 id="patching-a-platform-instance">Patching a Platform Instance</h3>
+<p>MyST allows us to easily patch a Platform Instance. When performing these actions, we can choose to perform these actions against the entire cluster or we can choose to perform the action on specific nodes within the cluster.</p>
+<p>Before applying a patch to a Platform Instance, we must first add the patches to the Platform Blueprint - see <a href="../resources/weblogic/patches/">Oracle Patches</a> for further details.</p>
+<p>From within the Platform Instance Summary window, click on the <code>Actions</code> drop-down and select <code>Control</code>, MyST will open the Platform Instance Control dialog.</p>
+<p>     <a href="img/platformInstanceControlPatch.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceControlPatch.png" alt="">
+     </a></p>
+<p>Select <code>Patch</code> as the action to perform (outlined in red above). By default, MyST will apply this action to all nodes within the cluster. If we only want to patch specific nodes, then first remove the nodes that we don&apos;t want to perform this action on.</p>
+<p>Specify whether a server restart is required to apply the patch, then enter any notes as to why we are performing the action and click <code>Execute</code>.</p>
+<p>MyST will queue the action in the list of Pending Actions for the Platform Instance and when ready proceed to patch the Platform Instance.</p>
+<p>     <a href="img/platformInstancePatch.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstancePatch.png" alt="">
+     </a></p>
+<h3 id="aborting-the-current-action">Aborting the Current Action</h3>
+<p>There might be cases where an action is running for a long time and we would want to abort it for various reasons. MyST allows us to abort an current running action on a best-effort basis.</p>
+<p>     <a href="img/platformInstanceAbort.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceAbort.png" alt="">
+     </a></p>
+<p>Locate the <code>Abort</code> button as shown above and click on it. MyST will show a confirmation dialog like below and once we give a go-ahead, the action will be aborted.</p>
+<p>     <a href="img/abortConfirmation.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/abortConfirmation.png" alt="">
+     </a></p>
+<p>     <a href="img/platformInstanceAbortComplete.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceAbortComplete.png" alt="">
+     </a></p>
+<p>Alternatively, if we restart MyST Studio, we will see that the action and the instance state will automatically go into a state of <code>INDETERMINATE</code> and the user then has to manually override the state of the instance to reflect the correct state. See below on how to override the state of an instance.</p>
+<h3 id="overriding-the-state-of-a-platform-instance">Overriding the State of a Platform Instance</h3>
+<p>MyST allows us to override the state of an instance in case we want to intervene and do manual reconciliation.</p>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p>This has to be done with extreme caution by users who have advanced privileges as this could have significant impact on the internal workflow for the instance and cause subsequent actions to get stalled</p>
+</div></div></p>
+<p>From the side menu navigate to <code>Modeling</code> &gt; <code>Platform Models</code>, this will display a list of existing Platform Models. </p>
+<p>To override the state of the Platform Instance, select the corresponding Platform Model, MyST will display the Platform Model and Instance summary. Click on the <code>Actions</code> menu and select <code>Override State</code>.</p>
+<p>MyST will open the <code>Platform Instance State Override</code> dialog. Here we can see the current state of the instance and change it to be in a new state. MyST will just assume that the user knows what he is doing and internall record this as the new state of the instance and do all subsequent action on this instance obeying this.</p>
+<p>     <a href="img/platformInstanceStateOverride.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformInstanceStateOverride.png" alt="">
+     </a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../definitions/editor/property-references/" class="navigation navigation-prev " aria-label="Previous page: Using Property References">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../introspection/" class="navigation navigation-next " aria-label="Next page: Introspecting Existing Platform Instances">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Managing Platform Instances","level":"4.1.8","depth":2,"next":{"title":"Introspecting Existing Platform Instances","level":"4.1.9","depth":2,"path":"platform/introspection/README.md","ref":"platform/introspection/README.md","articles":[]},"previous":{"title":"Using Property References","level":"4.1.7.2.6","depth":4,"path":"platform/definitions/editor/property-references/README.md","ref":"platform/definitions/editor/property-references/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{"myst_repo":"../../demos/myst-build","file1":"../../demos/myst-build/myst/fc-parent/fc-sdk/fc-studio-sdk-payload/src/test/resources/src/artifacts/sca/pom.xml"},"plugins":["hints","simple-page-toc","custom-favicon","ga","fancybox"],"pluginsConfig":{"disqus":{"shortName":"myst-studio-documentation"},"fancybox":{"helpers":{"buttons":{}}},"simple-page-toc":{"maxDepth":7,"skipFirstH1":true},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"assets/favicon.ico","custom-favicon":{},"ga":{"configuration":"auto","token":"UA-35856338-5"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"platform/management/README.md","mtime":"2018-03-13T05:37:12.509Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-09-23T06:17:23.355Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

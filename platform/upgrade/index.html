@@ -1,0 +1,1603 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Upgrading Platform Instances · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../resources/weblogic/" />
+    
+    
+    <link rel="prev" href="../introspection/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Title and Copyright Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">User Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../introduction/">
+            
+                <a href="../../introduction/">
+            
+                    
+                    Rubicon Red MyST
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../introduction/platform-provisioning/">
+            
+                <a href="../../introduction/platform-provisioning/">
+            
+                    
+                    Platform Provisioning and Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../introduction/application-release-automation/">
+            
+                <a href="../../introduction/application-release-automation/">
+            
+                    
+                    Application Release Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../security/">
+            
+                <a href="../security/">
+            
+                    
+                    Security Salt and Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../infrastructure/">
+            
+                <a href="../../infrastructure/">
+            
+                    
+                    Infrastructure Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../infrastructure/environment-types/">
+            
+                <a href="../../infrastructure/environment-types/">
+            
+                    
+                    Environment Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../infrastructure/compute-definitions/">
+            
+                <a href="../../infrastructure/compute-definitions/">
+            
+                    
+                    Compute Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../infrastructure/providers/pre-existing/">
+            
+                <a href="../../infrastructure/providers/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../infrastructure/providers/on-demand/aws/">
+            
+                <a href="../../infrastructure/providers/on-demand/aws/">
+            
+                    
+                    On-Demand Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../infrastructure/providers/hosts/">
+            
+                <a href="../../infrastructure/providers/hosts/">
+            
+                    
+                    Host Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Platform Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../blueprints/">
+            
+                <a href="../blueprints/">
+            
+                    
+                    Platform Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../templates/">
+            
+                <a href="../templates/">
+            
+                    
+                    Platform Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../models/">
+            
+                <a href="../models/">
+            
+                    
+                    Platform Models
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../models/pre-existing/">
+            
+                <a href="../models/pre-existing/">
+            
+                    
+                    Pre-Existing Infrastructure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../models/on-demand-aws/">
+            
+                <a href="../models/on-demand-aws/">
+            
+                    
+                    On Demand (AWS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../cloud/instances/">
+            
+                <a href="../cloud/instances/">
+            
+                    
+                    Registering Cloud Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../provisioning/">
+            
+                <a href="../provisioning/">
+            
+                    
+                    Provisioning Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../update/">
+            
+                <a href="../update/">
+            
+                    
+                    Updating Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../definitions/">
+            
+                <a href="../definitions/">
+            
+                    
+                    Maintaining Platform Definitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.1" data-path="../definitions/version-control/">
+            
+                <a href="../definitions/version-control/">
+            
+                    
+                    Platform Version Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2" data-path="../definitions/editor/">
+            
+                <a href="../definitions/editor/">
+            
+                    
+                    Platform Editor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.7.2.1" data-path="../definitions/editor/control-bar/">
+            
+                <a href="../definitions/editor/control-bar/">
+            
+                    
+                    Control Bar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.2" data-path="../definitions/editor/tree-view/">
+            
+                <a href="../definitions/editor/tree-view/">
+            
+                    
+                    Tree View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.3" data-path="../definitions/editor/properties-view/">
+            
+                <a href="../definitions/editor/properties-view/">
+            
+                    
+                    Properties View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.4" data-path="../definitions/editor/topology-view/">
+            
+                <a href="../definitions/editor/topology-view/">
+            
+                    
+                    Topology View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.5" data-path="../definitions/editor/source-view/">
+            
+                <a href="../definitions/editor/source-view/">
+            
+                    
+                    Source View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7.2.6" data-path="../definitions/editor/property-references/">
+            
+                <a href="../definitions/editor/property-references/">
+            
+                    
+                    Using Property References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../management/">
+            
+                <a href="../management/">
+            
+                    
+                    Managing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../introspection/">
+            
+                <a href="../introspection/">
+            
+                    
+                    Introspecting Existing Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Upgrading Platform Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../resources/weblogic/">
+            
+                <a href="../resources/weblogic/">
+            
+                    
+                    Platform Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../resources/weblogic/servers/">
+            
+                <a href="../resources/weblogic/servers/">
+            
+                    
+                    WebLogic Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../resources/weblogic/patches/">
+            
+                <a href="../resources/weblogic/patches/">
+            
+                    
+                    Oracle Patches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../resources/weblogic/jdbc/">
+            
+                <a href="../resources/weblogic/jdbc/">
+            
+                    
+                    Data Sources (JDBC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../resources/weblogic/jms/">
+            
+                <a href="../resources/weblogic/jms/">
+            
+                    
+                    Java Messaging Service (JMS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../resources/weblogic/jms/persistent-stores/">
+            
+                <a href="../resources/weblogic/jms/persistent-stores/">
+            
+                    
+                    Persistent Stores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.2" data-path="../resources/weblogic/jms/modules/">
+            
+                <a href="../resources/weblogic/jms/modules/">
+            
+                    
+                    JMS Modules and Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.3" data-path="../resources/weblogic/jms/store-and-forward/">
+            
+                <a href="../resources/weblogic/jms/store-and-forward/">
+            
+                    
+                    Store and Forward (SAF) Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../resources/weblogic/jca-adapters/">
+            
+                <a href="../resources/weblogic/jca-adapters/">
+            
+                    
+                    JCA Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../resources/weblogic/work-managers/">
+            
+                <a href="../resources/weblogic/work-managers/">
+            
+                    
+                    Work Managers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../resources/weblogic/servers/load-balancer-configuration.html">
+            
+                <a href="../resources/weblogic/servers/load-balancer-configuration.html">
+            
+                    
+                    Load Balancer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../resources/weblogic/servers/web-tier.html">
+            
+                <a href="../resources/weblogic/servers/web-tier.html">
+            
+                    
+                    Webtier Routing Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.9" data-path="../resources/weblogic/servers/configuring-security.html">
+            
+                <a href="../resources/weblogic/servers/configuring-security.html">
+            
+                    
+                    Users, Groups, Roles and Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.10" data-path="../resources/weblogic/servers/applying-certificates.html">
+            
+                <a href="../resources/weblogic/servers/applying-certificates.html">
+            
+                    
+                    Keystore Certificates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.11" data-path="../resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                <a href="../resources/weblogic/servers/setting-startup-and-shutdown-classes.html">
+            
+                    
+                    Startup and Shutdown Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.12" data-path="../resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                <a href="../resources/weblogic/servers/weblogic-deployment-targeting.html">
+            
+                    
+                    Weblogic Deployment Targeting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../build/">
+            
+                <a href="../../build/">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../build/server/configuration/">
+            
+                <a href="../../build/server/configuration/">
+            
+                    
+                    Build Server Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1.1" data-path="../../infrastructure/continuous-delivery-profile/">
+            
+                <a href="../../infrastructure/continuous-delivery-profile/">
+            
+                    
+                    Continuous Delivery Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.2" data-path="../../build/server/configuration/jenkins/">
+            
+                <a href="../../build/server/configuration/jenkins/">
+            
+                    
+                    MyST Studio Plugin for Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../../build/maven/">
+            
+                <a href="../../build/maven/">
+            
+                    
+                    Configuring Maven Builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../../build/ci/">
+            
+                <a href="../../build/ci/">
+            
+                    
+                    Configuring Automated Builds 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.3.1" data-path="../../build/ci/jenkins/">
+            
+                <a href="../../build/ci/jenkins/">
+            
+                    
+                    Configuring Jenkins Build Jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../../build/artifacts/">
+            
+                <a href="../../build/artifacts/">
+            
+                    
+                    Artifact Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../../build/deploy-config/">
+            
+                <a href="../../build/deploy-config/">
+            
+                    
+                    Deploy Time Customizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.5.1" data-path="../../howtos/use-myst-generic-configuration-plans.html">
+            
+                <a href="../../howtos/use-myst-generic-configuration-plans.html">
+            
+                    
+                    MyST Configuration Plans
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../deploy/application/">
+            
+                <a href="../../deploy/application/">
+            
+                    
+                    Application Deployment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../deploy/application/blueprints/">
+            
+                <a href="../../deploy/application/blueprints/">
+            
+                    
+                    Configuring Application Blueprints
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../release/">
+            
+                <a href="../../release/">
+            
+                    
+                    Release Pipelines
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../release/pipeline/organization/">
+            
+                <a href="../../release/pipeline/organization/">
+            
+                    
+                    Pipeline Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1.1" data-path="../../release/pipeline/organization/groups/">
+            
+                <a href="../../release/pipeline/organization/groups/">
+            
+                    
+                    Pipeline Groups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.1.2" data-path="../../release/pipeline/organization/stream-types/">
+            
+                <a href="../../release/pipeline/organization/stream-types/">
+            
+                    
+                    Stream Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../release/pipeline/templates/">
+            
+                <a href="../../release/pipeline/templates/">
+            
+                    
+                    Pipeline Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../release/pipeline/">
+            
+                <a href="../../release/pipeline/">
+            
+                    
+                    Configuring Release Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../../release/pipeline/dashboard/">
+            
+                <a href="../../release/pipeline/dashboard/">
+            
+                    
+                    Release Pipeline Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../administration/">
+            
+                <a href="../../administration/">
+            
+                    
+                    Role-Based Access Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../administration/users/">
+            
+                <a href="../../administration/users/">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../../administration/roles/">
+            
+                <a href="../../administration/roles/">
+            
+                    
+                    Role Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../../administration/workspaces/">
+            
+                <a href="../../administration/workspaces/">
+            
+                    
+                    Workspace Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Administration Guides</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../installation/myst-studio/">
+            
+                <a href="../../installation/myst-studio/">
+            
+                    
+                    MyST Installation Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../installation/myst-studio/requirements/">
+            
+                <a href="../../installation/myst-studio/requirements/">
+            
+                    
+                    System Requirements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../installation/myst-studio/docker/">
+            
+                <a href="../../installation/myst-studio/docker/">
+            
+                    
+                    Docker-based Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../../installation/myst-studio/alternatives/">
+            
+                <a href="../../installation/myst-studio/alternatives/">
+            
+                    
+                    Alternative Installations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../administration/management/">
+            
+                <a href="../../administration/management/">
+            
+                    
+                    MyST Management Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../administration/upgrade/">
+            
+                <a href="../../administration/upgrade/">
+            
+                    
+                    MyST Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Appendix</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../appendix/artifact/">
+            
+                <a href="../../appendix/artifact/">
+            
+                    
+                    Supported Artifacts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../../appendix/configuration/">
+            
+                <a href="../../appendix/configuration/">
+            
+                    
+                    Supported Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../../appendix/errors/">
+            
+                <a href="../../appendix/errors/">
+            
+                    
+                    Error Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Upgrading Platform Instances</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="upgrading-platform-instances">Upgrading Platform Instances</h2>
+<p>In order to get the latest bug fixes and feature enhancements from your Oracle product investments, regular updates need to be applied. Fundamentally, there are two types of updates:</p>
+<ul>
+<li><p><strong>One-off patches</strong>: These are provided by Oracle and available for download from <a href="http://support.oracle.com" target="_blank">My Oracle Support</a> to fix a specific defect or add a minor enhancement. One-off patches can be applied directly through MyST by first <a href="../resources/weblogic/patches/">defining them within a Platform Blueprint</a> then <a href="../management/">applying them to a Platform Instance</a>.</p>
+<!-- TODO: The above link should ideally go to the patching sub-section -->
+</li>
+<li><p><strong>Upgrades</strong>: An upgrade will introduce a significant number of bug fixes and major enhancements in one hit. Without MyST, an upgrade is usually resource intensive and risky. With MyST, an upgrade can be automated which significantly de-risks the upgrade process. This section primarily focuses on this type of upgrade. Upgrades can be either:</p>
+<ul>
+<li><strong>Side-by-Side</strong>: also known as <em>Out-of-place</em> or <em>Blue/Green</em></li>
+<li>or <strong>Direct</strong>: also known as <em>In-place</em></li>
+</ul>
+</li>
+</ul>
+<h3 id="side-by-side-upgrades">Side-By-Side Upgrades</h3>
+<p>Most organizations, when migrating to Oracle SOA 12c or Oracle BPM 12c, choose to perform a side-by-side upgrade as it:</p>
+<ul>
+<li>requires zero downtime</li>
+<li>supports all SOA and BPM components</li>
+<li>allows for a phased migration</li>
+<li>involves significantly less risk</li>
+</ul>
+<p>This involves provisioning a new instance of SOA/BPM 12c, replicating the configurations from your 11g platform and migrating and deploying your code. Once ready, you then switch over from 11g to 12c.</p>
+<p>Most organizations fail to maintain accurate documentation of their current 11g configurations, so have to manually reverse-engineer their existing 11g production configurations so they can be re-applied to their new 12c environments. This is both time consuming and error prone approach.</p>
+<p>MyST provides a simple and automated process for side-by-side upgrades. It allows administrators to introspect an existing 11g environment, extract the key configuration information and then use this to automatically provision an equivalent 12c environment in minutes.</p>
+<h4 id="side-by-side-upgrades-made-simple">Side-By-Side Upgrades made Simple</h4>
+<p>When performing a side-by-side upgrade, MyST will introspect the existing environment and create a corresponding 11g Platform Blueprint.</p>
+<p>Next, specify the Oracle Middleware version required. MyST will automatically convert the Platform Blueprint to one that is compliant with the Oracle Enterprise Deployment Guide, whilst preserving any custom configuration.</p>
+<p>Finally, specify the target environment(s) for the new upgraded domain. Then at the click of a button, MyST will automatically provision an equivalent upgraded Oracle Middleware platform.</p>
+<p>The end-to-end process consists of three simple steps and can be performed in minutes as shown below.</p>
+<p><div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-mortar-board"></i></div><div class="hints-container"><p>Although this example is for an 11g to 12c upgrade, the approach would be consistent for alternative version upgrades such as an upgrade from 12.1.3.0.0 to 12.2.1.2.0 or from 12.2.1.0.0 to 12.2.1.3.0.</p>
+</div></div></p>
+<h5 id="step-1---introspect-soa--bpm-11gr1-domain">Step 1 - Introspect SOA / BPM 11gR1 Domain</h5>
+<p>For the purpose of this guide, we are going to introspect an existing Oracle SOA 11.1.1.7 environment running on two VMs, that consists of a 2 node SOA Cluster and 2 node OSB Cluster.</p>
+<p>The steps for introspecting an existing Oracle SOA or BPM environment are documented in the chapter - <a href="../introspection/">Creating a Platform Blueprint from an Existing WebLogic Domain</a>.</p>
+<p><div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-mortar-board"></i></div><div class="hints-container"><p>Introspection is only required if the environment to be upgraded was provisioned outside of MyST (e.g. by manual installation or another alternative method). If environment was built with MyST, the existing Platform Blueprint can be upgraded(as shown in the next step) rather than introspecting the environment first and creating one.</p>
+</div></div></p>
+<h5 id="step-2---upgrade-11g-platform-blueprint-to-12c">Step 2 - Upgrade 11g Platform Blueprint to 12c</h5>
+<p>The next step is to upgrade the 11g SOA Platform Blueprint to create a new SOA 12c Platform Blueprint. From the side menu navigate to <code>Modeling</code> &gt; <code>Platform Blueprints</code>, this will display a list of existing Platform Blueprints. Click on <code>Create New</code> in the top right-hand corner of the screen. This will launch the <code>New Platform Blueprint</code> wizard.</p>
+<p>     <a href="img/platformBlueprintUpgradeStep1.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformBlueprintUpgradeStep1.png" alt="">
+     </a></p>
+<p>In the initial dialog, we need to specify the following details about the Platform Blueprint:</p>
+<ul>
+<li><strong>Name</strong> - Shorthand name for the Platform Blueprint.</li>
+<li><strong>Description</strong> - A longer description of the Platform Blueprint.</li>
+<li><strong>Workspaces</strong> - This defines the Workspaces to which the Platform Blueprint belongs (Role Based Access Control allows administrators to manage which workspaces a user has access to.)</li>
+<li><strong>Initial Version</strong> - Specifies the initial version of the Platform Blueprint, we will stick with the default.</li>
+</ul>
+<p>Finally, we need to specify how we want to create the Platform Blueprint, select the option to <code>Upgrade</code> from an existing blueprint and click <code>Next</code>.</p>
+<h6 id="specify-oracle-middleware-upgrade-version">Specify Oracle Middleware Upgrade Version</h6>
+<p>Next, we need to specify the Platform Blueprint that we want to upgrade, so from the drop down select the introspected Platform Blueprint; <code>Oracle SOA 11.1.1.7</code> in our example.</p>
+<p>     <a href="img/platformBlueprintUpgradeStep2.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformBlueprintUpgradeStep2.png" alt="">
+     </a></p>
+<p>Next, we need to select the version of Oracle SOA 12c we want to upgrade to, in our example we will upgrade to <code>12.2.1.0.0</code>. Once done, click <code>Next</code>.</p>
+<h6 id="review-the-summary">Review the Summary</h6>
+<p>MyST will display a screen showing the summary of the old Platform Blueprint that will be upgraded and the new Platform Blueprint that it will create in the process.</p>
+<p>     <a href="img/platformBlueprintUpgradeStep3.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/platformBlueprintUpgradeStep3.png" alt="">
+     </a></p>
+<p>We can review these details. Once done, click <code>Finish</code>.</p>
+<h6 id="viewedit-platform-blueprint">View/Edit Platform Blueprint</h6>
+<p>MyST will automatically convert our 11gR1 SOA Platform blueprint to an equivalent SOA 12c Platform Blueprint, whilst preserving the custom configurations that were previously applied to the 11g environment. This includes configurations such as JDBC Data Sources, File Stores, JMS Servers, JMS Modules, JCA Adapters and SAF Agents.</p>
+<p>Once created, MyST will open the <a href="../definitions/editor/">Platform Blueprint Editor</a> where additional configuration changes can be made; for example, we may want to add in the Enterprise Scheduler Service that wasn&apos;t included in 11gR1.</p>
+<p>     <a href="img/11gPlatformBlueprint.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/11gPlatformBlueprint.png" alt="">
+     </a></p>
+<p>     <a href="img/12cPlatformBlueprint.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/12cPlatformBlueprint.png" alt="">
+     </a></p>
+<p>The first image above is that of the 11g Platform Blueprint while the second one below is that of the 12c one we created just now.</p>
+<p>If we look closely at the 12c Platform Blueprint, we can see that the number of Data Sources is different. In the 11g Platform Blueprint, there were 10 JDBC Data Sources but in the 12c Platform Blueprint, there are 15 JDBC Data Sources (see box <strong>1</strong> outlined in red above). This is because in SOA 12c, changes were made to database schemas and corresponding JDBC Data Sources required by the Oracle SOA Platform.</p>
+<p>When upgrading to 12c, MyST has the knowledge to remove the 11g data sources that are no longer needed and create the additional ones required for 12c. MyST has preserved the one custom data source, <code>StockDS</code> which is colored white (as opposed to product data sources in light green) in the screenshot above.</p>
+<p>In addition, when the SOA 11gR1 domain was originally created, the middleware version number was specified as part of the Domain Name, for example <code>acme11g_domain</code>. The corresponding directory locations <code>Domain Home</code>, <code>Domain Aserver Home</code>, etc, also have this in their file path (see box <strong>2</strong> outlined in red above).</p>
+<p>     <a href="img/edit12cPlatformBlueprint1.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/edit12cPlatformBlueprint1.png" alt="">
+     </a></p>
+<p>To change this, place the Platform Blueprint into <code>Edit</code> mode and update the WebLogic Domain name to <code>acme12c_domain</code>. Click on <code>Calculate resolved values</code> now.</p>
+<p>We can see that MyST automatically shows the resolved values based on the new name.</p>
+<p>     <a href="img/edit12cPlatformBlueprint2.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/edit12cPlatformBlueprint2.png" alt="">
+     </a></p>
+<p>With this minor edit, we are now ready to provision the new 12c environment. Typically when migrating to 12c, we will want to create multiple non-production environments, such as DEV, SIT, UAT and PRE-PROD to test and validate that the migrated code is performing as expected before promoting into Production.</p>
+<p>With MyST, we can use the same Platform Blueprint to provision all these environments, ensuring each environment is consistent with Production. For each environment we want to provision, we need to create a Platform Model. This essentially maps the Platform Blueprint to the target infrastructure and captures environment specific configuration details, such as credentials.</p>
+<h5 id="step-3---create-platform-model-and-provision">Step 3 - Create Platform Model and Provision</h5>
+<p>Once we have finalized the migrated Platform Blueprint, the next step is to create a Platform Model and then use that to provision a Platform Instance. For more details on how to do this see <a href="../models/">Chapter 3.2 - Creating a Platform Model</a>.</p>
+<h3 id="direct-upgrades">Direct Upgrades</h3>
+<p>A Direct Upgrade involves taking an existing platform including all of its configuration and migrating it directly. It does not have the many benefits of a Side-by-Side Upgrade and it will require a a longer outage.</p>
+<h4 id="when-to-do-a-direct-upgrade">When to do a Direct Upgrade</h4>
+<p>As a general rule, Side-by-Side Upgrades are the safest and simplest type of upgrade to execute. However, there are some circumstances where a Direct Upgrade may be the only option.</p>
+<ol>
+<li>Unavailablity of hardware resources to maintain parallel environments.</li>
+<li>When we have a lot of model-specific settings in MyST Studio and want to avoid re-creating the Platform Models</li>
+<li>When our application is architected in a way that we are unable to do a side-by-side upgrade.</li>
+</ol>
+<h4 id="when-not-to-do-a-direct-upgrade">When not to do a Direct Upgrade</h4>
+<p>We should avoid doing a Direct Upgrade</p>
+<ol>
+<li>When we want to be able to rollback immediately in the event of a failure.</li>
+<li>When we want to minimise downtime or avoid downtime altogether.</li>
+</ol>
+<h4 id="types-of-direct-upgrades">Types of Direct Upgrades</h4>
+<p>There are two types of Direct Upgrades:</p>
+<ul>
+<li><strong>Fresh</strong>: This involves terminating the current instance and then re-provisioning it on the new version. It is the safest type of Direct Upgrade as it relies on a standard Oracle installation rather than the in-place upgrade tools from Oracle which are less reliable and do not work in all cases.</li>
+<li><strong>State-preserving</strong>: This is the riskiest type of upgrade but it has the benefit of preserving the long running state of existing deployed applications. If you want to perform a State-preserving upgrade with MyST we would recommend <a href="http://support.rubiconred.com" target="_blank">raising a support ticket</a>.</li>
+</ul>
+<h4 id="direct-upgrades-made-simple">Direct Upgrades made Simple</h4>
+<p>Before performing a fresh direct upgrade, MyST will need to have existing Platform Blueprint and one or more Platform Models based off that.</p>
+<p>If a Platform Blueprint and Models for your existing environments does not exist, we can <a href="../introspection/">introspect them using MyST</a>.</p>
+<p>When performing a fresh direct upgrade for a platform instance, terminate the instance, update the version number within the Platform Blueprint then re-provision the instance.</p>
+<p>The end-to-end process consists of two simple steps and can be performed in minutes.</p>
+<p>For the purpose of this guide, we are going to upgrade an existing Oracle Service Bus 12.1.3 environment to 12.2.1 using a fresh direct upgrade approach.</p>
+<p><div class="alert alert-success hints-alert"><div class="hints-icon"><i class="fa fa-mortar-board"></i></div><div class="hints-container"><p>Although this example is for a 12.1.3 to 12.2.1 upgrade, the approach would be consistent for alternative version upgrades such as an upgrade of 11.1.1.7.0 to 12.1.3.0.0 or from 12.2.1.0.0 to 12.2.1.1.0.</p>
+</div></div></p>
+<h4 id="step-1---upgrade-121300-platform-blueprint-to-122100">Step 1 - Upgrade 12.1.3.0.0 Platform Blueprint to 12.2.1.0.0</h4>
+<h5 id="specify-oracle-middleware-upgrade-version">Specify Oracle Middleware Upgrade Version</h5>
+<p>From the <a href="../definitions/editor/">Blueprint Editor</a> click <code>Edit Configuration</code>. Then, navigate to the <code>Middleware Settings</code> in the tree.</p>
+<p>Choose the version, <code>12.2.1.0.0</code> from the drop-down, the click <code>Save</code> to save the Blueprint.</p>
+<p>     <a href="img/directChangeVersion1221.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/directChangeVersion1221.png" alt="">
+     </a></p>
+<h5 id="viewedit-platform-blueprint">View/Edit Platform Blueprint</h5>
+<p>MyST will automatically convert the 12.1.3 Platform Blueprint to an equivalent 12.2.1 Platform Blueprint, whilst preserving the custom configuration that were previously applied to that environment. This includes configurations such as JDBC Data Sources, File Stores, JMS Servers, JMS Modules, JCA Adapters and SAF Agents.</p>
+<p>If we look closely at our Platform Blueprint, we can see that there are some subtle differences. For example, if we are using the default Fusion Middleware Home Directory of <code>/u01/app/oracle/product/fmw1213</code> we will see that it has changed to <code>/u01/app/oracle/product/fmw1221</code>.</p>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p>If a custom <code>Home Directory</code> under <code>Middleware Settings</code> is being used, this must be changed so that it is unique before performing an upgrade. For example, if it is set to <code>/opt/my-company/12.1.3.0.0/soa</code>, it should be changed to <code>/opt/my-company/12.2.1.0.0/soa</code>.</p>
+<p>Remember, a reference to the version <code>${[rxr.wls.Fmw-1].version}</code> may be used e.g. <code>/opt/my-company/${[rxr.wls.Fmw-1].version}/soa</code>. If this property reference is already being used, then it would have changed the path automatically. Once the property reference is set within the <code>Home Directory</code>, it will update automatically for future upgrades.</p>
+<p>Make sure that any other property references to the version in the configuration which are hardcoded are using a reference, whilst it may not cause the upgrade to fail it will be a source of confusion for the upgraded platform.</p>
+</div></div></p>
+<p>Once the upgraded Platform Blueprint has been reviewed, click on <code>Save &amp; Commit</code>. When prompted, enter a description for the change.</p>
+<p>     <a href="img/directConfirmUpgradeEdit.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="img/directConfirmUpgradeEdit.png" alt="">
+     </a></p>
+<p>With these minor edits, we are now ready to upgrade our environments. Typically when upgrading, we will want to create multiple non-production environments, such as DEV, SIT, UAT and PRE-PROD to test and validate that the migrated code is performing as expected before promoting into Production. With MyST, we can use the same Platform Blueprint to upgrade all these environments, ensuring each environment is consistent with Production.</p>
+<h4 id="step-2---terminate-and-re-provision-the-existing-environment">Step 2 - Terminate and Re-provision the existing environment</h4>
+<p>From the <code>Actions</code> menu for any Platform Instance, there is the option to <code>Terminate</code>. This will destroy the WebLogic Domain on the file system to allow for it to be upgraded. This approach is described in more detail in the section on <a href="../management/">Managing Platform Instances</a>.</p>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p>Please be aware when this is performed, existing application state will be lost. Do not use this approach for an application architecture with long running processes. In this case, it is advisable to perform a State-preserving Upgrade which can be facilitated by raising a request to <a href="http://support.rubiconred.com" target="_blank">MyST Support</a>.</p>
+</div></div></p>
+<p>When ready to do a fresh direct upgrade to an instance associated with the upgraded Platform Blueprint, simply trigger the <code>Terminate</code> then perform a <code>Reprovision</code>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../introspection/" class="navigation navigation-prev " aria-label="Previous page: Introspecting Existing Platform Instances">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../resources/weblogic/" class="navigation navigation-next " aria-label="Next page: Platform Configuration">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Upgrading Platform Instances","level":"4.1.10","depth":2,"next":{"title":"Platform Configuration","level":"5.1","depth":1,"path":"platform/resources/weblogic/README.md","ref":"platform/resources/weblogic/README.md","articles":[{"title":"WebLogic Servers","level":"5.1.1","depth":2,"path":"platform/resources/weblogic/servers/README.md","ref":"platform/resources/weblogic/servers/README.md","articles":[]},{"title":"Oracle Patches","level":"5.1.2","depth":2,"path":"platform/resources/weblogic/patches/README.md","ref":"platform/resources/weblogic/patches/README.md","articles":[]},{"title":"Data Sources (JDBC)","level":"5.1.3","depth":2,"path":"platform/resources/weblogic/jdbc/README.md","ref":"platform/resources/weblogic/jdbc/README.md","articles":[]},{"title":"Java Messaging Service (JMS)","level":"5.1.4","depth":2,"path":"platform/resources/weblogic/jms/README.md","ref":"platform/resources/weblogic/jms/README.md","articles":[{"title":"Persistent Stores","level":"5.1.4.1","depth":3,"path":"platform/resources/weblogic/jms/persistent-stores/README.md","ref":"platform/resources/weblogic/jms/persistent-stores/README.md","articles":[]},{"title":"JMS Modules and Components","level":"5.1.4.2","depth":3,"path":"platform/resources/weblogic/jms/modules/README.md","ref":"platform/resources/weblogic/jms/modules/README.md","articles":[]},{"title":"Store and Forward (SAF) Configuration","level":"5.1.4.3","depth":3,"path":"platform/resources/weblogic/jms/store-and-forward/README.md","ref":"platform/resources/weblogic/jms/store-and-forward/README.md","articles":[]}]},{"title":"JCA Adapters","level":"5.1.5","depth":2,"path":"platform/resources/weblogic/jca-adapters/README.md","ref":"platform/resources/weblogic/jca-adapters/README.md","articles":[]},{"title":"Work Managers","level":"5.1.6","depth":2,"path":"platform/resources/weblogic/work-managers/README.md","ref":"platform/resources/weblogic/work-managers/README.md","articles":[]},{"title":"Load Balancer","level":"5.1.7","depth":2,"path":"platform/resources/weblogic/servers/load-balancer-configuration.md","ref":"platform/resources/weblogic/servers/load-balancer-configuration.md","articles":[]},{"title":"Webtier Routing Rules","level":"5.1.8","depth":2,"path":"platform/resources/weblogic/servers/web-tier.md","ref":"platform/resources/weblogic/servers/web-tier.md","articles":[]},{"title":"Users, Groups, Roles and Policies","level":"5.1.9","depth":2,"path":"platform/resources/weblogic/servers/configuring-security.md","ref":"platform/resources/weblogic/servers/configuring-security.md","articles":[]},{"title":"Keystore Certificates","level":"5.1.10","depth":2,"path":"platform/resources/weblogic/servers/applying-certificates.md","ref":"platform/resources/weblogic/servers/applying-certificates.md","articles":[]},{"title":"Startup and Shutdown Classes","level":"5.1.11","depth":2,"path":"platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.md","ref":"platform/resources/weblogic/servers/setting-startup-and-shutdown-classes.md","articles":[]},{"title":"Weblogic Deployment Targeting","level":"5.1.12","depth":2,"path":"platform/resources/weblogic/servers/weblogic-deployment-targeting.md","ref":"platform/resources/weblogic/servers/weblogic-deployment-targeting.md","articles":[]}]},"previous":{"title":"Introspecting Existing Platform Instances","level":"4.1.9","depth":2,"path":"platform/introspection/README.md","ref":"platform/introspection/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.2.2","theme":"default","variables":{"myst_repo":"../../demos/myst-build","file1":"../../demos/myst-build/myst/fc-parent/fc-sdk/fc-studio-sdk-payload/src/test/resources/src/artifacts/sca/pom.xml"},"plugins":["hints","simple-page-toc","custom-favicon","ga","fancybox"],"pluginsConfig":{"disqus":{"shortName":"myst-studio-documentation"},"fancybox":{"helpers":{"buttons":{}}},"simple-page-toc":{"maxDepth":7,"skipFirstH1":true},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"assets/favicon.ico","custom-favicon":{},"ga":{"configuration":"auto","token":"UA-35856338-5"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"platform/upgrade/README.md","mtime":"2018-03-13T05:37:12.611Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-09-23T06:17:23.355Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
