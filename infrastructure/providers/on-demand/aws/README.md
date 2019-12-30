@@ -46,6 +46,7 @@ To add an OS Agent Credential, click `Add OS Agent Credential`, specify the foll
 * **Run as different user** - Select this to use **sudo** to enable the MyST agent to run as a different user.
 * **Other User Name** - If `Run as different user` is set to `Yes`. Specify the user account under whose identity the MyST agent will perform all tasks.
 
+![](img/osAgentCredentials.png)
 
 Click **Save** to save your infrastructure provider.
 
