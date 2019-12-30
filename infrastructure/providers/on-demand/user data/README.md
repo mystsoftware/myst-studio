@@ -28,6 +28,7 @@ In this format the commands are entered in the text box, starting with hashbang(
 
 In this format the user data is written in a file and the file is uploaded instead of giving the data.
 
+**Note:**
 In both the formats user data size is limited to 16K KB. If you need to enter the commands greater than 16K KB size, you need to enter the input which is base64 encoded and tick the “Input is already base64 encoded” checkbox.
 
 
@@ -36,5 +37,66 @@ While setting user data be aware of following :
 
 * User data must be base64-encoded. The Amazon EC2 console can perform the base64-encoding for you or accept base64-encoded input.
 
-* 
+* User data is limited to 16 KB. This limit applies to the data in raw form, not base64-encoded form.
+
+* User data must be base64-encoded. The Amazon EC2 console can perform the base64 encoding for you or accept base64-encoded input.
+
+* If you stop an instance, modify its user data, and start the instance, the updated user data is not executed automatically when you start the instance.
+
+User Data commands is different for Windows and Linux Machines.
+
+#### User Data for Linux Machines
+
+As we already aware user data of text format starts with hashbang.
+Below example shows the installation of Apache during the launch of instance.
+
+
+
+```
+#!/bin/bash
+
+yum update -y
+yum install -y httpd.x86_64
+systemctl start httpd.service
+systemctl enable httpd.service
+
+```
+
+#### User Data for Windows Machines
+
+To execute the user data commands in windows, commands should be placed between start and end of script tags i.e <script></script>
+Below example updates the server timezone at launch.
+
+```
+<script>
+REM Set timezone
+tzutil /s "Singapore Standard Time"
+</script>
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a
 
