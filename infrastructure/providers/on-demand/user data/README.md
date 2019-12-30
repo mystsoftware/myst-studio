@@ -64,7 +64,7 @@ systemctl enable httpd.service
 
 #### User Data for Windows Machines
 
-To execute the user data commands in windows using command prompt, commands should be placed between start and end of script tags i.e <script></script>
+* To execute the user data commands in windows using Command Prompt, commands should be placed between start and end of script tags i.e <script></script>
 Below example updates the server timezone at launch.
 
 ```
@@ -74,6 +74,19 @@ tzutil /s "Singapore Standard Time"
 </script>
 
 ```
+
+* To execute the user data commands in windows using Power Shell, commands should be placed between start and end of script tags i.e <powershell></powershell>
+Below example updates the server timezone at launch.
+
+```
+<powershell>
+tzutil /s "Singapore Standard Time"
+</powershell>
+
+```
+
+
+
 
 
 
