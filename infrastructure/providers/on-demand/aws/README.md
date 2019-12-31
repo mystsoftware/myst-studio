@@ -61,3 +61,12 @@ If you want to edit the information click on the On Demand Infrastructure provid
 ![](img/ReDiscover.png)
 
 Once the changes are made click on **save**.
+
+To create and Provision a Platform Model with this Infrastructure Provider follow the following steps
+* [Platform Model On-Demand](/platform/models/on-demand-aws/README.md)
+
+
+
+
+
+
