@@ -3,7 +3,7 @@
 ###  USER DATA
 
 
-User Data is set of instructions or commands which will be executed(if given) during the launch of the instance. These instructions are executed only during the initial bootstrap, but not every time when we restart(stop and start) instance.
+User Data is a set of instructions or commands which will be executed(if given) during the launch of the instance. These instructions are executed only during the initial bootstrap, but not every time when we restart(stop and start) instance.
 
 ** Why User Data **
 
@@ -114,32 +114,3 @@ uid=54322(testuser) gid=54322(testuser) groups=54322(testuser)
 ```
 
 It says that the 'testuser' is successfully created.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
