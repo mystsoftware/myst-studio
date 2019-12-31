@@ -87,7 +87,7 @@ tzutil /s "Singapore Standard Time"
 
 ## User Data Usage in MyST
 
-####Example 1:
+####Example:
 
 #### Creating a user while provisioning AWS instance using User Data:
 
@@ -100,6 +100,12 @@ users:
   - name: testuser
   
 ```
+Once the provision is successful, connect to the linux machine and execute the bellow command 
+"id testuser"
+if you get something like below
+"uid=54322(testuser) gid=54322(testuser) groups=54322(testuser)"
+It says that the 'testuser' is successfully created.
+
 
 
 
