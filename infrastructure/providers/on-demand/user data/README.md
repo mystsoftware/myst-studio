@@ -85,6 +85,22 @@ tzutil /s "Singapore Standard Time"
 
 ```
 
+## User Data Usage in MyST
+
+####Example 1:
+
+#### Creating a user while provisioning AWS instance using User Data:
+
+User data generally starts with "##cloud-config".
+Below is the user data which helps to create a 'testuser' while provisioning aws instance.
+
+```
+#cloud-config
+users:
+  - name: testuser
+  
+```
+
 
 
 
