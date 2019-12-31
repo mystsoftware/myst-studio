@@ -91,8 +91,8 @@ tzutil /s "Singapore Standard Time"
 
 #### Creating a user while provisioning AWS instance using User Data:
 
-User data generally starts with "##cloud-config".
-Below is the user data which helps to create a 'testuser' while provisioning aws instance.
+User data generally starts with `##cloud-config`.
+Below is the user data which helps to create a `testuser` while provisioning aws instance.
 
 ```
 #cloud-config
@@ -113,4 +113,4 @@ uid=54322(testuser) gid=54322(testuser) groups=54322(testuser)
 
 ```
 
-It says that the 'testuser' is successfully created.
+It says that the `testuser` is successfully created.
