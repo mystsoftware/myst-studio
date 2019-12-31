@@ -87,7 +87,7 @@ tzutil /s "Singapore Standard Time"
 
 ## User Data Usage in MyST
 
-####Example:
+#### Example:
 
 #### Creating a user while provisioning AWS instance using User Data:
 
