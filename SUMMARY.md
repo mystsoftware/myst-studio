@@ -15,6 +15,7 @@
   * [Compute Definitions](infrastructure/compute-definitions/README.md)
   * [Pre-Existing Infrastructure](infrastructure/providers/pre-existing/README.md)
   * [On-Demand Infrastructure](infrastructure/providers/on-demand/aws/README.md)
+    * [User Data](infrastructure/providers/on-demand/aws/user-data/README.md)
   * [Host Prerequisites](infrastructure/providers/hosts/README.md)
 
 ---

@@ -32,6 +32,8 @@ Click on create. Once you click on create you can see all the information like V
   Once we have defined a key pair, we can use it in one or more OS Agent Credentials and OS Admin Credentials.
 
 * **OS Agent Credentials:**  The OS agent credentials is the set of credentials that MyST uses to connect to and execute jobs on the target hosts. Each Credential consists of a username and credential, which can be either a Key Pair or Password.
+* **User Data Template:** User Data Template holds the user data which will be run only once during the initial boot of the instance. This can be a set of instructions that has to be run on the instance. To know more about it go through
+  * [User Data](infrastructure/providers/on-demand/aws/user-data/README.md)
 
     Once we have defined an OS Agent Credential, we can use it in one or more Hosts. 
 
@@ -47,8 +49,6 @@ To add an OS Agent Credential, click `Add OS Agent Credential`, specify the foll
 * **Other User Name:**  If `Run as different user` is set to `Yes`. Specify the user account under whose identity the MyST agent will perform all tasks.
 
 ![](img/osAgentCredentials.png)
-
-* **User Data Template:** User Data Template holds the user data which will be run only once during the initial boot of the instance. This can be a set of instructions that has to be run on the instance .
 
 Click **Save** to save your infrastructure provider.
 

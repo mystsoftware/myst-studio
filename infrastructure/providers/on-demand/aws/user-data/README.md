@@ -5,7 +5,7 @@
 
 User Data is a set of instructions or commands which will be executed(if given) during the launch of the instance. These instructions are executed only during the initial bootstrap, but not every time when we restart(stop and start) instance.
 
-** Why User Data **
+### Why User Data 
 
 A lot of times during launching a new instance there can be a set of common tasks to perform as part of an initial instance setup procedure. For example if you are launching a lot of instances that are being used as web servers you may want to install Apache on a Linux machine.
 
@@ -24,7 +24,7 @@ The User Data field allows to specify these commands in a command line format wh
 
 In this format the commands are entered in the text box, starting with hashbang(#) and followed by the commands that are to be executed.
 
-##### As File
+#### As File
 
 In this format the user data is written in a file and the file is uploaded instead of giving the data.
 
@@ -45,7 +45,7 @@ While setting user data be aware of following :
 
 User Data commands is different for Windows and Linux Machines.
 
-#### User Data for Linux Machines
+### User Data for Linux Machines
 
 As we already aware user data of text format starts with hashbang.
 Below example shows the installation of Apache during the launch of instance.
@@ -62,7 +62,7 @@ systemctl enable httpd.service
 
 ```
 
-#### User Data for Windows Machines
+### User Data for Windows Machines
 
 * To execute the user data commands in windows using Command Prompt, commands should be placed between start and end of script tags i.e <script></script>
 Below example updates the server timezone at launch.
