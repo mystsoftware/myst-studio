@@ -19,7 +19,6 @@ Click on create. Once you click on create you can see all the information like V
 
 ![](img/OnDemandCreate.png)
 
-
 * **VPC(Virtual Private Cloud):**  Select the virtual network where you want to launch or create your Infrastructure.
 * **Subnets:**  Select the subnet from the available subnets against the VPC selected.
 * **Secuirty Groups:**  Select the Security Group that's created for that VPC selected.
@@ -50,6 +49,8 @@ To add an OS Agent Credential, click `Add OS Agent Credential`, specify the foll
 
 ![](img/osAgentCredentials.png)
 
+    Once we have defined an OS Agent Credential, we can use it in one or more Hosts. 
+	
 Click **Save** to save your infrastructure provider.
 
 
@@ -64,9 +65,5 @@ Once the changes are made click on **save**.
 
 To create and Provision a Platform Model with this Infrastructure Provider follow the following steps
 * [Platform Model On-Demand](/platform/models/on-demand-aws/README.md)
-
-
-
-
 
 

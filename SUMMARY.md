@@ -7,6 +7,7 @@
 * [Rubicon Red MyST](introduction/README.md)
   * [Platform Provisioning and Configuration](introduction/platform-provisioning/README.md)
   * [Application Release Automation](introduction/application-release-automation/README.md)
+  * [Security Salt and Hash](platform/security/README.md)
 
 ---
 
@@ -87,6 +88,7 @@
     * [Stream Types](release/pipeline/organization/stream-types/README.md)
   * [Pipeline Templates](release/pipeline/templates/README.md)
   * [Configuring Release Pipelines](release/pipeline/README.md)
+  * [Post Deploy Jenkins Job](release/pipeline/post-deploy-jenkins-job/README.md)
   * [Release Pipeline Dashboards](release/pipeline/dashboard/README.md)
 
 ---
@@ -95,6 +97,10 @@
   * [User Management](administration/users/README.md)
   * [Role Management](administration/roles/README.md)
   * [Workspace Management](administration/workspaces/README.md)
+---
+
+* [Migration](migration/README.md)
+  * [OCI Migration](migration/oci-migration/README.md)
 
 ## Administration Guides
 
