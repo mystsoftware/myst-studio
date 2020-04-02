@@ -49,7 +49,7 @@ From the side menu navigate to`Modeling` > `Platform Blueprint`, this will displ
 
 ![](img/platformBlueprintIntrospectStep1.png)
 
-In the initial dialogue we need to specify the following details about our Platform Blueprint:
+In the initial dialog we need to specify the following details about our Platform Blueprint:
 
 * **Name** - Shorthand name for the Platform Blueprint.
 * **Description** - A longer description of the Platform Blueprint.

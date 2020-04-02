@@ -10,7 +10,7 @@ Workspaces are typically used to associate users with particular work streams wi
 
 When a resource is first created, the user must specify which Workspace(s) the resource should be associated with. This can only be a workspace where the user has the appropriate privileges to create a resource of that type.
 
-Once created, any changes to which workspaces a resource is associated with need to be done using the **Associate Resources** dialogue under Workspace Administration.
+Once created, any changes to which workspaces a resource is associated with need to be done using the **Associate Resources** dialog under Workspace Administration.
 
 ### List Workspaces
 To see a list of MyST Workspaces, click  `Administration` > `Workspaces`. This will display a tiled view of Workspaces similar to the one below.
@@ -26,7 +26,7 @@ For each workspace, MyST provides a summary of the number of resources contained
 * Infrastructure Providers
 
 ### Creating a New Workspace
-Click `+ Create Workspace`, this will open the **Add Workspace** dialogue. Specify the following values:
+Click `+ Create Workspace`, this will open the **Add Workspace** dialog. Specify the following values:
 
 * **Name:** Name of the Workspace
 * **Description:** Description of the Workspace
@@ -38,12 +38,12 @@ To configure workspace users, click on the  **Actions** drop-down menu for the c
 
 ![](img/workspaceAction.png)
 
-This will open the **Configure Users** dialogue.
+This will open the **Configure Users** dialog.
 
 ![](img/workspaceConfigureUsers.png)
 
 #### Add Users
-To add new users to the Workspace, click `+ Add Users`. This will open the **Add Users** dialogue which will display the list of users and roles defined to MyST.
+To add new users to the Workspace, click `+ Add Users`. This will open the **Add Users** dialog which will display the list of users and roles defined to MyST.
 
 ![](img/workspaceAddUsers.png)
 
@@ -55,14 +55,14 @@ Once selected the next step is to choose the roles we wish to assign to the sele
 
 To specify the roles(s) we want to provide to the selected users, simply check the corresponding check box for each role required.
 
-Once we have specified the users and their corresponding roles, click `Add Users` to confirm our selection and return to the `Configure Users` dialogue. From here we **must** click `Save` to save our changes to the Workspace.
+Once we have specified the users and their corresponding roles, click `Add Users` to confirm our selection and return to the `Configure Users` dialog. From here we **must** click `Save` to save our changes to the Workspace.
 
 **Note:** we can select a user who is already assigned to the workspace, for example, if we want to assign them another role.
 
 #### Edit User Roles
-To edit roles assigned to a user account, click on the `Edit` button for the corresponding user. This will open the **Edit User Roles** dialogue. This will display the list of roles defined to MyST and indicate which of these roles are currently assigned to the user.
+To edit roles assigned to a user account, click on the `Edit` button for the corresponding user. This will open the **Edit User Roles** dialog. This will display the list of roles defined to MyST and indicate which of these roles are currently assigned to the user.
 
-To add or remove roles from the user, simply set the corresponding checkbox for each role as required. Once done, click `Edit User Configuration` to confirm our selection and return to the main `Configure Users` dialogue. From here we **must** click Save to save our changes to the Workspace.
+To add or remove roles from the user, simply set the corresponding checkbox for each role as required. Once done, click `Edit User Configuration` to confirm our selection and return to the main `Configure Users` dialog. From here we **must** click Save to save our changes to the Workspace.
 
 #### Delete User
 To delete a User from the Workspace, click on the  **Actions** drop-down menu for the corresponding User and select `Delete`. We will be prompted to confirm our action, click `Yes` to proceed. From here we **must** click Save to save our changes to the Workspace.
@@ -74,7 +74,7 @@ Users within a Workspace are only granted access privileges against resources th
 
 When we first create a resource, we need to specify the workspace(s) to which we want to associate the resource. Once created, then if we want to associate the resource with additional workspaces or remove its association with a workspace, we perform this activity as part of Workspace Administration.
 
-Within Workspace Administration, click on the  **Actions** drop-down menu for the corresponding Workspace and select `Associate Resources`. This will open the **Associate Resources** dialogue.
+Within Workspace Administration, click on the  **Actions** drop-down menu for the corresponding Workspace and select `Associate Resources`. This will open the **Associate Resources** dialog.
 
 ![](img/workspaceAssociateResource.png)
 
@@ -83,7 +83,7 @@ For each *Resource Type*, MyST will provide a summary of the number of resources
 Click on the corresponding `>` expand icon (outlined in red above) to expand the resource type you are interested in.
 
 #### Add Resource Association
-To add a Resource Association expand the corresponding resource type and click on `Associate <Resource Type>` (for example `Associate Platform Template`). This will open the corresponding `Associate <Resource Type>` dialogue.
+To add a Resource Association expand the corresponding resource type and click on `Associate <Resource Type>` (for example `Associate Platform Template`). This will open the corresponding `Associate <Resource Type>` dialog.
 
 ![](img/workspaceAssociateResourceType.png)
 
@@ -91,13 +91,13 @@ The list can be filtered/sorted by Name and Description, by entering the filter 
 
 To choose the resource(s) we wish to associate with the workspace, simply select the corresponding checkbox for each user resource.
 
-Once we have specified the resources, click `Associate <Resource Type>` to confirm our selection and return to the main `Associate Resource` dialogue. From here we **must** click Save to save our changes to the Workspace.
+Once we have specified the resources, click `Associate <Resource Type>` to confirm our selection and return to the main `Associate Resource` dialog. From here we **must** click Save to save our changes to the Workspace.
 
 #### Delete Resource Association
 To delete a Resource Association, expand the corresponding resource type and click on the delete icon in the *Actions* column. This will remove the corresponding resource association from the Workspace. Finally, click `Save` to save our changes to the Workspace.
 
 ### Edit Workspace
-To edit a workspace, click on the **Actions** drop-down menu for the corresponding Workspace and select `Open`, this will open the **Edit Workspace** dialogue.
+To edit a workspace, click on the **Actions** drop-down menu for the corresponding Workspace and select `Open`, this will open the **Edit Workspace** dialog.
 
 Here you can modify the Name and Description of the Workspace. Once done, click `Save` to confirm your changes.
 

@@ -6,7 +6,7 @@ From the side menu, navigate to`Release Management > Pipelines`. This will displ
 ![](img/releasePipelineList.png)
 
 ### Creating a Release Pipeline
-Click `+ Create New`. This will open the **Release Pipeline** dialogue. 
+Click `+ Create New`. This will open the **Release Pipeline** dialog. 
 
 ![](img/releasePipelineCreate.png)
 
@@ -19,9 +19,9 @@ Specify the following values:
 
 By default, the stages in our Release Pipeline, plus the sequence and configuration of each stage, is pre-configured as defined by the Release Pipeline Template. We can edit these if required.
 
-* **Add Stage** - To add a stage, click `Add Stage`. This will open the **Stage** dialogue. Here we need to specify the Stage Name, Description, Stage Environment Type and Promotion Rules.
+* **Add Stage** - To add a stage, click `Add Stage`. This will open the **Stage** dialog. Here we need to specify the Stage Name, Description, Stage Environment Type and Promotion Rules.
 
-* **Edit Stage** - To edit a stage, click on the pencil icon for the corresponding stage. This will open the  **Stage** dialogue. Here we can modify the Stage Name, Description, and Promotion Rules.
+* **Edit Stage** - To edit a stage, click on the pencil icon for the corresponding stage. This will open the  **Stage** dialog. Here we can modify the Stage Name, Description, and Promotion Rules.
 
 * **Delete Stage** - To delete a stage, click on the trash can icon for the corresponding stage. MyST will prompt for confirmation of the Delete action, click `Yes` to proceed with the deletion of the stage.
 
@@ -93,9 +93,40 @@ From this, we can select the Platform Model of the Platform Instance that we wis
 
 When we select the Platform Model, MyST will update the Release Pipeline to show the Platform Blueprint and Platform Model revision for the corresponding Platform Instance (as outlined in red above). If the Platform Instance has not yet been provisioned, then this will be indicated.
 
-<!-- TO DO
-### Post Deployment Actions
--->
+### Configuring Post Deployment Actions
+For each stream stage we can configure post deployment action in the release pipeline.  MyST is going to trigger target jenkins job after successful deployment.
+
+To configure post deployment action, we will see a drop down in the streamstage (as in the image below) and click on post deployment action
+
+![](img/clickPostDeploymentAction.png)
+
+Specifying the following values:
+
+* **Job name** - The name of the action configured in jenkins
+* **Exclude Properties** - By defualt it includes Platform Instance and Stream Model Properties. We can exclude by cheking in the checkbox.
+* **Job Parameters** - We can add job parameters to pass to, by add parameters
+
+![](img/postDeploymentAction.png)
+
+After successful deployment. On click Trigger post-deployment actions will trigger action configured in the jenkins.
+
+Post deployment Action can also be configured in the stage so that it inherits to all stream stages untill we save / save + activate release pipeline. This can also be configured from Release Pipeline Stage or Release Pipeline Template Stage.
+
+To configure from Release Pipeline Template create a template, add stage and add Post Deployment Action in the stage
+
+![](img/templateAction.png)
+
+To configure from Release Pipeline click on edit stage (as in the image below)
+
+![](img\editStageForPostdeployementAction.png)
+
+
+> Configuring in pipeline, the action applies to stream stages with in the pipeline and if we configure in pipeline template it applies to all the pipelines stream stages which uses the template
+
+
+
+
+
 
 ### Activate Release Pipeline
 Once we have configured our Release Pipeline, we need to **activate** it before it can be used to promote a release into any environment.

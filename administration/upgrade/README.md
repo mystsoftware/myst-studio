@@ -1,6 +1,10 @@
 # {{ page.title }}
 
+<!-- toc -->
+
 New MyST features and bug fixes are frequently made available. Enterprises can easily upgrade their on-premise instance of MyST Studio by pulling down the latest version directly from the web or in-directly by downloading the associated Docker images and copying them up to the MyST host.
+
+> An upgrade of the MyST container will also include the latest patches for the underlying images which it is based off such as `tomcat` and the operating system which it is based off.
 
 If you are a MyST customer, who started using MyST prior to 2016, you may still be using the MyST Command-Line Interface. For details on upgrading from MyST CLI to MyST Studio see the associated section within this guide.
 
@@ -39,7 +43,7 @@ This will require an outage of the MyST Studio instance. For a typical upgrade t
 
 At a minimum, the following upgrade verification steps should be performed.
  * Check there are no errors shown in the MyST Studio start up log
- * Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct. 
+ * Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct.
 
 #### Rollback Steps
 
@@ -67,7 +71,7 @@ The following steps are performed as part of the database update.
 ##### Step 3: Verify the downgrade
 At a minimum, the following downgrade verification steps should be performed.
  * Check there are no errors shown in the MyST Studio start up log
- * Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct. 
+ * Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct.
 
 #### Pros / Cons
 
@@ -104,7 +108,7 @@ If you performed the previous step, then your instance should already be upgrade
 ##### Step 4: Verify the upgrade on non-production
 At a minimum, the following upgrade verification steps should be performed.
 Check there are no errors shown in the MyST Studio start up log
-Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct. 
+Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct.
 ##### Step 5: If upgrade is successful, perform upgrade on production
 This can be done from the production machine by executing the following:
 `/opt/myst-studio/bin/upgrade.sh <VERSION>`
@@ -112,7 +116,7 @@ This will require an outage of the MyST Studio instance. For a typical upgrade t
 ##### Step 6: Verify the upgrade on production
 At a minimum, the following upgrade verification steps should be performed.
 Check there are no errors shown in the MyST Studio start up log
-Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct. 
+Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct.
 #### Rollback Steps
 In the event of a failure during the upgrade the following steps can be performed to rollback the instance.
 ##### Step 1: Re-tag the old image
@@ -131,7 +135,7 @@ The MyST Studio web instance is started.
 ##### Step 3: Verify the downgrade
 At a minimum, the following downgrade verification steps should be performed.
 Check there are no errors shown in the MyST Studio start up log
-Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct. 
+Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct.
 #### Pros / Cons
 ##### Pros:
 * Allows for an upgrade to be tested before introducing it to production
@@ -178,7 +182,7 @@ mysql> exit
 ##### Step 4: Verify the upgrade on the green instance
 At a minimum, the following upgrade verification steps should be performed.
 Check there are no errors shown in the MyST Studio start up log
-Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct. 
+Login to the MyST Studio console and check that the version shown in the bottom right-hand corner is correct.
 ##### Step 5: If upgrade is successful, switch the DNS record to point to the green instance
 This would simply involve updating the DNS record which is currently pointing to the blue instance so that it points to the green instance.
 For the next upgrade, the DNS record will be pointed back to the blue instance.
@@ -190,8 +194,29 @@ The rollback process is straight forward for Blue / Green. If an issue is encoun
 * Takes the pressure off an upgrade by allowing it to be done independently of an outage
 * Build-in DR strategy
 ##### Cons
-* More complex to setup than single instance 
+* More complex to setup than single instance
 * While the database is in read-only, any builds from the CI server (e.g. Jenkins) will not be propagated to MyST Studio. The would need to be re-run afterwards for all the failed build jobs.
+
+## Offline Upgrade
+
+If you are unable to provide access to the MyST Docker Registry either directly or via Proxy Server, you will need to perform the upgrade process offline. This will require pre-downloading the Docker Image from [myst.rubiconred.com](https://myst.rubiconred.com) (to do this you will need to login) and copying the image up to the MyST host. Once this is done, perform the following:
+
+1. Change directory to `/u01/myst-studio/bin`
+2. Execute `backup-database.sh` script to take the backup of the current state.
+3. Execute `stop.sh` to stop the MyST instance.
+4. Gunzip the installer file using below command
+```
+gunzip myst-studio-docker-image-<version>.tar.gz
+```
+5. Load the MyST Studio docker image using below command
+```
+sudo docker load -i myst-studio-docker-image-<version>.tar
+```
+6. Tag the image to myst-studio
+```
+docker tag 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst-studio:<version> myst-studio
+```
+7. Execute `start.sh` script to start the MyST Studio in the new version.
 
 ## Upgrading from CLI to Studio
 
@@ -200,4 +225,3 @@ MyST CLI users will have a MyST Workspace which is a folder for storing Platform
 /opt/myst-studio/bin/cli2studio -h localhost -p 443
 ```
 ...where in the example above MyST Studio is running on `localhost:443`
-

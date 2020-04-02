@@ -70,7 +70,7 @@ As part of any application, we may want to include third party artifacts, for ex
 
 To use MyST to manage the deployment of these pre-built artifacts, we need to first upload the artifact to our Software Repository and then register it with MyST.
 
-From the side menu, navigate to`Release Management` > `Artifacts`. Click `Create New`, this will open the **New Artifact** dialogue. Here we need to specify the **General Information**, **Build** and **Metadata** details as covered above.
+From the side menu, navigate to`Release Management` > `Artifacts`. Click `Create New`, this will open the **New Artifact** dialog. Here we need to specify the **General Information**, **Build** and **Metadata** details as covered above.
 
 ![](img/artifactNew.png)
 

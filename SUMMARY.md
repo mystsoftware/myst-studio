@@ -7,6 +7,7 @@
 * [Rubicon Red MyST](introduction/README.md)
   * [Platform Provisioning and Configuration](introduction/platform-provisioning/README.md)
   * [Application Release Automation](introduction/application-release-automation/README.md)
+  * [Security Salt and Hash](platform/security/README.md)
 
 ---
 
@@ -15,6 +16,7 @@
   * [Compute Definitions](infrastructure/compute-definitions/README.md)
   * [Pre-Existing Infrastructure](infrastructure/providers/pre-existing/README.md)
   * [On-Demand Infrastructure](infrastructure/providers/on-demand/aws/README.md)
+    * [User Data](infrastructure/providers/on-demand/aws/user-data/README.md)
   * [Host Prerequisites](infrastructure/providers/hosts/README.md)
 
 ---
@@ -25,14 +27,21 @@
   * [Platform Models](platform/models/README.md)
     * [Pre-Existing Infrastructure](platform/models/pre-existing/README.md)
     * [On Demand \(AWS\)](platform/models/on-demand-aws/README.md)
-  * [Provisioning Instances](platform/provisioning/README.md)
-  * [Updating Instances](platform/update/README.md)
+  * [Registering Cloud Instances](platform/cloud/instances/README.md)
+  * [Provisioning Platform Instances](platform/provisioning/README.md)
+  * [Updating Platform Instances](platform/update/README.md)
   * [Maintaining Platform Definitions](platform/definitions/README.md)
     * [Platform Version Control](platform/definitions/version-control/README.md)
     * [Platform Editor](platform/definitions/editor/README.md)
-  * [Managing Instances](platform/management/README.md)
-  * [Introspecting Existing Instances](platform/introspection/README.md)
-  * [Upgrading Instances](platform/upgrade/README.md)
+      * [Control Bar](platform/definitions/editor/control-bar/README.md)
+      * [Tree View](platform/definitions/editor/tree-view/README.md)
+      * [Properties View](platform/definitions/editor/properties-view/README.md)
+      * [Topology View](platform/definitions/editor/topology-view/README.md)
+      * [Source View](platform/definitions/editor/source-view/README.md)
+      * [Using Property References](platform/definitions/editor/property-references/README.md)
+  * [Managing Platform Instances](platform/management/README.md)
+  * [Introspecting Existing Platform Instances](platform/introspection/README.md)
+  * [Upgrading Platform Instances](platform/upgrade/README.md)
 
 ---
 
@@ -79,6 +88,7 @@
     * [Stream Types](release/pipeline/organization/stream-types/README.md)
   * [Pipeline Templates](release/pipeline/templates/README.md)
   * [Configuring Release Pipelines](release/pipeline/README.md)
+  * [Post Deploy Jenkins Job](release/pipeline/post-deploy-jenkins-job/README.md)
   * [Release Pipeline Dashboards](release/pipeline/dashboard/README.md)
 
 ---
@@ -87,11 +97,17 @@
   * [User Management](administration/users/README.md)
   * [Role Management](administration/roles/README.md)
   * [Workspace Management](administration/workspaces/README.md)
+---
+
+* [Migration](migration/README.md)
+  * [OCI Migration](migration/oci-migration/README.md)
 
 ## Administration Guides
 
 * [MyST Installation Guide](installation/myst-studio/README.md)
-  * [Alternative Installation Approaches](installation/myst-studio/alternatives/README.md)
+  * [System Requirements](installation/myst-studio/requirements/README.md)
+  * [Docker-based Installation](installation/myst-studio/docker/README.md)
+  * [Alternative Installations](installation/myst-studio/alternatives/README.md)
 * [MyST Management Scripts](administration/management/README.md)
 * [MyST Upgrade Guide](administration/upgrade/README.md)
 
@@ -100,4 +116,3 @@
 * [Supported Artifacts](appendix/artifact/README.md)
 * [Supported Configuration](appendix/configuration/README.md)
 * [Error Codes](appendix/errors/README.md)
-

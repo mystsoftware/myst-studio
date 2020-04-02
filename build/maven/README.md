@@ -178,7 +178,7 @@ Type `pom` into the Search Bar and then select `Empty POM (Maven)`.
 
 ![](img/emptyPom.png)
 
-Click `OK`. JDeveloper will open the `Create a Maven POM` dialogue. Leave the defaults when prompted to enter the location and click `Ok`.
+Click `OK`. JDeveloper will open the `Create a Maven POM` dialog. Leave the defaults when prompted to enter the location and click `Ok`.
 
 ![](img/createPomForm.png)
 

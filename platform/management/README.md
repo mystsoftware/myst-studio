@@ -49,36 +49,36 @@ The **Instance Details** section provides the following information:
 
 
 * **Current Action** - This shows details of the current action being performed (or the last action if completed). This includes:
- * Action - This is the action being performed, for example, Provisioning, Start, Stop, etc.
- * Action Status - Which could be In Progress, Success or Failed
+ * Description - This is the action being performed, for example, Provisioning, Start, Stop, etc.
+ * Status - Which could be In Progress, Success or Failed
  * Execution time - The start and stop time of the action
- * Execution log - clicking on `view` will open a window allowing us to view the action execution log. If the action is still in progress, then this will automatically update as the action is performed.
+ * Action(s) - Actions that can be taken here. These include ability to `view` and `download` execution logs, `download` support artifacts in event of failure, viewing `drift` and `dry run` reports.
 
-Clicking on `Pending action(s)` will show the list of currently queued actions, whilst clicking on `Action History` will show us the list of actions performed against the Platform Instance.
+Clicking on `Pending action(s)` will show the list of currently queued actions, whilst clicking on `Action History` will show us the list of actions performed against the Platform Instance till date.
 
 The `Actions` drop-down allows us to select and perform the various management activities against the Platform Instance.
 
 ### View Platform Instance Configuration
-MyST allows us to view the current configuration of each of our Platform Instances. From within the Platform Instance Summary window, click on the `Actions` drop-down and select `View`. 
+MyST allows us to view the current configuration of each of our Platform Instances. From within the Platform Instance Summary window, click on the `Actions` drop-down and select `View Configuration`. 
 
 ![](img/platformInstanceView.png)
 
-MyST will open the Platform Instance in the `Platform Viewer`. From here we can browse the full configuration of the Platform Instance. The Platform Viewer is split into three core sections:
+MyST will open the Platform Instance in the `Platform Viewer`. From here we can browse the full configuration of the Platform Instance.
 
 ![](img/platformInstanceViewer.png)
 
-1. **Tree View** - Displays a hierarchical view of the Platform Instance. This can be used to navigate the Platform Instance configuration. Selecting a component in the tree view will display a list of properties defined for that component in the properties view.
+In the initial view, we can see key information about the instance as well as important service URLs such as the Admin Console, Enterprise Manager Console, Service Bus Console.
 
-2. **Topology View** - Helps to visualize the configuration that is defined in the Platform Instance. Selecting a component in the topology diagram will display a list of properties defined for that component in the properties view.
+The rest of the configuration of the instance can be browsed through and navigated as we have previously seen [here](/platform/definitions/editor/README.md). Please go through that section for more details on how to navigate and access the configuration of the platform.
 
-3. **Property View** - Displays the list of properties and corresponding values defined for the selected component in your Platform Instance. 
+For example, to view the physical topology of the platform, we can click on the `Topology` tab which will show us a topology diagram such as below.
 
-See the documentation on the [Platform Editor](/platform/definitions/editor/README.md) for more details on how to navigate and interpret the configuration information.
+![](img/platformInstanceTopology.png)
 
 ### Platform Instance Report
 The Platform instance report provides a summary report of all the key configuration information for our Platform Instance.
 
-To access this select the corresponding Platform Instance, then click on the `Actions` menu and select `Report`, MyST will open the Platform Instance Report as shown below.
+To access this select the corresponding Platform Instance, then click on the `Actions` menu and select `View Report`, MyST will open the Platform Instance Report as shown below.
 
 ![](img/platformInstanceReport.png)
 
@@ -88,7 +88,7 @@ To access this select the corresponding Platform Instance, then click on the `Ac
 MyST allows us to easily Start, Stop and Restart Platform Instances. When performing these actions, we can choose to perform these actions against the entire cluster or we can choose to perform the action on specific nodes within the cluster.
 
 #### Stopping a Platform Instance
-From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialogue.
+From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialog.
 
 ![](img/platformInstanceControl.png)
 
@@ -121,28 +121,27 @@ MyST's Check for Drift capability allows us to check the configuration of the Pl
 
 From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Check for Drift`, MyST will initiate the check for drift process.
 
-![](img/checkForDriftInProgress.png)
+![](img/checkForDriftComplete.png)
 
-Once completed, click on `View` execution log. MyST will display the results.
+Once completed, click on the `View Report` icon (outlined in red above). MyST will display a complete drift report as below.
 
 ![](img/platformInstanceDrift.png)
 
 In the above report, we can see that the value of the property `MaxCapacity` has drifted to 100. 
 
 #### Reset Drift
-From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialogue.
+From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialog.
 
 ![](img/resetDrift.png)
 
 Select `Reset Drift` as the action to perform (outlined in red above) add any `Action Notes` and click `Execute`. MyST will queue the Reset Drift action for execution and return us to the summary view of the Platform Model and Instance.
 
-Once the `Reset Drift` action has completed, click on `View` under `Execution log`. This will open a window showing the result of the Drift, as shown below.
+Once the `Reset Drift` action has completed, click on the `View Log` icon under the `Current Action -> Action(s)`. This will open a dialog showing the result of the Drift, as shown below.
 
 ![](img/resetDriftLog.png)
 
 This will show details of all the changes made to correct any configuration drift. We can see from the log (outlined above) that MyST has reset the MaxCapacity property on the *StockDS* Data Source.
 
-With MyST, we can run `Check for Drift`
 
 ### Terminate and Re-Provision a Platform Instance
 MyST allows us to terminate and re-provision our Platform Instances. This can be useful for a number of reasons:
@@ -151,7 +150,7 @@ MyST allows us to terminate and re-provision our Platform Instances. This can be
 * Re-provision corrupted environment, for example, if we suspect the underlying file system has been corrupted, we can re-provision the platform instance.
 
 #### Terminate a Platform Instance
-From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Terminate`, MyST will open the `Terminate Platform Instance` dialogue and prompt for confirmation to proceed.
+From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Terminate`, MyST will open the `Terminate Platform Instance` dialog and prompt for confirmation to proceed.
 
 ![](img/terminatePreExisting.png)
 
@@ -174,18 +173,27 @@ If we select this option, MyST will terminate the AWS EC2 instances that were pr
 
 #### Re-Provisioning a Terminated Platform Instance
 MyST allows us to re-provision any previously terminated Platform Instance. 
-From the side menu navigate to`Modeling` > `Platform Models`, this will display a list of existing Platform Models. 
+From the side menu navigate to `Modeling` > `Platform Models`, this will display a list of existing Platform Models. 
 
-To re-provision a terminated Platform Instance, select the corresponding Platform Model, MyST will display the Platform Model and Instance summary. Click on the `Actions` menu and select `Provision`.
+To re-provision a terminated Platform Instance, select the corresponding Platform Model, MyST will display the Platform Model and Instance summary. Click on the `Actions` menu and select `Reprovision`.
 
-MyST will open the `New Platform Instance` dialogue. Here we can select which version of the Platform Instance we want to re-provision. Once selected, enter any `Provisioning Notes` and click `Finish`.
+MyST will open the `New Platform Instance` dialog. Here we can select which version of the Platform Instance we want to re-provision. Here, you get access to the following controls
+
+![](img/platformInstanceReprovision.png)
+
+ 1. **Version** - Here, we can select the exact version of the platform blueprint and the exact revisions of the blueprint and model that we want to reprovision. By default, the latest and version and revisions will be pre-selected.
+ 2. **Environment already pre-provisioned?** - Selecting this indicated to MyST that the instance is already provisioning and running. So, MyST will just do some connectivity checks and not actually kick off provisioning of the instance in case this option is checked.
+ 3. **Auto-deploy applications?** - MyST keeps tracks of artifact deployments that were made over time to a platform instance. If we select this option, MyST will try to auto-deploy those artifacts once more to the instance to bring it to the same state as it was before termination.
+ 4. **Provisioning Notes** - Any comments to indicate why we are reprovisioning the instance.
+
+Once done, click `Finish`. MyST will queue the Reprovision action for execution and return us to the summary view of the Platform Model and Instance.
 
 ### Patching a Platform Instance
 MyST allows us to easily patch a Platform Instance. When performing these actions, we can choose to perform these actions against the entire cluster or we can choose to perform the action on specific nodes within the cluster.
 
 Before applying a patch to a Platform Instance, we must first add the patches to the Platform Blueprint - see [Oracle Patches](/platform/resources/weblogic/patches/README.md) for further details.
 
-From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialogue.
+From within the Platform Instance Summary window, click on the `Actions` drop-down and select `Control`, MyST will open the Platform Instance Control dialog.
 
 ![](img/platformInstanceControlPatch.png)
 
@@ -197,6 +205,31 @@ MyST will queue the action in the list of Pending Actions for the Platform Insta
 
 ![](img/platformInstancePatch.png)
 
-<!-- TO DO
+### Aborting the Current Action
+There might be cases where an action is running for a long time and we would want to abort it for various reasons. MyST allows us to abort an current running action on a best-effort basis.
+
+![](img/platformInstanceAbort.png)
+
+Locate the `Abort` button as shown above and click on it. MyST will show a confirmation dialog like below and once we give a go-ahead, the action will be aborted.
+
+![](img/abortConfirmation.png)
+
+![](img/platformInstanceAbortComplete.png)
+
+Alternatively, if we restart MyST Studio, we will see that the action and the instance state will automatically go into a state of `INDETERMINATE` and the user then has to manually override the state of the instance to reflect the correct state. See below on how to override the state of an instance.
+
+
 ### Overriding the State of a Platform Instance
--->
+MyST allows us to override the state of an instance in case we want to intervene and do manual reconciliation.
+
+{% hint style='danger' %}
+This has to be done with extreme caution by users who have advanced privileges as this could have significant impact on the internal workflow for the instance and cause subsequent actions to get stalled
+{% endhint %}
+
+From the side menu navigate to `Modeling` > `Platform Models`, this will display a list of existing Platform Models. 
+
+To override the state of the Platform Instance, select the corresponding Platform Model, MyST will display the Platform Model and Instance summary. Click on the `Actions` menu and select `Override State`.
+
+MyST will open the `Platform Instance State Override` dialog. Here we can see the current state of the instance and change it to be in a new state. MyST will just assume that the user knows what he is doing and internall record this as the new state of the instance and do all subsequent action on this instance obeying this.
+
+![](img/platformInstanceStateOverride.png)
