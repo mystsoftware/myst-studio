@@ -496,7 +496,7 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 #### ODI Application (XML)
 |Property|Description|
 |---|---|
-|extract-files|Comma separated list of files to extract from archive|
+|extract-files|Comma separated list of files to extract from archive and will be deployed via Smart Import|
 
 
 #### JAR Library
