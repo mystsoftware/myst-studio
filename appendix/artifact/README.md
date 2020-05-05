@@ -497,6 +497,8 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 |Property|Description|
 |---|---|
 |extract-files|Comma separated list of files to extract from archive and will be deployed via Smart Import|
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|MyST configuration plan location to search and replace files with MyST properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.mft.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.mft.configplan.xml) |
 
 
 #### JAR Library
