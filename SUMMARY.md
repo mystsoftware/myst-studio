@@ -90,6 +90,7 @@
   * [Configuring Release Pipelines](release/pipeline/README.md)
   * [Post Deploy Jenkins Job](release/pipeline/post-deploy-jenkins-job/README.md)
   * [Release Pipeline Dashboards](release/pipeline/dashboard/README.md)
+  * [Four Eyes Principle](release/pipeline/four-eyes-principle/README.md)
 
 ---
 
