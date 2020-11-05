@@ -13,7 +13,7 @@ Under the `bin` directory (eg. `/opt/myst-studio/bin`) of the Myst Studio home, 
 | `stop.sh`	| Stops the Myst Studio instances |
 | `start.sh`	| Starts the Myst Studio instances.<br><br>On boot, the Myst Studio web instance will upgrade the database if `pull.sh` was previously run. |
 | `output-logs.sh` | This displays the Myst Studio start up logs during startup.  This can be closed by typing Ctrl+C. |
-| `upgrade.sh` | Upgrade to a specific version of Myst Studio as follows:<br>`./upgrade.sh <Version>`<br><br>If the <Version> argument is it omitted it will upgrade to the latest version. The version pulled down will be tagged as "Myst-studio".<br>`docker tag myst-studio myst-studio:<Version>`<br>{% hint style='info' %}<br>If pulling down the latest version, it is a good practise to tag a specific version number to assist with rollback.{% endhint %}<br><br>The following steps will be performed as part of the upgrade script:<br>1. Download of the desired Myst Studio version<br>2. Backup of the database<br>3. Restart of Myst Studio components |
+| `upgrade.sh` | Upgrade to a specific version of Myst Studio as follows:<br>`./upgrade.sh <Version>`<br><br>If the <Version> argument is it omitted it will upgrade to the latest version. The version pulled down will be tagged as "myst-studio".<br>`docker tag myst-studio myst-studio:<Version>`<br>{% hint style='info' %}<br>If pulling down the latest version, it is a good practise to tag a specific version number to assist with rollback.{% endhint %}<br><br>The following steps will be performed as part of the upgrade script:<br>1. Download of the desired Myst Studio version<br>2. Backup of the database<br>3. Restart of Myst Studio components |
 
 ### Advanced Scripts
 | Myst Studio Script | Description |
