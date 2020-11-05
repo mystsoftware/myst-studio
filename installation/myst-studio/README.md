@@ -13,20 +13,20 @@ A typical Myst installation consists of the following:
 | Myst Build Server | Optional CI Server, if not using a third-party one such as Jenkins |
 | Myst Maven Repository | Optional Maven Repository, if not using a third-party one such as Artifactory |
 
-The Myst Studio console can be installed on a single server or across multiple tiers. Myst is supported on a container-based architecture (e.g. `docker`) or on a virtual/physical server architecture. Myst Software recommend the use of the container-based architecture.
+The Myst Studio console can be installed on a single server or across multiple tiers. Myst is supported on a container-based architecture (e.g. `docker`) or on a virtual/physical server architecture. Rubicon Red recommend the use of the container-based architecture.
 
 ## Myst Topology
 
 The Myst Server can be established on modern container runtimes such as `docker` (CE / EE) and `containerd`. An installer is provided to easily establish the stack on a single server instance. After completing the installation and starting the containers, the following containers will be running:
 
-- `Myststudio_https` - Nginx exposing `443` and `80`
-- `Myststudio_web` - Tomcat instance accessed by `Myststudio_https`
-- `Myststudio_db` - MySQL instance accessed by `Myststudio_web`
+- `myststudio_https` - Nginx exposing `443` and `80`
+- `myststudio_web` - Tomcat instance accessed by `myststudio_https`
+- `myststudio_db` - MySQL instance accessed by `myststudio_web`
 
-State for the stack is automatically stored in a container volume and accessed via `Myststudio_db`.
+State for the stack is automatically stored in a container volume and accessed via `myststudio_db`.
 
 The following additional containers can be optionally installed:
-- `Myststudio_ci` - Myst Build Server exposing `8081` by default
+- `myststudio_ci` - Myst Build Server exposing `8081` by default
 - `maven-repository` - Myst Maven Repository exposing `8083` by default
 
 Exposed ports can be configured by adjusting the port mappings in the `docker-compose` / `docker stack` configuration
@@ -43,7 +43,7 @@ The following prerequisites should be in place on the server that will host Myst
  * Docker 1.10+ and Docker Compose is installed.
  * The Myst license tar.gz file must be available. This is provided when you sign up for Myst Studio.
 
- After the installation, internet access is required for the latest version of Myst to be pulled down directly from the public Myst Docker Registry. If you are behind an internet proxy, please follow [these steps](https://rubiconred.gitbooks.io/Myst-help-center/content/how-do-i-setup-Myst-and-associated-components-to-use-an-internet-proxy.html) to ensure all installation dependencies can be directly pulled from the Myst Software Docker Registry.
+ After the installation, internet access is required for the latest version of Myst to be pulled down directly from the public Myst Docker Registry. If you are behind an internet proxy, please follow [these steps](https://rubiconred.gitbooks.io/myst-help-center/content/how-do-i-setup-myst-and-associated-components-to-use-an-internet-proxy.html) to ensure all installation dependencies can be directly pulled from the Rubicon Red Docker Registry.
 
  {% hint style='info' %}
  If you are unable to use Docker, there are details on non-Docker installation [here](alternatives/README.md)
@@ -63,7 +63,7 @@ java -jar fc-installer-6.3.1.jar
 ```
 2. After running the installer, Myst can be started with
 ```
-/opt/Myst-studio/bin/start.sh
+/opt/myst-studio/bin/start.sh
 ```
 3. By default, the Myst Studio console is accessible from  `https://localhost/console`.
 
