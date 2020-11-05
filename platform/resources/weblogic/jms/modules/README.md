@@ -20,7 +20,8 @@ The following screenshot illustrates a typical JMS configuration within a Platfo
 
 ![](img/exampleJmsConfig.png)
 
-### Configuring a JMS Server
+
+### Configuring a JMS Server
 
 To configure a JMS Server in the Platform Blueprint, open the Platform Blueprint Editor and navigate to `Blueprint > WebLogic Domain Configuration > Messaging Configuration > JMS Servers`. Expand this component to see a list of currently defined JMS Servers.
 
@@ -103,7 +104,9 @@ For each Uniform Distributed Queue we need to specify the following properties (
 
 * **Load Balancing Policy** - Defines policy `Round Robin` or `Random` for how messages are distributed to the members of this distributed queue.
 
-* **Forward Delay** - 	The number of seconds after which a uniform distributed queue member with no consumers will wait before forwarding its messages to other uniform distributed queue members that do have consumers. The *default* value of `-1` disables this feature so that no messages are forwarded to other uniform distributed queue members.
+* **Forward Delay** - 	
+The number of seconds after which a uniform distributed queue member with no consumers will wait before forwarding its messages to other uniform distributed queue members that do have consumers.
+ The *default* value of `-1` disables this feature so that no messages are forwarded to other uniform distributed queue members.
 
 * **Reset Delivery Count On Forward** - Determines whether or not the delivery count is reset during message forwarding between distributed queue members.
  The default value of `Yes` resets the delivery counts on messages when they are forwarded to another distributed queue member.

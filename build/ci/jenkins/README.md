@@ -6,7 +6,7 @@ In this section, we cover how to configure an automated build job in Jenkins, th
 * Periodically poll our source code repository for new code commits.
 * On detection of a new code commit, initiate Maven to build and package the code.
 * Publish the packaged code (or artifact) to a Software Repository, such as Artifactory, Nexus or Archiva.
-* Register the artifact with MyST.
+* Register the artifact with Myst.
 
 ### Prerequisites
 
@@ -99,12 +99,12 @@ install:install deploy:deploy - DaltDeploymentRepository=central::default::$MAVE
 
 ![](img/jenkinsNewItemPublishStep.png)
 
-### Update Build Job to Register Artifact with MyST Studio
-Once our build job is performing as expected, we need to modify it to register the built artifact with MyST.
+### Update Build Job to Register Artifact with Myst Studio
+Once our build job is performing as expected, we need to modify it to register the built artifact with Myst.
 
 From the main screen for our build job, click `Configure` to return to the configuration screen.
 
-Navigate to the `Post-build Actions` section at the bottom of the page. Click on `Add post-build action` and then select `Publish to MyST Studio`.
+Navigate to the `Post-build Actions` section at the bottom of the page. Click on `Add post-build action` and then select `Publish to Myst Studio`.
 
 ![](img/jenkinsNewItemPublishToMyST.png)
 
@@ -112,7 +112,7 @@ Make sure the `Active` box is ticked.
 
 Click `Save` to save our changes and return from to main job screen within Jenkins.
 
-#### Validate Registration with MyST
+#### Validate Registration with Myst
 Click `Build Now` to manually trigger the job. Click on the progress bar for the job that appears in the `Build History` and go to the Console Output.
 
 Once the job completes, at the end of the output we should see output similar to the following
@@ -145,13 +145,13 @@ Once the job completes, at the end of the output we should see output similar to
   }
 }
 ```
-Your artifact has now been published to MyST Studio. See section [Artifact Management](/build/artifacts/README.md) for details on how to view this artifact in MyST Studio.
+Your artifact has now been published to Myst Studio. See section [Artifact Management](/build/artifacts/README.md) for details on how to view this artifact in Myst Studio.
 
 ### Jenkins Plugin for Oracle PAAS
 
-Oracle PAAS services can be exported to an archive that can then be promoted into multiple environments. To simplify this process, Rubicon Red provide a Jenkins plugin that can be used for the automatic registration of Oracle PAAS Artifacts directly from the Cloud runtime to MyST Studio.
+Oracle PAAS services can be exported to an archive that can then be promoted into multiple environments. To simplify this process, Myst Software provide a Jenkins plugin that can be used for the automatic registration of Oracle PAAS Artifacts directly from the Cloud runtime to Myst Studio.
 
-The plugin is currently in BETA. We are continually looking to improve it. If you have any feedback on the plugin, please share it via [Rubicon Red Support](http://support.rubiconred.com/).
+The plugin is currently in BETA. We are continually looking to improve it. If you have any feedback on the plugin, please share it via [Support Portal](https://rubiconred.freshdesk.com).
 
 #### Currently Supported Artifact Types
 
@@ -160,7 +160,7 @@ The plugin is currently in BETA. We are continually looking to improve it. If yo
 
 #### How to install the plugin
 
-1. Login to the MyST website
+1. Login to the Myst website
 2. Download the plugin from [here](https://myst.rubiconred.com/webhelp/installer/release/oracle-integration-cloud-jenkins-plugin.hpi)
 3. Install the Plugin into Jenkins
 
@@ -178,7 +178,7 @@ Once this is established, users can a create Jenkins freestyle build job and use
 
 1. pulled from a given Oracle PAAS service
 2. packaged as a Maven artifact
-3. pushed to MyST Studio.
+3. pushed to Myst Studio.
 
 #### Using the plugin from a Jenkins freestyle build job
 

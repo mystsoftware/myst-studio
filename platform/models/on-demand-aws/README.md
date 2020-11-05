@@ -47,13 +47,13 @@ For each Compute Group defined within the Platform Blueprint we need to specify 
 
 * **Security Group** - The security group which will be associated to the EC2 instance.
 
-* **Agent User** - The user on the target host, which MyST will run as.
+* **Agent User** - The user on the target host, which Myst will run as.
 
 > The available AMIs, EC2 Instance Types, Security Groups, Agent Users and OS Users are configured as part of the AWS On-Demand Infrastructure. Where multiple options are available, then a drop-down box is provided to select the required option. Where only a single option is available, then this value will be automatically set.
 
 ![](img/AwsModelComputeGroup.png)
 
-In addition, we can also specify whether we want to have a stand-alone admin server, in which case it will be created within its own compute group. MyST will default to what is specified in the Platform Blueprint.
+In addition, we can also specify whether we want to have a stand-alone admin server, in which case it will be created within its own compute group. Myst will default to what is specified in the Platform Blueprint.
 
 If we specified a stand-alone Admin Server in the Platform Blueprint, and then choose to override that, then we will also need to specify which compute group we want to target the Admin Server to.
 
@@ -101,14 +101,14 @@ For the Platform Model, we need to specify the following details:
 * **RCU SYS User** - Enter the user name for the RCU database. This should be a username with DBA or SYSDBA privileges, for example, SYS.
 * **RCU SYS Password** - Enter the password for the RCU Sys User.
 
-> Note: All passwords stored by MyST are encrypted.
+> Note: All passwords stored by Myst are encrypted.
 
 #### GridLink and ONS nodes configuration
 In case you are using a GridLink (RAC) database, you can specify the additional property, **ONS Nodes** and set specify the list of ONS nodes following standard Oracle documentation.
 
 ![](img/AwsModelConfigureONS.png)
 
-> MyST will auto-calculate the GridLink Database URLs as appropriate which you can change in the model editor later if you wish to override.
+> Myst will auto-calculate the GridLink Database URLs as appropriate which you can change in the model editor later if you wish to override.
 
 #### Override Default Memory and Logging Settings
 It is common to have different JVM Memory Arguments and Logging configurations in upstream dev and test environments. The `Advanced` tab allows you override the settings in the Platform Blueprint.
@@ -128,9 +128,9 @@ For the Platform Model, we need to specify the following details:
 Once we have specified the `General` and `Advanced` Platform Model configurations, click `Next`.
 
 ### Review the Summary
-MyST will display a Summary screen showing all the key inputs specified in the Platform Model Wizard.
+Myst will display a Summary screen showing all the key inputs specified in the Platform Model Wizard.
 
 ![](img/AwsModelSummary.png)
 
-Once done, click `Finish`. MyST will create the corresponding Platform Model and take you to the Platform Model Editor where you can make additional changes if required. See [Editing Platform Models](/platform/definitions/README.md) for further details.
+Once done, click `Finish`. Myst will create the corresponding Platform Model and take you to the Platform Model Editor where you can make additional changes if required. See [Editing Platform Models](/platform/definitions/README.md) for further details.
 

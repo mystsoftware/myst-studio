@@ -1,19 +1,19 @@
 ## {{ page.title }}
 
-Within MyST, **Hosts** are the logical representation of the Virtual, Physical or Container-based instances that host one or more WebLogic Server instances. MyST allows the use of pre-existing hosts or for new hosts to be delivered on-demand.
+Within Myst, **Hosts** are the logical representation of the Virtual, Physical or Container-based instances that host one or more WebLogic Server instances. Myst allows the use of pre-existing hosts or for new hosts to be delivered on-demand.
 
-* **Pre-existing Hosts:** MyST can use pre-existing Virtual, Physical or Container-based hosts as the target for hosting Oracle Middleware platforms. With this approach, MyST is dependent on a system administrator or a Configuration Management solution like Puppet or Chef to pre-configure the host before it is used as a target by MyST 
-* **On-demand Cloud Providers:** MyST can spin up its own infrastructure using a Cloud provider. This approach relies upon a machine image which is used as a template for the Virtual Machines that are created to underpin the Oracle Middleware platforms
+* **Pre-existing Hosts:** Myst can use pre-existing Virtual, Physical or Container-based hosts as the target for hosting Oracle Middleware platforms. With this approach, Myst is dependent on a system administrator or a Configuration Management solution like Puppet or Chef to pre-configure the host before it is used as a target by Myst 
+* **On-demand Cloud Providers:** Myst can spin up its own infrastructure using a Cloud provider. This approach relies upon a machine image which is used as a template for the Virtual Machines that are created to underpin the Oracle Middleware platforms
 
 ### Pre-Configuring Hosts
-In Unix/Linux, root is the account that by default has access to all commands and files on the operating system. It is a heavily guarded privilege which of course should not be given out lightly. MyST keeps it simple and does not need any root privileges to roll out Oracle Middleware platforms. By default, MyST will assume that root-privileged actions have already been performed on the host by a system administrator at the time that it uses the hosts for provisioning.
+In Unix/Linux, root is the account that by default has access to all commands and files on the operating system. It is a heavily guarded privilege which of course should not be given out lightly. Myst keeps it simple and does not need any root privileges to roll out Oracle Middleware platforms. By default, Myst will assume that root-privileged actions have already been performed on the host by a system administrator at the time that it uses the hosts for provisioning.
 
 {% hint style='tip' %}
-When using a Cloud provider such as Amazon Web Services, an administrator or automation tool can pre-configure a Linux host with the root-privileged actions and create a template. That way, when MyST provisions Oracle Middleware platforms from scratch on a Cloud, it can use the template as the basis for the Linux hosts. This means that the root privileged actions only need to be performed once which improves security, reduces effort and results in consistent base Linux hosts for all Oracle Middleware platforms.
+When using a Cloud provider such as Amazon Web Services, an administrator or automation tool can pre-configure a Linux host with the root-privileged actions and create a template. That way, when Myst provisions Oracle Middleware platforms from scratch on a Cloud, it can use the template as the basis for the Linux hosts. This means that the root privileged actions only need to be performed once which improves security, reduces effort and results in consistent base Linux hosts for all Oracle Middleware platforms.
 {% endhint %}
 
 ### Pre-Configuring Middleware Host
-A target Linux host for Oracle Middleware typically requires root privileges to set up a number of prerequisite operating system dependencies. As such, these dependencies are often best addressed by a privileged user or tool prior to using MyST Studio to provision Oracle Middleware on to them. These dependencies are as follows:
+A target Linux host for Oracle Middleware typically requires root privileges to set up a number of prerequisite operating system dependencies. As such, these dependencies are often best addressed by a privileged user or tool prior to using Myst Studio to provision Oracle Middleware on to them. These dependencies are as follows:
 
 * Verify that your operating system is certified and properly configured for installation and configuration.
 * Install a certified Java JDK
@@ -53,7 +53,7 @@ The nofiles values represent the open file limit; the nproc values represent the
 If you are running **Oracle Linux 6** or **Red Hat Linux 6**. Make sure the same values are defined in the file `/etc/security/limits.d/90-nproc.conf` as these can override the values in the `limits.conf` file.
 
 ##### Verify the required packages on the target hosts
-The following table lists the packages that must be available on the target hosts where you want to install MyST Studio. It is recommended that you consult the Oracle Fusion Middleware system requirements documentation to confirm the exact version of these packages needed by the version of Oracle Middleware being installed.
+The following table lists the packages that must be available on the target hosts where you want to install Myst Studio. It is recommended that you consult the Oracle Fusion Middleware system requirements documentation to confirm the exact version of these packages needed by the version of Oracle Middleware being installed.
 
 | Package Name |
 | -- |
@@ -93,7 +93,7 @@ To accomplish this, use a single network time server and then point each server 
 
 #### Install Java JDK
 
-We must have a version of Java Hotspot installed on each target host. This is required by the MyST agent runtime (this dependency will be removed in a future version).
+We must have a version of Java Hotspot installed on each target host. This is required by the Myst agent runtime (this dependency will be removed in a future version).
 
 Open JDK is not supported by Fusion Middleware so be sure to use the Oracle JDK.
 
@@ -106,7 +106,7 @@ For more information see [Installing Java on Linux](https://java.com/en/download
 If you are planning on provisioning both Middleware versions on the same target hosts, ensure that both Java versions are installed and that you are referencing the correct Java home in your Platform Blueprint. This is covered in more detail in the Provisioning Section. 
 
 **Note 2**:  
-Due to a known issue with the MyST Studio SSH client, you need to create a symbolic link from `/usr/bin/java` to your actual java binary. For example, if your Java Home is at `/usr/java/latest`, run the following command on each host:
+Due to a known issue with the Myst Studio SSH client, you need to create a symbolic link from `/usr/bin/java` to your actual java binary. For example, if your Java Home is at `/usr/java/latest`, run the following command on each host:
 
 ```sh
 ln -s /usr/java/latest/bin/java /usr/bin/java
@@ -116,16 +116,16 @@ ln -s /usr/java/latest/bin/java /usr/bin/java
 There is a known bug in java that can impact the performance of the Weblogic Scripting Tool (WLST).  To workaround this issue, we need to edit the file `<java_home>/jre/lib/security/java.security`
 
 1. Comment out the line:  
-  `#securerandom.source=file:/dev/urandom`
+    `#securerandom.source=file:/dev/urandom`
 
 2. Add the following line:  
-  `securerandom.source=file:/dev/./urandom`
+    `securerandom.source=file:/dev/./urandom`
 
 
 #### Configuring operating system users and groups
 We need to create the operating system user that owns the Oracle software on each target host. 
 
-When MyST installs the Oracle Middleware it will require Secure Shell (SSH) access to the target host. MyST supports user credentials provided either as password or as public key (see [Configuring Infrastucture Providers](/infrastructure/providers/pre-existing/README.md) for details).
+When Myst installs the Oracle Middleware it will require Secure Shell (SSH) access to the target host. Myst supports user credentials provided either as password or as public key (see [Configuring Infrastucture Providers](/infrastructure/providers/pre-existing/README.md) for details).
 
 ##### Groups
 We need to create the following groups on each target host:
@@ -157,33 +157,33 @@ The operating system user and group must have read and write access to the follo
 * `/u01/app/oracle`[^2]
 * `/opt/myst`
 * `/tmp/mystWorkspace`
- 
+
 **Important** - If any of these directories do not exist, please create them and make sure that the operating system user can read and write to them.
 
-[^1] If you use a different name for the Oracle user or group, you must update the MyST global variables `oui.install.user` and `oui.install.group` in the Platform Blueprint.
+[^1] If you use a different name for the Oracle user or group, you must update the Myst global variables `oui.install.user` and `oui.install.group` in the Platform Blueprint.
 
-[^2] `/u01/app/oracle` is the default base directory under which Oracle products are installed. If a different location is used, you must update the MyST global variable `oracle.base` in the Platform Blueprint.
+[^2] `/u01/app/oracle` is the default base directory under which Oracle products are installed. If a different location is used, you must update the Myst global variable `oracle.base` in the Platform Blueprint.
 
 
 ##### Sudo Users
-The following prerequisites are required in order to use the 'run as user' (sudo) in MyST.
+The following prerequisites are required in order to use the 'run as user' (sudo) in Myst.
 
 1. The SSH user is configured in `/etc/sudoers` to allow sudo
 
 2. The SSH user can execute `/bin/bash` as sudo user
 
 3. Disable requiretty for the ssh user in /etc/sudoers (in this case `myst` SSH user):  
-  `Defaults:myst !requiretty`
+    `Defaults:myst !requiretty`
 
-4. MyST executes following command:  
-  `sudo -i -u <SUDO_USER> bash -c "<COMMAND>"`  
-  
- **Note** - SUDO_USER being the SSH sudo user and COMMAND being the MyST command. This information is for troubleshooting purposes.
+4. Myst executes following command:  
+    `sudo -i -u <SUDO_USER> bash -c "<COMMAND>"`  
+
+ **Note** - SUDO_USER being the SSH sudo user and COMMAND being the Myst command. This information is for troubleshooting purposes.
 
 
 #### Oracle Installation Binaries
 The Oracle Fusion Middleware installation files should be made available on each target host as a network share.  The default location for this is `/u01/app/software`
 
-If a different location is used, you must update the MyST global variable `install.dir`  in the Platform Blueprint.
+If a different location is used, you must update the Myst global variable `install.dir`  in the Platform Blueprint.
 
 The operating system user and group for Oracle Fusion Middleware should have read and write access to this share.  

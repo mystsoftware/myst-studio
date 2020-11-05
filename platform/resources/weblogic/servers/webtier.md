@@ -6,12 +6,12 @@ Before you begin defining the configuration, the Web Tier must be listed as a pr
 
 `webtier.oracle.group=dba`
 
-The Oracle HTTP Server in the Web Tier is configured through moduleconf files that you define outside your platform blueprint. The MyST agent references the configuration information from your moduleconf file. A moduleconf file is a standard Oracle HTTP Server configuration. MyST automatically copies moduleconf configuration to the target Oracle HTTP Server hosts and replaces any property references defined in the files with the associated values in configuration. The moduleconf file is stored in the MYST\_WORKSPACE/resources/ohs/moduleconf. This is the default path where MyST tries to locate the moduleconf files to copy to the node. If there is a need to have different moduleconf for environments, then they should be stored in separate folders. For example, if there was a separate OHS configuration for single node and cluster, there should be two folders created as follows:
+The Oracle HTTP Server in the Web Tier is configured through moduleconf files that you define outside your platform blueprint. The Myst agent references the configuration information from your moduleconf file. A moduleconf file is a standard Oracle HTTP Server configuration. Myst automatically copies moduleconf configuration to the target Oracle HTTP Server hosts and replaces any property references defined in the files with the associated values in configuration. The moduleconf file is stored in the Myst\_WORKSPACE/resources/ohs/moduleconf. This is the default path where Myst tries to locate the moduleconf files to copy to the node. If there is a need to have different moduleconf for environments, then they should be stored in separate folders. For example, if there was a separate OHS configuration for single node and cluster, there should be two folders created as follows:
 
-* MYST\_WORKSPACE/resources/ohs/moduleconf/single
-* MYST\_WORKSPACE/resources/ohs/moduleconf/cluster
+* Myst\_WORKSPACE/resources/ohs/moduleconf/single
+* Myst\_WORKSPACE/resources/ohs/moduleconf/cluster
 
-  If you are using a custom moduleconf source, the folder directory must be defined in the `core.webtier.moduleconf-source.directory` property.The following is a sample moduleconf file located at MYST\_WORKSPACE/resources/ohs/soa\_vh.conf.
+  If you are using a custom moduleconf source, the folder directory must be defined in the `core.webtier.moduleconf-source.directory` property.The following is a sample moduleconf file located at Myst\_WORKSPACE/resources/ohs/soa\_vh.conf.
 
 ```
 <VirtualHost *:${core.product[webtier].param[base-port]}>
@@ -65,7 +65,7 @@ In addition to the moduleconf definition, the following table describes the conf
 | core.webtier.node\[ID\].component-name | The Oracle HTTP Server component name. |
 | core.webtier.name-virtual-host-enabled | Specifies whether to enable name-based virtual hosts or not. |
 | core.webtier.moduleconf-source.directory | The location of the moduleconf files, which are replaced with variables and copied to the server. If not set, the default location is taken as ${myst.workspace}/resources/ohs/moduleconf |
-| core.webtier.moduleconf-source.allow-unexpanded-properties | Allows unexpanded properties to be defined in the moduleconf. This is required to allow adding the Oracle HTTP Server properties that are not related to the MyST properties. If not set, the default is set to false. If set to true, the user running MyST must have sudoers NOPASSWD access to the system. |
+| core.webtier.moduleconf-source.allow-unexpanded-properties | Allows unexpanded properties to be defined in the moduleconf. This is required to allow adding the Oracle HTTP Server properties that are not related to the Myst properties. If not set, the default is set to false. If set to true, the user running Myst must have sudoers NOPASSWD access to the system. |
 | core.webtier.cluster\[ID\].server-addresses | Computed from core.domain.server\[_\].listen-address and core.domain.server\[_\].listen-port for all servers within the cluster. |
 |  | core.product\[webtier\].param\[webcache-enabled\] |
 | core.product\[webtier\].param\[opmn-remote-port\] | The Oracle Process Manager and Notification \(OPMN\) remote port. If not set, the default value is taken as 6701. |

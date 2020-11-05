@@ -116,7 +116,7 @@ println "=="
 println "=="
 
 // Output executionResult and jobExecutionResults as a junit report.
-def executionResultsFilename = envVars.get('WORKSPACE') + "/MyST-JobInvoker-TEST.xml";
+def executionResultsFilename = envVars.get('WORKSPACE') + "/myst-JobInvoker-TEST.xml";
 def executionResultsFile = new File(executionResultsFilename);
 executionResultsFile.createNewFile();
 println "Created execution results file:" + executionResultsFilename;

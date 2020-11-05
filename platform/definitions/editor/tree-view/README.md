@@ -20,11 +20,11 @@ The different parts of the tree user interface are numbered in the image above. 
 
   > The browser URL at this stage can also be bookmarked in you case we want to open this view directly with the same component pre-selected. 
 
-3. **Computed Configuration** - Any component shown in a green background represents something which MyST has automatically computed and that which the user has not explicitly defined / overriden. For example, in the image, the `AdminServer` node has been auto-computed by MyST based on the other user-defined inputs.
+3. **Computed Configuration** - Any component shown in a green background represents something which Myst has automatically computed and that which the user has not explicitly defined / overriden. For example, in the image, the `AdminServer` node has been auto-computed by Myst based on the other user-defined inputs.
 
-4. **Add New Component** - For any component types which are collections, e.g. JDBC Data Sources, WebLogic clusters etc. and that which are editable, MyST provides us with this `+` control which when clicked can add a new component of that type. In the image above, when we click on the `+` button, MyST will prompt us with a modal dialog to capture the WebLogic cluster name and based on that will add a new cluster to the model and select it.
+4. **Add New Component** - For any component types which are collections, e.g. JDBC Data Sources, WebLogic clusters etc. and that which are editable, Myst provides us with this `+` control which when clicked can add a new component of that type. In the image above, when we click on the `+` button, Myst will prompt us with a modal dialog to capture the WebLogic cluster name and based on that will add a new cluster to the model and select it.
 
-5. **Context Menu** - For any components which are collections, e.g. JDBC Data Sources, MyST provides us with a context menu to take certain actions. These actions include `Remove` to remove the component from the model and `Clone` to create a similar component based on the current one.
+5. **Context Menu** - For any components which are collections, e.g. JDBC Data Sources, Myst provides us with a context menu to take certain actions. These actions include `Remove` to remove the component from the model and `Clone` to create a similar component based on the current one.
 
 6. **Categories** - These are just logical grouping of similar configuration and themselves do not represent any configuration elements. For example, in the image above, `Startup & Shutdown Classes` is just a group which consists of the configuration of individual startup and shutdown classes within it.
 

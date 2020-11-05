@@ -1,6 +1,6 @@
 ## {{ page.title }}
 
-MyST supports automating the security configuration of the following:
+Myst supports automating the security configuration of the following:
 
 * Creating LDAP users and groups.
 * Assigning role conditions.

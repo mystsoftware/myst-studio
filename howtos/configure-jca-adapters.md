@@ -1,6 +1,6 @@
 ## {{page.title}}
 
-MyST Studio supports the automation of any JCA adapter type. JCA Adapters themselves are configured through deployment plans. MyST Studio has a mechanism for defining JCA adapter configuration so that it can be used to generate the deployment plan when the platform is automatically provisioned or updated by MyST.
+Myst Studio supports the automation of any JCA adapter type. JCA Adapters themselves are configured through deployment plans. Myst Studio has a mechanism for defining JCA adapter configuration so that it can be used to generate the deployment plan when the platform is automatically provisioned or updated by Myst.
 
 ###Prerequisites
 
@@ -16,7 +16,7 @@ This is Oracle's recommendation as per the Enterprise Deployment Guide
 
 With this approach a file replication solution such as Gluster can be used to allow the deployment plan to be distributed to all nodes in a cluster as if they were shared files.
 
-#### Defining the shared storage mount in MyST Studio
+#### Defining the shared storage mount in Myst Studio
 
 Once you have setup shared storage on the operation system, you can update your Platform Blueprint to point to the location of the shared storage. It is generally a good idea to keep this location consistent across all environments to keep the setup process simple.
 
@@ -37,7 +37,7 @@ To support the configuration of a certain JCA Adapter type, simply set the name 
 
 ![](/howtos/img/howto-config-jca-3.adpt-types.png)
 
-#### Example: Configuring Database Adapter instances in MyST Studio
+#### Example: Configuring Database Adapter instances in Myst Studio
 
 ##### Step 1: Configure the Database Adapter
 
@@ -57,7 +57,7 @@ Next, you need to add the adapter instances.
 
 Click on "Add Item" next to the "Instance List".
 
-Create a logical name for your instance. This is used only for identifying the instance in MyST Studio and is not used for WebLogic.
+Create a logical name for your instance. This is used only for identifying the instance in Myst Studio and is not used for WebLogic.
 
 ![](/howtos/img/howto-config-jca-4.edit-instance.png)
 
@@ -65,7 +65,7 @@ Set a JNDI Name and then click on "Add One" next to "Name-Value Parameters" to a
 
 An example of common property set for Oracle XA DB Adapter instances is:
 
-| Property Name | Property Value | 
+| Property Name | Property Value |
 | ------------- | -------------- |
 | xaDataSource	| jdbc/MyApplicationDataSource |
 
@@ -75,7 +75,7 @@ Click "Save"
 
 Click on "Add Item" next to the "Instance List".
 
-Create a logical name for your instance. This is used only for identifying the instance in MyST Studio and is not used for WebLogic.
+Create a logical name for your instance. This is used only for identifying the instance in Myst Studio and is not used for WebLogic.
 
 ![](/howtos/img/howto-config-jca-5.edit-instance-2.png)
 

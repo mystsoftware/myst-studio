@@ -16,7 +16,7 @@ In the initial dialog, we need to specify the following details about our Platfo
 Once we have entered the basic details about our Platform Model click `Next`.
 
 ### Select Infrastructure Provider
-Next, we need to specify the Infrastructure Provider for our Platform Model. From the corresponding drop-down, select a Pre-Existing Infrastructure Provider. MyST will list all the target hosts within the Pre-Existing Infrastructure provider for the Platform Model Environment Type.
+Next, we need to specify the Infrastructure Provider for our Platform Model. From the corresponding drop-down, select a Pre-Existing Infrastructure Provider. Myst will list all the target hosts within the Pre-Existing Infrastructure provider for the Platform Model Environment Type.
 
 ![](img/PreModelInfrastructure.png)
 
@@ -27,7 +27,7 @@ For each Compute Group defined within the Platform Blueprint we need to specify 
 
 ![](img/PreModelComputeGroup.png)
 
-In addition, we can also specify whether we want to have a stand-alone admin server, in which case it will be created within its own compute group. MyST will default to what is specified in the Platform Blueprint.
+In addition, we can also specify whether we want to have a stand-alone admin server, in which case it will be created within its own compute group. Myst will default to what is specified in the Platform Blueprint.
 
 If we specified a stand-alone Admin Server in the Platform Blueprint, and then choose to override that, then we will also need to specify which compute group we want to target the Admin Server to.
 
@@ -36,7 +36,7 @@ Once done, click `Next`.
 ### Map to Pre-Existing Servers
 Once we have specified the number of nodes for each compute group, the next step is to map each Node to a corresponding Pre-Existing Host in the specified infrastructure provider.
 
-MyST will list out each node required by the Platform Model. Against each node there will be a drop down box, which will list the target hosts available to map the node. For each node, select the target host. Only hosts available from the specified environment will be available for selection.
+Myst will list out each node required by the Platform Model. Against each node there will be a drop down box, which will list the target hosts available to map the node. For each node, select the target host. Only hosts available from the specified environment will be available for selection.
 
 ![](img/PreModelInfrastructureMap.png)
 
@@ -64,14 +64,14 @@ For the Platform Model, we need to specify the following details:
 * **RCU SYS User** - Enter the user name for the RCU database. This should be a username with DBA or SYSDBA privileges, for example, SYS.
 * **RCU SYS Password** - Enter the password for the RCU Sys User.
 
-> Note: All passwords stored by MyST are encrypted.
+> Note: All passwords stored by Myst are encrypted.
 
 #### GridLink and ONS nodes configuration
 In case you are using a GridLink (RAC) database, you can specify the additional property, **ONS Nodes** and set specify the list of ONS nodes following standard Oracle documentation.
 
 ![](img/PreModelConfigureONS.png)
 
-> MyST will auto-calculate the GridLink Database URLs as appropriate which you can change in the model editor later if you wish to override.
+> Myst will auto-calculate the GridLink Database URLs as appropriate which you can change in the model editor later if you wish to override.
 
 #### Override Default Memory and Logging Settings
 It is common to have different JVM Memory Arguments and Logging configurations in upstream dev and test environments. The `Advanced` tab allows you override the settings in the Platform Blueprint.
@@ -89,8 +89,8 @@ For the Platform Model we need to specify the following details:
 Once we have specified the `General` and `Advanced` Platform Model configurations, click `Next`.
 
 ### Review the Summary
-MyST will display a Summary screen showing all the key inputs specified in the Platform Model Wizard.
+Myst will display a Summary screen showing all the key inputs specified in the Platform Model Wizard.
 
 ![](img/PreModelSummary.png)
 
-Once done, click `Finish`. MyST will create the corresponding Platform Model and take you to the Platform Model Editor where you can make additional changes if required. See [Editing Platform Models](/platform/definitions/README.md) for further details.
+Once done, click `Finish`. Myst will create the corresponding Platform Model and take you to the Platform Model Editor where you can make additional changes if required. See [Editing Platform Models](/platform/definitions/README.md) for further details.

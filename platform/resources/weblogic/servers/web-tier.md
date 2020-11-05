@@ -45,16 +45,16 @@ Based on this, the `Location` definitions within the Webtier Configuration are a
 
 <!--
 TODO...
-The below is copied from MyST CLI docs but still needs to be updated to reflect MyST Studio
+The below is copied from Myst CLI docs but still needs to be updated to reflect Myst Studio
 
 ## Understanding how Webtier Location Routing Rules are defined
 
-The Webtier is configured through moduleconf files that you define outside your platform blueprint. The MyST agent references the configuration information from your moduleconf file. A moduleconf file is a standard Oracle HTTP Server configuration. MyST automatically copies moduleconf configuration to the target Oracle HTTP Server hosts and replaces any property references defined in the files with the associated values in configuration. The moduleconf file is stored in the MYST\_WORKSPACE/resources/ohs/moduleconf. This is the default path where MyST tries to locate the moduleconf files to copy to the node. If there is a need to have different moduleconf for environments, then they should be stored in separate folders. For example, if there was a separate OHS configuration for single node and cluster, there should be two folders created as follows:
+The Webtier is configured through moduleconf files that you define outside your platform blueprint. The Myst agent references the configuration information from your moduleconf file. A moduleconf file is a standard Oracle HTTP Server configuration. Myst automatically copies moduleconf configuration to the target Oracle HTTP Server hosts and replaces any property references defined in the files with the associated values in configuration. The moduleconf file is stored in the Myst\_WORKSPACE/resources/ohs/moduleconf. This is the default path where Myst tries to locate the moduleconf files to copy to the node. If there is a need to have different moduleconf for environments, then they should be stored in separate folders. For example, if there was a separate OHS configuration for single node and cluster, there should be two folders created as follows:
 
-* MYST\_WORKSPACE/resources/ohs/moduleconf/single
-* MYST\_WORKSPACE/resources/ohs/moduleconf/cluster
+* Myst\_WORKSPACE/resources/ohs/moduleconf/single
+* Myst\_WORKSPACE/resources/ohs/moduleconf/cluster
 
-If you are using a custom moduleconf source, the folder directory must be defined in the `core.webtier.moduleconf-source.directory` property.The following is a sample moduleconf file located at MYST\_WORKSPACE/resources/ohs/soa\_vh.conf.
+If you are using a custom moduleconf source, the folder directory must be defined in the `core.webtier.moduleconf-source.directory` property.The following is a sample moduleconf file located at Myst\_WORKSPACE/resources/ohs/soa\_vh.conf.
 
 ```
 <VirtualHost *:${core.product[webtier].param[base-port]}>

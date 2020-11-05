@@ -1,6 +1,6 @@
 ## {{ page.title }}
 
-Configuring JDBC Data Sources in MyST is a two stage process.
+Configuring JDBC Data Sources in Myst is a two stage process.
 * First, define the Data Source in the Platform Blueprint. Here we define the common and default configuration details for the Data Source.
 * Second, define the environment specific details in each of the Platform Models, for example the database URL and connection credentials.
 
@@ -28,11 +28,11 @@ To delete an existing data source from a Platform Blueprint, open the Platform B
 Expand this component to see a list of currently defined data sources. Select an existing data source, right click on it and select `Remove`.
 
 ### JDBC Data Source Properties
-This section details all the properties that we can set for a JDBC data source in the MyST platform blueprint. To see all properties that are available, ensure `Show advanced properties` has been enabled as illustrated below.
+This section details all the properties that we can set for a JDBC data source in the Myst platform blueprint. To see all properties that are available, ensure `Show advanced properties` has been enabled as illustrated below.
 
 ![](img/dataSourceProperties.png)
 
-The majority of these properties are optional. If a property is `Not Set` then MyST will not set that property when configuring a data source, meaning WebLogic will use the default value. Property values of type password are automatically encrypted by MyST.
+The majority of these properties are optional. If a property is `Not Set` then Myst will not set that property when configuring a data source, meaning WebLogic will use the default value. Property values of type password are automatically encrypted by Myst.
 
 #### Component Properties
 For each JDBC data source we need to specify the following component properties:
@@ -105,7 +105,7 @@ For each Platform Model we need to define the environment specific values for ea
 
 * **Password** - The password used to connect to the database.
 
-When it comes to defining the `URL` and `User Name`, one option is to use MyST properties to minimize the number of specific property values we need to define within the Platform Model.
+When it comes to defining the `URL` and `User Name`, one option is to use Myst properties to minimize the number of specific property values we need to define within the Platform Model.
 
 For example, we could define username as
 ```

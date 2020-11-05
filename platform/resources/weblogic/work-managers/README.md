@@ -1,6 +1,6 @@
 ## {{ page.title }}
 
-WebLogic Server provides a number of constraints and request classes used to provide guidelines to WebLogic Server for allocating resources to process work requests, as well as work managers which provide a collection of these constraints and request classes to give an overall behavior. MyST Studio groups configuration for all of these objects under **Work Manager Configuration**.
+WebLogic Server provides a number of constraints and request classes used to provide guidelines to WebLogic Server for allocating resources to process work requests, as well as work managers which provide a collection of these constraints and request classes to give an overall behavior. Myst Studio groups configuration for all of these objects under **Work Manager Configuration**.
 
 ![](img/workManagerModel.png)
 
@@ -12,7 +12,7 @@ Response Time Request Classes are used to indicate that a given request should b
 
 ![](img/responseTime.png)
 
-To create a response time request class in MyST Studio:
+To create a response time request class in Myst Studio:
 
 1. Navigate to `WebLogic Domain Configuration > Work Manager Configuration > Request Classes > Response Time`
 2. Click `+` to the right of `Response Time` to add a new response time request class
@@ -32,7 +32,7 @@ Fair Share Request Classes are used to indicate the percentage of available thre
 
 ![](img/fairShareRequestClasses.png)
 
-To create a fair share request class in MyST Studio:
+To create a fair share request class in Myst Studio:
 
 1. Navigate to `WebLogic Domain Configuration > Work Manager Configuration > Request Classes > Fair Share`
 2. Click `+` to the right of `Fair Share` to add a new fair share request class
@@ -51,7 +51,7 @@ Context Request Classes are used to provide specific resource allocation behavio
 
 ![](img/contextRequestClasses.png)
 
-To create a context request class in MyST Studio:
+To create a context request class in Myst Studio:
 
 1. Navigate to `WebLogic Domain Configuration > Work Manager Configuration > Request Classes >  Context`
 2. Click `+` to the right of `Context` to add a new context request class
@@ -65,7 +65,7 @@ To configure a context request class, the following must be provided:
 ### Configuring Context Cases
 Context Cases encapsulate how individual identity contexts are treated by a context request class.
 
-To create a context case in MyST Studio, click the `+` button to the right of `Context Cases`
+To create a context case in Myst Studio, click the `+` button to the right of `Context Cases`
 
 ![](img/configuringContextCases.png)
 
@@ -80,7 +80,7 @@ Maximum Thread Constraints are used primarily to avoid deadlock situations in se
 
 ![](img/maximumThreadConstraints.png)
 
-To create a maximum thread constraint in MyST Studio:
+To create a maximum thread constraint in Myst Studio:
 
 1. Navigate to `WebLogic Domain Configuration > Work Manager Configuration > Constraints > Maximum Threads`
 2. Click `+` to the right of `Maximum Threads` to add a new maximum threads constraint
@@ -98,7 +98,7 @@ Minimum Thread Constraints are used to help avoid deadlock situations in server 
 
 ![](img/minimumThreadConstraints.png)
 
-To create a minimum thread constraint in MyST Studio:
+To create a minimum thread constraint in Myst Studio:
 
 1. Navigate to `WebLogic Domain Configuration > Work Manager Configuration > Constraints > Minimum Threads`
 2. Click `+` to the right of `Minimum Threads` to add a new minimum threads constraint
@@ -115,7 +115,7 @@ Capacity Constraints are used to provide a guide for how many requests the serve
 
 ![](img/capacityConstraint.png)
 
-To create a capacity constraint in MyST Studio:
+To create a capacity constraint in Myst Studio:
 
 1. Navigate to `WebLogic Domain Configuration > Work Manager Configuration > Constraints > Capacity`.
 2. Click `+` to the right of `Capacity` to add a new context request class
@@ -132,7 +132,7 @@ Work Managers are the higher level components that make use of all of these requ
 
 ![](img/workManagers.png)
 
-To create a work manager in MyST Studio:
+To create a work manager in Myst Studio:
 
 1. Navigate to `WebLogic Domain Configuration > Work Manager Configuration > Work Managers`
 2. Click `+` to the right of `Work Managers` to add a new work manager

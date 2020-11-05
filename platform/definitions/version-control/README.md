@@ -1,33 +1,33 @@
 ## {{ page.title }}
 
-Within MyST, Platform Blueprints and Models are put under *version control*, allowing us to easily propose, review, test, promote and deploy configuration changes. 
+Within Myst, Platform Blueprints and Models are put under *version control*, allowing us to easily propose, review, test, promote and deploy configuration changes. 
 
 ###Platform Blueprint Versions
 Over the Platform Lifecycle we can have multiple **versions** of a Platform Blueprint, though we would typically have a maximum of two versions under development at any point in time, one for main development (like a trunk in version control) and another one optionally for patches (like a production fix branch in version control).
 
-We can make multiple **revisions** to a version of a Platform Blueprint. Although not mandated by MyST, it is expected that we would work on a single version of a Platform Blueprint until it gets promoted to Production, at which point we would set its state to `FINAL` and start working on a newer version.
+We can make multiple **revisions** to a version of a Platform Blueprint. Although not mandated by Myst, it is expected that we would work on a single version of a Platform Blueprint until it gets promoted to Production, at which point we would set its state to `FINAL` and start working on a newer version.
 
-When working on a new revision, the revision is initially in a `DRAFT` state. Whilst in a draft state, MyST allows us to save configuration in draft form repeatedly, overwriting the previous draft, without actually committing or applying them to any Platform Instance. 
+When working on a new revision, the revision is initially in a `DRAFT` state. Whilst in a draft state, Myst allows us to save configuration in draft form repeatedly, overwriting the previous draft, without actually committing or applying them to any Platform Instance. 
 
-Once we are happy with our changes, MyST allows us to explicitly commit the revision permanently to source control (which can then be applied to a Platform Instance). If we make any subsequent changes, then MyST will automatically create a newer revision.
+Once we are happy with our changes, Myst allows us to explicitly commit the revision permanently to source control (which can then be applied to a Platform Instance). If we make any subsequent changes, then Myst will automatically create a newer revision.
 
 {% hint style='tip' %}
-MyST allows us to go back to any previously committed revision.
+Myst allows us to go back to any previously committed revision.
 {% endhint %}
 
-In MyST, a platform blueprint version obeys the naming convention, `1.0.0[pr3]`. Here, `1.0.0` is the version of the blueprint, `pr` is the standard prefix for a platform blueprint revision and `3` is the current revision number for it.
+In Myst, a platform blueprint version obeys the naming convention, `1.0.0[pr3]`. Here, `1.0.0` is the version of the blueprint, `pr` is the standard prefix for a platform blueprint revision and `3` is the current revision number for it.
 
 ###Platform Model Versions
-For each Platform Instance that we want to create, we need to create a corresponding Platform Model in MyST. For example, if we wanted to create DEV, TST, and PROD environments, we would create three Platform Models.
+For each Platform Instance that we want to create, we need to create a corresponding Platform Model in Myst. For example, if we wanted to create DEV, TST, and PROD environments, we would create three Platform Models.
 
 For **each version** of a Platform Blueprint, we can have exactly **one version** of each Platform Model associated with it. Remember, the Platform Model is meant to track environment specific changes to the configuration over time (passwords, endpoints, memory settings, etc). Changes to this configuration can also be independently tracked through revisions, which again can be in `draft` state and then subsequently in `committed` state for them to become eligible for applying to the target environment.
 
-In MyST, a Platform Model version obeys the naming convention, `1.0.0[pr3][pm4]`. Here, `1.0.0[pr3]` just refers to the Platform Blueprint version and its current revision, `pm` is the standard prefix for a Platform Model revision and `4` is the current revision number for it.
+In Myst, a Platform Model version obeys the naming convention, `1.0.0[pr3][pm4]`. Here, `1.0.0[pr3]` just refers to the Platform Blueprint version and its current revision, `pm` is the standard prefix for a Platform Model revision and `4` is the current revision number for it.
 
 Please note that the Platform Model can be revised independently of revisions to the Platform Blueprint and there is no hard relationship between them. The association exists between the Platform Model version and the Platform Blueprint version while the revisions evolve independently.
 
 ###Draft, Committed and Final States
-Platform Blueprint and Models in MyST can be in one of three states:
+Platform Blueprint and Models in Myst can be in one of three states:
 
 1. **Draft** - Means that the current revision of the Platform Blueprint / Model version being viewed is still in a draft state and is not committed, hence will not be acted upon by a release pipeline (see below). It also implies that this revision cannot be applied to any environments (unless they allow drafts which is an exception rather than the rule).
 
@@ -36,14 +36,14 @@ Platform Blueprint and Models in MyST can be in one of three states:
 3. **Final** - Means that the current version of the Platform Blueprint / Model being viewed is finalized (most likely because it has been promoted all the way to production). Any subsequent changes to configuration will have to be made in a new version.
 
 ### Platform Blueprint Development Lifecycle
-Since MyST allows us to treat configuration as code, it allows us to follow a similar process when promoting platform configurations from development through our staging environments and into Production.
+Since Myst allows us to treat configuration as code, it allows us to follow a similar process when promoting platform configurations from development through our staging environments and into Production.
 
 ####  Platform Blueprint Development
 By default, Platform Blueprint / Model revisions in a draft state cannot be applied to any environment. This is to prevent unfinished changes from accidentally being applied. 
 
 However, when developing the initial Platform Blueprint or if making a significant change then the blueprint developer may want to frequently save and test their changes in a `DEV` or `SANDBOX` environment, without wanting to commit these changes each time.
 
-To support this scenario, MyST allows us to configure an Environment Type as allowing draft revisions to be applied.
+To support this scenario, Myst allows us to configure an Environment Type as allowing draft revisions to be applied.
 
 {% hint style='info' %}
 Platform Instances with an environment type that allows provisioning / updating of draft configuration cannot be used in a Release Pipeline.
@@ -54,8 +54,8 @@ Once a revision to a Platform Blueprint has been committed, we will typically wa
 
 If at any stage, the Platform Blueprint fails validation, we would update the Platform Blueprint to fix the issue and commit the change to version control. We would then re-start the process of promoting the latest revision of our Platform Blueprint through each of our staging environments until the Platform Blueprint is successfully promoted into Production.
 
-MyST supports two methods for promoting Platform Blueprints through each environment:
-* **Manual** - Users manually trigger MyST to update a Platform Instance to a new version/revision of a Platform Blueprint / Model (see [Updating Instances](/platform/update/README.md) for more details). With this approach, the user is responsible for managing the promotion process.
+Myst supports two methods for promoting Platform Blueprints through each environment:
+* **Manual** - Users manually trigger Myst to update a Platform Instance to a new version/revision of a Platform Blueprint / Model (see [Updating Instances](/platform/update/README.md) for more details). With this approach, the user is responsible for managing the promotion process.
 * **Release Pipeline** - A [Release Pipeline](/release/README.md) can be used for managing the process of promoting a new version / revision of a Platform Blueprint through each staging environment and into production.
 
 #### Implementing Continuous Integration / Delivery for Platform Configuration
@@ -63,15 +63,15 @@ Release Pipelines allow us to implement a continuous integration/delivery proces
 
 As a first step towards continuous delivery, one normally would set up a continuous integration server and a `CI` environment where code gets deployed to every time a commit happens. 
 
-Similarly, every configuration change can be and should be applied continuously to a `CI` environment on a commit. For this, MyST plays the role of a CI server for configuration where it tracks committed Platform Blueprint changes and then applies these changes to the target CI environment.
+Similarly, every configuration change can be and should be applied continuously to a `CI` environment on a commit. For this, Myst plays the role of a CI server for configuration where it tracks committed Platform Blueprint changes and then applies these changes to the target CI environment.
 
-Once applied, MyST can trigger an automated test to validate the configuration changes, in a similar way that we would when deploying code. 
+Once applied, Myst can trigger an automated test to validate the configuration changes, in a similar way that we would when deploying code. 
 
-Once a particular revision of a Platform Blueprint has been successfully promoted to CI, then we can use the Release Pipeline to promote the change to the next staging environment and so on. For each stage, we can define whether MyST automatically promotes the Platform Blueprint or whether it needs to be manually approved. 
+Once a particular revision of a Platform Blueprint has been successfully promoted to CI, then we can use the Release Pipeline to promote the change to the next staging environment and so on. For each stage, we can define whether Myst automatically promotes the Platform Blueprint or whether it needs to be manually approved. 
 
 The Release Pipeline allows us to track the promotion of committed changes through each stage, providing the visibility as to what version/revision of a Platform Blueprint is currently deployed in each staging environment.
 
-MyST allows us to combine the promotion of code and configuration into a release pipeline. 
+Myst allows us to combine the promotion of code and configuration into a release pipeline. 
 
 For more details on how to configure a release pipeline see [Release Pipelines](/release/pipeline/README.md).
 
