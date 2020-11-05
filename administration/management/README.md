@@ -2,7 +2,7 @@
 
 <!-- toc -->
 
-Under the `bin` directory (eg. `/opt/Myst-studio/bin`) of the Myst Studio home, is a number of utility scripts described below. Updates to the management scripts will be made available in the Release Notes on the Myst Studio website. Typically, they will not change often.
+Under the `bin` directory (eg. `/opt/myst-studio/bin`) of the Myst Studio home, is a number of utility scripts described below. Updates to the management scripts will be made available in the Release Notes on the Myst Studio website. Typically, they will not change often.
 
 ### Scripts
 | Myst Studio Script | Description |
