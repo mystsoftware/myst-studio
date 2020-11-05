@@ -61,7 +61,7 @@ https://${OIC_HOST}/icsapi/v2/integrations/${OIC_ICS_PROJECT_ID}/archive > ${OIC
   <version>1.0-SNAPSHOT</version>
   <name>Retrieve All Airlines</name>
   <properties>
-    <Myst.component.type>opaas-ics</Myst.component.type>
+    <myst.component.type>opaas-ics</myst.component.type>
     <ics.deployment-name>RetrieveAllAirlines</ics.deployment-name>
     <ics.configuration-plan>(EMBEDDED)/ics.json</ics.configuration-plan>
   </properties>
@@ -154,7 +154,7 @@ mvn clean deploy
 
 Alternatively, if we skipped step 3 and 4 and would rather publish our artifact directly to Maven, we may wish to do this directly using the `deploy:deploy-file` goal. For example:
 ```
-mvn deploy:deploy-file -Durl=http://admin:password@your-Myst-instance.com/artifactory/libs-release-local \
+mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifactory/libs-release-local \
 -Dfile=RetrieveAllAirlines.iar \
 -DgroupId=com.rubiconred \
 -DartifactId=RetrieveAllAirlines \
@@ -245,7 +245,7 @@ At the time of writing, Oracle do not support automated deployment of Decision M
   <version>1.0-SNAPSHOT</version>
   <name>Administer Patient Well Being</name>
   <properties>
-    <Myst.component.type>opaas-pcs</Myst.component.type>
+    <myst.component.type>opaas-pcs</myst.component.type>
     <pcs.deployment-name>Administer Patient Well Being</pcs.deployment-name>
     <pcs.space-name>RxR</pcs.space-name>
   </properties>
@@ -353,7 +353,7 @@ mvn clean deploy
 
 Alternatively, if we skipped step 3 and 4 and would rather publish our artifact directly to Maven, we may wish to do this directly using the `deploy:deploy-file` goal. For example:
 ```
-mvn deploy:deploy-file -Durl=http://admin:password@your-Myst-instance.com/artifactory/libs-release-local \
+mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifactory/libs-release-local \
   -Dfile=AdministerPatientWellBeing.exp \
   -DgroupId=com.rubiconred \
   -DartifactId=AdministerPatientWellBeing \
@@ -383,8 +383,8 @@ Once the Artifact is registered with Myst it can be added to a new or existing [
 |soa.service-endpoint|Reserved for future capability to specify web service policy |
 |soa.subject|Reserved for future capability to specify web service policy |
 |composite.redeploy| Whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application. |
-|Myst-config-plan-apply|Boolean flag to specify whether to apply Myst config plan|
-|Myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/Myst.sca.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/Myst.sca.configplan.xml) |
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.sca.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.sca.configplan.xml) |
 |forceDefault|Optional: (true/false) Boolean flag to set whether the composite is default. Defaults to true.|
 
 #### OSB
@@ -392,8 +392,8 @@ Once the Artifact is registered with Myst it can be added to a new or existing [
 |---|---|
 | osb.project-name | Optional value for listing the OSB project name(s). This will be used for deleting the artifact. Use comma-separated list (e.g. `a,b,c`) for multiple projects within one Artifact. |
 |osb.customization-file|OSB customization file to replace endpoint and other properties|
-|Myst-config-plan-apply|Optional: Boolean flag to specify whether to apply Myst config plan|
-|Myst-config-plan-location|Optional: Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/Myst.osb.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/Myst.osb.configplan.xml) |
+|myst-config-plan-apply|Optional: Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|Optional: Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.osb.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.osb.configplan.xml) |
 |preserve-security-and-policy-values|Optional: (true/false) Preserve security and policy values. Defaults to true. |
 |preserve-credentials|Optional: (true/false) Preserve credentials. Defaults to true. |
 |preserve-access-control-policies|Optional: (true/false) Preserve access control policies. Defaults to true. |
@@ -404,44 +404,44 @@ Once the Artifact is registered with Myst it can be added to a new or existing [
 |---|---|
 |mds.folder-names|List of folder names from artifact to deploy into MDS. Also used during redeployment.  |
 |mds.redeploy| Whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application. |
-|Myst-config-plan-apply|Boolean flag to specify whether to apply Myst config plan|
-|Myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/Myst.mds.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/Myst.mds.configplan.xml) |
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.mds.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.mds.configplan.xml) |
 
 #### ADF
 |Property|Description|
 |---|---|
 |j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `deployment.order`|
-|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/Myst.adf.configplan.xml)<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `deployment-plan`|
+|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `deployment-plan`|
 |j2ee.redeploy|Boolean flag to control whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `redeploy`|
 |j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `stage-mode`|
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `target`|
-|Myst-config-plan-apply|Boolean flag to specify whether to apply Myst config plan|
-|Myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/Myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/Myst.adf.configplan.xml) |
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.adf.configplan.xml) |
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.ear becomes Stock.ear)|
 
 #### Java EAR
 |Property|Description|
 |---|---|
 |j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `deployment.order`|
-|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/Myst.adf.configplan.xml)<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `deployment-plan`|
+|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `deployment-plan`|
 |j2ee.redeploy|Boolean flag to control whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `redeploy`|
 |j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `stage-mode`|
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `target`|
-|Myst-config-plan-apply|Boolean flag to specify whether to apply Myst config plan|
-|Myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/Myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/Myst.j2ee.configplan.xml) |
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml) |
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.ear becomes Stock.ear)|
 
 #### Java WAR
 |Property|Description|
 |---|---|
 |j2ee.deployment-order|Weblogic startup order number that controls when the application starts up. Typically this value will be in the high 300s for application code<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `deployment.order`|
-|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/Myst.adf.configplan.xml)<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `deployment-plan`|
+|j2ee.deployment-plan|Optional: Weblogic Application Deployment Plan to configure deployment descriptors and override property values. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.adf.configplan.xml)<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `deployment-plan`|
 |j2ee.name| Application name |
 |j2ee.redeploy|Boolean flag to control whether or not to do an undeploy before a deployment. You do not need to set this for a typical 'redeploy'. It should be reserved for exceptional circumstances where a component can't be deployed until an undeploy usually due to poor code or a bug in the application.<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `redeploy`|
 |j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `stage-mode`|
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster<br /><br />For Myst CLI or Platform Blueprint > System Artifacts use property: `target`|
-|Myst-config-plan-apply|Boolean flag to specify whether to apply Myst config plan|
-|Myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/Myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/Myst.j2ee.configplan.xml)
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ( [DOMAIN_HOME]/plans/myst.adf.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.j2ee.configplan.xml)
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.war becomes Stock.war. This means context root will be /Stock instead of /Stock-1.0.0)|
 
 #### SQL
@@ -460,20 +460,20 @@ Once the Artifact is registered with Myst it can be added to a new or existing [
 #### B2B
 |Property|Description|
 |---|---|
-|Myst-config-plan-apply|Boolean flag to specify whether to apply Myst config plan|
-|Myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/Myst.b2b.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/Myst.b2b.configplan.xml) |
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.b2b.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.b2b.configplan.xml) |
 
 #### BAM
 |Property|Description|
 |---|---|
-|Myst-config-plan-apply|Boolean flag to specify whether to apply Myst config plan|
-|Myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/Myst.bam.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/Myst.bam.configplan.xml) |
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.bam.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.bam.configplan.xml) |
 
 #### MFT
 |Property|Description|
 |---|---|
-|Myst-config-plan-apply|Boolean flag to specify whether to apply Myst config plan|
-|Myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/Myst.mft.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/Myst.mft.configplan.xml) |
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.mft.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.mft.configplan.xml) |
 
 #### Application Configuration (Properties/XML)
 |Property|Description|
@@ -497,8 +497,8 @@ Once the Artifact is registered with Myst it can be added to a new or existing [
 |Property|Description|
 |---|---|
 |extract-files|Comma separated list of files to extract from archive and will be deployed via Smart Import|
-|Myst-config-plan-apply|Boolean flag to specify whether to apply Myst config plan|
-|Myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/Myst.mft.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/Myst.mft.configplan.xml) |
+|myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
+|myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.mft.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.mft.configplan.xml) |
 
 
 #### JAR Library
