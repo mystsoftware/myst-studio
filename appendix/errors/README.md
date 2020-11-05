@@ -1,6 +1,6 @@
 ## {{ page.title }}
 
-MyST Studio categorizes errors by codes in the format of `MYST<N>` where `<N>` is a 4 digit number followed by an optional letter. Below is a non-exhaustive list of common error codes within MyST.
+Myst Studio categorizes errors by codes in the format of `MYST<N>` where `<N>` is a 4 digit number followed by an optional letter. Below is a non-exhaustive list of common error codes within Myst.
 
 | Code | Domain | Category | Description | Message |
 |---|---|---|---|---|

@@ -1,8 +1,8 @@
 ## {{ page.title }}
 
-MyST Workspaces provide a flexible way to control which resources in MyST a user has access to and what actions a user can perform against each resource type.
+Myst Workspaces provide a flexible way to control which resources in Myst a user has access to and what actions a user can perform against each resource type.
 
-Each resource within MyST can be associated with one or more workspaces. When a user is assigned to a workspace, they are assigned one or more Roles. The role defines what actions the user can perform against resources associated with that workspace.
+Each resource within Myst can be associated with one or more workspaces. When a user is assigned to a workspace, they are assigned one or more Roles. The role defines what actions the user can perform against resources associated with that workspace.
 
 **Note:** when a user is assigned multiple roles, they receive the combined set of access permissions defined by their assigned roles. 
 
@@ -13,11 +13,11 @@ When a resource is first created, the user must specify which Workspace(s) the r
 Once created, any changes to which workspaces a resource is associated with need to be done using the **Associate Resources** dialog under Workspace Administration.
 
 ### List Workspaces
-To see a list of MyST Workspaces, click  `Administration` > `Workspaces`. This will display a tiled view of Workspaces similar to the one below.
+To see a list of Myst Workspaces, click  `Administration` > `Workspaces`. This will display a tiled view of Workspaces similar to the one below.
 
 ![](img/workspaceList.png)
 
-For each workspace, MyST provides a summary of the number of resources contained in the workspace, including:
+For each workspace, Myst provides a summary of the number of resources contained in the workspace, including:
 * Users
 * Platform Templates
 * Platform Blueprints
@@ -43,7 +43,7 @@ This will open the **Configure Users** dialog.
 ![](img/workspaceConfigureUsers.png)
 
 #### Add Users
-To add new users to the Workspace, click `+ Add Users`. This will open the **Add Users** dialog which will display the list of users and roles defined to MyST.
+To add new users to the Workspace, click `+ Add Users`. This will open the **Add Users** dialog which will display the list of users and roles defined to Myst.
 
 ![](img/workspaceAddUsers.png)
 
@@ -60,7 +60,7 @@ Once we have specified the users and their corresponding roles, click `Add Users
 **Note:** we can select a user who is already assigned to the workspace, for example, if we want to assign them another role.
 
 #### Edit User Roles
-To edit roles assigned to a user account, click on the `Edit` button for the corresponding user. This will open the **Edit User Roles** dialog. This will display the list of roles defined to MyST and indicate which of these roles are currently assigned to the user.
+To edit roles assigned to a user account, click on the `Edit` button for the corresponding user. This will open the **Edit User Roles** dialog. This will display the list of roles defined to Myst and indicate which of these roles are currently assigned to the user.
 
 To add or remove roles from the user, simply set the corresponding checkbox for each role as required. Once done, click `Edit User Configuration` to confirm our selection and return to the main `Configure Users` dialog. From here we **must** click Save to save our changes to the Workspace.
 
@@ -78,7 +78,7 @@ Within Workspace Administration, click on the  **Actions** drop-down menu for th
 
 ![](img/workspaceAssociateResource.png)
 
-For each *Resource Type*, MyST will provide a summary of the number of resources associated with this workspace and by default expand the Platform Templates section to list the Platform Templates associated with the Workspace.
+For each *Resource Type*, Myst will provide a summary of the number of resources associated with this workspace and by default expand the Platform Templates section to list the Platform Templates associated with the Workspace.
 
 Click on the corresponding `>` expand icon (outlined in red above) to expand the resource type you are interested in.
 
@@ -111,6 +111,6 @@ To deactivate a Workspace, click on the  **Actions** drop-down menu for the corr
 To activate a deactivated environment, click on the **Actions** drop-down menu for the corresponding Workspace and select `Activate`.
 
 ### Delete Workspace
-To delete a Workspace, click on the **Actions** drop-down menu for the corresponding Workspace and select `Delete`. MyST will prompt us to confirm out action, click `Yes` to proceed.
+To delete a Workspace, click on the **Actions** drop-down menu for the corresponding Workspace and select `Delete`. Myst will prompt us to confirm out action, click `Yes` to proceed.
 
 **Note:** You will need to delete all Resource Associations from a Workspace prior to deleting it.

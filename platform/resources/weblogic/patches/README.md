@@ -1,15 +1,15 @@
 ## {{ page.title }}
 
-Oracle often provides patches for their products. These patches can be applied through a utility provided by Oracle known as OPatch. MyST Studio has full support for applying these Oracle patches. This can be done by defining patches directly in the Platform Blueprint.
+Oracle often provides patches for their products. These patches can be applied through a utility provided by Oracle known as OPatch. Myst Studio has full support for applying these Oracle patches. This can be done by defining patches directly in the Platform Blueprint.
 
-> Note: Prior to 12c, WebLogic patches were not applied by OPatch and were instead done through a tool called BSU. MyST Studio has support for both OPatch and BSU allowing patching for any of the products in the 11g and 12c product families.
+> Note: Prior to 12c, WebLogic patches were not applied by OPatch and were instead done through a tool called BSU. Myst Studio has support for both OPatch and BSU allowing patching for any of the products in the 11g and 12c product families.
 
-Before MyST Studio can apply patches, they need to be first downloaded from My Oracle Support. Once downloaded, patches should be made available for consumption by MyST Studio. One common approach for doing this is to place the patches on a software share that is made available to all target hosts. This is the approach that we will take.
+Before Myst Studio can apply patches, they need to be first downloaded from My Oracle Support. Once downloaded, patches should be made available for consumption by Myst Studio. One common approach for doing this is to place the patches on a software share that is made available to all target hosts. This is the approach that we will take.
 
 ### Add Patch to Platform Blueprint
 How you apply a patch depends on whether you are patching an Oracle Middleware 11g or 12c instance:
 
-* **Oracle Middleware 11g** - Oracle patches are applied on a per-product basis. This means that in the MyST Studio blueprint editor, you would define the patches under the specific product being patched.
+* **Oracle Middleware 11g** - Oracle patches are applied on a per-product basis. This means that in the Myst Studio blueprint editor, you would define the patches under the specific product being patched.
 
 * **Oracle Middleware 12c** - Oracle patches are applied globally for all of Oracle Middleware rather than on a per product basis. For that reason, in 12c, it is **recommended** to define patches under Oracle WebLogic as a convention.
 

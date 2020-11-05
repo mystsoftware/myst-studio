@@ -1,8 +1,8 @@
 # {{ page.title }}
 
-Following are the minimum server requirements for installing the MyST server and its associated recommended components either on premise or on cloud.
+Following are the minimum server requirements for installing the Myst server and its associated recommended components either on premise or on cloud.
 
-Please note: It is recommended **NOT** to install MyST onto an Exalogic VServer as some versions of Exalogic VM templates do not support the Linux kernel version required for stable Docker support. A Physical or Virtual Machine x86 install of MyST is recommended.
+Please note: It is recommended **NOT** to install Myst onto an Exalogic VServer as some versions of Exalogic VM templates do not support the Linux kernel version required for stable Docker support. A Physical or Virtual Machine x86 install of Myst is recommended.
 
 # Option 1: All-in-one
 
@@ -25,11 +25,11 @@ The following are required for Jenkins.
 
 | Source | Destination | Protocol | Notes |
 | --- | --- | --- | --- |
-| Jenkins:ANY | MYST:443 | HTTPS | Access to MyST Studio |
+| Jenkins:ANY | MYST:443 | HTTPS | Access to Myst Studio |
 | Jenkins:ANY | Artifactory | HTTP | Access to Artifactory (co-located) |
 | Jenkins:ANY | updates.jenkins.io | HTTPS | Access to Jenkins update site for plugins |
 
-**Note:** MYST = MyST Utility Server, Jenkins = Jenkins CI Server (which runs as MYST:8081 when co-located), Artifactory = Artifact binary repository (which runs as MYST:8083 when co-located)
+**Note:** MYST = Myst Utility Server, Jenkins = Jenkins CI Server (which runs as MYST:8081 when co-located), Artifactory = Artifact binary repository (which runs as MYST:8083 when co-located)
 
 **Artifactory Networking access**
 
@@ -41,11 +41,11 @@ The following are required for Artifactory.
 | OFM\_AS:ANY | Artifactory | HTTP(S) | Access to Artifactory (for download) |
 | Artifactory:ANY | repo1.maven.org | HTTP | Access to public Maven repositories |
 
-**Note** : MYST = MyST Utility Server, OFM\_AS = Any OFM target AdminServer host upon which MyST will provision and deploy, Jenkins = Jenkins CI Server (which runs as MYST:8081 when co-located), Artifactory = Artifact binary repository (which runs as MYST:8083 when co-located)
+**Note** : MYST = Myst Utility Server, OFM\_AS = Any OFM target AdminServer host upon which Myst will provision and deploy, Jenkins = Jenkins CI Server (which runs as MYST:8081 when co-located), Artifactory = Artifact binary repository (which runs as MYST:8083 when co-located)
 
 # Option 2: Separated
 
-### MyST Server Specification
+### Myst Server Specification
 
 | Component | Requirement |
 | --- | --- |

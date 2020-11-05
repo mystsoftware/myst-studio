@@ -1,6 +1,6 @@
 # Security Salt and Hash
 
-In MyST Studio 6.6.0 (introduced in rc2) there were password security enhancements to how MyST encrypts passwords. This article explains the changes to the enhanced password encryption.![](img/salt-hash.png)
+In Myst Studio 6.6.0 (introduced in rc2) there were password security enhancements to how Myst encrypts passwords. This article explains the changes to the enhanced password encryption.![](img/salt-hash.png)
 
 ## Before and After Password Security Enhancement
 
@@ -21,13 +21,13 @@ my.custom.password=ENC(abcZYX123!@#abcABC123)
 
 Some additional points to be aware of:
 
-1. A salt (file) is generated on initial startup and used to hash myst password properties.  
-   `/opt/myst/data/key`
-2. On initial startup the myst studio database populates an entry to flag that a salt has been generated. This prevents a new salt file being generated and overwriting the previous.
+1. A salt (file) is generated on initial startup and used to hash Myst password properties.  
+   `/opt/Myst/data/key`
+2. On initial startup the Myst studio database populates an entry to flag that a salt has been generated. This prevents a new salt file being generated and overwriting the previous.
 
 ## What does this mean for existing users?
 
-Users upgrading to the new password security enhancement will find their existing passwords remain `{AES}` encrypted. To use the new salt, simply update existing password properties and myst will use the salt and hash the password as `ENC()`.
+Users upgrading to the new password security enhancement will find their existing passwords remain `{AES}` encrypted. To use the new salt, simply update existing password properties and Myst will use the salt and hash the password as `ENC()`.
 
 ### Importance of Backing up the key
 
@@ -42,10 +42,10 @@ Use below commands to view the key contents.
 Note: The key file supports 15 characters with **no new line character**.
 ```
 # Print the key contents to standard out
-docker exec -ti myststudio_web /bin/bash -c 'cat /opt/myst/data/key'
+docker exec -ti Myststudio_web /bin/bash -c 'cat /opt/Myst/data/key'
 
 # Copy the key file
-docker cp myststudio_web:/opt/myst/data/key /tmp/key'
+docker cp Myststudio_web:/opt/Myst/data/key /tmp/key'
 ```
 
 #### Creating the key for backup purposes
@@ -69,20 +69,20 @@ A **salt** (also referred to as the *key*) is used to encrypt and decrypt passwo
 
 ### Where is the key?
 
-The salt is placed in a file named "**key**" located inside the myststudio_web docker container.
-`myststudio_web:/opt/myst/data/key`
+The salt is placed in a file named "**key**" located inside the Myststudio_web docker container.
+`Myststudio_web:/opt/Myst/data/key`
 
-When performing actions, Myst will copy the key onto the filesystem `$MYST_HOME/key` in order for MyST CLI to access.
+When performing actions, Myst will copy the key onto the filesystem `$Myst_HOME/key` in order for Myst CLI to access.
 
 ### How is the key file mounted?
 
 The key file location is mounted using [docker volumes](https://docs.docker.com/storage/volumes/) part of the docker image. You do not need to do anything. Upgrading or recreating the container does not affect the key file as it is persisted. If you delete the docker volume then the key will be deleted.
 
-Execute the command `docker inspect myststudio_web`, to see the volume location.
+Execute the command `docker inspect Myststudio_web`, to see the volume location.
 ```
-            "Image": "myst-studio",
+            "Image": "Myst-studio",
             "Volumes": {
-                "/opt/myst/data": {},
+                "/opt/Myst/data": {},
                 "/usr/local/tomcat/conf/fusioncloud/ext": {},
                 "/usr/local/tomcat/conf/fusioncloud/license": {}
             },
@@ -90,5 +90,5 @@ Execute the command `docker inspect myststudio_web`, to see the volume location.
 
 ## What does this mean for new users?
 
-After installing myst studio and starting for the first time a salt will be generated and all passwords are encrypted using the salt. It would simple be a matter of ensuring the `/opt/myst/data/key` salt (file) is backed up in a secure repository.
+After installing Myst studio and starting for the first time a salt will be generated and all passwords are encrypted using the salt. It would simple be a matter of ensuring the `/opt/Myst/data/key` salt (file) is backed up in a secure repository.
 

@@ -1,6 +1,6 @@
 ## {{ page.title }}
 
-JCA Adapters are configured through deployment plans. MyST Studio has a mechanism for defining a JCA adapter configuration so that it can be used to generate the deployment plan when the platform is automatically provisioned or updated by MyST.
+JCA Adapters are configured through deployment plans. Myst Studio has a mechanism for defining a JCA adapter configuration so that it can be used to generate the deployment plan when the platform is automatically provisioned or updated by Myst.
 
 Below is an example of the JCA Adapters that ship out-of-the-box with the SOA Suite in 12c.
 
@@ -15,7 +15,7 @@ Click on the `+` icon next to `JCA Adapters` (outlined in red). This will then p
 
 ![](img/createJcaAdapterStep1.png)
 
-After selecting the adapter type, MyST will display its current configuration. Initially, none of its properties will be set.
+After selecting the adapter type, Myst will display its current configuration. Initially, none of its properties will be set.
 
 Set the component name to the JCA Adapter type we want to configure, as shown in the WebLogic console. In the example below (outlined in red), we have set the component name to `DbAdapter`.
 
@@ -26,8 +26,8 @@ Set the component name to the JCA Adapter type we want to configure, as shown in
 #### Create Adapter Instances
 For each instance of a JCA Adapter, we want to configure, we need to add a corresponding instance to our JCA Adapter. Click on the `+` icon next to the `Connection Instance` (outlined in red above).
 
-MyST will add a new instance to our JCA Adapter. For each instance we need to provide the following property values:
-* **Identifier** -  This is used only for identifying the instance in MyST Studio and is not used for WebLogic.
+Myst will add a new instance to our JCA Adapter. For each instance we need to provide the following property values:
+* **Identifier** -  This is used only for identifying the instance in Myst Studio and is not used for WebLogic.
 * **JNDI Name** -  The JNDI name of the adapter instance at runtime
 * **Outbound Connection Properties** - Contains the name-value properties that are used to configure the JCA Adapter instance.
 
@@ -47,9 +47,9 @@ Some JCA adapters support the setting of global connection pool parameters. Sett
 * Oracle Apps Adapter
 * Socket Adapter
 
-The connection pool parameters are set in the WebLogic Admin Console under the Connection Pool tab. The following table describes the MyST parameters that correspond to the fields on the WebLogic Admin Console.
+The connection pool parameters are set in the WebLogic Admin Console under the Connection Pool tab. The following table describes the Myst parameters that correspond to the fields on the WebLogic Admin Console.
 
-| Admin Console Field | MyST Parameters |	Type|
+| Admin Console Field | Myst Parameters |	Type|
 | --------- | ---------- | ----- |
 |Max Capacity 	|max-capacity 	|Number|
 |Connection Reserve Timeout Seconds 	|connection-reserve-timeout-seconds 	|Number|

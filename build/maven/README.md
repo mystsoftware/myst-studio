@@ -138,7 +138,8 @@ Maven supports the concept of project inheritance. This can be useful when you w
 Project inheritance is achieved through the concept of a **Parent POM** which is in-turn referenced by the **Project POM**. Below is an example `pom.xml` for building an Oracle Service Bus (OSB) archive for the 12.2.1.0.0 version of Oracle SOA Suite.
 
 ```
-<project>  
+<project>
+  
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.oracle.servicebus</groupId>
@@ -152,11 +153,11 @@ Project inheritance is achieved through the concept of a **Parent POM** which is
 </project>
 ```
 
-In addition to the automated build, the MyST build plugin will use the `parent` for Oracle-specific artifacts to determine the deploy-time Artifact Type. This is important as MyST uses different deploy-time strategies depending on the Artifact Type.
+In addition to the automated build, the Myst build plugin will use the `parent` for Oracle-specific artifacts to determine the deploy-time Artifact Type. This is important as Myst uses different deploy-time strategies depending on the Artifact Type.
 
-The below table contains the details of common Parent POMs provided by Oracle and their corresponding MyST Artifact Type.
+The below table contains the details of common Parent POMs provided by Oracle and their corresponding Myst Artifact Type.
 
-| MyST Artifact Type | Group ID | Artifact ID | Support Versions |
+| Myst Artifact Type | Group ID | Artifact ID | Support Versions |
 | ------------------ | ------- | ---------- | -------- |
 | ADF | com.oracle.adf | adf-parent | 12.1.3-0-0, 12.2.1-0-0 |
 | SOA/BPM Composites | com.oracle.soa | sar-common | 12.1.3-0-0, 12.2.1-0-0 |
@@ -191,7 +192,8 @@ JDeveloper will then prompt us to enter the following values:
 * **Artifact Id:** The artifactId for your OSB project. This is usually an identifier for this project.
 * **Version:** The version for our OSB project. This is usually 1.0-SNAPSHOT for a new project.
 * **Packaging** - This must be set to `sbar`
-* **Parent > Group Id** - This must be set to `com.oracle.servicebus`.
+* **Parent > Group Id** - This must be set to `com.oracle.servicebus
+`.
 * **Parent > Artifact Id** - This must be set to `sbar-project-common`.
 * **Parent > Version** - This must be set to the version of the Oracle Service Bus, for example, 12.1.3-0-0 or 12.2.1-0-0.
 
@@ -225,7 +227,8 @@ Right-click on the project and click `Run Maven` then `package`.
 
 ![](img/mvnPackage.png)
 
-We should see the Maven build running in the `Apache Maven - package` tab. Once the build has completed successfully, the output should look similar to the following.
+We should see the Maven build running in the `Apache Maven - package` tab.
+ Once the build has completed successfully, the output should look similar to the following.
 
 ![](img/mvnPackageOutput.png)
 

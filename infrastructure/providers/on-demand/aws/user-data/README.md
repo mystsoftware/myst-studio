@@ -85,7 +85,7 @@ tzutil /s "Singapore Standard Time"
 
 ```
 
-## User Data Usage in MyST
+## User Data Usage in Myst
 
 #### Example:
 

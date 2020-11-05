@@ -1,10 +1,10 @@
 ## {{ page.title }}
 
-Some Oracle product artifacts cannot be customised at runtime using the out-of-the-box capabilities. The MyST configuration plan is a solution for performing generic customisations to any artifact type. This can be especially useful for Oracle products that follow an import/export deployment model such as BAM and MFT.
+Some Oracle product artifacts cannot be customised at runtime using the out-of-the-box capabilities. The Myst configuration plan is a solution for performing generic customisations to any artifact type. This can be especially useful for Oracle products that follow an import/export deployment model such as BAM and MFT.
 
-MyST uses a generic configuration plan to take environment properties and applys them to an artifact during deployment.
+Myst uses a generic configuration plan to take environment properties and applys them to an artifact during deployment.
 
-### Using MyST Configuration Plans with Import/Export Artifacts
+### Using Myst Configuration Plans with Import/Export Artifacts
 
 There are 3 steps to successfully completing a deployment for export/import.
 
@@ -94,7 +94,7 @@ When the user specifies xpath, they are also able to specific the behaviour if t
 * warn
 * ignore
 
-### Expand MyST Properties
+### Expand Myst Properties
 
 If you just want to replace all of the properties with values then you can use the expand properties option.
 
@@ -115,7 +115,7 @@ If you just want to replace all of the properties with values then you can use t
 </tns:configplan>   
 ```
 
-### Where it fits into MyST
+### Where it fits into Myst
 
 The use cases are:
 
@@ -125,9 +125,9 @@ The use cases are:
 
 ### FAQs
 
- 
+
 | Question | Answer |
-| -------- | ------ | 
+| -------- | ------ |
 | Who creates the configuration plan? | The developer. |
-| Can we use properties in the replace element? | Yes. If it is an existing property known to MyST it will replace the property |
+| Can we use properties in the replace element? | Yes. If it is an existing property known to Myst it will replace the property |
 | Can I specify a search and an xpath? | No. You have a choice on either performing a full search of files mentioned in the includes / excludes, or at a specified xpath location. |

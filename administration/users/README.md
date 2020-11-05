@@ -2,13 +2,13 @@
 
 Each user has an individual account that at a minimum includes a unique login id, username and password.
 
-Within MyST, **users** are not assigned permissions directly, but only acquire them through the **role\(s\)** assigned to them within one or more **workspaces**.
+Within Myst, **users** are not assigned permissions directly, but only acquire them through the **role\(s\)** assigned to them within one or more **workspaces**.
 
 Users can also be assigned System Roles, which will enable them to manage system specific configurations.
 
 ### List Users
 
-To see a list of MyST Users, click  `Administration` &gt; `Users`. This will display a list of Users similar to the one below.
+To see a list of Myst Users, click  `Administration` &gt; `Users`. This will display a list of Users similar to the one below.
 
 ![](img/userList.png)
 
@@ -24,7 +24,7 @@ Click `+ Create User`, this will open the **Add User** dialog. Specify the follo
 
 * **Email Address:** User's email address
 
-* **Username:** Username for the account, can only consist of alphanumeric, period and underscore characters. Must be unique within MyST.
+* **Username:** Username for the account, can only consist of alphanumeric, period and underscore characters. Must be unique within Myst.
 
 * **Password:** User Password
 
@@ -34,9 +34,9 @@ Click `+ Create User`, this will open the **Add User** dialog. Specify the follo
 
 ![](img/userAdd.png)
 
-Click `Save` to create the User Account. Once saved the user will be able to login into MyST with the provided username and password.
+Click `Save` to create the User Account. Once saved the user will be able to login into Myst with the provided username and password.
 
-> At this point, the user will not have any privileges to perform any actions within MyST.
+> At this point, the user will not have any privileges to perform any actions within Myst.
 
 ### Edit User Account
 
@@ -54,9 +54,9 @@ To change the username, from within the Edit User dialog, click `Change Username
 
 ### Activate \/ Deactivate User
 
-By default, when you create a User, it is in an active state, meaning that the user is able to log into MyST and perform any actions for which they have been granted privileges.
+By default, when you create a User, it is in an active state, meaning that the user is able to log into Myst and perform any actions for which they have been granted privileges.
 
-To disable access to MyST, we can deactivate the User Account.
+To disable access to Myst, we can deactivate the User Account.
 
 **Note**:
 

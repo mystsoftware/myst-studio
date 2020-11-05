@@ -1,10 +1,10 @@
 ## {{ page.title }}
 
-For each Platform Instance that we want to create, we need to create a corresponding Platform Model in MyST.
+For each Platform Instance that we want to create, we need to create a corresponding Platform Model in Myst.
 
-The Platform Model maps the Platform Blueprint to the target infrastructure for our Oracle Middleware platform and provides environment specific configuration details. MyST currently supports two types of infrastructure providers:
+The Platform Model maps the Platform Blueprint to the target infrastructure for our Oracle Middleware platform and provides environment specific configuration details. Myst currently supports two types of infrastructure providers:
 
-* [Pre-Existing](/platform/models/pre-existing/README.md): A Pre-Existing infrastructure provider is one where the hosts onto which the Oracle Middleware will be provisioned have been set-up and configured externally to MyST. Can be used with any existing bare-metal, virtual machines (such as VMWare, Oracle VM), or cloud providers (such as Oracle Cloud, AWS or Azure) that we want to use as the target for hosting our Oracle Middleware platforms.
+* [Pre-Existing](/platform/models/pre-existing/README.md): A Pre-Existing infrastructure provider is one where the hosts onto which the Oracle Middleware will be provisioned have been set-up and configured externally to Myst. Can be used with any existing bare-metal, virtual machines (such as VMWare, Oracle VM), or cloud providers (such as Oracle Cloud, AWS or Azure) that we want to use as the target for hosting our Oracle Middleware platforms.
 
 * [On Demand (AWS)](/platform/models/on-demand-aws/README.md): An On-Demand (AWS) infrastructure provider is one where hosts onto which the Oracle Middleware will be provisioned are created on-demand as part of the process of provisioning the Oracle Middleware platform. This approach relies upon an Amazon Machine Image which is used as a template for the Virtual Machines that are created to underpin the Oracle Middleware platforms.
 

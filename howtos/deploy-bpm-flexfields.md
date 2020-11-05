@@ -1,6 +1,6 @@
 ## {{page.title }} 
 
-MyST can be used to execute SQL files at deploy-time. This approach can be useful for updating BPM Flexfields at deploy-time.
+Myst can be used to execute SQL files at deploy-time. This approach can be useful for updating BPM Flexfields at deploy-time.
 
 To use this approach, you first need to create a Maven project in your SCM which will be used to store the SQL file which contains the BPM Flexfields for deployment. This project can be very simple and just contain the following files:
 
@@ -86,7 +86,7 @@ call UPS_WFATTRIBUTELABELMAP('c4ccc310-6a7f-49e9-aeab-e1512477ddba','ProtectedTe
 call UPS_WFATTRIBUTELABELMAP('1610224c-00fa-42c1-9a08-d0a14a52534a','ProtectedNumberAttribute2','retryCounter','T','BPEL_WF_10.1.3','Number','','');
 ```
 
-Once you are building the project using Jenkins and registering the build with MyST Studio, you can include the artifact in an Application Blueprint and deploy that using MyST Studio. The registered artifact in MyST Studio will look similar to the following:
+Once you are building the project using Jenkins and registering the build with Myst Studio, you can include the artifact in an Application Blueprint and deploy that using Myst Studio. The registered artifact in Myst Studio will look similar to the following:
 
 ![](/howtos/img/howto-deploy-flexfields-1.app-1.png)
 
@@ -110,7 +110,7 @@ chmod +x /etc/profile.d/sqlplus.sh
 
 
 
-You will also need to reference the SQL Plus client in MyST. This can be done by adding the following Global Variable in the Platform Blueprint:
+You will also need to reference the SQL Plus client in Myst. This can be done by adding the following Global Variable in the Platform Blueprint:
 
 ```
 core.product[sqlplus].home=/usr/lib/oracle/12.1/client64

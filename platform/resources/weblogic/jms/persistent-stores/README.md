@@ -1,9 +1,3 @@
-<!-- Note on Persistent Stores
-* See https://rubiconred.jira.com/wiki/display/M25D/Configuring+the+Persistence+Store
-* See https://rubiconred.jiveon.com/message/4424
-* See https://rubiconred.jira.com/wiki/display/RABOCD/MyST+Studio+Configuration+Management+Guide#MySTStudioConfigurationManagementGuide-JavaMessagingServer
--->
-
 ## {{ page.title }}
 
 Persistence stores provides a built-in, high-performance storage solution for WebLogic Server subsystems and services that require persistence, such as:
@@ -25,7 +19,7 @@ Under `Configuration Parameters` we will see the property `global-persistence-st
 ![](img/persistenceStrategySetting.png)
 
 ### File System Persistence Strategy
-When we select `File System` as our persistence strategy, MyST will automatically create the required file stores to support the selected product components. For example, if we created a Platform Blueprint with the components SOA Suite and OSB, the following  File Persistence Stores would be created:
+When we select `File System` as our persistence strategy, Myst will automatically create the required file stores to support the selected product components. For example, if we created a Platform Blueprint with the components SOA Suite and OSB, the following  File Persistence Stores would be created:
 
 | Name | Target | Notes |
 | ---- | ------ | ----- |
@@ -53,7 +47,7 @@ For each File Store we need to specify the following properties:
 We will need to define a separate file store for each JMS server. When configuring a JMS Module, we will need to create a separate JMS Server plus a corresponding File Store for each node in the cluster. So for a two node cluster, we would define two file stores. The except to this rule is for 12.2.1 onwards, where it is possible to target a File Store to a cluster.
 
 ### Database Persistence Strategy
-When we select a Database as our Global Persistence Strategy, MyST will automatically create the required file stores to support the selected product components.
+When we select a Database as our Global Persistence Strategy, Myst will automatically create the required file stores to support the selected product components.
 
 For example, if we created a Platform Blueprint with the components SOA Suite and OSB, the following  JDBC Persistence Stores would be created:
 
@@ -68,7 +62,7 @@ For example, if we created a Platform Blueprint with the components SOA Suite an
 
 > Note: The default file persistent stores are also created, but these are not targeted by the JMS Servers.
 
-As part of this process, MyST also performs the following steps:
+As part of this process, Myst also performs the following steps:
 * Creates the JDBC data source WLSDStore
 * Creates a JDBC TLOG store and associates it with the JDBC data source persisting the Transaction Logs in the database
 * Creates a JDBC data source, GridLink data source, or multi data source to interface with the JDBC store. See Choosing a Data Source.
@@ -80,9 +74,11 @@ WebLogic 10.3.6 and later support persistence to a JDBC-enabled database. Howeve
 
 | Patch ID | File | Notes |
 | -------- | ---- | ----- |
-| WPI2 | p19565095_1036_Generic.zip | Create domain using WLST produces incorrect JMSSERVER name in 50% of the invocations. |
+| WPI2 | p19565095_1036_Generic.zip | Create domain using WLST produces incorrect JMSSERVER name in 50% of the invocations.
+ |
 | IHFB | p16063328_1036_Generic.zip | BEA-149500 ERROR WITH JDBC TLOG STORE |
-| BADF | p16104758_1036_Generic.zip | LIFECYCLESHUTDOWNSEQUENCETEST fails with the ILLEGALSTATEEXCEPTION error. |
+| BADF | p16104758_1036_Generic.zip | LIFECYCLESHUTDOWNSEQUENCETEST fails with the ILLEGALSTATEEXCEPTION error.
+ |
 
 ##### WebLogic 12.1.3 Patches
 
