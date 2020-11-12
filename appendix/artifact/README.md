@@ -48,7 +48,7 @@ See [Process Cloud Service](OracleCloud.md) for more information.
 
 #### OSB
 
-Preserving security and operational values defaults to **false** (ie. Myst will deploy and overwrite). To globally override `preserve-xxxxx` go to **Product > Oracle Service Bus** and add parameters as needed:
+Preserving security and operational values defaults to **false** (ie. Myst will deploy and overwrite). For more information see [Oracle Documentation](https://docs.oracle.com/en/middleware/soa-suite/service-bus/12.2.1.4/develop/importing-and-exporting-resources-and-configurations.html#GUID-5BED0170-B694-4488-B209-4964FAFD0AF0). To globally override `preserve-xxxxx` go to **Product > Oracle Service Bus** and add parameters as needed:
 
 ```properties
 preserve-security-and-policy-values=true
