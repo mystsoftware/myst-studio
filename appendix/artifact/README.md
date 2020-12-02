@@ -172,7 +172,8 @@ preserve-operational-values=true
 |extract-files|Comma separated list of files to extract from archive and will be deployed via Smart Import|
 |myst-config-plan-apply|Boolean flag to specify whether to apply myst config plan|
 |myst-config-plan-location|Myst configuration plan location to search and replace files with Myst properties. Can be a path on the target host ([DOMAIN_HOME]/plans/myst.mft.configplan.xml) or a path in the packaged artifact ((EMBEDDED)/myst.mft.configplan.xml) |
-
+| export-key                 | (Optional) Export key password |
+| import-without-cipher-data | (Optional) Boolean. If set to `true` the export-key parameter is ignored |
 
 #### JAR Library
 |Property|Description|
@@ -188,3 +189,17 @@ preserve-operational-values=true
 |j2ee.stage-mode|Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE|
 |j2ee.target|List of targets to deploy application to. Can be managed server or cluster|
 |strip-version|Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.jar becomes Stock.jar)|
+
+#### Flyway Archive
+See [Flyway Documentation](https://flywaydb.org/documentation) for more information.
+|Property|Description|
+|---|---|
+| flyway.home      | Flyway installation home directory location |
+| flyway.username  | JDBC username `${[rxr.def.Product-rcu].param[db-user-prefix]}_SOAINFRA` |
+| flyway.password  | JDBC password `${[rxr.def.Product-rcu].param[db-password]}` |
+| flyway.locations | Comma separated list of SQL folders `filesystem:sql/<sqlfolder_name1>,filesystem:sql/<sqlfolder_name2>/<sqlfolder_name3>` |
+| flyway.edition   | (Optional) Flyway edition `teams` |
+| flyway.url       | JDBC URL `${[rxr.def.Product-rcu].param[db-url]}` |
+| flyway.schemas   | JDBC schema `${[rxr.def.Product-rcu].param[db-user-prefix]}_SOAINFRA` |
+| flyway.conf      | (Optional) Flyway configuration file location. If unspecified then Flyway will use `flyway.home/flyway.conf` |
+
