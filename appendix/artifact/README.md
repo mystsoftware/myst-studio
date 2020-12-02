@@ -555,3 +555,16 @@ Once the Artifact is registered with MyST it can be added to a new or existing [
 | j2ee.stage-mode       | Weblogic Stage mode for deployment. Valid values are STAGE, NOSTAGE, EXTERNAL_STAGE |
 | j2ee.target           | List of targets to deploy application to. Can be managed server or cluster |
 | strip-version         | Optional: Boolean flag to strip version from the artifact prior to deploy (e.g. Stock-1.0.0.jar becomes Stock.jar) |
+
+#### Flyway Archive
+
+| Property         | Description                                                  |
+| ---------------- | ------------------------------------------------------------ |
+| flyway.home      | Flyway installation home directory                           |
+| flyway.username  | JDBC username, can be a property like ${[rxr.def.Product-rcu].param[db-user-prefix]}_SOAINFRA |
+| flyway.password  | JDBC password, can be a property like ${[rxr.def.Product-rcu].param[db-password]} |
+| flyway.locations | Comma separated list of sql folders E.g: **filesystem:sql**/<sqlfolder_name1>,**filesystem:sql**/<sqlfolder_name2>/<sqlfolder_name3> |
+| flyway.edition   | Flyway edition. E.g: **Teams**                               |
+| flyway.url       | JDBC URL, can be a property like ${[rxr.def.Product-rcu].param[db-url]} |
+| flyway.schemas   | JDBC schema,can be a property like ${[rxr.def.Product-rcu].param[db-user-prefix]}_SOAINFRA |
+| flyway.conf      | Flyway configuration file location                           |
