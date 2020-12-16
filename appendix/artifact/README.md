@@ -192,6 +192,7 @@ preserve-operational-values=true
 
 #### Flyway Archive
 See [Flyway Documentation](https://flywaydb.org/documentation) for more information.
+
 |Property|Description|
 |---|---|
 | flyway.home      | Flyway installation home directory location |
