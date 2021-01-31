@@ -117,7 +117,7 @@ credential.map.oracle.wsm.security.owsm-key.description=Deployment Administrator
 
 #### Example JMS Security policy
 
-The following is an example of a security policies definition created via **Global Variables**.
+The following is an example of a security policies definition for JMS Module created via **Global Variables**.
 
 ```
 add.policies=myjmsmodule
@@ -127,5 +127,16 @@ myjmsmodule.credential.type=user
 myjmsmodule.credential.value=jsmith
 ```
 
+The following is an example of a security polices definition of JMS Distributed Queue created via **Global variables**.
 
+```
+add.policies=myjmsdistributedqueue
+myjmsdistributedqueue.type=jms
+myjmsdistributedqueue.application=MyJMSModule
+myjmsdistributedqueue.destinationtype=queue
+myjmsdistributedqueue.resource=MyDistributedQueue
+myjmsdistributedqueue.action=send
+myjmsdistributedqueue.credential.type=user
+myjmsdistributedqueue.credential.value=jsmith
+```
 
