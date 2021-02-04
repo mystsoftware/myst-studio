@@ -151,7 +151,7 @@ module1.destinationtype=topic
 module1.action=send
 module1.resource=mytopic
 module1.credential.type=expression
-module1.credential.value=Usr(weblogic)|Usr(jsmith)|Grp(${var.adgroup.happy})|Grp(${var.adgroup.excited})
+module1.credential.value=Usr(weblogic)|Usr(jawed)|Grp(${var.devops})|Grp(${var.awesome})
 ```
 
 
