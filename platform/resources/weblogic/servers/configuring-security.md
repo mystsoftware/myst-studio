@@ -117,15 +117,44 @@ credential.map.oracle.wsm.security.owsm-key.description=Deployment Administrator
 
 #### Example JMS Security policy
 
-The following is an example of a security policies definition created via **Global Variables**.
+Security policies with a **user**.
 
+```properties
+add.policies=module1
+module1.type=jms
+module1.application=MyJMSModule
+module1.credential.type=user
+module1.credential.value=jsmith
 ```
-add.policies=myjmsmodule
-myjmsmodule.type=jms
-myjmsmodule.application=MyJMSModule
-myjmsmodule.credential.type=user
-myjmsmodule.credential.value=jsmith
+
+#### Example JMS Resource Security policy with a method
+
+Security policies for **resources** with a **group** and a **method**.
+
+```properties
+add.policies=module1
+module1.type=jms
+module1.application=MyJMSModule
+module1.credential.type=user
+module1.credential.value=jsmith
+```
+
+#### Example JMS Security policy with conditions with custom expression
+
+Need to add both **users** and **groups**? Use a **custom expression** for users+groups and a method.
+
+```properties
+add.policies=module1
+module1.application=MyJMSModule
+module1.type=jms
+module1.destinationtype=topic
+module1.action=send
+module1.resource=mytopic
+module1.credential.type=expression
+module1.credential.value=Usr(weblogic)|Usr(jsmith)|Grp(${var.adgroup.happy})|Grp(${var.adgroup.excited})
 ```
 
 
+
+![](img/jms-policies.png)
 
