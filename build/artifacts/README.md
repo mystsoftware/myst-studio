@@ -1,6 +1,17 @@
 ## {{ page.title }}
 
+### Maven Command Line Arguments
+
+During deployment the Myst `download-deploy-artifacts` action uses Maven to pull down artifacts from the binary repository. Users can opt to use additional arguments by creating a new property under the **Maven** product. For example, setting `-X` as the value will result in Maven debugging.
+
+```properties
+core.product[maven].param[custom-arguments]
+```
+
+# Artifacts
+
 Before an artifact can be deployed, it must first be registered with Myst. There are two methods for registering an artifact, these are:
+
 * **CI Server Registration** - Used for registering artifacts that are built by the CI Server as part of the build process.
 
 * **Third Party Registration** - Used for registering artifacts that are built by a third party, for example commercial or open source libraries.
