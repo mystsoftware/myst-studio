@@ -1,3 +1,11 @@
+# Maven Command Line Arguments
+
+During deployment the Myst `download-deploy-artifacts` action uses Maven to pull down artifacts from the binary repository. Users can opt to use additional arguments by creating a new property under the **Maven** product. For example, setting `-X` as the value will result in Maven debugging.
+
+```properties
+core.product[maven].param[custom-arguments]
+```
+
 # MDS Customization
 
 This section provides details on customizing MDS projects with Myst Studio.
