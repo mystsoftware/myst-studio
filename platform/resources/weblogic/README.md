@@ -1,6 +1,6 @@
 # {{ page.title }}
 
-MyST's approach of using Platform Blueprints / Models to define the target state of our Oracle Middleware infrastructure allows us to automate not just the initial provisioning of the Oracle Middleware platform instance, but also its configuration.
+Myst's approach of using Platform Blueprints / Models to define the target state of our Oracle Middleware infrastructure allows us to automate not just the initial provisioning of the Oracle Middleware platform instance, but also its configuration.
 
 This configuration can be applied, either as part of the initial provisioning of the platform instance or later by modifying Platform Blueprints / Model and performing an update action against the Platform Instances.
 
@@ -28,6 +28,6 @@ This section details how to define some of the more common Oracle Middleware con
 * **Custom Identity and Trust Store**
 -->
 
-This section only covers a subset of the configurations that can be performed by MyST. If the configuration you need to apply is not documented here, please raise a ticket at [support.rubiconred.com](htttp://support.rubiconred.com) to ask for assistance.
+This section only covers a subset of the configurations that can be performed by Myst. If the configuration you need to apply is not documented here, please raise a ticket at [support.rubiconred.com](htttp://support.rubiconred.com) to ask for assistance.
 
 

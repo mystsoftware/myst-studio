@@ -1,14 +1,14 @@
 ## {{ page.title }}
 
-Within MyST, a Role is used to define the type of MyST resources that a user in that role has access to, and the actions that can be performed against the resources. Specifically it  will define:
+Within Myst, a Role is used to define the type of Myst resources that a user in that role has access to, and the actions that can be performed against the resources. Specifically it  will define:
 * What actions a user can perform against each resource type, for example, Platform Blueprints / Models, Platform Instances, Artifacts, Application Blueprints / Models.
 * Where a resource, such as Platform, Instance or Application Models is Environment specific then the role will define which actions can be performed against that resource in each environment.
-* A separate reserved MyST Administrator Role will be used to manage system specific configurations, for example, user and role management, tag management
-* A separate reserved MyST Workspace Administrator Role will be used to manage workspace specific configurations, for example defining which users have which roles within a workspace.
+* A separate reserved Myst Administrator Role will be used to manage system specific configurations, for example, user and role management, tag management
+* A separate reserved Myst Workspace Administrator Role will be used to manage workspace specific configurations, for example defining which users have which roles within a workspace.
 
 
 ### List Roles
-To see a list of MyST Roles, click  `Administration > Roles`. This will display a list of Roles similar to the one below.
+To see a list of Myst Roles, click  `Administration > Roles`. This will display a list of Roles similar to the one below.
 
 ![](img/roleList.png)
 
@@ -20,7 +20,7 @@ Click `+ Create Role`, this will open the **Add Role** dialog. Specify the follo
 * **Name:** Role Name
 * **Description:** Description of the role
 * **Environments:** These are the environment types that the role has access to (see Specify Environment Types for details).
-* **Access Permissions:** These are the access permissions that the role has to the different resource types in MyST (see Specify Access Permissions for details).
+* **Access Permissions:** These are the access permissions that the role has to the different resource types in Myst (see Specify Access Permissions for details).
 
 ![](img/roleAdd.png)
 
@@ -31,11 +31,11 @@ Once we have entered the Role details, click `Save` to create the Role.
 #### Specify Environment Types
 During the lifetime of a project, source code will be built and promoted to various staging environments, such as Development (DEV), System Integration Testing (SIT), User Acceptance Testing (UAT), Pre-Production (PRE), and Production (PROD).
 
-Within MYST any resource that is environment specific, such as a Platform Model or Platform Instance, is tagged to an Environment Type.
+Within Myst any resource that is environment specific, such as a Platform Model or Platform Instance, is tagged to an Environment Type.
 
 For each role, we must specify which Environments it has access to, and what type of actions the role can perform against each resource type in that environment. 
 
-Within MYST any resource that is environment specific, such as a Platform Model or Platform Instance, is tagged to an Environment Type. This in conjunction with Role-Based Access Control (RBAC) allows us to control who can perform which actions in which environment.
+Within Myst any resource that is environment specific, such as a Platform Model or Platform Instance, is tagged to an Environment Type. This in conjunction with Role-Based Access Control (RBAC) allows us to control who can perform which actions in which environment.
 
 **Note:** The same access permissions are assigned to all Environment Types. If we want to define different access permissions per environment type, then we will need to create multiple Roles
 
@@ -79,7 +79,7 @@ The following table details the access permissions for Release Management resour
 |   | Yes | Deploy | Allows a role to deploy an Application Blueprint into an Environment |
 
 ##### Other
-The following table details the access permissions for other resources in MyST.
+The following table details the access permissions for other resources in Myst.
 
 | Resource Type | Env. Specific | Permission | Description |
 | ------------- | ------------- | ---------- | ----------- |

@@ -2,7 +2,7 @@
 
 During the lifetime of a project, source code will be built and promoted to various staging environments such as Development, System Integration Test (SIT), User Acceptance Test (UAT), Pre-Prod, and Production.
 
-MyST **Release Pipelines** allows you to quickly establish a standardized and repeatable process for managing the deployment and promotion of Oracle Middleware applications and platform configurations through each stage of the Software Delivery Pipeline.
+Myst **Release Pipelines** allows you to quickly establish a standardized and repeatable process for managing the deployment and promotion of Oracle Middleware applications and platform configurations through each stage of the Software Delivery Pipeline.
 
 Release Pipelines enable us to combine multiple applications into a single pipeline, as well as manage a release that spans multiple production WebLogic domains.
 
@@ -11,7 +11,7 @@ The Release Pipeline Dashboard provides a ‘single pane of glass’ to monitor 
 ### Anatomy of a Release Pipeline
 A Release Pipeline is used to promote both Platform Blueprints and/or Application Blueprints through multiple staging environments to a particular environment, typically production.
 
-> Note: within MyST, Application Blueprints are used to define the artifacts which make up an application, whilst Platform Blueprints are used to define the topology and configuration of our Oracle Middleware platform.
+> Note: within Myst, Application Blueprints are used to define the artifacts which make up an application, whilst Platform Blueprints are used to define the topology and configuration of our Oracle Middleware platform.
 
 #### Stages
 A Release Pipeline is broken into Stages. These stages will typically be aligned with each of the staging environments in our Software Delivery Lifecycle, for example, CI, SIT, UAT, and PROD.

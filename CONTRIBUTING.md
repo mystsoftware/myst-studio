@@ -1,4 +1,4 @@
-# Contributing to MyST Studio documentation
+# Contributing to Myst Studio documentation
 
 Found a typo in the documentation? Want to improve the wording? 
 

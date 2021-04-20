@@ -8,7 +8,7 @@ During the lifetime of a project, code will be built and promoted to various sta
 * Who is able to stop/start a platform instance?
 * Who is able to deploy/promote code into an environment?
 
-Within MyST, any resource that is environment specific, such as a Platform Model, Platform Instance, Stream Stage or Application Model, is tagged to an Environment Type. This, in conjunction with Role Based Access Control \(RBAC\), allows us to control who can perform which actions in which environment.
+Within Myst, any resource that is environment specific, such as a Platform Model, Platform Instance, Stream Stage or Application Model, is tagged to an Environment Type. This, in conjunction with Role Based Access Control \(RBAC\), allows us to control who can perform which actions in which environment.
 
 In addition, target hosts \(see Pre-Existing Infrastructure Providers\) can be tagged to one or more Environment Types. When we create a Platform Model, only the hosts tagged to the same Environment Type as the Platform Model can be selected within the model. This makes it simple to restrict the infrastructure that a given Platform can be targeted to.
 
@@ -45,7 +45,7 @@ Here you can modify the Name, Description and Order of the Environment Type. Onc
 
 ### Deleting Environment Type
 
-By default, when you create an Environment Type, it is in an active state. This means that we can create new MyST Resources that are tagged to that Environment.
+By default, when you create an Environment Type, it is in an active state. This means that we can create new Myst Resources that are tagged to that Environment.
 
 To stop using this environment type, you can delete it using the `Delete` button as illustrated below.
 

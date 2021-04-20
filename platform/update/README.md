@@ -1,6 +1,6 @@
 ## {{ page.title }}
 
-To make configuration changes to a Platform Instance, we need to first update it's *platform definition* as specified by its Platform Blueprint and Platform Model. Once we're happy with our revised *platform definition* we can run a platform update. MyST will automatically determine and perform the required steps to apply the necessary changes.
+To make configuration changes to a Platform Instance, we need to first update it's *platform definition* as specified by its Platform Blueprint and Platform Model. Once we're happy with our revised *platform definition* we can run a platform update. Myst will automatically determine and perform the required steps to apply the necessary changes.
 
 For the purpose of this section, we are going to walk through the process of adding a new Data Source to our Platform Instance. This involves the following steps:
 
@@ -47,11 +47,11 @@ An alternative way of creating a new Data Source is to select an existing data s
 
 ![](img/createDataSourceStep3.png)
 
-Now fill out the remaining properties for the data source. MyST tries to provide as much guidance as possible by showing help (`?`) for each property and wherever applicable, restricting values that can be entered. For the purpose of our example, we will set the properties shown in the screen shot below.
+Now fill out the remaining properties for the data source. Myst tries to provide as much guidance as possible by showing help (`?`) for each property and wherever applicable, restricting values that can be entered. For the purpose of our example, we will set the properties shown in the screen shot below.
 
 ![](img/createDataSourceStep4.png)
 
-It's worth noting that we have used MyST properties to define the value of the `User Name` property. 
+It's worth noting that we have used Myst properties to define the value of the `User Name` property. 
 * `User Name` is set to `${[rxr.def.Product-rcu].param[db-user-prefix]}_STOCK`
 
 Click the `Calculate resolved values` button on the component.  This will try to expand all the referenced properties (if possible) and show the final resolved values below the actual inputs. You should note that `User Name` is still left unresolved as `${[rxr.def.Product-rcu].param[db-user-prefix]}_STOCK`. This is because the RCU prefix will be set in our Platform Models and is not available from the Blueprint.
@@ -63,9 +63,9 @@ Finally click `Save & Commit`.
 ### Update Platform Model
 
 #### Create New Version of Platform Model
-From the side menu navigate to `Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model to be updated. MyST will display summary details about the Platform Model and its corresponding Platform Instance. Click on the `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open the Platform Model in the `Platform Editor` in view mode.
+From the side menu navigate to `Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model to be updated. Myst will display summary details about the Platform Model and its corresponding Platform Instance. Click on the `Actions` drop-down in the top right-hand corner and select `Configuration`. This will open the Platform Model in the `Platform Editor` in view mode.
 
-By default, MyST will open the Platform Model for the **previous** version of the Platform Blueprint. In the `Control Bar` select the Platform Blueprint **version** created in the previous step.
+By default, Myst will open the Platform Model for the **previous** version of the Platform Blueprint. In the `Control Bar` select the Platform Blueprint **version** created in the previous step.
 
 ![](img/createNewModel.png)
 
@@ -81,10 +81,10 @@ Once complete, click `Save`. This will create the new version of our Platform Mo
 
 #### Verify property resolution
 In the tree view, search for the newly added data source (in our case, `stock`) and verify that it is available. Select it from the tree now.
-MyST will display it current configuration as defined in the Platform Blueprint. You should now see that `User Name` has been resolved to correctly (in our case to `CI_STOCK`), this is because the RCU prefix is set in our Platform model.
+Myst will display it current configuration as defined in the Platform Blueprint. You should now see that `User Name` has been resolved to correctly (in our case to `CI_STOCK`), this is because the RCU prefix is set in our Platform model.
 
 ![](img/modelDataSourceStep1.png)
-  
+
 #### Add environment specific details to our Platform Model
 Click on `Edit Configuration`. The data source should now be editable.
 
@@ -92,7 +92,7 @@ The only values we need to specify for our Data Source in the Platform Model are
 * **Database URL** - This is the URL for the database that we want our Data Source to connect to. 
 * **Password** - This is the password for corresponding `User Name` for connecting to the database.
 
-> Note: All stored passwords are first encrypted by MyST.
+> Note: All stored passwords are first encrypted by Myst.
 
 Enter these values now similar to below
 
@@ -103,23 +103,23 @@ Once done, click `Save & Commit` to save the Platform Model and commit our chang
 ### Performing a Dry Run
 We are now ready to update our Platform Instance with its additional configuration. When we run a platform update, we have the option of specifying whether we first want to perform a dry run. 
 
-With a dry run, MyST doesn't perform the actual changes. Rather, it goes through the process of determining what changes need to be applied (in exactly the same way it does when making the actual changes) and then produces a report detailing the changes that will be made.
+With a dry run, Myst doesn't perform the actual changes. Rather, it goes through the process of determining what changes need to be applied (in exactly the same way it does when making the actual changes) and then produces a report detailing the changes that will be made.
 
 This allows us to quickly validate that the changes to be applied are as expected, and if not, go back and make the appropriate corrections to our Platform Blueprint and or Platform Model.
 
-From the side menu navigate to`Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model to be updated. MyST will display summary details about the Platform Model and its corresponding Platform Instance.
+From the side menu navigate to`Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model to be updated. Myst will display summary details about the Platform Model and its corresponding Platform Instance.
 
 We can see that under `Versions` a list of Platform Model versions. Looking at the `Instance Details` we can see that the Platform Instance is currently on version`1.0.0` of the Platform Blueprint \ Model.
 
 ![](img/dryrunAction.png)
 
-Click on the `Actions` drop-down and select `Update`, MyST will open the Platform Instance Update dialog.
+Click on the `Actions` drop-down and select `Update`, Myst will open the Platform Instance Update dialog.
 
 ![](img/dryrunUpdate.png)
 
-For the dropdown `Update to Version` select the new version of our Platform Model. By default, MyST will have that version of the model selected at which the instance is currently at (in this case `1.0.0[pr1][pm1]`).
+For the dropdown `Update to Version` select the new version of our Platform Model. By default, Myst will have that version of the model selected at which the instance is currently at (in this case `1.0.0[pr1][pm1]`).
 
-Next, ensure the check-box `Do a dry run` has been selected. Lastly, enter any notes for this action and then click `Update`. MyST will initiate the Dry run and return us to the summary view of the Platform Model and Instance.
+Next, ensure the check-box `Do a dry run` has been selected. Lastly, enter any notes for this action and then click `Update`. Myst will initiate the Dry run and return us to the summary view of the Platform Model and Instance.
 
 ![](img/dryrunComplete.png)
 
@@ -132,7 +132,7 @@ This will show details of all the changes that will be made when we execute an a
 ### Perform Platform Instance Update
 The process for performing an update against the Platform Instance to apply the changes in our Platform Blueprint / Model is the same as performing a Dry run. Only this time ensure the check-box `Do a dry run` has **not** been selected.
 
-Once we have initiated the update, MyST will return us to the summary view of the Platform Model and Instance where we should see the update in progress. Once completed, the `Provisioned version` under `Instance Details` will now show the new version of the Platform Model.
+Once we have initiated the update, Myst will return us to the summary view of the Platform Model and Instance where we should see the update in progress. Once completed, the `Provisioned version` under `Instance Details` will now show the new version of the Platform Model.
 
 ![](img/updatePlatformComplete.png)
 
@@ -141,7 +141,7 @@ If we click `View Log` under `Actions` this will open a dialog showing the execu
 ![](img/updatePlatformLog.png)
 
 {% hint style='info' %}
-Whilst this example configuration change showed us adding a new data source, we would follow an identical approach if modifying an existing data source. In the latter case we would be updating an existing data source configuration in the Platform Blueprint. MyST will determine and perform the required steps to apply the necessary changes.
+Whilst this example configuration change showed us adding a new data source, we would follow an identical approach if modifying an existing data source. In the latter case we would be updating an existing data source configuration in the Platform Blueprint. Myst will determine and perform the required steps to apply the necessary changes.
 {% endhint %}
 
 See [Platform Configuration](/platform/resources/weblogic/README.md) for details on how define other configuration requirements within a Platform Blueprint / Model.

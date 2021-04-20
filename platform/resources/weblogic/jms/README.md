@@ -20,6 +20,7 @@ When configuring the Java Messaging Service (JMS) and Store and Forward (SAF) se
    * **SAF Error Handling** - which encapsulates specific behavior used to process messages in the event of an error
    * **SAF Imported Destinations** - which encapsulate the configuration for specific remote JMS queues that an SAF Agent will interact with
    
+
 This chapter details how to configure JMS and SAF resources and contains the following sections:
 * [Persistent Store Configuration](/platform/resources/weblogic/jms/persistent-stores/README.md)
 * [Java Message Service (JMS) Configuration](/platform/resources/weblogic/jms/modules/README.md)

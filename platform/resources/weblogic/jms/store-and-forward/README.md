@@ -1,8 +1,8 @@
 ## {{ page.title }}
 
-MyST supports the automatic configuration of Store and Forward (SAF) providers to make integration with external JMS providers or enabling Web Services Reliable Messaging that much easier.
+Myst supports the automatic configuration of Store and Forward (SAF) providers to make integration with external JMS providers or enabling Web Services Reliable Messaging that much easier.
 
-The following object types are supported by MyST Studio:
+The following object types are supported by Myst Studio:
 
 * **SAF Agents** - which perform the actual work of store and forward of JMS messages at runtime
 * **Remote SAF Contexts** - which encapsulate the configuration required to connect to a remote JMS provider

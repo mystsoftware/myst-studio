@@ -4,7 +4,7 @@
 
 ## User Guide
 
-* [Rubicon Red MyST](introduction/README.md)
+* [Myst Software](introduction/README.md)
   * [Platform Provisioning and Configuration](introduction/platform-provisioning/README.md)
   * [Application Release Automation](introduction/application-release-automation/README.md)
   * [Security Salt and Hash](platform/security/README.md)
@@ -67,13 +67,13 @@
 * [Build Automation](build/README.md)
   * [Build Server Configuration](build/server/configuration/README.md)
     * [Continuous Delivery Profile](infrastructure/continuous-delivery-profile/README.md)
-    * [MyST Studio Plugin for Jenkins](build/server/configuration/jenkins/README.md)
+    * [Myst Studio Plugin for Jenkins](build/server/configuration/jenkins/README.md)
   * [Configuring Maven Builds](build/maven/README.md)
   * [Configuring Automated Builds ](build/ci/README.md)
     * [Configuring Jenkins Build Jobs](build/ci/jenkins/README.md)
   * [Artifact Management](build/artifacts/README.md)
   * [Deploy Time Customizations](build/deploy-config/README.md)
-    * [MyST Configuration Plans](howtos/use-myst-generic-configuration-plans.md)
+    * [Myst Configuration Plans](howtos/use-myst-generic-configuration-plans.md)
 
 ---
 
@@ -90,6 +90,7 @@
   * [Configuring Release Pipelines](release/pipeline/README.md)
   * [Post Deploy Jenkins Job](release/pipeline/post-deploy-jenkins-job/README.md)
   * [Release Pipeline Dashboards](release/pipeline/dashboard/README.md)
+  * [Four Eyes Principle](release/pipeline/four-eyes-principle/README.md)
 
 ---
 
@@ -104,12 +105,12 @@
 
 ## Administration Guides
 
-* [MyST Installation Guide](installation/myst-studio/README.md)
+* [Myst Installation Guide](installation/myst-studio/README.md)
   * [System Requirements](installation/myst-studio/requirements/README.md)
   * [Docker-based Installation](installation/myst-studio/docker/README.md)
   * [Alternative Installations](installation/myst-studio/alternatives/README.md)
-* [MyST Management Scripts](administration/management/README.md)
-* [MyST Upgrade Guide](administration/upgrade/README.md)
+* [Myst Management Scripts](administration/management/README.md)
+* [Myst Upgrade Guide](administration/upgrade/README.md)
 
 ## Appendix
 

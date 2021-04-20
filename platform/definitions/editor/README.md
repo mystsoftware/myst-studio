@@ -1,6 +1,6 @@
 ## {{ page.title }}
 
-MyST holds the configuration details of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure. The Platform Editor is used to view and edit Platform Blueprints and Platform Models.
+Myst holds the configuration details of a Platform Blueprint and Platform Model in a hierarchical or tree-like structure. The Platform Editor is used to view and edit Platform Blueprints and Platform Models.
 
 ### Opening a Platform Blueprint in the Platform Editor
 From the side menu navigate to`Modeling` > `Platform Blueprints`, this will display a list of existing Platform Blueprints. Click on any one of the blueprints. This will open the it in the `Platform Editor` in view mode.
@@ -9,7 +9,7 @@ From the side menu navigate to`Modeling` > `Platform Blueprints`, this will disp
 
 ### Opening a Platform Model in the Platform Editor
 
-From the side menu navigate to `Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model you are interested in and MyST will display summary details about the Platform Model and its corresponding instance as shown below.
+From the side menu navigate to `Modeling` > `Platform Models`, this will display a list of existing Platform Models. Select the Platform Model you are interested in and Myst will display summary details about the Platform Model and its corresponding instance as shown below.
 
 ![](img/platformModelSummary.png)
 

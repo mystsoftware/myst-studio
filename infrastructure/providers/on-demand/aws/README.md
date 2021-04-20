@@ -26,11 +26,11 @@ Click on create. Once you click on create you can see all the information like V
 * **Instance Types:**  Instance Type specifies the hardware of the host computer used for your instance. Each instance type offers different compute, memory, and storage capabilities. Select the instance type based on your requirement.
 * **AWS Key Pairs:**   This is the private key content that is accessed securely to access your infrastructure. Select valid AMI and provide the private key content.
 * **OS Admin Credentials:** Reserved for future functionality.
-* ** Agent Key Pairs:** Used to define all the required key pairs used to connect to the hosts within the Infrastructure Providers. Each MyST Key Pair contains the private key for key pairs that we can use in credentials for the hosts that are part of our Infrastructure Provider.  
+* ** Agent Key Pairs:** Used to define all the required key pairs used to connect to the hosts within the Infrastructure Providers. Each Myst Key Pair contains the private key for key pairs that we can use in credentials for the hosts that are part of our Infrastructure Provider.  
 
   Once we have defined a key pair, we can use it in one or more OS Agent Credentials and OS Admin Credentials.
 
-* **OS Agent Credentials:**  The OS agent credentials is the set of credentials that MyST uses to connect to and execute jobs on the target hosts. Each Credential consists of a username and credential, which can be either a Key Pair or Password.
+* **OS Agent Credentials:**  The OS agent credentials is the set of credentials that Myst uses to connect to and execute jobs on the target hosts. Each Credential consists of a username and credential, which can be either a Key Pair or Password.
 * **User Data Template:** User Data Template holds the user data which will be run only once during the initial boot of the instance. This can be a set of instructions that has to be run on the instance. To know more about it go through
   * [User Data](infrastructure/providers/on-demand/aws/user-data/README.md)
   
@@ -47,13 +47,13 @@ To add an OS Agent Credential, click `Add OS Agent Credential`, specify the foll
 * **Connect Using:**  Specifies the type of credentials used to authenticate the SSH user, can be  either `Key Pair` or `Password`
 * **Key Pair:**  If `Key Pair` is specified, then select the Key Pair to use from the Drop Down.
 * **Password:**  If `Password` is specified, then enter the password to be used to authenticate the user.
-* **Run as different user:**  Select this to use **sudo** to enable the MyST agent to run as a different user.
-* **Other User Name:**  If `Run as different user` is set to `Yes`. Specify the user account under whose identity the MyST agent will perform all tasks.
+* **Run as different user:**  Select this to use **sudo** to enable the Myst agent to run as a different user.
+* **Other User Name:**  If `Run as different user` is set to `Yes`. Specify the user account under whose identity the Myst agent will perform all tasks.
 
 ![](img/osAgentCredentials.png)
 
     Once we have defined an OS Agent Credential, we can use it in one or more Hosts. 
-	
+
 Click **Save** to save your infrastructure provider.
 
 

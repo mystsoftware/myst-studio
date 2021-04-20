@@ -3,13 +3,13 @@ A Platform Template provides a definition of a specific middleware topology and 
 
 Platform Templates provide a number of key advantages:
 
-* **Catalog** - Rich set of _certified_ Platform Templates are provided out-of-the-box with MyST Studio, each representing a proven best-practice approach as defined in the Oracle Fusion Middleware Enterprise Deployment Guide  
+* **Catalog** - Rich set of _certified_ Platform Templates are provided out-of-the-box with Myst Studio, each representing a proven best-practice approach as defined in the Oracle Fusion Middleware Enterprise Deployment Guide  
 * **Reuse** - Any number of Platform Blueprints can be created from a Platform Template, enabling the continual reuse of known topologies and configurations, saving time and effort in defining new platforms
 * **Certified Best Practices** - Provide definitions of tested and certified platforms that are based on the documented best practices from Oracle
 * **Knowledge Capture** - Once a Platform Blueprint has been created and approved, it can easily be converted into a Platform Template, preserving all of the knowledge that has been applied to the Platform Blueprint
 
 ## Platform Template Catalog
-MyST Studio provides a Catalog containing a set of certified Platform Templates for an array of Fusion Middleware products, with each template representing a best-practice topology based on the Oracle Fusion Middleware Enterprise Deployment Guide.  As new Platform Templates are saved from  Platform Blueprints they are added to the Catalog.
+Myst Studio provides a Catalog containing a set of certified Platform Templates for an array of Fusion Middleware products, with each template representing a best-practice topology based on the Oracle Fusion Middleware Enterprise Deployment Guide.  As new Platform Templates are saved from  Platform Blueprints they are added to the Catalog.
 
 To access the Catalog, from the side menu navigate to the `Modeling` > `Platform Templates` option.
 
@@ -35,7 +35,7 @@ Within the Catalog the certified Platform Templates are clearly denoted with a r
 | **WebLogic 12c**|Oracle Weblogic 12c. Compliant with the Oracle Enterprise Deployment Guide|![](img/WebLogic12cTemplateTopology.png)|
 
 ## Using Platform Template to Create Platform Blueprint
-MyST Studio provides two approaches to create a Platform Blueprint from a Platform Template.  Both approaches result in the same work flow to create the Platform Blueprint.
+Myst Studio provides two approaches to create a Platform Blueprint from a Platform Template.  Both approaches result in the same work flow to create the Platform Blueprint.
 
 {% hint style='info' %}
 For a full description of the Platform Blueprint concept, see the [Platform Blueprints](../blueprints) section.{% endhint %}
@@ -75,7 +75,7 @@ Review the details of the new Platform Blueprint and click `Finish` to complete 
 
 ## Creating a Platform Template from a Platform Blueprint
 
-In addition to providing pre-defined and certified Platform Templates, MyST Studio also enables custom Platform Templates to be created and published in the catalog.  This is done by saving a Platform Blueprint as a Platform Template, capturing all of the topology definition and configurations that have been made on Platform Blueprint and saving it as a Platform Template.
+In addition to providing pre-defined and certified Platform Templates, Myst Studio also enables custom Platform Templates to be created and published in the catalog.  This is done by saving a Platform Blueprint as a Platform Template, capturing all of the topology definition and configurations that have been made on Platform Blueprint and saving it as a Platform Template.
 
 ### Save Blueprint as Template
 

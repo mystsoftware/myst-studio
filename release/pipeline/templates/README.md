@@ -36,7 +36,7 @@ For each stage, we need to specify the following values:
 * **Environment** - The Environment Type to be used for this stage. Only Platform Models with the same environment type will be available for use in this stage.
 
 * **Promotion Rules** - Defines how Application Blueprints and Platform Blueprints are promoted into this stage. This can be either:
-    * **Automatic** - Instructs MyST to automatically promote changes to this stage. 
+    * **Automatic** - Instructs Myst to automatically promote changes to this stage. 
     * **Manual** - Indicates that promotion has to be manually triggered.
 
 Once we have defined our stage, click `Save` to add the stage to our Release Pipeline Template.
@@ -69,7 +69,7 @@ Click on the `Actions` drop-down in the top right-hand corner of the template yo
 ### Delete Release Pipeline Template.
 To delete a  Pipeline Template, from the side menu navigate to`Release Management` > `Pipeline Template`. This will display a list of existing Release Pipeline Templates. 
 
-Click on the `Actions` drop-down in the top right-hand corner of the template you wish to remove and select `Delete`. MyST will prompt for confirmation of the Delete action. Click `Yes` to proceed with the deletion of the Release Pipeline Template.
+Click on the `Actions` drop-down in the top right-hand corner of the template you wish to remove and select `Delete`. Myst will prompt for confirmation of the Delete action. Click `Yes` to proceed with the deletion of the Release Pipeline Template.
 
 
 

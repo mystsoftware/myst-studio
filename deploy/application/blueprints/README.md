@@ -5,7 +5,7 @@ From the side menu navigate to`Release Management` > `Application Blueprints`, t
 
 ![](img/applicationBlueprintCardView.png)
 
-By default, MyST will display the list of Application Blueprints using the `Card view`. To switch to the list view, click on the `List View` icon (outlined above in red). MyST will display the Applications Blueprints in a list, as illustrated below.
+By default, Myst will display the list of Application Blueprints using the `Card view`. To switch to the list view, click on the `List View` icon (outlined above in red). Myst will display the Applications Blueprints in a list, as illustrated below.
 
 ![](img/applicationBlueprintListView.png)
 
@@ -26,7 +26,7 @@ Next, we need to add the required artifacts to our application blueprint. Click 
 
 ![](img/applicationBlueprintAddArtifacts.png)
 
-For each artifact, MyST displays the following information:
+For each artifact, Myst displays the following information:
 * **Name** - The artifact name
 * **Group Id** - The maven group id of the artifact.
 * **Artifact Id** - The maven artifact id of the artifact.
@@ -51,7 +51,7 @@ Once we are happy with the content of our Application Blueprint, click `Save`.
 ### Editing Application Blueprint
 Over the Application Lifecycle, we can have multiple **versions** of an Application Blueprint. Typically we would have a maximum of two versions under development at any point in time: one for main development (like a trunk in version control) and another one optionally for patches (like a production fix for an earlier version of the Application Blueprint deployed into Production).
 
-Each time we edit the artifacts within an Application Blueprint Version, or a new build of an artifact contained within an Application Blueprint is published, MyST automatically creates a new revision. These revisions are tracked through the Release Pipeline so we can determine exactly what is deployed into each environment at any point in time.
+Each time we edit the artifacts within an Application Blueprint Version, or a new build of an artifact contained within an Application Blueprint is published, Myst automatically creates a new revision. These revisions are tracked through the Release Pipeline so we can determine exactly what is deployed into each environment at any point in time.
 
 To edit an Application Blueprint, go to the list view, click on the `Actions` drop-down for the corresponding Application Blueprint, and select `Open`. This will open the Application Blueprint editor.
 
@@ -66,7 +66,7 @@ We can also add, delete or edit the list of artifacts contained within an Applic
 #### Create New Application Blueprint Version from Existing
 To create a new version of an Application Blueprint, we need to open an existing version of the Application Blueprint.
 
-Next we need to click on a previous version that we wish to base our new version from and select `Clone` from the available `Actions`. MyST will prompt us to provide the new version number for the Application Blueprint. Once entered, click `Create`.
+Next we need to click on a previous version that we wish to base our new version from and select `Clone` from the available `Actions`. Myst will prompt us to provide the new version number for the Application Blueprint. Once entered, click `Create`.
 
 ![](img/applicationBlueprintClone.png)
 
@@ -77,13 +77,13 @@ To delete a specific version of an Application Blueprint, open it in the Applica
 
 ![](img/applicationBlueprintDelete.png)
 
-MyST will prompt us with the message, `You are about to delete this version permanently. OK to proceed?`. Click `Yes` to continue.
+Myst will prompt us with the message, `You are about to delete this version permanently. OK to proceed?`. Click `Yes` to continue.
 
 ### Delete Application Blueprint
 We can delete unpublished Application Blueprints as long as none of its versions are included within a Release Pipeline.
 
 To delete an Application Blueprint, go to the list view, click on the `Actions` drop-down for the corresponding Application Blueprint, and select `Delete`.
 
-MyST will prompt us with the message `Do you want to delete this application blueprint?`. Click `Yes` to continue.
+Myst will prompt us with the message `Do you want to delete this application blueprint?`. Click `Yes` to continue.
 
 > When we delete an Application Blueprint, **ALL** versions of the Application Blueprint will be deleted.

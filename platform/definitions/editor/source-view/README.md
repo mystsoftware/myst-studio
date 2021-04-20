@@ -3,7 +3,7 @@
 The Source View presents the raw JSON data which backs the platform configuration. This is a read-only view and is intended to be used in conjunction with the REST APIs for programmatic configuration.
 
 {% hint style='info' %}
-The source view allows one to quickly see the raw configuration of the platform and is intended for advanced users who have good knowledge on how to use the MyST REST APIs to automate creation / modification of confiugration.
+The source view allows one to quickly see the raw configuration of the platform and is intended for advanced users who have good knowledge on how to use the Myst REST APIs to automate creation / modification of confiugration.
 {% endhint %}
 
 ### Tree Mode

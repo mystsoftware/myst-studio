@@ -76,7 +76,7 @@ Once we have entered the basic details about our SOA CS Model click Next.
 
 **Select Infrastructure Provider**
 
-Next, we need to specify the created OCI  Provider for our SOA CS Model. From the corresponding drop-down, select a OCI provider. MyST will provide the provider summary configured for OCI.
+Next, we need to specify the created OCI  Provider for our SOA CS Model. From the corresponding drop-down, select a OCI provider. Myst will provide the provider summary configured for OCI.
 
 ![](img/infrastructureSelection.png)
 
@@ -90,7 +90,7 @@ For each Compute Group defined within the SOA CS Blueprint we need to specify th
 
 
 
-In addition, we can also specify whether we want to have a stand-alone admin server, in which case it will be created within its own compute group. MyST will default to what is specified in the SOA CS Blueprint.
+In addition, we can also specify whether we want to have a stand-alone admin server, in which case it will be created within its own compute group. Myst will default to what is specified in the SOA CS Blueprint.
 
 If we specified a stand-alone Admin Server in the SOA CS, and then choose to override that, then we will also need to specify which compute group we want to target the Admin Server to.
 
@@ -106,17 +106,17 @@ Once done, click next
 
 **Review the Summary**
 
-MyST will display a Summary screen showing all the key inputs specified in the SOA CS Model Wizard.
+Myst will display a Summary screen showing all the key inputs specified in the SOA CS Model Wizard.
 
 ![](img/modelsummary.png)
 
 
 
-Once done, click `Finish`. MyST will create the corresponding SOA CS Model and take you to the SOA CS Model Editor where you can make additional changes if required. 
+Once done, click `Finish`. Myst will create the corresponding SOA CS Model and take you to the SOA CS Model Editor where you can make additional changes if required. 
 
 **Adding global variables as needed**
 
-  To configure global variables in your SOA CS model follow the specific pattern **soacs.tf.*** MyST will consider  (*)  part as your key and value as value to your environment variables. In addition to the configuration provided in the SOA CS blueprint and SOACS model, it requires few more properties to be globally configured. To configure navigate to `Actions`->`Configuration`>`GlobalVariables`>`EditConfiguration` and provide the following properties
+  To configure global variables in your SOA CS model follow the specific pattern **soacs.tf.*** Myst will consider  (*)  part as your key and value as value to your environment variables. In addition to the configuration provided in the SOA CS blueprint and SOACS model, it requires few more properties to be globally configured. To configure navigate to `Actions`->`Configuration`>`GlobalVariables`>`EditConfiguration` and provide the following properties
 
 - **soacs.tf.fingerprint** : Fingerprint for the user key, can be found in OCI User's console.
 - **soacs.tf.psm_host** : PSM Host for SOACS (e.g. [https://psm-rubiconred2.uscom-central-idcs-1.oraclecloud.com:443](https://psm-rubiconred2.uscom-central-idcs-1.oraclecloud.com/))
