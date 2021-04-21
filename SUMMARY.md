@@ -111,6 +111,7 @@
   * [Alternative Installations](installation/myst-studio/alternatives/README.md)
 * [Myst Management Scripts](administration/management/README.md)
 * [Myst Upgrade Guide](administration/upgrade/README.md)
+* [Integrating AD in Myst](administration/ad/README.md)
 
 ## Appendix
 
