@@ -98,6 +98,7 @@
   * [User Management](administration/users/README.md)
   * [Role Management](administration/roles/README.md)
   * [Workspace Management](administration/workspaces/README.md)
+  * [Active Directory](administration/ad/README.md)
 ---
 
 * [Migration](migration/README.md)
@@ -111,7 +112,6 @@
   * [Alternative Installations](installation/myst-studio/alternatives/README.md)
 * [Myst Management Scripts](administration/management/README.md)
 * [Myst Upgrade Guide](administration/upgrade/README.md)
-* [Integrating AD in Myst](administration/ad/README.md)
 
 ## Appendix
 
