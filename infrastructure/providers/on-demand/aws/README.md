@@ -33,6 +33,9 @@ Click on create. Once you click on create you can see all the information like V
 * **OS Agent Credentials:**  The OS agent credentials is the set of credentials that Myst uses to connect to and execute jobs on the target hosts. Each Credential consists of a username and credential, which can be either a Key Pair or Password.
 * **User Data Template:** User Data Template holds the user data which will be run only once during the initial boot of the instance. This can be a set of instructions that has to be run on the instance. To know more about it go through
   * [User Data](infrastructure/providers/on-demand/aws/user-data/README.md)
+  
+  
+* **Delete EBS on Termination:** When an instance is terminated, Amazon Elastic Compute Cloud (Amazon EC2) uses the value of the DeleteOnTermination attribute for each attached EBS volume to determine whether to preserve or delete the volume when the instance is terminated. By default, the DeleteOnTermination attribute for the root volume of an instance is set to true, but it is set to false for all other volume types. To preserve the root volume when an instance is terminated, change the DeleteOnTermination attribute for the root volume to false.
 
     Once we have defined an OS Agent Credential, we can use it in one or more Hosts. 
 

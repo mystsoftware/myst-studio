@@ -49,9 +49,20 @@ For each Compute Group defined within the Platform Blueprint we need to specify 
 
 * **Agent User** - The user on the target host, which Myst will run as.
 
+* **Spot Instance** - Amazon EC2 Spot Instances let you take advantage of unused EC2 capacity in the AWS cloud. Spot Instances are available at up to a 90% discount compared to On-Demand prices. You can use Spot Instances for various stateless, fault-tolerant, or flexible applications such as big data, containerized workloads, CI/CD, web servers, high-performance computing (HPC), and other test & development workloads.
+
 > The available AMIs, EC2 Instance Types, Security Groups, Agent Users and OS Users are configured as part of the AWS On-Demand Infrastructure. Where multiple options are available, then a drop-down box is provided to select the required option. Where only a single option is available, then this value will be automatically set.
 
-![](img/AwsModelComputeGroup.png)
+Below is the wizard when we select Spot Instance as false
+
+![](img/AwsModelComputeGroupSpotFalse.png)
+
+
+Below is the wizard when we select Spot Instance as True.
+
+Clicking Check Pricing button gives you the current running Bid price of required Spot Instance type at the moment.
+
+![](img/AwsModelComputeGroupSpotTrue.png)
 
 In addition, we can also specify whether we want to have a stand-alone admin server, in which case it will be created within its own compute group. Myst will default to what is specified in the Platform Blueprint.
 
