@@ -1,86 +1,150 @@
-# {{ page.title }}
+# Connecting Myst to an Active Directory Domain
 
-After logging into the studio as Administrator.  
+1. Login as Administrator
 
-Go to Administration -> Users -> Provider.
+2. Go to **Administration** -> **Users**
 
-Now you need to fill the details as per your AD Configuration.
+3. Click ![](img/provider.png)
 
-A sample configuration is given below for your reference.
+4. Fill in the Active Directory details.
+
+### Example Configuration
 
 ![](img/configuration.png)
 
+| Name                 | Value                                     |
+|----------------------|-------------------------------------------|
+|**Connection**|---------------------------------------------------|
+| Port                 | `myst.ad.local`                           |
+| Port                 | `389`                                     |
+| Principal            | `cn=admin,dc=mystsoftware,dc=com`         |
+| Credential           | `Welcome1`                                |
+|**Users**|----------------------------------------------------|
+| User Base DN         | `ou=users,o=myst,dc=mystsoftware,dc=com`  |
+| User Name Attribute  | `cn`                                      |
+| User Object Class    | `person`                                  |
+| All Users Filter    | `(&(cn=*)(objectClass=person)(mail=myst))` |
+|**Groups**|----------------------------------------------------|
+| Groups Base DN       | `ou=groups,o=myst,dc=mystsoftware,dc=com` |
+| Group Name Attribute | `cn`                                      |
+| Group Object Class   | `groupOfNames`                            |
+| Member DN Attribute  | `member`                                  |
+| All Groups Filter    | `(&(cn=*)(mail=myst)(|(objectclass=groupofNames)(objectclass=orcldynamicgroup)))`        |
 
 
-## User Filter and Group Filte
+# Configuring the Roles
 
-Instead or fetching all the users and groups from AD, certian users and groups can be fetched and associated to MyST.  
-This can be achieved by the usage of User and Group filters which are in handy use.  
+When Active Directory (AD) is integrated with Myst the AD groups synchronise.
+* The default workspace will be populated with **Users**
+* **Users** will be placed in their respective **Roles**
 
-Below sample will help to understand the usage of filters.  
+## Myst Roles
 
-Users before AD integration.  
+Configure the new **Roles** (synchronised from Active Directory) with the appropriate permissions. Example below:
 
-![](img/users.png)  
+![](img/myst_roles.png)
 
-Users after AD integration successful connection and can be seen in MyST under Administration -> Users.
+## Myst System Role
 
-### User Filter
+Similar to Myst Roles, the Myst _System_ Roles can be configured and assigned to users. Example below:
 
-Let's understand more by below example.
+![](img/myst_system_roles.png)
 
-Out of ennumber of users in AD you are looking for set of users.  
-Use User filter to filter the users easily.
+# New Users in Active Directory
 
-![](img/userFilterExample.png)  
+New users added into Active Directory will automatically synchronise with Myst on login. The user will be assigned to the **Default** workspace and associated to their role.
 
-In the above screenshot we are expecting users with sn **david**, **maale**
+1. Add new user to Active Directory along with their group
+2. User logs into Myst
+   1. Myst automatically synchronises the user/role(s)
+   2. Synchronises to the **Default** (`6fafeb5a-0bcb-4683-8f57-e287ea7eebaf`) workspace
 
-After filtering the users obtained are  
+![](img/workspace.png)
 
-![](img/userFilter.png)
- 
-Similarly, use Group filter for filtering groups.
-  
-![](img/groupFilterExample.png)  
+# Known Issues and Limitations
 
-In the above screenshot we are expecting groups with cn **Administrators**, **Developers**, **Operations**.
+Log any issues or improvements to [https://rubiconred.freshdesk.com/](https://rubiconred.freshdesk.com/).
 
-After filtering groups obtained are  
+## Synchronisation
 
-![](img/groupFilter.png)
+### Deleting Users from Active Directory
+
+###### Use Case
+
+User leaves team.
+
+###### Issue
+
+FC-6609 - Myst does not synchronise deleted users.
+
+###### Workaround
+
+Delete or retire the users manually via Myst
+
+### Moving a User to a different group
+
+###### Use Case
+
+User changes team.
+
+###### Issue
+
+FC-6612 - Changing a User to a different group does not synchronise in Myst. The user will remain in the same role.
+
+###### Workaround
+
+Manually change the user in Myst to the desired role.
+
+### Changing the User and Group filters
+
+###### Use Case
+
+Myst admin incorrectly applies a filter and wants to apply a new filter.
+
+###### Issue
+
+FC-6612 - Changing the User and Group filter does not remove existing Myst users and roles. Users and Groups in the new filter will added into Myst.
+
+###### Workaround
+
+Manually delete users and groups that should be filtered out.
+
+### Synchronises only to Myst 'Default' workspace
+
+###### Use Case
+
+Myst has multiple workspaces where different users should be assigned.
+
+###### Issue
+
+FC-6613 - Allow a configurable default workspace along with a configurable Active Directory attribute.
+
+###### Workaround
+
+Manually delete the users and roles from the Default workspace and assign to the preferred workspace.
 
 
 
-## New User/Group addition
+## Connectivity Issues
 
-Thinking what happens when a new user is added to AD?  
+###### Issue
 
-Simple when you try to login into MyST, it automatically syncronize the newly added Users or Group into the MyST.  
+FC-6610 - No error when Myst fails connecting to Active Directory.
 
-Below images gives you detailed idea of how it works.  
+###### Workaround
 
-Adding new user to AD(In this case using Apache Studio for adding user to AD)  
-
-Below screenshot show's a new User **saketh** is added and a new Group **Deployer** is added and assigned user **saketh** to it.
-
-![](img/newUser.png)  
-
-![](img/newGroup.png)  
-
-When user **saketh** tries to login to MyST studio, he can successfully login into it, because of MyST's syncronization ability. And user **saketh** is associated to group **Deployer** .
+Check the Myst Studio docker container logs for errors.
 
 
-![](img/userLogin.png)  
+
+## Disabling AD Integration
+
+###### Issue
+
+FC-6611 - No ability to disable AD integration.
+
+###### Workaround
+
+Use an invalid hostname in the Myst provider configuration to prevent further connections to Active Directory.
 
 
-![](img/newUserSuccessfullLogin.png)  
-
-
-![](img/newUserSync.png)  
-
-
-![](img/newGroupSync.png)  
-
-
-![](img/newUserGroupsync.png)  
