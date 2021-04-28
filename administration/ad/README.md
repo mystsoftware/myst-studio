@@ -29,7 +29,7 @@
 | Group Name Attribute | `cn`                                      |
 | Group Object Class   | `groupOfNames`                            |
 | Member DN Attribute  | `member`                                  |
-| All Groups Filter    | `(&(cn=*)(mail=myst)(|(objectclass=groupofNames)(objectclass=orcldynamicgroup)))`        |
+| All Groups Filter    | <code>(&(cn=*)(mail=myst)(&#124;(objectclass=groupofNames)(objectclass=orcldynamicgroup)))</code>       |
 
 
 # Configuring the Roles
