@@ -43,6 +43,17 @@ If there are issues connecting Myst to LDAPS try the following:
 
 2. Additionally try appending `-Djavax.net.debug=ssl` to `CATALINA_OPTS` for SSL debug logging also seen in `docker logs -f myststudio_web`
 
+*NOTE: with SSL debugging enabled you will always see the following WARNING which can be ignored as documented in [JDK-8255148](https://bugs.openjdk.java.net/browse/JDK-8255148).*
+
+```
+javax.net.ssl|WARNING|03|Finalizer|2020-08-31 09:42:20.203 EDT|null:-1|SSLSocket duplex close failed (
+"throwable" : {
+  java.net.SocketException: Socket is not connected
+        at java.net.Socket.shutdownOutput(Unknown Source)
+        at sun.security.ssl.BaseSSLSocketImpl.shutdownOutput(Unknown Source)
+        ...
+```
+
 
 
 #### 1.2.2 Importing the Active Directory Certificate Chain
