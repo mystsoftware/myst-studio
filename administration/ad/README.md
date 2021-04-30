@@ -39,11 +39,13 @@ If the connection uses LDAPS then Myst Studio must trust the certificate chain. 
 
 If there are issues connecting Myst to LDAPS try the following:
 
-1. First, check the Docker container logs `docker logs -f myststudio_web`
+1. Check the Docker container logs `docker logs -f myststudio_web`
 
-2. Additionally try appending `-Djavax.net.debug=ssl` to `CATALINA_OPTS` for SSL debug logging also seen in `docker logs -f myststudio_web`
+2. Append `-Djavax.net.debug=ssl` to `CATALINA_OPTS` for SSL debug logging which can be seen in `docker logs -f myststudio_web`
 
-*NOTE: with SSL debugging enabled you will always see the following WARNING which can be ignored as documented in [JDK-8255148](https://bugs.openjdk.java.net/browse/JDK-8255148).*
+
+
+***NOTE: with SSL debugging enabled you will always see the following WARNING which can be ignored as documented in [JDK-8255148](https://bugs.openjdk.java.net/browse/JDK-8255148).***
 
 ```
 javax.net.ssl|WARNING|03|Finalizer|2020-08-31 09:42:20.203 EDT|null:-1|SSLSocket duplex close failed (
@@ -64,10 +66,10 @@ Create a `trust.jks` containing the Active Directory server's certificate chain.
    `openssl s_client -connect <AD_HOST>:636 -showcerts`
 2. Save certificate(s)
    from `-----BEGIN CERTIFICATE-----` to `-----END CERTIFICATE-----` (inclusive)
-3. Import certificates into the trust keystore `trust.jks`
-   `keytool -importcert -noprompt -keystore "trust.jks" -storepass "changeit" -trustcacerts -alias "my_rootca" -file my_ca.cer`
-   `keytool -importcert -noprompt -keystore "trust.jks" -storepass "changeit" -trustcacerts -alias "my_server"  -file my_server.cer`
-4. Copy  `trust.jks` to a location planned for Docker's volume mounting
+3. Import certificates into the trust keystore `trust.jks``
+4. ``keytool -importcert -noprompt -keystore "trust.jks" -storepass "changeit" -trustcacerts -alias "my_rootca" -file my_ca.cer`
+5. `keytool -importcert -noprompt -keystore "trust.jks" -storepass "changeit" -trustcacerts -alias "my_server"  -file my_server.cer`
+6. Copy  `trust.jks` to a location planned for Docker's volume mounting
 
 
 
