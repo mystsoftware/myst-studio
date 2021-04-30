@@ -1,22 +1,20 @@
-# Connecting Myst to an Active Directory Domain
+# 1 Connecting Myst to an Active Directory Domain
 
-1. Login as Administrator
+## 1.1 Add the Active Directory Provider
 
-2. Go to **Administration** -> **Users**
+1. Login as an Administrator and go to **Administration** -> **Users**
 
-3. Click ![](img/provider.png)
+3. Click ![](img/provider.png) and fill in the details.
 
-4. Fill in the Active Directory details.
-
-### Example Configuration
 
 ![](img/configuration.png)
 
 | Name                 | Value                                     |
 |----------------------|-------------------------------------------|
 |**Connection**|---------------------------------------------------|
-| Port                 | `myst.ad.local`                           |
-| Port                 | `389`                                     |
+| Host                 | `myst.ad.local`                           |
+| Port                 | `636`                                     |
+| Secure (SSL)         | `Yes`                                |
 | Principal            | `cn=admin,dc=mystsoftware,dc=com`         |
 | Credential           | `Welcome1`                                |
 |**Users**|----------------------------------------------------|
@@ -32,46 +30,139 @@
 | All Groups Filter    | <code>(&(cn=*)(mail=myst)(&#124;(objectclass=groupofNames)(objectclass=orcldynamicgroup)))</code>       |
 
 
-# Configuring the Roles
+
+## 1.2 SSL Configuration (LDAPS)
+
+If the connection uses LDAPS then Myst Studio must trust the certificate chain. In this Docker example we can volume mount the `keystore` directory or the file.
+
+#### 1.2.1 Troubleshooting General or SSL Connectivity 
+
+If there are issues connecting Myst to LDAPS try the following:
+
+1. First, check the Docker container logs `docker logs -f myststudio_web`
+
+2. Additionally try appending `-Djavax.net.debug=ssl` to `CATALINA_OPTS` for SSL debug logging also seen in `docker logs -f myststudio_web`
+
+*NOTE: with SSL debugging enabled you will always see the following WARNING which can be ignored as documented in [JDK-8255148](https://bugs.openjdk.java.net/browse/JDK-8255148).*
+
+```
+javax.net.ssl|WARNING|03|Finalizer|2020-08-31 09:42:20.203 EDT|null:-1|SSLSocket duplex close failed (
+"throwable" : {
+  java.net.SocketException: Socket is not connected
+        at java.net.Socket.shutdownOutput(Unknown Source)
+        at sun.security.ssl.BaseSSLSocketImpl.shutdownOutput(Unknown Source)
+        ...
+```
+
+
+
+#### 1.2.2 Importing the Active Directory Certificate Chain
+
+Create a `trust.jks` containing the Active Directory server's certificate chain.
+
+1. Obtain the certificate chain
+   `openssl s_client -connect <AD_HOST>:636 -showcerts`
+2. Save certificate(s)
+   from `-----BEGIN CERTIFICATE-----` to `-----END CERTIFICATE-----` (inclusive)
+3. Import certificates into the trust keystore `trust.jks`
+   `keytool -importcert -noprompt -keystore "trust.jks" -storepass "changeit" -trustcacerts -alias "my_rootca" -file my_ca.cer`
+   `keytool -importcert -noprompt -keystore "trust.jks" -storepass "changeit" -trustcacerts -alias "my_server"  -file my_server.cer`
+4. Copy  `trust.jks` to a location planned for Docker's volume mounting
+
+
+
+
+#### 1.2.3 Setup Myst docker-compose.yml
+
+Configure Myst to use the trust keystore.
+
+* Configure Docker `volumes` to mount the JKS
+* Configure Tomcat `CATALINA_OPTS` to keystore location and password
+* Restart the Docker container
+
+Example of `docker-compose.yml`.
+
+```yaml
+version: '2'
+services:
+  web:
+    ...
+    volumes:
+     - ./data/license:/usr/local/tomcat/conf/fusioncloud/license
+     - ./data/ext:/usr/local/tomcat/conf/fusioncloud/ext
+     - ./data/keystores:/usr/local/tomcat/conf/fusioncloud/keystores            # Mount directory
+    #- ./data/keystores:/usr/local/tomcat/conf/fusioncloud/keystores/trust.jks  # Mount file
+    ...
+    
+    environment:
+    CATALINA_OPTS: "-Xmx2048m -Xms2048m -Djavax.net.ssl.trustStore=/usr/local/tomcat/conf/fusioncloud/keystores/trust.jks -Djavax.net.ssl.trustStorePassword=Welcome1"
+    TZ: "Australia/Brisbane"
+    ...
+```
+
+Example of the `docker run` command.
+
+```shell
+docker run -d \
+  --name myststudio_web \
+  -v ./data/keystores:/usr/local/tomcat/conf/fusioncloud/keystores \
+  -e CATALINA_OPTS="-Xmx2048m -Xms2048m -Djavax.net.ssl.trustStore=/usr/local/tomcat/conf/fusioncloud/keystores/trust.jks -Djavax.net.ssl.trustStorePassword=Welcome1"
+...
+```
+
+*NOTE: Each example is an incomplete snippet with the `...` representing further configuration.*
+
+
+
+
+# 2. Configure the Roles
 
 When Active Directory (AD) is integrated with Myst the AD groups synchronise.
 * The default workspace will be populated with **Users**
 * **Users** will be placed in their respective **Roles**
 
-## Myst Roles
 
-Configure the new **Roles** (synchronised from Active Directory) with the appropriate permissions. Example below:
+### 2.1 Roles
+
+Add permissions to the new **Roles** synchronised from Active Directory.
 
 ![](img/myst_roles.png)
 
-## Myst System Role
 
-Similar to Myst Roles, the Myst _System_ Roles can be configured and assigned to users. Example below:
+### 2.2 System Role
+
+Similar to Myst Roles, the Myst **System** Roles can be configured and later assigned to users.
 
 ![](img/myst_system_roles.png)
 
-# New Users in Active Directory
 
-New users added into Active Directory will automatically synchronise with Myst on login. The user will be assigned to the **Default** workspace and associated to their role.
+
+# 3. Add New Users in Active Directory
+
+New users into Active Directory will automatically synchronise with Myst on login. The user will be assigned to the **Default** workspace and associated to their role.
 
 1. Add new user to Active Directory along with their group
 2. User logs into Myst
-   1. Myst automatically synchronises the user/role(s)
-   2. Synchronises to the **Default** (`6fafeb5a-0bcb-4683-8f57-e287ea7eebaf`) workspace
+   1. Myst automatically synchronises the user and their role(s) based on the AD group
+   2. Myst synchronises to the **Default** (`6fafeb5a-0bcb-4683-8f57-e287ea7eebaf`) workspace
 
 ![](img/workspace.png)
 
-# Known Issues and Limitations
+
+
+# 4. Known Issues and Limitations
 
 Log any issues or improvements to [https://rubiconred.freshdesk.com/](https://rubiconred.freshdesk.com/).
 
-## Synchronisation
 
-### Deleting Users from Active Directory
 
-###### Use Case
+## 4.1 Synchronisation
 
-User leaves team.
+### 4.1.1 Deleting Users from Active Directory
+
+###### Potential Use Case
+
+User leaves team or company.
 
 ###### Issue
 
@@ -79,9 +170,9 @@ FC-6609 - Myst does not synchronise deleted users.
 
 ###### Workaround
 
-Delete or retire the users manually via Myst
+Delete the user manually via Myst.
 
-### Moving a User to a different group
+### 4.1.2 Moving a User to a different group
 
 ###### Use Case
 
@@ -95,9 +186,9 @@ FC-6612 - Changing a User to a different group does not synchronise in Myst. The
 
 Manually change the user in Myst to the desired role.
 
-### Changing the User and Group filters
+### 4.1.3 Changing the User and Group filters
 
-###### Use Case
+###### Potential Use Case
 
 Myst admin incorrectly applies a filter and wants to apply a new filter.
 
@@ -109,11 +200,11 @@ FC-6612 - Changing the User and Group filter does not remove existing Myst users
 
 Manually delete users and groups that should be filtered out.
 
-### Synchronises only to Myst 'Default' workspace
+### 4.1.4 Synchronises to Myst 'Default' workspace
 
-###### Use Case
+###### Potential Use Case
 
-Myst has multiple workspaces where different users should be assigned.
+Multiple workspaces are created where different resources and users are assigned.
 
 ###### Issue
 
@@ -125,7 +216,9 @@ Manually delete the users and roles from the Default workspace and assign to the
 
 
 
-## Connectivity Issues
+## 4.2 Connection
+
+### 4.2.1 No UI feedback if Myst cannot connect
 
 ###### Issue
 
@@ -135,9 +228,7 @@ FC-6610 - No error when Myst fails connecting to Active Directory.
 
 Check the Myst Studio docker container logs for errors.
 
-
-
-## Disabling AD Integration
+### 4.2.2 Unable to disable the connection to Active Directory
 
 ###### Issue
 
@@ -146,5 +237,4 @@ FC-6611 - No ability to disable AD integration.
 ###### Workaround
 
 Use an invalid hostname in the Myst provider configuration to prevent further connections to Active Directory.
-
 
