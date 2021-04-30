@@ -67,8 +67,8 @@ Create a `trust.jks` containing the Active Directory server's certificate chain.
 2. Save certificate(s)
    from `-----BEGIN CERTIFICATE-----` to `-----END CERTIFICATE-----` (inclusive)
 3. Import certificates into the trust keystore `trust.jks``
-4. ``keytool -importcert -noprompt -keystore "trust.jks" -storepass "changeit" -trustcacerts -alias "my_rootca" -file my_ca.cer`
-5. `keytool -importcert -noprompt -keystore "trust.jks" -storepass "changeit" -trustcacerts -alias "my_server"  -file my_server.cer`
+4. `keytool -importcert -noprompt -keystore "trust.jks" -storepass "changeit" -trustcacerts -alias "my_rootca" -file my_ca.cer`
+5. `keytool -importcert -noprompt -keystore "trust.jks" -storepass "changeit" -trustcacerts -alias "my_server" -file my_server.cer`
 6. Copy  `trust.jks` to a location planned for Docker's volume mounting
 
 
