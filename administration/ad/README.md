@@ -1,6 +1,6 @@
-# 1 Connecting Myst to an Active Directory Domain
+# Connecting Myst to an Active Directory Domain
 
-## 1.1 Add the Active Directory Provider
+## Add the Active Directory Provider
 
 1. Login as an Administrator and go to **Administration** -> **Users**
 
@@ -31,11 +31,11 @@
 
 
 
-## 1.2 SSL Configuration (LDAPS)
+## SSL Configuration (LDAPS)
 
 If the connection uses LDAPS then Myst Studio must trust the certificate chain. In this Docker example we can volume mount the `keystore` directory or the file.
 
-#### 1.2.1 Troubleshooting General or SSL Connectivity 
+#### Troubleshooting General or SSL Connectivity 
 
 If there are issues connecting Myst to LDAPS try the following:
 
@@ -58,7 +58,7 @@ javax.net.ssl|WARNING|03|Finalizer|2020-08-31 09:42:20.203 EDT|null:-1|SSLSocket
 
 
 
-#### 1.2.2 Importing the Active Directory Certificate Chain
+#### Importing the Active Directory Certificate Chain
 
 Create a `trust.jks` containing the Active Directory server's certificate chain.
 
@@ -74,7 +74,7 @@ Create a `trust.jks` containing the Active Directory server's certificate chain.
 
 
 
-#### 1.2.3 Setup Myst docker-compose.yml
+#### Setup Myst docker-compose.yml
 
 Configure Myst to use the trust keystore.
 
@@ -117,21 +117,21 @@ docker run -d \
 
 
 
-# 2. Configure the Roles
+# Configure the Roles
 
 When Active Directory (AD) is integrated with Myst the AD groups synchronise.
 * The default workspace will be populated with **Users**
 * **Users** will be placed in their respective **Roles**
 
 
-### 2.1 Roles
+### Roles
 
 Add permissions to the new **Roles** synchronised from Active Directory.
 
 ![](img/myst_roles.png)
 
 
-### 2.2 System Role
+### System Role
 
 Similar to Myst Roles, the Myst **System** Roles can be configured and later assigned to users.
 
@@ -139,7 +139,7 @@ Similar to Myst Roles, the Myst **System** Roles can be configured and later ass
 
 
 
-# 3. Add New Users in Active Directory
+# Add New Users in Active Directory
 
 New users into Active Directory will automatically synchronise with Myst on login. The user will be assigned to the **Default** workspace and associated to their role.
 
@@ -152,91 +152,16 @@ New users into Active Directory will automatically synchronise with Myst on logi
 
 
 
-# 4. Known Issues and Limitations
+# Limitations
 
 Log any issues or improvements to [https://rubiconred.freshdesk.com/](https://rubiconred.freshdesk.com/).
 
-
-
-## 4.1 Synchronisation
-
-### 4.1.1 Deleting Users from Active Directory
-
-###### Potential Use Case
-
-User leaves team or company.
-
-###### Issue
-
-FC-6609 - Myst does not synchronise deleted users.
-
-###### Workaround
-
-Delete the user manually via Myst.
-
-### 4.1.2 Moving a User to a different group
-
-###### Use Case
-
-User changes team.
-
-###### Issue
-
-FC-6612 - Changing a User to a different group does not synchronise in Myst. The user will remain in the same role.
-
-###### Workaround
-
-Manually change the user in Myst to the desired role.
-
-### 4.1.3 Changing the User and Group filters
-
-###### Potential Use Case
-
-Myst admin incorrectly applies a filter and wants to apply a new filter.
-
-###### Issue
-
-FC-6612 - Changing the User and Group filter does not remove existing Myst users and roles. Users and Groups in the new filter will added into Myst.
-
-###### Workaround
-
-Manually delete users and groups that should be filtered out.
-
-### 4.1.4 Synchronises to Myst 'Default' workspace
-
-###### Potential Use Case
-
-Multiple workspaces are created where different resources and users are assigned.
-
-###### Issue
-
-FC-6613 - Allow a configurable default workspace along with a configurable Active Directory attribute.
-
-###### Workaround
-
-Manually delete the users and roles from the Default workspace and assign to the preferred workspace.
-
-
-
-## 4.2 Connection
-
-### 4.2.1 No UI feedback if Myst cannot connect
-
-###### Issue
-
-FC-6610 - No error when Myst fails connecting to Active Directory.
-
-###### Workaround
-
-Check the Myst Studio docker container logs for errors.
-
-### 4.2.2 Unable to disable the connection to Active Directory
-
-###### Issue
-
-FC-6611 - No ability to disable AD integration.
-
-###### Workaround
-
-Use an invalid hostname in the Myst provider configuration to prevent further connections to Active Directory.
+| Issue # | Category        | Description                                                  | Workaround                                                   |
+| ------- | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| FC-6609 | Synchronisation | Deleting Users from AD                                       | Delete the user manually via Myst.                           |
+| FC-6612 | Synchronisation | Moving a User to a different AD group does not synchronize with Myst | Manually change the user in Myst to the desired role.        |
+| FC-6612 | Synchronisation | Changing the User and Group filter does not synchronize with Myst | Manually delete users and groups that should be filtered out. |
+| FC-6613 | Synchronisation | Always synchronizes to Myst 'Default' workspace              | Manually delete the users and roles from the Default workspace and assign to the preferred workspace. |
+| FC-6610 | Connection      | No UI feedback if Myst cannot connect to AD                  | Check the Myst Studio docker container logs for errors       |
+| FC-6611 | Connection      | Unable to disable the connection to AD                       | Use an invalid hostname in the Myst provider configuration to prevent further connections to AD. |
 
