@@ -2,6 +2,21 @@
 
 <!-- toc -->
 
+#### Default Workspace
+
+By default Myst will publish artifacts to the default Myst workspace named `Default` with an ID of `6fafeb5a-0bcb-4683-8f57-e287ea7eebaf`. To change the default [workspace](/administration/workspaces/README.md) add the following:
+
+```xml
+<properties>
+  <myst-workspace>Mr_Rob</myst-workspace>
+
+  <!-- Multiple Workspaces
+  <myst-workspace>Default,Mr_Rob</myst-workspace>
+  -->
+
+</properties>
+```
+
 #### Property Exclusions
 
 A list of artifact properties excluded from being published to Myst Studio. Avoid using the following properties:
