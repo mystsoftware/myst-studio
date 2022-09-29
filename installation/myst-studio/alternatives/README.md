@@ -16,7 +16,7 @@ An enterprise may lag behind high-performing companies for various reasons. Belo
  * **Require out-of-date Docker version**
    This is related to the previous point. If an organisation's SOE prevents the use of an up-to-date kernel then there may be a need to install an older version of Docker. Alternatively, an organisation may have an out-of-date Operating System package manager responsible for delivering out-of-date Docker versions to an operation system.
 
-   Myst relies on the [v2 compose file format](https://docs.docker.com/compose/compose-file/compose-file-v2/) meaning that it will not work with earlier versions of Docker. If you wish to use an earlier version of Docker, please raise a [support ticket](http://support.rubiconred.com) for assistance in configuring Myst to work with earlier versions of Docker.
+   Myst relies on the [v2 compose file format](https://docs.docker.com/compose/compose-file/compose-file-v2/) meaning that it will not work with earlier versions of Docker. If you wish to use an earlier version of Docker, please raise a [support ticket](https://mystsoftware.freshdesk.com/) for assistance in configuring Myst to work with earlier versions of Docker.
    
  * **Waiting on a purchasing decision**
    Organisation's may choose to use RedHat or Oracle Linux. Since version 17.3+,  Docker Enterprise Edition (EE) must be licensed for  Red Hat / Oracle Linux. 
@@ -95,13 +95,11 @@ Myst Studio uses MySQL Community Edition 5.7.15 to store its data. Before we ins
 
 ## Obtain the Myst product
 
-### Option 2: Obtain the MysT Studio zip bundle from the Docker image
+### Obtain the MysT Studio zip bundle from the Docker image
 
 To keep the Myst installation in line with what is built and delivered as part of the Docker image for Myst, we obtain a non-Docker copy of Myst product by first installing Myst on a machine which supports Docker, followed by retrieving the Myst file system and copying it to a non-Docker host.
 
-This will involve installing Docker on a supporting operating system and pulling down a specific version of a docker image for Myst, followed by creating a tar achive of the tomcat directory with the related Myst application and configuration. For information on Docker and Myst Studio installation refer to 
- *[Docker install](https://docs.docker.com/engine/installation/) for your operating system version
- *[Myst Studio installation](/myst-studio/installation/myst-studio/).
+This will involve installing Docker on a supporting operating system and pulling down a specific version of a docker image for Myst, followed by creating a tar achive of the tomcat directory with the related Myst application and configuration. For information on Docker and Myst Studio installation refer to *[Docker install](https://docs.docker.com/engine/installation/) for your operating system version and the *[Myst Studio installation](/myst-studio/installation/myst-studio/).
 
 1. Once Myst and Docker are installed, retrieve the desired image
    ```
