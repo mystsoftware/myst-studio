@@ -1,12 +1,12 @@
 # {{ page.title }}
 
 {% hint style='danger' %}
-Generally, it is recommended that Myst be installed on Docker. This will enable the easiest rollout process of Myst and it's associated components as well as allowing for effortless upgrades. As new releases of Myst are shipped regularly, being able to upgrade in seconds is a desirable trait of the system. For details on installing Myst with Docker please visit [this link](../README.md).
+It is recommended that Myst be installed on Docker as it is the easiest rollout process of Myst and its components along with effortless upgrades. For details on installing Myst with Docker please visit [this link](../README.md).
 {% endhint %} 
 
 Recommendations aside, it is important to recognise there can be some internal constraints within an organization which prevents the use of Docker, at least in the short-term. This guide is designed for such scenarios.
 
-## Enterprise constraints preventing use of Docker
+# Enterprise constraints preventing use of Docker
 
 An enterprise may lag behind high-performing companies for various reasons. Below are a list of common constraints in an enterprise that may prevent the use of Docker.
 
@@ -25,7 +25,7 @@ An enterprise may lag behind high-performing companies for various reasons. Belo
 
 This document exists for edge cases where an alternative means for installing Myst Studio is required. While the Docker-based installation can take minutes, the manual installation could take several hours and should be followed as a late resort only.
 
-# Install Myst Studio Manually (without Docker)
+# Install Myst Manually
 
 Myst can be installed to run without Docker through a three step process.
 1. Install MySQL
@@ -34,45 +34,44 @@ Myst can be installed to run without Docker through a three step process.
 
 ## Install MySQL Community Edition
 
-Myst Studio uses MySQL Community Edition 5.7.15 to store its data. Before we install Myst Studio we must ensure that a running instance of MySQL is available and configured. General MySQL installation details can be found [here](http://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html
+Myst Studio uses MySQL Community Edition 5.7.15 to store its data. Before we install Myst Studio we must ensure that a running instance of MySQL is available and configured. General MySQL installation details can be found at [http://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html](http://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html
 )
 
 1. Download the yum repo file that is needed for the specific target operating system.
-   The available repo file for RedHat/Oracle Linux based systems are listed [here](http://dev.mysql.com/downloads/repo/yum/) so you download to the box with a command line this: 
+   The available repo file for RedHat/Oracle Linux based systems are listed at [http://dev.mysql.com/downloads/repo/yum/](http://dev.mysql.com/downloads/repo/yum/) so you download to the box with a command line this: 
    `wget http://dev.mysql.com/get/mysql57-community-release-el6-9.noarch.rpm`
 
 2. Install the repo
    `sudo yum localinstall mysql57-community-release-el6-9.noarch.rpm
 `
    
-3. Install MySQL Community Edition 5.7.15
-   `sudo yum install mysql-community-server
-`
+3. Install MySQL Community Edition 5.7.15. **If you are migrating from docker to non-docker make sure your MySQL is the same version.**
+     ```sudo yum install mysql-community-server```
+   
    
 4. Start MySQL
-    `sudo service mysqld start
-`
+    ```sudo service mysqld start```
+
   
 5. Verify that it is running
-   `sudo service mysqld status
-   mysqld (pid  1340) is running...
-`
-   
+   ```sudo service mysqld status```
+
+
 6. At the initial start-up of the server, the following happens, given that the data directory of the server is empty:
     * The server is initialized.
     * An SSL certificate and key files are generated in the data directory.
     * The validate_password plugin is installed and enabled.
     * A superuser account `'root'@'localhost` is created. A password for the superuser is set and stored in the error log file. To reveal it, use the command described in the next step.
-    
+
+
 7. Get the super user password
    `sudo grep 'temporary password' /var/log/mysqld.log`
    
 8. Change the root password as soon as possible by logging in with the generated, temporary password and set a custom password for the superuser account. 
 
-MySQL's validate_password plugin is installed by default. This will require that passwords contain at least one upper case letter, one lower case letter, one digit, and one special character, and that the total password length is at least 8 characters.
+  MySQL's validate_password plugin is installed by default. This will require that passwords contain at least one upper case letter, one lower case letter, one digit, and one special character, and that the total password length is at least 8 characters.
 
-   The default Myst password is not allowed by the password validation. You may choose to remove that module and set it to the default Myst password
- (`welcome1`).
+  The default Myst password is not allowed by the password validation. You may choose to remove that module and set it to the default Myst password (`welcome1`).
 
    ```
    mysql -uroot -p 
@@ -87,6 +86,7 @@ MySQL's validate_password plugin is installed by default. This will require that
    CREATE DATABASE fusioncloud;
    GRANT ALL PRIVILEGES ON fusioncloud.* to 'fusioncloud'@'localhost' WITH GRANT OPTION;
    ```
+
 10. Increase MySQL max allowed packet by editing `/etc/my.cnf` with the following under `[mysqld]` section
     ```
     [mysqld]
@@ -95,20 +95,20 @@ MySQL's validate_password plugin is installed by default. This will require that
 
 ## Obtain the Myst product
 
-### Option 1: Download the Myst Studio zip bundle
-
-After login at [myst.rubiconred.com](https://myst.rubiconred.com), you will be able to download the Myst Studio zip bundle from the following link `https://myst.rubiconred.com/webhelp/installer/release/tomcat-myststudio-bundle-$VERSION.tar.gz`. Be sure to replace `$VERSION` with the actual version number.
-
 ### Option 2: Obtain the MysT Studio zip bundle from the Docker image
 
-To keep the Myst installation in line with what is built and delivered as part of the Docker image for Myst, we obtain a non-Docker copy of Myst product by first installing Myst on a machine which supports Docker, followed by retrieving the Myst file system and copying it to a non-Docker host. This will involve installing Docker on a supporting operating system and pulling down a specific version of a docker image for Myst, followed by creating a tar achive of the tomcat directory with the related Myst application and configuration. For information on Docker and Myst Studio installation refer to 
+To keep the Myst installation in line with what is built and delivered as part of the Docker image for Myst, we obtain a non-Docker copy of Myst product by first installing Myst on a machine which supports Docker, followed by retrieving the Myst file system and copying it to a non-Docker host.
+
+This will involve installing Docker on a supporting operating system and pulling down a specific version of a docker image for Myst, followed by creating a tar achive of the tomcat directory with the related Myst application and configuration. For information on Docker and Myst Studio installation refer to 
  *[Docker install](https://docs.docker.com/engine/installation/) for your operating system version
  *[Myst Studio installation](/myst-studio/installation/myst-studio/).
+
 1. Once Myst and Docker are installed, retrieve the desired image
    ```
    cd /opt/myst-studio/bin
    ./pull
    ```
+
 2. Obtain the image name for Myst. You can see a list of Docker images on the host by running `docker images` that will yiel an output similar to:
    ```
    REPOSITORY                                               TAG    IMAGE ID     CREATED     SIZE
@@ -132,7 +132,7 @@ To keep the Myst installation in line with what is built and delivered as part o
    ```
    Your container will shutdown as soon as you exit it.
 
-4. Copy the tomcat-myststudio.tar.gz out of the shutdown docker container.
+5. Copy the tomcat-myststudio.tar.gz out of the shutdown docker container.
    ```
    docker cp myststudio-tomcat:/usr/local/tomcat-myststudio.tar.gz .
    ```
@@ -177,7 +177,9 @@ To keep the Myst installation in line with what is built and delivered as part o
     ```/opt/myst-studio/tomcat/bin/startup.sh```
 11. Access Myst Studio by going to `http://<host>:8085/console`
 
-## Install Myst Studio as a service
+You are now finished. The steps below are optional.
+
+## (OPTIONAL) Install Myst Studio as a service
 
 Myst can be setup to run as a service so that it automatically starts up on system boot. The steps to do this different depending on the Operating System version.
 
@@ -313,7 +315,7 @@ chown -R myst:myst /opt/myst-studio
 echo 'myst:myst' | sudo chpasswd
 ```
 
-### Provide sudo access for myst (Optional)
+### (OPTIONAL) Provide sudo access for myst
 
 ```
 echo "myst ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
@@ -349,7 +351,7 @@ echo "max_allowed_packet = 256M" >> /etc/my.cnf
 
 Be sure to replace `MYST_VERSION` with your desired version.
 ```
-MYST_VERSION="5.6.0.0"
+MYST_VERSION="7.0.0"
 cd /opt
 mkdir myst-studio
 tar -xvf /usr/share/myst/tomcat-myststudio-bundle-$MYST_VERSION.tar.gz -C myst-studio
@@ -376,7 +378,7 @@ chmod +x /opt/myst-studio/bin/start.sh
 chown -R myst:myst /opt/myst-studio
 ```
 
-### Install Jenkins (Optional)
+### (OPTIONAL) Install Jenkins
 
 Be sure to replace `JENKINS_VERSION` with your desired version.
 
@@ -386,7 +388,7 @@ wget https://updates.jenkins-ci.org/download/war/$JENKINS_VERSION/jenkins.war -P
 mkdir -p /opt/myst-studio/jenkins
 ```
 
-### Setup Myst Studio as a Service
+### (OPTIONAL) Setup Myst Studio as a Service
 
 ```
 cp /usr/share/myst/myst.service /etc/systemd/system/myst.service
