@@ -17,3 +17,8 @@ _book
 
 # Maven output
 target
+
+# IDEs
+.idea
+.obsidian
+

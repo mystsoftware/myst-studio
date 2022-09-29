@@ -13,7 +13,7 @@ The following prerequisites should be in place on the server that will host Myst
 After the installation, internet access is required for the latest version of Myst to be pulled down directly from the public Myst Docker Registry. If you are behind an internet proxy, please follow [these steps](https://rubiconred.gitbooks.io/myst-help-center/content/how-do-i-setup-myst-and-associated-components-to-use-an-internet-proxy.html) to ensure all installation dependencies can be directly pulled from the Myst Software Docker Registry.
 
 {% hint style='info' %}
-If you are unable to use Docker, there are details on non-Docker installation [here](alternatives/README.md)
+If you are unable to use Docker, there are details on non-Docker installation [here](alternatives/README.md) (ignore this note if you came from the non-Docker installation for the purpose of obtaining the docker image).
 {% endhint %}
 
 ## Network Requirements
@@ -30,6 +30,10 @@ As Myst is a management tool, it is best suited in a management network so that 
 | OFMW Admin Server Host(s) | `myst-studio:8083` | HTTP | Myst Agent will retrieve built artifacts for deployment from the Myst Artifact Repository |
 
 Optionally, the Myst Build Server and Myst Artifact Repository can be frontend by a HTTP Server similar to Myst Studio allowing for HTTPS traffic only. If you are not using the Myst Build Server and Artifact Repository and instead integrating with a different Build (CI) Server or Maven-based Artifact Repository, similar firewalling rules should be in place although the ports may be different.
+
+## Downloading the Myst Installer
+
+The installation wizard (or installer) can be found at ()[https://www.mystsoftware.com/resources/releases].
 
 ## Installation using the Wizard
 
