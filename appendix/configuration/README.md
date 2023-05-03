@@ -4,7 +4,14 @@
 
 Myst supports the dynamically discovery of configuration of existing environments even if they have not been initially built with Myst. Myst is capable of introspecting the following products and configuration
 
-* Products
+## Operating Systems
+
+* Redhat Enterprise Linux (RHEL) 6, 7, and 8
+* Oracle Enterprise Linux (OEL) 6,7, and 8
+* Solaris 11.x
+
+## Products
+
   * 11.1.1.4.0 / 11.1.1.5.0 / 11.1.1.7.0 / 12.1.3.0.0 / 12.2.1.X.X
     * Oracle WebLogic
     * Oracle SOA Suite
@@ -14,7 +21,11 @@ Myst supports the dynamically discovery of configuration of existing environment
     * Oracle Business Activity Monitoring
     * Oracle Managed File Transfer (12.x only)
     * Oracle Enterprise Scheduler Services (12.x only)
-* Configurations
+    * Oracle Forms (12.2.1.x only)
+    * Oracle Analytics Server (6.4.x only)
+
+## Configurations
+
   * JDBC Data Sources
   * JCA Adapters (eg. DB adapter, File adapter, JMS adapter)
   * Java Messaging Service (JMS)
