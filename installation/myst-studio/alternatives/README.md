@@ -110,7 +110,7 @@ This will involve installing Docker on a supporting operating system and pulling
 2. Obtain the image name for Myst. You can see a list of Docker images on the host by running `docker images` that will yiel an output similar to:
    ```
    REPOSITORY                                               TAG    IMAGE ID     CREATED     SIZE
-   067343992071.dkr.ecr.us-west-2.amazonaws.com/myst-studio latest 91c4a4f58d2c 4 weeks ago 484.3 MB
+   016153544533.dkr.ecr.us-west-2.amazonaws.com/myst-studio latest 91c4a4f58d2c 4 weeks ago 484.3 MB
    ```
 3. Start a container from the Myst Studio docker image using:
    ```
@@ -120,7 +120,7 @@ This will involve installing Docker on a supporting operating system and pulling
 
 4. Tar the contents of the tomcat directory by first entering the container. For example:
    ```
-   docker run -ti --name myststudio-tomcat 067343992071.dkr.ecr.us-west-2.amazonaws.com/myst-studio:5.0.1.1 /bin/bash
+   docker run -ti --name myststudio-tomcat 016153544533.dkr.ecr.us-west-2.amazonaws.com/myst-studio:5.0.1.1 /bin/bash
    ```
    Then, once inside the Docker container run:
    ```

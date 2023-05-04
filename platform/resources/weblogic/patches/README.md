@@ -28,7 +28,7 @@ This will add a new `Patch` to the Patch List. For each Patch we need to specify
 
 ![](img/patchAddPatch.png)
 
-Once done click `Save`.
+Click `Save`.
 
 ### Handling Patch Dependencies
 
