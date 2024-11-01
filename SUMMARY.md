@@ -41,6 +41,7 @@
       * [Using Property References](platform/definitions/editor/property-references/README.md)
   * [Managing Platform Instances](platform/management/README.md)
   * [Introspecting Existing Platform Instances](platform/introspection/README.md)
+  * [Cloning an Existing Platform Model](platform/clone/README.md)
   * [Upgrading Platform Instances](platform/upgrade/README.md)
 
 ---
