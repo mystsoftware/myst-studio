@@ -21,4 +21,7 @@ target
 # IDEs
 .idea
 .obsidian
+.classpath
+.project
+.settings
 
