@@ -6,9 +6,10 @@ Myst supports the dynamically discovery of configuration of existing environment
 
 ## Operating Systems
 
-* Redhat Enterprise Linux (RHEL) 6, 7, and 8
-* Oracle Enterprise Linux (OEL) 6,7, and 8
+* Redhat Enterprise Linux (RHEL) 6, 7, 8, and 9
+* Oracle Enterprise Linux (OEL) 6, 7, 8, and 9
 * Solaris 11.x
+* SUSE Linux 15.x
 
 ## Products
 
@@ -23,6 +24,15 @@ Myst supports the dynamically discovery of configuration of existing environment
     * Oracle Enterprise Scheduler Services (12.x only)
     * Oracle Forms (12.2.1.x only)
     * Oracle Analytics Server (6.4.x only)
+  * 14.1.2.0.0
+    * Oracle WebLogic
+    * Oracle SOA Suite
+    * Oracle Service Bus
+    * Oracle Web Services Manager
+    * Oracle Business Process Management
+    * Oracle Business Activity Monitoring
+    * Oracle Managed File Transfer
+    * Oracle Enterprise Scheduler Services
 
 ## Configurations
 
@@ -44,3 +54,4 @@ Myst supports the dynamically discovery of configuration of existing environment
   * Work Managers
   * Clusters
   * Servers
+  * ... and more
