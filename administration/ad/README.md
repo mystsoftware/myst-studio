@@ -154,7 +154,7 @@ New users into Active Directory will automatically synchronise with Myst on logi
 
 # Limitations
 
-Log any issues or improvements to [https://rubiconred.freshdesk.com/](https://rubiconred.freshdesk.com/).
+Log any issues or improvements to [https://mystsoftware.freshdesk.com/](https://mystsoftware.freshdesk.com/).
 
 | Issue # | Category        | Description                                                  | Workaround                                                   |
 | ------- | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |

@@ -10,7 +10,7 @@ The following prerequisites should be in place on the server that will host Myst
  * Docker 1.10+ and Docker Compose is installed.
  * The Myst license tar.gz file must be available. This is provided when you sign up to try Myst Studio.
 
-After the installation, internet access is required for the latest version of Myst to be pulled down directly from the public Myst Docker Registry. If you are behind an internet proxy, please follow [these steps](https://rubiconred.gitbooks.io/myst-help-center/content/how-do-i-setup-myst-and-associated-components-to-use-an-internet-proxy.html) to ensure all installation dependencies can be directly pulled from the Myst Software Docker Registry.
+After the installation, internet access is required for the latest version of Myst to be pulled down directly from the public Myst Docker Registry. If you are behind an internet proxy, please follow [these steps](/how-do-i-setup-myst-and-associated-components-to-use-an-internet-proxy.html) to ensure all installation dependencies can be directly pulled from the Myst Software Docker Registry.
 
 {% hint style='info' %}
 If you are unable to use Docker, there are details on non-Docker installation [here](alternatives/README.md) (ignore this note if you came from the non-Docker installation for the purpose of obtaining the docker image).
@@ -188,7 +188,7 @@ After downloading the Myst Studio installer from the website, copy it to the Mys
 ```
 gunzip myst-studio-docker-image-5.5.0.0.tar.gz
 sudo docker load -i myst-studio-docker-image-5.5.0.0.tar
-docker tag  docker-registry.rubiconred.aws:5000/myst-studio:5.5.0.0 myst-studio
+docker tag  docker-registry.mystsoftware.aws:5000/myst-studio:5.5.0.0 myst-studio
 ```
 Make sure that you replace the above version details to correspond to that version of Myst that was downloaded.
 

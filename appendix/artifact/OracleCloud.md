@@ -51,7 +51,7 @@ https://${OIC_HOST}/icsapi/v2/integrations/${OIC_ICS_PROJECT_ID}/archive > ${OIC
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.rubiconred</groupId>
+  <groupId>com.mystsoftware</groupId>
   <artifactId>RetrieveAllAirlines</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
@@ -153,7 +153,7 @@ Alternatively, if we skipped step 3 and 4 and would rather publish our artifact 
 ```
 mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifactory/libs-release-local \
 -Dfile=RetrieveAllAirlines.iar \
--DgroupId=com.rubiconred \
+-DgroupId=com.mystsoftware \
 -DartifactId=RetrieveAllAirlines \
 -Dversion=1.0-${BUILD_NUMBER} \
 -Dpackaging=jar
@@ -245,7 +245,7 @@ At the time of writing, Oracle do not support automated deployment of Decision M
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.rubiconred</groupId>
+  <groupId>com.mystsoftware</groupId>
   <artifactId>AdministerPatientWellBeing</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
@@ -364,7 +364,7 @@ Alternatively, if we skipped step 3 and 4 and would rather publish our artifact 
 ```
 mvn deploy:deploy-file -Durl=http://admin:password@your-myst-instance.com/artifactory/libs-release-local \
   -Dfile=AdministerPatientWellBeing.exp \
-  -DgroupId=com.rubiconred \
+  -DgroupId=com.mystsoftware \
   -DartifactId=AdministerPatientWellBeing \
   -Dversion=1.0-${BUILD_NUMBER} \
   -Dpackaging=jar

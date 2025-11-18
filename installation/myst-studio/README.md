@@ -13,7 +13,7 @@ A typical Myst installation consists of the following:
 | Myst Build Server | Optional CI Server, if not using a third-party one such as Jenkins |
 | Myst Maven Repository | Optional Maven Repository, if not using a third-party one such as Artifactory |
 
-The Myst Studio console can be installed on a single server or across multiple tiers. Myst is supported on a container-based architecture (e.g. `docker`) or on a virtual/physical server architecture. Rubicon Red recommend the use of the container-based architecture.
+The Myst Studio console can be installed on a single server or across multiple tiers. Myst is supported on a container-based architecture (e.g. `docker`) or on a virtual/physical server architecture. Myst Software recommend the use of the container-based architecture.
 
 ## Myst Topology
 
@@ -43,7 +43,7 @@ The following prerequisites should be in place on the server that will host Myst
  * Docker 1.10+ and Docker Compose is installed.
  * The Myst license tar.gz file must be available. This is provided when you sign up for Myst Studio.
 
- After the installation, internet access is required for the latest version of Myst to be pulled down directly from the public Myst Docker Registry. If you are behind an internet proxy, please follow [these steps](https://rubiconred.gitbooks.io/myst-help-center/content/how-do-i-setup-myst-and-associated-components-to-use-an-internet-proxy.html) to ensure all installation dependencies can be directly pulled from the Rubicon Red Docker Registry.
+ After the installation, internet access is required for the latest version of Myst to be pulled down directly from the public Myst Docker Registry. If you are behind an internet proxy, please follow [these steps](/how-do-i-setup-myst-and-associated-components-to-use-an-internet-proxy.html) to ensure all installation dependencies can be directly pulled from the Myst Software Docker Registry.
 
  {% hint style='info' %}
  If you are unable to use Docker, there are details on non-Docker installation [here](alternatives/README.md)

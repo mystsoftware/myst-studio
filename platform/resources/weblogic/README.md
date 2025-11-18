@@ -28,6 +28,6 @@ This section details how to define some of the more common Oracle Middleware con
 * **Custom Identity and Trust Store**
 -->
 
-This section only covers a subset of the configurations that can be performed by Myst. If the configuration you need to apply is not documented here, please raise a ticket at [support.rubiconred.com](htttp://support.rubiconred.com) to ask for assistance.
+This section only covers a subset of the configurations that can be performed by Myst. If the configuration you need to apply is not documented here, please raise a ticket at [support.mystsoftware.com](htttp://support.mystsoftware.com) to ask for assistance.
 
 

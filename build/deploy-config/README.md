@@ -65,7 +65,7 @@ This section summarizes the steps to apply a Myst Generic Configuration Plan to 
 
   * Note: The plugin will automatically register _Artifacts_ in Myst Studio for your successful MDS builds - you don't need to create them manually.
 
-* Create configurations for deployment in Myst Studio , such as creating a [Release Pipeline](/ https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline/) or a Release Definition.
+* Create configurations for deployment in Myst Studio , such as creating a [Release Pipeline](/release/pipeline/) or a Release Definition.
 
 * Run MDS Deployment via Myst Studio and the customization will be applied correctly.
 
@@ -117,7 +117,7 @@ This section summarizes the steps to apply an SOA configuration plan with Myst S
 
   * Note: The plugin will automatically register _Artifacts_ in Myst Studio for your successful SOA builds - you don't need to create them manually.
 
-* Create configurations for deployment in Myst Studio, such as creating a [Release Pipeline](/ https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline/) or a Release Definition.
+* Create configurations for deployment in Myst Studio, such as creating a [Release Pipeline](/release/pipeline/) or a Release Definition.
 
 * Run SOA Deployment via Myst Studio and the customization will be applied correctly.
 
@@ -130,7 +130,7 @@ If the standard SOA configuration plan is not sufficient for your particular use
 This section summarizes the steps to apply a Myst Generic Configuration Plan to an SOA deployment in Myst Studio.
 
 * Update all Platform Models with the latest environment specific values in Myst Studio. 
-* In your file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see [Myst Generic Configuration Plans](https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/howtos/use-myst-generic-configuration-plans.html)
+* In your file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see [Myst Generic Configuration Plans](/howtos/use-myst-generic-configuration-plans.html)
 
 * Put this file under the META-INF folder in the SOA project's root directory.
 
@@ -138,7 +138,7 @@ This section summarizes the steps to apply a Myst Generic Configuration Plan to 
 
   * Note: The plugin will automatically register _Artifacts_ in Myst Studio for your successful SOA builds - you don't need to create them manually.
 
-* Create configurations for deployment in Myst Studio, such as creating a [Release Pipeline](/ https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline/) or a Release Definition.
+* Create configurations for deployment in Myst Studio, such as creating a [Release Pipeline](/release/pipeline/) or a Release Definition.
 
 * Run SOA Deployment via Myst Studio and the customization will be applied correctly.
 
@@ -186,7 +186,7 @@ This section summarizes the steps to apply an OSB customization file with Myst S
 
   * Note: The plugin will automatically register _Artifacts_ in Myst Studio for your successful OSB builds - you don't need to create them manually.
 
-* Create configurations for deployment in Myst Studio, such as creating a [Release Pipeline](/ https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline/) or a Release Definition.
+* Create configurations for deployment in Myst Studio, such as creating a [Release Pipeline](/release/pipeline/) or a Release Definition.
 
 * Run OSB Deployment via Myst Studio and the customization is applied correctly.
 
@@ -205,7 +205,7 @@ During OSB deployment in Myst Studio, Myst reads the generic configuration plan 
 This section summarizes the steps to apply a Myst Generic Configuration Plan to an OSB deployment in Myst Studio.
 
 * Update all Platform Models with the latest environment specific values in Myst Studio. 
-* In your file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see [Myst Generic Configuration Plans](https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/howtos/use-myst-generic-configuration-plans.html)
+* In your file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see [Myst Generic Configuration Plans](/howtos/use-myst-generic-configuration-plans.html)
 
 ![](/build/deploy-config/img/deploy-config-3.myst-config-plan.png)
 
@@ -215,7 +215,7 @@ This section summarizes the steps to apply a Myst Generic Configuration Plan to 
 
   * Note: The plugin will automatically register _Artifacts_ in Myst Studio for your successful OSB builds - you don't need to create them manually.
 
-* Create configurations for deployment in Myst Studio, such as creating a [Release Pipeline](/ https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline/) or a Release Definition.
+* Create configurations for deployment in Myst Studio, such as creating a [Release Pipeline](/release/pipeline/) or a Release Definition.
 
 * Run OSB Deployment via Myst Studio and the customization will be applied correctly.
 
@@ -269,7 +269,7 @@ This section summarizes the steps to apply Myst Generic Configuration Plans on B
 
   > Note: The above command will export an EMS object called "JMS" as well as any associated DO object.
 
-* In the file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see [Myst Generic Configuration Plans](https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/howtos/use-myst-generic-configuration-plans.html)
+* In the file system, create a generic configuration plan file called myst-config-plan.xml. An example is given below. For detail see [Myst Generic Configuration Plans](/howtos/use-myst-generic-configuration-plans.html)
 
 ![](/build/deploy-config/img/deploy-config-4.myst-config-plan-B.png)
 
@@ -285,7 +285,7 @@ This generic configuration plan instructs Myst Studio to perform a search and re
 
 * Manually create a Third Party managed Artifact in Myst Studio with the correct group-artifact-classifier-version \(GAVC\) values for your BAM built artifact.
 
-* Create further configurations for BAM deployment in Myst Studio, such as creating a [Release Pipeline](/ https://rubiconred.gitbooks.io/rubicon-red-myst-studio-user-guide/content/release/pipeline/) or a Release Definition.
+* Create further configurations for BAM deployment in Myst Studio, such as creating a [Release Pipeline](/release/pipeline/) or a Release Definition.
 
 * Run BAM Deployment via Myst Studio and the customization will be applied correctly.
 
