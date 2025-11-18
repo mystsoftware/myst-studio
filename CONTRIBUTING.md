@@ -16,7 +16,7 @@ We will be grateful for your contribution :heart_eyes:
 
 Merged changes will be visible [here][myst-docs].
 
-[myst-docs]: https://docs.rubiconred.com/myst-studio/
+[myst-docs]: https://userguide.mystsoftware.com/
 
 ## Making changes via a Git client
 
@@ -36,4 +36,4 @@ git push origin master
 ```
 4. [Submit a pull request][pr].
 
-[pr]: https://github.com/rubiconred/myst-studio/compare/
+[pr]: https://github.com/mystsoftware/myst-studio/compare/

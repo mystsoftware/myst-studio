@@ -43,6 +43,10 @@
   * [Introspecting Existing Platform Instances](platform/introspection/README.md)
   * [Cloning an Existing Platform Model](platform/clone/README.md)
   * [Upgrading Platform Instances](platform/upgrade/README.md)
+    * [Side-by-side Upgrades](platform/upgrade/side-by-side/README.md)
+	* [Direct Upgrades](platform/upgrade/direct/README.md)
+	  * [Fresh Upgrade](platform/upgrade/direct/fresh/README.md)
+	  * [Inplace Upgrade](platform/upgrade/direct/inplace/README.md)
 
 ---
 

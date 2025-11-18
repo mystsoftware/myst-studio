@@ -119,8 +119,8 @@ Once done, click `Finish`. Myst will create the corresponding SOA CS Model and t
   To configure global variables in your SOA CS model follow the specific pattern **soacs.tf.*** Myst will consider  (*)  part as your key and value as value to your environment variables. In addition to the configuration provided in the SOA CS blueprint and SOACS model, it requires few more properties to be globally configured. To configure navigate to `Actions`->`Configuration`>`GlobalVariables`>`EditConfiguration` and provide the following properties
 
 - **soacs.tf.fingerprint** : Fingerprint for the user key, can be found in OCI User's console.
-- **soacs.tf.psm_host** : PSM Host for SOACS (e.g. [https://psm-rubiconred2.uscom-central-idcs-1.oraclecloud.com:443](https://psm-rubiconred2.uscom-central-idcs-1.oraclecloud.com/))
-- **soacs.tf.psm_identity_domain** : PSM Identity Domain for SOA CS (e.g. idcs-[a0305841610d468b825c68960f8b9ba5](https://bitbucket.org/rubiconred/rift/commits/a0305841610d468b825c68960f8b9ba5)).
+- **soacs.tf.psm_host** : PSM Host for SOACS (e.g. [https://psm-mystsoftware.uscom-central-idcs-1.oraclecloud.com:443](https://psm-mystsoftware.uscom-central-idcs-1.oraclecloud.com/))
+- **soacs.tf.psm_identity_domain** : PSM Identity Domain for SOA CS (e.g. idcs-[a0305841610d468b825c68960f8b9ba5](https://bitbucket.org/mystsoftware/rift/commits/a0305841610d468b825c68960f8b9ba5)).
 - **soacs.tf.cloud_storage_user**: Username with access to the container storage (Eg. admin.bucket).
 - **soas.tf.psm_password** : PSM Password for SOA CS.
 - **soacs.tf.psm_username** : PSM Username for SOA CS.

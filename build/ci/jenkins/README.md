@@ -151,7 +151,7 @@ Your artifact has now been published to Myst Studio. See section [Artifact Manag
 
 Oracle PAAS services can be exported to an archive that can then be promoted into multiple environments. To simplify this process, Myst Software provide a Jenkins plugin that can be used for the automatic registration of Oracle PAAS Artifacts directly from the Cloud runtime to Myst Studio.
 
-The plugin is currently in BETA. We are continually looking to improve it. If you have any feedback on the plugin, please share it via [Support Portal](https://rubiconred.freshdesk.com).
+The plugin is currently in BETA. We are continually looking to improve it. If you have any feedback on the plugin, please share it via [Support Portal](https://mystsoftware.freshdesk.com).
 
 #### Currently Supported Artifact Types
 
@@ -161,7 +161,7 @@ The plugin is currently in BETA. We are continually looking to improve it. If yo
 #### How to install the plugin
 
 1. Login to the Myst website
-2. Download the plugin from [here](https://myst.rubiconred.com/webhelp/installer/release/oracle-integration-cloud-jenkins-plugin.hpi)
+2. Download the plugin from [here](https://www.mystsoftware.com)
 3. Install the Plugin into Jenkins
 
 #### How to setup the plugin (one-time configuration)
